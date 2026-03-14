@@ -15,11 +15,12 @@ export default function ChiSonoPreview() {
               <div className="absolute inset-8 rounded-full border border-blue-500/6" />
 
               {/* Photo placeholder */}
-              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-blue-600/20 to-violet-600/20 border border-white/10 flex items-center justify-center overflow-hidden">
-                <div className="text-center">
-                  <div className="text-6xl mb-2">👤</div>
-                  <p className="text-slate-500 text-xs">Foto di Fabio</p>
-                </div>
+              <div className="absolute inset-12 rounded-full border border-white/10 overflow-hidden">
+                <img
+                  src="/fabio-chisono.jpg"
+                  alt="Fabio Micale"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating badges */}
