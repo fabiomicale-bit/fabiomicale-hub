@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Il Metodo", href: "/il-metodo" },
   { label: "Lavora con me", href: "/lavora-con-me" },
   { label: "Newsletter", href: "#newsletter" },
-  { label: "Contatti", href: "#contatti" },
+  { label: "Contatti", href: "/contatti" },
 ];
 
 export default function Navbar() {
