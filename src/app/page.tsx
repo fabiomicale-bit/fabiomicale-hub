@@ -1,4 +1,7 @@
 import { redirect } from "next/navigation";
 export default function HomePage() {
-  redirect("/maintenance");
+  if (process.env.VERCEL_ENV === "production") {
+    redirect("/maintenance");
+  }
+  return null;
 }
