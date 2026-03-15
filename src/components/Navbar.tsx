@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Chi sono", href: "#chi-sono" },
   { label: "Il Metodo", href: "/il-metodo" },
   { label: "Lavora con me", href: "/lavora-con-me" },
-  { label: "Newsletter", href: "#newsletter" },
+  { label: "Blog", href: "/blog" },
   { label: "Contatti", href: "/contatti" },
 ];
 
