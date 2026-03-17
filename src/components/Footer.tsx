@@ -20,9 +20,9 @@ const navSections = [
   {
     title: "Connettiti",
     links: [
-      { label: "LinkedIn", href: "https://linkedin.com/in/fabiomicale", external: true },
-      { label: "Instagram", href: "https://instagram.com/fabiomicale", external: true },
-      { label: "YouTube", href: "https://youtube.com/@fabiomicale", external: true },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/fabiomicale/", external: true },
+      { label: "Instagram", href: "https://www.instagram.com/fabiomicale1/", external: true },
+      { label: "YouTube", href: "https://www.youtube.com/@FabioMicale", external: true },
     ],
   },
 ];
