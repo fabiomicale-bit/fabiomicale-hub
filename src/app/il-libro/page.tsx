@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -128,17 +129,17 @@ export default function IlLibroPage() {
               </div>
             </div>
 
-            {/* Copertina placeholder */}
+            {/* Copertina */}
             <div className="animate-fade-in-up delay-200 flex justify-center md:justify-end">
-              <div className="relative w-56 h-80 bg-gradient-to-br from-blue-900/60 to-violet-900/40 border border-white/10 rounded-2xl shadow-2xl shadow-blue-900/40 flex flex-col items-center justify-center gap-3 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-violet-600/10" />
-                <div className="relative z-10 text-center px-6">
-                  <div className="text-white/20 text-xs font-medium tracking-widest uppercase mb-6">Copertina</div>
-                  <div className="text-white font-bold text-xl leading-tight mb-2">Successo<br />in 3 Passi</div>
-                  <div className="w-12 h-px bg-blue-500/50 mx-auto my-3" />
-                  <div className="text-slate-400 text-xs">Fabio Micale</div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-violet-500" />
+              <div className="relative shadow-2xl shadow-blue-900/40 rounded-2xl overflow-hidden">
+                <Image
+                  src="/copertina-libro.png"
+                  alt="Copertina del libro Successo in 3 Passi di Fabio Micale"
+                  width={280}
+                  height={400}
+                  className="rounded-2xl"
+                  priority
+                />
               </div>
             </div>
           </div>
