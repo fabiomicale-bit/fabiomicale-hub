@@ -9,6 +9,11 @@ export default function Newsletter() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
+      window.open(
+        `https://governarelab.it/?email=${encodeURIComponent(email)}`,
+        "_blank",
+        "noopener,noreferrer"
+      );
       setSubmitted(true);
     }
   };
