@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { posts, getPost, getPostsBySlug } from "@/lib/posts";
+import ReadingProgress from "./ReadingProgress";
+import TableOfContents from "./TableOfContents";
+import { injectHeadingIds } from "./headingUtils";
+import ShareBar from "./ShareBar";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -60,7 +64,9 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   return (
-    <main className="min-h-screen">
+    <>
+      <ReadingProgress />
+      <main className="min-h-screen">
       <Navbar />
 
       {/* JSON-LD Schema */}
@@ -110,9 +116,11 @@ export default async function BlogPostPage({ params }: Props) {
       {/* ── CONTENUTO ───────────────────────────────────────────── */}
       <section className="py-10 px-6 pb-20">
         <div className="max-w-2xl mx-auto">
+          <ShareBar titolo={post.titolo} slug={post.slug} />
+          <TableOfContents contentHtml={post.contentHtml} />
           <div
             className="blog-content"
-            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+            dangerouslySetInnerHTML={{ __html: injectHeadingIds(post.contentHtml) }}
           />
         </div>
       </section>
@@ -160,5 +168,6 @@ export default async function BlogPostPage({ params }: Props) {
 
       <Footer />
     </main>
+    </>
   );
 }
