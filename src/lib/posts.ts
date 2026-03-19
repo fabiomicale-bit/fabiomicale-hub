@@ -17,6 +17,110 @@ export type Post = {
 };
 
 export const posts: Post[] = [
+  // ── ARTICOLI RECENTI ──────────────────────────────────────────
+  {
+    slug: "ai-esperienza-professionale-vantaggio",
+    seoTitle: "Se hai 20 anni di esperienza, l'AI ti rende più forte",
+    seoDescription:
+      "Tutti dicono che l'AI favorisce i giovani. È falso. Chi ha esperienza ha un vantaggio enorme — ma solo se sa usarlo. Ecco come funziona davvero.",
+    keywords:
+      "ai esperienza professionale, intelligenza artificiale over 40, usare l'ai nel lavoro, ai vantaggio competitivo, professionisti e intelligenza artificiale",
+    titolo: "Se hai 20 anni di esperienza, l'AI ti rende più forte. Ecco perché.",
+    categoria: "Intelligenza Artificiale",
+    categoriaClasses: "bg-blue-500/15 text-blue-400 border-blue-500/25",
+    data: "24 marzo 2026",
+    dataISO: "2026-03-24",
+    tempoLettura: "8 min",
+    excerpt:
+      "Tutti parlano di AI come se premiasse solo i giovani e penalizzasse chi ha esperienza. È esattamente il contrario — ma solo se sai come usarla.",
+    correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
+    contentHtml: `
+    <p>C'è un racconto che mi stanca ogni volta che lo sento.
+    Quello secondo cui l'intelligenza artificiale premia i giovani — i nativi digitali,
+    quelli che imparano tutto in fretta, quelli che non hanno ancora abitudini da disimparare.</p>
+    <p>Capisco da dove viene questa storia. Ma è sbagliata. E non di poco.</p>
+    <p>Chi ha vent'anni di esperienza — professionale, settoriale, umana — ha in mano
+    qualcosa che nessun modello AI può comprare o simulare. Il problema non è
+    l'esperienza. Il problema è non sapere come usarla in questo contesto nuovo.
+    E questo si può imparare.</p>
+    <h2>Il mito del giovane digitale nativo (e perché non regge)</h2>
+    <p>Proviamo a smontare il racconto dall'interno.</p>
+    <p>Sì, un ventenne impara un nuovo strumento in fretta. Apre l'app, sperimenta,
+    sbaglia, riprova — senza il peso del confronto con com'era prima. Questo è reale.</p>
+    <p>Ma cosa fa, concretamente, con quello strumento? Chiede all'AI di scrivere
+    una email generica. Di riassumere un articolo. Di generare un'idea per un post.</p>
+    <p>Niente di sbagliato. Ma niente di differenziante, neanche.</p>
+    <p>Adesso pensa a cosa ci fai tu, con la stessa AI, dopo vent'anni passati in un
+    settore specifico. Hai vissuto crisi e rilanci. Hai visto strategie fallire per
+    ragioni che non erano nei libri. Hai costruito — e a volte bruciato — relazioni
+    professionali. Sai cosa funziona davvero e cosa funziona solo sulla carta.</p>
+    <p>Quella conoscenza non si insegna a un modello con un prompt.
+    Ma si usa, eccome, per costruire i prompt giusti.</p>
+    <h2>Perché l'esperienza è il miglior prompt che esiste</h2>
+    <p>Quando usi l'AI senza contesto, ottieni risposte generiche. È matematico:
+    il modello non sa niente di te, del tuo settore, dei tuoi clienti, delle dinamiche
+    reali del tuo mercato. Quindi ti restituisce la media. E la media non serve a nessuno.</p>
+    <p>Ma quando porti dentro il contesto — la tua esperienza, il tuo punto di vista,
+    i vincoli reali del problema che stai risolvendo — l'output cambia completamente.
+    L'AI smette di essere generica e diventa uno strumento calibrato su di te.</p>
+    <p>Chi ha vent'anni di esperienza ha un vocabolario più ricco, una capacità di
+    distinguere il segnale dal rumore, e sa esattamente quali sono le domande giuste.
+    Queste cose si traducono in prompt migliori. E prompt migliori producono
+    risultati migliori. Non è un vantaggio piccolo. È strutturale.</p>
+    <h2>L'AI è potente. Ma è stupida.</h2>
+    <p>L'intelligenza artificiale, nella sua forma attuale, è uno strumento
+    straordinariamente potente per elaborare informazioni e automatizzare processi.
+    Ma ha un limite fondamentale che spesso viene ignorato: non sa cosa è importante.</p>
+    <p>Non sa distinguere una buona idea da una cattiva. Non sa riconoscere quando
+    un cliente sta per andarsene. Non sa capire la differenza tra un problema tecnico
+    e un problema umano. Non sa leggere una stanza.</p>
+    <p>Questa capacità si chiama giudizio. Il giudizio si costruisce solo
+    con l'esperienza.</p>
+    <h2>Chi decide come usare l'AI?</h2>
+    <p>Quando un medico usa l'AI per diagnosticare, chi decide se accettare o
+    mettere in discussione il risultato? Il medico — con i suoi anni di pratica clinica.</p>
+    <p>Quando un avvocato usa l'AI per analizzare contratti, chi identifica le clausole
+    che contano davvero? L'avvocato — con la sua conoscenza della dinamiche reali
+    della trattativa.</p>
+    <p>Quando un imprenditore usa l'AI per analizzare il mercato, chi sa distinguere
+    un trend reale da un rumore di fondo? L'imprenditore — con la sua cicatrice
+    imprenditoriale.</p>
+    <p>L'AI amplifica le capacità di chi la usa. Chi ha più capacità da amplificare?
+    Chi ha più esperienza.</p>
+    <h2>Il vero vantaggio competitivo oggi</h2>
+    <p><a href="/il-metodo">Nel metodo che ho sviluppato</a>, il punto di partenza
+    non è mai la tecnologia — è sempre la persona.</p>
+    <p>Perché la domanda giusta non è "come faccio a usare l'AI?" ma "cosa so fare
+    che l'AI non può fare, e come uso l'AI per farlo meglio o più velocemente?"</p>
+    <p>Se hai 20 anni, stai ancora scoprendo cosa sai fare.</p>
+    <p>Se hai 40 anni, lo sai già. E puoi iniziare subito a costruire il tuo vantaggio.</p>
+    <div class="blog-cta">
+      <p>Vuoi approfondire questo tema?</p>
+      <a href="/contatti">→ Scrivimi a info@fabiomicale.com</a>
+    </div>
+    <h2>Cosa significa in pratica</h2>
+    <p>Ho lavorato con professionisti over 40 che hanno trasformato anni di competenze
+    settoriali in prodotti digitali scalabili usando l'AI come acceleratore. Ho visto
+    imprenditori automatizzare processi che prima richiedevano team interi. Ho visto
+    manager costruire sistemi decisionali che lavorano mentre dormono.</p>
+    <p>In nessuno di questi casi l'AI ha sostituito l'esperienza. L'ha resa più potente.</p>
+    <p><a href="/chi-sono">Io stesso sono uno di quei casi</a> — e quello che ho
+    imparato è che il passaggio non è mai tecnologico. È mentale. Si tratta di smettere
+    di vedere l'AI come una minaccia o come un giocattolo, e iniziare a vederla per
+    quello che è: uno strumento che lavora tanto meglio quanto più chi lo guida
+    sa cosa vuole.</p>
+    <h2>Il rischio reale non è l'AI. È l'immobilismo.</h2>
+    <p>L'unico scenario in cui l'AI penalizza i professionisti esperti è quello in cui
+    questi scelgono di ignorarla. Di aspettare. Di osservare da lontano sperando
+    che passi.</p>
+    <p>Non passerà. Ma non è una minaccia — è un'opportunità con una finestra temporale.</p>
+    <p>Chi la coglie adesso, mentre la maggior parte ancora osserva, costruisce un
+    vantaggio competitivo difficile da colmare.</p>
+    <p><a href="/lavora-con-me">Se vuoi capire come farlo nel tuo caso specifico,
+    inizia da qui</a>.</p>
+  `,
+  },
+
   // ── MANIFESTO ─────────────────────────────────────────────────
   {
     slug: "manifesto-ai-esperienza-vince",
