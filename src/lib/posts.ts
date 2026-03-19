@@ -19,6 +19,121 @@ export type Post = {
 export const posts: Post[] = [
   // ── ARTICOLI RECENTI ──────────────────────────────────────────
   {
+    slug: "paura-obsolescenza-professionale-ai",
+    seoTitle: "Paura di essere tagliato fuori dall'AI? Hai ragione. Ecco cosa fare.",
+    seoDescription:
+      "La paura di diventare obsoleto nell'era AI è reale. Non ti dirò di ignorarla. Ti dico cosa farne — e come trasformarla in vantaggio concreto.",
+    keywords:
+      "paura obsolescenza professionale, over 40 intelligenza artificiale, reinventarsi professionalmente, mindset cambiamento, futuro del lavoro AI over 40",
+    titolo:
+      "Paura di essere tagliato fuori dall'AI? Hai ragione ad averla. Ecco cosa fare.",
+    categoria: "Mindset",
+    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
+    data: "31 marzo 2026",
+    dataISO: "2026-03-31",
+    tempoLettura: "7 min",
+    excerpt:
+      "Non una lista di consigli motivazionali. Non una promessa che andrà tutto bene. La paura di diventare obsoleto è reale — e ha qualcosa importante da dirti.",
+    correlati: ["manifesto-reinvenzione-over40", "reinventarsi-dopo-i-40-metodo"],
+    contentHtml: `
+    <p>C'è una cosa che non sento quasi mai dire nei convegni sull'AI,
+    nei webinar sul futuro del lavoro, nei post LinkedIn pieni di
+    ottimismo da coaching.</p>
+    <p>La verità scomoda: la paura di diventare obsoleto non è irrazionale.
+    È una risposta sensata a un cambiamento reale, veloce, e ancora
+    difficile da misurare.</p>
+    <p>Non ti dirò di ignorarla. Non ti dirò che "è solo nella tua testa".
+    Ti dirò cosa farne.</p>
+    <h2>La paura che nessuno vuole ammettere</h2>
+    <p>Ho parlato con decine di professionisti over 40 negli ultimi anni.
+    Manager, consulenti, imprenditori, liberi professionisti. Persone
+    competenti, con carriere solide, con risultati reali alle spalle.</p>
+    <p>Quasi tutti, a un certo punto della conversazione, dicono una
+    variante della stessa cosa:</p>
+    <p><em>"Ho paura che quello che so fare non basti più."</em></p>
+    <p>Di solito lo dicono sottovoce. Come se fosse una debolezza da nascondere.
+    Come se ammetterlo significasse dargli ragione.</p>
+    <p>Non funziona così. La paura che ignori non scompare — si installa
+    come rumore di fondo e consuma energia ogni giorno, senza che tu
+    faccia nulla di utile con essa.</p>
+    <h2>Cosa sta succedendo davvero nel mercato del lavoro</h2>
+    <p>Il mercato si sta trasformando. Alcune competenze vengono automatizzate.
+    Alcune professioni cambiano forma. Alcune figure che esistevano dieci anni
+    fa stanno sparendo — e ne stanno nascendo di nuove.</p>
+    <p>Questo è reale. Non ha senso negarlo.</p>
+    <p>Ma c'è una differenza enorme tra "il mercato cambia" e "io sono
+    destinato a essere tagliato fuori". La prima è un dato. La seconda
+    è un'interpretazione. E le interpretazioni si possono cambiare.</p>
+    <p>La domanda giusta non è "l'AI mi sostituirà?"
+    La domanda giusta è "cosa so fare io che l'AI non può fare,
+    e come costruisco il mio valore attorno a questo?"</p>
+    <h2>Il problema non è l'AI. È l'attesa.</h2>
+    <p>Ho visto professionisti competenti perdere anni ad aspettare
+    che la situazione si chiarisse. Aspettare di capire meglio come
+    funziona l'AI. Aspettare che qualcuno dicesse loro cosa fare.
+    Aspettare il momento giusto per iniziare.</p>
+    <p>Il momento giusto non arriva. Arriva solo il momento in cui
+    realizzi che avresti dovuto iniziare prima.</p>
+    <p>L'attesa non è neutralità. È una scelta — quella di lasciare
+    che altri costruiscano un vantaggio mentre tu osservi.</p>
+    <p><a href="/il-metodo">Il metodo che ho sviluppato</a> parte
+    esattamente da questo punto: non da un corso di AI, non da uno
+    strumento specifico, ma da una domanda precisa su dove sei adesso
+    e dove vuoi andare.</p>
+    <div class="blog-cta">
+      <p>Vuoi capire da dove iniziare nel tuo caso specifico?</p>
+      <a href="/contatti">→ Scrivimi a info@fabiomicale.com</a>
+    </div>
+    <h2>Come si trasforma la paura in direzione</h2>
+    <p>La paura è un segnale. Come tutti i segnali, ha un'informazione
+    utile dentro — se sai come leggerla.</p>
+    <p>Quando senti la paura di diventare obsoleto, ti sta dicendo tre cose:</p>
+    <p>Prima cosa: tieni al tuo lavoro. Non lo dai per scontato. Questo è
+    un punto di partenza migliore di chi è così sicuro di sé da non
+    vedere i cambiamenti in corso.</p>
+    <p>Seconda cosa: stai percependo un gap reale tra dove sei e dove
+    dovresti essere. Questo gap ha un nome e una dimensione — e le cose
+    con un nome e una dimensione si affrontano.</p>
+    <p>Terza cosa: hai ancora tempo per muoverti. Chi ha già perso
+    non ha paura — ha già smesso di preoccuparsene.</p>
+    <h2>La differenza tra chi si aggiorna e chi si reinventa</h2>
+    <p>Aggiornare le competenze significa imparare a usare un nuovo
+    strumento. È necessario, ma non sufficiente.</p>
+    <p>Reinventarsi significa ridefinire il proprio valore professionale
+    alla luce di un contesto cambiato. Significa rispondere alla domanda:
+    "Chi sono io nel mercato di oggi, e cosa posso fare che altri
+    non possono?"</p>
+    <p>L'AI non è solo uno strumento da imparare. È un cambio di contesto
+    che richiede un cambio di prospettiva. Chi si limita ad aggiornare
+    il curriculum con "conoscenza base di ChatGPT" sta facendo la
+    cosa sbagliata nel modo giusto.</p>
+    <p>Chi invece usa questo momento per ridefinire il proprio
+    posizionamento — usando l'esperienza come leva, non come zavorra —
+    sta costruendo qualcosa di difficile da replicare.</p>
+    <h2>Una cosa pratica da fare adesso</h2>
+    <p>Non ti chiedo di fare un corso. Non ti chiedo di costruire
+    un piano a cinque anni.</p>
+    <p>Ti chiedo di rispondere a una domanda, per iscritto, in dieci
+    minuti:</p>
+    <p><em>"Quali sono le tre cose che so fare meglio di quasi chiunque
+    altro nel mio settore, e che richiedono anni di esperienza per
+    essere fatte bene?"</em></p>
+    <p>Quelle tre cose sono il tuo punto di partenza reale.
+    Non le competenze che ti mancano. Non gli strumenti che non conosci.
+    Quello che hai già.</p>
+    <p>L'AI si costruisce sopra. Non al posto di.</p>
+    <h2>Il momento in cui tutto cambia</h2>
+    <p>C'è un passaggio preciso in cui le persone con cui lavoro
+    smettono di avere paura. Non è quando imparano a usare uno
+    strumento AI. Non è quando fanno un corso o leggono un libro.</p>
+    <p>È quando smettono di chiedersi "ce la farò?" e iniziano a
+    chiedersi "da dove inizio?"</p>
+    <p>La seconda domanda ha una risposta. La prima è un pozzo senza fondo.</p>
+    <p><a href="/lavora-con-me">Se sei pronto a passare dalla prima
+    domanda alla seconda, inizia da qui</a>.</p>
+  `,
+  },
+  {
     slug: "ai-esperienza-professionale-vantaggio",
     seoTitle: "Se hai 20 anni di esperienza, l'AI ti rende più forte",
     seoDescription:
