@@ -83,9 +83,47 @@ const perChiItems = [
   "Vuoi capire come usare l'AI senza perdere quello che hai già costruito",
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  name: "Successo in 3 Passi",
+  url: "https://fabiomicale.com/il-libro",
+  image: "https://fabiomicale.com/copertina-libro.png",
+  description:
+    "Un metodo semplice per riprendere il controllo della tua vita. 27 esercizi pratici, 5 casi studio reali, nessuna frase motivazionale.",
+  inLanguage: "it-IT",
+  genre: "Self-help",
+  author: {
+    "@type": "Person",
+    "@id": "https://fabiomicale.com/#person",
+    name: "Fabio Micale",
+    url: "https://fabiomicale.com/chi-sono",
+  },
+  publisher: {
+    "@type": "Person",
+    name: "Fabio Micale",
+  },
+  workExample: {
+    "@type": "Book",
+    bookFormat: "https://schema.org/EBook",
+    potentialAction: {
+      "@type": "ReadAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate:
+          "https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=drive_link",
+      },
+    },
+  },
+};
+
 export default function IlLibroPage() {
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
