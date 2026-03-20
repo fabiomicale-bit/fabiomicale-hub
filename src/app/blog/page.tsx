@@ -7,6 +7,7 @@ export const metadata = {
   title: "Approfondimenti — Fabio Micale",
   description:
     "Articoli su AI, mindset e produttività per professionisti over 40 che vogliono reinventarsi nell'era dell'intelligenza artificiale.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogPage() {

@@ -6,6 +6,7 @@ export const metadata = {
   title: "Il Libro — Successo in 3 Passi | Fabio Micale",
   description:
     "Non troverai frasi motivazionali. Troverai un metodo reale con 27 esercizi pratici per riprendere il controllo della tua vita.",
+  alternates: { canonical: "/il-libro" },
 };
 
 const cards = [

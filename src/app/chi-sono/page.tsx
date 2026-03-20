@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -5,6 +6,7 @@ export const metadata = {
   title: "Chi sono — Fabio Micale",
   description:
     "Ho 56 anni, ho fondato aziende, gestito team, attraversato fallimenti e ripartenze. Scopri la mia storia — senza filtri.",
+  alternates: { canonical: "/chi-sono" },
 };
 
 const lezioni = [
@@ -89,9 +91,11 @@ export default function ChiSonoPage() {
               <div className="relative w-full max-w-sm">
                 <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-blue-500/20 to-violet-600/20 blur-sm" />
                 <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
-                  <img
+                  <Image
                     src="/fabio-chisono.jpg"
-                    alt="Fabio Micale"
+                    alt="Fabio Micale, coach e imprenditore over 40"
+                    width={480}
+                    height={480}
                     className="w-full h-auto object-cover"
                     style={{ maxHeight: "480px", objectPosition: "top" }}
                   />

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
@@ -97,9 +99,12 @@ export default function Hero() {
             <div className="relative w-full max-w-sm lg:max-w-none">
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-blue-500/20 to-violet-600/20 blur-sm" />
               <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
-                <img
+                <Image
                   src="/fabio-hero.jpg"
-                  alt="Fabio Micale"
+                  alt="Fabio Micale, coach over 40 nell'era AI"
+                  width={600}
+                  height={600}
+                  priority
                   className="w-full h-auto object-cover"
                   style={{ maxHeight: "600px", objectPosition: "top" }}
                 />

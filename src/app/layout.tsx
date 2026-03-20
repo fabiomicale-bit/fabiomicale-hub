@@ -8,6 +8,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://fabiomicale.com"),
   title: "Fabio Micale — Coach Over 40 nell'Era AI",
   description:
     "Sono Fabio Micale. Coach, imprenditore, autore. Ti aiuto a costruire una nuova fase professionale con il mindset giusto e gli strumenti concreti dell'era AI.",
@@ -21,11 +22,20 @@ export const metadata: Metadata = {
     siteName: "Fabio Micale",
     locale: "it_IT",
     type: "website",
+    images: [
+      {
+        url: "/fabio-hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fabio Micale — Coach Over 40 nell'Era AI",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Fabio Micale — Coach Over 40 nell'Era AI",
     description: "Ti aiuto a reinventarti con il mindset giusto e gli strumenti dell'era AI.",
+    images: ["/fabio-hero.jpg"],
   },
 };
 

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ChiSonoPreview() {
   return (
     <section id="chi-sono" className="py-24 px-6 relative">
@@ -16,10 +18,11 @@ export default function ChiSonoPreview() {
 
               {/* Photo placeholder */}
               <div className="absolute inset-12 rounded-full border border-white/10 overflow-hidden">
-                <img
+                <Image
                   src="/fabio-chisono.jpg"
-                  alt="Fabio Micale"
-                  className="w-full h-full object-cover"
+                  alt="Fabio Micale, coach e imprenditore"
+                  fill
+                  className="object-cover"
                 />
               </div>
 
