@@ -238,7 +238,9 @@ export default function IlMetodoPage() {
             <span className="text-slate-300">Parliamone senza impegno.</span>
           </p>
           <a
-            href="/#contatti"
+            href="https://calendly.com/fabiomicale"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 text-base"
           >
             Prenota una chiamata gratuita
