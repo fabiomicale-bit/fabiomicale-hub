@@ -9,11 +9,11 @@ export default function Newsletter() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      window.open(
-        `https://governarelab.it/?email=${encodeURIComponent(email)}`,
-        "_blank",
-        "noopener,noreferrer"
-      );
+      // Iscrizione Beehiiv in background
+      fetch(`https://governarelab.it/?email=${encodeURIComponent(email)}`, {
+        method: "GET",
+        mode: "no-cors",
+      }).catch(() => {});
       setSubmitted(true);
     }
   };
@@ -69,8 +69,16 @@ export default function Newsletter() {
         ) : (
           <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-8 py-5 rounded-2xl max-w-md mx-auto">
             <div className="text-2xl mb-2">✓</div>
-            <p className="font-medium">Perfetto! Controlla la tua email.</p>
-            <p className="text-sm text-emerald-500/80 mt-1">L&apos;ebook è in arrivo nella tua casella.</p>
+            <p className="font-medium">Perfetto! Sei iscritto.</p>
+            <p className="text-sm text-emerald-500/80 mt-1 mb-4">Scarica subito il tuo ebook gratuito:</p>
+            <a
+              href="https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm"
+            >
+              Scarica subito il tuo ebook gratuito →
+            </a>
           </div>
         )}
 
