@@ -40,9 +40,9 @@ const opzioni = [
     titolo: "Corsi e Masterclass",
     testo:
       "Percorsi strutturati per imparare a usare l'AI nel tuo contesto professionale. Dal mindset agli strumenti, passo dopo passo. Gruppi piccoli, massimo 4 persone.",
-    cta: "Scopri i corsi",
-    href: "/corsi",
-    nota: "Prossima apertura: in arrivo",
+    cta: null,
+    href: null,
+    nota: "Vuoi saperne di più? Scrivici a info@fabiomicale.com",
     highlight: false,
   },
   {
@@ -64,9 +64,9 @@ const opzioni = [
     titolo: "Servizi AI e Automazioni",
     testo:
       "Implementazione di strumenti e workflow AI nella tua attività. Automazioni, agenti, processi ottimizzati. Per professionisti e piccole imprese che vogliono risultati misurabili.",
-    cta: "Scopri i servizi",
-    href: "/servizi-ai",
-    nota: null,
+    cta: null,
+    href: null,
+    nota: "Disponibilità limitata — scrivici a info@fabiomicale.com per richiedere info",
     highlight: false,
   },
 ];
@@ -157,24 +157,26 @@ export default function LavoraConMePage() {
                 )}
 
                 {/* cta */}
-                <a
-                  href={o.href}
-                  className={`mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group/cta ${
-                    o.highlight
-                      ? "text-blue-400 hover:text-blue-300"
-                      : "text-slate-400 hover:text-white"
-                  }`}
-                >
-                  {o.cta}
-                  <svg
-                    className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+                {o.href && (
+                  <a
+                    href={o.href}
+                    className={`mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group/cta ${
+                      o.highlight
+                        ? "text-blue-400 hover:text-blue-300"
+                        : "text-slate-400 hover:text-white"
+                    }`}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
+                    {o.cta}
+                    <svg
+                      className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                )}
               </div>
             ))}
           </div>
