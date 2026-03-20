@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -36,9 +37,13 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">
-            FM
-          </div>
+          <Image
+            src="/logo-fabio-micale.svg"
+            width={36}
+            height={36}
+            alt="Fabio Micale"
+            priority
+          />
           <span className="font-semibold text-white text-sm tracking-wide hidden sm:block">
             Fabio Micale
           </span>
