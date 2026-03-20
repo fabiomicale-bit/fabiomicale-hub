@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Chi sono", href: "#chi-sono" },
@@ -15,6 +16,8 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const newsletterHref = pathname === "/" ? "#newsletter" : "/#newsletter";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -55,12 +58,12 @@ export default function Navbar() {
         </nav>
 
         {/* CTA */}
-        <a
-          href="#newsletter"
+        <Link
+          href={newsletterHref}
           className="hidden md:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
         >
           Newsletter gratuita
-        </a>
+        </Link>
 
         {/* Mobile menu button */}
         <button
@@ -87,13 +90,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#newsletter"
+          <Link
+            href={newsletterHref}
             className="mt-4 block text-center bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-3 rounded-lg"
             onClick={() => setMenuOpen(false)}
           >
             Newsletter gratuita
-          </a>
+          </Link>
         </div>
       )}
     </header>

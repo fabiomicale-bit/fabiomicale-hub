@@ -118,7 +118,9 @@ export default function IlLibroPage() {
                   Acquista su Amazon
                 </a>
                 <a
-                  href="mailto:libro.successointrepassi@fabiomicale.com"
+                  href="https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-slate-300 hover:text-white font-medium px-7 py-4 rounded-xl transition-all duration-200 text-base"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
