@@ -8,9 +8,9 @@ import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Fabio Micale — Coach Over 40 nell'Era AI",
+  title: "Fabio Micale — Coach AI per Professionisti Over 40",
   description:
-    "Sono Fabio Micale. Coach, imprenditore, autore. Ti aiuto a reinventarti con il mindset giusto e gli strumenti concreti dell'era AI.",
+    "Strumenti AI concreti per professionisti over 40 che vogliono una nuova fase professionale. Niente teoria. Solo quello che funziona.",
   alternates: { canonical: "/" },
 };
 
