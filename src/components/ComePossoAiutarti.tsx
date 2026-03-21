@@ -5,7 +5,7 @@ const services = [
     title: "Leggi il libro",
     desc: "Una guida pratica e diretta per capire come l'AI sta ridisegnando il lavoro — e come posizionarti in anticipo, non in ritardo.",
     cta: "Scopri il libro",
-    href: "#libro",
+    href: "/il-libro",
     accent: "from-amber-500/20 to-orange-500/10",
     border: "border-amber-500/20 hover:border-amber-400/40",
     tag_color: "bg-amber-500/10 text-amber-400 border-amber-500/20",
@@ -27,8 +27,7 @@ const services = [
     tag: "Corsi e Masterclass",
     title: "Formazione intensiva",
     desc: "Percorsi strutturati per imparare a usare l'AI nel tuo contesto professionale. Dal mindset agli strumenti, passo dopo passo.",
-    cta: "Guarda i corsi",
-    href: "#corsi",
+    staticText: "Vuoi saperne di più? Scrivici a info@fabiomicale.com",
     accent: "from-violet-500/20 to-purple-500/10",
     border: "border-violet-500/20 hover:border-violet-400/40",
     tag_color: "bg-violet-500/10 text-violet-400 border-violet-500/20",
@@ -39,7 +38,8 @@ const services = [
     title: "Lavoriamo insieme",
     desc: "Sessioni private per chi vuole un percorso personalizzato. Analisi della situazione, obiettivi chiari, piano d'azione concreto.",
     cta: "Prenota una call",
-    href: "#consulenza",
+    href: "https://calendly.com/fabiomicale",
+    external: true,
     accent: "from-emerald-500/20 to-teal-500/10",
     border: "border-emerald-500/20 hover:border-emerald-400/40",
     tag_color: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
@@ -49,8 +49,7 @@ const services = [
     tag: "Servizi AI",
     title: "AI per il tuo business",
     desc: "Implementazione di strumenti e workflow AI nella tua attività. Automazioni, assistenti, processi ottimizzati. Risultati misurabili.",
-    cta: "Scopri i servizi",
-    href: "#servizi-ai",
+    staticText: "Disponibilita limitata — scrivici a info@fabiomicale.com per richiedere info",
     accent: "from-pink-500/20 to-rose-500/10",
     border: "border-pink-500/20 hover:border-pink-400/40",
     tag_color: "bg-pink-500/10 text-pink-400 border-pink-500/20",
@@ -107,15 +106,20 @@ export default function ComePossoAiutarti() {
               <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
               <p className="text-slate-400 text-sm leading-relaxed flex-1">{service.desc}</p>
 
-              <a
-                href={service.href}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white group-hover:gap-3 transition-all duration-200"
-              >
-                {service.cta}
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
+              {service.staticText ? (
+                <p className="mt-6 text-sm text-slate-400 leading-relaxed">{service.staticText}</p>
+              ) : (
+                <a
+                  href={service.href}
+                  {...(service.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white group-hover:gap-3 transition-all duration-200"
+                >
+                  {service.cta}
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              )}
             </div>
           ))}
         </div>
