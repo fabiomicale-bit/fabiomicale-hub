@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navSections = [
   {
@@ -40,16 +41,14 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">
-                FM
-              </div>
+              <Image src="/logo-fabio-micale.svg" width={40} height={40} alt="Fabio Micale" />
               <span className="font-semibold text-white">Fabio Micale</span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed max-w-[240px]">
               Coach, imprenditore, autore. Ti aiuto a reinventarti nell&apos;era AI.
             </p>
             <a
-              href="mailto:ciao@fabiomicale.com"
+              href="mailto:info@fabiomicale.com"
               className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white mt-4 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,7 +59,7 @@ export default function Footer() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              ciao@fabiomicale.com
+              info@fabiomicale.com
             </a>
           </div>
 
