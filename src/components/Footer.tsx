@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const navSections = [
   {
     title: "Esplora",
@@ -11,10 +13,10 @@ const navSections = [
   {
     title: "Lavora con me",
     links: [
-      { label: "Consulenza 1:1", href: "#consulenza" },
-      { label: "Servizi AI", href: "#servizi-ai" },
+      { label: "Consulenza 1:1", href: "/lavora-con-me" },
+      { label: "Servizi AI", href: "/lavora-con-me" },
       { label: "Newsletter", href: "#newsletter" },
-      { label: "Contatti", href: "#contatti" },
+      { label: "Contatti", href: "/contatti" },
     ],
   },
   {
@@ -69,24 +71,26 @@ export default function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
-                      target={"external" in link && link.external ? "_blank" : undefined}
-                      rel={"external" in link && link.external ? "noopener noreferrer" : undefined}
-                      className="text-sm text-slate-500 hover:text-slate-300 transition-colors inline-flex items-center gap-1"
-                    >
-                      {link.label}
-                      {"external" in link && link.external && (
+                    {"external" in link && link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-slate-500 hover:text-slate-300 transition-colors inline-flex items-center gap-1"
+                      >
+                        {link.label}
                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                          />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                      )}
-                    </a>
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
