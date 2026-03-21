@@ -38,11 +38,9 @@ export const metadata: Metadata = {
     images: ["/fabio-hero.jpg"],
   },
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    shortcut: "/favicon.ico",
+    icon: "/logo-fabio-micale.svg",
+    shortcut: "/logo-fabio-micale.svg",
+    apple: "/logo-fabio-micale.svg",
   },
 };
 

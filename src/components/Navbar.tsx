@@ -39,8 +39,8 @@ export default function Navbar() {
         <Link href="/" className="flex items-center gap-2 group">
           <Image
             src="/logo-fabio-micale.svg"
-            width={36}
-            height={36}
+            width={48}
+            height={48}
             alt="Fabio Micale"
             priority
           />
