@@ -146,16 +146,27 @@ export default function IlLibroPage() {
               <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed mb-8">
                 Un metodo semplice per riprendere il controllo della tua vita
               </p>
-              <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4">
+              <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 flex-wrap">
                 <a
-                  href="#"
+                  href="https://www.amazon.it/Successo-3-Passi-I-Fondamentali/dp/153755087X"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 text-base"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
-                  Acquista su Amazon
+                  Acquista edizione 2017
                 </a>
+                <div className="flex flex-col items-center gap-1">
+                  <span className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-slate-500 font-semibold px-7 py-4 rounded-xl text-base cursor-default select-none">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    Nuova edizione 2026 — Prossimamente
+                  </span>
+                  <span className="text-xs text-slate-600 tracking-wide">In uscita maggio 2026</span>
+                </div>
                 <a
                   href="https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=drive_link"
                   target="_blank"
