@@ -37,6 +37,13 @@ export const metadata: Metadata = {
     description: "Ti aiuto a reinventarti con il mindset giusto e gli strumenti dell'era AI.",
     images: ["/fabio-hero.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
