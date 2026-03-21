@@ -10,15 +10,15 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fabiomicale.com"),
-  title: "Fabio Micale — Coach Over 40 nell'Era AI",
+  title: "Fabio Micale — Coach AI per Professionisti Over 40",
   description:
-    "Sono Fabio Micale. Coach, imprenditore, autore. Ti aiuto a costruire una nuova fase professionale con il mindset giusto e gli strumenti concreti dell'era AI.",
+    "Strumenti AI concreti per professionisti over 40 che vogliono una nuova fase professionale. Niente teoria. Solo quello che funziona.",
   keywords: ["coach over 40", "AI", "reinvention", "mindset", "Fabio Micale", "intelligenza artificiale"],
   authors: [{ name: "Fabio Micale" }],
   openGraph: {
-    title: "Fabio Micale — Coach Over 40 nell'Era AI",
+    title: "Fabio Micale — Coach AI per Professionisti Over 40",
     description:
-      "Ti aiuto a costruire una nuova fase professionale con il mindset giusto e gli strumenti concreti dell'era AI.",
+      "Strumenti AI concreti per professionisti over 40 che vogliono una nuova fase professionale. Niente teoria. Solo quello che funziona.",
     url: "https://fabiomicale.com",
     siteName: "Fabio Micale",
     locale: "it_IT",
