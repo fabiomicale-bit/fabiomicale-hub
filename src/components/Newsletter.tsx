@@ -2,19 +2,39 @@
 
 import { useState } from "react";
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export default function Newsletter() {
   const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
-      // Iscrizione Beehiiv in background
-      fetch(`https://governarelab.it/?email=${encodeURIComponent(email)}`, {
-        method: "GET",
-        mode: "no-cors",
-      }).catch(() => {});
-      setSubmitted(true);
+    if (!email || !email.includes("@")) return;
+
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        setStatus("success");
+        setMessage("Iscritto! Controlla la tua email per l'ebook.");
+      } else {
+        setStatus("error");
+        setMessage(data.error || "Errore durante l'iscrizione. Riprova.");
+      }
+    } catch {
+      setStatus("error");
+      setMessage("Errore di rete. Riprova tra poco.");
     }
   };
 
@@ -49,7 +69,12 @@ export default function Newsletter() {
           </p>
         </div>
 
-        {!submitted ? (
+        {status === "success" ? (
+          <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-8 py-5 rounded-2xl max-w-md mx-auto">
+            <div className="text-2xl mb-2">✓</div>
+            <p className="font-medium">{message}</p>
+          </div>
+        ) : (
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
               type="email"
@@ -57,29 +82,21 @@ export default function Newsletter() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="La tua email"
               required
-              className="flex-1 bg-white/[0.05] border border-white/10 focus:border-violet-500/50 text-white placeholder-slate-500 px-5 py-3.5 rounded-xl outline-none transition-colors text-sm"
+              disabled={status === "loading"}
+              className="flex-1 bg-white/[0.05] border border-white/10 focus:border-violet-500/50 text-white placeholder-slate-500 px-5 py-3.5 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
             />
             <button
               type="submit"
-              className="bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-violet-500/25 text-sm whitespace-nowrap"
+              disabled={status === "loading"}
+              className="bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-violet-500/25 text-sm whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Iscriviti e ricevi l&apos;ebook
+              {status === "loading" ? "..." : "Iscriviti e ricevi l\u2019ebook"}
             </button>
           </form>
-        ) : (
-          <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-8 py-5 rounded-2xl max-w-md mx-auto">
-            <div className="text-2xl mb-2">✓</div>
-            <p className="font-medium">Perfetto! Sei iscritto.</p>
-            <p className="text-sm text-emerald-500/80 mt-1 mb-4">Scarica subito il tuo ebook gratuito:</p>
-            <a
-              href="https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-emerald-500 hover:bg-emerald-400 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 text-sm"
-            >
-              Scarica subito il tuo ebook gratuito →
-            </a>
-          </div>
+        )}
+
+        {status === "error" && (
+          <p className="text-red-400 text-sm mt-3">{message}</p>
         )}
 
         <p className="text-slate-600 text-xs mt-4">
