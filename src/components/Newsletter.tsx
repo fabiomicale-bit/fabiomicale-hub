@@ -7,14 +7,13 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
-  const [message, setMessage] = useState("");
+  const [ebookUrl, setEbookUrl] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes("@")) return;
 
     setStatus("loading");
-    setMessage("");
 
     try {
       const res = await fetch("/api/subscribe", {
@@ -25,16 +24,14 @@ export default function Newsletter() {
 
       const data = await res.json();
 
-      if (res.ok && data.success) {
+      if (data.success) {
+        setEbookUrl(data.ebookUrl);
         setStatus("success");
-        setMessage("Iscritto! Controlla la tua email per l'ebook.");
       } else {
         setStatus("error");
-        setMessage(data.error || "Errore durante l'iscrizione. Riprova.");
       }
     } catch {
       setStatus("error");
-      setMessage("Errore di rete. Riprova tra poco.");
     }
   };
 
@@ -70,33 +67,53 @@ export default function Newsletter() {
         </div>
 
         {status === "success" ? (
-          <div className="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-8 py-5 rounded-2xl max-w-md mx-auto">
-            <div className="text-2xl mb-2">✓</div>
-            <p className="font-medium">{message}</p>
+          <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl px-8 py-8 max-w-md mx-auto">
+            <div className="text-3xl mb-3">✅</div>
+            <p className="text-white font-bold text-xl mb-2">Sei dentro!</p>
+            <p className="text-slate-300 text-sm mb-6 leading-relaxed">
+              La tua prima newsletter arriva mercoledì alle 9:00.<br />
+              Intanto, scarica subito il tuo ebook gratuito:
+            </p>
+            <a
+              href={ebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 text-sm text-white hover:opacity-90 hover:shadow-lg"
+              style={{ backgroundColor: "#F5A623" }}
+            >
+              Scarica &ldquo;I 3 Passi per Iniziare con l&apos;AI&rdquo; →
+            </a>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="La tua email"
-              required
-              disabled={status === "loading"}
-              className="flex-1 bg-white/[0.05] border border-white/10 focus:border-violet-500/50 text-white placeholder-slate-500 px-5 py-3.5 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
-            />
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-violet-500/25 text-sm whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
-            >
-              {status === "loading" ? "..." : "Iscriviti e ricevi l\u2019ebook"}
-            </button>
-          </form>
-        )}
+          <>
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="La tua email"
+                required
+                disabled={status === "loading"}
+                className="flex-1 bg-white/[0.05] border border-white/10 focus:border-violet-500/50 text-white placeholder-slate-500 px-5 py-3.5 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
+              />
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="bg-violet-600 hover:bg-violet-500 text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-violet-500/25 text-sm whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {status === "loading" ? "Iscrizione in corso..." : "Iscriviti e ricevi l\u2019ebook"}
+              </button>
+            </form>
 
-        {status === "error" && (
-          <p className="text-red-400 text-sm mt-3">{message}</p>
+            {status === "error" && (
+              <p className="text-red-400 text-sm mt-3">
+                Ops, qualcosa non ha funzionato. Riprova o scrivi a{" "}
+                <a href="mailto:info@fabiomicale.com" className="underline">
+                  info@fabiomicale.com
+                </a>
+              </p>
+            )}
+          </>
         )}
 
         <p className="text-slate-600 text-xs mt-4">

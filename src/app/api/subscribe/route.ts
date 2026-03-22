@@ -1,18 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const EBOOK_URL =
+  "https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=sharing";
+
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
   const email: string | undefined = body?.email;
 
   if (!email || !email.includes("@")) {
-    return NextResponse.json({ error: "Email non valida." }, { status: 400 });
+    return NextResponse.json(
+      { success: false, error: "Email non valida." },
+      { status: 400 }
+    );
   }
 
   const apiKey = process.env.BEEHIIV_API_KEY;
   const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
 
   if (!apiKey || !publicationId) {
-    return NextResponse.json({ error: "Configurazione server mancante." }, { status: 500 });
+    console.error("Beehiiv env vars missing");
+    return NextResponse.json(
+      { success: false, error: "Configurazione server mancante." },
+      { status: 500 }
+    );
   }
 
   const res = await fetch(
@@ -25,23 +35,23 @@ export async function POST(req: NextRequest) {
       },
       body: JSON.stringify({
         email,
-        reactivate_existing: false,
+        reactivate_existing: true,
         send_welcome_email: true,
         utm_source: "website",
         utm_medium: "organic",
-        utm_campaign: "lead_magnet_ebook",
       }),
     }
   );
 
-  if (!res.ok) {
-    const text = await res.text();
-    console.error("Beehiiv error:", res.status, text);
-    return NextResponse.json(
-      { error: "Errore durante l'iscrizione. Riprova tra poco." },
-      { status: 502 }
-    );
+  // 409 = already subscribed → treat as success
+  if (res.ok || res.status === 409) {
+    return NextResponse.json({ success: true, ebookUrl: EBOOK_URL });
   }
 
-  return NextResponse.json({ success: true });
+  const text = await res.text();
+  console.error("Beehiiv error:", res.status, text);
+  return NextResponse.json(
+    { success: false, error: "Errore durante l'iscrizione. Riprova tra poco." },
+    { status: 502 }
+  );
 }
