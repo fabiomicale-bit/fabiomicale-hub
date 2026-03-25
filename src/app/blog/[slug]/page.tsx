@@ -22,14 +22,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: post.seoTitle,
     description: post.seoDescription,
     keywords: post.keywords,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `https://www.fabiomicale.com/blog/${post.slug}` },
     openGraph: {
       title: post.seoTitle,
       description: post.seoDescription,
-      url: `https://fabiomicale.com/blog/${post.slug}`,
+      url: `https://www.fabiomicale.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.dataISO,
       authors: ["Fabio Micale"],
+      images: [{ url: "/fabio-hero.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.seoTitle,
+      description: post.seoDescription,
+      images: ["/fabio-hero.jpg"],
     },
   };
 }
@@ -50,17 +57,19 @@ export default async function BlogPostPage({ params }: Props) {
     datePublished: post.dataISO,
     author: {
       "@type": "Person",
+      "@id": "https://www.fabiomicale.com/#person",
       name: "Fabio Micale",
-      url: "https://fabiomicale.com/chi-sono",
+      url: "https://www.fabiomicale.com/chi-sono",
     },
     publisher: {
       "@type": "Person",
+      "@id": "https://www.fabiomicale.com/#person",
       name: "Fabio Micale",
     },
-    url: `https://fabiomicale.com/blog/${post.slug}`,
+    url: `https://www.fabiomicale.com/blog/${post.slug}`,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://fabiomicale.com/blog/${post.slug}`,
+      "@id": `https://www.fabiomicale.com/blog/${post.slug}`,
     },
   };
 

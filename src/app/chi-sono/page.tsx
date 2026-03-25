@@ -6,7 +6,7 @@ export const metadata = {
   title: "Chi sono — Fabio Micale",
   description:
     "Ho 56 anni, ho fondato aziende, gestito team, attraversato fallimenti e ripartenze. Scopri la mia storia — senza filtri.",
-  alternates: { canonical: "/chi-sono" },
+  alternates: { canonical: "https://www.fabiomicale.com/chi-sono" },
 };
 
 const lezioni = [

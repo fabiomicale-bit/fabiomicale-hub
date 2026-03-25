@@ -6,7 +6,7 @@ export const metadata = {
   title: "Il Libro — Successo in 3 Passi | Fabio Micale",
   description:
     "Non troverai frasi motivazionali. Troverai un metodo reale con 27 esercizi pratici per riprendere il controllo della tua vita.",
-  alternates: { canonical: "/il-libro" },
+  alternates: { canonical: "https://www.fabiomicale.com/il-libro" },
 };
 
 const cards = [
@@ -87,17 +87,17 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Book",
   name: "Successo in 3 Passi",
-  url: "https://fabiomicale.com/il-libro",
-  image: "https://fabiomicale.com/copertina-libro.png",
+  url: "https://www.fabiomicale.com/il-libro",
+  image: "https://www.fabiomicale.com/copertina-libro.png",
   description:
     "Un metodo semplice per riprendere il controllo della tua vita. 27 esercizi pratici, 5 casi studio reali, nessuna frase motivazionale.",
   inLanguage: "it-IT",
   genre: "Self-help",
   author: {
     "@type": "Person",
-    "@id": "https://fabiomicale.com/#person",
+    "@id": "https://www.fabiomicale.com/#person",
     name: "Fabio Micale",
-    url: "https://fabiomicale.com/chi-sono",
+    url: "https://www.fabiomicale.com/chi-sono",
   },
   publisher: {
     "@type": "Person",

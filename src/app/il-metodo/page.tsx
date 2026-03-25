@@ -5,7 +5,7 @@ export const metadata = {
   title: "Il Metodo — Fabio Micale",
   description:
     "Non esiste una formula magica. Esiste un approccio strutturato basato su Mindset, Tecnologia e Sistemi per reinventarsi nell'era AI.",
-  alternates: { canonical: "/il-metodo" },
+  alternates: { canonical: "https://www.fabiomicale.com/il-metodo" },
 };
 
 const pilastri = [

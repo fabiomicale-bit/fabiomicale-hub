@@ -6,7 +6,7 @@ export const metadata = {
   title: "Lavora con me — Fabio Micale",
   description:
     "Non esiste un percorso uguale per tutti. Newsletter, libro, corsi, consulenza 1:1 e servizi AI per professionisti over 40.",
-  alternates: { canonical: "/lavora-con-me" },
+  alternates: { canonical: "https://www.fabiomicale.com/lavora-con-me" },
 };
 
 const opzioni = [

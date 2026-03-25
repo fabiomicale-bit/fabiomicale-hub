@@ -4,10 +4,10 @@ import BlogContent from "./BlogContent";
 import { getManifestoPosts, getRegularPosts } from "@/lib/posts";
 
 export const metadata = {
-  title: "Approfondimenti — Fabio Micale",
+  title: "Blog — Fabio Micale",
   description:
-    "Articoli su AI, mindset e produttività per professionisti over 40 che vogliono reinventarsi nell'era dell'intelligenza artificiale.",
-  alternates: { canonical: "/blog" },
+    "Articoli pratici su AI, mindset e sistemi per professionisti over 40. Niente teorie, solo strumenti.",
+  alternates: { canonical: "https://www.fabiomicale.com/blog" },
 };
 
 export default function BlogPage() {

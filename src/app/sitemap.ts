@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { posts } from "@/lib/posts";
 
-const BASE = "https://fabiomicale.com";
+const BASE = "https://www.fabiomicale.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [

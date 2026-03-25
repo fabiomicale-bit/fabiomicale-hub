@@ -5,7 +5,7 @@ export const metadata = {
   title: "Contatti — Fabio Micale",
   description:
     "Contatta Fabio Micale per consulenze 1:1, masterclass, corsi sull'AI o servizi di automazione. Risponde personalmente entro 48 ore.",
-  alternates: { canonical: "/contatti" },
+  alternates: { canonical: "https://www.fabiomicale.com/contatti" },
 };
 
 const scrivimiSe = [
