@@ -44,7 +44,7 @@ export default function Navbar() {
             alt="Fabio Micale"
             priority
           />
-          <span className={`font-semibold text-sm tracking-wide hidden sm:block transition-colors duration-300 ${scrolled ? "text-[#1A1A1A]" : "text-white"}`}>
+          <span className={`font-semibold text-sm tracking-wide hidden sm:block transition-colors duration-300 ${scrolled ? "text-[#111111]" : "text-white"}`}>
             Fabio Micale
           </span>
         </Link>
@@ -57,7 +57,7 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm transition-colors duration-200 tracking-wide ${
                 scrolled
-                  ? "text-[#1A1A1A] hover:text-[#2E7D32]"
+                  ? "text-[#111111] hover:text-[#2E7D32]"
                   : "text-white/90 hover:text-white"
               }`}
             >
@@ -76,7 +76,7 @@ export default function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className={`md:hidden p-2 transition-colors duration-300 ${scrolled ? "text-[#1A1A1A]" : "text-white"}`}
+          className={`md:hidden p-2 transition-colors duration-300 ${scrolled ? "text-[#111111]" : "text-white"}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
