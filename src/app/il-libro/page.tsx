@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Il Libro — Successo in 3 Passi | Fabio Micale",
+  title: "Successo in 3 Passi | Il Libro di Fabio Micale (2026)",
   description:
-    "Non troverai frasi motivazionali. Troverai un metodo reale con 27 esercizi pratici per riprendere il controllo della tua vita.",
+    "Il metodo semplice per riprendere il controllo della tua vita professionale. Edizione 2026 completamente riscritta. Disponibile su Amazon.",
   alternates: { canonical: "https://www.fabiomicale.com/il-libro" },
 };
 
@@ -140,8 +141,8 @@ export default function IlLibroPage() {
                 Edizione 2026 — Completamente riscritta
               </div>
               <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl font-bold text-white leading-tight mb-4">
-                Successo<br />
-                <span className="gradient-text">in 3 Passi</span>
+                Successo in 3 Passi:{" "}
+                <span className="gradient-text">il libro per chi vuole ricominciare senza perdere tutto</span>
               </h1>
               <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed mb-8">
                 Un metodo semplice per riprendere il controllo della tua vita
@@ -214,7 +215,12 @@ export default function IlLibroPage() {
               Non troverai frasi motivazionali. Non troverai promesse di trasformazioni rapide.
               Troverai un metodo reale, costruito su esperienza vera, con{" "}
               <span className="text-slate-200 font-medium">27 esercizi pratici</span>{" "}
-              che richiedono carta, penna e onestà.
+              che richiedono carta, penna e onestà. Il punto di partenza ideale per chi affronta
+              una{" "}
+              <Link href="/reinvenzione-over-40" className="text-blue-400 hover:text-blue-300 transition-colors">
+                reinvenzione professionale over 40
+              </Link>{" "}
+              senza buttare via quello che ha già costruito.
             </p>
           </div>
 

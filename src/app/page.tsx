@@ -8,9 +8,9 @@ import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Fabio Micale — AI per Professionisti Over 40",
+  title: "Fabio Micale | AI per Professionisti Over 40",
   description:
-    "Strumenti AI concreti per professionisti over 40 che vogliono una nuova fase professionale. Niente teoria. Solo quello che funziona.",
+    "Aiuto i professionisti over 40 a usare l'AI per restare competitivi e costruire nuovi redditi. Strumenti concreti, metodo testato. Niente hype.",
   alternates: { canonical: "https://www.fabiomicale.com" },
 };
 

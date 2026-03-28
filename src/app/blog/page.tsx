@@ -4,9 +4,9 @@ import BlogContent from "./BlogContent";
 import { getManifestoPosts, getRegularPosts } from "@/lib/posts";
 
 export const metadata = {
-  title: "Blog — Fabio Micale",
+  title: "Blog | AI e Reinvenzione Over 40 — Fabio Micale",
   description:
-    "Articoli pratici su AI, mindset e sistemi per professionisti over 40. Niente teorie, solo strumenti.",
+    "Articoli pratici su come usare l'AI dopo i 40 anni, reinventarsi professionalmente e costruire nuovi redditi. Niente teoria, solo strumenti.",
   alternates: { canonical: "https://www.fabiomicale.com/blog" },
 };
 
@@ -29,7 +29,7 @@ export default function BlogPage() {
             Articoli e riflessioni
           </div>
           <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
-            Approfondimenti
+            Articoli su AI, reinvenzione e sistemi per professionisti over 40
           </h1>
           <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed">
             AI, mindset e produttività per chi vuole{" "}

@@ -1,11 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Chi sono — Fabio Micale",
+  title: "Chi Sono | Fabio Micale — Coach AI Over 40",
   description:
-    "Ho 56 anni, ho fondato aziende, gestito team, attraversato fallimenti e ripartenze. Scopri la mia storia — senza filtri.",
+    "Ho 56 anni, lavoro da remoto, uso l'AI ogni giorno. Aiuto professionisti over 40 a non farsi sorpassare dalla rivoluzione digitale. La mia storia.",
   alternates: { canonical: "https://www.fabiomicale.com/chi-sono" },
 };
 
@@ -77,7 +78,7 @@ export default function ChiSonoPage() {
                 Storia vera
               </div>
               <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl font-bold text-white leading-tight mb-4">
-                Chi sono
+                Chi sono: un professionista over 40 che ha scelto di non restare indietro
               </h1>
               <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed">
                 Una storia vera.{" "}
@@ -176,7 +177,11 @@ export default function ChiSonoPage() {
               <p>
                 Ho iniziato a studiare l&apos;intelligenza artificiale
                 non come spettatore, ma come{" "}
-                <span className="text-white font-medium">builder</span>.
+                <span className="text-white font-medium">builder</span>{" "}
+                — scopri{" "}
+                <Link href="/ai-per-professionisti" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  come uso l&apos;AI nel mio lavoro quotidiano
+                </Link>.
                 Ho costruito sistemi di automazione,
                 workflow multi-agente, prodotti digitali.
               </p>
@@ -243,7 +248,11 @@ export default function ChiSonoPage() {
           <div className="space-y-5 text-slate-400 leading-relaxed text-[1.05rem] text-left mb-10">
             <p>
               Oggi affianco professionisti e imprenditori over 40
-              che vogliono reinventarsi nell&apos;era dell&apos;AI.
+              che vogliono{" "}
+              <Link href="/reinvenzione-over-40" className="text-blue-400 hover:text-blue-300 transition-colors">
+                reinventarsi professionalmente dopo i 40
+              </Link>{" "}
+              nell&apos;era dell&apos;AI.
             </p>
             <p>
               Non vendo corsi motivazionali.

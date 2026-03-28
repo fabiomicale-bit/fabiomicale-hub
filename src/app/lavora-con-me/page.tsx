@@ -3,9 +3,9 @@ import Footer from "@/components/Footer";
 import FaqAccordion from "./FaqAccordion";
 
 export const metadata = {
-  title: "Lavora con me — Fabio Micale",
+  title: "Lavora con Me | Consulenza AI per Professionisti Over 40",
   description:
-    "Non esiste un percorso uguale per tutti. Newsletter, libro, corsi, consulenza 1:1 e servizi AI per professionisti over 40.",
+    "Consulenza AI personalizzata, sessioni 1:1 e masterclass per professionisti over 40. Scopri come posso aiutarti a usare l'AI nel tuo lavoro.",
   alternates: { canonical: "https://www.fabiomicale.com/lavora-con-me" },
 };
 
@@ -88,7 +88,7 @@ export default function LavoraConMePage() {
             Percorsi su misura
           </div>
           <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
-            Lavora con me
+            Lavora con me: percorsi pratici per usare l&apos;AI nella tua carriera
           </h1>
           <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed">
             Non esiste un percorso uguale per tutti.{" "}

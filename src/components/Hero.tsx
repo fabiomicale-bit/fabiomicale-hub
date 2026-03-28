@@ -29,11 +29,8 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight text-white mb-6">
-              Hai più di 40 anni.{" "}
-              <span className="gradient-text">L&apos;AI sta cambiando tutto.</span>
-              {" "}Puoi restare indietro —{" "}
-              o imparare a usarla per{" "}
-              <span className="gradient-text">reinventarti.</span>
+              Non ti vendo sogni.{" "}
+              <span className="gradient-text">Ti do strumenti per usare l&apos;AI dopo i 40.</span>
             </h1>
 
             {/* Subtitle */}

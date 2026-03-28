@@ -2,9 +2,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Contatti — Fabio Micale",
+  title: "Contatti | Scrivi a Fabio Micale",
   description:
-    "Contatta Fabio Micale per consulenze 1:1, masterclass, corsi sull'AI o servizi di automazione. Risponde personalmente entro 48 ore.",
+    "Scrivimi per collaborazioni, consulenze AI o domande sul metodo. Rispondo a tutti entro 48 ore.",
   alternates: { canonical: "https://www.fabiomicale.com/contatti" },
 };
 

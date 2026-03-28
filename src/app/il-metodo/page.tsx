@@ -1,10 +1,11 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Il Metodo — Fabio Micale",
+  title: "Il Metodo | Come Uso l'AI con i Professionisti Over 40",
   description:
-    "Non esiste una formula magica. Esiste un approccio strutturato basato su Mindset, Tecnologia e Sistemi per reinventarsi nell'era AI.",
+    "Un framework in 3 fasi per integrare l'AI nel tuo lavoro senza perdere tempo. Prenota una call gratuita con Fabio Micale.",
   alternates: { canonical: "https://www.fabiomicale.com/il-metodo" },
 };
 
@@ -87,7 +88,7 @@ export default function IlMetodoPage() {
             Approccio strutturato
           </div>
           <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
-            Il Metodo
+            Il metodo: 3 passi per usare l&apos;AI senza impazzire
           </h1>
           <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed">
             Non esiste una formula magica. Esiste un{" "}
@@ -111,14 +112,22 @@ export default function IlMetodoPage() {
             <div className="space-y-4 text-slate-400 leading-relaxed text-[1.05rem]">
               <p>
                 Dopo anni di esperienza sul campo ho capito che
-                la reinvenzione professionale non è un evento —
-                è un processo. E ogni processo che funziona
+                il{" "}
+                <Link href="/reinvenzione-over-40" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  percorso di reinvenzione professionale
+                </Link>{" "}
+                non è un evento — è un processo. E ogni processo che funziona
                 ha una struttura precisa.
               </p>
               <p>
                 Il mio metodo si basa su tre pilastri fondamentali
                 che devono agire insieme. Manca uno?{" "}
-                <span className="text-slate-200">Il sistema non funziona.</span>
+                <span className="text-slate-200">Il sistema non funziona.</span>{" "}
+                Capire come{" "}
+                <Link href="/ai-per-professionisti" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  usare l&apos;AI come strumento di lavoro
+                </Link>{" "}
+                è il secondo pilastro.
               </p>
             </div>
           </div>
