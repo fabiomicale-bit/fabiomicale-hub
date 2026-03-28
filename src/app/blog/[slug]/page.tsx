@@ -86,12 +86,12 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       {/* ── HEADER ARTICOLO ─────────────────────────────────────── */}
-      <section className="relative pt-36 pb-12 px-6 overflow-hidden bg-[#1A2E1A]">
+      <section className="relative pt-36 pb-12 px-6 overflow-hidden bg-[#111111]">
         <div className="relative z-10 max-w-2xl mx-auto">
           {/* Back */}
           <a
             href="/blog"
-            className="inline-flex items-center gap-2 text-[#A5D6A7]/70 hover:text-[#A5D6A7] text-sm mb-8 transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-[#AAAAAA]/70 hover:text-[#AAAAAA] text-sm mb-8 transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
           </h1>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-sm text-[#A5D6A7]/60">
+          <div className="flex items-center gap-4 text-sm text-[#AAAAAA]/60">
             <span>{post.data}</span>
             <span>·</span>
             <span>{post.tempoLettura} di lettura</span>
@@ -134,7 +134,7 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* ── CORRELATI ───────────────────────────────────────────── */}
       {correlati.length > 0 && (
-        <section className="py-16 px-6 border-t border-[#D4E4D4] bg-[#F4F7F4]">
+        <section className="py-16 px-6 border-t border-[#E5E5E5] bg-[#F7F7F7]">
           <div className="max-w-2xl mx-auto">
             <div className="flex items-center gap-3 mb-8">
               <div className="w-8 h-px bg-[#2E7D32]" />
@@ -147,18 +147,18 @@ export default async function BlogPostPage({ params }: Props) {
                 <a
                   key={rel.slug}
                   href={`/blog/${rel.slug}`}
-                  className="card-glow group flex flex-col bg-white border border-[#D4E4D4] rounded-2xl p-6 hover:border-[#43A047] transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="card-glow group flex flex-col bg-white border border-[#E5E5E5] rounded-2xl p-6 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <span
                     className={`self-start text-xs font-medium px-3 py-1 rounded-full border mb-4 ${rel.categoriaClasses}`}
                   >
                     {rel.categoria}
                   </span>
-                  <h3 className="text-[#1A1A1A] font-semibold leading-snug mb-3 group-hover:text-[#2E7D32] transition-colors duration-200 flex-1">
+                  <h3 className="text-[#111111] font-semibold leading-snug mb-3 group-hover:text-[#2E7D32] transition-colors duration-200 flex-1">
                     {rel.titolo}
                   </h3>
-                  <div className="flex items-center justify-between pt-3 border-t border-[#D4E4D4] mt-2">
-                    <span className="text-xs text-[#5A6B5A]">{rel.tempoLettura}</span>
+                  <div className="flex items-center justify-between pt-3 border-t border-[#E5E5E5] mt-2">
+                    <span className="text-xs text-[#555555]">{rel.tempoLettura}</span>
                     <span className="text-[#2E7D32] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
                       Leggi
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

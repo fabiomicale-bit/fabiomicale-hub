@@ -17,7 +17,7 @@ export default function ChiSonoPreview() {
               <div className="absolute inset-8 rounded-full border border-[#2E7D32]/6" />
 
               {/* Photo */}
-              <div className="absolute inset-12 rounded-full border border-[#D4E4D4] overflow-hidden shadow-lg">
+              <div className="absolute inset-12 rounded-full border border-[#E5E5E5] overflow-hidden shadow-lg">
                 <Image
                   src="/fabio-chisono.jpg"
                   alt="Fabio Micale, coach e imprenditore"
@@ -27,13 +27,13 @@ export default function ChiSonoPreview() {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute top-8 right-0 bg-white border border-[#D4E4D4] rounded-xl px-4 py-3 shadow-md">
-                <div className="text-xs text-[#5A6B5A]">Libri pubblicati</div>
-                <div className="text-xl font-bold text-[#1A1A1A]">1+</div>
+              <div className="absolute top-8 right-0 bg-white border border-[#E5E5E5] rounded-xl px-4 py-3 shadow-md">
+                <div className="text-xs text-[#555555]">Libri pubblicati</div>
+                <div className="text-xl font-bold text-[#111111]">1+</div>
               </div>
-              <div className="absolute bottom-12 left-0 bg-white border border-[#D4E4D4] rounded-xl px-4 py-3 shadow-md">
-                <div className="text-xs text-[#5A6B5A]">Anni di esperienza</div>
-                <div className="text-xl font-bold text-[#1A1A1A]">10+</div>
+              <div className="absolute bottom-12 left-0 bg-white border border-[#E5E5E5] rounded-xl px-4 py-3 shadow-md">
+                <div className="text-xs text-[#555555]">Anni di esperienza</div>
+                <div className="text-xl font-bold text-[#111111]">10+</div>
               </div>
             </div>
           </div>
@@ -46,12 +46,12 @@ export default function ChiSonoPreview() {
               <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Chi sono</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
               Ho costruito la mia carriera{" "}
               <span className="gradient-text">reinventandomi più volte.</span>
             </h2>
 
-            <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+            <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
               <p>
                 Ho più di 40 anni, ho fondato aziende, scritto un libro e accompagnato centinaia di professionisti
                 attraverso transizioni difficili. So cosa significa sentirsi fuori posto in un mondo che cambia troppo
@@ -71,7 +71,7 @@ export default function ChiSonoPreview() {
               {["Coach certificato", "Imprenditore", "Autore", "AI practitioner"].map((tag) => (
                 <span
                   key={tag}
-                  className="text-sm text-[#2E7D32] bg-[#E8F5E9] border border-[#D4E4D4] px-4 py-1.5 rounded-full"
+                  className="text-sm text-[#2E7D32] bg-[#E8F5E9] border border-[#E5E5E5] px-4 py-1.5 rounded-full"
                 >
                   {tag}
                 </span>
@@ -80,7 +80,7 @@ export default function ChiSonoPreview() {
 
             <a
               href="/chi-sono"
-              className="mt-10 inline-flex items-center gap-2 text-[#2E7D32] hover:text-[#43A047] font-medium transition-colors group"
+              className="mt-10 inline-flex items-center gap-2 text-[#2E7D32] hover:text-[#1B5E20] font-medium transition-colors group"
             >
               Leggi la mia storia completa
               <svg

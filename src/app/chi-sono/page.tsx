@@ -65,19 +65,19 @@ export default function ChiSonoPage() {
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-[#1A2E1A]">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-[#111111]">
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* testo */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-[#43A047]/40 text-[#A5D6A7] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#A5D6A7] animate-pulse" />
+              <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
+                <span className="w-1.5 h-1.5 rounded-full " />
                 Storia vera
               </div>
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-4">
                 Chi sono: un professionista over 40 che ha scelto di non restare indietro
               </h1>
-              <p className="text-xl text-[#A5D6A7] leading-relaxed">
+              <p className="text-xl text-[#AAAAAA] leading-relaxed">
                 Una storia vera.{" "}
                 <span className="gradient-text font-semibold">Nessun filtro.</span>
               </p>
@@ -95,7 +95,7 @@ export default function ChiSonoPage() {
                     className="w-full h-auto object-cover"
                     style={{ maxHeight: "480px", objectPosition: "top" }}
                   />
-                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#1A2E1A]/60 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#111111]/60 to-transparent" />
                 </div>
               </div>
             </div>
@@ -110,11 +110,11 @@ export default function ChiSonoPage() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">La mia storia</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             56 anni.{" "}
             <span className="gradient-text">Tutto vissuto.</span>
           </h2>
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
             <p>
               Ho 56 anni. Ho fondato aziende, gestito cantieri,
               guidato team, preso decisioni difficili.
@@ -137,18 +137,18 @@ export default function ChiSonoPage() {
       </section>
 
       {/* ── 3. IL MOMENTO DI SVOLTA ──────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il momento di svolta</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             Quando tutto cambia
           </h2>
 
           <div className="relative pl-6 border-l border-[#2E7D32]/30">
-            <div className="space-y-6 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+            <div className="space-y-6 text-[#555555] leading-relaxed text-[1.05rem]">
               <p>
                 A un certo punto della vita ti trovi di fronte
                 a una scelta: adattarti o restare indietro.
@@ -171,9 +171,9 @@ export default function ChiSonoPage() {
               <p>
                 Ho iniziato a studiare l&apos;intelligenza artificiale
                 non come spettatore, ma come{" "}
-                <span className="text-[#1A1A1A] font-medium">builder</span>{" "}
+                <span className="text-[#111111] font-medium">builder</span>{" "}
                 — scopri{" "}
-                <Link href="/ai-per-professionisti" className="text-[#2E7D32] hover:text-[#43A047] transition-colors">
+                <Link href="/ai-per-professionisti" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors">
                   come uso l&apos;AI nel mio lavoro quotidiano
                 </Link>.
                 Ho costruito sistemi di automazione,
@@ -182,7 +182,7 @@ export default function ChiSonoPage() {
               <p>
                 E ho capito che questa rivoluzione non è una minaccia
                 per chi ha esperienza —{" "}
-                <span className="text-[#1A1A1A] font-medium">
+                <span className="text-[#111111] font-medium">
                   è un&apos;opportunità enorme per chi sa usarla.
                 </span>
               </p>
@@ -200,7 +200,7 @@ export default function ChiSonoPage() {
               <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Lezioni</span>
               <div className="w-8 h-px bg-[#2E7D32]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111]">
               Le lezioni che porto con me
             </h2>
           </div>
@@ -209,15 +209,15 @@ export default function ChiSonoPage() {
             {lezioni.map((l) => (
               <div
                 key={l.titolo}
-                className="card-glow group bg-white border border-[#D4E4D4] rounded-2xl p-7 hover:border-[#43A047] transition-all duration-300 shadow-sm hover:shadow-md"
+                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-7 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#D4E4D4] flex items-center justify-center text-[#2E7D32] mb-5">
+                <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center text-[#2E7D32] mb-5">
                   {l.icon}
                 </div>
-                <h3 className="text-[#1A1A1A] font-semibold text-lg mb-2 leading-snug">
+                <h3 className="text-[#111111] font-semibold text-lg mb-2 leading-snug">
                   {l.titolo}
                 </h3>
-                <p className="text-[#5A6B5A] leading-relaxed text-[0.95rem]">
+                <p className="text-[#555555] leading-relaxed text-[0.95rem]">
                   {l.testo}
                 </p>
               </div>
@@ -227,22 +227,22 @@ export default function ChiSonoPage() {
       </section>
 
       {/* ── 5. COSA FACCIO OGGI ──────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Oggi</span>
             <div className="w-8 h-px bg-[#2E7D32]" />
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8">
             Come posso aiutarti
           </h2>
 
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem] text-left mb-10">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem] text-left mb-10">
             <p>
               Oggi affianco professionisti e imprenditori over 40
               che vogliono{" "}
-              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#43A047] transition-colors">
+              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors">
                 reinventarsi professionalmente dopo i 40
               </Link>{" "}
               nell&apos;era dell&apos;AI.
@@ -258,14 +258,14 @@ export default function ChiSonoPage() {
             <p>
               Perché so cosa significa ricominciare.
               E so che si può farlo,{" "}
-              <span className="text-[#1A1A1A] font-medium">a qualsiasi età.</span>
+              <span className="text-[#111111] font-medium">a qualsiasi età.</span>
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/lavora-con-me"
-              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5"
             >
               Lavora con me
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -274,7 +274,7 @@ export default function ChiSonoPage() {
             </a>
             <a
               href="/#come-aiuto"
-              className="inline-flex items-center justify-center gap-2 text-[#5A6B5A] hover:text-[#1A1A1A] border border-[#D4E4D4] hover:border-[#43A047] font-medium px-8 py-4 rounded-xl transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 text-[#555555] hover:text-[#111111] border border-[#E5E5E5] hover:border-[#2E7D32]/30 font-medium px-8 py-4 rounded-xl transition-all duration-200"
             >
               Scopri i miei servizi
             </a>
@@ -294,7 +294,7 @@ export default function ChiSonoPage() {
             {credenziali.map((c) => (
               <span
                 key={c}
-                className="text-sm text-[#2E7D32] bg-[#E8F5E9] border border-[#D4E4D4] px-5 py-2 rounded-full hover:border-[#43A047] transition-all duration-200"
+                className="text-sm text-[#2E7D32] bg-[#E8F5E9] border border-[#E5E5E5] px-5 py-2 rounded-full hover:border-[#2E7D32]/30 transition-all duration-200"
               >
                 {c}
               </span>
@@ -304,17 +304,17 @@ export default function ChiSonoPage() {
       </section>
 
       {/* ── CTA FINALE ───────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#1A2E1A]">
+      <section className="py-24 px-6 bg-[#111111]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
             Vuoi sapere come posso aiutarti?
           </h2>
-          <p className="text-[#A5D6A7] text-lg leading-relaxed mb-10">
+          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
             Parliamoci. Senza impegno.
           </p>
           <a
             href="mailto:info@fabiomicale.com"
-            className="inline-flex items-center gap-3 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+            className="inline-flex items-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
           >
             Scrivimi
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -15,17 +15,17 @@ export default function AiPerProfessionistiPage() {
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#1A2E1A]">
+      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-[#43A047]/40 text-[#A5D6A7] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#A5D6A7] animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full " />
             Strumenti concreti
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
             AI per professionisti over 40:{" "}
             <span className="gradient-text">strumenti concreti per chi non vuole restare indietro</span>
           </h1>
-          <p className="text-xl text-[#A5D6A7] leading-relaxed">
+          <p className="text-xl text-[#AAAAAA] leading-relaxed">
             Non devi diventare un tecnico. Devi capire quali strumenti usare,{" "}
             <span className="text-white font-medium">come usarli nel tuo lavoro specifico</span>{" "}
             e cosa ignorare.
@@ -40,10 +40,10 @@ export default function AiPerProfessionistiPage() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">La verità</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             L&apos;AI non sostituirà chi ha esperienza. Sostituirà chi non la usa.
           </h2>
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
             <p>
               Sento sempre la stessa paura: &quot;L&apos;AI mi toglierà il lavoro.&quot;
               La realtà è più precisa di così. L&apos;AI sostituirà le attività ripetitive,
@@ -53,14 +53,14 @@ export default function AiPerProfessionistiPage() {
               Ma giudicare una situazione complessa, costruire fiducia con un cliente,
               prendere una decisione in un contesto ambiguo — questa è esperienza umana.
               E l&apos;AI non la replica. La amplifica, se sai usarla.{" "}
-              <span className="text-[#1A1A1A] font-medium">
+              <span className="text-[#111111] font-medium">
                 Chi ha 20 anni di esperienza + AI è imbattibile. Chi ha solo AI non ha storia.
               </span>
             </p>
             <p>
               Il vero rischio non è l&apos;AI. È restare fermi mentre il mercato si muove.
               Se stai pensando a come{" "}
-              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#43A047] transition-colors underline underline-offset-2">
+              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
                 reinventarti professionalmente
               </Link>
               , l&apos;AI è lo strumento che accelera tutto il resto.
@@ -70,13 +70,13 @@ export default function AiPerProfessionistiPage() {
       </section>
 
       {/* ── 3. I 3 TOOL ──────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">I miei strumenti</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-10 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
             I 3 tool AI che uso ogni giorno (e perché li ho scelti)
           </h2>
           <div className="space-y-4">
@@ -102,11 +102,11 @@ export default function AiPerProfessionistiPage() {
             ].map((tool) => (
               <div
                 key={tool.nome}
-                className="card-glow group bg-white border border-[#D4E4D4] rounded-2xl p-7 hover:border-[#43A047] transition-all duration-300 shadow-sm hover:shadow-md"
+                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-7 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <h3 className="font-bold text-lg mb-1 text-[#2E7D32]">{tool.nome}</h3>
-                <p className="text-[#5A6B5A] text-xs mb-4 uppercase tracking-wider font-medium">{tool.uso}</p>
-                <p className="text-[#5A6B5A] leading-relaxed text-[0.95rem]">{tool.perché}</p>
+                <p className="text-[#555555] text-xs mb-4 uppercase tracking-wider font-medium">{tool.uso}</p>
+                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{tool.perché}</p>
               </div>
             ))}
           </div>
@@ -120,17 +120,17 @@ export default function AiPerProfessionistiPage() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Come iniziare</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             Come integrare l&apos;AI nel tuo lavoro in 1 ora a settimana
           </h2>
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
             <p>
               Non serve rivoluzionare il tuo modo di lavorare dal giorno uno.
               Serve identificare un&apos;attività ripetitiva che fai ogni settimana
               e provarla con un tool AI per 30 giorni.
             </p>
             <p>
-              <span className="text-[#1A1A1A] font-medium">Esempi pratici:</span>{" "}
+              <span className="text-[#111111] font-medium">Esempi pratici:</span>{" "}
               sintesi di riunioni, bozze di email a clienti, preparazione di presentazioni,
               ricerca su un cliente prima di una call, revisione di contratti.
               Una sola attività. Un solo tool. 30 giorni.
@@ -144,13 +144,13 @@ export default function AiPerProfessionistiPage() {
       </section>
 
       {/* ── 5. COSA NON FARE ─────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Gli errori da evitare</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-10 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
             Cosa NON fare: gli errori più comuni di chi inizia con l&apos;AI
           </h2>
           <div className="space-y-4">
@@ -162,14 +162,14 @@ export default function AiPerProfessionistiPage() {
             ].map((errore, i) => (
               <div
                 key={i}
-                className="flex items-start gap-4 p-5 bg-white border border-[#D4E4D4] rounded-xl hover:border-red-200 transition-colors duration-200 shadow-sm"
+                className="flex items-start gap-4 p-5 bg-white border border-[#E5E5E5] rounded-xl hover:border-red-200 transition-colors duration-200 shadow-sm"
               >
                 <div className="w-6 h-6 rounded-full bg-red-50 border border-red-200 flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-3.5 h-3.5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </div>
-                <p className="text-[#5A6B5A] leading-relaxed text-[0.95rem]">{errore}</p>
+                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{errore}</p>
               </div>
             ))}
           </div>
@@ -183,10 +183,10 @@ export default function AiPerProfessionistiPage() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Dove arrivare</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             Il prossimo passo: dal tool al sistema
           </h2>
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
             <p>
               Usare un tool AI è il primo livello. Il livello successivo è costruire
               un sistema: più strumenti che lavorano insieme, workflow che si attivano
@@ -198,12 +198,12 @@ export default function AiPerProfessionistiPage() {
             </p>
             <p>
               Per arrivare lì serve un metodo. Leggi{" "}
-              <Link href="/il-metodo" className="text-[#2E7D32] hover:text-[#43A047] transition-colors underline underline-offset-2">
+              <Link href="/il-metodo" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
                 come struttura il percorso
               </Link>{" "}
               o, se preferisci partire con una base di contenuti aggiornata, iscriviti alla newsletter
               settimanale direttamente dalla{" "}
-              <Link href="/#newsletter" className="text-[#2E7D32] hover:text-[#43A047] transition-colors underline underline-offset-2">
+              <Link href="/#newsletter" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
                 homepage
               </Link>
               .
@@ -213,19 +213,19 @@ export default function AiPerProfessionistiPage() {
       </section>
 
       {/* ── 7. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#1A2E1A]">
+      <section className="py-24 px-6 bg-[#111111]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
             Pronto a usare l&apos;AI sul serio?
           </h2>
-          <p className="text-[#A5D6A7] text-lg leading-relaxed mb-10">
+          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
             Non serve un corso di 40 ore. Serve il metodo giusto applicato al tuo lavoro specifico.{" "}
             <span className="text-white">Parliamone.</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/il-metodo"
-              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
             >
               Scopri il metodo
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

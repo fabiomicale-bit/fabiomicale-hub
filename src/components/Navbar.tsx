@@ -30,7 +30,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white border-b border-[#D4E4D4] shadow-sm"
+          ? "bg-white border-b border-[#E5E5E5] shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -69,7 +69,7 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           href={newsletterHref}
-          className="hidden md:inline-flex items-center gap-2 bg-[#2E7D32] hover:bg-[#43A047] text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#2E7D32]/25"
+          className="hidden md:inline-flex items-center gap-2 bg-[#2E7D32] hover:bg-[#1B5E20] text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200"
         >
           Newsletter gratuita
         </Link>
@@ -88,12 +88,12 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-[#D4E4D4] px-6 py-4 shadow-md">
+        <div className="md:hidden bg-white border-t border-[#E5E5E5] px-6 py-4 shadow-md">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block py-3 text-[#1A1A1A] hover:text-[#2E7D32] border-b border-[#D4E4D4] last:border-0 text-sm transition-colors"
+              className="block py-3 text-[#111111] hover:text-[#2E7D32] border-b border-[#E5E5E5] last:border-0 text-sm transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -101,7 +101,7 @@ export default function Navbar() {
           ))}
           <Link
             href={newsletterHref}
-            className="mt-4 block text-center bg-[#2E7D32] hover:bg-[#43A047] text-white font-medium px-4 py-3 rounded-lg transition-colors"
+            className="mt-4 block text-center bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-medium px-4 py-3 rounded-lg transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Newsletter gratuita

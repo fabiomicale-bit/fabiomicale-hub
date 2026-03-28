@@ -47,7 +47,7 @@ const services = [
 
 export default function ComePossoAiutarti() {
   return (
-    <section id="come-aiuto" className="py-24 px-6 bg-[#F4F7F4]">
+    <section id="come-aiuto" className="py-24 px-6 bg-[#F7F7F7]">
       <div className="max-w-6xl mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-3 mb-4">
@@ -56,11 +56,11 @@ export default function ComePossoAiutarti() {
         </div>
 
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] leading-tight max-w-xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] leading-tight max-w-xl">
             Non esiste un solo modo per reinventarsi.{" "}
             <span className="gradient-text">Esiste il tuo.</span>
           </h2>
-          <p className="text-[#5A6B5A] max-w-sm leading-relaxed">
+          <p className="text-[#555555] max-w-sm leading-relaxed">
             Ecco da dove puoi iniziare. Ogni percorso è diverso — scegli quello che si adatta al tuo momento.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function ComePossoAiutarti() {
               className={`card-glow group relative rounded-2xl p-7 border transition-all duration-300 flex flex-col ${
                 service.featured
                   ? "bg-white border-[#2E7D32]/30 hover:border-[#2E7D32] ring-1 ring-[#2E7D32]/20 shadow-md"
-                  : "bg-white border-[#D4E4D4] hover:border-[#43A047] shadow-sm"
+                  : "bg-white border-[#E5E5E5] hover:border-[#2E7D32]/30 shadow-sm"
               }`}
             >
               {service.featured && (
@@ -83,20 +83,20 @@ export default function ComePossoAiutarti() {
               )}
 
               {/* Tag */}
-              <span className="inline-flex items-center bg-[#E8F5E9] border border-[#D4E4D4] text-[#2E7D32] text-xs font-medium px-3 py-1 rounded-full mb-4 w-fit">
+              <span className="inline-flex items-center bg-[#E8F5E9] border border-[#E5E5E5] text-[#2E7D32] text-xs font-medium px-3 py-1 rounded-full mb-4 w-fit">
                 {service.icon} <span className="ml-1.5">{service.tag}</span>
               </span>
 
-              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">{service.title}</h3>
-              <p className="text-[#5A6B5A] text-sm leading-relaxed flex-1">{service.desc}</p>
+              <h3 className="text-lg font-semibold text-[#111111] mb-2">{service.title}</h3>
+              <p className="text-[#555555] text-sm leading-relaxed flex-1">{service.desc}</p>
 
               {"staticText" in service && service.staticText ? (
-                <p className="mt-6 text-sm text-[#5A6B5A] leading-relaxed">{service.staticText}</p>
+                <p className="mt-6 text-sm text-[#555555] leading-relaxed">{service.staticText}</p>
               ) : (
                 <a
                   href={service.href}
                   {...("external" in service && service.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#2E7D32] hover:text-[#43A047] group-hover:gap-3 transition-all duration-200"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#2E7D32] hover:text-[#1B5E20] group-hover:gap-3 transition-all duration-200"
                 >
                   {service.cta}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

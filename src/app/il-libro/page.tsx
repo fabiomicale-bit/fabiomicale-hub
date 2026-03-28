@@ -113,20 +113,20 @@ export default function IlLibroPage() {
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#1A2E1A]">
+      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Testo */}
             <div>
-              <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-[#43A047]/40 text-[#A5D6A7] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#A5D6A7] animate-pulse" />
+              <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
+                <span className="w-1.5 h-1.5 rounded-full " />
                 Edizione 2026 — Completamente riscritta
               </div>
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-4">
                 Successo in 3 Passi:{" "}
                 <span className="gradient-text">il libro per chi vuole ricominciare senza perdere tutto</span>
               </h1>
-              <p className="text-xl text-[#A5D6A7] leading-relaxed mb-8">
+              <p className="text-xl text-[#AAAAAA] leading-relaxed mb-8">
                 Un metodo semplice per riprendere il controllo della tua vita
               </p>
               <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
@@ -134,7 +134,7 @@ export default function IlLibroPage() {
                   href="https://www.amazon.it/Successo-3-Passi-I-Fondamentali/dp/153755087X"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-7 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+                  className="inline-flex items-center justify-center gap-2 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-7 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -148,7 +148,7 @@ export default function IlLibroPage() {
                     </svg>
                     Nuova edizione 2026 — Prossimamente
                   </span>
-                  <span className="text-xs text-[#A5D6A7]/60 tracking-wide">In uscita maggio 2026</span>
+                  <span className="text-xs text-[#AAAAAA]/60 tracking-wide">In uscita maggio 2026</span>
                 </div>
                 <a
                   href="https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=drive_link"
@@ -189,17 +189,17 @@ export default function IlLibroPage() {
               <div className="w-8 h-px bg-[#2E7D32]" />
               <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il libro</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-6 leading-tight">
               Un libro{" "}
               <span className="gradient-text">diverso dagli altri</span>
             </h2>
-            <p className="text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+            <p className="text-[#555555] leading-relaxed text-[1.05rem]">
               Non troverai frasi motivazionali. Non troverai promesse di trasformazioni rapide.
               Troverai un metodo reale, costruito su esperienza vera, con{" "}
-              <span className="text-[#1A1A1A] font-medium">27 esercizi pratici</span>{" "}
+              <span className="text-[#111111] font-medium">27 esercizi pratici</span>{" "}
               che richiedono carta, penna e onestà. Il punto di partenza ideale per chi affronta
               una{" "}
-              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#43A047] transition-colors">
+              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors">
                 reinvenzione professionale over 40
               </Link>{" "}
               senza buttare via quello che ha già costruito.
@@ -210,15 +210,15 @@ export default function IlLibroPage() {
             {cards.map((c) => (
               <div
                 key={c.titolo}
-                className="card-glow group bg-white border border-[#D4E4D4] rounded-2xl p-8 hover:border-[#43A047] transition-all duration-300 shadow-sm hover:shadow-md"
+                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-8 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#D4E4D4] flex items-center justify-center text-[#2E7D32] mb-5">
+                <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center text-[#2E7D32] mb-5">
                   {c.icon}
                 </div>
                 <h3 className="text-sm font-bold tracking-widest uppercase mb-3 text-[#2E7D32]">
                   {c.titolo}
                 </h3>
-                <p className="text-[#5A6B5A] leading-relaxed text-[0.95rem]">{c.testo}</p>
+                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{c.testo}</p>
               </div>
             ))}
           </div>
@@ -226,7 +226,7 @@ export default function IlLibroPage() {
       </section>
 
       {/* ── 3. I TRE PASSI ───────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -234,7 +234,7 @@ export default function IlLibroPage() {
               <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il metodo</span>
               <div className="w-8 h-px bg-[#2E7D32]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111]">
               Il metodo in 3 Passi
             </h2>
           </div>
@@ -243,7 +243,7 @@ export default function IlLibroPage() {
             {passi.map((p) => (
               <div
                 key={p.numero}
-                className="card-glow group bg-white border border-[#D4E4D4] rounded-2xl p-8 hover:border-[#43A047] transition-all duration-300 shadow-sm hover:shadow-md"
+                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-8 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <span className="text-5xl font-bold gradient-text leading-none block mb-5 select-none">
                   {p.numero}
@@ -251,7 +251,7 @@ export default function IlLibroPage() {
                 <h3 className="text-sm font-bold tracking-widest uppercase mb-4 text-[#2E7D32]">
                   {p.titolo}
                 </h3>
-                <p className="text-[#5A6B5A] leading-relaxed text-[0.95rem] italic border-l-2 border-[#D4E4D4] pl-4">
+                <p className="text-[#555555] leading-relaxed text-[0.95rem] italic border-l-2 border-[#E5E5E5] pl-4">
                   &ldquo;{p.citazione}&rdquo;
                 </p>
               </div>
@@ -267,21 +267,21 @@ export default function IlLibroPage() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Per chi è</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-10 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
             Questo libro è per te se...
           </h2>
           <div className="space-y-4">
             {perChiItems.map((item) => (
               <div
                 key={item}
-                className="flex items-start gap-4 p-5 bg-white border border-[#D4E4D4] rounded-xl hover:border-[#43A047] transition-colors duration-200"
+                className="flex items-start gap-4 p-5 bg-white border border-[#E5E5E5] rounded-xl hover:border-[#2E7D32]/30 transition-colors duration-200"
               >
-                <div className="w-6 h-6 rounded-full bg-[#E8F5E9] border border-[#D4E4D4] flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-full bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center shrink-0 mt-0.5">
                   <svg className="w-3.5 h-3.5 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p className="text-[#1A1A1A] leading-relaxed">{item}</p>
+                <p className="text-[#111111] leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
@@ -289,31 +289,31 @@ export default function IlLibroPage() {
       </section>
 
       {/* ── 5. SPAZIO LETTORI ────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white border border-[#D4E4D4] rounded-2xl p-10 sm:p-14 text-center shadow-sm">
-            <div className="inline-flex items-center gap-2 bg-[#E8F5E9] border border-[#D4E4D4] text-[#2E7D32] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
+          <div className="bg-white border border-[#E5E5E5] rounded-2xl p-10 sm:p-14 text-center shadow-sm">
+            <div className="inline-flex items-center gap-2 bg-[#E8F5E9] border border-[#E5E5E5] text-[#2E7D32] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2E7D32]" />
               Area lettori
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-5">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-5">
               Sei già un lettore?
             </h2>
-            <p className="text-[#5A6B5A] leading-relaxed text-lg mb-8 max-w-xl mx-auto">
+            <p className="text-[#555555] leading-relaxed text-lg mb-8 max-w-xl mx-auto">
               Inviami i tuoi esercizi. Riceverai il{" "}
-              <span className="text-[#1A1A1A] font-medium">Dossier Professionale</span>{" "}
+              <span className="text-[#111111] font-medium">Dossier Professionale</span>{" "}
               con i moduli avanzati per approfondire ogni passaggio del libro. E in alcuni
               casi, una risposta diretta da me.
             </p>
             <a
               href="mailto:libro.successointrepassi@fabiomicale.com"
-              className="block text-[#2E7D32] hover:text-[#43A047] font-mono text-lg font-medium mb-8 transition-colors duration-200 break-all"
+              className="block text-[#2E7D32] hover:text-[#1B5E20] font-mono text-lg font-medium mb-8 transition-colors duration-200 break-all"
             >
               libro.successointrepassi@fabiomicale.com
             </a>
             <a
               href="mailto:libro.successointrepassi@fabiomicale.com"
-              className="inline-flex items-center gap-2 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+              className="inline-flex items-center gap-2 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -325,12 +325,12 @@ export default function IlLibroPage() {
       </section>
 
       {/* ── 6. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#1A2E1A]">
+      <section className="py-24 px-6 bg-[#111111]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
             Pronto a iniziare?
           </h2>
-          <p className="text-[#A5D6A7] text-lg leading-relaxed mb-10">
+          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
             Il metodo è semplice. Metterlo in pratica è la parte interessante.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -338,7 +338,7 @@ export default function IlLibroPage() {
               href="https://www.amazon.it/Successo-3-Passi-I-Fondamentali/dp/153755087X"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+              className="inline-flex items-center justify-center gap-2 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />

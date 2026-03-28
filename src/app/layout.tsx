@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Lora } from "next/font/google";
+import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import BackToTop from "@/components/BackToTop";
 import JsonLd from "./JsonLd";
+import CookieBanner from "@/components/CookieBanner";
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  variable: "--font-sans",
   weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
 });
 
-const lora = Lora({
+const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
-  variable: "--font-lora",
-  weight: ["400", "600", "700"],
+  variable: "--font-serif",
+  weight: ["400"],
   style: ["normal", "italic"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -80,10 +83,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className="scroll-smooth">
-      <body className={`${jakarta.variable} ${lora.variable} antialiased bg-white text-[#1A1A1A]`}>
+      <body className={`${inter.variable} ${dmSerif.variable} antialiased`}>
         <JsonLd />
         {children}
         <BackToTop />
+        <CookieBanner />
       </body>
     </html>
   );

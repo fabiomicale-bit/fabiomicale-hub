@@ -15,17 +15,17 @@ export default function ReinvenzioneOver40Page() {
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#1A2E1A]">
+      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-[#43A047]/40 text-[#A5D6A7] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#A5D6A7] animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full " />
             Guida pratica
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
             Reinvenzione professionale over 40:{" "}
             <span className="gradient-text">la guida per chi non vuole ricominciare da zero</span>
           </h1>
-          <p className="text-xl text-[#A5D6A7] leading-relaxed">
+          <p className="text-xl text-[#AAAAAA] leading-relaxed">
             La tua esperienza non è un peso. È il tuo vantaggio competitivo principale.{" "}
             <span className="text-white font-medium">Devi solo imparare a usarla diversamente.</span>
           </p>
@@ -39,10 +39,10 @@ export default function ReinvenzioneOver40Page() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il vantaggio</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             Perché reinventarsi dopo i 40 è diverso (e più vantaggioso) che farlo a 25
           </h2>
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
             <p>
               A 25 anni hai energia ma nessun contesto. Non sai ancora cosa funziona davvero,
               chi sono i clienti giusti, dove non mettere i piedi. Impari bruciando risorse.
@@ -51,7 +51,7 @@ export default function ReinvenzioneOver40Page() {
               A 40+ hai tutto questo già risolto. Hai un network reale, una reputazione costruita,
               pattern riconoscibili su cosa funziona e cosa no nel tuo settore.
               Il problema non è la tua età —{" "}
-              <span className="text-[#1A1A1A] font-medium">
+              <span className="text-[#111111] font-medium">
                 è il modello mentale che ti dice che devi ricominciare da zero.
               </span>
             </p>
@@ -65,13 +65,13 @@ export default function ReinvenzioneOver40Page() {
       </section>
 
       {/* ── 3. I 3 ERRORI ────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Gli errori da evitare</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-10 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
             I 3 errori che bloccano i professionisti over 40
           </h2>
           <div className="space-y-4">
@@ -97,17 +97,17 @@ export default function ReinvenzioneOver40Page() {
             ].map((item) => (
               <div
                 key={item.numero}
-                className="card-glow group bg-white border border-[#D4E4D4] rounded-2xl p-7 hover:border-[#43A047] transition-all duration-300 shadow-sm hover:shadow-md"
+                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-7 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
               >
                 <div className="flex items-start gap-5">
                   <span className="text-3xl font-bold gradient-text leading-none shrink-0 select-none">
                     {item.numero}
                   </span>
                   <div>
-                    <h3 className="text-[#1A1A1A] font-semibold text-lg mb-2 leading-snug">
+                    <h3 className="text-[#111111] font-semibold text-lg mb-2 leading-snug">
                       {item.titolo}
                     </h3>
-                    <p className="text-[#5A6B5A] leading-relaxed text-[0.95rem]">{item.testo}</p>
+                    <p className="text-[#555555] leading-relaxed text-[0.95rem]">{item.testo}</p>
                   </div>
                 </div>
               </div>
@@ -123,28 +123,28 @@ export default function ReinvenzioneOver40Page() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il metodo</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             Il metodo in 3 fasi: esperienza + AI + nuovo posizionamento
           </h2>
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
             <p>
-              <span className="text-[#1A1A1A] font-semibold">Fase 1 — Mappa quello che hai.</span>{" "}
+              <span className="text-[#111111] font-semibold">Fase 1 — Mappa quello che hai.</span>{" "}
               Prima di guardare avanti, fai un inventario preciso: competenze, network, reputazione,
               asset digitali. La maggior parte dei professionisti over 40 sottovaluta enormemente
               quello che ha già costruito.
             </p>
             <p>
-              <span className="text-[#1A1A1A] font-semibold">Fase 2 — Usa l&apos;AI come amplificatore.</span>{" "}
+              <span className="text-[#111111] font-semibold">Fase 2 — Usa l&apos;AI come amplificatore.</span>{" "}
               Non come sostituto. L&apos;AI può fare in un&apos;ora quello che ti richiedeva una settimana.
               Ma deve sapere cosa fare — e questo lo sai solo tu, con la tua esperienza.
               Scopri{" "}
-              <Link href="/ai-per-professionisti" className="text-[#2E7D32] hover:text-[#43A047] transition-colors underline underline-offset-2">
+              <Link href="/ai-per-professionisti" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
                 come uso l&apos;AI nel mio lavoro quotidiano
               </Link>{" "}
               per capire da dove iniziare concretamente.
             </p>
             <p>
-              <span className="text-[#1A1A1A] font-semibold">Fase 3 — Riposizionati sul mercato.</span>{" "}
+              <span className="text-[#111111] font-semibold">Fase 3 — Riposizionati sul mercato.</span>{" "}
               Con competenze aggiornate e un profilo rinnovato, il mercato ti legge in modo diverso.
               Non sei un professionista over 40 che ha imparato l&apos;AI. Sei un esperto di settore
               che usa l&apos;AI meglio di chiunque altro nel tuo campo.
@@ -154,13 +154,13 @@ export default function ReinvenzioneOver40Page() {
       </section>
 
       {/* ── 5. CASI REALI ────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F4F7F4]">
+      <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Chi l&apos;ha fatto</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-10 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
             Casi reali: chi ha fatto questa transizione
           </h2>
           <div className="space-y-6">
@@ -183,13 +183,13 @@ export default function ReinvenzioneOver40Page() {
             ].map((caso) => (
               <div
                 key={caso.profilo}
-                className="bg-white border border-[#D4E4D4] rounded-2xl p-7 hover:border-[#43A047] transition-colors duration-200 shadow-sm"
+                className="bg-white border border-[#E5E5E5] rounded-2xl p-7 hover:border-[#2E7D32]/30 transition-colors duration-200 shadow-sm"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <div className="w-2 h-2 rounded-full bg-[#2E7D32]" />
                   <span className="text-[#2E7D32] font-medium text-sm">{caso.profilo}</span>
                 </div>
-                <p className="text-[#5A6B5A] leading-relaxed text-[0.95rem]">{caso.situazione}</p>
+                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{caso.situazione}</p>
               </div>
             ))}
           </div>
@@ -203,10 +203,10 @@ export default function ReinvenzioneOver40Page() {
             <div className="w-8 h-px bg-[#2E7D32]" />
             <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il primo passo</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-8 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
             Da dove iniziare questa settimana
           </h2>
-          <div className="space-y-5 text-[#5A6B5A] leading-relaxed text-[1.05rem] mb-10">
+          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem] mb-10">
             <p>
               Un&apos;azione concreta, adesso. Prendi un foglio e scrivi le 3 competenze per cui
               i tuoi clienti ti hanno pagato di più negli ultimi 2 anni. Non le tue preferite —
@@ -218,11 +218,11 @@ export default function ReinvenzioneOver40Page() {
             </p>
             <p>
               Se vuoi capire come strutturare il percorso completo, leggi{" "}
-              <Link href="/il-metodo" className="text-[#2E7D32] hover:text-[#43A047] transition-colors underline underline-offset-2">
+              <Link href="/il-metodo" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
                 il metodo completo
               </Link>{" "}
               che uso con i miei clienti. Se preferisci partire con una sessione diretta,{" "}
-              <Link href="/lavora-con-me" className="text-[#2E7D32] hover:text-[#43A047] transition-colors underline underline-offset-2">
+              <Link href="/lavora-con-me" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
                 prenota una sessione
               </Link>{" "}
               e lo facciamo insieme.
@@ -232,19 +232,19 @@ export default function ReinvenzioneOver40Page() {
       </section>
 
       {/* ── 7. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#1A2E1A]">
+      <section className="py-24 px-6 bg-[#111111]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
             Pronto a iniziare la tua reinvenzione?
           </h2>
-          <p className="text-[#A5D6A7] text-lg leading-relaxed mb-10">
+          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
             Non devi buttare via niente di quello che hai costruito.{" "}
             <span className="text-white">Devi amplificarlo.</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/il-metodo"
-              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
             >
               Scopri il metodo completo
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

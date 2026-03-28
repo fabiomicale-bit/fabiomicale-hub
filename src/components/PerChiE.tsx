@@ -45,7 +45,7 @@ export default function PerChiE() {
           <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Per chi è</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-16 leading-tight">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-16 leading-tight">
           Questo spazio è per te se<span className="text-[#2E7D32]">...</span>
         </h2>
 
@@ -53,7 +53,7 @@ export default function PerChiE() {
           {points.map((point, i) => (
             <div
               key={i}
-              className="card-glow group relative bg-white hover:bg-[#F4F7F4] border border-[#D4E4D4] hover:border-[#43A047] rounded-2xl p-8 transition-all duration-300 shadow-sm"
+              className="card-glow group relative bg-white hover:bg-[#F7F7F7] border border-[#E5E5E5] hover:border-[#2E7D32]/30 rounded-2xl p-8 transition-all duration-300 shadow-sm"
             >
               {/* Number */}
               <div className="absolute top-6 right-6 text-5xl font-bold text-[#2E7D32]/[0.06] select-none">
@@ -61,12 +61,12 @@ export default function PerChiE() {
               </div>
 
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#D4E4D4] flex items-center justify-center text-[#2E7D32] mb-6 group-hover:bg-[#2E7D32]/10 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center text-[#2E7D32] mb-6 group-hover:bg-[#2E7D32]/10 transition-colors">
                 {point.icon}
               </div>
 
               {/* Text */}
-              <p className="text-[#1A1A1A] leading-relaxed text-[1.05rem]">{point.text}</p>
+              <p className="text-[#111111] leading-relaxed text-[1.05rem]">{point.text}</p>
             </div>
           ))}
         </div>
