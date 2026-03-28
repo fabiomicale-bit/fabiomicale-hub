@@ -15,23 +15,20 @@ export default function BlogPage() {
   const regularPosts = getRegularPosts();
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Navbar />
 
       {/* ── HERO ────────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-16 px-6 overflow-hidden">
-        <div className="absolute inset-0 hero-glow" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-blue-600/8 blur-[120px] pointer-events-none" />
-
+      <section className="relative pt-36 pb-16 px-6 overflow-hidden bg-[#1A2E1A]">
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <div className="animate-fade-in-up inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-[#43A047]/40 text-[#A5D6A7] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#A5D6A7] animate-pulse" />
             Articoli e riflessioni
           </div>
-          <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
             Articoli su AI, reinvenzione e sistemi per professionisti over 40
           </h1>
-          <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed">
+          <p className="text-xl text-[#A5D6A7] leading-relaxed">
             AI, mindset e produttività per chi vuole{" "}
             <span className="gradient-text font-semibold">fare sul serio.</span>
           </p>

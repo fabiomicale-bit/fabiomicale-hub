@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import "./globals.css";
 import BackToTop from "@/components/BackToTop";
 import JsonLd from "./JsonLd";
 
-const geist = Geist({
-  variable: "--font-geist-sans",
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  variable: "--font-jakarta",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -72,7 +80,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className="scroll-smooth">
-      <body className={`${geist.variable} antialiased bg-[#06091a] text-[#e8eaf0]`}>
+      <body className={`${jakarta.variable} ${lora.variable} antialiased bg-white text-[#1A1A1A]`}>
         <JsonLd />
         {children}
         <BackToTop />

@@ -5,10 +5,10 @@ const navSections = [
   {
     title: "Esplora",
     links: [
-      { label: "Chi sono", href: "#chi-sono" },
-      { label: "Come posso aiutarti", href: "#come-aiuto" },
-      { label: "Il libro", href: "#libro" },
-      { label: "Corsi e Masterclass", href: "#corsi" },
+      { label: "Chi sono", href: "/chi-sono" },
+      { label: "Il Metodo", href: "/il-metodo" },
+      { label: "Il Libro", href: "/il-libro" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {
@@ -16,7 +16,7 @@ const navSections = [
     links: [
       { label: "Consulenza 1:1", href: "/lavora-con-me" },
       { label: "Servizi AI", href: "/lavora-con-me" },
-      { label: "Newsletter", href: "#newsletter" },
+      { label: "Newsletter", href: "/#newsletter" },
       { label: "Contatti", href: "/contatti" },
     ],
   },
@@ -34,7 +34,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contatti" className="border-t border-white/[0.06] pt-16 pb-10 px-6">
+    <footer id="contatti" className="bg-[#1A2E1A] border-t border-[#2E7D32]/30 pt-16 pb-10 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Top row */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
@@ -44,12 +44,12 @@ export default function Footer() {
               <Image src="/logo-fabio-micale.svg" width={40} height={40} alt="Fabio Micale" />
               <span className="font-semibold text-white">Fabio Micale</span>
             </div>
-            <p className="text-slate-500 text-sm leading-relaxed max-w-[240px]">
+            <p className="text-[#A5D6A7] text-sm leading-relaxed max-w-[240px]">
               Coach, imprenditore, autore. Ti aiuto a reinventarti nell&apos;era AI.
             </p>
             <a
               href="mailto:info@fabiomicale.com"
-              className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white mt-4 transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-[#A5D6A7] hover:text-white mt-4 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
@@ -75,7 +75,7 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-slate-500 hover:text-slate-300 transition-colors inline-flex items-center gap-1"
+                        className="text-sm text-[#A5D6A7] hover:text-white transition-colors inline-flex items-center gap-1"
                       >
                         {link.label}
                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -85,7 +85,7 @@ export default function Footer() {
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm text-slate-500 hover:text-slate-300 transition-colors"
+                        className="text-sm text-[#A5D6A7] hover:text-white transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -98,15 +98,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div className="border-t border-white/[0.06] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-600 text-sm">
+        <div className="border-t border-[#2E7D32]/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[#A5D6A7]/60 text-sm">
             © {currentYear} Fabio Micale. Tutti i diritti riservati.
           </p>
           <div className="flex items-center gap-6">
-            <a href="/privacy" className="text-slate-600 hover:text-slate-400 text-xs transition-colors">
+            <a href="/privacy" className="text-[#A5D6A7]/60 hover:text-[#A5D6A7] text-xs transition-colors">
               Privacy Policy
             </a>
-            <a href="/cookie" className="text-slate-600 hover:text-slate-400 text-xs transition-colors">
+            <a href="/cookie" className="text-[#A5D6A7]/60 hover:text-[#A5D6A7] text-xs transition-colors">
               Cookie Policy
             </a>
           </div>

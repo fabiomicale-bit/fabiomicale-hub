@@ -76,7 +76,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <ReadingProgress />
-      <main className="min-h-screen">
+      <main className="min-h-screen bg-white">
       <Navbar />
 
       {/* JSON-LD Schema */}
@@ -86,15 +86,12 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       {/* ── HEADER ARTICOLO ─────────────────────────────────────── */}
-      <section className="relative pt-36 pb-12 px-6 overflow-hidden">
-        <div className="absolute inset-0 hero-glow" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[350px] rounded-full bg-blue-600/8 blur-[120px] pointer-events-none" />
-
+      <section className="relative pt-36 pb-12 px-6 overflow-hidden bg-[#1A2E1A]">
         <div className="relative z-10 max-w-2xl mx-auto">
           {/* Back */}
           <a
             href="/blog"
-            className="inline-flex items-center gap-2 text-slate-500 hover:text-blue-400 text-sm mb-8 transition-colors duration-200"
+            className="inline-flex items-center gap-2 text-[#A5D6A7]/70 hover:text-[#A5D6A7] text-sm mb-8 transition-colors duration-200"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
@@ -115,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
           </h1>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-sm text-slate-500">
+          <div className="flex items-center gap-4 text-sm text-[#A5D6A7]/60">
             <span>{post.data}</span>
             <span>·</span>
             <span>{post.tempoLettura} di lettura</span>
@@ -124,7 +121,7 @@ export default async function BlogPostPage({ params }: Props) {
       </section>
 
       {/* ── CONTENUTO ───────────────────────────────────────────── */}
-      <section className="py-10 px-6 pb-20">
+      <section className="py-10 px-6 pb-20 bg-white">
         <div className="max-w-2xl mx-auto">
           <ShareBar titolo={post.titolo} slug={post.slug} />
           <TableOfContents contentHtml={post.contentHtml} />
@@ -137,11 +134,11 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* ── CORRELATI ───────────────────────────────────────────── */}
       {correlati.length > 0 && (
-        <section className="py-16 px-6 border-t border-white/5">
+        <section className="py-16 px-6 border-t border-[#D4E4D4] bg-[#F4F7F4]">
           <div className="max-w-2xl mx-auto">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-px bg-blue-500" />
-              <span className="text-blue-400 text-sm font-medium tracking-widest uppercase">
+              <div className="w-8 h-px bg-[#2E7D32]" />
+              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">
                 Continua a leggere
               </span>
             </div>
@@ -150,19 +147,19 @@ export default async function BlogPostPage({ params }: Props) {
                 <a
                   key={rel.slug}
                   href={`/blog/${rel.slug}`}
-                  className="card-glow group flex flex-col bg-white/[0.03] border border-white/8 rounded-2xl p-6 hover:border-blue-500/25 transition-all duration-300"
+                  className="card-glow group flex flex-col bg-white border border-[#D4E4D4] rounded-2xl p-6 hover:border-[#43A047] transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   <span
                     className={`self-start text-xs font-medium px-3 py-1 rounded-full border mb-4 ${rel.categoriaClasses}`}
                   >
                     {rel.categoria}
                   </span>
-                  <h3 className="text-white font-semibold leading-snug mb-3 group-hover:text-blue-100 transition-colors duration-200 flex-1">
+                  <h3 className="text-[#1A1A1A] font-semibold leading-snug mb-3 group-hover:text-[#2E7D32] transition-colors duration-200 flex-1">
                     {rel.titolo}
                   </h3>
-                  <div className="flex items-center justify-between pt-3 border-t border-white/5 mt-2">
-                    <span className="text-xs text-slate-600">{rel.tempoLettura}</span>
-                    <span className="text-blue-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
+                  <div className="flex items-center justify-between pt-3 border-t border-[#D4E4D4] mt-2">
+                    <span className="text-xs text-[#5A6B5A]">{rel.tempoLettura}</span>
+                    <span className="text-[#2E7D32] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
                       Leggi
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

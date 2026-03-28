@@ -22,9 +22,9 @@ export default function ReadingProgress() {
         top: 0,
         left: 0,
         zIndex: 50,
-        height: "2px",
+        height: "3px",
         width: `${progress}%`,
-        background: "#f0c040",
+        background: "#2E7D32",
         transition: "width 0.1s linear",
       }}
     />

@@ -2,14 +2,13 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      {/* Background glow */}
-      <div className="absolute inset-0 hero-glow" />
-      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-blue-600/8 blur-[120px] pointer-events-none" />
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-[#1A2E1A]">
+      {/* Subtle decorative glow */}
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full bg-[#2E7D32]/10 blur-[120px] pointer-events-none" />
 
       {/* Grid pattern */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
@@ -22,8 +21,8 @@ export default function Hero() {
           {/* LEFT — testo */}
           <div>
             {/* Badge */}
-            <div className="animate-fade-in-up inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-wider uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            <div className="animate-fade-in-up inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-[#43A047]/40 text-[#A5D6A7] text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-wider uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#43A047] animate-pulse" />
               Coach Over 40 nell&apos;Era AI
             </div>
 
@@ -34,18 +33,18 @@ export default function Hero() {
             </h1>
 
             {/* Subtitle */}
-            <p className="animate-fade-in-up delay-200 text-lg text-slate-400 leading-relaxed mb-10">
+            <p className="animate-fade-in-up delay-200 text-lg text-[#A5D6A7] leading-relaxed mb-10">
               Sono <span className="text-white font-medium">Fabio Micale</span>. Coach, imprenditore, autore.
               Ti aiuto a costruire una nuova fase professionale con il{" "}
-              <span className="text-slate-300">mindset giusto</span> e gli{" "}
-              <span className="text-slate-300">strumenti concreti</span> dell&apos;era AI.
+              <span className="text-[#C8E6C9]">mindset giusto</span> e gli{" "}
+              <span className="text-[#C8E6C9]">strumenti concreti</span> dell&apos;era AI.
             </p>
 
             {/* CTA */}
             <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 items-start">
               <a
                 href="#newsletter"
-                className="group inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 text-base"
+                className="group inline-flex items-center gap-3 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#2E7D32]/30 hover:-translate-y-0.5 text-base"
               >
                 Iscriviti alla newsletter gratuita
                 <svg
@@ -59,7 +58,7 @@ export default function Hero() {
               </a>
               <a
                 href="#chi-sono"
-                className="inline-flex items-center gap-2 text-slate-400 hover:text-white font-medium px-6 py-4 transition-colors duration-200 text-base"
+                className="inline-flex items-center gap-2 text-[#A5D6A7] hover:text-white border border-[#43A047]/40 hover:border-[#43A047] font-medium px-6 py-4 rounded-xl transition-all duration-200 text-base"
               >
                 Scopri chi sono
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -69,17 +68,17 @@ export default function Hero() {
             </div>
 
             {/* Social proof */}
-            <div className="animate-fade-in-up delay-400 mt-12 flex flex-wrap gap-6 text-slate-500 text-sm">
+            <div className="animate-fade-in-up delay-400 mt-12 flex flex-wrap gap-6 text-[#A5D6A7] text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-2xl font-bold text-white">15+</span>
                 <span>anni di esperienza</span>
               </div>
-              <div className="w-px h-8 bg-white/10 hidden sm:block" />
+              <div className="w-px h-8 bg-[#2E7D32]/40 hidden sm:block" />
               <div className="flex items-center gap-2">
                 <span className="text-2xl font-bold text-white">120+</span>
                 <span>professionisti aiutati</span>
               </div>
-              <div className="w-px h-8 bg-white/10 hidden sm:block" />
+              <div className="w-px h-8 bg-[#2E7D32]/40 hidden sm:block" />
               <div className="flex items-center gap-2">
                 <span className="text-2xl font-bold text-white">1</span>
                 <span>libro pubblicato</span>
@@ -90,11 +89,11 @@ export default function Hero() {
           {/* RIGHT — foto */}
           <div className="animate-fade-in-up delay-200 relative flex justify-center lg:justify-end">
             {/* Glow dietro la foto */}
-            <div className="absolute inset-0 rounded-3xl bg-blue-600/10 blur-[60px]" />
+            <div className="absolute inset-0 rounded-3xl bg-[#2E7D32]/10 blur-[60px]" />
 
             {/* Cornice decorativa */}
             <div className="relative w-full max-w-sm lg:max-w-none">
-              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-blue-500/20 to-violet-600/20 blur-sm" />
+              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-[#2E7D32]/20 to-[#43A047]/10 blur-sm" />
               <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
                 <Image
                   src="/fabio-hero.jpg"
@@ -106,12 +105,12 @@ export default function Hero() {
                   style={{ maxHeight: "600px", objectPosition: "top" }}
                 />
                 {/* Overlay gradiente in basso */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#06091a]/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1A2E1A]/60 to-transparent" />
               </div>
 
               {/* Badge flottante */}
-              <div className="absolute -bottom-4 -left-4 bg-[#0d1530] border border-white/10 rounded-2xl px-5 py-4 shadow-xl backdrop-blur-sm">
-                <div className="text-xs text-slate-400 mb-0.5">Coach certificato</div>
+              <div className="absolute -bottom-4 -left-4 bg-[#1A2E1A] border border-[#2E7D32]/40 rounded-2xl px-5 py-4 shadow-xl">
+                <div className="text-xs text-[#A5D6A7] mb-0.5">Coach certificato</div>
                 <div className="text-white font-semibold text-sm">Over 40 · AI · Mindset</div>
               </div>
             </div>

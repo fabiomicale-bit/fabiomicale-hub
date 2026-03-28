@@ -1,21 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #06091a;
-  --foreground: #e8eaf0;
+  --color-bg:           #FFFFFF;
+  --color-bg-soft:      #F4F7F4;
+  --color-bg-dark:      #1A2E1A;
+  --color-primary:      #2E7D32;
+  --color-primary-light:#43A047;
+  --color-primary-pale: #E8F5E9;
+  --color-text:         #1A1A1A;
+  --color-text-muted:   #5A6B5A;
+  --color-text-light:   #FFFFFF;
+  --color-border:       #D4E4D4;
+  --color-accent:       #F9A825;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--color-bg);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-jakarta);
+  --font-serif: var(--font-lora);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-jakarta), Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+  font-family: var(--font-lora), Georgia, serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--font-jakarta), Arial, Helvetica, sans-serif;
+  font-weight: 700;
 }
 
 @keyframes fade-in-up {
@@ -40,25 +58,22 @@ body {
 .delay-500 { animation-delay: 0.5s; }
 
 .gradient-text {
-  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, #2E7D32, #43A047);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .card-glow:hover {
-  box-shadow: 0 0 30px rgba(96, 165, 250, 0.15);
-}
-
-.hero-glow {
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+  box-shadow: 0 0 30px rgba(46, 125, 50, 0.10);
 }
 
 /* ── Blog content ──────────────────────────────────────────── */
 .blog-content h2 {
+  font-family: var(--font-lora), Georgia, serif;
   font-size: 1.375rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #1A1A1A;
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   line-height: 1.35;
@@ -67,13 +82,13 @@ body {
 .blog-content h3 {
   font-size: 1.15rem;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
+  color: #3D4D3D;
   margin-top: 2rem;
   margin-bottom: 0.75rem;
 }
 
 .blog-content p {
-  color: #94a3b8;
+  color: #5A6B5A;
   line-height: 1.85;
   margin-bottom: 1.25rem;
   font-size: 1.05rem;
@@ -86,7 +101,7 @@ body {
 }
 
 .blog-content ul li {
-  color: #94a3b8;
+  color: #5A6B5A;
   line-height: 1.75;
   margin-bottom: 0.6rem;
   padding-left: 1.5rem;
@@ -98,45 +113,45 @@ body {
   content: "—";
   position: absolute;
   left: 0;
-  color: #3b82f6;
+  color: #2E7D32;
   font-weight: 600;
 }
 
 .blog-content a {
-  color: #60a5fa;
+  color: #2E7D32;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: rgba(96, 165, 250, 0.4);
+  text-decoration-color: rgba(46, 125, 50, 0.4);
   transition: color 0.2s, text-decoration-color 0.2s;
 }
 
 .blog-content a:hover {
-  color: #93c5fd;
-  text-decoration-color: rgba(147, 197, 253, 0.6);
+  color: #43A047;
+  text-decoration-color: rgba(67, 160, 71, 0.6);
 }
 
 .blog-cta {
-  background: rgba(59, 130, 246, 0.07);
-  border: 1px solid rgba(59, 130, 246, 0.25);
+  background: #E8F5E9;
+  border: 1px solid #D4E4D4;
   border-radius: 12px;
   padding: 1.25rem 1.5rem;
   margin: 2rem 0;
 }
 
 .blog-cta p {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: #1A1A1A !important;
   font-weight: 600;
   margin-bottom: 0.4rem !important;
   font-size: 0.95rem !important;
 }
 
 .blog-cta a {
-  color: #60a5fa !important;
+  color: #2E7D32 !important;
   font-weight: 500;
   text-decoration: none !important;
   font-size: 0.95rem;
 }
 
 .blog-cta a:hover {
-  color: #93c5fd !important;
+  color: #43A047 !important;
 }

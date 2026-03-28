@@ -37,36 +37,36 @@ const points = [
 
 export default function PerChiE() {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-24 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-8 h-px bg-blue-500" />
-          <span className="text-blue-400 text-sm font-medium tracking-widest uppercase">Per chi è</span>
+          <div className="w-8 h-px bg-[#2E7D32]" />
+          <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Per chi è</span>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-white mb-16 leading-tight">
-          Questo spazio è per te se<span className="text-blue-400">...</span>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-16 leading-tight">
+          Questo spazio è per te se<span className="text-[#2E7D32]">...</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {points.map((point, i) => (
             <div
               key={i}
-              className="card-glow group relative bg-white/[0.03] hover:bg-white/[0.06] border border-white/8 hover:border-blue-500/30 rounded-2xl p-8 transition-all duration-300"
+              className="card-glow group relative bg-white hover:bg-[#F4F7F4] border border-[#D4E4D4] hover:border-[#43A047] rounded-2xl p-8 transition-all duration-300 shadow-sm"
             >
               {/* Number */}
-              <div className="absolute top-6 right-6 text-5xl font-bold text-white/[0.04] select-none">
+              <div className="absolute top-6 right-6 text-5xl font-bold text-[#2E7D32]/[0.06] select-none">
                 {String(i + 1).padStart(2, "0")}
               </div>
 
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-500/15 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#D4E4D4] flex items-center justify-center text-[#2E7D32] mb-6 group-hover:bg-[#2E7D32]/10 transition-colors">
                 {point.icon}
               </div>
 
               {/* Text */}
-              <p className="text-slate-300 leading-relaxed text-[1.05rem]">{point.text}</p>
+              <p className="text-[#1A1A1A] leading-relaxed text-[1.05rem]">{point.text}</p>
             </div>
           ))}
         </div>

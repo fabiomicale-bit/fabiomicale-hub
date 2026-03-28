@@ -15,7 +15,7 @@ export default function ShareBar({ titolo, slug }: Props) {
   }
 
   const btnClass =
-    "text-xs px-3 py-1.5 rounded-full border border-white/10 text-slate-400 hover:text-white hover:border-white/20 transition-all duration-200 cursor-pointer";
+    "text-xs px-3 py-1.5 rounded-full border border-[#D4E4D4] text-[#5A6B5A] hover:text-[#2E7D32] hover:border-[#43A047] transition-all duration-200 cursor-pointer";
 
   return (
     <div className="flex items-center gap-2 mb-8">

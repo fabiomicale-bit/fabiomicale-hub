@@ -30,7 +30,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#06091a]/95 backdrop-blur-md border-b border-white/5 shadow-lg shadow-black/20"
+          ? "bg-white border-b border-[#D4E4D4] shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -44,7 +44,7 @@ export default function Navbar() {
             alt="Fabio Micale"
             priority
           />
-          <span className="font-semibold text-white text-sm tracking-wide hidden sm:block">
+          <span className={`font-semibold text-sm tracking-wide hidden sm:block transition-colors duration-300 ${scrolled ? "text-[#1A1A1A]" : "text-white"}`}>
             Fabio Micale
           </span>
         </Link>
@@ -55,7 +55,11 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-slate-400 hover:text-white transition-colors duration-200 tracking-wide"
+              className={`text-sm transition-colors duration-200 tracking-wide ${
+                scrolled
+                  ? "text-[#1A1A1A] hover:text-[#2E7D32]"
+                  : "text-white/90 hover:text-white"
+              }`}
             >
               {link.label}
             </a>
@@ -65,14 +69,14 @@ export default function Navbar() {
         {/* CTA */}
         <Link
           href={newsletterHref}
-          className="hidden md:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
+          className="hidden md:inline-flex items-center gap-2 bg-[#2E7D32] hover:bg-[#43A047] text-white text-sm font-medium px-4 py-2 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-[#2E7D32]/25"
         >
           Newsletter gratuita
         </Link>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-slate-400 hover:text-white"
+          className={`md:hidden p-2 transition-colors duration-300 ${scrolled ? "text-[#1A1A1A]" : "text-white"}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
@@ -84,12 +88,12 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#06091a]/98 backdrop-blur-md border-t border-white/5 px-6 py-4">
+        <div className="md:hidden bg-white border-t border-[#D4E4D4] px-6 py-4 shadow-md">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block py-3 text-slate-300 hover:text-white border-b border-white/5 last:border-0"
+              className="block py-3 text-[#1A1A1A] hover:text-[#2E7D32] border-b border-[#D4E4D4] last:border-0 text-sm transition-colors"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
@@ -97,7 +101,7 @@ export default function Navbar() {
           ))}
           <Link
             href={newsletterHref}
-            className="mt-4 block text-center bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-3 rounded-lg"
+            className="mt-4 block text-center bg-[#2E7D32] hover:bg-[#43A047] text-white font-medium px-4 py-3 rounded-lg transition-colors"
             onClick={() => setMenuOpen(false)}
           >
             Newsletter gratuita

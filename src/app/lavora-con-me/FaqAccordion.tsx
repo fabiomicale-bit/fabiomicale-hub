@@ -28,19 +28,19 @@ export default function FaqAccordion() {
       {faqs.map((faq, i) => (
         <div
           key={i}
-          className={`border rounded-xl overflow-hidden transition-colors duration-200 ${
-            open === i ? "border-blue-500/30" : "border-white/8"
-          } bg-white/[0.03]`}
+          className={`border rounded-xl overflow-hidden transition-colors duration-200 bg-white ${
+            open === i ? "border-[#2E7D32]/40" : "border-[#D4E4D4]"
+          }`}
         >
           <button
             className="w-full flex items-center justify-between px-6 py-5 text-left group"
             onClick={() => setOpen(open === i ? null : i)}
           >
-            <span className={`font-medium transition-colors duration-200 ${open === i ? "text-white" : "text-slate-300 group-hover:text-white"}`}>
+            <span className={`font-medium transition-colors duration-200 ${open === i ? "text-[#1A1A1A]" : "text-[#5A6B5A] group-hover:text-[#1A1A1A]"}`}>
               {faq.domanda}
             </span>
             <svg
-              className={`w-5 h-5 text-blue-400 shrink-0 ml-4 transition-transform duration-300 ${open === i ? "rotate-45" : ""}`}
+              className={`w-5 h-5 text-[#2E7D32] shrink-0 ml-4 transition-transform duration-300 ${open === i ? "rotate-45" : ""}`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -49,7 +49,7 @@ export default function FaqAccordion() {
             </svg>
           </button>
           {open === i && (
-            <div className="px-6 pb-5 text-slate-400 leading-relaxed text-[0.95rem] border-t border-white/5 pt-4">
+            <div className="px-6 pb-5 text-[#5A6B5A] leading-relaxed text-[0.95rem] border-t border-[#D4E4D4] pt-4">
               {faq.risposta}
             </div>
           )}

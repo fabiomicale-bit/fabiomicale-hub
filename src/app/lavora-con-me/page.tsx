@@ -13,7 +13,7 @@ const opzioni = [
   {
     emoji: "✉️",
     badge: "Inizia qui — Gratis",
-    badgeColor: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
+    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#D4E4D4]",
     titolo: "Newsletter settimanale",
     testo:
       "Ogni settimana strategie concrete, strumenti AI selezionati e riflessioni dirette. Solo per professionisti over 40 che vogliono fare sul serio.",
@@ -25,7 +25,7 @@ const opzioni = [
   {
     emoji: "📘",
     badge: "Il punto di partenza",
-    badgeColor: "bg-blue-500/15 text-blue-400 border-blue-500/25",
+    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#D4E4D4]",
     titolo: "Successo in 3 Passi",
     testo:
       "La guida pratica per capire come l'AI sta ridisegnando il lavoro e come posizionarti in anticipo. Una lettura che cambia prospettiva.",
@@ -37,7 +37,7 @@ const opzioni = [
   {
     emoji: "🎓",
     badge: "Formazione intensiva",
-    badgeColor: "bg-violet-500/15 text-violet-400 border-violet-500/25",
+    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#D4E4D4]",
     titolo: "Corsi e Masterclass",
     testo:
       "Percorsi strutturati per imparare a usare l'AI nel tuo contesto professionale. Dal mindset agli strumenti, passo dopo passo. Gruppi piccoli, massimo 4 persone.",
@@ -49,7 +49,7 @@ const opzioni = [
   {
     emoji: "🤝",
     badge: "Supporto personalizzato",
-    badgeColor: "bg-orange-500/15 text-orange-400 border-orange-500/25",
+    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#2E7D32]/30",
     titolo: "Consulenza 1:1",
     testo:
       "Sessioni private per chi vuole un percorso su misura. Analisi della situazione, obiettivi chiari, piano d'azione concreto. Risultati misurabili.",
@@ -61,7 +61,7 @@ const opzioni = [
   {
     emoji: "⚡",
     badge: "Per il tuo business",
-    badgeColor: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
+    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#D4E4D4]",
     titolo: "Servizi AI e Automazioni",
     testo:
       "Implementazione di strumenti e workflow AI nella tua attività. Automazioni, agenti, processi ottimizzati. Per professionisti e piccole imprese che vogliono risultati misurabili.",
@@ -74,23 +74,20 @@ const opzioni = [
 
 export default function LavoraConMePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden">
-        <div className="absolute inset-0 hero-glow" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-blue-600/8 blur-[120px] pointer-events-none" />
-
+      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#1A2E1A]">
         <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <div className="animate-fade-in-up inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-[#43A047]/40 text-[#A5D6A7] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#A5D6A7] animate-pulse" />
             Percorsi su misura
           </div>
-          <h1 className="animate-fade-in-up delay-100 text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
             Lavora con me: percorsi pratici per usare l&apos;AI nella tua carriera
           </h1>
-          <p className="animate-fade-in-up delay-200 text-xl text-slate-400 leading-relaxed">
+          <p className="text-xl text-[#A5D6A7] leading-relaxed">
             Non esiste un percorso uguale per tutti.{" "}
             <span className="gradient-text font-semibold">Esiste il tuo.</span>
           </p>
@@ -98,9 +95,9 @@ export default function LavoraConMePage() {
       </section>
 
       {/* ── 2. INTRO ─────────────────────────────────────────────── */}
-      <section className="pb-16 px-6">
+      <section className="pb-16 pt-16 px-6 bg-white">
         <div className="max-w-2xl mx-auto text-center">
-          <div className="space-y-4 text-slate-400 leading-relaxed text-[1.05rem]">
+          <div className="space-y-4 text-[#5A6B5A] leading-relaxed text-[1.05rem]">
             <p>
               Ho costruito questa offerta su un principio semplice:
               ogni persona ha un punto di partenza diverso,
@@ -109,20 +106,20 @@ export default function LavoraConMePage() {
             <p>
               Per questo non vendo pacchetti preconfezionati.
               Ti propongo percorsi che si adattano
-              a <span className="text-slate-200">dove sei e dove vuoi arrivare.</span>
+              a <span className="text-[#1A1A1A] font-medium">dove sei e dove vuoi arrivare.</span>
             </p>
           </div>
         </div>
       </section>
 
       {/* ── 3. LE OPZIONI ────────────────────────────────────────── */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-[#F4F7F4]">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-blue-500" />
-              <span className="text-blue-400 text-sm font-medium tracking-widest uppercase">Le opzioni</span>
-              <div className="w-8 h-px bg-blue-500" />
+              <div className="w-8 h-px bg-[#2E7D32]" />
+              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Le opzioni</span>
+              <div className="w-8 h-px bg-[#2E7D32]" />
             </div>
           </div>
 
@@ -130,10 +127,10 @@ export default function LavoraConMePage() {
             {opzioni.map((o) => (
               <div
                 key={o.titolo}
-                className={`card-glow group flex flex-col rounded-2xl p-7 border transition-all duration-300 ${
+                className={`card-glow group flex flex-col rounded-2xl p-7 border transition-all duration-300 shadow-sm hover:shadow-md ${
                   o.highlight
-                    ? "bg-gradient-to-b from-blue-900/20 to-transparent border-blue-500/25 hover:border-blue-500/50"
-                    : "bg-white/[0.03] border-white/8 hover:border-white/15"
+                    ? "bg-white border-[#2E7D32]/30 ring-1 ring-[#2E7D32]/20 hover:border-[#2E7D32]/50"
+                    : "bg-white border-[#D4E4D4] hover:border-[#43A047]"
                 }`}
               >
                 {/* emoji + badge */}
@@ -145,16 +142,16 @@ export default function LavoraConMePage() {
                 </div>
 
                 {/* testo */}
-                <h3 className="text-white font-semibold text-lg mb-3 leading-snug">
+                <h3 className="text-[#1A1A1A] font-semibold text-lg mb-3 leading-snug">
                   {o.titolo}
                 </h3>
-                <p className="text-slate-400 leading-relaxed text-[0.9rem] flex-1">
+                <p className="text-[#5A6B5A] leading-relaxed text-[0.9rem] flex-1">
                   {o.testo}
                 </p>
 
                 {/* nota */}
                 {o.nota && (
-                  <p className="mt-4 text-xs text-slate-500 italic">{o.nota}</p>
+                  <p className="mt-4 text-xs text-[#5A6B5A] italic">{o.nota}</p>
                 )}
 
                 {/* cta */}
@@ -163,8 +160,8 @@ export default function LavoraConMePage() {
                     href={o.href}
                     className={`mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group/cta ${
                       o.highlight
-                        ? "text-blue-400 hover:text-blue-300"
-                        : "text-slate-400 hover:text-white"
+                        ? "text-[#2E7D32] hover:text-[#43A047]"
+                        : "text-[#5A6B5A] hover:text-[#2E7D32]"
                     }`}
                   >
                     {o.cta}
@@ -185,16 +182,15 @@ export default function LavoraConMePage() {
       </section>
 
       {/* ── 4. FAQ ───────────────────────────────────────────────── */}
-      <section className="py-20 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/10 to-transparent pointer-events-none" />
-        <div className="relative max-w-2xl mx-auto">
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-blue-500" />
-              <span className="text-blue-400 text-sm font-medium tracking-widest uppercase">FAQ</span>
-              <div className="w-8 h-px bg-blue-500" />
+              <div className="w-8 h-px bg-[#2E7D32]" />
+              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">FAQ</span>
+              <div className="w-8 h-px bg-[#2E7D32]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A]">
               Hai dubbi?
             </h2>
           </div>
@@ -203,21 +199,17 @@ export default function LavoraConMePage() {
       </section>
 
       {/* ── 5. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 relative">
-        <div className="absolute inset-0 hero-glow opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/15 to-transparent pointer-events-none" />
-
-        <div className="relative z-10 max-w-2xl mx-auto text-center">
+      <section className="py-24 px-6 bg-[#1A2E1A]">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
             Non sai da dove iniziare?
           </h2>
-          <p className="text-slate-400 text-lg leading-relaxed mb-10">
-            Scrivimi. In 15 minuti capiamo insieme{" "}
-            <span className="text-slate-300">qual è il percorso più adatto a te.</span>
+          <p className="text-[#A5D6A7] text-lg leading-relaxed mb-10">
+            Scrivimi. In 15 minuti capiamo insieme qual è il percorso più adatto a te.
           </p>
           <a
             href="mailto:info@fabiomicale.com"
-            className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5 text-base"
+            className="inline-flex items-center gap-3 bg-[#2E7D32] hover:bg-[#43A047] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

@@ -6,9 +6,7 @@ const services = [
     desc: "Una guida pratica e diretta per capire come l'AI sta ridisegnando il lavoro — e come posizionarti in anticipo, non in ritardo.",
     cta: "Scopri il libro",
     href: "/il-libro",
-    accent: "from-amber-500/20 to-orange-500/10",
-    border: "border-amber-500/20 hover:border-amber-400/40",
-    tag_color: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    featured: false,
   },
   {
     icon: "✉️",
@@ -17,9 +15,6 @@ const services = [
     desc: "Ogni settimana: strategie concrete, strumenti AI selezionati, casi reali. Niente fluff. Solo ciò che funziona davvero per i professionisti over 40.",
     cta: "Iscriviti gratis",
     href: "#newsletter",
-    accent: "from-blue-500/20 to-cyan-500/10",
-    border: "border-blue-500/20 hover:border-blue-400/40",
-    tag_color: "bg-blue-500/10 text-blue-400 border-blue-500/20",
     featured: true,
   },
   {
@@ -28,9 +23,7 @@ const services = [
     title: "Formazione intensiva",
     desc: "Percorsi strutturati per imparare a usare l'AI nel tuo contesto professionale. Dal mindset agli strumenti, passo dopo passo.",
     staticText: "Vuoi saperne di più? Scrivici a info@fabiomicale.com",
-    accent: "from-violet-500/20 to-purple-500/10",
-    border: "border-violet-500/20 hover:border-violet-400/40",
-    tag_color: "bg-violet-500/10 text-violet-400 border-violet-500/20",
+    featured: false,
   },
   {
     icon: "🤝",
@@ -40,9 +33,7 @@ const services = [
     cta: "Prenota una call",
     href: "https://calendly.com/fabiomicale",
     external: true,
-    accent: "from-emerald-500/20 to-teal-500/10",
-    border: "border-emerald-500/20 hover:border-emerald-400/40",
-    tag_color: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    featured: false,
   },
   {
     icon: "⚡",
@@ -50,33 +41,26 @@ const services = [
     title: "AI per il tuo business",
     desc: "Implementazione di strumenti e workflow AI nella tua attività. Automazioni, assistenti, processi ottimizzati. Risultati misurabili.",
     staticText: "Disponibilita limitata — scrivici a info@fabiomicale.com per richiedere info",
-    accent: "from-pink-500/20 to-rose-500/10",
-    border: "border-pink-500/20 hover:border-pink-400/40",
-    tag_color: "bg-pink-500/10 text-pink-400 border-pink-500/20",
+    featured: false,
   },
 ];
 
 export default function ComePossoAiutarti() {
   return (
-    <section id="come-aiuto" className="py-24 px-6 relative">
-      {/* Background accent */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-violet-600/5 rounded-full blur-[100px]" />
-      </div>
-
-      <div className="max-w-6xl mx-auto relative">
+    <section id="come-aiuto" className="py-24 px-6 bg-[#F4F7F4]">
+      <div className="max-w-6xl mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-8 h-px bg-blue-500" />
-          <span className="text-blue-400 text-sm font-medium tracking-widest uppercase">Come posso aiutarti</span>
+          <div className="w-8 h-px bg-[#2E7D32]" />
+          <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Come posso aiutarti</span>
         </div>
 
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white leading-tight max-w-xl">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] leading-tight max-w-xl">
             Non esiste un solo modo per reinventarsi.{" "}
             <span className="gradient-text">Esiste il tuo.</span>
           </h2>
-          <p className="text-slate-400 max-w-sm leading-relaxed">
+          <p className="text-[#5A6B5A] max-w-sm leading-relaxed">
             Ecco da dove puoi iniziare. Ogni percorso è diverso — scegli quello che si adatta al tuo momento.
           </p>
         </div>
@@ -86,33 +70,33 @@ export default function ComePossoAiutarti() {
           {services.map((service, i) => (
             <div
               key={i}
-              className={`card-glow group relative bg-gradient-to-br ${service.accent} border ${service.border} rounded-2xl p-7 transition-all duration-300 flex flex-col ${
-                service.featured ? "ring-1 ring-blue-500/30 lg:row-span-1" : ""
+              className={`card-glow group relative rounded-2xl p-7 border transition-all duration-300 flex flex-col ${
+                service.featured
+                  ? "bg-white border-[#2E7D32]/30 hover:border-[#2E7D32] ring-1 ring-[#2E7D32]/20 shadow-md"
+                  : "bg-white border-[#D4E4D4] hover:border-[#43A047] shadow-sm"
               }`}
             >
               {service.featured && (
-                <div className="absolute -top-3 left-6 bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                <div className="absolute -top-3 left-6 bg-[#2E7D32] text-white text-xs font-semibold px-3 py-1 rounded-full">
                   Inizia da qui
                 </div>
               )}
 
               {/* Tag */}
-              <span
-                className={`inline-flex items-center border text-xs font-medium px-3 py-1 rounded-full mb-4 w-fit ${service.tag_color}`}
-              >
+              <span className="inline-flex items-center bg-[#E8F5E9] border border-[#D4E4D4] text-[#2E7D32] text-xs font-medium px-3 py-1 rounded-full mb-4 w-fit">
                 {service.icon} <span className="ml-1.5">{service.tag}</span>
               </span>
 
-              <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed flex-1">{service.desc}</p>
+              <h3 className="text-lg font-semibold text-[#1A1A1A] mb-2">{service.title}</h3>
+              <p className="text-[#5A6B5A] text-sm leading-relaxed flex-1">{service.desc}</p>
 
-              {service.staticText ? (
-                <p className="mt-6 text-sm text-slate-400 leading-relaxed">{service.staticText}</p>
+              {"staticText" in service && service.staticText ? (
+                <p className="mt-6 text-sm text-[#5A6B5A] leading-relaxed">{service.staticText}</p>
               ) : (
                 <a
                   href={service.href}
-                  {...(service.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white group-hover:gap-3 transition-all duration-200"
+                  {...("external" in service && service.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[#2E7D32] hover:text-[#43A047] group-hover:gap-3 transition-all duration-200"
                 >
                   {service.cta}
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
