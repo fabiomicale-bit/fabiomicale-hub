@@ -55,6 +55,7 @@ const credenziali = [
   "Autore",
   "Project Manager",
   "AI Practitioner",
+  "PNL Practitioner",
   "25+ anni di esperienza",
 ];
 
