@@ -31,7 +31,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-white border-b border-[#E5E5E5] shadow-sm"
-          : "bg-transparent"
+          : "bg-[#111111]"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
