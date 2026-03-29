@@ -793,6 +793,99 @@ export const posts: Post[] = [
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "reinventarsi-dopo-i-40-metodo"],
   },
+  {
+    slug: "claude-ai-come-usarlo-al-lavoro",
+    seoTitle: "Claude AI: come usarlo davvero al lavoro (guida per non tecnici)",
+    seoDescription:
+      "Non sai da dove iniziare con Claude AI? Ecco come lo uso ogni giorno per risparmiare ore di lavoro. Guida pratica per professionisti over 40, senza bisogno di essere tecnici.",
+    keywords:
+      "Claude AI, come usare Claude, AI per professionisti, intelligenza artificiale lavoro, AI over 40, guida Claude AI, assistente AI per non tecnici",
+    titolo: "Claude AI: come usarlo davvero al lavoro (guida per non tecnici)",
+    categoria: "Intelligenza Artificiale",
+    categoriaClasses: "bg-blue-500/15 text-blue-400 border-blue-500/25",
+    data: "7 aprile 2026",
+    dataISO: "2026-04-07",
+    tempoLettura: "7 min",
+    excerpt:
+      "Non sai da dove iniziare con Claude AI? Ecco come lo uso ogni giorno per risparmiare ore di lavoro. Guida pratica per professionisti over 40, senza bisogno di essere tecnici.",
+    correlati: ["recuperare-tempo-delegare-ai-sistema", "paura-obsolescenza-professionale-ai"],
+    contentHtml: `
+<p>Ogni settimana mi arriva la stessa domanda. A volte da un commercialista, a volte da un imprenditore, a volte da un ingegnere con vent'anni di esperienza alle spalle: "Fabio, ho sentito parlare di Claude. Ma come si usa davvero? Cosa ci faccio concretamente?"</p>
+
+<p>La risposta onesta è che dipende. Dipende dal tuo lavoro, dalle tue giornate, da dove sprechi più tempo. Ma c'è un punto di partenza che funziona quasi sempre. E in questo articolo te lo do.</p>
+
+<h2>Cos'è Claude AI e perché non è "l'ennesimo ChatGPT"</h2>
+
+<p>Claude è un assistente AI sviluppato da Anthropic. Non è l'unico strumento disponibile, ma è quello che uso di più e che consiglio di più ai professionisti over 40, per un motivo preciso: ragiona bene su testi lunghi e complessi, mantiene il contesto di una conversazione, e tende a essere più cauto e preciso rispetto ad altri modelli.</p>
+
+<p>In pratica: se devi analizzare un documento, scrivere qualcosa che suoni come scritto da un essere umano, o ragionare su una situazione complessa, Claude spesso fa un lavoro migliore degli altri.</p>
+
+<p>Ma non è questo il punto. Il punto è come usarlo.</p>
+
+<h2>L'errore che fanno tutti all'inizio</h2>
+
+<p>La prima volta che ci si siede davanti a Claude (o a qualsiasi AI generativa), si tende a fare la stessa cosa: si scrive una domanda generica e si aspetta la magia.</p>
+
+<p><em>"Aiutami a scrivere una email professionale."</em></p>
+
+<p>Risultato: un testo generico che non suona come te, che devi riscrivere da zero, e che ti fa pensare "a che serve questo?"</p>
+
+<p>Il problema non è lo strumento. È il modo in cui lo usi. Claude non è un motore di ricerca — è più simile a un collaboratore molto capace che ha bisogno di contesto per darti qualcosa di utile.</p>
+
+<h2>Come dare contesto: il metodo che uso io</h2>
+
+<p>Prima di scrivere qualsiasi richiesta, mi fermo e rispondo mentalmente a tre domande:</p>
+
+<p><strong>Chi sono io in questa situazione?</strong> (il mio ruolo, il mio settore, a chi mi rivolgo)</p>
+
+<p><strong>Qual è esattamente il problema?</strong> (non in modo vago — specifico)</p>
+
+<p><strong>Cosa voglio ottenere?</strong> (non "aiutami" — un output preciso)</p>
+
+<p>Esempio concreto. Invece di scrivere:</p>
+
+<p><em>"Aiutami a rispondere a un cliente difficile"</em></p>
+
+<p>Scrivo:</p>
+
+<p><em>"Sono un commercialista. Ho un cliente che si lamenta del mio onorario dicendo che altri studi costano meno. Voglio rispondere in modo professionale, senza fare sconti, mantenendo il rapporto. Scrivimi una bozza di risposta email, tono diretto ma cordiale, massimo 150 parole."</em></p>
+
+<p>Vedi la differenza? Claude adesso sa chi sei, qual è il problema specifico, e cosa deve produrre. Il risultato sarà usabile, non un testo generico da buttare.</p>
+
+<h2>3 usi concreti per iniziare questa settimana</h2>
+
+<p>Non ti chiedo di imparare tutto. Ti chiedo di provare una sola di queste cose.</p>
+
+<p><strong>1. Le email difficili</strong></p>
+
+<p>Qualsiasi email che trovi scomoda da scrivere — una richiesta di pagamento, una risposta a un cliente nervoso, una proposta commerciale — dalla a Claude con il contesto giusto. Il tempo che risparmi in quella singola email vale già il tempo di leggere questo articolo.</p>
+
+<p><strong>2. I riassunti di documenti lunghi</strong></p>
+
+<p>Hai un contratto di 40 pagine da leggere? Un capitolato? Un report? Copia e incolla il testo in Claude e chiedigli di farti un riassunto dei punti chiave. Poi fai le domande specifiche che ti interessano. In 10 minuti hai capito quello che avresti capito in 2 ore.</p>
+
+<p><strong>3. La prima bozza di qualsiasi testo</strong></p>
+
+<p>Offerta commerciale, presentazione ai clienti, bio professionale per LinkedIn. Non partire dal foglio bianco. Dai a Claude le informazioni chiave e chiedigli la prima bozza. Tu correggi, aggiusti, fai tuo. Il blocco del foglio bianco sparisce.</p>
+
+<h2>Quanto costa e dove si trova</h2>
+
+<p>Claude ha un piano gratuito su claude.ai che ti permette di usarlo subito, senza carta di credito. Per un uso professionale intensivo esiste un piano a pagamento, ma per iniziare il gratuito è più che sufficiente.</p>
+
+<p>Aprilo adesso, anche solo per provare le email difficili. Se non ti cambia almeno una cosa nella tua settimana lavorativa, mi scrivi e parliamo.</p>
+
+<div class="blog-cta">
+  <p>Vuoi un percorso guidato per usare l'AI nel tuo lavoro specifico?</p>
+  <a href="/lavora-con-me">→ Scopri come lavorare con me</a>
+</div>
+
+<h2>Una cosa sola da fare oggi</h2>
+
+<p>Pensa all'ultima email difficile che hai rimandato. Quella che hai in testa da ieri, da tre giorni, forse da una settimana. Aprila. Vai su claude.ai. Scrivi: "Sono [il tuo ruolo]. Ho questa situazione: [descrivi]. Aiutami a scrivere una risposta [tono desiderato], massimo [X] parole."</p>
+
+<p>Poi <a href="/contatti">dimmi com'è andata</a>.</p>
+    `,
+  },
 ];
 
 export function getPost(slug: string): Post | undefined {
