@@ -71,10 +71,14 @@ export const metadata: Metadata = {
     canonical: "https://www.fabiomicale.com",
   },
   icons: {
-    icon: "/logo-fabio-micale.svg",
-    shortcut: "/logo-fabio-micale.svg",
-    apple: "/logo-fabio-micale.svg",
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
