@@ -181,7 +181,29 @@ export default function LavoraConMePage() {
         </div>
       </section>
 
-      {/* ── 4. FAQ ───────────────────────────────────────────────── */}
+      {/* ── 4. TESTIMONIANZE ─────────────────────────────────────── */}
+      <section className="py-16 px-6 bg-[#F7F7F7]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-serif text-center text-[#111111] mb-12">
+            Chi ha già lavorato con me
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { nome: "Laura", ruolo: "Commercialista, 51 anni", testo: "Non pensavo fosse per me. Pensavo servisse essere giovani o smanettoni. Mi sbagliavo." },
+              { nome: "Marco", ruolo: "Imprenditore edile, 47 anni", testo: "Mi aspettavo una cosa complicata. Era più semplice di imparare a usare WhatsApp." },
+              { nome: "Roberto", ruolo: "Ingegnere progettista, 44 anni", testo: "Ho recuperato competenze che pensavo di non poter mai avere. Ci ho messo tre settimane, non tre anni." },
+            ].map((c) => (
+              <div key={c.nome} className="bg-white rounded-xl p-6 border border-[#E5E5E5]">
+                <p className="text-[#555555] italic text-sm leading-relaxed mb-4">&ldquo;{c.testo}&rdquo;</p>
+                <p className="font-bold text-[#111111] text-sm">{c.nome}</p>
+                <p className="text-[#555555] text-xs">{c.ruolo}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. FAQ ───────────────────────────────────────────────── */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-10">

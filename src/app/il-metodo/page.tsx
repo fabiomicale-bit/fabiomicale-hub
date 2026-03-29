@@ -221,7 +221,18 @@ export default function IlMetodoPage() {
         </div>
       </section>
 
-      {/* ── 5. CTA FINALE ────────────────────────────────────────── */}
+      {/* ── 5. CITAZIONE ─────────────────────────────────────────── */}
+      <section className="py-12 px-6 bg-white">
+        <div className="max-w-2xl mx-auto bg-[#F7F7F7] rounded-2xl p-8 border-l-4 border-[#2E7D32]">
+          <p className="text-[#555555] italic text-lg leading-relaxed mb-4">
+            &ldquo;Non pensavo fosse per me. Pensavo servisse essere giovani o smanettoni. In sei sessioni ho cambiato completamente il mio modo di lavorare.&rdquo;
+          </p>
+          <p className="font-bold text-[#111111]">Laura</p>
+          <p className="text-[#555555] text-sm">Commercialista, 51 anni — Studio professionale</p>
+        </div>
+      </section>
+
+      {/* ── 6. CTA FINALE ────────────────────────────────────────── */}
       <section className="py-24 px-6 bg-[#111111]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">

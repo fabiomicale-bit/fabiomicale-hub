@@ -22,6 +22,95 @@ export default function HomePage() {
       <PerChiE />
       <ComePossoAiutarti />
       <ChiSonoPreview />
+
+      {/* Sezione: Risultati reali */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-4">
+            <span className="text-xs font-semibold tracking-widest text-[#2E7D32] uppercase">
+              — Risultati reali —
+            </span>
+          </div>
+          <h2 className="text-4xl font-serif text-center text-[#111111] mb-4">
+            Chi ha già fatto questo passo
+          </h2>
+          <p className="text-center text-[#555555] mb-14 text-lg max-w-2xl mx-auto">
+            Nomi cambiati per privacy. Storie vere.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Card 1 — Laura */}
+            <div className="bg-[#F7F7F7] rounded-2xl p-8 flex flex-col">
+              <div className="text-3xl mb-4">📊</div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-[#E8F5E9] text-[#2E7D32] text-xs font-semibold px-3 py-1 rounded-full">
+                  Studio professionale
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-[#111111] mb-1">Laura</h3>
+              <p className="text-sm text-[#555555] mb-4">Commercialista, 51 anni</p>
+              <p className="text-[#2E7D32] font-semibold mb-4 text-sm">
+                &ldquo;Passava 3 ore al giorno su task ripetitivi. Oggi ne passa meno di una.&rdquo;
+              </p>
+              <p className="text-[#555555] text-sm leading-relaxed flex-1">
+                Laura gestisce uno studio con due collaboratori. In sei sessioni abbiamo mappato le sue task ad alto sforzo e basso valore e costruito un sistema semplice con Claude. Risultato: 2 ore e mezza risparmiate ogni giorno, usate per acquisire tre nuovi clienti.
+              </p>
+              <blockquote className="mt-6 pt-6 border-t border-[#E5E5E5] text-[#555555] text-sm italic">
+                &ldquo;Non pensavo fosse per me. Pensavo servisse essere giovani o smanettoni. Mi sbagliavo.&rdquo;
+              </blockquote>
+            </div>
+
+            {/* Card 2 — Marco */}
+            <div className="bg-[#F7F7F7] rounded-2xl p-8 flex flex-col">
+              <div className="text-3xl mb-4">🏗️</div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-[#E8F5E9] text-[#2E7D32] text-xs font-semibold px-3 py-1 rounded-full">
+                  PMI — 12 dipendenti
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-[#111111] mb-1">Marco</h3>
+              <p className="text-sm text-[#555555] mb-4">Imprenditore edile, 47 anni</p>
+              <p className="text-[#2E7D32] font-semibold mb-4 text-sm">
+                &ldquo;I preventivi escono in 20 minuti invece di 3 ore.&rdquo;
+              </p>
+              <p className="text-[#555555] text-sm leading-relaxed flex-1">
+                Diffidente per natura, ha accettato di provare perché perdeva gare d&apos;appalto contro concorrenti più veloci. Abbiamo iniziato dai preventivi. Oggi usa lo stesso approccio per capitolati, email ai fornitori e report di avanzamento cantieri.
+              </p>
+              <blockquote className="mt-6 pt-6 border-t border-[#E5E5E5] text-[#555555] text-sm italic">
+                &ldquo;Mi aspettavo una cosa complicata. Era più semplice di imparare a usare WhatsApp.&rdquo;
+              </blockquote>
+            </div>
+
+            {/* Card 3 — Roberto */}
+            <div className="bg-[#F7F7F7] rounded-2xl p-8 flex flex-col">
+              <div className="text-3xl mb-4">⚙️</div>
+              <div className="flex items-center gap-2 mb-4">
+                <span className="bg-[#E8F5E9] text-[#2E7D32] text-xs font-semibold px-3 py-1 rounded-full">
+                  Libero professionista
+                </span>
+              </div>
+              <h3 className="text-xl font-bold text-[#111111] mb-1">Roberto</h3>
+              <p className="text-sm text-[#555555] mb-4">Ingegnere progettista, 44 anni</p>
+              <p className="text-[#2E7D32] font-semibold mb-4 text-sm">
+                &ldquo;Ha costruito in 3 settimane ciò che prima richiedeva un consulente esterno.&rdquo;
+              </p>
+              <p className="text-[#555555] text-sm leading-relaxed flex-1">
+                Usa Excel da 20 anni ma arrivava sempre al limite. In tre settimane ha costruito un sistema completo di monitoraggio costi e avanzamento cantieri — su misura per il suo lavoro, senza dover assumere nessuno.
+              </p>
+              <blockquote className="mt-6 pt-6 border-t border-[#E5E5E5] text-[#555555] text-sm italic">
+                &ldquo;Ho recuperato competenze che pensavo di non poter mai avere. Ci ho messo tre settimane, non tre anni.&rdquo;
+              </blockquote>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a href="/lavora-con-me" className="inline-block bg-[#2E7D32] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-[#1B5E20] transition-colors">
+              Vuoi un risultato simile? Parliamone →
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Newsletter />
 
       {/* Sezione: È per te? */}
