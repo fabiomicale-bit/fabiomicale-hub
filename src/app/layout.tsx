@@ -4,6 +4,7 @@ import "./globals.css";
 import BackToTop from "@/components/BackToTop";
 import JsonLd from "./JsonLd";
 import CookieBanner from "@/components/CookieBanner";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -83,6 +84,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className="scroll-smooth">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-X3T310RBZ0"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-X3T310RBZ0');
+        `}
+      </Script>
       <body className={`${inter.variable} ${dmSerif.variable} antialiased`}>
         <JsonLd />
         {children}
