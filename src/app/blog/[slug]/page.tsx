@@ -7,6 +7,7 @@ import ReadingProgress from "./ReadingProgress";
 import TableOfContents from "./TableOfContents";
 import { injectHeadingIds } from "./headingUtils";
 import ShareBar from "./ShareBar";
+import CommentoForm from "@/components/CommentoForm";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -172,6 +173,13 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* ── FORM COMMENTI ───────────────────────────────────────── */}
+      <section className="max-w-2xl mx-auto px-6 pb-20 mt-16">
+        <div className="border-t border-[#E5E5E5] pt-12">
+          <CommentoForm articolo={post.titolo} />
+        </div>
+      </section>
 
       <Footer />
     </main>
