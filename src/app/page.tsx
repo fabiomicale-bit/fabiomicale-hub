@@ -113,6 +113,14 @@ export default function HomePage() {
 
       <Newsletter />
 
+      {/* Cross-link Risorse */}
+      <div className="bg-white py-8 px-6 text-center border-b border-[#E5E5E5]">
+        <p className="text-[#555555] mb-3">Vuoi qualcosa di più personalizzato?</p>
+        <a href="/risorse" className="text-[#2E7D32] font-semibold underline underline-offset-2 hover:text-[#1B5E20] transition-colors">
+          Scopri tutte le risorse gratuite →
+        </a>
+      </div>
+
       {/* Sezione: È per te? */}
       <section className="py-20 px-6 bg-[#F7F7F7]">
         <div className="max-w-4xl mx-auto">

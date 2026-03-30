@@ -303,6 +303,19 @@ export default function ChiSonoPage() {
         </div>
       </section>
 
+      {/* ── RISORSE CTA ──────────────────────────────────────────── */}
+      <section className="py-12 px-6 bg-[#F7F7F7] border-t border-[#E5E5E5]">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-[#555555] mb-3">Vuoi iniziare subito, gratis?</p>
+          <a
+            href="/risorse"
+            className="inline-flex items-center gap-2 text-[#2E7D32] font-semibold hover:text-[#1B5E20] underline underline-offset-2 transition-colors"
+          >
+            Esplora le risorse gratuite →
+          </a>
+        </div>
+      </section>
+
       {/* ── CTA FINALE ───────────────────────────────────────────── */}
       <section className="py-24 px-6 bg-[#111111]">
         <div className="max-w-2xl mx-auto text-center">

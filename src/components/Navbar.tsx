@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Il Libro", href: "/il-libro" },
   { label: "Lavora con me", href: "/lavora-con-me" },
   { label: "Approfondimenti", href: "/blog" },
+  { label: "Risorse", href: "/risorse" },
   { label: "Contatti", href: "/contatti" },
 ];
 
