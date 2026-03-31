@@ -152,7 +152,7 @@ export default function IlLibroPage() {
                 </div>
                 {/* LINK: sostituire con URL Google Drive del capitolo1_successo3passi_PREVIEW.pdf dopo upload */}
                 <a
-                  href="https://drive.google.com/file/d/SOSTITUISCI_CON_ID_DRIVE/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1_68po3qufRO90yVx1tbFORMRzs3UUip9/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 text-white font-medium px-7 py-4 rounded-xl transition-all duration-200 text-base"
