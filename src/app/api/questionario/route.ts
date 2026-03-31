@@ -47,7 +47,7 @@ Saluta per nome: ${nome}
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'notifiche@fabiomicale.com',
+          from: 'Fabio Micale <notifiche@fabiomicale.com>',
           to: 'info@fabiomicale.com',
           reply_to: email,
           subject: `🎯 Nuovo questionario da ${nome}`,
@@ -63,7 +63,7 @@ Saluta per nome: ${nome}
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          from: 'fabio@fabiomicale.com',
+          from: 'Fabio Micale <fabio@fabiomicale.com>',
           to: email,
           subject: `${nome}, ho ricevuto il tuo questionario ✅`,
           text: `Ciao ${nome},

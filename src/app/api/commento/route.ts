@@ -53,7 +53,7 @@ Inviato da fabiomicale.com
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'notifiche@fabiomicale.com',
+        from: 'Fabio Micale <notifiche@fabiomicale.com>',
         to: 'info@fabiomicale.com',
         reply_to: email,
         subject: `Nuovo commento da ${nome} — ${articolo}`,

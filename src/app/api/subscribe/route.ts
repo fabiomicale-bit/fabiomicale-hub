@@ -107,7 +107,7 @@ Fabio Micale | fabiomicale.com
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "fabio@fabiomicale.com",
+          from: "Fabio Micale <fabio@fabiomicale.com>",
           to: email,
           subject: "Ecco il tuo omaggio gratuito ✅",
           text: emailText,
@@ -123,7 +123,7 @@ Fabio Micale | fabiomicale.com
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            from: "notifiche@fabiomicale.com",
+            from: "Fabio Micale <notifiche@fabiomicale.com>",
             to: "info@fabiomicale.com",
             reply_to: email,
             subject: `📄 Download Capitolo 1 — ${nome ?? email}`,
