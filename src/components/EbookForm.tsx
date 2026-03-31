@@ -9,11 +9,14 @@ const EBOOK_URL =
 
 export default function EbookForm() {
   const [email, setEmail] = useState("");
+  const [privacy, setPrivacy] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
+
+  const canSubmit = email.includes("@") && privacy;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !email.includes("@")) return;
+    if (!canSubmit) return;
 
     setStatus("loading");
 
@@ -21,7 +24,7 @@ export default function EbookForm() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, utm_source: "risorse_ebook" }),
       });
 
       const data = await res.json();
@@ -62,15 +65,39 @@ export default function EbookForm() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="La tua email"
+          placeholder="La tua email *"
           required
           disabled={status === "loading"}
           className="w-full border border-[#E5E5E5] focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20 text-[#111111] placeholder-[#AAAAAA] px-4 py-3 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
         />
+
+        {/* Checkbox privacy */}
+        <label className="flex items-start gap-2.5 cursor-pointer">
+          <input
+            type="checkbox"
+            checked={privacy}
+            onChange={(e) => setPrivacy(e.target.checked)}
+            disabled={status === "loading"}
+            className="mt-0.5 w-4 h-4 accent-[#2E7D32] shrink-0 disabled:opacity-60"
+          />
+          <span className="text-xs text-[#555555] leading-relaxed">
+            Accetto la{" "}
+            <a
+              href="/contatti"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-[#2E7D32] transition-colors"
+            >
+              Privacy Policy
+            </a>{" "}
+            e il trattamento dei miei dati. Nessuno spam, cancellazione in un click.
+          </span>
+        </label>
+
         <button
           type="submit"
-          disabled={status === "loading"}
-          className="w-full bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-6 py-3 rounded-xl transition-all text-sm disabled:opacity-60 disabled:cursor-not-allowed"
+          disabled={!canSubmit || status === "loading"}
+          className="w-full bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-6 py-3 rounded-xl transition-all text-sm disabled:opacity-40 disabled:cursor-not-allowed"
         >
           {status === "loading" ? "Invio in corso..." : "Scarica gratis →"}
         </button>
