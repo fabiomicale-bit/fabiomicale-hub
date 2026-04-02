@@ -22,6 +22,42 @@ const nextConfig: NextConfig = {
         destination: "https://www.fabiomicale.com/:path*",
         permanent: true,
       },
+      // Redirect vecchie URL indicizzate da Google → homepage
+      {
+        source: '/quando-un-progetto-e-operativo-ma-non-e-sotto-controllo',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/quando-un-progetto-e-operativo-ma-non-e-sotto-controllo/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/yulin.html',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/home/',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/sessioni-di-coaching',
+        destination: '/lavora-con-me',
+        permanent: true,
+      },
+      {
+        source: '/sessioni-di-coaching/',
+        destination: '/lavora-con-me',
+        permanent: true,
+      },
     ];
   },
 };
