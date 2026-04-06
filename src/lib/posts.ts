@@ -402,13 +402,13 @@ A presto,
 <h2>🎁 Risorse Gratuite per Iniziare</h2>
 
 <p><strong>1. Ebook: "I 3 Passi per Iniziare con l'AI"</strong>
-Una guida pratica di 20 pagine per muovere i primi passi senza perdere tempo. <a href="/hub/3-passi-ai">Scaricala gratis qui</a></p>
+Una guida pratica di 20 pagine per muovere i primi passi senza perdere tempo. <a href="/risorse">Scaricala gratis qui</a></p>
 
 <p><strong>2. Newsletter Settimanale</strong>
-Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso reale. <a href="/newsletter">Iscriviti gratis</a></p>
+Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso reale. <a href="/contatti">Iscriviti gratis</a></p>
 
 <p><strong>3. Call Esplorativa Gratuita</strong>
-Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota una call di 30 minuti. <a href="/consulenza">Prenota ora</a></p>
+Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota una call di 30 minuti. <a href="/lavora-con-me">Prenota ora</a></p>
 
 <hr>
 
