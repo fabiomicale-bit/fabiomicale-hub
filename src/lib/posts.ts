@@ -153,7 +153,7 @@ export const posts: Post[] = [
     dataISO: "2026-04-06",
     tempoLettura: "8 min",
     excerpt: "Sei un professionista over 40 e pensi che l'AI sia roba da giovani smanettoni? Ecco 10 compiti ripetitivi che puoi delegare oggi stesso. Senza diventare esperto di prompt.",
-    correlati: ["3-ore-settimana-ai", "claude-ai-guida-pratica", "sistemi-che-lavorano-per-te"],
+    correlati: ["claude-ai-come-usarlo-al-lavoro", "recuperare-tempo-delegare-ai-sistema", "sistemi-che-lavorano-per-te"],
     contentHtml: `
 <p>Sei un professionista over 40 e pensi che l'AI sia roba da giovani smanettoni?</p>
 
@@ -415,9 +415,9 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <h2>Articoli Correlati</h2>
 
 <ul>
-<li><a href="/claude-ai-guida-pratica">Claude AI: come usarlo davvero al lavoro (guida per non tecnici)</a></li>
-<li><a href="/3-ore-settimana-ai">Come ho recuperato 3 ore a settimana delegando all'AI</a></li>
-<li><a href="/sistemi-che-lavorano-per-te">Costruisci sistemi che lavorano per te, non il contrario</a></li>
+<li><a href="/blog/claude-ai-come-usarlo-al-lavoro">Claude AI: come usarlo davvero al lavoro (guida per non tecnici)</a></li>
+<li><a href="/blog/recuperare-tempo-delegare-ai-sistema">Come ho recuperato 3 ore a settimana delegando all'AI</a></li>
+<li><a href="/blog/sistemi-che-lavorano-per-te">Costruisci sistemi che lavorano per te, non il contrario</a></li>
 </ul>
 
 <hr>
