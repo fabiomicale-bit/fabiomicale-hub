@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogContent from "./BlogContent";
@@ -20,6 +21,18 @@ export default function BlogPage() {
 
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-16 px-6 overflow-hidden bg-[#111111]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero_blog_press.jpg"
+            alt="Redazione e carta stampata"
+            fill
+            className="object-cover object-center opacity-50 mix-blend-luminosity scale-[1.10]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/60 to-[#111111]"></div>
+        </div>
+
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-[#A5D6A7]" />
