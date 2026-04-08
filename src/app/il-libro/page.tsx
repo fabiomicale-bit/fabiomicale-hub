@@ -115,6 +115,18 @@ export default function IlLibroPage() {
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero_libro.jpg"
+            alt="Libro su scrivania"
+            fill
+            className="object-cover object-center opacity-30 mix-blend-overlay"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/60 to-[#111111]"></div>
+        </div>
+
         <div className="relative z-10 max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Testo */}
