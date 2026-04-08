@@ -72,9 +72,26 @@ const opzioni = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Consulenza AI e Formazione per Professionisti Over 40",
+  provider: {
+    "@type": "Person",
+    "@id": "https://www.fabiomicale.com/#person",
+    name: "Fabio Micale"
+  },
+  url: "https://www.fabiomicale.com/lavora-con-me",
+  description: "Sessioni private 1:1, percorsi di automazioni e consulenza su misura per usare l'AI nella tua carriera."
+};
+
 export default function LavoraConMePage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}

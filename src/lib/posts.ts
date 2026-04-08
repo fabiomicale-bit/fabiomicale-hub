@@ -14,6 +14,7 @@ export type Post = {
   correlati: string[];
   manifesto?: boolean;
   featured?: boolean;
+  ogImage?: string;
 };
 
 export const posts: Post[] = [
