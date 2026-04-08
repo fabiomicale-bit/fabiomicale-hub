@@ -15,6 +15,7 @@ export type Post = {
   manifesto?: boolean;
   featured?: boolean;
   ogImage?: string;
+  coverAlt?: string;
 };
 
 export const posts: Post[] = [
@@ -34,6 +35,8 @@ export const posts: Post[] = [
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
     tempoLettura: "7 min",
+    ogImage: "/blog/cover_tempo_ai.png",
+    coverAlt: "Orologio digitale etereo su scrivania vuota che rappresenta il recupero del tempo",
     excerpt:
       "C'è una differenza fondamentale tra essere occupati e lavorare bene. L'AI non ti rende automaticamente più produttivo — ma un sistema costruito bene, sì.",
     correlati: ["manifesto-sistemi-autonomi", "sistemi-che-lavorano-per-te"],
@@ -153,6 +156,8 @@ export const posts: Post[] = [
     data: "6 aprile 2026",
     dataISO: "2026-04-06",
     tempoLettura: "8 min",
+    ogImage: "/blog/cover_task_delegati.png",
+    coverAlt: "Intelligenza artificiale incandescente che analizza ed organizza task geometrici",
     excerpt: "Sei un professionista over 40 e pensi che l'AI sia roba da giovani smanettoni? Ecco 10 compiti ripetitivi che puoi delegare oggi stesso. Senza diventare esperto di prompt.",
     correlati: ["claude-ai-come-usarlo-al-lavoro", "recuperare-tempo-delegare-ai-sistema", "sistemi-che-lavorano-per-te"],
     contentHtml: `
@@ -442,6 +447,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "31 marzo 2026",
     dataISO: "2026-03-31",
     tempoLettura: "7 min",
+    ogImage: "/blog/cover_paura_obsolescenza.png",
+    coverAlt: "Siluetta professionale fiduciosa che attraversa una luminosa soglia geometrica futuristica",
     excerpt:
       "Non una lista di consigli motivazionali. Non una promessa che andrà tutto bene. La paura di diventare obsoleto è reale — e ha qualcosa importante da dirti.",
     correlati: ["manifesto-reinvenzione-over40", "reinventarsi-dopo-i-40-metodo"],
@@ -556,6 +563,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "24 marzo 2026",
     dataISO: "2026-03-24",
     tempoLettura: "8 min",
+    ogImage: "/blog/cover_esperienza_vantaggio.png",
+    coverAlt: "Fusione visiva astratta tra rete neurale umana e precisi algoritmi digitali in toni blu profondi",
     excerpt:
       "Tutti parlano di AI come se premiasse solo i giovani e penalizzasse chi ha esperienza. È esattamente il contrario — ma solo se sai come usarla.",
     correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
@@ -660,6 +669,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "15 marzo 2026",
     dataISO: "2026-03-15",
     tempoLettura: "7 min",
+    ogImage: "/blog/cover_manifesto_esperienza.png",
+    coverAlt: "Imponente pezzo degli scacchi del Re illuminato da circuiti digitali su sfondo in ossidiana",
     excerpt:
       "Tutti parlano di AI come se premiasse solo i giovani e penalizzasse chi ha esperienza. È esattamente il contrario. Ecco perché — e come usarlo a tuo vantaggio.",
     manifesto: true,
@@ -739,6 +750,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "14 marzo 2026",
     dataISO: "2026-03-14",
     tempoLettura: "8 min",
+    ogImage: "/blog/cover_manifesto_reinvenzione.png",
+    coverAlt: "Bussola moderna incontaminata poggiata su flussi di dati stratti con illuminazione dorata calda",
     excerpt:
       "Non una lista di consigli motivazionali. Non una promessa di trasformazione rapida. Una guida reale, basata sull'esperienza diretta, su come reinventarsi professionalmente dopo i 40 anni.",
     manifesto: true,
@@ -830,6 +843,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "13 marzo 2026",
     dataISO: "2026-03-13",
     tempoLettura: "7 min",
+    ogImage: "/blog/cover_task_delegati.png",
+    coverAlt: "Sistema di ingranaggi perfetti che gira in autonomia, che rappresenta l'efficienza aziendale",
     excerpt:
       "C'è una differenza fondamentale tra lavorare bene e costruire qualcosa che funziona anche quando non ci sei. Nell'era dell'AI, questa differenza vale tutto.",
     manifesto: true,
@@ -918,6 +933,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "10 marzo 2026",
     dataISO: "2026-03-10",
     tempoLettura: "5 min",
+    ogImage: "/blog/cover_esperienza_vantaggio.png",
+    coverAlt: "Una strada luminosa in ascesa che simboleggia l'opportunità professionale ed il superamento degli ostacoli",
     excerpt:
       "C'è un racconto dominante sull'intelligenza artificiale che mi stanca: quello secondo cui l'AI sostituirà i lavoratori esperti. È un racconto sbagliato — e te lo dico da persona che lo usa ogni giorno.",
     contentHtml: `
@@ -977,6 +994,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "5 marzo 2026",
     dataISO: "2026-03-05",
     tempoLettura: "4 min",
+    ogImage: "/blog/cover_manifesto_reinvenzione.png",
+    coverAlt: "Piano di progetto o disegno architettonico luminoso di una bussola, a simbolo del metodo di reinvenzione",
     excerpt:
       "Reinventarsi professionalmente dopo i 40 viene raccontato come un salto nel vuoto. La realtà che ho vissuto — e che vedo nelle persone che affianco — è molto diversa.",
     contentHtml: `
@@ -1036,6 +1055,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "28 febbraio 2026",
     dataISO: "2026-02-28",
     tempoLettura: "4 min",
+    ogImage: "/blog/cover_manifesto_esperienza.png",
+    coverAlt: "Insieme di nodi lavorativi luminosi e digitali altamente connessi per lavorare in sinergia per te",
     excerpt:
       "C'è una differenza fondamentale tra essere occupati e essere produttivi. Essere produttivi significa che le tue attività generano valore reale — anche quando non sei presente. Il segreto? I sistemi.",
     contentHtml: `
@@ -1093,6 +1114,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
     tempoLettura: "7 min",
+    ogImage: "/blog/cover_tempo_ai.png",
+    coverAlt: "Simbolo stilizzato neutro del chatbot Claude che organizza i dati per la guida pratica",
     excerpt:
       "Non sai da dove iniziare con Claude AI? Ecco come lo uso ogni giorno per risparmiare ore di lavoro. Guida pratica per professionisti over 40, senza bisogno di essere tecnici.",
     correlati: ["recuperare-tempo-delegare-ai-sistema", "paura-obsolescenza-professionale-ai"],
@@ -1171,6 +1194,43 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p>Pensa all'ultima email difficile che hai rimandato. Quella che hai in testa da ieri, da tre giorni, forse da una settimana. Aprila. Vai su claude.ai. Scrivi: "Sono [il tuo ruolo]. Ho questa situazione: [descrivi]. Aiutami a scrivere una risposta [tono desiderato], massimo [X] parole."</p>
 
 <p>Poi <a href="/contatti">dimmi com'è andata</a>.</p>
+    `,
+  },
+  {
+    slug: "non-serve-essere-nativi-digitali",
+    seoTitle: "Non serve essere Nativi Digitali. Serve essere Decision Makers.",
+    seoDescription: "Sfatare il mito giovanilistico dell'Intelligenza Artificiale. Perché i professionisti over 40 hanno un vantaggio competitivo grazie all'esperienza.",
+    keywords: "mindset, nativi digitali, decision makers, over 40, esperienza, intelligenza artificiale, vantaggio competitivo",
+    titolo: "Non serve essere 'Nativi Digitali'. Serve essere Decision Makers.",
+    categoria: "Mindset",
+    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
+    data: "8 aprile 2026",
+    dataISO: "2026-04-08",
+    tempoLettura: "5 min",
+    ogImage: "/blog/cover_esperienza_vantaggio.png",
+    coverAlt: "Immagine metaforica sull'esperienza e le decisioni strategiche nel mondo digitale",
+    excerpt: "Sfatare il mito giovanilistico dell'AI. Un'azienda non viene salvata da chi digita veloce su una tastiera, ma da chi ha 20 anni di esperienza per sapere DOVE mettere le mani.",
+    contentHtml: `
+<p>C'è un equivoco enorme che sta bloccando migliaia di professionisti formidabili: credere che l'Intelligenza Artificiale sia uno strumento esclusivo per i "nativi digitali".</p>
+<p>La narrazione è tossica. Sembra che se non hai vent'anni, se non sai programmare in Python o se non passi tre ore al giorno sui social, tu sia tagliato fuori da questa rivoluzione.</p>
+<p>Lascia che ti dica la verità: <strong>è l'esatto contrario.</strong></p>
+
+<h3>Il paradosso del nativo digitale</h3>
+<p>Un ragazzo appena uscito dall'università sa usare gli strumenti tecnologici a una velocità fulminea. Conosce i "prompt", conosce i forum, naviga le interfacce a occhi chiusi.</p>
+<p>Ma c'è un problema. Quando l'AI gli chiede cosa deve produrre, il ragazzo si ferma. Perché gli <strong>manca la profondità aziendale</strong>.</p>
+<p>Non sa come rispondere in modo diplomatico a un cliente infuriato per un ritardo di consegna. Non sa quali leve negoziali toccare in un preventivo per non svendersi. Non ha l'intuito per fiutare un contratto pericoloso prima ancora di firmarlo.</p>
+
+<h3>L'AI è un amplificatore, non un sostituto</h3>
+<p>L'Intelligenza Artificiale fornisce la tecnica rapida, ma richiede un <em>pensatore</em> per funzionare davvero.</p>
+<p>Se metti un motore potentissimo su un'utilitaria senza freni, finirai fuori strada. Se dai l'AI a chi non ha esperienza, genererà enormi quantità di "fuffa" velocissima e ben formattata, ma vuota di significato e pericolosa per la reputazione del business.</p>
+<p>Tu, al contrario, hai decenni di errori, successi, riunioni, notti insonni e calcoli di budget. Tu sai esattamente cosa dev'essere fatto e quale tono usare. Il tuo unico problema era che <em>farlo</em> ti costava ore di lavoro manuale in report e bozze.</p>
+
+<h3>Da Esecutore a Decision Maker</h3>
+<p>Se sei un professionista affermato, l'unica cosa che devi imparare dell'AI <strong>non è l'aspetto tecnico, ma l'aspetto manageriale della delega.</strong></p>
+<p>Smetti di chiederti "Come funziona questo algoritmo?". Inizia a chiederti: <em>"Cosa posso far fare a questo software per sbloccare la mia mente per farle fare vero lavoro dirigenziale?"</em></p>
+<p>Non serve essere nativi digitali. L'AI non rimpiazza il giudizio strategico, lo esegue. Metti a frutto i decenni della tua esperienza e usa questi nuovi alleati digitali per fare ciò in cui sei insostituibile: <strong>prendere decisioni e gestire esseri umani.</strong></p>
+
+<p>Inizia a costruire il tuo ecosistema: <a href="/il-libro">Scarica ora il Capitolo 1 del mio libro</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
     `,
   },
 ];

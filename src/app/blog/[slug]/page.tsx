@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
@@ -118,6 +119,19 @@ export default async function BlogPostPage({ params }: Props) {
             <span>·</span>
             <span>{post.tempoLettura} di lettura</span>
           </div>
+
+          {/* Immagine in evidenza */}
+          {post.ogImage && (
+            <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden shadow-2xl border border-white/10 mt-10">
+              <Image 
+                src={post.ogImage} 
+                alt={post.coverAlt || post.titolo} 
+                fill 
+                className="object-cover" 
+                priority 
+              />
+            </div>
+          )}
         </div>
       </section>
 
