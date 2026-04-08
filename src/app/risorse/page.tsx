@@ -17,8 +17,20 @@ export default function RisorsePage() {
       <Navbar />
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="bg-[#111111] pt-32 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-[#111111]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero_risorse.jpg"
+            alt="Risorse digitali su scrivania"
+            fill
+            className="object-cover object-center opacity-30 mix-blend-overlay"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/60 to-[#111111]"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           {/* Badge */}
           <span className="inline-block bg-[#2E7D32] text-white text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-8">
             Risorse Gratuite
