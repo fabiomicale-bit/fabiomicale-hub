@@ -19,8 +19,8 @@ export default function ChiSonoPreview() {
               {/* Photo */}
               <div className="absolute inset-12 rounded-full border border-[#E5E5E5] overflow-hidden shadow-lg">
                 <Image
-                  src="/fabio-chisono.jpg"
-                  alt="Fabio Micale, coach e imprenditore"
+                  src="/fabio-speech.jpg"
+                  alt="Fabio Micale on stage"
                   fill
                   className="object-cover"
                 />
