@@ -106,7 +106,7 @@ export default function LavoraConMePage() {
             className="object-cover object-center opacity-40 mix-blend-overlay"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/70 to-white"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/60 to-[#111111]"></div>
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
