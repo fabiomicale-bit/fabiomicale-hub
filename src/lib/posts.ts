@@ -1232,6 +1232,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Inizia a costruire il tuo ecosistema: <a href="/il-libro">Scarica ora il Capitolo 1 del mio libro</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
     `,
+    correlati: ["ai-esperienza-professionale-vantaggio", "paura-obsolescenza-professionale-ai"],
   },
 ];
 
