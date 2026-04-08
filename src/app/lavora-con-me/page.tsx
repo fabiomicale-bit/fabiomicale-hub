@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqAccordion from "./FaqAccordion";
@@ -96,6 +97,18 @@ export default function LavoraConMePage() {
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
       <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero_lavora_con_me.jpg"
+            alt="Ufficio direzionale moderno"
+            fill
+            className="object-cover object-center opacity-40 mix-blend-overlay"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/70 to-white"></div>
+        </div>
+
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
             <span className="w-1.5 h-1.5 rounded-full " />

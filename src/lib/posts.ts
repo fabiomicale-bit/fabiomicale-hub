@@ -1114,8 +1114,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
     tempoLettura: "7 min",
-    ogImage: "/blog/cover_tempo_ai.png",
-    coverAlt: "Simbolo stilizzato neutro del chatbot Claude che organizza i dati per la guida pratica",
+    ogImage: "/blog/cover_claude_ai.jpg",
+    coverAlt: "Dettaglio di uno schermo con intelligenza artificiale astratta",
     excerpt:
       "Non sai da dove iniziare con Claude AI? Ecco come lo uso ogni giorno per risparmiare ore di lavoro. Guida pratica per professionisti over 40, senza bisogno di essere tecnici.",
     correlati: ["recuperare-tempo-delegare-ai-sistema", "paura-obsolescenza-professionale-ai"],
