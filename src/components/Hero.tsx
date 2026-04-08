@@ -3,6 +3,18 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-[#111111]">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero_home.jpg"
+          alt="Sfondo architettonico"
+          fill
+          className="object-cover object-center opacity-30 mix-blend-overlay"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/50 via-[#111111]/80 to-[#111111]"></div>
+      </div>
+
       {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.04]"
@@ -85,20 +97,20 @@ export default function Hero() {
 
           {/* RIGHT — foto */}
           <div className="animate-fade-in-up delay-200 relative flex justify-center lg:justify-end">
-            {/* Cornice decorativa */}
+            {/* Rendering senza cornice finta per PNG trasparente */}
             <div className="relative w-full max-w-sm lg:max-w-none">
-              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40">
+              <div className="relative rounded-3xl overflow-hidden">
                 <Image
-                  src="/fabio-hero.jpg"
+                  src="/fabio-hero-transparent.png"
                   alt="Fabio Micale, coach over 40 nell'era AI"
                   width={600}
                   height={600}
                   priority
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover -scale-x-100"
                   style={{ maxHeight: "600px", objectPosition: "top" }}
                 />
-                {/* Overlay gradiente in basso */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#111111]/60 to-transparent" />
+                {/* Overlay gradiente in basso per sfumare il busto nel buio */}
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#111111]/90 to-transparent" />
               </div>
 
               {/* Badge flottante */}
