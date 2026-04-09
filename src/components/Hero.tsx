@@ -79,7 +79,7 @@ export default function Hero() {
             {/* Social proof */}
             <div className="animate-fade-in-up delay-400 mt-12 flex flex-wrap gap-6 text-[#AAAAAA] text-sm">
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">15+</span>
+                <span className="text-2xl font-bold text-white">25+</span>
                 <span>anni di esperienza</span>
               </div>
               <div className="w-px h-8 bg-white/20 hidden sm:block" />

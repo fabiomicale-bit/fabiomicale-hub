@@ -33,7 +33,7 @@ export default function ChiSonoPreview() {
               </div>
               <div className="absolute bottom-12 left-0 bg-white border border-[#E5E5E5] rounded-xl px-4 py-3 shadow-md">
                 <div className="text-xs text-[#555555]">Anni di esperienza</div>
-                <div className="text-xl font-bold text-[#111111]">10+</div>
+                <div className="text-xl font-bold text-[#111111]">25+</div>
               </div>
             </div>
           </div>
