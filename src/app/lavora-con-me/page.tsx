@@ -1,273 +1,148 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FaqAccordion from "./FaqAccordion";
 
-export const metadata = {
-  title: "Lavora con Me | Consulenza AI per Professionisti Over 40",
+export const metadata: Metadata = {
+  title: "Lavora con Me | Architetture di Crescita — Fabio Micale",
   description:
-    "Consulenza AI personalizzata, sessioni 1:1 e masterclass per professionisti over 40. Scopri come posso aiutarti a usare l'AI nel tuo lavoro.",
+    "Sistemi operativi per imprenditori e professionisti over 40. Consulenza strategica, automazione AI e protocolli manageriali di alto livello.",
   alternates: { canonical: "https://www.fabiomicale.com/lavora-con-me" },
-};
-
-const opzioni = [
-  {
-    emoji: "✉️",
-    badge: "Inizia qui — Gratis",
-    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#E5E5E5]",
-    titolo: "Newsletter settimanale",
-    testo:
-      "Ogni settimana strategie concrete, strumenti AI selezionati e riflessioni dirette. Solo per professionisti over 40 che vogliono fare sul serio.",
-    cta: "Iscriviti gratis",
-    href: "/#newsletter",
-    nota: null,
-    highlight: false,
-  },
-  {
-    emoji: "📘",
-    badge: "Il punto di partenza",
-    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#E5E5E5]",
-    titolo: "Successo in 3 Passi",
-    testo:
-      "La guida pratica per capire come l'AI sta ridisegnando il lavoro e come posizionarti in anticipo. Una lettura che cambia prospettiva.",
-    cta: "Scopri il libro",
-    href: "/il-libro",
-    nota: null,
-    highlight: false,
-  },
-  {
-    emoji: "🎓",
-    badge: "Formazione intensiva",
-    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#E5E5E5]",
-    titolo: "Corsi e Masterclass",
-    testo:
-      "Percorsi strutturati per imparare a usare l'AI nel tuo contesto professionale. Dal mindset agli strumenti, passo dopo passo. Gruppi piccoli, massimo 4 persone.",
-    cta: null,
-    href: null,
-    nota: "Vuoi saperne di più? Scrivici a info@fabiomicale.com",
-    highlight: false,
-  },
-  {
-    emoji: "🤝",
-    badge: "Supporto personalizzato",
-    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#2E7D32]/30",
-    titolo: "Consulenza 1:1",
-    testo:
-      "Sessioni private per chi vuole un percorso su misura. Analisi della situazione, obiettivi chiari, piano d'azione concreto. Risultati misurabili.",
-    cta: "Prenota una chiamata",
-    href: "/contatti",
-    nota: "Posti limitati — disponibilità su richiesta",
-    highlight: true,
-  },
-  {
-    emoji: "⚡",
-    badge: "Per il tuo business",
-    badgeColor: "bg-[#E8F5E9] text-[#2E7D32] border-[#E5E5E5]",
-    titolo: "Servizi AI e Automazioni",
-    testo:
-      "Implementazione di strumenti e workflow AI nella tua attività. Automazioni, agenti, processi ottimizzati. Per professionisti e piccole imprese che vogliono risultati misurabili.",
-    cta: null,
-    href: null,
-    nota: "Disponibilità limitata — scrivici a info@fabiomicale.com per richiedere info",
-    highlight: false,
-  },
-];
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Consulenza AI e Formazione per Professionisti Over 40",
-  provider: {
-    "@type": "Person",
-    "@id": "https://www.fabiomicale.com/#person",
-    name: "Fabio Micale"
-  },
-  url: "https://www.fabiomicale.com/lavora-con-me",
-  description: "Sessioni private 1:1, percorsi di automazioni e consulenza su misura per usare l'AI nella tua carriera."
 };
 
 export default function LavoraConMePage() {
   return (
-    <main className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+    <main className="min-h-screen bg-[#0D0D0D] text-white">
       <Navbar />
 
-      {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero_lavora_con_me.jpg"
-            alt="Ufficio direzionale moderno"
-            fill
-            className="object-cover object-center opacity-40 mix-blend-overlay"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/60 to-[#111111]"></div>
-        </div>
+      {/* ── HERO EDITORIALE ─────────────────────────────────────── */}
+      <section className="relative pt-44 pb-32 px-6 overflow-hidden">
+        
+        {/* Atmosphere */}
+        <div className="absolute top-0 left-[-5%] w-[60%] h-[60%] bg-[#F5A623] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-grid opacity-[0.02]" />
 
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full " />
-            Percorsi su misura
-          </div>
-          <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-6">
-            Lavora con me: percorsi pratici per usare l&apos;AI nella tua carriera
+        <div className="relative z-10 max-w-5xl mx-auto text-center animate-fade-in-up">
+          <div className="badge mb-8 mx-auto">Partnership & Sistemi</div>
+          <h1 className="text-5xl md:text-8xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
+            Architetture di <br /> <span className="italic text-[#F5A623]">Evoluzione.</span>
           </h1>
-          <p className="text-xl text-[#AAAAAA] leading-relaxed">
-            Non esiste un percorso uguale per tutti.{" "}
-            <span className="gradient-text font-semibold">Esiste il tuo.</span>
+          <p className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto font-light">
+            Non offro consulenza generica. Ingegnerizzo sistemi che liberano tempo, generano ricchezza liquida e posizionano la tua attività nell&apos;elite del mercato.
           </p>
         </div>
       </section>
 
-      {/* ── 2. INTRO ─────────────────────────────────────────────── */}
-      <section className="pb-16 pt-16 px-6 bg-white">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="space-y-4 text-[#555555] leading-relaxed text-[1.05rem]">
-            <p>
-              Ho costruito questa offerta su un principio semplice:
-              ogni persona ha un punto di partenza diverso,
-              un obiettivo diverso e risorse diverse.
-            </p>
-            <p>
-              Per questo non vendo pacchetti preconfezionati.
-              Ti propongo percorsi che si adattano
-              a <span className="text-[#111111] font-medium">dove sei e dove vuoi arrivare.</span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 3. LE OPZIONI ────────────────────────────────────────── */}
-      <section className="py-16 px-6 bg-[#F7F7F7]">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#2E7D32]" />
-              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Le opzioni</span>
-              <div className="w-8 h-px bg-[#2E7D32]" />
+      {/* ── I SISTEMI CORE ────────────────────────────────────────── */}
+      <section className="py-20 px-6">
+        <div className="max-w-6xl mx-auto space-y-32">
+          
+          {/* Sistema 1: MEPA */}
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div className="order-2 md:order-1">
+              <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#F5A623] mb-6">Verticale Pubblica Amministrazione</div>
+              <h2 className="text-4xl md:text-5xl font-light text-white mb-8 font-serif italic">MEPA Elite™</h2>
+              <p className="text-white/40 text-lg leading-relaxed mb-10 font-light">
+                Il protocollo per dominare il mercato degli appalti pubblici senza la burocrazia che uccide i margini. Per aziende che fatturano oltre 1M€.
+              </p>
+              <Link href="/mepa-elite" className="text-xs font-bold uppercase tracking-[0.3em] text-white border-b border-white/20 pb-2 hover:border-[#F5A623] transition-all">
+                ESPLORA IL PROTOCOLLO →
+              </Link>
+            </div>
+            <div className="order-1 md:order-2 card-premium aspect-square flex items-center justify-center bg-white/[0.01]">
+              <div className="text-8xl font-serif italic opacity-10">M</div>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {opzioni.map((o) => (
-              <div
-                key={o.titolo}
-                className={`card-glow group flex flex-col rounded-2xl p-7 border transition-all duration-300 shadow-sm hover:shadow-md ${
-                  o.highlight
-                    ? "bg-white border-[#2E7D32]/30 ring-1 ring-[#2E7D32]/20 hover:border-[#2E7D32]/50"
-                    : "bg-white border-[#E5E5E5] hover:border-[#2E7D32]/30"
-                }`}
-              >
-                {/* emoji + badge */}
-                <div className="flex items-start justify-between mb-5">
-                  <span className="text-3xl">{o.emoji}</span>
-                  <span className={`text-xs font-medium px-3 py-1 rounded-full border ${o.badgeColor}`}>
-                    {o.badge}
-                  </span>
-                </div>
-
-                {/* testo */}
-                <h3 className="text-[#111111] font-semibold text-lg mb-3 leading-snug">
-                  {o.titolo}
-                </h3>
-                <p className="text-[#555555] leading-relaxed text-[0.9rem] flex-1">
-                  {o.testo}
-                </p>
-
-                {/* nota */}
-                {o.nota && (
-                  <p className="mt-4 text-xs text-[#555555] italic">{o.nota}</p>
-                )}
-
-                {/* cta */}
-                {o.href && (
-                  <a
-                    href={o.href}
-                    className={`mt-6 inline-flex items-center gap-2 text-sm font-medium transition-colors duration-200 group/cta ${
-                      o.highlight
-                        ? "text-[#2E7D32] hover:text-[#1B5E20]"
-                        : "text-[#555555] hover:text-[#2E7D32]"
-                    }`}
-                  >
-                    {o.cta}
-                    <svg
-                      className="w-4 h-4 group-hover/cta:translate-x-1 transition-transform"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </a>
-                )}
-              </div>
-            ))}
+          {/* Sistema 2: Impresa Liquida */}
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div className="card-premium aspect-square flex items-center justify-center bg-white/[0.01]">
+              <div className="text-8xl font-serif italic opacity-10">L</div>
+            </div>
+            <div>
+              <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#2E7D32] mb-6">Efficienza & Delega</div>
+              <h2 className="text-4xl md:text-5xl font-light text-white mb-8 font-serif italic">Impresa Liquida™</h2>
+              <p className="text-white/40 text-lg leading-relaxed mb-10 font-light">
+                Trasformiamo la tua azienda da un cantiere di problemi a un asset scalabile che funziona senza la tua presenza costante.
+              </p>
+              <Link href="/impresa-liquida" className="text-xs font-bold uppercase tracking-[0.3em] text-white border-b border-white/20 pb-2 hover:border-[#2E7D32] transition-all">
+                SCOPRI IL METODO →
+              </Link>
+            </div>
           </div>
+
+          {/* Sistema 3: Punto Zero */}
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div>
+              <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-6">Reset Strategico</div>
+              <h2 className="text-4xl md:text-5xl font-light text-white mb-8 font-serif italic">Punto Zero™</h2>
+              <p className="text-white/40 text-lg leading-relaxed mb-10 font-light">
+                La diagnosi cruda e il reset necessario per chi vuole ricominciare a costruire con lucidità chirurgica.
+              </p>
+              <Link href="/punto-zero" className="text-xs font-bold uppercase tracking-[0.3em] text-white border-b border-white/20 pb-2 hover:border-white/40 transition-all">
+                AVVIA IL RESET →
+              </Link>
+            </div>
+            <div className="card-premium aspect-square flex items-center justify-center bg-white/[0.01]">
+              <div className="text-8xl font-serif italic opacity-10">0</div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* ── 4. TESTIMONIANZE ─────────────────────────────────────── */}
-      <section className="py-16 px-6 bg-[#F7F7F7]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-serif text-center text-[#111111] mb-12">
-            Chi ha già lavorato con me
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+      {/* ── TESTIMONIANZE PREMIUM ────────────────────────────────── */}
+      <section className="py-40 px-6 bg-[#111111] border-y border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-large opacity-[0.02]" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <h2 className="text-3xl font-serif italic text-center text-white mb-20">Voci dall&apos;Evoluzione Alternative</h2>
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { nome: "Laura", ruolo: "Commercialista, 51 anni", testo: "Non pensavo fosse per me. Pensavo servisse essere giovani o smanettoni. Mi sbagliavo." },
-              { nome: "Marco", ruolo: "Imprenditore edile, 47 anni", testo: "Mi aspettavo una cosa complicata. Era più semplice di imparare a usare WhatsApp." },
-              { nome: "Roberto", ruolo: "Ingegnere progettista, 44 anni", testo: "Ho recuperato competenze che pensavo di non poter mai avere. Ci ho messo tre settimane, non tre anni." },
-            ].map((c) => (
-              <div key={c.nome} className="bg-white rounded-xl p-6 border border-[#E5E5E5]">
-                <p className="text-[#555555] italic text-sm leading-relaxed mb-4">&ldquo;{c.testo}&rdquo;</p>
-                <p className="font-bold text-[#111111] text-sm">{c.nome}</p>
-                <p className="text-[#555555] text-xs">{c.ruolo}</p>
+              { nome: "Laura B.", ruolo: "Commercialista", testo: "Il Metodo ha azzerato l'ansia da prestazione digitale. Oggi gestisco l'AI, non la subisco." },
+              { nome: "Marco V.", ruolo: "Imprenditore", testo: "Impresa Liquida ha ridato vita al mio tempo libero. L'azienda fattura, io respiro." },
+              { nome: "Roberto M.", ruolo: "Ingegnere", testo: "Posizionamento chirurgico. In 3 mesi ho raddoppiato l'autorità nel mio settore." },
+            ].map((c, i) => (
+              <div key={i} className="card-premium p-10 bg-white/[0.02]">
+                <div className="text-[#F5A623] mb-6">★★★★★</div>
+                <p className="text-white/40 italic text-base leading-relaxed mb-8 font-serif">&ldquo;{c.testo}&rdquo;</p>
+                <div>
+                  <p className="font-bold text-white text-sm uppercase tracking-widest">{c.nome}</p>
+                  <p className="text-white/20 text-[10px] font-bold uppercase tracking-[0.2em]">{c.ruolo}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 5. FAQ ───────────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#2E7D32]" />
-              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">FAQ</span>
-              <div className="w-8 h-px bg-[#2E7D32]" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111]">
-              Hai dubbi?
-            </h2>
+      {/* ── FAQ ─────────────────────────────────────────────────── */}
+      <section className="py-40 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-20 font-serif">
+            <div className="badge mb-6 mx-auto uppercase">Domande Frequenti</div>
+            <h2 className="text-4xl text-white">Chiarimenti Operativi</h2>
           </div>
           <FaqAccordion />
         </div>
       </section>
 
-      {/* ── 5. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#111111]">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-            Non sai da dove iniziare?
+      {/* ── CTA FINALE ────────────────────────────────────────── */}
+      <section className="py-40 px-6 bg-[#F5A623]/[0.02] border-t border-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-light text-white mb-12 font-serif">
+            Costruisci il tuo <br /> <span className="italic text-[#F5A623]">Capolavoro Operativo.</span>
           </h2>
-          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
-            Scrivimi. In 15 minuti capiamo insieme qual è il percorso più adatto a te.
+          <p className="text-white/40 text-xl leading-relaxed mb-16 max-w-2xl mx-auto font-light">
+            Se senti che è il momento di smettere di rincorrere le emergenze e iniziare a guidare un sistema, la conversazione inizia qui.
           </p>
-          <a
-            href="mailto:info@fabiomicale.com"
-            className="inline-flex items-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-10 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+          <Link
+            href="/contatti?ref=lavora-con-me-final"
+            className="btn-gold px-12 py-6 text-sm tracking-[0.3em] font-bold"
           >
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            Scrivimi su info@fabiomicale.com
-          </a>
+            RICHIEDI LA TUA CANDIDATURA
+          </Link>
         </div>
       </section>
 

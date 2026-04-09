@@ -5,17 +5,18 @@ import Footer from "@/components/Footer";
 import CapitoloForm from "@/components/CapitoloForm";
 
 export const metadata = {
-  title: "Successo in 3 Passi | Il Libro di Fabio Micale (2026)",
+  title: "Il Libro | Successo in 3 Passi — Fabio Micale (Edizione 2026)",
   description:
-    "Il metodo semplice per riprendere il controllo della tua vita professionale. Edizione 2026 completamente riscritta. Disponibile su Amazon.",
+    "Il protocollo digitale per riprendere il controllo del tuo business. 27 esercizi, 5 casi studio reali. L'edizione definitiva 2026.",
   alternates: { canonical: "https://www.fabiomicale.com/il-libro" },
 };
 
 const cards = [
   {
-    titolo: "Il Metodo",
+    titolo: "Il Protocollo",
     testo:
-      "3 Passi strutturati che si ripetono ogni volta che la vita porta disordine",
+      "3 Passi strutturati che si ripetono in ogni ciclo di evoluzione aziendale.",
+    accent: "gold",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
@@ -23,9 +24,10 @@ const cards = [
     ),
   },
   {
-    titolo: "Le Storie",
+    titolo: "Dossier Reali",
     testo:
-      "5 casi studio reali con dialoghi veri e risultati concreti",
+      "5 casi studio spietati con dialoghi originali e strategie di risoluzione applicate.",
+    accent: "green",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
@@ -33,9 +35,10 @@ const cards = [
     ),
   },
   {
-    titolo: "Gli Esercizi",
+    titolo: "Operatività",
     testo:
-      "27 esercizi guidati con istruzioni dettagliate",
+      "27 esercizi guidati per smontare e rimontare la tua identità professionale.",
+    accent: "gold",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -46,28 +49,27 @@ const cards = [
 
 const passi = [
   {
-    numero: "01",
-    titolo: "Ferma il caos",
-    citazione: "Prima di correre nella direzione giusta, devi smettere di correre in quella sbagliata.",
+    numero: "I",
+    titolo: "Ferma il Caos",
+    citazione: "Prima di correre nella direzione giusta, devi accettare di aver corso in quella sbagliata.",
   },
   {
-    numero: "02",
-    titolo: "Rimetti struttura",
-    citazione: "L'identità viene prima della direzione. La direzione viene prima del piano.",
+    numero: "II",
+    titolo: "Rimetti Struttura",
+    citazione: "L'identità precede la direzione. Senza asset, sei solo un passeggero della tua vita.",
   },
   {
-    numero: "03",
-    titolo: "Mantieni il controllo",
-    citazione: "Non è la motivazione che cambia le cose. È il sistema.",
+    numero: "III",
+    titolo: "Dominio Sistemico",
+    citazione: "La libertà non è l'assenza di regole, ma la presenza di un sistema che le gestisce per te.",
   },
 ];
 
 const perChiItems = [
-  "Hai più di 40 anni e senti che il mercato sta cambiando troppo velocemente",
-  "Fai tanto ma non costruisci nulla di solido",
-  "Hai paura di scegliere una direzione e perdere le altre",
-  "Sai che dovresti cambiare qualcosa ma non sai da dove iniziare",
-  "Vuoi capire come usare l'AI senza perdere quello che hai già costruito",
+  "Imprenditori che si sentono prigionieri della propria azienda",
+  "Professionisti che non riescono a tradurre l'esperienza in asset scalabili",
+  "Menti strategiche che vogliono integrare l'AI senza perdere l'anima",
+  "Chiunque senta che il proprio tempo ha un valore che il mercato non sta ancora pagando",
 ];
 
 const jsonLd = {
@@ -77,36 +79,20 @@ const jsonLd = {
   url: "https://www.fabiomicale.com/il-libro",
   image: "https://www.fabiomicale.com/copertina-libro.png",
   description:
-    "Un metodo semplice per riprendere il controllo della tua vita. 27 esercizi pratici, 5 casi studio reali, nessuna frase motivazionale.",
+    "Un metodo ingegneristico per riprendere il controllo della tua vita imprenditoriale. 27 esercizi pratici, 5 casi studio reali.",
   inLanguage: "it-IT",
-  genre: "Self-help",
+  genre: "Business & Self-Evolution",
   author: {
     "@type": "Person",
     "@id": "https://www.fabiomicale.com/#person",
     name: "Fabio Micale",
     url: "https://www.fabiomicale.com/chi-sono",
   },
-  publisher: {
-    "@type": "Person",
-    name: "Fabio Micale",
-  },
-  workExample: {
-    "@type": "Book",
-    bookFormat: "https://schema.org/EBook",
-    potentialAction: {
-      "@type": "ReadAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate:
-          "https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=drive_link",
-      },
-    },
-  },
 };
 
 export default function IlLibroPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#0D0D0D] text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -114,249 +100,214 @@ export default function IlLibroPage() {
       <Navbar />
 
       {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero_libro.jpg"
-            alt="Libro su scrivania"
-            fill
-            className="object-cover object-center opacity-30 mix-blend-overlay"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/60 to-[#111111]"></div>
-        </div>
+      <section className="relative pt-44 pb-32 px-6 overflow-hidden">
+        
+        {/* Background Ambience */}
+        <div className="absolute top-0 right-0 w-full h-full bg-[#F5A623] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-full h-full bg-[#2E7D32] opacity-[0.01] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-grid opacity-[0.02]" />
 
-        <div className="relative z-10 max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Testo */}
-            <div>
-              <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-                <span className="w-1.5 h-1.5 rounded-full " />
-                Edizione 2026 — Completamente riscritta
-              </div>
-              <h1 className="text-5xl sm:text-6xl font-bold text-white leading-tight mb-4">
-                Successo in 3 Passi:{" "}
-                <span className="gradient-text">il libro per chi vuole ricominciare senza perdere tutto</span>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            {/* Copy */}
+            <div className="animate-fade-in-up">
+              <div className="badge mb-8">Manifesto dell&apos;Evoluzione</div>
+              <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
+                Successo in 3 Passi: <br />
+                <span className="italic text-[#F5A623]">l&apos;asset digitale.</span>
               </h1>
-              <p className="text-xl text-[#AAAAAA] leading-relaxed mb-8">
-                Un metodo semplice per riprendere il controllo della tua vita
+              <p className="text-xl text-white/40 leading-relaxed mb-12 max-w-lg font-light">
+                Il protocollo ingegneristico per riprendere il controllo della tua vita professionale. Niente motivazione, solo sistemi.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 flex-wrap">
-                <a
-                  href="https://www.amazon.it/Successo-3-Passi-I-Fondamentali/dp/153755087X"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-7 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
-                >
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                  </svg>
-                  Acquista edizione 2017
-                </a>
-                <div className="flex flex-col items-center gap-1">
-                  <span className="inline-flex items-center justify-center gap-2 bg-white/10 border border-white/20 text-white/50 font-semibold px-7 py-4 rounded-xl text-base cursor-default select-none">
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    Nuova edizione 2026 — Prossimamente
-                  </span>
-                  <span className="text-xs text-[#AAAAAA]/60 tracking-wide">In uscita maggio 2026</span>
+              
+              <div className="flex flex-col sm:flex-row gap-6">
+                <div className="flex flex-col gap-4">
+                  <a
+                    href="https://www.amazon.it/Successo-3-Passi-I-Fondamentali/dp/153755087X"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-gold px-10 py-5 text-xs tracking-widest font-bold flex justify-center"
+                  >
+                    ACQUISTA EDIZIONE 2017 (AMAZON)
+                  </a>
+                  <p className="text-[10px] text-white/30 uppercase tracking-widest text-center">Disponibile Ora — Architettura Originale</p>
                 </div>
+                
+                <div className="flex flex-col gap-4">
+                  <Link
+                    href="/recensioni#pre-ordine"
+                    className="bg-[#2E7D32] hover:bg-[#1B5E20] text-white px-10 py-5 text-xs tracking-widest font-bold flex flex-col items-center rounded-lg transition-all shadow-[0_0_20px_rgba(46,125,50,0.3)]"
+                  >
+                    <span>EDIZIONE 2026 DIGITAL — OMAGGIO</span>
+                    <span className="text-[9px] opacity-60 mt-1 font-light italic">Riservato ai partecipanti al Review Program</span>
+                  </Link>
+                  <p className="text-[10px] text-[#2E7D32] uppercase tracking-[0.2em] font-bold text-center animate-pulse">Community Reward Program</p>
+                </div>
+              </div>
+              
+              <div className="mt-12">
                 <CapitoloForm />
               </div>
             </div>
 
-            {/* Copertina */}
-            <div className="flex justify-center md:justify-end">
-              <div className="relative shadow-2xl shadow-black/40 rounded-2xl overflow-hidden">
-                <Image
-                  src="/copertina-libro.png"
-                  alt="Copertina del libro Successo in 3 Passi di Fabio Micale"
-                  width={280}
-                  height={400}
-                  className="rounded-2xl"
-                  priority
-                />
+            {/* Visual: Book Cover Premium */}
+            <div className="flex justify-center md:justify-end animate-fade-in-up delay-200">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-[#F5A623]/20 blur-[60px] opacity-0 group-hover:opacity-40 transition-opacity duration-700" />
+                <div className="relative z-10 shadow-[0_50px_100px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden border border-white/5 bg-[#0D0D0D]">
+                  <Image
+                    src="/copertina-libro.png"
+                    alt="Copertina del libro Successo in 3 Passi"
+                    width={350}
+                    height={500}
+                    className="group-hover:scale-105 transition-transform duration-1000"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 2. DI COSA PARLA ─────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="max-w-2xl mb-14">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#2E7D32]" />
-              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il libro</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-6 leading-tight">
-              Un libro{" "}
-              <span className="gradient-text">diverso dagli altri</span>
-            </h2>
-            <p className="text-[#555555] leading-relaxed text-[1.05rem]">
-              Non troverai frasi motivazionali. Non troverai promesse di trasformazioni rapide.
-              Troverai un metodo reale, costruito su esperienza vera, con{" "}
-              <span className="text-[#111111] font-medium">27 esercizi pratici</span>{" "}
-              che richiedono carta, penna e onestà. Il punto di partenza ideale per chi affronta
-              una{" "}
-              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors">
-                reinvenzione professionale over 40
-              </Link>{" "}
-              senza buttare via quello che ha già costruito.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {cards.map((c) => (
-              <div
-                key={c.titolo}
-                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-8 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
-              >
-                <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center text-[#2E7D32] mb-5">
+      {/* ── 2. FOCUS CARD (Glassmorphism) ───────────────────────── */}
+      <section className="py-32 px-6 bg-[#0D0D0D] relative">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            {cards.map((c, i) => (
+              <div key={i} className="card-premium p-10 group h-full">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 border transition-all duration-500 group-hover:scale-110 ${
+                  c.accent === 'gold' ? 'bg-[#F5A623]/5 text-[#F5A623] border-[#F5A623]/20' : 'bg-[#2E7D32]/5 text-[#2E7D32] border-[#2E7D32]/20'
+                }`}>
                   {c.icon}
                 </div>
-                <h3 className="text-sm font-bold tracking-widest uppercase mb-3 text-[#2E7D32]">
-                  {c.titolo}
-                </h3>
-                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{c.testo}</p>
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#F5A623] transition-colors">{c.titolo}</h3>
+                <p className="text-white/30 text-base leading-relaxed font-light">{c.testo}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 3. I TRE PASSI ───────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F7F7F7]">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-px bg-[#2E7D32]" />
-              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il metodo</span>
-              <div className="w-8 h-px bg-[#2E7D32]" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111]">
-              Il metodo in 3 Passi
+      {/* ── 3. I TRE PASSI (Teatre of Values) ────────────────────── */}
+      <section className="py-32 px-6 bg-[#141414] border-y border-white/5 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-24">
+            <div className="badge mb-6">Il Framework Caratterizzante</div>
+            <h2 className="text-4xl md:text-6xl font-light text-white font-serif italic">
+              L&apos;Ingegneria della <br /><span className="not-italic font-bold">Consapevolezza.</span>
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {passi.map((p) => (
-              <div
-                key={p.numero}
-                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-8 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
-              >
-                <span className="text-5xl font-bold gradient-text leading-none block mb-5 select-none">
-                  {p.numero}
-                </span>
-                <h3 className="text-sm font-bold tracking-widest uppercase mb-4 text-[#2E7D32]">
-                  {p.titolo}
-                </h3>
-                <p className="text-[#555555] leading-relaxed text-[0.95rem] italic border-l-2 border-[#E5E5E5] pl-4">
-                  &ldquo;{p.citazione}&rdquo;
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── 4. PER CHI È ─────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Per chi è</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
-            Questo libro è per te se...
-          </h2>
-          <div className="space-y-4">
-            {perChiItems.map((item) => (
-              <div
-                key={item}
-                className="flex items-start gap-4 p-5 bg-white border border-[#E5E5E5] rounded-xl hover:border-[#2E7D32]/30 transition-colors duration-200"
-              >
-                <div className="w-6 h-6 rounded-full bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-3.5 h-3.5 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                  </svg>
+          <div className="relative">
+            {/* Connector Line */}
+            <div className="absolute top-1/2 left-0 w-full h-px bg-white/5 hidden lg:block" />
+            
+            <div className="grid lg:grid-cols-3 gap-12 relative z-10">
+              {passi.map((p, i) => (
+                <div key={i} className="flex flex-col items-center text-center group">
+                  <div className="w-20 h-20 rounded-full bg-[#0D0D0D] border border-white/10 flex items-center justify-center text-2xl font-serif italic text-[#F5A623] mb-10 group-hover:border-[#F5A623]/50 group-hover:scale-110 transition-all duration-500 shadow-xl">
+                    {p.numero}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-6 tracking-tight uppercase">{p.titolo}</h3>
+                  <div className="relative p-8 rounded-2xl bg-white/[0.02] border border-white/5 italic text-white/40 leading-relaxed font-serif text-lg">
+                    &ldquo;{p.citazione}&rdquo;
+                  </div>
                 </div>
-                <p className="text-[#111111] leading-relaxed">{item}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── 5. SPAZIO LETTORI ────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F7F7F7]">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-white border border-[#E5E5E5] rounded-2xl p-10 sm:p-14 text-center shadow-sm">
-            <div className="inline-flex items-center gap-2 bg-[#E8F5E9] border border-[#E5E5E5] text-[#2E7D32] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#2E7D32]" />
-              Area lettori
+      {/* ── 4. AREA LETTORI (Premium Inbound) ────────────────────── */}
+      <section className="py-40 px-6 bg-[#0D0D0D]">
+        <div className="max-w-4xl mx-auto">
+          <div className="card-premium p-12 md:p-20 text-center relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-full h-full bg-[#F5A623] opacity-[0.02] blur-[100px] pointer-events-none" />
+            
+            <div className="relative z-10">
+              <div className="badge mb-8 mx-auto">Area Lettori Esclusiva</div>
+              <h2 className="text-3xl md:text-5xl font-light text-white mb-8 font-serif">
+                Trasforma la lettura <br /><span className="italic text-[#F5A623]">in esecuzione.</span>
+              </h2>
+              <p className="text-white/40 text-lg leading-relaxed mb-12 max-w-xl mx-auto font-light">
+                Il libro è solo l&apos;inizio. Inviando i tuoi esercizi avrai accesso al <span className="text-white">Dossier Professionale Advanced</span> e a feedback diretti.
+              </p>
+              
+              <div className="flex flex-col items-center gap-6">
+                <a
+                  href="mailto:libro.successointrepassi@fabiomicale.com"
+                  className="text-xl md:text-2xl font-mono text-white/60 hover:text-[#F5A623] transition-colors break-all"
+                >
+                  libro.successointrepassi@fabiomicale.com
+                </a>
+                <a
+                  href="mailto:libro.successointrepassi@fabiomicale.com"
+                  className="btn-gold px-12 py-5 text-xs tracking-[0.3em] font-bold"
+                >
+                  SBLOCCA IL DOSSIER
+                </a>
+              </div>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-5">
-              Sei già un lettore?
-            </h2>
-            <p className="text-[#555555] leading-relaxed text-lg mb-8 max-w-xl mx-auto">
-              Inviami i tuoi esercizi. Riceverai il{" "}
-              <span className="text-[#111111] font-medium">Dossier Professionale</span>{" "}
-              con i moduli avanzati per approfondire ogni passaggio del libro. E in alcuni
-              casi, una risposta diretta da me.
-            </p>
-            <a
-              href="mailto:libro.successointrepassi@fabiomicale.com"
-              className="block text-[#2E7D32] hover:text-[#1B5E20] font-mono text-lg font-medium mb-8 transition-colors duration-200 break-all"
-            >
-              libro.successointrepassi@fabiomicale.com
-            </a>
-            <a
-              href="mailto:libro.successointrepassi@fabiomicale.com"
-              className="inline-flex items-center gap-2 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
-            >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Scrivimi ora
-            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. EDIZIONE 2017 (Legacy Archive) ────────────────────── */}
+      <section className="py-32 px-6 bg-[#141414] border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div className="order-2 md:order-1 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+               <div className="relative p-6 bg-white/[0.02] border border-white/10 rounded-2xl rotate-[-2deg]">
+                  <p className="text-[10px] text-[#F5A623] font-bold uppercase tracking-widest mb-4">Legacy Asset</p>
+                  <h4 className="text-xl font-serif text-white mb-2 italic">Successo in 3 Passi (2017)</h4>
+                  <p className="text-white/30 text-xs leading-relaxed">Il seme originale del metodo che ha guidato centinaia di professionisti nell&apos;ultimo decennio.</p>
+               </div>
+            </div>
+            
+            <div className="order-1 md:order-2">
+              <div className="badge mb-6">Archivio Storico</div>
+              <h2 className="text-3xl md:text-5xl font-light text-white mb-8 font-serif">
+                Dove tutto <br /><span className="italic text-[#F5A623]">è iniziato.</span>
+              </h2>
+              <p className="text-white/40 text-lg leading-relaxed mb-10 font-light">
+                L&apos;edizione originale del 2017 di &ldquo;Successo in 3 Passi&rdquo; è ora disponibile come risorsa storica. Un modo per comprendere le radici del metodo prima di affrontare l&apos;edizione definitiva 2026.
+              </p>
+              <a 
+                href="https://www.amazon.it/Successo-3-Passi-I-Fondamentali/dp/153755087X" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#F5A623] font-bold text-xs uppercase tracking-[0.3em] border-b border-[#F5A623]/30 pb-2 hover:border-[#F5A623] transition-all"
+              >
+                ACQUISTA EDIZIONE 2017 SU AMAZON →
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── 6. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#111111]">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-            Pronto a iniziare?
+      <section className="py-24 px-6 border-t border-white/5 bg-[#141414]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-10 font-serif leading-tight">
+            Inizia il tuo ciclo <br /><span className="italic text-[#F5A623]">di evoluzione.</span>
           </h2>
-          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
-            Il metodo è semplice. Metterlo in pratica è la parte interessante.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
               href="https://www.amazon.it/Successo-3-Passi-I-Fondamentali/dp/153755087X"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+              className="btn-gold px-12 py-5 text-xs tracking-widest font-bold"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-              </svg>
-              Acquista su Amazon
+              ACQUISTA EDIZIONE 2017
             </a>
-            <a
+            <Link
               href="/lavora-con-me"
-              className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/30 text-white font-medium px-8 py-4 rounded-xl transition-all duration-200 text-base"
+              className="btn-ghost px-12 py-5 text-xs tracking-widest uppercase font-bold"
             >
-              Scopri come lavorare con me
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
+              COSTRUISCI IL TUO SISTEMA
+            </Link>
           </div>
         </div>
       </section>

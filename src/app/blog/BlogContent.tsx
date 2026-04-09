@@ -34,19 +34,19 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
       : regularPosts.filter((p) => p.categoria === activeCategory);
 
   return (
-    <div className="py-8 px-6 pb-24 bg-white">
-      <div className="max-w-5xl mx-auto">
+    <div className="py-20 px-6 pb-40 bg-[#0D0D0D]">
+      <div className="max-w-6xl mx-auto">
 
-        {/* ── Filtro categorie ──────────────────────────────────── */}
-        <div className="flex flex-wrap gap-2 mb-14 justify-center">
+        {/* ── Filtro categorie Premium ──────────────────────────── */}
+        <div className="flex flex-wrap gap-4 mb-24 justify-center">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`text-sm px-4 py-2 rounded-full border transition-all duration-200 ${
+              className={`text-[10px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-xl border transition-all duration-300 ${
                 activeCategory === cat
-                  ? "bg-[#2E7D32] border-[#2E7D32] text-white"
-                  : "bg-white border-[#D4E4D4] text-[#5A6B5A] hover:border-[#43A047] hover:text-[#2E7D32]"
+                  ? "bg-[#F5A623] border-[#F5A623] text-[#0D0D0D]"
+                  : "bg-white/[0.02] border-white/10 text-white/40 hover:border-[#F5A623]/30 hover:text-white"
               }`}
             >
               {cat}
@@ -54,56 +54,46 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
           ))}
         </div>
 
-        {/* ── Letture Fondamentali ──────────────────────────────── */}
+        {/* ── Letture Fondamentali (Manifesto) ─────────────────── */}
         {filteredManifesto.length > 0 && (
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-px bg-[#F9A825]/60" />
-              <span className="text-[#F9A825]/80 text-xs font-semibold tracking-widest uppercase flex items-center gap-1.5">
+          <div className="mb-32">
+            <div className="flex items-center gap-6 mb-12">
+              <div className="badge border-[#F5A623]/30 text-[#F5A623] flex items-center gap-2">
                 <StarIcon />
-                Letture Fondamentali
-              </span>
-              <div className="flex-1 h-px bg-[#F9A825]/10" />
+                Manifesto dell&apos;Evoluzione
+              </div>
+              <div className="flex-1 h-px bg-gradient-to-r from-[#F5A623]/20 to-transparent" />
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredManifesto.map((post) => (
                 <a
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col bg-[#FFFBF0] border border-[#F9A825]/20 rounded-2xl p-7 hover:border-[#F9A825]/50 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="card-premium p-10 group flex flex-col hover:border-[#F5A623]/30 transition-all duration-500"
                 >
-                  {/* Badge manifesto + categoria */}
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-xs font-semibold px-3 py-1 rounded-full border bg-[#FFF8E1] text-[#F9A825] border-[#F9A825]/30 flex items-center gap-1.5">
-                      <StarIcon />
-                      Manifesto
+                  <div className="flex items-center justify-between mb-8 opacity-60">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#F5A623]">
+                      Priority Reading
                     </span>
-                    <span
-                      className={`text-xs font-medium px-2.5 py-1 rounded-full border ${post.categoriaClasses}`}
-                    >
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">
                       {post.categoria}
                     </span>
                   </div>
 
-                  {/* Titolo */}
-                  <h2 className="text-[#1A1A1A] font-semibold text-lg leading-snug mb-3 group-hover:text-[#5A3E00] transition-colors duration-200 flex-1">
+                  <h2 className="text-2xl font-bold text-white mb-6 group-hover:text-[#F5A623] transition-colors leading-tight font-serif italic">
                     {post.titolo}
                   </h2>
 
-                  {/* Excerpt */}
-                  <p className="text-[#5A6B5A] text-sm leading-relaxed mb-6 line-clamp-3">
+                  <p className="text-white/30 text-base leading-relaxed mb-10 flex-1 line-clamp-3 font-light">
                     {post.excerpt}
                   </p>
 
-                  {/* Meta + CTA */}
-                  <div className="flex items-center justify-between pt-4 border-t border-[#D4E4D4]">
-                    <div className="flex items-center gap-3 text-xs text-[#5A6B5A]/70">
-                      <span>{post.data}</span>
-                      <span>·</span>
-                      <span>{post.tempoLettura}</span>
+                  <div className="flex items-center justify-between pt-8 border-t border-white/5">
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-white/20">
+                      {post.data}
                     </div>
-                    <span className="text-[#F9A825] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
+                    <span className="text-[#F5A623] text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:translate-x-2 transition-transform">
                       Leggi
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -116,51 +106,39 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
           </div>
         )}
 
-        {/* ── Separatore + Ultimi articoli ─────────────────────── */}
+        {/* ── Ultimi Articoli ───────────────────────────────────── */}
         {filteredRegular.length > 0 && (
           <>
-            {filteredManifesto.length > 0 && (
-              <div className="flex items-center gap-4 mb-10">
-                <div className="flex-1 h-px bg-[#D4E4D4]" />
-                <span className="text-[#5A6B5A] text-xs font-semibold tracking-widest uppercase">
-                  Ultimi articoli
-                </span>
-                <div className="flex-1 h-px bg-[#D4E4D4]" />
-              </div>
-            )}
+            <div className="flex items-center gap-6 mb-12">
+              <div className="badge border-white/10 text-white/40">Approfondimenti Strategici</div>
+              <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
+            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredRegular.map((post) => (
                 <a
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="card-glow group flex flex-col bg-white border border-[#D4E4D4] rounded-2xl p-7 hover:border-[#43A047] hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="card-premium p-10 group flex flex-col hover:bg-white/[0.03] transition-all duration-500"
                 >
-                  <span
-                    className={`self-start text-xs font-medium px-3 py-1 rounded-full border mb-5 ${post.categoriaClasses}`}
-                  >
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#2E7D32] mb-8">
                     {post.categoria}
                   </span>
 
-                  <h2 className="text-[#1A1A1A] font-semibold text-lg leading-snug mb-3 group-hover:text-[#2E7D32] transition-colors duration-200 flex-1">
+                  <h2 className="text-xl font-bold text-white mb-4 group-hover:text-[#F5A623] transition-colors leading-tight">
                     {post.titolo}
                   </h2>
 
-                  <p className="text-[#5A6B5A] text-sm leading-relaxed mb-6 line-clamp-3">
+                  <p className="text-white/30 text-sm leading-relaxed mb-8 flex-1 line-clamp-3 font-light">
                     {post.excerpt}
                   </p>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-[#D4E4D4]">
-                    <div className="flex items-center gap-3 text-xs text-[#5A6B5A]/70">
-                      <span>{post.data}</span>
-                      <span>·</span>
-                      <span>{post.tempoLettura}</span>
-                    </div>
-                    <span className="text-[#2E7D32] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
-                      Leggi
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
+                  <div className="flex items-center justify-between pt-8 border-t border-white/5">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/20">
+                      {post.data}
+                    </span>
+                    <span className="text-white/40 text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-[#F5A623] transition-colors">
+                      Esplora
                     </span>
                   </div>
                 </a>
@@ -169,11 +147,11 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
           </>
         )}
 
-        {/* ── Nessun risultato ──────────────────────────────────── */}
+        {/* ── No Results ────────────────────────────────────────── */}
         {filteredManifesto.length === 0 && filteredRegular.length === 0 && (
-          <p className="text-center text-[#5A6B5A] py-12">
-            Nessun articolo in questa categoria.
-          </p>
+          <div className="text-center py-40">
+            <p className="text-white/20 text-lg italic serif">Nessuna analisi strategica disponibile per questa selezione.</p>
+          </div>
         )}
       </div>
     </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import EbookForm from '@/components/EbookForm'
@@ -13,188 +14,110 @@ export const metadata: Metadata = {
 
 export default function RisorsePage() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#0D0D0D] text-white">
       <Navbar />
 
-      {/* ── HERO ─────────────────────────────────────────────────── */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden bg-[#111111]">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/hero_risorse.jpg"
-            alt="Risorse digitali su scrivania"
-            fill
-            className="object-cover object-center opacity-30 mix-blend-overlay"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/90 via-[#111111]/60 to-[#111111]"></div>
-        </div>
+      {/* ── HERO CAVEAU ─────────────────────────────────────────── */}
+      <section className="relative pt-44 pb-32 px-6 overflow-hidden">
+        
+        {/* Deep ambient light */}
+        <div className="absolute top-0 right-[-10%] w-[60%] h-[60%] bg-[#F5A623] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-grid opacity-[0.025]" />
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <span className="inline-block bg-[#2E7D32] text-white text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-8">
-            Risorse Gratuite
-          </span>
-
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
-            Strumenti concreti.
-            <br />
-            Gratis. Per iniziare adesso.
+        <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
+          <div className="badge mb-8 mx-auto">Caveau Digitale: Accesso Riservato</div>
+          <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
+            Asset Strategici & <br /> <span className="italic text-[#F5A623]">Intelligence.</span>
           </h1>
-
-          <p className="text-[#AAAAAA] text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto mb-12">
-            Ho raccolto qui le risorse più utili per professionisti over 40
-            che vogliono capire l&apos;AI senza perdere tempo.
-            Niente teoria. Solo cose che puoi usare da domani.
+          <p className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto font-light">
+            Strumenti ingegnerizzati per l&apos;imprenditore che cerca chiarezza operativa. <br />
+            Nessuna teoria, solo protocolli pronti all&apos;implementazione.
           </p>
-
-          {/* Stats row */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
-            <div className="flex items-center gap-2 text-white/80 text-sm">
-              <span className="text-xl">📦</span>
-              <span>2 risorse disponibili</span>
-            </div>
-            <div className="hidden sm:block w-px h-4 bg-white/20" />
-            <div className="flex items-center gap-2 text-white/80 text-sm">
-              <span className="text-xl">✅</span>
-              <span>100% gratuite</span>
-            </div>
-            <div className="hidden sm:block w-px h-4 bg-white/20" />
-            <div className="flex items-center gap-2 text-white/80 text-sm">
-              <span className="text-xl">🎯</span>
-              <span>Solo per over 40</span>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* ── RISORSE ──────────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-10">
+      {/* ── SEZIONE ASSET ────────────────────────────────────────── */}
+      <section className="py-20 px-6 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
 
-            {/* ── CARD 1: Ebook ─────────────────────────── */}
-            <div className="bg-white border border-[#E5E5E5] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Immagine */}
-              <div className="relative w-full aspect-[5/3] bg-[#1A2E1A]">
-                <Image
-                  src="/cover-ebook-ai.png"
-                  alt="Ebook: I 3 Passi per Iniziare con l'AI"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+            {/* ASSET 1: IL MANIFESTO */}
+            <article className="card-premium p-10 md:p-16 flex flex-col group h-full relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#F5A623]/[0.05] blur-[40px] rounded-full group-hover:bg-[#F5A623]/[0.1] transition-all" />
+              
+              <div className="mb-10">
+                <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#F5A623] mb-4">Protocollo Start</div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif italic">
+                  Il Manifesto del <br />Punto Zero™
+                </h2>
+                <p className="text-white/40 text-lg leading-relaxed font-light mb-8">
+                  La diagnosi fondamentale per azzerare il caos. Capisci come smontare le vecchie convinzioni e ripartire con un sistema operativo certo.
+                </p>
+                <ul className="space-y-4 mb-12">
+                   {["I 3 pilastri della chiarezza", "Diagnosi dello spreco operativo", "Mappa della ripartenza"].map((li, i) => (
+                     <li key={i} className="flex items-center gap-3 text-sm text-white/60">
+                       <div className="w-1.5 h-1.5 rounded-full bg-[#F5A623]" />
+                       {li}
+                     </li>
+                   ))}
+                </ul>
               </div>
 
-              {/* Contenuto */}
-              <div className="p-7">
-                {/* Badge */}
-                <span className="inline-block bg-[#E8F5E9] text-[#2E7D32] text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                  📘 EBOOK GRATUITO
-                </span>
-
-                <h2 className="text-2xl font-bold text-[#111111] mb-3 leading-snug">
-                  I 3 Passi per Iniziare con l&apos;AI
-                </h2>
-
-                <p className="text-[#555555] text-sm leading-relaxed mb-5">
-                  Non sai da dove partire con l&apos;AI? Questo ebook ti dà
-                  un metodo semplice e immediato per iniziare — senza
-                  corsi da 200 ore, senza diventare un tecnico.
-                </p>
-
-                {/* Benefici */}
-                <ul className="space-y-2 mb-6">
-                  {[
-                    "Capisci quale tool AI fa per te in 10 minuti",
-                    "Il metodo dei 3 passi che uso ogni giorno",
-                    "Esempi reali da professionisti over 40",
-                  ].map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-[#555555]">
-                      <span className="text-[#2E7D32] font-bold mt-0.5 shrink-0">✓</span>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Form inline */}
+              <div className="mt-auto pt-10 border-t border-white/5">
                 <EbookForm />
               </div>
-            </div>
+            </article>
 
-            {/* ── CARD 2: Questionario ──────────────────── */}
-            <div className="bg-white border border-[#E5E5E5] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-              {/* Immagine */}
-              <div className="relative w-full aspect-[5/3] bg-[#111111]">
-                <Image
-                  src="/cover-questionario.png"
-                  alt="Analisi Gratuita del Tuo Profilo AI"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-
-              {/* Contenuto */}
-              <div className="p-7">
-                {/* Badge */}
-                <span className="inline-block bg-[#FFF8E7] text-[#B8860B] text-xs font-semibold px-3 py-1 rounded-full mb-4">
-                  🎯 ANALISI GRATUITA
-                </span>
-
-                <h2 className="text-2xl font-bold text-[#111111] mb-3 leading-snug">
-                  Scopri qual è il percorso giusto per te
+            {/* ASSET 2: L'AUDIT STRATEGICO */}
+            <article className="card-premium p-10 md:p-16 flex flex-col group h-full relative overflow-hidden bg-white/[0.02]">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/[0.05] blur-[40px] rounded-full group-hover:bg-white/[0.1] transition-all" />
+              
+              <div className="mb-10">
+                <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/30 mb-4">Analisi Personalizzata</div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 font-serif italic">
+                  Audit Strategico <br />Di Evoluzione
                 </h2>
-
-                <p className="text-[#555555] text-sm leading-relaxed mb-5">
-                  Non tutti partono dallo stesso punto. Compila il questionario
-                  in 5 minuti e riceverai via email un&apos;analisi personalizzata
-                  con le soluzioni più adatte alla tua situazione.
+                <p className="text-white/40 text-lg leading-relaxed font-light mb-8">
+                  Ricevi una diagnosi cruda sulla tua situazione attuale. Compila i dati e ricevi via email l&apos;analisi personalizzata da Fabio Micale.
                 </p>
-
-                {/* Benefici */}
-                <ul className="space-y-2 mb-6">
-                  {[
-                    "Identifichi i tuoi blocchi reali con l'AI",
-                    "Scopri quale strumento fa per te (ebook, corso, consulenza)",
-                    "Ricevi una risposta personale da Fabio entro 48 ore",
-                  ].map((b) => (
-                    <li key={b} className="flex items-start gap-2 text-sm text-[#555555]">
-                      <span className="text-[#2E7D32] font-bold mt-0.5 shrink-0">✓</span>
-                      {b}
-                    </li>
-                  ))}
+                <ul className="space-y-4 mb-12">
+                   {["Profilazione del blocco critico", "Individuazione leve di tempo", "Risposta personale entro 48h"].map((li, i) => (
+                     <li key={i} className="flex items-center gap-3 text-sm text-white/60">
+                       <div className="w-1.5 h-1.5 rounded-full bg-white/40" />
+                       {li}
+                     </li>
+                   ))}
                 </ul>
+              </div>
 
-                {/* Form questionario */}
+              <div className="mt-auto pt-10 border-t border-white/5">
                 <QuestionarioForm />
-
-                <p className="text-xs text-[#555555]/70 mt-3 text-center">
-                  Risponde Fabio personalmente. Nessuna vendita aggressiva.
+                <p className="text-[9px] uppercase tracking-[0.2em] text-white/10 mt-6 text-center font-bold">
+                  Nessuna vendita aggressiva • Solo Analisi Concreta
                 </p>
               </div>
-            </div>
+            </article>
 
           </div>
         </div>
       </section>
 
-      {/* ── CTA FINALE ───────────────────────────────────────────── */}
-      <section className="py-16 px-6 bg-[#F7F7F7] border-t border-[#E5E5E5]">
+      {/* ── CHIUSURA / CONTATTI ──────────────────────────────────── */}
+      <section className="py-40 px-6 border-t border-white/5 bg-[#0D0D0D]">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-[#555555] text-lg mb-3">
-            Hai domande prima di compilare?
+          <p className="text-white/30 text-lg mb-8 font-light italic serif">
+            Hai domande specifiche su questi asset o sulla tua situazione?
           </p>
-          <a
-            href="mailto:info@fabiomicale.com"
-            className="text-[#2E7D32] font-semibold hover:text-[#1B5E20] underline underline-offset-2 transition-colors"
+          <Link
+            href="/contatti"
+            className="text-[#F5A623] text-[11px] font-bold uppercase tracking-[0.4em] hover:tracking-[0.5em] transition-all border-b border-[#F5A623]/20 pb-2"
           >
-            Scrivimi direttamente →
-          </a>
+            PARLA CON FABIO →
+          </Link>
         </div>
       </section>
 
       <Footer />
     </main>
-  )
+  );
 }

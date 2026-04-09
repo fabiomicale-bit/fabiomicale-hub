@@ -1,242 +1,136 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "AI per Professionisti Over 40 | Guida Pratica — Fabio Micale",
+export const metadata: Metadata = {
+  title: "AI per Professionisti Over 40 | Ingegneria Cognitiva — Fabio Micale",
   description:
-    "Come usare l'AI concretamente se hai più di 40 anni e non sei un tecnico. Tool, workflow e metodo per restare competitivo senza perdere tempo.",
+    "Come integrare l'AI nel tuo workflow professionale senza perdere tempo. Strumenti, sistemi e approccio strategico per l'elite over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/ai-per-professionisti" },
 };
 
 export default function AiPerProfessionistiPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#0D0D0D] text-white">
       <Navbar />
 
-      {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full " />
-            Strumenti concreti
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-            AI per professionisti over 40:{" "}
-            <span className="gradient-text">strumenti concreti per chi non vuole restare indietro</span>
+      {/* ── HERO EDITORIALE ─────────────────────────────────────── */}
+      <section className="relative pt-44 pb-32 px-6 overflow-hidden">
+        
+        {/* Atmosphere */}
+        <div className="absolute top-0 left-[-5%] w-[60%] h-[60%] bg-[#F5A623] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-grid opacity-[0.02]" />
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
+          <div className="badge mb-8 mx-auto">Intelligence & Automazione</div>
+          <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
+            AI per <br /> <span className="italic text-[#F5A623]">l&apos;Elite Professionale.</span>
           </h1>
-          <p className="text-xl text-[#AAAAAA] leading-relaxed">
-            Non devi diventare un tecnico. Devi capire quali strumenti usare,{" "}
-            <span className="text-white font-medium">come usarli nel tuo lavoro specifico</span>{" "}
-            e cosa ignorare.
+          <p className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto font-light">
+            L&apos;AI non sostituirà chi ha esperienza. Sostituirà chi non la usa per amplificare il proprio giudizio. <br />
+            Ingegnerizziamo il tuo vantaggio competitivo.
           </p>
         </div>
       </section>
 
-      {/* ── 2. L'AI NON SOSTITUISCE ──────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
+      {/* ── LA VERITÀ CRUDA ──────────────────────────────────────── */}
+      <section className="py-20 px-6 relative">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">La verità</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
-            L&apos;AI non sostituirà chi ha esperienza. Sostituirà chi non la usa.
+          <div className="badge border-white/10 text-white/30 mb-8 uppercase tracking-widest">Il Paradigma</div>
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-10 font-serif leading-tight">
+            Esperienza + AI <br /><span className="italic text-white/40">è lo standard di lusso.</span>
           </h2>
-          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
+          <div className="space-y-8 text-white/40 text-lg leading-relaxed font-light">
             <p>
-              Sento sempre la stessa paura: &quot;L&apos;AI mi toglierà il lavoro.&quot;
-              La realtà è più precisa di così. L&apos;AI sostituirà le attività ripetitive,
-              quelle a basso valore, quelle che un software può fare meglio di una persona.
+              Un junior AI-native non ha la tua capacità di leggere un cliente, gestire una crisi o chiudere una trattativa. Chi ha esperienza possiede la strategia; l&apos;AI fornisce la velocità.
             </p>
             <p>
-              Ma giudicare una situazione complessa, costruire fiducia con un cliente,
-              prendere una decisione in un contesto ambiguo — questa è esperienza umana.
-              E l&apos;AI non la replica. La amplifica, se sai usarla.{" "}
-              <span className="text-[#111111] font-medium">
-                Chi ha 20 anni di esperienza + AI è imbattibile. Chi ha solo AI non ha storia.
-              </span>
+              Insieme, formano un binomio imbattibile. Smetti di competere sul terreno della tecnica e inizia a dominare su quello dell&apos;integrazione sistemica.
             </p>
-            <p>
-              Il vero rischio non è l&apos;AI. È restare fermi mentre il mercato si muove.
-              Se stai pensando a come{" "}
-              <Link href="/reinvenzione-over-40" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
-                reinventarti professionalmente
-              </Link>
-              , l&apos;AI è lo strumento che accelera tutto il resto.
+            <p className="text-white border-l-2 border-[#F5A623] pl-8 py-4 italic font-serif leading-relaxed">
+              &ldquo;L&apos;errore fondamentale è confondere l&apos;alfabetizzazione tecnica con la padronanza strategica. Non devi diventare un ingegnere, devi diventare un architetto di sistemi.&rdquo;
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── 3. I 3 TOOL ──────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F7F7F7]">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">I miei strumenti</span>
+      {/* ── I 3 STRUMENTI DI INTELLIGENCE ────────────────────────── */}
+      <section className="py-32 px-6 bg-[#141414] border-y border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20 font-serif">
+            <h2 className="text-4xl text-white italic">Il Set di Strumenti Riservato</h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
-            I 3 tool AI che uso ogni giorno (e perché li ho scelti)
-          </h2>
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              {
-                nome: "Claude (Anthropic)",
-                uso: "Ragionamento complesso, analisi di documenti, scrittura professionale",
-                perché:
-                  "Superiore per ragionamento lungo e accuratezza. Lo uso per analisi strategiche, per preparare sessioni di coaching, per rielaborare contenuti complessi. Non per velocità — per qualità.",
-              },
-              {
-                nome: "ChatGPT (OpenAI)",
-                uso: "Brainstorming rapido, prime bozze, ideazione",
-                perché:
-                  "Ottimo per esplorare idee in velocità. Lo uso nella fase di ricerca e generazione, quando ho bisogno di volume più che di precisione. Non come oracolo — come collaboratore da revisionare.",
-              },
-              {
-                nome: "Perplexity",
-                uso: "Ricerca con fonti, aggiornamenti di settore, fact-checking",
-                perché:
-                  "Un motore di ricerca che ragiona. Indispensabile per tenersi aggiornati senza perdere ore. Ogni mattina: 10 minuti su Perplexity per sapere cosa si muove nel mio settore.",
-              },
-            ].map((tool) => (
-              <div
-                key={tool.nome}
-                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-7 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
-              >
-                <h3 className="font-bold text-lg mb-1 text-[#2E7D32]">{tool.nome}</h3>
-                <p className="text-[#555555] text-xs mb-4 uppercase tracking-wider font-medium">{tool.uso}</p>
-                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{tool.perché}</p>
+              { n: "Claude (Anthropic)", u: "RAGIONAMENTO COMPLESSO", d: "Indispensabile per analisi strategiche e rielaborazione di documenti lunghi. Qualità sopra la velocità." },
+              { n: "ChatGPT (OpenAI)", u: "BRAINSTORMING & IDEAZIONE", d: "Collaboratore per la fase creativa e la generazione di bozze rapide da revisionare con occhio esperto." },
+              { n: "Perplexity", u: "RICERCA CON FONTI", d: "Un motore di ricerca che ragiona e certifica le fonti. Fondamentale per il fact-checking professionale." }
+            ].map((tool, i) => (
+              <div key={i} className="card-premium p-10 h-full group border-t-2 border-t-[#F5A623]/20">
+                <h3 className="text-2xl font-serif italic text-white mb-2">{tool.n}</h3>
+                <div className="text-[10px] font-bold text-[#F5A623] mb-8 tracking-widest uppercase">{tool.u}</div>
+                <p className="text-white/30 text-base leading-relaxed font-light italic">&ldquo;{tool.d}&rdquo;</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 4. COME INTEGRARE ────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Come iniziare</span>
+      {/* ── COSA EVITARE ─────────────────────────────────────────── */}
+      <section className="py-40 px-6">
+        <div className="grid lg:grid-cols-2 gap-20 max-w-6xl mx-auto items-center">
+          <div>
+             <div className="badge mb-8 uppercase tracking-widest">Risk Management</div>
+             <h2 className="text-4xl md:text-5xl font-light text-white mb-10 font-serif">Cosa <span className="italic text-white/40">non fare.</span></h2>
+             <div className="space-y-6">
+                {[
+                  "Disperdere energia provando 10 tool diversi al mese senza padroneggiarne nessuno.",
+                  "Usare l'output dell'AI senza la tua supervisione professionale (l'AI allucina).",
+                  "Pensare che l'AI risolva processi aziendali rotti (li automatizza solo rotti).",
+                  "Aspettare che gli strumenti siano 'perfetti' prima di iniziare l'adozione."
+                ].map((err, i) => (
+                  <div key={i} className="flex gap-4 group">
+                     <span className="text-[#F5A623] font-serif italic text-xl opacity-20 group-hover:opacity-100 transition-all">/0{i+1}</span>
+                     <p className="text-white/40 text-lg font-light leading-relaxed">{err}</p>
+                  </div>
+                ))}
+             </div>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
-            Come integrare l&apos;AI nel tuo lavoro in 1 ora a settimana
-          </h2>
-          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
-            <p>
-              Non serve rivoluzionare il tuo modo di lavorare dal giorno uno.
-              Serve identificare un&apos;attività ripetitiva che fai ogni settimana
-              e provarla con un tool AI per 30 giorni.
-            </p>
-            <p>
-              <span className="text-[#111111] font-medium">Esempi pratici:</span>{" "}
-              sintesi di riunioni, bozze di email a clienti, preparazione di presentazioni,
-              ricerca su un cliente prima di una call, revisione di contratti.
-              Una sola attività. Un solo tool. 30 giorni.
-            </p>
-            <p>
-              Dopo 30 giorni hai un dato reale su quanto tempo hai recuperato.
-              Poi passi all&apos;attività successiva. In 6 mesi hai un sistema.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 5. COSA NON FARE ─────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F7F7F7]">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Gli errori da evitare</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
-            Cosa NON fare: gli errori più comuni di chi inizia con l&apos;AI
-          </h2>
-          <div className="space-y-4">
-            {[
-              "Provare 10 tool diversi nel primo mese e non padroneggiarne nessuno. La dispersione è il killer numero uno dell'adozione.",
-              "Usare l'output dell'AI senza revisionarlo. L'AI sbaglia, alucina, semplifica eccessivamente. Il tuo giudizio professionale è irrinunciabile.",
-              "Pensare che l'AI sia una soluzione a problemi di processo. Se un processo è rotto, l'AI lo automatizza rotto. Prima sistema il processo, poi automatizza.",
-              "Aspettare che gli strumenti siano \"perfetti\". Non lo saranno mai. Quelli che aspettano si troveranno sempre in ritardo.",
-            ].map((errore, i) => (
-              <div
-                key={i}
-                className="flex items-start gap-4 p-5 bg-white border border-[#E5E5E5] rounded-xl hover:border-red-200 transition-colors duration-200 shadow-sm"
-              >
-                <div className="w-6 h-6 rounded-full bg-red-50 border border-red-200 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-3.5 h-3.5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </div>
-                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{errore}</p>
-              </div>
-            ))}
+          <div className="card-premium p-16 bg-white/[0.01] flex flex-col items-center justify-center text-center">
+             <div className="w-20 h-20 rounded-full border border-white/10 flex items-center justify-center text-[#F5A623] mb-8 animate-pulse text-2xl font-serif">!</div>
+             <h3 className="text-xl text-white font-serif mb-4 italic">Un’ora a settimana.</h3>
+             <p className="text-white/30 text-sm font-light leading-relaxed">
+               Identifica un&apos;unica attività ripetitiva. <br />
+               Testala con un solo tool per 30 giorni. <br />
+               Misura il tempo recuperato. <br />
+               Ripeti.
+             </p>
           </div>
         </div>
       </section>
 
-      {/* ── 6. IL PROSSIMO PASSO ─────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Dove arrivare</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
-            Il prossimo passo: dal tool al sistema
+      {/* ── CTA FINALE ────────────────────────────────────────── */}
+      <section className="py-40 px-6 bg-[#141414] border-t border-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-light text-white mb-12 font-serif">
+            Passa dal tool <br /> <span className="italic text-[#F5A623]">al sistema.</span>
           </h2>
-          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
-            <p>
-              Usare un tool AI è il primo livello. Il livello successivo è costruire
-              un sistema: più strumenti che lavorano insieme, workflow che si attivano
-              automaticamente, output che alimentano altri processi.
-            </p>
-            <p>
-              A quel punto non stai più usando l&apos;AI — stai lavorando con un team digitale
-              che lavora anche quando tu sei offline. Questo è il vantaggio competitivo reale.
-            </p>
-            <p>
-              Per arrivare lì serve un metodo. Leggi{" "}
-              <Link href="/il-metodo" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
-                come struttura il percorso
-              </Link>{" "}
-              o, se preferisci partire con una base di contenuti aggiornata, iscriviti alla newsletter
-              settimanale direttamente dalla{" "}
-              <Link href="/#newsletter" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
-                homepage
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#111111]">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-            Pronto a usare l&apos;AI sul serio?
-          </h2>
-          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
-            Non serve un corso di 40 ore. Serve il metodo giusto applicato al tuo lavoro specifico.{" "}
-            <span className="text-white">Parliamone.</span>
+          <p className="text-white/40 text-xl leading-relaxed mb-16 max-w-2xl mx-auto font-light">
+            Usare l&apos;AI è il primo passo. Ingegnerizzare un team digitale che lavora per te è l&apos;obiettivo reale. Inizia dal Manifesto della Chiarezza.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="/il-metodo"
-              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+              href="/risorse"
+              className="btn-gold px-12 py-6 text-sm tracking-[0.3em] font-bold"
             >
-              Scopri il metodo
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              SCARICA IL MANIFESTO
             </Link>
             <Link
-              href="/#newsletter"
-              className="inline-flex items-center justify-center gap-2 text-white border border-white/20 hover:border-white/40 font-medium px-8 py-4 rounded-xl transition-all duration-200"
+              href="/lavora-con-me"
+              className="px-12 py-6 text-xs tracking-[0.3em] font-bold border border-white/10 hover:border-white/30 transition-all rounded-xl uppercase flex items-center justify-center"
             >
-              Iscriviti alla newsletter
+              PERCORSI DI AUTOMAZIONE
             </Link>
           </div>
         </div>

@@ -1,72 +1,70 @@
 const points = [
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
-    text: "Senti che il mercato sta cambiando troppo velocemente e hai paura di restare indietro",
+    title: "Vittima del proprio successo",
+    text: "Fatturi, ma non hai più tempo per vivere. Il business ha smesso di essere uno strumento per diventare la tua prigione.",
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
     ),
-    text: "Hai esperienza e competenze ma non sai come valorizzarle nel nuovo mondo del lavoro",
+    title: "Soffitto di Fatturato",
+    text: "Hai raggiunto un limite che non riesci a superare. Senti che manca un sistema scalabile per passare al livello successivo.",
   },
   {
     icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-        />
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0012 18.75c-1.03 0-1.9-.4-2.59-1.177L8.863 17z" />
       </svg>
     ),
-    text: "Cerchi una guida concreta — non teorie, non promesse vuote — per reinventarti con l'AI",
+    title: "Caos Strategico",
+    text: "Manca chiarezza. Corri tutto il giorno a spegnere incendi invece di guidare la visione della tua azienda verso il 2030.",
   },
 ];
 
 export default function PerChiE() {
   return (
-    <section className="py-24 px-6 bg-white">
-      <div className="max-w-5xl mx-auto">
-        {/* Section label */}
-        <div className="flex items-center gap-3 mb-4">
-          <div className="w-8 h-px bg-[#2E7D32]" />
-          <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Per chi è</span>
+    <section className="relative py-32 px-6 bg-[#141414]">
+      
+      {/* Background Ambience */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#F5A623] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        
+        {/* Section Header */}
+        <div className="flex flex-col items-center text-center mb-20">
+          <div className="badge mb-6">Profilo Ideale</div>
+          <h2 className="text-4xl md:text-5xl font-light text-white leading-tight font-serif">
+            Costruito per l&apos;imprenditore <br />
+            <span className="italic text-[#F5A623]">che vuole evolvere.</span>
+          </h2>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-16 leading-tight">
-          Questo spazio è per te se<span className="text-[#2E7D32]">...</span>
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {points.map((point, i) => (
             <div
               key={i}
-              className="card-glow group relative bg-white hover:bg-[#F7F7F7] border border-[#E5E5E5] hover:border-[#2E7D32]/30 rounded-2xl p-8 transition-all duration-300 shadow-sm"
+              className="card-premium group p-10 flex flex-col items-start transition-all duration-500 hover:bg-white/[0.04]"
             >
-              {/* Number */}
-              <div className="absolute top-6 right-6 text-5xl font-bold text-[#2E7D32]/[0.06] select-none">
-                {String(i + 1).padStart(2, "0")}
+              {/* Vertical ID */}
+              <div className="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em] mb-10 border-l border-[#F5A623]/30 pl-4">
+                Symptom 0{i + 1}
               </div>
 
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center text-[#2E7D32] mb-6 group-hover:bg-[#2E7D32]/10 transition-colors">
+              {/* Icon with subtle glow */}
+              <div className="w-16 h-16 rounded-2xl bg-[#F5A623]/5 flex items-center justify-center text-[#F5A623] mb-8 group-hover:scale-110 group-hover:bg-[#F5A623]/10 transition-all duration-500">
                 {point.icon}
               </div>
 
               {/* Text */}
-              <p className="text-[#111111] leading-relaxed text-[1.05rem]">{point.text}</p>
+              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#F5A623] transition-colors">{point.title}</h3>
+              <p className="text-white/40 leading-relaxed text-base">{point.text}</p>
             </div>
           ))}
         </div>

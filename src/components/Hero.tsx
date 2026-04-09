@@ -1,133 +1,116 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-[#111111]">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero_home.jpg"
-          alt="Sfondo architettonico"
-          fill
-          className="object-cover object-center opacity-30 mix-blend-overlay"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#111111]/50 via-[#111111]/80 to-[#111111]"></div>
+    <section className="relative min-h-[95vh] flex items-center overflow-hidden pt-32 pb-20 bg-[#0D0D0D]">
+      
+      {/* Background Ambience */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#2E7D32] opacity-[0.07] blur-[120px] rounded-full" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#F5A623] opacity-[0.05] blur-[120px] rounded-full" />
+        <div className="absolute inset-0 bg-grid opacity-[0.03]" />
       </div>
 
-      {/* Grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      />
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-16">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* LEFT — testo */}
-          <div>
-            {/* Badge */}
-            <div className="animate-fade-in-up inline-flex items-center gap-2 bg-[#E8F5E9] text-[#2E7D32] text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-wider uppercase">
-              Coach Over 40 nell&apos;Era AI
+          {/* LEFT: Copywriting Inbound */}
+          <div className="max-w-2xl">
+            {/* Badge Status */}
+            <div className="animate-fade-in-up inline-flex items-center gap-3 border border-[rgba(245,166,35,0.3)] bg-[rgba(245,166,35,0.05)] text-[#F5A623] text-[10px] font-bold px-4 py-2 rounded-full mb-10 tracking-[0.2em] uppercase">
+              <span className="w-2 h-2 bg-[#F5A623] rounded-full animate-pulse" />
+              Il Metodologo della Crescita
             </div>
 
-            {/* Headline */}
-            <h1 className="animate-fade-in-up delay-100 text-4xl sm:text-5xl lg:text-5xl xl:text-6xl leading-tight tracking-tight text-white mb-6">
-              Non ti vendo sogni.{" "}
-              <span className="text-[#F5A623]">Ti do strumenti</span>{" "}
-              per usare l&apos;AI dopo i 40.
+            {/* Headline: La Promessa */}
+            <h1 className="animate-fade-in-up delay-100 text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight text-white mb-8 font-serif">
+              Smetti di lavorare <br />
+              <span className="italic text-[#F5A623]">per</span> l&apos;azienda. <br />
+              <span className="font-sans font-bold">Falla lavorare per te.</span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="animate-fade-in-up delay-200 text-lg text-[#AAAAAA] leading-relaxed mb-10">
-              Sono <span className="text-white font-medium">Fabio Micale</span>. Coach, imprenditore, autore.
-              Ti aiuto a costruire una nuova fase professionale con il{" "}
-              <span className="text-white">mindset giusto</span> e gli{" "}
-              <span className="text-white">strumenti concreti</span> dell&apos;era AI.
+            {/* Subtitle: Il Metodo */}
+            <p className="animate-fade-in-up delay-200 text-lg md:text-xl text-[rgba(255,255,255,0.5)] leading-relaxed mb-12 max-w-xl">
+              Non sono un coach. Sono un **Advisor in Organizzazione** con 25+ anni di esperienza in cantieri e appalti pubblici. Attraverso sistemi operativi scalabili, sblocco il fatturato PA e ingegnerizzo la tua libertà operativa.
             </p>
 
-            {/* CTA */}
-            <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 items-start">
-              <a
-                href="#newsletter"
-                className="group inline-flex items-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+            {/* Inbound CTA Group */}
+            <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-6 items-start">
+              <Link
+                href="/soluzioni"
+                className="group relative inline-flex items-center gap-4 bg-[#F5A623] hover:bg-[#D4891A] text-[#0D0D0D] font-bold px-10 py-5 rounded-xl transition-all duration-300 shadow-2xl shadow-[#F5A623]/20 hover:-translate-y-1"
               >
-                Iscriviti alla newsletter gratuita
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
+                Scopri le Soluzioni
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a
-                href="#chi-sono"
-                className="inline-flex items-center gap-2 text-white border border-white/30 hover:border-white/60 font-medium px-6 py-4 rounded-xl transition-all duration-200 text-base"
+              </Link>
+              <Link
+                href="/chi-sono"
+                className="inline-flex items-center gap-2 text-white/50 hover:text-white border-b border-white/10 hover:border-[#F5A623] py-4 transition-all duration-300 text-sm font-semibold tracking-wider uppercase"
               >
-                Scopri chi sono
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </a>
+                La mia storia
+              </Link>
             </div>
 
-            {/* Social proof */}
-            <div className="animate-fade-in-up delay-400 mt-12 flex flex-wrap gap-6 text-[#AAAAAA] text-sm">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">25+</span>
-                <span>anni di esperienza</span>
+            {/* Social Proof: Numeri di Autorità */}
+            <div className="animate-fade-in-up delay-400 mt-16 flex flex-wrap gap-12 border-t border-white/5 pt-10">
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-white mb-1">25+</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/30 font-bold">Anni di Esperienza</span>
               </div>
-              <div className="w-px h-8 bg-white/20 hidden sm:block" />
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">120+</span>
-                <span>professionisti aiutati</span>
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-white mb-1">13Mil+</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/30 font-bold">Budget Gestito (€)</span>
               </div>
-              <div className="w-px h-8 bg-white/20 hidden sm:block" />
-              <div className="flex items-center gap-2">
-                <span className="text-2xl font-bold text-white">1</span>
-                <span>libro pubblicato</span>
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-white mb-1">150+</span>
+                <span className="text-[10px] uppercase tracking-widest text-white/30 font-bold">Progetti Realizzati</span>
               </div>
             </div>
           </div>
 
-          {/* RIGHT — foto */}
-          <div className="animate-fade-in-up delay-200 relative flex justify-center lg:justify-end">
-            {/* Rendering senza cornice finta per PNG trasparente */}
-            <div className="relative w-full max-w-sm lg:max-w-none">
-              <div className="relative rounded-3xl overflow-hidden">
+          {/* RIGHT: Visual Authority */}
+          <div className="animate-fade-in-up delay-200 relative">
+            <div className="relative z-10 flex justify-center lg:justify-end">
+              <div className="relative">
+                {/* Glow dietro la foto */}
+                <div className="absolute inset-0 bg-[#F5A623]/10 blur-[80px] rounded-full scale-110 opacity-30 animate-pulse" />
+                
                 <Image
                   src="/fabio-hero-transparent.png"
-                  alt="Fabio Micale, coach over 40 nell'era AI"
-                  width={600}
-                  height={600}
+                  alt="Fabio Micale — Il Metodologo della Crescita"
+                  width={650}
+                  height={800}
                   priority
-                  className="w-full h-auto object-cover -scale-x-100"
-                  style={{ maxHeight: "600px", objectPosition: "top" }}
+                  className="relative z-10 w-full h-auto max-h-[750px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transform scale-x-[-1]"
                 />
-                {/* Overlay gradiente in basso per sfumare il busto nel buio */}
-                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#111111]/90 to-transparent" />
-              </div>
-
-              {/* Badge flottante */}
-              <div className="absolute -bottom-4 -left-4 bg-[#111111] border border-white/10 rounded-2xl px-5 py-4 shadow-xl">
-                <div className="text-xs text-[#AAAAAA] mb-0.5">Coach certificato</div>
-                <div className="text-white font-semibold text-sm">Over 40 · AI · Mindset</div>
+                
+                {/* Dissolvenza inferiore per integrazione dark */}
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0D0D0D] to-transparent z-20" />
+                
+                {/* Elemento flottante: Credibilità */}
+                <div className="absolute -left-10 bottom-20 z-30 bg-[#1A1A1A]/80 backdrop-blur-md border border-white/10 p-6 rounded-2xl shadow-2xl hidden xl:block">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-[#2E7D32]/20 rounded-full flex items-center justify-center">
+                      <svg className="w-6 h-6 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div className="text-[10px] uppercase tracking-widest text-white/40 font-bold">Metodo Certificato</div>
+                      <div className="text-white font-bold text-sm italic serif">Sistemi Operativi Imprenditoriali</div>
+                    </div>
+                  </div>
+                  <div className="text-[11px] text-white/50 leading-relaxed max-w-[180px]">
+                    Soluzioni dirette per Fatturato, Tempo e Chiarezza Strategica.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-white/20 flex items-start justify-center pt-2">
-          <div className="w-1 h-2 bg-white/40 rounded-full" />
         </div>
       </div>
     </section>

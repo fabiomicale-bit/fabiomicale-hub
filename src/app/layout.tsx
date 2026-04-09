@@ -24,12 +24,12 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.fabiomicale.com"),
   title: {
-    default: "Fabio Micale — AI per Professionisti Over 40",
+    default: "Fabio Micale — Il Metodologo della Crescita",
     template: "%s | Fabio Micale",
   },
   description:
-    "Fabio Micale aiuta i professionisti over 40 a usare l'AI per costruire una nuova fase professionale ed economica. Strumenti concreti, niente hype.",
-  keywords: ["AI per professionisti", "intelligenza artificiale over 40", "formazione AI Italia", "Fabio Micale"],
+    "Fabio Micale aiuta imprenditori e professionisti ad evolvere attraverso sistemi operativi di business: MEPA Elite, Impresa Liquida e Punto Zero.",
+  keywords: ["Metodologo della crescita", "Fabio Micale", "Impresa Liquida", "MEPA Elite", "Punto Zero", "Crescita Aziendale"],
   authors: [{ name: "Fabio Micale", url: "https://www.fabiomicale.com" }],
   creator: "Fabio Micale",
   openGraph: {

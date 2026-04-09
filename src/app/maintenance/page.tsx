@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function MaintenancePage() {
   return (
-    <main className="min-h-screen bg-[#06091a] flex flex-col items-center justify-center px-6 relative overflow-hidden">
+    <main className="min-h-screen bg-[#111111] flex flex-col items-center justify-center px-6 relative overflow-hidden">
 
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-blue-600/8 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-[#2E7D32]/10 blur-[120px] pointer-events-none" />
 
       {/* Grid pattern */}
       <div
@@ -27,38 +27,38 @@ export default function MaintenancePage() {
 
         {/* Logo */}
         <div className="flex items-center justify-center gap-3 mb-16">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#2E7D32] to-[#1B5E20] flex items-center justify-center text-white font-bold text-sm">
             FM
           </div>
           <span className="text-white font-semibold text-lg tracking-wide">Fabio Micale</span>
         </div>
 
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-widest uppercase">
-          <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-          In aggiornamento
+        <div className="inline-flex items-center gap-2 bg-[#2E7D32]/10 border border-[#2E7D32]/20 text-[#2E7D32] text-xs font-medium px-4 py-2 rounded-full mb-8 tracking-widest uppercase">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#2E7D32] animate-pulse" />
+          Rinnovamento in corso
         </div>
 
         {/* Title */}
         <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6 tracking-tight">
-          Stiamo rinnovando{" "}
+          Sto riprogettando il futuro della{" "}
           <span
             style={{
-              background: "linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)",
+              background: "linear-gradient(135deg, #F5A623 0%, #D4AF37 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
             }}
           >
-            tutto.
+            tua impresa.
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="text-lg text-slate-400 leading-relaxed mb-12">
-          Qualcosa di nuovo sta arrivando.
+          Fabio Micale — Il Metodologo della Crescita.
           <br />
-          Torno presto con un sito completamente rinnovato.
+          Il nuovo Hub per scalare fatturato e organizzazione è quasi pronto.
         </p>
 
         {/* Divider */}
@@ -70,7 +70,7 @@ export default function MaintenancePage() {
         </p>
         <a
           href="mailto:info@fabiomicale.com"
-          className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium text-base transition-colors group"
+          className="inline-flex items-center gap-2 text-[#F5A623] hover:text-[#D4AF37] font-medium text-base transition-colors group"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -82,7 +82,7 @@ export default function MaintenancePage() {
 
       {/* Footer */}
       <div className="absolute bottom-8 text-slate-700 text-xs">
-        © 2026 Fabio Micale
+        © 2026 Fabio Micale — Metodologo della Crescita
       </div>
     </main>
   );

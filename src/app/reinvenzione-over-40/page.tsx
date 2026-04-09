@@ -1,261 +1,125 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Reinvenzione Professionale Over 40 | Guida Completa — Fabio Micale",
+export const metadata: Metadata = {
+  title: "Reinvenzione Professionale Over 40 | Guida Strategica — Fabio Micale",
   description:
-    "Guida pratica per reinventarsi professionalmente dopo i 40 anni. Senza buttare via l'esperienza, senza ricominciare da zero. Il metodo di Fabio Micale.",
+    "Guida per reinventarsi professionalmente dopo i 40 anni. Ingegnerizza la tua esperienza e potenziala con l'AI. Il protocollo di Fabio Micale.",
   alternates: { canonical: "https://www.fabiomicale.com/reinvenzione-over-40" },
 };
 
 export default function ReinvenzioneOver40Page() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#0D0D0D] text-white">
       <Navbar />
 
-      {/* ── 1. HERO ─────────────────────────────────────────────── */}
-      <section className="relative pt-36 pb-24 px-6 overflow-hidden bg-[#111111]">
-        <div className="relative z-10 max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#2E7D32]/20 border border-white/20 text-[#AAAAAA] text-xs font-medium px-4 py-2 rounded-full mb-6 tracking-wider uppercase">
-            <span className="w-1.5 h-1.5 rounded-full " />
-            Guida pratica
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
-            Reinvenzione professionale over 40:{" "}
-            <span className="gradient-text">la guida per chi non vuole ricominciare da zero</span>
+      {/* ── HERO EDITORIALE ─────────────────────────────────────── */}
+      <section className="relative pt-44 pb-32 px-6 overflow-hidden">
+        
+        {/* Atmosphere */}
+        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-[#F5A623] opacity-[0.02] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-grid opacity-[0.02]" />
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
+          <div className="badge mb-8 mx-auto">Guida Strategica</div>
+          <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
+            Reinvenzione <br /> <span className="italic text-[#F5A623]">Professionale Over 40.</span>
           </h1>
-          <p className="text-xl text-[#AAAAAA] leading-relaxed">
-            La tua esperienza non è un peso. È il tuo vantaggio competitivo principale.{" "}
-            <span className="text-white font-medium">Devi solo imparare a usarla diversamente.</span>
+          <p className="text-xl text-white/40 leading-relaxed max-w-2xl mx-auto font-light">
+            La tua esperienza non è un peso. È l&apos;asset più prezioso che possiedi. <br />
+            Impariamo a ingegnerizzarla per il mercato di oggi.
           </p>
         </div>
       </section>
 
-      {/* ── 2. PERCHÉ OVER 40 È UN VANTAGGIO ─────────────────────── */}
-      <section className="py-20 px-6 bg-white">
+      {/* ── IL VANTAGGIO ASIMMETRICO ─────────────────────────────── */}
+      <section className="py-20 px-6 relative">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il vantaggio</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
-            Perché reinventarsi dopo i 40 è diverso (e più vantaggioso) che farlo a 25
+          <div className="badge border-[#F5A623]/20 text-[#F5A623]/60 mb-8 uppercase tracking-widest">Il Vantaggio Asimmetrico</div>
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-10 font-serif leading-tight">
+            Perché non devi <br /><span className="italic text-white/40">ricominciare da zero.</span>
           </h2>
-          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
+          <div className="space-y-8 text-white/40 text-lg leading-relaxed font-light">
             <p>
-              A 25 anni hai energia ma nessun contesto. Non sai ancora cosa funziona davvero,
-              chi sono i clienti giusti, dove non mettere i piedi. Impari bruciando risorse.
+              A 25 anni hai energia ma nessun contesto. Impari bruciando risorse e commettendo errori che un occhio esperto vede a chilometri di distanza.
             </p>
             <p>
-              A 40+ hai tutto questo già risolto. Hai un network reale, una reputazione costruita,
-              pattern riconoscibili su cosa funziona e cosa no nel tuo settore.
-              Il problema non è la tua età —{" "}
-              <span className="text-[#111111] font-medium">
-                è il modello mentale che ti dice che devi ricominciare da zero.
-              </span>
+              A 40+ anni hai risolto il problema del contesto. Hai un network reale, una reputazione costruita e pattern riconoscibili su ciò che funziona. Il tuo problema non è l&apos;età, è il modello mentale che ti costringe a pensare come un principiante.
             </p>
-            <p>
-              La reinvenzione professionale dopo i 40 non è un restart. È un restack:
-              prendi quello che hai già costruito e lo potenzi con strumenti nuovi,
-              posizionamento più preciso e — oggi — con l&apos;AI come acceleratore.
+            <p className="text-white border-l-2 border-[#F5A623] pl-8 py-4 italic font-serif">
+              &ldquo;La reinvenzione dopo i 40 non è un restart. È un restack: potenziamo la tua struttura esistente con l&apos;AI e nuovi sistemi di posizionamento.&rdquo;
             </p>
           </div>
         </div>
       </section>
 
-      {/* ── 3. I 3 ERRORI ────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F7F7F7]">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Gli errori da evitare</span>
+      {/* ── I 3 ERRORI ────────────────────────────────────────── */}
+      <section className="py-32 px-6 bg-[#141414] border-y border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-20 font-serif">
+            <h2 className="text-4xl text-white italic">I Blocchi dell&apos;Evoluzione</h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
-            I 3 errori che bloccano i professionisti over 40
-          </h2>
-          <div className="space-y-4">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              {
-                numero: "01",
-                titolo: "Credere di dover imparare tutto da zero",
-                testo:
-                  "Non devi diventare un ingegnere software. Non devi sapere come funziona un algoritmo. Devi capire come applicare gli strumenti giusti al tuo lavoro specifico. L'errore è confondere alfabetizzazione con padronanza tecnica.",
-              },
-              {
-                numero: "02",
-                titolo: "Confrontarsi con i 25enni nativi digitali",
-                testo:
-                  "Un junior AI-native non ha la tua capacità di leggere un cliente, gestire una crisi, chiudere una trattativa. Chi ha esperienza + AI batte chi ha solo AI. Smettila di competere sul terreno sbagliato.",
-              },
-              {
-                numero: "03",
-                titolo: "Aspettare il momento giusto",
-                testo:
-                  "Non esiste un momento giusto per iniziare. Il momento giusto era ieri. Quello successivo è adesso. Ogni mese di attesa è un mese in cui il gap tra te e chi si sta già adattando aumenta.",
-              },
-            ].map((item) => (
-              <div
-                key={item.numero}
-                className="card-glow group bg-white border border-[#E5E5E5] rounded-2xl p-7 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
-              >
-                <div className="flex items-start gap-5">
-                  <span className="text-3xl font-bold gradient-text leading-none shrink-0 select-none">
-                    {item.numero}
-                  </span>
-                  <div>
-                    <h3 className="text-[#111111] font-semibold text-lg mb-2 leading-snug">
-                      {item.titolo}
-                    </h3>
-                    <p className="text-[#555555] leading-relaxed text-[0.95rem]">{item.testo}</p>
-                  </div>
-                </div>
+              { t: "L'Alfabetizzazione Tecnica", d: "Credere di dover diventare un programmatore. Devi solo capire come applicare i tool, non come scriverli." },
+              { t: "Il Complesso del Junior", d: "Confrontarsi con i 25enni sui loro termini. Loro hanno la velocità, tu hai la strategia. Vincere sul terreno della competenza." },
+              { t: "L'Attesa Infinita", d: "Aspettare il 'momento giusto'. Ogni mese di attesa aumenta esponenzialmente il gap competitivo." }
+            ].map((err, i) => (
+              <div key={i} className="card-premium p-10 h-full group">
+                <div className="text-[#F5A623] text-2xl font-serif italic mb-6 opacity-30 group-hover:opacity-100 transition-all">0{i+1}</div>
+                <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-tight">{err.t}</h3>
+                <p className="text-white/30 text-base leading-relaxed font-light">{err.d}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 4. IL METODO ─────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il metodo</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
-            Il metodo in 3 fasi: esperienza + AI + nuovo posizionamento
-          </h2>
-          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem]">
-            <p>
-              <span className="text-[#111111] font-semibold">Fase 1 — Mappa quello che hai.</span>{" "}
-              Prima di guardare avanti, fai un inventario preciso: competenze, network, reputazione,
-              asset digitali. La maggior parte dei professionisti over 40 sottovaluta enormemente
-              quello che ha già costruito.
-            </p>
-            <p>
-              <span className="text-[#111111] font-semibold">Fase 2 — Usa l&apos;AI come amplificatore.</span>{" "}
-              Non come sostituto. L&apos;AI può fare in un&apos;ora quello che ti richiedeva una settimana.
-              Ma deve sapere cosa fare — e questo lo sai solo tu, con la tua esperienza.
-              Scopri{" "}
-              <Link href="/ai-per-professionisti" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
-                come uso l&apos;AI nel mio lavoro quotidiano
-              </Link>{" "}
-              per capire da dove iniziare concretamente.
-            </p>
-            <p>
-              <span className="text-[#111111] font-semibold">Fase 3 — Riposizionati sul mercato.</span>{" "}
-              Con competenze aggiornate e un profilo rinnovato, il mercato ti legge in modo diverso.
-              Non sei un professionista over 40 che ha imparato l&apos;AI. Sei un esperto di settore
-              che usa l&apos;AI meglio di chiunque altro nel tuo campo.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 5. CASI REALI ────────────────────────────────────────── */}
-      <section className="py-20 px-6 bg-[#F7F7F7]">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Chi l&apos;ha fatto</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-10 leading-tight">
-            Casi reali: chi ha fatto questa transizione
-          </h2>
-          <div className="space-y-6">
+      {/* ── IL METODO IN 3 FASI ──────────────────────────────────── */}
+      <section className="py-40 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="badge mb-12 uppercase tracking-widest">Il Percorso</div>
+          <h2 className="text-4xl md:text-6xl font-light text-white mb-16 font-serif">L&apos;Ingegneria della <br /><span className="italic">Nuova Carriera.</span></h2>
+          
+          <div className="space-y-20 relative before:absolute before:left-0 before:top-4 before:bottom-4 before:w-px before:bg-white/5">
             {[
-              {
-                profilo: "Consulente aziendale, 47 anni",
-                situazione:
-                  "Perdeva clienti a favore di agenzie più giovani e digitali. In 4 mesi ha integrato workflow AI nella sua offerta e ha aumentato il fatturato del 30% lavorando meno ore.",
-              },
-              {
-                profilo: "Formatore indipendente, 52 anni",
-                situazione:
-                  "Convinto che i corsi in presenza fossero il suo unico modello. Ha trasformato i suoi contenuti in un sistema ibrido con AI che ora genera entrate anche quando non lavora.",
-              },
-              {
-                profilo: "Commercialista, 44 anni",
-                situazione:
-                  "Passava ore su attività ripetitive. Con 3 automazioni AI ha liberato 8 ore a settimana e ha usato quel tempo per acquisire clienti di fascia più alta.",
-              },
-            ].map((caso) => (
-              <div
-                key={caso.profilo}
-                className="bg-white border border-[#E5E5E5] rounded-2xl p-7 hover:border-[#2E7D32]/30 transition-colors duration-200 shadow-sm"
-              >
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-[#2E7D32]" />
-                  <span className="text-[#2E7D32] font-medium text-sm">{caso.profilo}</span>
-                </div>
-                <p className="text-[#555555] leading-relaxed text-[0.95rem]">{caso.situazione}</p>
+              { f: "Asset Mapping", d: "Facciamo un inventario chirurgico di network, reputazione e competenze sottovalutate." },
+              { f: "AI Amplification", d: "Inseriamo l'AI non come sostituto, ma come acceleratore della tua produzione professionale." },
+              { f: "Market Repositioning", d: "Ridisegniamo il tuo profilo per essere percepito come l'élite che usa la tecnologia, non che la subisce." }
+            ].map((step, i) => (
+              <div key={i} className="pl-12 relative">
+                <div className="absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-[#F5A623] shadow-[0_0_15px_rgba(245,166,35,0.5)]" />
+                <h3 className="text-2xl font-serif italic text-white mb-4">{step.f}</h3>
+                <p className="text-white/40 text-lg leading-relaxed font-light">{step.d}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── 6. DA DOVE INIZIARE ───────────────────────────────────── */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-px bg-[#2E7D32]" />
-            <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">Il primo passo</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-8 leading-tight">
-            Da dove iniziare questa settimana
+      {/* ── CTA FINALE ────────────────────────────────────────── */}
+      <section className="py-40 px-6 bg-[#141414] border-t border-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-light text-white mb-12 font-serif">
+            Il tuo secondo tempo <br /> <span className="italic text-[#F5A623]">inizia adesso.</span>
           </h2>
-          <div className="space-y-5 text-[#555555] leading-relaxed text-[1.05rem] mb-10">
-            <p>
-              Un&apos;azione concreta, adesso. Prendi un foglio e scrivi le 3 competenze per cui
-              i tuoi clienti ti hanno pagato di più negli ultimi 2 anni. Non le tue preferite —
-              quelle per cui ti hanno pagato.
-            </p>
-            <p>
-              Questo è il nucleo del tuo nuovo posizionamento. Tutto il resto — AI, automazioni,
-              nuovi canali — si costruisce intorno a questo.
-            </p>
-            <p>
-              Se vuoi capire come strutturare il percorso completo, leggi{" "}
-              <Link href="/il-metodo" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
-                il metodo completo
-              </Link>{" "}
-              che uso con i miei clienti. Se preferisci partire con una sessione diretta,{" "}
-              <Link href="/lavora-con-me" className="text-[#2E7D32] hover:text-[#1B5E20] transition-colors underline underline-offset-2">
-                prenota una sessione
-              </Link>{" "}
-              e lo facciamo insieme.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 7. CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-[#111111]">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-            Pronto a iniziare la tua reinvenzione?
-          </h2>
-          <p className="text-[#AAAAAA] text-lg leading-relaxed mb-10">
-            Non devi buttare via niente di quello che hai costruito.{" "}
-            <span className="text-white">Devi amplificarlo.</span>
+          <p className="text-white/40 text-xl leading-relaxed mb-16 max-w-2xl mx-auto font-light">
+            Non buttare via la tua storia. Trasformala nel tuo futuro. Inizia con una diagnosi strategica della tua situazione attuale.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="/il-metodo"
-              className="inline-flex items-center justify-center gap-3 bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 text-base"
+              href="/punto-zero"
+              className="btn-gold px-12 py-6 text-sm tracking-[0.3em] font-bold"
             >
-              Scopri il metodo completo
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              AVVIA IL RESET STRATEGICO
             </Link>
             <Link
               href="/lavora-con-me"
-              className="inline-flex items-center justify-center gap-2 text-white border border-white/20 hover:border-white/40 font-medium px-8 py-4 rounded-xl transition-all duration-200"
+              className="px-12 py-6 text-xs tracking-[0.3em] font-bold border border-white/10 hover:border-white/30 transition-all rounded-xl uppercase flex items-center justify-center"
             >
-              Prenota una sessione
+              VEDI TUTTI I PERCORSI
             </Link>
           </div>
         </div>

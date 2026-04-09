@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
@@ -78,7 +79,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <ReadingProgress />
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen bg-[#0D0D0D] text-white">
       <Navbar />
 
       {/* JSON-LD Schema */}
@@ -88,94 +89,111 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       {/* ── HEADER ARTICOLO ─────────────────────────────────────── */}
-      <section className="relative pt-36 pb-12 px-6 overflow-hidden bg-[#111111]">
-        <div className="relative z-10 max-w-2xl mx-auto">
+      <section className="relative pt-44 pb-20 px-6 overflow-hidden">
+        
+        {/* Detail ambient light */}
+        <div className="absolute top-0 right-[-10%] w-[50%] h-[50%] bg-[#F5A623] opacity-[0.02] blur-[120px] rounded-full" />
+        <div className="absolute inset-0 bg-grid opacity-[0.02]" />
+
+        <div className="relative z-10 max-w-3xl mx-auto">
           {/* Back */}
-          <a
+          <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-[#AAAAAA]/70 hover:text-[#AAAAAA] text-sm mb-8 transition-colors duration-200"
+            className="inline-flex items-center gap-3 text-white/30 hover:text-[#F5A623] text-xs font-bold uppercase tracking-widest mb-12 transition-all duration-300 group"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-4 h-4 group-hover:-translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
             </svg>
-            Blog
-          </a>
+            Torna all&apos;intelligence
+          </Link>
 
           {/* Categoria */}
-          <span
-            className={`inline-block text-xs font-medium px-3 py-1 rounded-full border mb-5 ${post.categoriaClasses}`}
-          >
+          <div className="badge border-[#F5A623]/30 text-[#F5A623] mb-8">
             {post.categoria}
-          </span>
+          </div>
 
           {/* Titolo */}
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-light text-white leading-[1.1] tracking-tight mb-8 font-serif">
             {post.titolo}
           </h1>
 
           {/* Meta */}
-          <div className="flex items-center gap-4 text-sm text-[#AAAAAA]/60">
+          <div className="flex items-center gap-6 text-xs font-bold uppercase tracking-[0.2em] text-white/20 mb-12">
             <span>{post.data}</span>
-            <span>·</span>
+            <span className="w-1 h-1 rounded-full bg-white/10" />
             <span>{post.tempoLettura} di lettura</span>
           </div>
 
           {/* Immagine in evidenza */}
           {post.ogImage && (
-            <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden shadow-2xl border border-white/10 mt-10">
+            <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/5 mt-10">
               <Image 
                 src={post.ogImage} 
                 alt={post.coverAlt || post.titolo} 
                 fill 
-                className="object-cover" 
+                className="object-cover brightness-75 scale-105" 
                 priority 
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] to-transparent opacity-40" />
             </div>
           )}
         </div>
       </section>
 
       {/* ── CONTENUTO ───────────────────────────────────────────── */}
-      <section className="py-10 px-6 pb-20 bg-white">
-        <div className="max-w-2xl mx-auto">
-          <ShareBar titolo={post.titolo} slug={post.slug} />
-          <TableOfContents contentHtml={post.contentHtml} />
-          <div
-            className="blog-content"
-            dangerouslySetInnerHTML={{ __html: injectHeadingIds(post.contentHtml) }}
-          />
+      <section className="py-20 px-6 pb-32 relative">
+        <div className="max-w-3xl mx-auto">
+          
+          {/* Article Sidebar style for wide screens */}
+          <div className="relative">
+            <div className="hidden xl:block absolute -left-48 top-0 w-40">
+              <ShareBar titolo={post.titolo} slug={post.slug} />
+            </div>
+
+            <div className="bg-white/[0.02] border border-white/5 rounded-[40px] p-8 md:p-16 backdrop-blur-sm">
+              <TableOfContents contentHtml={post.contentHtml} />
+              
+              <article
+                className="blog-content prose prose-invert prose-gold max-w-none"
+                dangerouslySetInnerHTML={{ __html: injectHeadingIds(post.contentHtml) }}
+              />
+              
+              <div className="mt-20 pt-12 border-t border-white/5">
+                <div className="xl:hidden mb-12">
+                  <ShareBar titolo={post.titolo} slug={post.slug} />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── CORRELATI ───────────────────────────────────────────── */}
       {correlati.length > 0 && (
-        <section className="py-16 px-6 border-t border-[#E5E5E5] bg-[#F7F7F7]">
-          <div className="max-w-2xl mx-auto">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-px bg-[#2E7D32]" />
-              <span className="text-[#2E7D32] text-sm font-medium tracking-widest uppercase">
-                Continua a leggere
-              </span>
+        <section className="py-32 px-6 bg-[#141414] border-t border-white/5">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-6 mb-16">
+              <div className="badge">Esplora l&apos;Ecosistema</div>
+              <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
             </div>
-            <div className="grid sm:grid-cols-2 gap-5">
+            
+            <div className="grid md:grid-cols-2 gap-8">
               {correlati.map((rel) => (
                 <a
                   key={rel.slug}
                   href={`/blog/${rel.slug}`}
-                  className="card-glow group flex flex-col bg-white border border-[#E5E5E5] rounded-2xl p-6 hover:border-[#2E7D32]/30 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="card-premium p-10 group flex flex-col hover:border-[#F5A623]/20 transition-all duration-500"
                 >
-                  <span
-                    className={`self-start text-xs font-medium px-3 py-1 rounded-full border mb-4 ${rel.categoriaClasses}`}
-                  >
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#F5A623] mb-6">
                     {rel.categoria}
                   </span>
-                  <h3 className="text-[#111111] font-semibold leading-snug mb-3 group-hover:text-[#2E7D32] transition-colors duration-200 flex-1">
+                  <h3 className="text-2xl font-bold text-white leading-tight mb-8 group-hover:text-[#F5A623] transition-colors font-serif italic">
                     {rel.titolo}
                   </h3>
-                  <div className="flex items-center justify-between pt-3 border-t border-[#E5E5E5] mt-2">
-                    <span className="text-xs text-[#555555]">{rel.tempoLettura}</span>
-                    <span className="text-[#2E7D32] text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200">
-                      Leggi
+                  <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/30">{rel.tempoLettura}</span>
+                    <span className="text-white font-bold text-xs uppercase tracking-widest flex items-center gap-2 group-hover:translate-x-2 transition-all">
+                      Analisi
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
@@ -189,9 +207,12 @@ export default async function BlogPostPage({ params }: Props) {
       )}
 
       {/* ── FORM COMMENTI ───────────────────────────────────────── */}
-      <section className="max-w-2xl mx-auto px-6 pb-20 mt-16">
-        <div className="border-t border-[#E5E5E5] pt-12">
-          <CommentoForm articolo={post.titolo} />
+      <section className="py-32 px-6 bg-[#0D0D0D]">
+        <div className="max-w-2xl mx-auto">
+          <div className="p-12 rounded-[32px] bg-white/[0.01] border border-white/5">
+            <h3 className="text-2xl font-bold text-white mb-8 border-b border-white/5 pb-4">Confrontati con l&apos;Autore</h3>
+            <CommentoForm articolo={post.titolo} />
+          </div>
         </div>
       </section>
 

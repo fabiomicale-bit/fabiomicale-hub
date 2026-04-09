@@ -36,83 +36,90 @@ export default function Newsletter() {
   };
 
   return (
-    <section id="newsletter" className="py-24 px-6 bg-[#F7F7F7]">
-      <div className="max-w-2xl mx-auto text-center">
-        {/* Icon */}
-        <div className="w-14 h-14 rounded-2xl bg-[#E8F5E9] border border-[#E5E5E5] flex items-center justify-center text-2xl mx-auto mb-6">
-          ✉️
-        </div>
+    <section id="newsletter" className="relative py-32 px-6 bg-[#0D0D0D] overflow-hidden">
+      
+      {/* Background Ambience */}
+      <div className="absolute inset-0 bg-grid opacity-[0.02]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] h-[50%] bg-[#2E7D32] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
 
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#111111] mb-4 leading-tight">
-          Un Passo Avanti —{" "}
-          <span className="gradient-text">la newsletter gratuita</span>
-        </h2>
-        <p className="text-[#555555] leading-relaxed mb-8 text-lg">
-          Ogni mercoledì: mindset, tecnologia e sistemi per professionisti over 40.
-        </p>
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="card-premium p-10 md:p-16 text-center shadow-2xl">
+          
+          {/* Section label */}
+          <div className="badge mb-8 mx-auto">Accesso Riservato</div>
 
-        {/* Omaggio box */}
-        <div className="bg-white border border-[#E5E5E5] rounded-2xl px-6 py-5 mb-8 flex items-start gap-4 text-left shadow-sm">
-          <div className="text-2xl mt-0.5 shrink-0">🎁</div>
-          <p className="text-[#555555] text-sm leading-relaxed">
-            <span className="text-[#111111] font-semibold">Iscriviti gratis e ricevi subito l&apos;ebook:</span>{" "}
-            <span className="text-[#2E7D32] font-medium">I 3 Passi per Iniziare con l&apos;AI</span>
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight font-serif">
+            The Growth Intelligence <br />
+            <span className="italic text-[#F5A623]">Strategie per menti libere.</span>
+          </h2>
+          
+          <p className="text-white/40 leading-relaxed mb-12 text-lg max-w-xl mx-auto">
+            Ogni mercoledì, ricevi sistemi operativi e analisi strategiche per far evolvere il tuo business. Niente fumo, solo metodo.
           </p>
-        </div>
 
-        {status === "success" ? (
-          <div className="bg-[#E8F5E9] border border-[#E5E5E5] rounded-2xl px-8 py-8 max-w-md mx-auto">
-            <div className="text-3xl mb-3">✅</div>
-            <p className="text-[#111111] font-bold text-xl mb-2">Sei dentro!</p>
-            <p className="text-[#555555] text-sm mb-6 leading-relaxed">
-              La tua prima newsletter arriva mercoledì alle 9:00.<br />
-              Intanto, scarica subito il tuo ebook gratuito:
-            </p>
-            <a
-              href={ebookUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 text-sm text-white hover:opacity-90 hover:shadow-lg"
-              style={{ backgroundColor: "#F9A825" }}
-            >
-              Scarica &ldquo;I 3 Passi per Iniziare con l&apos;AI&rdquo; →
-            </a>
+          {/* Lead Magnet Preview Box */}
+          <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 mb-12 flex items-center justify-center gap-6 max-w-lg mx-auto text-left group hover:border-[#F5A623]/20 transition-all duration-300">
+            <div className="text-3xl grayscale group-hover:grayscale-0 transition-all">🎁</div>
+            <div>
+              <p className="text-white font-bold text-sm mb-1 italic">Omaggio immediato:</p>
+              <p className="text-white/40 text-xs leading-relaxed uppercase tracking-widest">Protocollo d&apos;Azione — Il Metodo Fabio Micale</p>
+            </div>
           </div>
-        ) : (
-          <>
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="La tua email"
-                required
-                disabled={status === "loading"}
-                className="flex-1 bg-white border border-[#E5E5E5] focus:border-[#2E7D32] focus:ring-2 focus:ring-[#2E7D32]/20 text-[#111111] placeholder-[#5A6B5A] px-5 py-3.5 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
-              />
-              <button
-                type="submit"
-                disabled={status === "loading"}
-                className="bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-semibold px-6 py-3.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#2E7D32]/25 text-sm whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed"
+
+          {status === "success" ? (
+            <div className="bg-[#2E7D32]/10 border border-[#2E7D32]/20 rounded-2xl p-10 max-w-md mx-auto animate-fade-in">
+              <div className="w-16 h-16 bg-[#2E7D32]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold text-white mb-2">Benvenuto nell&apos;Intelligence</h4>
+              <p className="text-white/40 text-sm mb-8">Controlla la tua email, il protocollo sta arrivando.</p>
+              <a
+                href={ebookUrl || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold w-full flex justify-center"
               >
-                {status === "loading" ? "Iscrizione in corso..." : "Iscriviti e ricevi l\u2019ebook"}
-              </button>
-            </form>
+                Scarica ora
+              </a>
+            </div>
+          ) : (
+            <div className="max-w-md mx-auto">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                <div className="relative">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Il tuo indirizzo email migliore"
+                    required
+                    disabled={status === "loading"}
+                    className="w-full bg-white/[0.02] border border-white/10 focus:border-[#F5A623] focus:ring-1 focus:ring-[#F5A623]/20 text-white placeholder-white/20 px-6 py-4 rounded-xl outline-none transition-all text-base disabled:opacity-60"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="btn-gold w-full justify-center py-4 text-sm tracking-[0.1em]"
+                >
+                  {status === "loading" ? "Elaborazione..." : "Ricevi l'Intelligence"}
+                </button>
+              </form>
 
-            {status === "error" && (
-              <p className="text-red-600 text-sm mt-3">
-                Ops, qualcosa non ha funzionato. Riprova o scrivi a{" "}
-                <a href="mailto:info@fabiomicale.com" className="underline">
-                  info@fabiomicale.com
-                </a>
+              {status === "error" && (
+                <p className="text-red-400 text-xs mt-4 animate-fade-in">
+                  Qualcosa è andato storto. Contattaci a info@fabiomicale.com
+                </p>
+              )}
+              
+              <p className="text-white/20 text-[10px] uppercase tracking-widest mt-8 font-bold">
+                Assenza totale di spam · Disiscrizione istantanea
               </p>
-            )}
-          </>
-        )}
+            </div>
+          )}
 
-        <p className="text-[#555555]/60 text-xs mt-4">
-          Nessuno spam. Disiscrizione con un click. Privacy garantita.
-        </p>
+        </div>
       </div>
     </section>
   );
