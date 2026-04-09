@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server';
 // ⚙️  Imposta MAINTENANCE_MODE = true solo quando vuoi
 //     che il sito pubblico mostri la pagina di manutenzione.
 //     In sviluppo locale questa variabile viene ignorata.
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
