@@ -102,18 +102,27 @@ export default function PuntoZeroPage() {
           
           <div className="badge border-white/10 text-white/30 mb-8 mx-auto">Asset Gratuito</div>
           <h2 className="text-3xl md:text-5xl font-light text-white mb-8 font-serif">
-            Inizia dal <br /><span className="italic text-[#F5A623]">Manifesto del Punto Zero.</span>
+            PuntoZero™: <br /><span className="italic text-[#F5A623]">Il Manuale della Ricostruzione Operativa.</span>
           </h2>
-          <p className="text-white/40 text-lg leading-relaxed mb-12 max-w-xl mx-auto font-light">
-            Ho sintetizzato i primi passi della diagnosi in un breve report strategico. Scaricalo ora e inizia a misurare il tuo grado di chiarezza professionale.
-          </p>
+          <div className="text-white/40 text-lg leading-relaxed mb-12 max-w-2xl mx-auto font-light space-y-4">
+            <p>
+              Ho sintetizzato i 7 pilastri del reset imprenditoriale in un manuale d&apos;azione crudo e senza filtri.
+            </p>
+            <ul className="text-left max-w-sm mx-auto space-y-2 text-sm uppercase tracking-widest font-bold text-white/20">
+              <li className="flex gap-3"><span className="text-[#F5A623]">01.</span> Il disallineamento invisibile</li>
+              <li className="flex gap-3"><span className="text-[#F5A623]">02.</span> Lo Zero: Smettere di fingere</li>
+              <li className="flex gap-3"><span className="text-[#F5A623]">03.</span> Il Porto: La pausa consapevole</li>
+              <li className="flex gap-3"><span className="text-[#F5A623]">04.</span> Il Percorso: Costruire passo dopo passo</li>
+              <li className="flex gap-3"><span className="text-[#F5A623]">05.</span> La Soglia: Il punto di non ritorno</li>
+            </ul>
+          </div>
           
           <div className="flex flex-col items-center gap-6">
             <Link 
               href="/risorse?dl=punto-zero" 
               className="btn-gold px-12 py-5 text-xs tracking-widest font-bold"
             >
-              SCARICA IL REPORT
+              ACCEDI AL MANUALE
             </Link>
             <div className="text-[10px] uppercase font-bold text-white/20 tracking-widest italic">
               Oltre 1.500 imprenditori hanno già iniziato il reset.

@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 const soluzioni = [
   {
     numero: "I",
-    tag: "Intelligence & Appalti",
-    titolo: "Lifecycle Appalti Pubblici",
+    tag: "Sistemi & Appalti",
+    titolo: "Ciclo Vita Appalti Pubblici",
     sottotitolo: "Dall'abilitazione portale all'incasso certo dei pagamenti.",
     descrizione:
       "Gestiamo l'intera filiera burocratica e operativa: abilitazione MEPA (Consob), ricerca e selezione gare, partecipazione, aggiudicazione e setup per lo svolgimento lavori. Un sistema per trasformare la PA nel tuo asset di fatturato più solido.",
     risultato: "Accesso ai flussi PA entro 90 giorni.",
     brand: "MEPA Elite™",
-    brandTag: "Lifecycle Appalti e Burocrazia",
+    brandTag: "Ciclo Vita Appalti e Burocrazia",
     href: "/mepa-elite",
     accent: "#F5A623", // Gold
     icon: "◈",
@@ -45,14 +45,14 @@ const soluzioni = [
   },
   {
     numero: "III",
-    tag: "Condivisione & Mentorship",
+    tag: "Condivisione & Affiancamento",
     titolo: "Eredità Punto Zero™",
     sottotitolo: "Condividere il percorso di rinascita per chi ricomincia da zero.",
     descrizione:
       "Non è consulenza, è mentorship basata sull'esperienza. Condivido il mio percorso di resilienza e ricostruzione umana per chi si trova in una situazione di crisi e deve ricostruire asset solidi partendo dalla realtà dei fatti.",
     risultato: "Community e Mentorship di Resilienza.",
     brand: "Eredità Punto Zero™",
-    brandTag: "Asset di Condivisione Umana",
+    brandTag: "Valore di Condivisione Umana",
     href: "/punto-zero",
     accent: "#A0A0A0", // Silver/Gray
     icon: "○",
@@ -144,7 +144,7 @@ export default function SoluzioniPage() {
       {/* ── BIO / METODO PREVIEW ────────────────────────────── */}
       <section className="py-40 px-6 bg-[#141414] border-y border-white/5">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="badge mb-8 mx-auto">Asset Fondamentale</div>
+          <div className="badge mb-8 mx-auto">Valore Fondamentale</div>
           <h2 className="text-4xl md:text-5xl font-light text-white mb-10 font-serif leading-tight">
             L&apos;Ingegneria non è per tutti. <br />
             <span className="italic text-[#F5A623]">Ma è per chi vuole risultati certi.</span>

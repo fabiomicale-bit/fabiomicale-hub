@@ -44,7 +44,7 @@ export default function EbookForm() {
       <div className="bg-white/[0.02] border border-white/5 rounded-2xl px-8 py-10 text-center animate-fade-in">
         <div className="text-4xl mb-4">🚀</div>
         <p className="text-white font-serif italic text-lg mb-6">
-          Intelligence inviata con successo.
+          Analisi Strategica inviata con successo.
         </p>
         <a
           href={EBOOK_URL}
@@ -52,7 +52,7 @@ export default function EbookForm() {
           rel="noopener noreferrer"
           className="btn-gold inline-flex items-center gap-3 px-8 py-3 text-[10px] font-bold tracking-widest uppercase"
         >
-          Scarica l&apos;Asset Ora
+          Scarica il Protocollo
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
           </svg>
@@ -111,7 +111,7 @@ export default function EbookForm() {
           disabled={!canSubmit || status === "loading"}
           className="btn-gold w-full py-5 text-[10px] tracking-[0.2em] font-bold uppercase transition-all disabled:opacity-20 disabled:grayscale"
         >
-          {status === "loading" ? "Criptaggio dati..." : "ACCEDI ALL'ASSET →"}
+          {status === "loading" ? "Elaborazione dati..." : "ACCEDI AL PROTOCOLLO →"}
         </button>
       </form>
 

@@ -48,13 +48,13 @@ export default function Newsletter() {
           {/* Section label */}
           <div className="badge mb-8 mx-auto">Accesso Riservato</div>
 
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight font-serif">
-            The Growth Intelligence <br />
+          <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight font-serif text-balance">
+            Protocollo della Crescita <br />
             <span className="italic text-[#F5A623]">Strategie per menti libere.</span>
           </h2>
           
           <p className="text-white/40 leading-relaxed mb-12 text-lg max-w-xl mx-auto">
-            Ogni mercoledì, ricevi sistemi operativi e analisi strategiche per far evolvere il tuo business. Niente fumo, solo metodo.
+            Ogni mercoledì, ricevi protocolli operativi e analisi strategiche per far evolvere il tuo business. Niente fumo, solo metodo.
           </p>
 
           {/* Lead Magnet Preview Box */}
@@ -62,7 +62,7 @@ export default function Newsletter() {
             <div className="text-3xl grayscale group-hover:grayscale-0 transition-all">🎁</div>
             <div>
               <p className="text-white font-bold text-sm mb-1 italic">Omaggio immediato:</p>
-              <p className="text-white/40 text-xs leading-relaxed uppercase tracking-widest">Protocollo d&apos;Azione — Il Metodo Fabio Micale</p>
+              <p className="text-white/40 text-xs leading-relaxed uppercase tracking-widest">Manuale d&apos;Azione — Il Metodo Fabio Micale</p>
             </div>
           </div>
 
@@ -73,8 +73,8 @@ export default function Newsletter() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-white mb-2">Benvenuto nell&apos;Intelligence</h4>
-              <p className="text-white/40 text-sm mb-8">Controlla la tua email, il protocollo sta arrivando.</p>
+              <h4 className="text-xl font-bold text-white mb-2">Benvenuto nel Protocollo</h4>
+              <p className="text-white/40 text-sm mb-8">Controlla la tua email, il materiale sta arrivando.</p>
               <a
                 href={ebookUrl || "#"}
                 target="_blank"
@@ -103,7 +103,7 @@ export default function Newsletter() {
                   disabled={status === "loading"}
                   className="btn-gold w-full justify-center py-4 text-sm tracking-[0.1em]"
                 >
-                  {status === "loading" ? "Elaborazione..." : "Ricevi l'Intelligence"}
+                  {status === "loading" ? "Elaborazione..." : "Accedi al Protocollo"}
                 </button>
               </form>
 
