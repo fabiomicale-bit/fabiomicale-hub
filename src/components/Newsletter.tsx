@@ -7,6 +7,7 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function Newsletter() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
+  const [ebookUrl, setEbookUrl] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -49,12 +50,12 @@ export default function Newsletter() {
           <div className="badge mb-8 mx-auto">Accesso Riservato</div>
 
           <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight font-serif text-balance">
-            Protocollo della Crescita <br />
-            <span className="italic text-[#F5A623]">Strategie per menti libere.</span>
+            Manuale PuntoZero™ <br />
+            <span className="italic text-[#F5A623]">Il Reset Strategico.</span>
           </h2>
           
           <p className="text-white/40 leading-relaxed mb-12 text-lg max-w-xl mx-auto">
-            Ogni mercoledì, ricevi protocolli operativi e analisi strategiche per far evolvere il tuo business. Niente fumo, solo metodo.
+            Ricevi la REV.0.1 del manuale per il reset e la sequenza email &ldquo;Il Porto&rdquo;. Strategie reali per professionisti che hanno smesso di credere all&apos;hype.
           </p>
 
 
@@ -90,7 +91,7 @@ export default function Newsletter() {
                   disabled={status === "loading"}
                   className="btn-gold w-full justify-center py-5 text-xs tracking-[0.2em] font-bold uppercase transition-all"
                 >
-                  {status === "loading" ? "Elaborazione..." : "Entra nel Porto"}
+                  {status === "loading" ? "Elaborazione..." : "Scarica il Manuale"}
                 </button>
               </form>
 

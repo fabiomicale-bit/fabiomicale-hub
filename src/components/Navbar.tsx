@@ -50,7 +50,7 @@ export default function Navbar() {
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-white text-base tracking-tight leading-none">Fabio Micale</span>
-            <span className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.2em] mt-1 font-semibold group-hover:text-[#F5A623] transition-colors">Il Metodologo</span>
+            <span className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.2em] mt-1 font-semibold group-hover:text-[#F5A623] transition-colors">Advisor Operativo</span>
           </div>
         </Link>
 
@@ -75,7 +75,7 @@ export default function Navbar() {
             href="/soluzioni"
             className="group relative inline-flex items-center justify-center bg-[#F5A623] hover:bg-[#D4891A] text-[#0D0D0D] text-[12px] font-bold px-7 py-3 rounded-full transition-all duration-300 uppercase tracking-wider overflow-hidden"
           >
-            <span className="relative z-10">Candidati Ora</span>
+            <span className="relative z-10">Parlami del tuo caso</span>
             <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
           </Link>
         </div>
@@ -110,7 +110,7 @@ export default function Navbar() {
             className="mt-4 bg-[#F5A623] text-[#0D0D0D] px-10 py-4 rounded-full font-bold uppercase text-sm tracking-widest shadow-xl"
             onClick={() => setMenuOpen(false)}
           >
-            Candidati Ora
+            Parlami del tuo caso
           </Link>
         </div>
       </div>

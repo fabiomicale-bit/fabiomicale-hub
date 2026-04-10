@@ -20,19 +20,19 @@ export default function Hero() {
             {/* Badge Status */}
             <div className="animate-fade-in-up inline-flex items-center gap-3 border border-[rgba(245,166,35,0.3)] bg-[rgba(245,166,35,0.05)] text-[#F5A623] text-[10px] font-bold px-4 py-2 rounded-full mb-10 tracking-[0.2em] uppercase">
               <span className="w-2 h-2 bg-[#F5A623] rounded-full animate-pulse" />
-              Il Metodologo della Crescita
+              Advisor in Sistemi Operativi & AI
             </div>
 
             {/* Headline: La Promessa */}
             <h1 className="animate-fade-in-up delay-100 text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight text-white mb-8 font-serif text-balance">
-              Smetti di lavorare <br />
-              <span className="italic text-[#F5A623]">per</span> l&apos;azienda. <br />
-              <span className="font-sans font-bold">Falla lavorare per&nbsp;te.</span>
+              Sistemi Operativi e AI <br />
+              <span className="italic text-[#F5A623]">per</span> Imprenditori <br />
+              <span className="font-sans font-bold">Over 40.</span>
             </h1>
 
             {/* Subtitle: Il Metodo */}
             <p className="animate-fade-in-up delay-200 text-lg md:text-xl text-[rgba(255,255,255,0.5)] leading-relaxed mb-12 max-w-xl">
-              Non sono un coach. Sono un **Advisor in Organizzazione** con 25+ anni di esperienza in cantieri e appalti pubblici. Attraverso sistemi operativi scalabili, sblocco il fatturato PA e ingegnerizzo la tua libertà operativa.
+              Non sono un coach. Sono un **Advisor in Sistemi Operativi & AI** con 25+ anni di esperienza tecnica. Ingegnerizzo la tua esperienza in asset scalabili e proteggo il tuo tempo attraverso l&apos;intelligenza applicata.
             </p>
 
             {/* Inbound CTA Group */}
@@ -80,7 +80,7 @@ export default function Hero() {
                 
                 <Image
                   src="/fabio-hero-transparent.png"
-                  alt="Fabio Micale — Il Metodologo della Crescita"
+                  alt="Fabio Micale — Advisor in Sistemi Operativi & AI"
                   width={650}
                   height={800}
                   priority

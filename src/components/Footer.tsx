@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="font-semibold text-white tracking-tight">Fabio Micale</span>
             </div>
             <p className="text-[rgba(255,255,255,0.45)] text-sm leading-relaxed mb-6">
-              Il Metodologo della Crescita. Aiuto imprenditori e professionisti ad evolvere attraverso sistemi operativi di business.
+              Advisor in Sistemi Operativi & AI. Aiuto imprenditori e professionisti ad evolvere attraverso sistemi scalabili.
             </p>
             <a
               href="mailto:info@fabiomicale.com"
@@ -75,9 +75,14 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="border-t border-[rgba(255,255,255,0.07)] pt-10 flex flex-col md:row items-center justify-between gap-6">
-          <p className="text-[rgba(255,255,255,0.2)] text-xs font-medium tracking-tight">
-            © {currentYear} Fabio Micale. Tutti i diritti riservati. P.IVA IT0123456789
-          </p>
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <p className="text-[rgba(255,255,255,0.2)] text-xs font-medium tracking-tight">
+              © {currentYear} Fabio Micale. Tutti i diritti riservati.
+            </p>
+            <p className="text-[rgba(255,255,255,0.15)] text-[10px] italic tracking-wide">
+              Sito in fase di sviluppo / Portfolio personale. Non ancora operativo per servizi a pagamento.
+            </p>
+          </div>
           <div className="flex items-center gap-8">
             <a href="/privacy" className="text-[rgba(255,255,255,0.2)] hover:text-white text-xs transition-colors underline-offset-4 hover:underline">Privacy Policy</a>
             <a href="/cookie" className="text-[rgba(255,255,255,0.2)] hover:text-white text-xs transition-colors underline-offset-4 hover:underline">Cookie Policy</a>

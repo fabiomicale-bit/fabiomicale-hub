@@ -43,9 +43,10 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         email,
         reactivate_existing: true,
-        send_welcome_email: true,
+        send_welcome_email: false, // Gestito dalla nostra automazione o sequenza
         utm_source: utmSource,
         utm_medium: utmMedium,
+        tags: utmSource === "risorse_ebook" || notify === "capitolo1" ? ["puntozero"] : ["newsletter"],
       }),
     }
   );
