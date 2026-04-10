@@ -56,9 +56,9 @@ export default function MaintenancePage() {
 
         {/* Subtitle */}
         <p className="text-lg text-slate-400 leading-relaxed mb-12">
-          Fabio Micale — Il Metodologo della Crescita.
+          Fabio Micale — Advisor in Sistemi Operativi & AI.
           <br />
-          Il nuovo Hub per scalare fatturato e organizzazione è quasi pronto.
+          Il nuovo Hub per scalare fatturato e organizzazione attraverso l&apos;intelligenza applicata è in arrivo.
         </p>
 
         {/* Divider */}
