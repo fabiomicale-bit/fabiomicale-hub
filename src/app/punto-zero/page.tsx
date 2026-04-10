@@ -136,20 +136,56 @@ export default function PuntoZeroPage() {
         </div>
       </section>
 
+      {/* ── VERSO LA COMMUNITY ──────────────────────────────────── */}
       <section className="py-40 px-6 border-t border-white/5 bg-[#141414]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-light text-white mb-12 font-serif leading-tight">
-            Verso la <br /><span className="italic text-white/40">Community Punto Zero.</span>
-          </h2>
-          <p className="text-white/40 text-xl leading-relaxed mb-16 max-w-2xl mx-auto font-light">
-            Questo percorso è nato da una mia passione e necessità. Il mio obiettivo è trasformarlo in uno spazio dove chi ha vinto può guidare chi sta iniziando. Entra nel Manifesto per far parte del futuro.
-          </p>
-          <Link
-            href="/contatti?ref=punto-zero-final"
-            className="btn-gold px-12 py-5 text-sm tracking-[0.3em] font-bold"
-          >
-            SCOPRI COME PARTECIPARE
-          </Link>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl md:text-6xl font-light text-white mb-8 font-serif leading-tight">
+              Verso l&apos;Ecosistema <br /><span className="italic text-white/40">Punto Zero.</span>
+            </h2>
+            <p className="text-white/40 text-xl leading-relaxed max-w-2xl mx-auto font-light">
+              PuntoZero non è una destinazione finale. È la porta d&apos;ingresso a un ecosistema di rinascita e condivisione.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-24">
+            {[
+              { 
+                t: "La Membership", 
+                d: "Confronto e crescita silente tra pari per chi ha già attraversato la Soglia e cerca un Porto sicuro.",
+                label: "Relazioni"
+              },
+              { 
+                t: "Il Percorso", 
+                d: "Un programma guidato di 8 settimane per applicare i 7 pilastri del reset alla tua realtà specifica.",
+                label: "Azione"
+              },
+              { 
+                t: "Il Porto", 
+                d: "Ritiri ed eventi dal vivo dove il digitale si ferma e l'integrazione del cambiamento diventa reale.",
+                label: "Esperienza"
+              }
+            ].map((item, i) => (
+              <div key={i} className="card-premium p-10 border border-white/5 group hover:border-[#F5A623]/20 transition-all duration-500">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-[#F5A623] mb-6 font-bold opacity-50 group-hover:opacity-100 transition-opacity">
+                  {item.label}
+                </div>
+                <h3 className="text-2xl font-serif italic text-white mb-4">{item.t}</h3>
+                <p className="text-white/30 text-sm leading-relaxed font-light">
+                  {item.d}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/contatti?ref=punto-zero-final"
+              className="btn-gold px-12 py-5 text-sm tracking-[0.3em] font-bold"
+            >
+              SCOPRI COME PARTECIPARE
+            </Link>
+          </div>
         </div>
       </section>
 
