@@ -32,7 +32,7 @@ export default function HomePage() {
           <div className="text-center mb-20 animate-fade-in-up">
             <div className="badge mb-6 mx-auto">Asset di Successo</div>
             <h2 className="text-4xl md:text-6xl font-light text-white leading-tight font-serif mb-6">
-              Case Studies: <br />
+              Casi Studio: <br />
               <span className="italic text-[#F5A623]">Intelligence Applicata.</span>
             </h2>
             <p className="text-white/40 text-lg leading-relaxed max-w-2xl mx-auto font-light">

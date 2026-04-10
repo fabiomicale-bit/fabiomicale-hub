@@ -65,79 +65,17 @@ export async function POST(req: NextRequest) {
 
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
+/* 
   if (RESEND_API_KEY) {
     try {
       // Email di conferma all'utente
-      const emailText = isCapitolo1
-        ? `Ciao${nome ? ` ${nome}` : ""},
-
-grazie per aver scaricato il Capitolo 1 di "Successo in 3 Passi".
-
-Ecco il link per leggere l'anteprima:
-${resourceUrl}
-
-Se vuoi continuare il percorso, ogni mercoledì alle 9:00 ricevi la newsletter Un Passo Avanti — un concetto, un tool e una prospettiva pratica in 5 minuti di lettura.
-
-A presto,
-Fabio
-
-—
-Fabio Micale | fabiomicale.com
-"Non ti vendo sogni. Ti do strumenti."`
-        : `Ciao,
-
-grazie per esserti iscritto a Un Passo Avanti.
-
-Ecco il link per scaricare la tua risorsa gratuita:
-${resourceUrl}
-
-Ogni mercoledì alle 9:00 riceverai un concetto, un tool e una prospettiva pratica — in 5 minuti di lettura.
-
-A presto,
-Fabio
-
-—
-Fabio Micale | fabiomicale.com
-"Non ti vendo sogni. Ti do strumenti."`;
-
-      await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: "Fabio Micale <fabio@fabiomicale.com>",
-          to: email,
-          subject: "Ecco il tuo omaggio gratuito ✅",
-          text: emailText,
-        }),
-      });
-
-      // Notifica interna a Fabio solo per capitolo1
-      if (isCapitolo1) {
-        await fetch("https://api.resend.com/emails", {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${RESEND_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            from: "Fabio Micale <notifiche@fabiomicale.com>",
-            to: "info@fabiomicale.com",
-            reply_to: email,
-            subject: `📄 Download Capitolo 1 — ${nome ?? email}`,
-            text: `Nuovo download del Capitolo 1\n\nNome: ${nome ?? "(non fornito)"}\nEmail: ${email}\nOrigine: ${utmSource}\n\nData: ${new Date().toLocaleString("it-IT")}`,
-          }),
-        });
-      }
+      // ... (existing code)
     } catch (err) {
       console.error("Resend error:", err);
-      // Non blocchiamo il flusso se l'email fallisce
     }
-  } else {
-    console.log("RESEND_API_KEY mancante — email non inviata:", { nome, email, utmSource });
   }
+*/
+  console.log("INVIO EMAIL SOSPESO TEMPORANEAMENTE PER REVISIONE CONTENUTI:", { email, utmSource });
 
   return NextResponse.json({ success: true, ebookUrl: resourceUrl });
 }

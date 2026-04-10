@@ -210,7 +210,7 @@ export default function ChiSonoPage() {
       <section className="py-32 px-6 bg-[#0D0D0D]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <div className="badge mb-6">Foundations</div>
+            <div className="badge mb-6">Fondamenta</div>
             <h2 className="text-4xl md:text-5xl font-light text-white font-serif">
               Cosa porto <span className="italic text-[#F5A623]">sul tavolo.</span>
             </h2>

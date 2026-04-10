@@ -118,12 +118,15 @@ export default function PuntoZeroPage() {
           </div>
           
           <div className="flex flex-col items-center gap-6">
-            <Link 
-              href="/risorse?dl=punto-zero" 
-              className="btn-gold px-12 py-5 text-xs tracking-widest font-bold"
+            <button 
+              disabled={true}
+              className="btn-gold px-12 py-5 text-xs tracking-widest font-bold opacity-40 grayscale cursor-not-allowed uppercase"
             >
-              ACCEDI AL MANUALE
-            </Link>
+              Manuale in fase di aggiornamento
+            </button>
+            <p className="text-[10px] text-[#F5A623] font-bold uppercase tracking-[0.3em] animate-pulse">
+              A breve sarà disponibile al download
+            </p>
             <div className="text-[10px] uppercase font-bold text-white/20 tracking-widest italic">
               Oltre 1.500 imprenditori hanno già iniziato il reset.
             </div>

@@ -35,7 +35,7 @@ export default function BlogPage() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center animate-fade-in-up">
-          <div className="badge mb-8 mx-auto">Growth Intelligence</div>
+          <div className="badge mb-8 mx-auto">Protocollo della Crescita</div>
           <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
             Pensiero <br />
             <span className="italic text-[#F5A623]">Strategico.</span>

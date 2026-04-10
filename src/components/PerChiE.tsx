@@ -54,7 +54,7 @@ export default function PerChiE() {
             >
               {/* Vertical ID */}
               <div className="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em] mb-10 border-l border-[#F5A623]/30 pl-4">
-                Symptom 0{i + 1}
+                Sintomo 0{i + 1}
               </div>
 
               {/* Icon with subtle glow */}

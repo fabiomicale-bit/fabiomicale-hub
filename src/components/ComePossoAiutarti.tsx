@@ -3,7 +3,7 @@ import Link from "next/link";
 const mainSolutions = [
   {
     id: "mepa",
-    title: "Lifecycle Appalti Pubblici",
+    title: "Ciclo Vita Appalti Pubblici",
     brand: "MEPA Elite™",
     desc: "Il sistema operativo per gestire l'intera filiera PA: dall'abilitazione portale alla ricerca gare, fino all'aggiudicazione e all'incasso certo dei pagamenti.",
     accent: "gold",
@@ -107,7 +107,7 @@ export default function ComePossoAiutarti() {
           <div className="flex gap-6">
             <div className="text-[#F5A623] opacity-50 shrink-0">🎓</div>
             <div>
-              <h4 className="text-white font-bold mb-2">Insights</h4>
+              <h4 className="text-white font-bold mb-2">Analisi Strategiche</h4>
               <p className="text-sm text-white/40 mb-4">Analisi e approfondimenti strategici sul mercato.</p>
               <Link href="/blog" className="text-xs font-bold text-[#F5A623] hover:underline uppercase tracking-wider">Leggi il Blog</Link>
             </div>

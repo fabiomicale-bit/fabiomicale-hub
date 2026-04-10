@@ -107,26 +107,16 @@ export default function EbookForm() {
         </label>
 
         <button
-          type="submit"
-          disabled={!canSubmit || status === "loading"}
-          className="btn-gold w-full py-5 text-[10px] tracking-[0.2em] font-bold uppercase transition-all disabled:opacity-20 disabled:grayscale"
+          type="button"
+          disabled={true}
+          className="btn-gold w-full py-5 text-[10px] tracking-[0.2em] font-bold uppercase transition-all opacity-40 grayscale cursor-not-allowed"
         >
-          {status === "loading" ? "Elaborazione dati..." : "ACCEDI AL PROTOCOLLO →"}
+          MANUALE IN FASE DI AGGIORNAMENTO
         </button>
-      </form>
-
-      {status === "error" && (
-        <p className="text-red-400 text-[10px] mt-4 font-bold text-center uppercase tracking-widest">
-          Errore di connessione. Riprova o scrivi a{" "}
-          <a href="mailto:info@fabiomicale.com" className="underline">
-            supporto
-          </a>
+        <p className="text-[10px] text-[#F5A623] mt-4 text-center font-bold uppercase tracking-widest animate-pulse">
+          A breve sarà disponibile al download
         </p>
-      )}
-
-      <p className="text-[9px] uppercase tracking-[0.3em] text-white/10 mt-6 text-center font-bold">
-        Accesso immediato • Documento Riservato
-      </p>
+      </form>
     </div>
   );
 }

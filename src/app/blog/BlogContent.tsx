@@ -74,7 +74,7 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
                 >
                   <div className="flex items-center justify-between mb-8 opacity-60">
                     <span className="text-[10px] font-bold uppercase tracking-widest text-[#F5A623]">
-                      Priority Reading
+                      Letture Prioritarie
                     </span>
                     <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">
                       {post.categoria}
