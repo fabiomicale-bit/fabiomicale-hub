@@ -57,13 +57,14 @@ export default function Newsletter() {
             Ogni mercoledì, ricevi protocolli operativi e analisi strategiche per far evolvere il tuo business. Niente fumo, solo metodo.
           </p>
 
-          {/* Lead Magnet Preview Box */}
-          <div className="bg-white/[0.03] border border-white/5 rounded-2xl p-6 mb-12 flex items-center justify-center gap-6 max-w-lg mx-auto text-left group hover:border-[#F5A623]/20 transition-all duration-300">
-            <div className="text-3xl grayscale group-hover:grayscale-0 transition-all">🎁</div>
-            <div>
-              <p className="text-white font-bold text-sm mb-1 italic">Omaggio immediato:</p>
-              <p className="text-white/40 text-xs leading-relaxed uppercase tracking-widest">Manuale d&apos;Azione — Il Metodo Fabio Micale</p>
-            </div>
+          {/* Lead Magnet Preview Box - SOSPESO */}
+          <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 mb-12 flex flex-col items-center justify-center gap-2 max-w-lg mx-auto text-center opacity-50 grayscale">
+            <p className="text-white/40 text-[10px] font-bold uppercase tracking-[0.3em]">
+              Materiale in fase di revisione
+            </p>
+            <p className="text-[#F5A623] text-xs font-bold uppercase tracking-widest animate-pulse">
+              A breve sarà disponibile al download
+            </p>
           </div>
 
           {status === "success" ? (
@@ -74,15 +75,13 @@ export default function Newsletter() {
                 </svg>
               </div>
               <h4 className="text-xl font-bold text-white mb-2">Benvenuto nel Protocollo</h4>
-              <p className="text-white/40 text-sm mb-8">Controlla la tua email, il materiale sta arrivando.</p>
-              <a
-                href={ebookUrl || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-gold w-full flex justify-center"
+              <p className="text-white/40 text-sm mb-8 italic">Sei iscritto correttamente. La tua risorsa sarà inviata non appena aggiornata.</p>
+              <button
+                disabled={true}
+                className="btn-gold w-full flex justify-center opacity-40 grayscale cursor-not-allowed uppercase text-[10px] tracking-widest"
               >
-                Scarica ora
-              </a>
+                Download in Aggiornamento
+              </button>
             </div>
           ) : (
             <div className="max-w-md mx-auto">
@@ -99,12 +98,15 @@ export default function Newsletter() {
                   />
                 </div>
                 <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="btn-gold w-full justify-center py-4 text-sm tracking-[0.1em]"
+                  type="button"
+                  disabled={true}
+                  className="btn-gold w-full justify-center py-4 text-xs tracking-[0.2em] uppercase opacity-40 grayscale cursor-not-allowed"
                 >
-                  {status === "loading" ? "Elaborazione..." : "Accedi al Protocollo"}
+                  Sistema in Aggiornamento
                 </button>
+                <p className="text-[10px] text-[#F5A623] mt-2 font-bold uppercase tracking-widest">
+                  Nuovi omaggi disponibili a breve
+                </p>
               </form>
 
               {status === "error" && (
