@@ -24,10 +24,10 @@ export default function Hero() {
             </div>
 
             {/* Headline: La Promessa */}
-            <h1 className="animate-fade-in-up delay-100 text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight text-white mb-8 font-serif">
+            <h1 className="animate-fade-in-up delay-100 text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] tracking-tight text-white mb-8 font-serif text-balance">
               Smetti di lavorare <br />
               <span className="italic text-[#F5A623]">per</span> l&apos;azienda. <br />
-              <span className="font-sans font-bold">Falla lavorare per te.</span>
+              <span className="font-sans font-bold">Falla lavorare per&nbsp;te.</span>
             </h1>
 
             {/* Subtitle: Il Metodo */}
