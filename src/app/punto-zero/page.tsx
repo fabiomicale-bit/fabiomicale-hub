@@ -27,13 +27,13 @@ export default function PuntoZeroPage() {
         <div className="absolute inset-0 bg-grid opacity-[0.015]" />
 
         <div className="relative z-10 max-w-5xl mx-auto text-center animate-fade-in-up">
-          <div className="badge border-white/20 text-white/60 mb-8 mx-auto tracking-[0.4em]">Stato: Eredità & Condivisione</div>
+          <div className="badge border-white/20 text-white/60 mb-8 mx-auto tracking-[0.4em]">Il Punto della Consapevolezza</div>
           <h1 className="text-5xl md:text-8xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
-            Dalla <span className="italic">Crisi</span> alla <br />
-            <span className="text-white/40">Eredità Punto Zero.</span>
+            PuntoZero: Il momento in cui capisci che <br />
+            <span className="italic text-[#F5A623]">qualcosa non torna più.</span>
           </h1>
-          <p className="text-xl text-white/30 leading-relaxed mb-12 max-w-2xl mx-auto font-light">
-            Nessuna formula magica. Solo la condivisione di un percorso di rinascita e resilienza per chi deve azzerare il caos e ripartire. Questo è il mio lascito: un protocollo di ricostruzione umana e professionale che presto diventerà una community autogestita.
+          <p className="text-xl text-white/40 leading-relaxed mb-12 max-w-2xl mx-auto font-light">
+            Non sei bloccato perché non ti impegni abbastanza. Sei bloccato perché stai usando una mappa incompleta. PuntoZero è il primo passo verso un cambiamento autentico per chi ha già &quot;fatto le cose giuste&quot; ma sente ancora una tensione silenziosa che non può più ignorare.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -59,10 +59,10 @@ export default function PuntoZeroPage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div className="animate-fade-in-up">
               <h2 className="text-4xl md:text-5xl font-light text-white mb-10 font-serif leading-tight">
-                Non è consulenza. <br /><span className="italic text-white/40">È un passaggio di testimone.</span>
+                Vivi una vita che &quot;funziona&quot; <br /><span className="italic text-white/40">ma che non ti attraversa più?</span>
               </h2>
               <p className="text-white/40 text-lg leading-relaxed mb-10 font-light">
-                Il Punto Zero è il laboratorio di chi ha deciso di vincere veramente contro le avversità. Non ti insegno a gestire il business — per quello ci sono i miei advisory professionali. Qui ti trasmetto la forza di estirpare ciò che ti rallenta.
+                Il disallineamento non arriva all&apos;improvviso. Cresce lentamente mentre continui a fare ciò che hai sempre fatto. Smetti di raccontarti che è solo una fase di stanchezza. Il PuntoZero non è la soluzione, è il momento in cui diventi finalmente lucido.
               </p>
               
               <div className="space-y-8">
@@ -108,12 +108,14 @@ export default function PuntoZeroPage() {
             <p>
               Ho sintetizzato i 7 pilastri del reset imprenditoriale in un manuale d&apos;azione crudo e senza filtri.
             </p>
-            <ul className="text-left max-w-sm mx-auto space-y-2 text-sm uppercase tracking-widest font-bold text-white/20">
-              <li className="flex gap-3"><span className="text-[#F5A623]">01.</span> Il disallineamento invisibile</li>
-              <li className="flex gap-3"><span className="text-[#F5A623]">02.</span> Lo Zero: Smettere di fingere</li>
-              <li className="flex gap-3"><span className="text-[#F5A623]">03.</span> Il Porto: La pausa consapevole</li>
-              <li className="flex gap-3"><span className="text-[#F5A623]">04.</span> Il Percorso: Costruire passo dopo passo</li>
-              <li className="flex gap-3"><span className="text-[#F5A623]">05.</span> La Soglia: Il punto di non ritorno</li>
+            <ul className="text-left max-w-sm mx-auto space-y-3 text-[10px] uppercase tracking-[0.2em] font-bold text-white/30 border-l border-white/5 pl-8">
+              <li><span className="text-[#F5A623] mr-2">01.</span> Il momento del non-ritorno</li>
+              <li><span className="text-[#F5A623] mr-2">02.</span> Il disallineamento</li>
+              <li><span className="text-[#F5A623] mr-2">03.</span> Lo Zero: Smettere di fingere</li>
+              <li><span className="text-[#F5A623] mr-2">04.</span> Il Porto: Integrazione collettiva</li>
+              <li><span className="text-[#F5A623] mr-2">05.</span> Il Percorso: Oltre le scorciatoie</li>
+              <li><span className="text-[#F5A623] mr-2">06.</span> La Guida: Attivare la guida interna</li>
+              <li><span className="text-[#F5A623] mr-2">07.</span> La Soglia: Responsabilità lucida</li>
             </ul>
           </div>
           
