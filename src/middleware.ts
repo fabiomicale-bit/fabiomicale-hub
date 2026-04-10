@@ -2,41 +2,23 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  // Flag per attivare/disattivare la manutenzione
-  const isMaintenanceMode = true;
-  
   const { pathname } = request.nextUrl;
 
-  if (isMaintenanceMode) {
-    // Esclusioni per permettere la visualizzazione della pagina di manutenzione e degli asset
-    if (
-      pathname === '/maintenance' ||
-      pathname.startsWith('/_next') ||
-      pathname.startsWith('/api') ||
-      pathname.includes('.') // permetti file statici (immagini, favicon, etc)
-    ) {
-      return NextResponse.next();
-    }
-
-    // Reindirizza tutto il resto a /maintenance
-    const url = request.nextUrl.clone();
-    url.pathname = '/maintenance';
-    return NextResponse.redirect(url);
+  // 1. Esclusioni critiche per evitare loop e permettere il caricamento di risorse
+  if (
+    pathname === '/maintenance' ||
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/_next') ||
+    pathname.includes('.')
+  ) {
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  // 2. Redirect forzato a /maintenance per tutto il resto
+  return NextResponse.redirect(new URL('/maintenance', request.url));
 }
 
-// Configura i percorsi su cui il middleware deve agire
+// 3. Matcher universale per catturare ogni rotta
 export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
+  matcher: '/:path*',
 };
