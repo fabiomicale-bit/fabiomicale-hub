@@ -59,17 +59,6 @@ export default function QuestionarioForm() {
     }
   };
 
-      <div className="flex flex-col items-center gap-6">
-        <button
-          disabled={true}
-          className="btn-gold w-full py-5 text-[10px] tracking-[0.3em] font-bold uppercase opacity-40 grayscale cursor-not-allowed"
-        >
-          Audit in fase di aggiornamento
-        </button>
-        <p className="text-[10px] text-[#F5A623] font-bold uppercase tracking-[0.3em] animate-pulse">
-          A breve sarà disponibile
-        </p>
-      </div>
 
   if (status === "success") {
     return (

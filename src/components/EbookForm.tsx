@@ -8,11 +8,12 @@ const EBOOK_URL =
   "https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=sharing";
 
 export default function EbookForm() {
+  const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [privacy, setPrivacy] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
 
-  const canSubmit = email.includes("@") && privacy;
+  const canSubmit = nome.length > 1 && email.includes("@") && privacy;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ export default function EbookForm() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, utm_source: "risorse_ebook" }),
+        body: JSON.stringify({ nome, email, utm_source: "risorse_ebook" }),
       });
 
       const data = await res.json();
@@ -41,35 +42,34 @@ export default function EbookForm() {
 
   if (status === "success") {
     return (
-      <div className="bg-white/[0.02] border border-white/5 rounded-2xl px-8 py-10 text-center animate-fade-in">
-        <div className="text-4xl mb-4">🚀</div>
-        <p className="text-white font-serif italic text-lg mb-6">
-          Analisi Strategica inviata con successo.
+      <div className="bg-[#F5A623]/5 border border-[#F5A623]/20 rounded-2xl px-8 py-12 text-center animate-fade-in shadow-2xl">
+        <div className="text-5xl mb-6">🗝️</div>
+        <p className="text-white font-serif italic text-xl mb-6 leading-relaxed">
+          Accesso Autorizzato. <br />
+          <span className="text-white/40 text-sm not-italic font-sans">La Soglia è aperta. Controlla la tua email, {nome}.</span>
         </p>
-        <a
-          href={EBOOK_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-gold inline-flex items-center gap-3 px-8 py-3 text-[10px] font-bold tracking-widest uppercase"
-        >
-          Scarica il Protocollo
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-        </a>
       </div>
     );
   }
 
   return (
     <div className="relative">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-        <div className="relative">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+        <div className="space-y-4">
+          <input
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            placeholder="Il tuo nome *"
+            required
+            disabled={status === "loading"}
+            className="w-full bg-white/[0.03] border border-white/10 focus:border-[#F5A623]/50 focus:ring-4 focus:ring-[#F5A623]/5 text-white placeholder-white/20 px-5 py-4 rounded-xl outline-none transition-all text-sm disabled:opacity-50 font-light"
+          />
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="La tua email professionale *"
+            placeholder="La tua email migliore *"
             required
             disabled={status === "loading"}
             className="w-full bg-white/[0.03] border border-white/10 focus:border-[#F5A623]/50 focus:ring-4 focus:ring-[#F5A623]/5 text-white placeholder-white/20 px-5 py-4 rounded-xl outline-none transition-all text-sm disabled:opacity-50 font-light"
@@ -107,14 +107,14 @@ export default function EbookForm() {
         </label>
 
         <button
-          type="button"
-          disabled={true}
-          className="btn-gold w-full py-5 text-[10px] tracking-[0.2em] font-bold uppercase transition-all opacity-40 grayscale cursor-not-allowed"
+          type="submit"
+          disabled={!canSubmit || status === "loading"}
+          className="btn-gold w-full py-5 text-[10px] tracking-[0.2em] font-bold uppercase transition-all disabled:opacity-30 disabled:grayscale"
         >
-          MANUALE IN FASE DI AGGIORNAMENTO
+          {status === "loading" ? "Elaborazione..." : "Accedi allo Zero"}
         </button>
-        <p className="text-[10px] text-[#F5A623] mt-4 text-center font-bold uppercase tracking-widest animate-pulse">
-          A breve sarà disponibile al download
+        <p className="text-[9px] text-white/20 mt-2 text-center uppercase tracking-[0.2em] font-bold">
+          Oltre 1.500 utenti hanno già attraversato la soglia
         </p>
       </form>
     </div>

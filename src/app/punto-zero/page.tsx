@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import EbookForm from "@/components/EbookForm";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -33,7 +34,7 @@ export default function PuntoZeroPage() {
             <span className="italic text-[#F5A623]">qualcosa non torna più.</span>
           </h1>
           <p className="text-xl text-white/40 leading-relaxed mb-12 max-w-2xl mx-auto font-light">
-            Non sei bloccato perché non ti impegni abbastanza. Sei bloccato perché stai usando una mappa incompleta. PuntoZero è il primo passo verso un cambiamento autentico per chi ha già &quot;fatto le cose giuste&quot; ma sente ancora una tensione silenziosa che non può più ignorare.
+            C&apos;è un momento in cui smetti di raccontartela. In cui capisci che accumulare successi esterni non sta risolvendo la tensione interna. <span className="text-white font-medium italic">Non puoi più fingere che tutto questo abbia senso.</span> PuntoZero è lo spazio per chi ha deciso di guardare in faccia la realtà e ripartire da una mappa completa.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -47,7 +48,7 @@ export default function PuntoZeroPage() {
               href="#ebook"
               className="btn-ghost px-12 py-5 text-xs tracking-widest font-bold"
             >
-              SCARICA L&apos;ESTRATTO EBOOK
+              ACCEDI ALLO ZERO
             </a>
           </div>
         </div>
@@ -119,19 +120,8 @@ export default function PuntoZeroPage() {
             </ul>
           </div>
           
-          <div className="flex flex-col items-center gap-6">
-            <button 
-              disabled={true}
-              className="btn-gold px-12 py-5 text-xs tracking-widest font-bold opacity-40 grayscale cursor-not-allowed uppercase"
-            >
-              Manuale in fase di aggiornamento
-            </button>
-            <p className="text-[10px] text-[#F5A623] font-bold uppercase tracking-[0.3em] animate-pulse">
-              A breve sarà disponibile al download
-            </p>
-            <div className="text-[10px] uppercase font-bold text-white/20 tracking-widest italic">
-              Oltre 1.500 imprenditori hanno già iniziato il reset.
-            </div>
+          <div className="max-w-md mx-auto w-full">
+            <EbookForm />
           </div>
         </div>
       </section>

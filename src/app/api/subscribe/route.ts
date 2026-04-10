@@ -60,22 +60,48 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  const RESEND_API_KEY = process.env.RESEND_API_KEY;
   const isCapitolo1 = utmSource === "capitolo1" || notify === "capitolo1";
   const resourceUrl = isCapitolo1 ? CAPITOLO1_URL : EBOOK_URL;
 
-  const RESEND_API_KEY = process.env.RESEND_API_KEY;
-
-/* 
   if (RESEND_API_KEY) {
     try {
-      // Email di conferma all'utente
-      // ... (existing code)
+      const resendRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "Fabio Micale <info@fabiomicale.com>",
+          to: email,
+          subject: isCapitolo1 
+            ? "Ecco il primo capitolo: Il Disallineamento" 
+            : "Accesso Autorizzato: Il tuo Manuale PuntoZero",
+          html: `
+            <div style="font-family: serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
+              <h2 style="color: #000; font-style: italic;">Benvenuto nel Porto, ${nome || "Navigante"}.</h2>
+              <p>Hai appena attraversato la Soglia. Questo non è un semplice download, è l'inizio di un percorso di consapevolezza lucida.</p>
+              <p>Come promesso, ecco il link per accedere al manuale:</p>
+              <div style="margin: 30px 0; text-align: center;">
+                <a href="${resourceUrl}" style="background-color: #000; color: #fff; padding: 15px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 2px;">Accedi allo Zero</a>
+              </div>
+              <p style="color: #666; font-size: 14px;">Ti consiglio di leggerlo quando sei nel silenzio. Nei prossimi giorni ti accompagnerò attraverso i 7 pilastri del reset con alcune riflessioni dedicate.</p>
+              <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;" />
+              <p style="font-size: 12px; color: #999;">Fabio Micale — Eredità Punto Zero™</p>
+            </div>
+          `,
+        }),
+      });
+
+      if (!resendRes.ok) {
+        const error = await resendRes.text();
+        console.error("Resend delivery error:", error);
+      }
     } catch (err) {
-      console.error("Resend error:", err);
+      console.error("Resend general error:", err);
     }
   }
-*/
-  console.log("INVIO EMAIL SOSPESO TEMPORANEAMENTE PER REVISIONE CONTENUTI:", { email, utmSource });
 
   return NextResponse.json({ success: true, ebookUrl: resourceUrl });
 }

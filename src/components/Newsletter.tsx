@@ -5,9 +5,9 @@ import { useState } from "react";
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function Newsletter() {
+  const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
-  const [ebookUrl, setEbookUrl] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default function Newsletter() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ nome, email, utm_source: "newsletter_footer" }),
       });
 
       const data = await res.json();
@@ -57,56 +57,41 @@ export default function Newsletter() {
             Ogni mercoledì, ricevi protocolli operativi e analisi strategiche per far evolvere il tuo business. Niente fumo, solo metodo.
           </p>
 
-          {/* Lead Magnet Preview Box - SOSPESO */}
-          <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-6 mb-12 flex flex-col items-center justify-center gap-2 max-w-lg mx-auto text-center opacity-50 grayscale">
-            <p className="text-white/40 text-[10px] font-bold uppercase tracking-[0.3em]">
-              Materiale in fase di revisione
-            </p>
-            <p className="text-[#F5A623] text-xs font-bold uppercase tracking-widest animate-pulse">
-              A breve sarà disponibile al download
-            </p>
-          </div>
 
           {status === "success" ? (
-            <div className="bg-[#2E7D32]/10 border border-[#2E7D32]/20 rounded-2xl p-10 max-w-md mx-auto animate-fade-in">
-              <div className="w-16 h-16 bg-[#2E7D32]/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg className="w-8 h-8 text-[#2E7D32]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-              <h4 className="text-xl font-bold text-white mb-2">Benvenuto nel Protocollo</h4>
-              <p className="text-white/40 text-sm mb-8 italic">Sei iscritto correttamente. La tua risorsa sarà inviata non appena aggiornata.</p>
-              <button
-                disabled={true}
-                className="btn-gold w-full flex justify-center opacity-40 grayscale cursor-not-allowed uppercase text-[10px] tracking-widest"
-              >
-                Download in Aggiornamento
-              </button>
+            <div className="bg-[#F5A623]/5 border border-[#F5A623]/10 rounded-2xl p-10 max-w-md mx-auto animate-fade-in shadow-2xl">
+              <div className="text-4xl mb-6">🗝️</div>
+              <h4 className="text-xl font-bold text-white mb-2 italic font-serif">Benvenuto nel Porto, {nome}.</h4>
+              <p className="text-white/40 text-sm italic">Accesso autorizzato. Riceverai presto le prime riflessioni strategiche.</p>
             </div>
           ) : (
             <div className="max-w-md mx-auto">
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <div className="relative">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Il tuo indirizzo email migliore"
-                    required
-                    disabled={status === "loading"}
-                    className="w-full bg-white/[0.02] border border-white/10 focus:border-[#F5A623] focus:ring-1 focus:ring-[#F5A623]/20 text-white placeholder-white/20 px-6 py-4 rounded-xl outline-none transition-all text-base disabled:opacity-60"
-                  />
-                </div>
+                <input
+                  type="text"
+                  value={nome}
+                  onChange={(e) => setNome(e.target.value)}
+                  placeholder="Il tuo nome *"
+                  required
+                  disabled={status === "loading"}
+                  className="w-full bg-white/[0.02] border border-white/10 focus:border-[#F5A623] focus:ring-1 focus:ring-[#F5A623]/20 text-white placeholder-white/20 px-6 py-4 rounded-xl outline-none transition-all text-base disabled:opacity-60 font-light"
+                />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="La tua email migliore *"
+                  required
+                  disabled={status === "loading"}
+                  className="w-full bg-white/[0.02] border border-white/10 focus:border-[#F5A623] focus:ring-1 focus:ring-[#F5A623]/20 text-white placeholder-white/20 px-6 py-4 rounded-xl outline-none transition-all text-base disabled:opacity-60 font-light"
+                />
                 <button
-                  type="button"
-                  disabled={true}
-                  className="btn-gold w-full justify-center py-4 text-xs tracking-[0.2em] uppercase opacity-40 grayscale cursor-not-allowed"
+                  type="submit"
+                  disabled={status === "loading"}
+                  className="btn-gold w-full justify-center py-5 text-xs tracking-[0.2em] font-bold uppercase transition-all"
                 >
-                  Sistema in Aggiornamento
+                  {status === "loading" ? "Elaborazione..." : "Entra nel Porto"}
                 </button>
-                <p className="text-[10px] text-[#F5A623] mt-2 font-bold uppercase tracking-widest">
-                  Nuovi omaggi disponibili a breve
-                </p>
               </form>
 
               {status === "error" && (
