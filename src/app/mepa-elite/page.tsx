@@ -153,7 +153,7 @@ export default function MepaElitePage() {
             FISSA UN COLLOQUIO DI QUALIFICA
           </Link>
           <div className="mt-12 text-[10px] uppercase tracking-[0.4em] text-white/20 font-bold">
-            Servizio Riservato ad Aziende con fatturato &gt; 500k
+            Riservato ad Imprenditori pronti a scalare il proprio business tramite Appalti Pubblici
           </div>
         </div>
       </section>
