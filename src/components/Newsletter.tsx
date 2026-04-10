@@ -1,13 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 export default function Newsletter() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
-  const [ebookUrl, setEbookUrl] = useState<string | null>(null);
   const [status, setStatus] = useState<Status>("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -26,7 +25,6 @@ export default function Newsletter() {
       const data = await res.json();
 
       if (data.success) {
-        setEbookUrl(data.ebookUrl);
         setStatus("success");
       } else {
         setStatus("error");
