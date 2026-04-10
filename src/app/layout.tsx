@@ -24,7 +24,7 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.fabiomicale.com"),
   title: {
-    default: "Fabio Micale — Il Metodologo della Crescita",
+    default: "Fabio Micale — Advisor in Sistemi Operativi & AI",
     template: "%s | Fabio Micale",
   },
   description:
@@ -109,3 +109,4 @@ export default function RootLayout({
     </html>
   );
 }
+// Build Trigger: Maintenance Mode Activated v2

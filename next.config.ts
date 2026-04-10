@@ -16,6 +16,17 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // FORZA MANUTENZIONE (Nuclear Option)
+      {
+        source: "/",
+        destination: "/maintenance",
+        permanent: false,
+      },
+      {
+        source: "/punto-zero",
+        destination: "/maintenance",
+        permanent: false,
+      },
       {
         source: "/:path*",
         has: [{ type: "host", value: "fabiomicale.com" }],
