@@ -1,108 +1,197 @@
+"use client";
+
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata = {
-  title: "Feedback Hub | Fabio Micale — Cento Unico Recensioni",
-  description: "Il punto unico per condividere la tua esperienza e contribuire all'evoluzione del metodo. Partecipa al Review Program 2026.",
-};
+const caseStudies = [
+  {
+    id: "mepa-asl",
+    category: "MEPA Elite",
+    title: "Fornitura Arredi Ospedalieri",
+    client: "ASL Roma 2",
+    value: "€ 450.000",
+    result: "Aggiudicata gara PA dopo anni di esclusioni formali. Abilitazione ottenuta in 10 giorni.",
+    serviceQuality: "Precisione millimetrica nella gestione del plico telematico.",
+    icon: "🏛️"
+  },
+  {
+    id: "impresa-costruzioni",
+    category: "Impresa Liquida",
+    title: "Sistematizzazione PMI Edile",
+    client: "Marco, Imprenditore",
+    value: "Velocità +500%",
+    result: "I preventivi ora escono in 20 minuti invece di 3 ore. Controllo totale dei cantieri da remoto.",
+    serviceQuality: "Supporto tecnico costante e risolutivo su ogni intoppo operativo.",
+    icon: "🏗️"
+  },
+  {
+    id: "mepa-cloud",
+    category: "MEPA Elite",
+    title: "Infrastruttura Server e Cloud",
+    client: "Regione Lazio",
+    value: "€ 2.150.000",
+    result: "Gestione di un bando complesso su Sistema Dinamico (SDA) con zero errori formali.",
+    serviceQuality: "Capacità di analisi fuori dal comune: hanno trovato opportunità che ignoravamo.",
+    icon: "⚙️"
+  },
+  {
+    id: "ingegneria-ai",
+    category: "Sistemi AI",
+    title: "Automazione Pre-Calcolo",
+    client: "Roberto, Ingegnere",
+    value: "Asset Scalabile",
+    result: "Costruito in 3 settimane un sistema di monitoraggio costi che prima richiedeva un consulente esterno.",
+    serviceQuality: "Processi fluidi e comunicazione no-bullshit. Esattamente quello che ci serviva.",
+    icon: "🤖"
+  },
+  {
+    id: "mepa-milano",
+    category: "MEPA Elite",
+    title: "Servizi di Sanificazione",
+    client: "Comune di Milano",
+    value: "€ 1.200.000",
+    result: "Contratto triennale blindato grazie a un'offerta tecnica ingegnerizzata su misura.",
+    serviceQuality: "Hanno sbloccato un bando inaccessibile trasformandolo in un asset aziendale.",
+    icon: "🧹"
+  },
+  {
+    id: "mepa-cultura",
+    category: "MEPA Elite",
+    title: "Digitalizzazione Archivi",
+    client: "Ministero Cultura",
+    value: "€ 720.000",
+    result: "Accesso rapido al bando e supporto totale nell'invio del plico telematico.",
+    serviceQuality: "Abbiamo delegato tutto il processo e il risultato è stato impeccabile.",
+    icon: "📚"
+  }
+];
 
-const reviewCategories = [
+const feedbackOptions = [
   {
-    id: "pre-ordine",
-    title: "Review Program 2026",
-    subtitle: "L'edizione Definitiva",
-    description: "Contribuisci al lancio dell'edizione definitiva. Ricevi in OMAGGIO la versione digitale integrale (Edizione 2026) in cambio della tua disponibilità a fornire una recensione onesta nel nostro Feedback Hub.",
-    cta: "SBLOCCA EDIZIONE 2026 (OMAGGIO)",
-    href: "mailto:prenotazioni@fabiomicale.com?subject=Partecipazione Review Program 2026",
-    accent: "green"
+    id: "service-feedback",
+    title: "Lascia un Feedback",
+    description: "Hai lavorato con me su MEPA Elite o Impresa Liquida? La tua esperienza aiuta altri imprenditori.",
+    cta: "INVIA TESTIMONIANZA",
+    href: "mailto:feedback@fabiomicale.com?subject=Testimonianza Sistemi Professionali"
   },
   {
-    id: "servizi",
-    title: "Sistemi Professionali",
-    subtitle: "MEPA Elite™ / Impresa Liquida™",
-    description: "Hai implementato i sistemi di crescita con Fabio? Condividi i tuoi risultati e aiuta altri imprenditori a comprendere il valore dell'ingegneria dei sistemi.",
-    cta: "LASCIA UNA TESTIMONIANZA",
-    href: "mailto:feedback@fabiomicale.com?subject=Testimonianza Sistemi Professionali",
-    accent: "gold"
-  },
-  {
-    id: "legacy",
-    title: "Edizione 2017",
-    subtitle: "Successo in 3 Passi (Originale)",
-    description: "Hai letto la prima edizione storica? Lascia una recensione su Amazon per aiutare chi sta ancora studiando le basi del metodo.",
+    id: "book-feedback",
+    title: "Recensisci il Libro",
+    description: "Hai letto 'Successo in 3 Passi'? Aiuta la community lasciando una recensione su Amazon.",
     cta: "RECENSISCI SU AMAZON",
-    href: "https://www.amazon.it/review/create-review/?asin=153755087X",
-    accent: "white"
+    href: "https://www.amazon.it/review/create-review/?asin=153755087X"
   }
 ];
 
 export default function RecensioniPage() {
   return (
-    <main className="min-h-screen bg-[#0D0D0D] text-white">
+    <main className="min-h-screen bg-[#0D0D0D] text-white selection:bg-[#F5A623]/20">
       <Navbar />
 
-      <section className="pt-44 pb-32 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="badge mb-8 mx-auto">Asset di Evoluzione</div>
-          <h1 className="text-5xl md:text-7xl font-light leading-tight tracking-tight mb-8 font-serif">
-            Feedback <span className="italic text-[#F5A623]">Hub.</span>
+      {/* ── HERO: RISULTATI ────────────────────────────────────── */}
+      <section className="pt-44 pb-20 px-6 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-[#F5A623] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+        
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="badge mb-8 mx-auto">Wall of Success 2025</div>
+          <h1 className="text-5xl md:text-8xl font-light leading-tight tracking-tight mb-8 font-serif">
+            L&apos;unica metrica: <br />
+            <span className="italic text-[#F5A623]">Risultati Reali.</span>
           </h1>
-          <p className="text-xl text-white/40 leading-relaxed font-light mb-20 max-w-2xl mx-auto">
-            Ogni interazione è un passo verso l&apos;eccellenza. Il tuo feedback non è solo un commento, è un asset per l&apos;evoluzione del metodo e della community.
+          <p className="text-xl text-white/40 leading-relaxed font-light max-w-2xl mx-auto">
+            Dietro ogni numero c&apos;è un&apos;architettura operativa che ha trasformato la complessità in profitto e tempo libero.
           </p>
+        </div>
+      </section>
 
-          <div className="grid gap-12">
-            {reviewCategories.map((cat) => (
+      {/* ── GRIGLIA CASI STUDIO ─────────────────────────────────── */}
+      <section className="py-20 px-6 bg-[#0D0D0D]">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {caseStudies.map((study) => (
               <div 
-                key={cat.id} 
-                id={cat.id}
-                className={`card-premium p-8 md:p-12 text-left relative overflow-hidden group transition-all duration-500 hover:border-${cat.accent === 'gold' ? '[#F5A623]' : cat.accent === 'green' ? '[#2E7D32]' : 'white'}/30`}
+                key={study.id}
+                className="card-premium p-10 flex flex-col group hover:bg-white/[0.04] transition-all duration-500 border-white/5"
               >
-                {cat.accent === 'green' && (
-                  <div className="absolute top-0 right-0 px-4 py-1 bg-[#2E7D32] text-white text-[10px] font-bold uppercase tracking-widest rounded-bl-lg">
-                    Strategia Consigliata
-                  </div>
-                )}
+                <div className="text-4xl mb-8 grayscale group-hover:grayscale-0 transition-all">{study.icon}</div>
                 
-                <div className="relative z-10 grid md:grid-cols-[1fr_250px] gap-8 items-center">
-                  <div>
-                    <span className={`text-[10px] uppercase tracking-[0.3em] font-bold mb-3 block ${
-                      cat.accent === 'gold' ? 'text-[#F5A623]' : cat.accent === 'green' ? 'text-[#2E7D32]' : 'text-white/40'
-                    }`}>
-                      {cat.subtitle}
-                    </span>
-                    <h2 className="text-3xl font-serif text-white mb-6 italic">{cat.title}</h2>
-                    <p className="text-white/40 leading-relaxed font-light mb-0">
-                      {cat.description}
-                    </p>
-                  </div>
-                  
-                  <div className="flex justify-end">
-                    <a
-                      href={cat.href}
-                      target={cat.href.startsWith('http') ? "_blank" : "_self"}
-                      rel={cat.href.startsWith('http') ? "noopener noreferrer" : ""}
-                      className={`btn-${cat.accent === 'green' ? 'gold' : cat.accent === 'gold' ? 'gold' : 'ghost'} w-full text-center px-6 py-4 text-[10px] tracking-[0.2em] font-bold`}
-                      style={cat.accent === 'green' ? { backgroundColor: '#2E7D32', color: 'white' } : {}}
-                    >
-                      {cat.cta}
-                    </a>
-                  </div>
+                <div className="flex items-center gap-2 mb-6">
+                  <span className={`text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border ${
+                    study.category.includes('MEPA') 
+                      ? 'bg-[#2E7D32]/10 border-[#2E7D32]/20 text-[#2E7D32]' 
+                      : 'bg-[#F5A623]/10 border-[#F5A623]/20 text-[#F5A623]'
+                  }`}>
+                    {study.category}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-[#F5A623] transition-colors leading-tight">
+                  {study.title}
+                </h3>
+                <p className="text-[10px] text-white/20 uppercase tracking-[0.2em] font-bold mb-6">{study.client}</p>
+
+                <p className="text-white/40 text-sm font-light leading-relaxed mb-8 flex-1">
+                  {study.result}
+                </p>
+
+                <div className={`border-l-2 pl-4 py-3 mb-8 ${
+                   study.category.includes('MEPA') ? 'border-[#2E7D32]/30 bg-[#2E7D32]/5' : 'border-[#F5A623]/30 bg-[#F5A623]/5'
+                }`}>
+                  <p className={`font-serif italic text-xs leading-relaxed ${
+                    study.category.includes('MEPA') ? 'text-[#2E7D32]' : 'text-[#F5A623]'
+                  }`}>
+                    &ldquo;{study.serviceQuality}&rdquo;
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-white/5 flex items-center justify-between">
+                  <span className="text-[10px] text-white/30 uppercase tracking-widest">Valore / Impatto</span>
+                  <span className="text-sm font-bold text-white">{study.value}</span>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="mt-32 p-12 bg-white/[0.02] border border-white/5 rounded-3xl text-center">
-            <h3 className="text-2xl font-serif text-white mb-6">Cerchi una video-testimonianza?</h3>
-            <p className="text-white/30 font-light mb-8 max-w-xl mx-auto">
-              Per casi studio complessi o per condividere la tua storia di successo in formato video, contattaci direttamente a questa email.
-            </p>
-            <a href="mailto:successo@fabiomicale.com" className="text-[#F5A623] font-bold tracking-widest text-xs uppercase border-b border-[#F5A623]/20 pb-1 hover:border-[#F5A623] transition-all">
-              successo@fabiomicale.com
-            </a>
+      {/* ── FEEDBACK HUB (Secondary) ────────────────────────────── */}
+      <section className="py-32 px-6 bg-[#141414] border-y border-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-serif text-white mb-10 italic">Hai una storia di successo da condividere?</h2>
+          <p className="text-white/40 mb-16 font-light">Il feedback hub è lo spazio dove i nostri partner contribuiscono all&apos;evoluzione del metodo.</p>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {feedbackOptions.map((opt) => (
+              <div key={opt.id} className="p-10 card-premium border-white/5 bg-white/[0.01] text-left">
+                <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-tight">{opt.title}</h3>
+                <p className="text-white/30 text-sm font-light leading-relaxed mb-8">{opt.description}</p>
+                <a 
+                  href={opt.href} 
+                  target={opt.href.startsWith('http') ? "_blank" : "_self"}
+                  rel={opt.href.startsWith('http') ? "noopener noreferrer" : ""}
+                  className="text-[#F5A623] text-[10px] font-bold uppercase tracking-[0.3em] hover:text-white transition-colors"
+                >
+                  {opt.cta} →
+                </a>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── CTA FINALE ─────────────────────────────────────────── */}
+      <section className="py-40 px-6 relative overflow-hidden">
+        <div className="max-w-3xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-light text-white mb-10 font-serif leading-tight">
+            Vuoi che il prossimo <br /><span className="italic text-[#F5A623]">caso studio</span> sia il tuo?
+          </h2>
+          <p className="text-white/40 text-lg font-light mb-12">
+            Selezioniamo solo progetti con elevato potenziale sistemico. Verifichiamo insieme la compatibilità.
+          </p>
+          <a href="mailto:info@fabiomicale.com" className="btn-gold px-12 py-5 text-sm tracking-[0.3em] font-bold">
+            AVVIA L&apos;ANALISI STRATEGICA
+          </a>
         </div>
       </section>
 

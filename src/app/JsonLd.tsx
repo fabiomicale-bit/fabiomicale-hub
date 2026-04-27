@@ -10,7 +10,7 @@ const personSchema = {
   image: "https://www.fabiomicale.com/og-image.jpg",
   jobTitle: "Expert Advisor in Organizzazione d'Impresa e Appalti Pubblici",
   description:
-    "30 anni di esperienza operativa nella gestione d'impresa, edilizia e appalti pubblici. Fondatore di MEPA Elite™ e Impresa Liquida™. Ha gestito oltre 13.000.000€ di budget, 150+ cantieri e 30+ appalti pubblici aggiudicati.",
+    "30 anni di esperienza operativa nella gestione d'impresa, edilizia e appalti pubblici. Fondatore di MEPA Elite e Impresa Liquida. Ha gestito oltre 13.000.000€ di budget, 150+ cantieri e 30+ appalti pubblici aggiudicati.",
   knowsAbout: [
     "Appalti Pubblici",
     "MEPA",
@@ -43,7 +43,7 @@ const websiteSchema = {
   name: "Fabio Micale",
   url: "https://www.fabiomicale.com",
   description:
-    "Expert Advisor in Organizzazione d'Impresa e Appalti Pubblici. Sistemi operativi per scalare il fatturato (MEPA Elite™) e liberare il tempo (Impresa Liquida™). Per imprenditori e professionisti over 40 nei settori Edilizia, Impiantistica e Pubblica Amministrazione.",
+    "Expert Advisor in Organizzazione d'Impresa e Appalti Pubblici. Sistemi operativi per scalare il fatturato (MEPA Elite) e liberare il tempo (Impresa Liquida). Per imprenditori e professionisti over 40 nei settori Edilizia, Impiantistica e Pubblica Amministrazione.",
   inLanguage: "it-IT",
   author: { "@id": "https://www.fabiomicale.com/#person" },
   publisher: { "@id": "https://www.fabiomicale.com/#person" },
@@ -79,7 +79,7 @@ const organizationSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "MEPA Elite™",
+          name: "MEPA Elite",
           description:
             "Lifecycle completo appalti pubblici: dall'abilitazione portale MEPA all'incasso certo.",
         },
@@ -88,9 +88,27 @@ const organizationSchema = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Impresa Liquida™",
+          name: "Impresa Liquida",
           description:
             "Organizzazione e automazione operativa con AI per uscire dal cantiere e scalare il business.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Agenzia Business",
+          description:
+            "Sistemi di acquisizione clienti basati su AI, Pubblicità Online e Funnel di Conversione.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Punto Zero",
+          description:
+            "Protocollo di reset strategico e rivincita professionale per over 40.",
         },
       },
     ],

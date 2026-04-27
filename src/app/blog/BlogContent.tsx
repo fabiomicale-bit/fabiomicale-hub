@@ -34,19 +34,19 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
       : regularPosts.filter((p) => p.categoria === activeCategory);
 
   return (
-    <div className="py-20 px-6 pb-40 bg-[#0D0D0D]">
+    <div className="py-20 px-6 pb-40 bg-hub-bg">
       <div className="max-w-6xl mx-auto">
 
-        {/* ── Filtro categorie Premium ──────────────────────────── */}
-        <div className="flex flex-wrap gap-4 mb-24 justify-center">
+        {/* ── Filtro categorie Editorial ──────────────────────────── */}
+        <div className="flex flex-wrap gap-3 mb-24 justify-center">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`text-[10px] font-bold uppercase tracking-[0.2em] px-8 py-4 rounded-xl border transition-all duration-300 ${
+              className={`text-[10px] font-bold uppercase tracking-[0.25em] px-8 py-4 rounded-full transition-all duration-500 border ${
                 activeCategory === cat
-                  ? "bg-[#F5A623] border-[#F5A623] text-[#0D0D0D]"
-                  : "bg-white/[0.02] border-white/10 text-white/40 hover:border-[#F5A623]/30 hover:text-white"
+                  ? "bg-hub-ink border-hub-ink text-white shadow-xl"
+                  : "bg-white border-hub-border text-hub-ink-muted hover:border-hub-gold/50 hover:text-hub-ink"
               }`}
             >
               {cat}
@@ -57,45 +57,45 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
         {/* ── Letture Fondamentali (Manifesto) ─────────────────── */}
         {filteredManifesto.length > 0 && (
           <div className="mb-32">
-            <div className="flex items-center gap-6 mb-12">
-              <div className="badge border-[#F5A623]/30 text-[#F5A623] flex items-center gap-2">
+            <div className="flex items-center gap-6 mb-16">
+              <div className="badge-editorial border-hub-gold/30 text-hub-gold-dark flex items-center gap-2">
                 <StarIcon />
                 Manifesto dell&apos;Evoluzione
               </div>
-              <div className="flex-1 h-px bg-gradient-to-r from-[#F5A623]/20 to-transparent" />
+              <div className="flex-1 h-px bg-gradient-to-r from-hub-gold/20 via-hub-border to-transparent" />
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {filteredManifesto.map((post) => (
                 <a
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="card-premium p-10 group flex flex-col hover:border-[#F5A623]/30 transition-all duration-500"
+                  className="card-editorial p-10 group flex flex-col relative overflow-hidden bg-white"
                 >
-                  <div className="flex items-center justify-between mb-8 opacity-60">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[#F5A623]">
-                      Letture Prioritarie
+                  <div className="flex items-center justify-between mb-10 opacity-60">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-hub-gold">
+                      Lettura Prioritaria
                     </span>
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/40">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-hub-ink-light">
                       {post.categoria}
                     </span>
                   </div>
 
-                  <h2 className="text-2xl font-bold text-white mb-6 group-hover:text-[#F5A623] transition-colors leading-tight font-serif italic">
+                  <h2 className="text-2xl font-medium text-hub-ink mb-6 group-hover:text-hub-gold-dark transition-colors leading-tight font-serif italic">
                     {post.titolo}
                   </h2>
 
-                  <p className="text-white/30 text-base leading-relaxed mb-10 flex-1 line-clamp-3 font-light">
+                  <p className="text-hub-ink-muted text-base leading-relaxed mb-10 flex-1 line-clamp-3 font-light italic font-serif">
                     {post.excerpt}
                   </p>
 
-                  <div className="flex items-center justify-between pt-8 border-t border-white/5">
-                    <div className="text-[10px] font-bold uppercase tracking-widest text-white/20">
+                  <div className="flex items-center justify-between pt-8 border-t border-hub-border">
+                    <div className="text-[10px] font-bold uppercase tracking-widest text-hub-ink-light">
                       {post.data}
                     </div>
-                    <span className="text-[#F5A623] text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:translate-x-2 transition-transform">
-                      Leggi
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <span className="text-hub-gold-dark text-[10px] font-black uppercase tracking-[0.3em] flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                      Analizza
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
@@ -109,35 +109,35 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
         {/* ── Ultimi Articoli ───────────────────────────────────── */}
         {filteredRegular.length > 0 && (
           <>
-            <div className="flex items-center gap-6 mb-12">
-              <div className="badge border-white/10 text-white/40">Approfondimenti Strategici</div>
-              <div className="flex-1 h-px bg-gradient-to-r from-white/10 to-transparent" />
+            <div className="flex items-center gap-6 mb-16">
+              <div className="badge-editorial">Approfondimenti Strategici</div>
+              <div className="flex-1 h-px bg-gradient-to-r from-hub-border to-transparent" />
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {filteredRegular.map((post) => (
                 <a
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="card-premium p-10 group flex flex-col hover:bg-white/[0.03] transition-all duration-500"
+                  className="card-editorial p-10 group flex flex-col hover:bg-hub-bg-alt/30 transition-all duration-500"
                 >
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[#2E7D32] mb-8">
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-hub-gold mb-10">
                     {post.categoria}
                   </span>
 
-                  <h2 className="text-xl font-bold text-white mb-4 group-hover:text-[#F5A623] transition-colors leading-tight">
+                  <h2 className="text-xl font-medium text-hub-ink mb-6 group-hover:text-hub-gold-dark transition-colors leading-tight">
                     {post.titolo}
                   </h2>
 
-                  <p className="text-white/30 text-sm leading-relaxed mb-8 flex-1 line-clamp-3 font-light">
+                  <p className="text-hub-ink-muted text-sm leading-relaxed mb-10 flex-1 line-clamp-3 font-light font-serif italic">
                     {post.excerpt}
                   </p>
 
-                  <div className="flex items-center justify-between pt-8 border-t border-white/5">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-white/20">
+                  <div className="flex items-center justify-between pt-8 border-t border-hub-border">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-hub-ink-light">
                       {post.data}
                     </span>
-                    <span className="text-white/40 text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-[#F5A623] transition-colors">
+                    <span className="text-hub-ink-muted text-[10px] font-bold uppercase tracking-widest flex items-center gap-2 group-hover:text-hub-gold-dark transition-colors">
                       Esplora
                     </span>
                   </div>
@@ -150,7 +150,7 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
         {/* ── No Results ────────────────────────────────────────── */}
         {filteredManifesto.length === 0 && filteredRegular.length === 0 && (
           <div className="text-center py-40">
-            <p className="text-white/20 text-lg italic serif">Nessuna analisi strategica disponibile per questa selezione.</p>
+            <p className="text-hub-ink-light text-lg italic font-serif">Nessuna analisi strategica disponibile per questa selezione.</p>
           </div>
         )}
       </div>

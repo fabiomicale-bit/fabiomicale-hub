@@ -1,30 +1,32 @@
 "use client";
 
-import React, { useState } from "react";
-
-type Status = "idle" | "loading" | "success" | "error";
+import { useState } from "react";
 
 export default function Newsletter() {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
+  const [formData, setFormData] = useState({
+    nome: "",
+    cognome: "",
+    email: "",
+    telefono: "",
+    sitoweb: "",
+    messaggio: "",
+    privacy: false
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !email.includes("@")) return;
-
+    if (!formData.nome || !formData.cognome || !formData.email || !formData.telefono || !formData.privacy) return;
     setStatus("loading");
 
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nome, email, utm_source: "newsletter_footer" }),
+        body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
-
-      if (data.success) {
+      if (res.ok) {
         setStatus("success");
       } else {
         setStatus("error");
@@ -35,77 +37,120 @@ export default function Newsletter() {
   };
 
   return (
-    <section id="newsletter" className="relative py-32 px-6 bg-[#0D0D0D] overflow-hidden">
-      
-      {/* Background Ambience */}
-      <div className="absolute inset-0 bg-grid opacity-[0.02]" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50%] h-[50%] bg-[#2E7D32] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+    <section id="newsletter" className="py-32 px-6 bg-hub-bg relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-hub-gold/20 to-transparent" />
 
-      <div className="max-w-4xl mx-auto relative z-10">
-        <div className="card-premium p-10 md:p-16 text-center shadow-2xl">
-          
-          {/* Section label */}
-          <div className="badge mb-8 mx-auto">Accesso Riservato</div>
-
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-6 leading-tight font-serif text-balance">
-            Manuale PuntoZero™ <br />
-            <span className="italic text-[#F5A623]">Il Reset Strategico.</span>
-          </h2>
-          
-          <p className="text-white/40 leading-relaxed mb-12 text-lg max-w-xl mx-auto">
-            Ricevi la REV.0.1 del manuale per il reset e la sequenza email &ldquo;Il Porto&rdquo;. Strategie reali per professionisti che hanno smesso di credere all&apos;hype.
-          </p>
-
-
-          {status === "success" ? (
-            <div className="bg-[#F5A623]/5 border border-[#F5A623]/10 rounded-2xl p-10 max-w-md mx-auto animate-fade-in shadow-2xl">
-              <div className="text-4xl mb-6">🗝️</div>
-              <h4 className="text-xl font-bold text-white mb-2 italic font-serif">Benvenuto nel Porto, {nome}.</h4>
-              <p className="text-white/40 text-sm italic">Accesso autorizzato. Riceverai presto le prime riflessioni strategiche.</p>
-            </div>
-          ) : (
-            <div className="max-w-md mx-auto">
-              <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <input
-                  type="text"
-                  value={nome}
-                  onChange={(e) => setNome(e.target.value)}
-                  placeholder="Il tuo nome *"
-                  required
-                  disabled={status === "loading"}
-                  className="w-full bg-white/[0.02] border border-white/10 focus:border-[#F5A623] focus:ring-1 focus:ring-[#F5A623]/20 text-white placeholder-white/20 px-6 py-4 rounded-xl outline-none transition-all text-base disabled:opacity-60 font-light"
-                />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="La tua email migliore *"
-                  required
-                  disabled={status === "loading"}
-                  className="w-full bg-white/[0.02] border border-white/10 focus:border-[#F5A623] focus:ring-1 focus:ring-[#F5A623]/20 text-white placeholder-white/20 px-6 py-4 rounded-xl outline-none transition-all text-base disabled:opacity-60 font-light"
-                />
-                <button
-                  type="submit"
-                  disabled={status === "loading"}
-                  className="btn-gold w-full justify-center py-5 text-xs tracking-[0.2em] font-bold uppercase transition-all"
-                >
-                  {status === "loading" ? "Elaborazione..." : "Scarica il Manuale"}
-                </button>
-              </form>
-
-              {status === "error" && (
-                <p className="text-red-400 text-xs mt-4 animate-fade-in">
-                  Qualcosa è andato storto. Contattaci a info@fabiomicale.com
-                </p>
-              )}
-              
-              <p className="text-white/20 text-[10px] uppercase tracking-widest mt-8 font-bold">
-                Assenza totale di spam · Disiscrizione istantanea
-              </p>
-            </div>
-          )}
-
+      <div className="max-w-3xl mx-auto text-center">
+        {/* Icon */}
+        <div className="w-16 h-16 mx-auto mb-8 rounded-full bg-hub-gold/10 border border-hub-gold/15 flex items-center justify-center">
+          <svg className="w-7 h-7 text-hub-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
         </div>
+
+        <h2 className="text-3xl md:text-5xl font-serif font-medium text-hub-ink mb-6 leading-tight">
+          Entra nel <span className="italic text-hub-gold">Protocollo.</span>
+        </h2>
+        <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-12 max-w-lg mx-auto">
+          Crescita personale, business online e intelligenza artificiale. Inviaci un messaggio per iniziare il tuo percorso.
+        </p>
+
+        {/* Form */}
+        {status === "success" ? (
+          <div className="card-editorial p-8 max-w-md mx-auto">
+            <div className="text-hub-gold text-2xl mb-3">✓</div>
+            <p className="text-hub-ink font-serif text-lg">Messaggio Inviato.</p>
+            <p className="text-hub-ink-muted text-sm mt-2">Riceverai una risposta entro 24 ore.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-2xl mx-auto text-left">
+            <div className="grid md:grid-cols-2 gap-6">
+              <input
+                type="text"
+                placeholder="Nome *"
+                value={formData.nome}
+                onChange={(e) => setFormData({...formData, nome: e.target.value})}
+                required
+                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+              />
+              <input
+                type="text"
+                placeholder="Cognome *"
+                value={formData.cognome}
+                onChange={(e) => setFormData({...formData, cognome: e.target.value})}
+                required
+                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+              />
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <input
+                type="email"
+                placeholder="La tua email *"
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                required
+                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+              />
+              <input
+                type="tel"
+                placeholder="Telefono *"
+                value={formData.telefono}
+                onChange={(e) => setFormData({...formData, telefono: e.target.value})}
+                required
+                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+              />
+            </div>
+
+            <input
+              type="url"
+              placeholder="Sito Web (opzionale)"
+              value={formData.sitoweb}
+              onChange={(e) => setFormData({...formData, sitoweb: e.target.value})}
+              className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+            />
+
+            <textarea
+              placeholder="Scrivi il motivo per cui ci contatti *"
+              value={formData.messaggio}
+              onChange={(e) => setFormData({...formData, messaggio: e.target.value})}
+              rows={4}
+              required
+              className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all resize-none"
+            />
+
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id="privacy"
+                checked={formData.privacy}
+                onChange={(e) => setFormData({...formData, privacy: e.target.checked})}
+                required
+                className="mt-1 w-4 h-4 accent-hub-gold"
+              />
+              <label htmlFor="privacy" className="text-xs text-hub-ink-light leading-relaxed">
+                Dichiaro di aver letto l&apos;informativa sulla privacy e acconsento al trattamento dei dati personali. *
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] disabled:opacity-50"
+            >
+              {status === "loading" ? "Inviando..." : "Invia Messaggio"}
+            </button>
+          </form>
+        )}
+
+
+        {status === "error" && (
+          <p className="text-red-500 text-sm mt-4">Qualcosa è andato storto. Riprova.</p>
+        )}
+
+        <p className="text-hub-ink-light text-xs mt-6">
+          Zero spam. Cancellati quando vuoi. Privacy rispettata.
+        </p>
       </div>
     </section>
   );

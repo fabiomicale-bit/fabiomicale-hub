@@ -121,7 +121,7 @@ export default function AiPerProfessionistiPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="/risorse"
+              href="/newsletter"
               className="btn-gold px-12 py-6 text-sm tracking-[0.3em] font-bold"
             >
               SCARICA IL MANIFESTO

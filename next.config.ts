@@ -16,31 +16,15 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // FORZA MANUTENZIONE (Nuclear Option)
-      {
-        source: "/",
-        destination: "/maintenance",
-        permanent: false,
-      },
-      {
-        source: "/punto-zero",
-        destination: "/maintenance",
-        permanent: false,
-      },
       {
         source: "/:path*",
         has: [{ type: "host", value: "fabiomicale.com" }],
         destination: "https://www.fabiomicale.com/:path*",
         permanent: true,
       },
-      // Redirect vecchie URL indicizzate da Google → homepage
+      // Redirect vecchie URL
       {
         source: '/quando-un-progetto-e-operativo-ma-non-e-sotto-controllo',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/quando-un-progetto-e-operativo-ma-non-e-sotto-controllo/',
         destination: '/',
         permanent: true,
       },
@@ -55,18 +39,19 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/home/',
-        destination: '/',
-        permanent: true,
-      },
-      {
         source: '/sessioni-di-coaching',
         destination: '/lavora-con-me',
         permanent: true,
       },
+      // Nuova migrazione Punto Zero
       {
-        source: '/sessioni-di-coaching/',
-        destination: '/lavora-con-me',
+        source: '/puntozero',
+        destination: '/punto-zero',
+        permanent: true,
+      },
+      {
+        source: '/puntozero/:path*',
+        destination: '/punto-zero/:path*',
         permanent: true,
       },
     ];

@@ -1,69 +1,130 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import EbookForm from "@/components/EbookForm";
+import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
-  title: "Metodo Impresa Liquida™ | Esci dal Cantiere — Fabio Micale",
-  description:
-    "Trasforma la tua azienda in un asset scalabile che funziona senza di te. Deleghe, processi e controllo di gestione ingegnerizzato.",
+  title: "Impresa Liquida | Automazione Aziendale e Libertà Operativa — Fabio Micale",
+  description: "Trasforma la tua ditta in un sistema autonomo. Protocolli di ingegneria gestionale e AI per liberare il tuo tempo e scalare il business senza la tua presenza costante.",
   openGraph: {
-    title: "Metodo Impresa Liquida™ — Fabio Micale",
-    description: "Il protocollo manageriale per liberare l'imprenditore dalla gestione operativa.",
+    title: "Impresa Liquida — Ingegneria della Libertà",
+    description: "Il protocollo per liberare l'imprenditore dalla Sindrome dell'Intrappolamento Operativo.",
   },
 };
 
+const liquidaFaqs = [
+  { 
+    question: "Devo stravolgere il mio attuale organico?", 
+    answer: "No. L'obiettivo dell'Impresa Liquida è potenziare le persone che già lavorano con te. Automatizziamo i processi ripetitivi e codifichiamo le decisioni, affinché il tuo staff possa operare con autonomia e tu possa finalmente delegare con serenità." 
+  },
+  { 
+    question: "Quanto tempo serve per vedere i primi effetti dello 'svincolo'?", 
+    answer: "Già nei primi 60 giorni implementiamo i 'cruscotti di controllo' che ti permettono di avere visibilità totale senza micro-management. La transizione completa verso un'impresa realmente liquida richiede solitamente un percorso semestrale." 
+  },
+  { 
+    question: "È un metodo applicabile anche in settori non digitali?", 
+    answer: "Certamente. Abbiamo implementato il protocollo in aziende manifatturiere, studi professionali e retail. Ogni attività che ha dei processi ripetitivi può essere ingegnerizzata per funzionare in modo più fluido e autonomo." 
+  },
+  { 
+    question: "Cosa si intende per 'Titolare Opzionale'?", 
+    answer: "Significa che l'azienda è in grado di produrre utile, gestire le urgenze e crescere anche se tu decidi di assentarti per un mese. Il tuo ruolo si sposta dalla gestione operativa alla visione strategica." 
+  },
+  { 
+    question: "La mia presenza sarà ancora necessaria fisicamente in ufficio?", 
+    answer: "L'obiettivo è renderti 'opzionale'. Potrai decidere di essere presente per piacere strategico o per coordinamento ad alto livello, ma non per necessità operativa. Il sistema gestirà il flusso quotidiano in tua assenza." 
+  },
+  { 
+    question: "Come reagirà il mio team a questi cambiamenti?", 
+    answer: "Il protocollo viene presentato come un potenziamento professionale, non una minaccia. Liberiamo i tuoi collaboratori dai compiti alienanti e ripetitivi, permettendo loro di concentrarsi su attività a maggior valore aggiunto e responsabilità." 
+  },
+  { 
+    question: "Posso vendere l'azienda più facilmente dopo il protocollo?", 
+    answer: "Decisamente sì. Un'impresa che funziona senza il titolare vale molto di più sul mercato poiché il rischio di transizione per un acquirente è quasi nullo. Stai trasformando un lavoro in un asset finanziario appetibile." 
+  }
+];
+
 export default function ImpresaLiquidaPage() {
   return (
-    <main className="min-h-screen bg-[#0D0D0D] text-white">
-      <Navbar />
+    <main className="min-h-screen bg-[#FDFDFD] text-[#111827] selection:bg-[#065F46]/10 font-sans">
+      
+      {/* ── HERO: ELEGANZA & AUTONOMIA ───────────────────────── */}
+      <section className="relative pt-52 pb-40 px-6 overflow-hidden bg-white">
+        {/* Deep Premium Background Accents */}
+        <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-[#065F46] opacity-[0.04] blur-[140px] rounded-full pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-[40%] h-[40%] bg-[#D4AF37] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.02] pointer-events-none" />
 
-      {/* ── HERO ────────────────────────────────────────────────── */}
-      <section className="relative pt-44 pb-32 px-6 overflow-hidden">
-        
-        {/* Glow Effects */}
-        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-[#2E7D32] opacity-[0.03] blur-[120px] rounded-full pointer-events-none" />
-        <div className="absolute inset-0 bg-grid opacity-[0.02]" />
-
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-24 items-center">
             <div className="animate-fade-in-up">
-              <div className="badge border-[#2E7D32]/30 text-[#2E7D32] mb-8">Asset Strategico: Libertà Operativa</div>
-              <h1 className="text-5xl md:text-7xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
-                Smetti di essere <br />
-                <span className="italic text-[#2E7D32]">l&apos;operaio</span> della tua azienda.
+              <div className="inline-flex items-center space-x-3 px-6 py-3 rounded-full border border-[#065F46]/20 bg-[#065F46]/5 text-[#065F46] mb-12 font-bold tracking-[0.2em] text-[10px] uppercase backdrop-blur-md shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-[#065F46] shadow-[0_0_10px_rgba(6,95,70,0.5)]" />
+                <span>PROTOCOLLO D&apos;ECCELLENZA: INGEGNERIA DELLA LIBERTÀ STRUTTURALE</span>
+              </div>
+              <h1 className="text-6xl md:text-[92px] font-black leading-[0.9] tracking-tighter mb-12 font-serif text-[#0A0A0A] uppercase">
+                Esci dalla <br />
+                tua <span className="italic font-light text-[#065F46] lowercase">prigione</span> <br />
+                operativa.
               </h1>
-              <p className="text-xl text-white/40 leading-relaxed mb-12 max-w-lg font-light">
-                Se la tua presenza è indispensabile per ogni decisione, non hai un&apos;impresa: hai un lavoro autonomo ad alto rischio. Impresa Liquida™ è il protocollo per ingegnerizzare la tua libertà.
+              <p className="text-xl text-[#374151] leading-relaxed mb-16 max-w-xl font-medium font-serif opacity-90 border-l-4 border-[#065F46]/20 pl-8">
+                Ingegnerizziamo l&apos;autonomia per imprenditori lungimiranti. Trasformiamo la tua ditta in un patrimonio liquido che produce valore mentre torni a casa alle 18:00, grazie all&apos;integrazione dell&apos;Intelligenza Artificiale come tuo &quot;Terzo Socio Silenzioso&quot;.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6">
-                <Link
-                  href="/contatti?ref=impresa-liquida"
-                  className="btn-gold px-12 py-5 text-xs tracking-widest font-bold text-center"
+              <div className="flex flex-col sm:flex-row gap-8 items-center">
+                <a
+                  href="#servizi"
+                  className="group relative px-14 py-6 bg-[#065F46] text-white rounded-full text-[11px] tracking-[0.3em] font-bold text-center transition-all overflow-hidden shadow-2xl shadow-[#065F46]/20"
                 >
-                  ENGINEER YOUR FREEDOM
+                  <span className="relative z-10">VERIFICA STRUTTURALE</span>
+                  <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                </a>
+                <Link href="/impresa-liquida/chi-siamo" className="text-[11px] font-bold tracking-[0.2em] text-[#065F46]/60 hover:text-[#065F46] transition-colors uppercase border-b border-[#065F46]/10 pb-1">
+                  Scopri il Metodo
                 </Link>
               </div>
             </div>
 
-            {/* Visual: Abstract Nodes */}
-            <div className="relative hidden md:flex justify-center">
-              <div className="absolute inset-0 bg-[#2E7D32]/10 blur-[80px] rounded-full" />
-              <div className="relative z-10 p-16 rounded-[100px] border border-white/5 bg-white/[0.01] flex items-center justify-center">
-                 <div className="grid grid-cols-2 gap-8">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-20 h-20 rounded-2xl border border-white/10 flex items-center justify-center bg-[#0D0D0D] shadow-2xl group hover:border-[#2E7D32]/50 transition-all">
-                        <div className="w-2 h-2 rounded-full bg-[#2E7D32]/40" />
+            {/* Visual: Premium Glass Interface */}
+            <div className="relative flex justify-center">
+              <div className="absolute inset-0 bg-[#065F46]/5 blur-[100px] rounded-full scale-110" />
+              <div className="relative z-10 w-full aspect-[4/5] max-w-lg rounded-[60px] border border-white/40 bg-white/40 backdrop-blur-3xl p-1 shadow-[0_32px_120px_rgba(0,0,0,0.08)] overflow-hidden group transition-transform duration-700 hover:scale-[1.02]">
+                 <div className="absolute inset-0 bg-grid-black/[0.01]" />
+                 <div className="relative h-full w-full p-12 flex flex-col justify-between">
+                    <div className="space-y-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-2xl bg-[#065F46] shadow-lg shadow-[#065F46]/30 flex items-center justify-center">
+                           <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                           </svg>
+                        </div>
+                        <div className="h-1.5 w-32 bg-[#065F46]/10 rounded-full" />
                       </div>
-                    ))}
-                 </div>
-                 {/* Connection lines visual */}
-                 <div className="absolute inset-0 p-12 pointer-events-none opacity-20">
-                    <svg className="w-full h-full" viewBox="0 0 200 200" fill="none">
-                       <path d="M50 50 L150 150 M150 50 L50 150" stroke="white" strokeWidth="0.5" />
-                    </svg>
+                      <div className="space-y-3">
+                        <div className="h-10 w-full bg-black/5 rounded-2xl" />
+                        <div className="h-10 w-4/5 bg-black/[0.03] rounded-2xl" />
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-6">
+                      {[1, 2, 3, 4].map((i) => (
+                        <div key={i} className="group/card relative aspect-square rounded-3xl border border-black/[0.03] bg-white/60 p-6 flex flex-col justify-end transition-all hover:bg-[#065F46] group-hover:hover:shadow-xl">
+                           <div className="w-6 h-6 rounded-full border border-black/10 flex items-center justify-center group-hover/card:border-white/40">
+                              <div className="w-1.5 h-1.5 bg-[#065F46] rounded-full group-hover/card:bg-white animate-pulse" />
+                           </div>
+                           <div className="mt-4 text-[9px] font-bold tracking-widest text-black/20 uppercase group-hover/card:text-white/60">Flusso {i}</div>
+                           <div className="mt-1 text-xs font-serif italic text-black/60 group-hover/card:text-white">Ottimizzato</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-8 border-t border-black/[0.03] flex justify-between items-center text-[10px] font-bold tracking-[0.2em] uppercase text-black/20">
+                       <span>Manager Digitale Attivo</span>
+                       <div className="flex gap-1.5">
+                          <div className="w-1 h-1 rounded-full bg-[#065F46]" />
+                          <div className="w-1 h-1 rounded-full bg-[#065F46]/40" />
+                          <div className="w-1 h-1 rounded-full bg-[#065F46]/20" />
+                       </div>
+                    </div>
                  </div>
               </div>
             </div>
@@ -71,77 +132,140 @@ export default function ImpresaLiquidaPage() {
         </div>
       </section>
 
-      {/* ── IL PARADOSSO ───────────────────────────────────────── */}
-      <section className="py-32 px-6 bg-[#141414] border-y border-white/5 relative">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-light text-white mb-10 font-serif leading-tight">
-            La prigione che <br /><span className="italic text-[#2E7D32]">hai costruito tu stesso.</span>
+      {/* ── IL PUNTO DI ROTTURA (GLASS TEXTURE) ────────────────────── */}
+      <section className="py-40 px-6 bg-[#F9FAFB] border-y border-black/[0.03] relative overflow-hidden text-center">
+        <div className="absolute inset-0 bg-grid-black/[0.01]" />
+        <div className="max-w-4xl mx-auto relative z-10">
+          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#065F46] mb-8 block drop-shadow-sm">Analisi della Condizione</span>
+          <h2 className="text-4xl md:text-6xl font-light text-[#0A0A0A] mb-12 font-serif leading-[1.1]">
+            Curiamo la <span className="italic text-[#065F46]">Sindrome dell&apos;Imprenditore Intrappolato.</span>
           </h2>
-          <p className="text-white/40 text-lg leading-relaxed mb-16 max-w-2xl mx-auto font-light">
-            Hai creato un&apos;azienda per essere libero, ma oggi sei l&apos;unico che non può permettersi di spegnere il telefono. Il successo è diventato il tuo più grande limite.
+          <p className="text-black/50 text-xl leading-relaxed max-w-2xl mx-auto font-light mb-24 italic font-serif">
+            Hai costruito un impero, ma oggi ne sei l&apos;ingranaggio più usurato. Se il tuo telefono smette di squillare, l&apos;azienda si ferma. Questo non è successo, è una auto-detenzione operativa.
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8 mt-20">
-            <div className="card-premium p-10 text-left border-l-4 border-l-[#F5A623]">
-               <h3 className="text-white text-xl font-bold mb-4">Stato Attuale: Solido</h3>
-               <p className="text-white/30 text-sm leading-relaxed font-light mb-6">Processi nella testa dell&apos;imprenditore. Decisioni fatte a braccio. Margini che dipendono dal tuo sforzo diretto. </p>
-               <div className="text-[10px] uppercase font-bold text-[#F5A623]">Fragilità estrema</div>
+          <div className="grid md:grid-cols-2 gap-12 text-left">
+            <div className="p-12 rounded-[50px] bg-white border border-black/[0.03] shadow-[0_20px_60px_rgba(0,0,0,0.02)] transition-transform hover:-translate-y-2 duration-500">
+               <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 font-serif italic text-3xl mb-10 border border-red-100/50 shadow-sm">!</div>
+               <h3 className="text-2xl font-serif text-[#0A0A0A] mb-6 italic">Gabbia Operativa</h3>
+               <ul className="space-y-5 text-black/40 text-sm font-light">
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Telefonate ad ogni ora</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Urgenze costanti in azienda</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Margini fragili senza controllo</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Zero spazio per la strategia</li>
+               </ul>
             </div>
-            <div className="card-premium p-10 text-left border-l-4 border-l-[#2E7D32]">
-               <h3 className="text-white text-xl font-bold mb-4">Evoluzione: Liquida</h3>
-               <p className="text-white/30 text-sm leading-relaxed font-light mb-6">Processi codificati. Squadra autonoma. Controllo di gestione predittivo. L&apos;azienda cresce anche quando dormi.</p>
-               <div className="text-[10px] uppercase font-bold text-[#2E7D32]">Asset Scalabile</div>
+            
+            <div className="p-12 rounded-[50px] bg-[#065F46] border border-[#065F46]/20 shadow-[0_40px_100px_rgba(6,95,70,0.15)] transition-transform hover:-translate-y-2 duration-500">
+               <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white font-serif italic text-3xl mb-10 border border-white/10 backdrop-blur-sm">✓</div>
+               <h3 className="text-2xl font-serif text-white mb-6 italic">Protocollo Liquido</h3>
+               <ul className="space-y-5 text-white/60 text-sm font-light">
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Processi ingegnerizzati autonomi</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Team formato alla decisione</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Cruscotti di controllo proattivi</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Libertà di tempo garantita</li>
+               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── LE 3 FASI DELL'INGEGNERIZZAZIONE ────────────────────── */}
-      <section className="py-40 px-6 bg-[#0D0D0D]">
+      {/* ── SUCCESS STORIES & AUTHORITY ──────────────────── */}
+      <section id="metodo" className="py-32 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20 animate-fade-in-up">
-            <div className="badge border-[#2E7D32]/30 text-[#2E7D32] mb-6">Il Protocollo Operativo</div>
-            <h2 className="text-4xl md:text-6xl font-light text-white font-serif">Ingegnerizzare <br /><span className="italic">l&apos;indipendenza.</span></h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-            {[
-              { n: "I", t: "Scomposizione", d: "Analizziamo ogni ingranaggio della tua attività e lo codifichiamo in processi replicabili." },
-              { n: "II", t: "Iniezione di Sistema", d: "Implementiamo strumenti e dashboard per vigilare sull'esecuzione senza doverla supervisionare." },
-              { n: "III", t: "Exit Operativo", d: "Formiamo il tuo team al pensiero sistemico. Tu torni a fare l'Imprenditore." }
-            ].map((p, i) => (
-              <div key={i} className="flex flex-col items-center text-center p-12 card-premium group">
-                 <div className="w-16 h-16 rounded-full border border-white/10 flex items-center justify-center text-xl font-serif italic text-[#2E7D32] mb-10 group-hover:bg-[#2E7D32]/10 transition-all">{p.n}</div>
-                 <h3 className="text-xl font-bold text-white mb-6 uppercase tracking-tight">{p.t}</h3>
-                 <p className="text-white/20 text-base font-light italic serif leading-relaxed">&ldquo;{p.d}&rdquo;</p>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="p-14 rounded-[60px] bg-[#065F46]/5 border border-[#065F46]/10">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#065F46] mb-8 block">Caso di Successo</span>
+              <h3 className="text-4xl font-serif italic mb-8">Da 70 a 15 ore.</h3>
+              <p className="text-black/50 text-lg leading-relaxed mb-10 font-light italic font-serif">
+                Un imprenditore nel settore retail era intrappolato nella gestione quotidiana di 4 punti vendita. Attraverso la codifica dei processi e l'AI-Assistant, ha ridotto del 75% l'impegno operativo, mantenendo intatti i margini.
+              </p>
+              <div className="text-2xl font-serif text-[#065F46] italic">Patrimonio Liquido Creato.</div>
+            </div>
+            
+            <div className="p-14 rounded-[60px] bg-[#111827] text-white">
+              <div className="text-[#D4AF37] mb-10 text-4xl font-serif italic opacity-40">"</div>
+              <p className="text-white/70 text-2xl font-serif italic font-light mb-12 leading-relaxed">
+                "Non è solo automazione. È aver ritrovato il piacere di fare l'imprenditore senza l'ansia del controllo totale. Ora il sistema lavora per me."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-px bg-[#065F46]" />
+                <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Luigi V. — Founder & CEO</div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA FINALE ────────────────────────────────────────── */}
-      <section className="py-40 px-6 border-t border-white/5 bg-[#141414]">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-light text-white mb-12 font-serif">
-            Costruisci il tuo <br /><span className="italic text-[#2E7D32]">secondo tempo.</span>
+      {/* ── I SERVIZI (EMERALD & GOLD) ────────────────────────────── */}
+      <section id="servizi" className="py-48 px-6 bg-white border-t border-black/5">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-32">
+            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#065F46] mb-6 block">Le Nostre Implementazioni</span>
+            <h2 className="text-5xl md:text-7xl font-light text-[#0A0A0A] font-serif leading-tight">Due passi verso <br /><span className="italic text-[#065F46]">la tua autonomia.</span></h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-16">
+            {/* Analysis */}
+            <div className="group p-14 border border-black/[0.03] bg-[#FDFDFD] rounded-[60px] flex flex-col justify-between hover:border-[#065F46]/20 transition-all shadow-[0_20px_80px_rgba(0,0,0,0.02)] hover:shadow-[0_40px_100px_rgba(0,0,0,0.06)] relative overflow-hidden">
+               <div className="absolute top-0 right-0 p-12 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity">
+                  <svg className="w-32 h-32 text-[#065F46]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6h-1v7h6v-1h-5z"/></svg>
+               </div>
+               <div className="relative z-10">
+                  <div className="text-[10px] uppercase font-bold text-black/30 mb-8 tracking-[0.4em]">Fase 01</div>
+                  <h3 className="text-4xl font-serif text-[#0A0A0A] mb-8 italic">Check-up di Autonomia Operativa</h3>
+                  <p className="text-black/50 text-lg leading-relaxed mb-12 font-light italic font-serif">
+                    Un&apos;analisi profonda della tua struttura operativa. Individuiamo i colli di bottiglia e ti consegniamo il tuo &quot;Piano di Svincolo&quot;: la strategia per staccarti dal quotidiano.
+                  </p>
+                  <div className="text-4xl font-serif text-[#065F46] mb-14 italic tracking-tighter">Primo Passo Strategico</div>
+               </div>
+               <a href="mailto:info@fabiomicale.com" className="w-full py-6 rounded-full border border-black/10 text-[10px] font-bold tracking-[0.3em] text-center hover:bg-black hover:text-white transition-all">INIZIA IL CHECK-UP</a>
+            </div>
+
+            {/* Implementation */}
+            <div className="group p-14 border border-[#065F46]/20 bg-white rounded-[60px] flex flex-col justify-between hover:border-[#065F46]/40 transition-all shadow-2xl shadow-[#065F46]/10 relative overflow-hidden">
+               <div className="absolute inset-0 bg-gradient-to-br from-[#065F46]/[0.02] to-transparent pointer-events-none" />
+               <div className="relative z-10">
+                  <div className="text-[10px] uppercase font-bold text-[#065F46] mb-8 tracking-[0.4em]">Fase 02</div>
+                  <h3 className="text-4xl font-serif text-[#0A0A0A] mb-8 italic">Protocollo Impresa Liquida</h3>
+                  <p className="text-black/50 text-lg leading-relaxed mb-12 font-light italic font-serif">
+                    Ristrutturazione ingegneristica semestrale. Implementazione AI manageriale, codifica dei processi e formazione del team per renderti opzionale.
+                  </p>
+                  <div className="text-5xl font-serif text-[#065F46] mb-14 italic tracking-tighter">Richiedi Analisi</div>
+               </div>
+               <a href="mailto:info@fabiomicale.com" className="w-full py-6 rounded-full bg-[#065F46] hover:bg-[#044E39] text-white text-[10px] font-bold tracking-[0.3em] text-center transition-all shadow-xl shadow-[#065F46]/20">ACCEDI AL PROTOCOLLO</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <FAQSection 
+        items={liquidaFaqs} 
+        theme="liquida" 
+        title="Domande sul Protocollo" 
+        subtitle="Analizziamo le dinamiche della libertà aziendale."
+      />
+
+      {/* ── CTA FINALE: IL SECONDO TEMPO ─────────────────────────── */}
+      <section className="py-48 px-6 bg-[#0A0A0A] text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#065F46] opacity-[0.1] blur-[150px] -translate-x-1/2 rounded-full pointer-events-none" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-5xl md:text-7xl font-light mb-14 font-serif leading-tight">
+            Costruisci il tuo <br /><span className="italic text-[#065F46] drop-shadow-lg">secondo tempo.</span>
           </h2>
-          <p className="text-white/40 text-xl leading-relaxed mb-16 max-w-2xl mx-auto font-light">
-            Il Metodo Impresa Liquida™ è un percorso d&apos;elite, non un corso. Lavoriamo a stretto contatto per smontare e rimontare la tua azienda in un asset di valore.
+          <p className="text-white/50 text-xl leading-relaxed mb-20 max-w-2xl mx-auto font-light italic font-serif">
+            Il Metodo Impresa Liquida è riservato a chi ha già una ditta solida ma vuole riprendersi la propria vita. Accettiamo solo 2 nuove implementazioni al trimestre.
           </p>
-          <Link
-            href="/contatti?ref=impresa-liquida-final"
-            className="btn-gold px-12 py-5 text-sm tracking-[0.3em] font-bold"
+          <a
+            href="mailto:info@fabiomicale.com"
+            className="group relative px-16 py-7 bg-[#065F46] text-white rounded-full text-xs tracking-[0.35em] font-bold hover:shadow-[0_20px_80px_rgba(6,95,70,0.4)] transition-all inline-block text-center"
           >
-            RICHIEDI LA TUA ANALISI STRATEGICA
-          </Link>
-          <div className="mt-12 text-[10px] uppercase tracking-[0.4em] text-white/20 font-bold">
-            Protocollo limitato a 1 nuova implementazione mensile.
-          </div>
+            <span className="relative z-10">RICHIEDI UNA SESSIONE STRATEGICA</span>
+            <div className="absolute inset-0 bg-white/10 scale-0 group-hover:scale-100 transition-transform duration-700 rounded-full" />
+          </a>
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 }

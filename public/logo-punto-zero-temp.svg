@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 100" fill="none">
+  <circle cx="30" cy="50" r="25" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="30" cy="50" r="5" fill="#cbd5e1"/>
+  <text x="75" y="55" font-family="Georgia, serif" font-weight="300" font-size="28" fill="#f1f5f9" letter-spacing="0.1em" font-style="italic">Punto</text>
+  <text x="175" y="55" font-family="Georgia, serif" font-weight="700" font-size="28" fill="#ffffff" letter-spacing="0.2em">ZERO</text>
+  <path d="M75 65H270" stroke="#cbd5e1" stroke-width="0.5" opacity="0.3"/>
+</svg>

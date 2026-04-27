@@ -1,23 +1,22 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
-  { label: "Chi sono", href: "/chi-sono" },
+const defaultHubLinks = [
   { label: "Il Metodo", href: "/il-metodo" },
-  { label: "Soluzioni", href: "/soluzioni" },
-  { label: "Il Libro", href: "/il-libro" },
-  { label: "Approfondimenti", href: "/blog" },
-  { label: "Risorse", href: "/risorse" },
+  { label: "Accademia", href: "/accademia" },
+  { label: "I Libri", href: "/il-libro" },
+  { label: "Newsletter", href: "/newsletter" },
+  { label: "Blog", href: "/blog" },
   { label: "Contatti", href: "/contatti" },
 ];
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -27,93 +26,73 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-[#0D0D0D]/80 backdrop-blur-md border-b border-[rgba(255,255,255,0.05)] py-3"
-          : "bg-transparent py-6"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        
-        {/* Logo & Identity */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative p-1 border border-[rgba(255,255,255,0.1)] rounded-lg group-hover:border-[#F5A623] transition-colors duration-300">
-            <Image
-              src="/logo-fabio-micale.svg"
-              width={40}
-              height={40}
-              alt="Fabio Micale"
-              priority
-              className="brightness-110"
-            />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold text-white text-base tracking-tight leading-none">Fabio Micale</span>
-            <span className="text-[10px] text-[rgba(255,255,255,0.4)] uppercase tracking-[0.2em] mt-1 font-semibold group-hover:text-[#F5A623] transition-colors">Advisor Operativo</span>
-          </div>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? "bg-white/95 backdrop-blur-md py-2 shadow-md" : "bg-transparent py-4"
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        {/* Hub Logo */}
+        <Link href="/" className="flex items-center group">
+          <img 
+            src="/logo-hub-definitive.png" 
+            alt="Fabio Micale - Hub Digitale" 
+            className="h-24 md:h-28 w-auto transition-transform group-hover:scale-105"
+          />
         </Link>
 
-        {/* Desktop Nav: Elegant & Spaced */}
-        <nav className="hidden lg:flex items-center gap-10">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-8">
+          {defaultHubLinks.map((link) => (
+            <Link 
+              key={link.href} 
               href={link.href}
-              className={`text-[13px] font-medium transition-all duration-300 tracking-wide uppercase hover:text-[#F5A623] ${
-                pathname === link.href ? "text-[#F5A623]" : "text-white"
+              className={`text-[11px] font-bold uppercase tracking-widest transition-colors hover:text-hub-gold ${
+                pathname === link.href ? "text-hub-gold" : "text-hub-ink/70"
               }`}
             >
               {link.label}
             </Link>
           ))}
-        </nav>
-
-        {/* High-Ticket CTA */}
-        <div className="hidden lg:flex items-center gap-6">
-          <Link
-            href="/soluzioni"
-            className="group relative inline-flex items-center justify-center bg-[#F5A623] hover:bg-[#D4891A] text-[#0D0D0D] text-[12px] font-bold px-7 py-3 rounded-full transition-all duration-300 uppercase tracking-wider overflow-hidden"
-          >
-            <span className="relative z-10">Parlami del tuo caso</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-          </Link>
+          
+          <div className="bg-hub-ink/10 text-hub-ink/40 px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest cursor-default">
+            AREA RISERVATA
+          </div>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle Menu"
+        {/* Mobile Toggle */}
+        <button 
+          className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+          onClick={() => setIsOpen(!isOpen)}
         >
-          <div className={`w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <div className={`w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-          <div className={`w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <div className={`w-6 h-0.5 bg-hub-ink transition-all ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
+          <div className={`w-6 h-0.5 bg-hub-ink transition-all ${isOpen ? "opacity-0" : ""}`} />
+          <div className={`w-6 h-0.5 bg-hub-ink transition-all ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
         </button>
       </div>
 
-      {/* Mobile Menu: Full Screen Overlay Style */}
-      <div className={`fixed inset-0 bg-[#0D0D0D] z-[-1] transition-all duration-500 lg:hidden ${menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"}`}>
-        <div className="flex flex-col items-center justify-center h-full gap-8 px-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-2xl font-light text-white hover:text-[#F5A623] transition-colors tracking-tight"
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
-          <Link
-            href="/soluzioni"
-            className="mt-4 bg-[#F5A623] text-[#0D0D0D] px-10 py-4 rounded-full font-bold uppercase text-sm tracking-widest shadow-xl"
-            onClick={() => setMenuOpen(false)}
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="absolute top-full left-0 right-0 bg-white border-b border-hub-border overflow-hidden lg:hidden shadow-2xl"
           >
-            Parlami del tuo caso
-          </Link>
-        </div>
-      </div>
-    </header>
+            <div className="flex flex-col p-8 gap-6">
+              {defaultHubLinks.map((link) => (
+                <Link 
+                  key={link.href} 
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-lg font-serif italic border-b border-gray-50 pb-2 transition-colors hover:text-hub-gold text-hub-ink"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
   );
 }

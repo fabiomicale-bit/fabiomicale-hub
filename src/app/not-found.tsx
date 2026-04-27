@@ -32,10 +32,10 @@ export default function NotFound() {
             RITORNA ALL&apos;HUB →
           </Link>
           <Link
-            href="/risorse"
+            href="/blog"
             className="px-10 py-5 text-[10px] font-bold tracking-[0.3em] uppercase border border-white/10 hover:border-white/30 text-white/60 hover:text-white transition-all rounded-xl"
           >
-            ESPLORA IL CAVEAU
+            ESPLORA IL BLOG
           </Link>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import BackToTop from "@/components/BackToTop";
 import JsonLd from "./JsonLd";
@@ -10,14 +10,14 @@ import Script from "next/script";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const dmSerif = DM_Serif_Display({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -25,12 +25,24 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.fabiomicale.com"),
   title: {
-    default: "Fabio Micale — Advisor in Sistemi Operativi & AI",
+    default: "Fabio Micale — Autore, Formatore, Metodologo della Crescita",
     template: "%s | Fabio Micale",
   },
   description:
-    "Fabio Micale aiuta imprenditori e professionisti ad evolvere attraverso sistemi operativi di business: MEPA Elite, Impresa Liquida e Punto Zero.",
-  keywords: ["Metodologo della crescita", "Fabio Micale", "Impresa Liquida", "MEPA Elite", "Punto Zero", "Crescita Aziendale"],
+    "Scrivo libri, creo corsi e costruisco sistemi per chi vuole vincere nella vita. Crescita personale, business online e intelligenza artificiale per professionisti Over 40.",
+  keywords: [
+    "Fabio Micale",
+    "Successo in 3 Passi",
+    "crescita personale",
+    "business online",
+    "intelligenza artificiale",
+    "coaching",
+    "formazione",
+    "autodisciplina",
+    "over 40",
+    "corsi online",
+    "Metodologo della Crescita",
+  ],
   authors: [{ name: "Fabio Micale", url: "https://www.fabiomicale.com" }],
   creator: "Fabio Micale",
   openGraph: {
@@ -38,22 +50,23 @@ export const metadata: Metadata = {
     locale: "it_IT",
     url: "https://www.fabiomicale.com",
     siteName: "Fabio Micale",
-    title: "Fabio Micale — AI per Professionisti Over 40",
+    title: "Fabio Micale — Autore, Formatore, Metodologo della Crescita",
     description:
-      "Strumenti concreti per usare l'AI nella tua vita professionale. Niente hype, niente guru.",
+      "Libri, corsi e sistemi per chi vuole vincere nella vita. Crescita personale, AI e strategie concrete per professionisti Over 40.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Fabio Micale — AI per Professionisti Over 40",
+        alt: "Fabio Micale — Autore e Formatore",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fabio Micale — AI per Professionisti Over 40",
-    description: "Strumenti concreti per usare l'AI nella tua vita professionale.",
+    title: "Fabio Micale — Autore, Formatore, Metodologo della Crescita",
+    description:
+      "Libri, corsi e sistemi per chi vuole vincere nella vita.",
     creator: "@fabiomicale",
     images: ["/og-image.jpg"],
   },
@@ -69,7 +82,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://www.fabiomicale.com",
+    canonical: "/",
   },
   icons: {
     icon: [
@@ -101,7 +114,21 @@ export default function RootLayout({
           gtag('config', 'G-X3T310RBZ0');
         `}
       </Script>
-      <body className={`${inter.variable} ${dmSerif.variable} antialiased`}>
+      <Script id="fb-pixel" strategy="afterInteractive">
+        {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '${process.env.NEXT_PUBLIC_META_PIXEL_ID || 'ID-PIXEL-MANCANTE'}');
+          fbq('track', 'PageView');
+        `}
+      </Script>
+      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
         <JsonLd />
         {children}
         <BackToTop />
@@ -110,4 +137,3 @@ export default function RootLayout({
     </html>
   );
 }
-// Build Trigger: Maintenance Mode Activated v2

@@ -2,34 +2,34 @@ import Link from "next/link";
 
 const mainSolutions = [
   {
-    id: "mepa",
-    title: "Ciclo Vita Appalti Pubblici",
-    brand: "MEPA Elite™",
-    desc: "Il sistema operativo per gestire l'intera filiera PA: dall'abilitazione portale alla ricerca gare, fino all'aggiudicazione e all'incasso certo dei pagamenti.",
+    id: "zero",
+    title: "Reset Strategico",
+    brand: "Punto Zero",
+    desc: "Il punto di partenza necessario. Dismettiamo il caos operativo e ricostruiamo le fondamenta della tua autorità professionale attraverso il Metodo del Reset.",
     accent: "gold",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     )
   },
   {
     id: "liquida",
     title: "Ingegneria Gestionale",
-    brand: "Impresa Liquida™",
-    desc: "Esci dall'operatività fisica e dal cantiere. Applichiamo protocolli di organizzazione e automazione AI per rendere il tuo business autonomo e scalabile.",
+    brand: "Impresa Liquida (CORE)",
+    desc: "Trasformiamo la tua esperienza in un Sistema Operativo autonomo. Applichiamo automazione AI e protocolli di delega per rendere il business scalabile e indipendente dalla tua presenza fisica.",
     accent: "green",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.628.288a2 2 0 01-1.063.133l-2.333-.311a2 2 0 01-1.361-.834l-3.12-4.161a2 2 0 01-.191-1.637l.482-1.446a3 3 0 00-.214-2.14L4.343 3.343" />
       </svg>
     )
   },
   {
-    id: "zero",
-    title: "Eredità Punto Zero™",
-    brand: "Condivisione di Percorso",
-    desc: "Oltre la consulenza. La condivisione di un percorso di resilienza e ricostruzione umana per chi deve azzerare il caos e ripartire da basi solide.",
+    id: "mepa",
+    title: "Market Mastery PA",
+    brand: "MEPA Elite",
+    desc: "Verticalizzazione estrema per il mercato degli Appalti Pubblici. Ingegnerizziamo la tua presenza sui portali per massimizzare aggiudicazioni e incassi certi.",
     accent: "gold",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

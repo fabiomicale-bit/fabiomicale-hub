@@ -10,11 +10,14 @@ const CAPITOLO_URL =
 export default function CapitoloForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [nome, setNome] = useState("");
+  const [cognome, setCognome] = useState("");
   const [email, setEmail] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [sitoweb, setSitoweb] = useState("");
   const [privacy, setPrivacy] = useState(false);
 
   const canSubmit =
-    nome.trim() !== "" && email.includes("@") && privacy;
+    nome.trim() !== "" && cognome.trim() !== "" && email.includes("@") && telefono.trim() !== "" && privacy;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,7 +31,10 @@ export default function CapitoloForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           nome,
+          cognome,
           email,
+          telefono,
+          sitoweb,
           utm_source: "capitolo1",
           utm_medium: "organic",
           notify: "capitolo1",
@@ -88,26 +94,58 @@ export default function CapitoloForm() {
 
   /* ── STATI 2 + 4: form (open / loading / error) ────────────────── */
   return (
-    <div className="bg-white/10 border border-white/20 rounded-2xl px-7 py-6 max-w-md">
+    <div className="bg-white/10 border border-white/20 rounded-2xl px-7 py-6 max-w-md text-left">
       <p className="text-white font-semibold text-sm mb-4">
         Dove ti mando il link?
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <div className="grid grid-cols-2 gap-3">
+          <input
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            placeholder="Nome *"
+            required
+            disabled={status === "loading"}
+            className="w-full bg-white/10 border border-white/20 focus:border-white/50 focus:ring-2 focus:ring-white/10 text-white placeholder-white/40 px-4 py-3 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
+          />
+          <input
+            type="text"
+            value={cognome}
+            onChange={(e) => setCognome(e.target.value)}
+            placeholder="Cognome *"
+            required
+            disabled={status === "loading"}
+            className="w-full bg-white/10 border border-white/20 focus:border-white/50 focus:ring-2 focus:ring-white/10 text-white placeholder-white/40 px-4 py-3 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
+          />
+        </div>
+        
+        <div className="grid grid-cols-2 gap-3">
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email *"
+            required
+            disabled={status === "loading"}
+            className="w-full bg-white/10 border border-white/20 focus:border-white/50 focus:ring-2 focus:ring-white/10 text-white placeholder-white/40 px-4 py-3 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
+          />
+          <input
+            type="tel"
+            value={telefono}
+            onChange={(e) => setTelefono(e.target.value)}
+            placeholder="Telefono *"
+            required
+            disabled={status === "loading"}
+            className="w-full bg-white/10 border border-white/20 focus:border-white/50 focus:ring-2 focus:ring-white/10 text-white placeholder-white/40 px-4 py-3 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
+          />
+        </div>
+
         <input
-          type="text"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          placeholder="Il tuo nome *"
-          required
-          disabled={status === "loading"}
-          className="w-full bg-white/10 border border-white/20 focus:border-white/50 focus:ring-2 focus:ring-white/10 text-white placeholder-white/40 px-4 py-3 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
-        />
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="La tua email *"
-          required
+          type="url"
+          value={sitoweb}
+          onChange={(e) => setSitoweb(e.target.value)}
+          placeholder="Sito Web (opzionale)"
           disabled={status === "loading"}
           className="w-full bg-white/10 border border-white/20 focus:border-white/50 focus:ring-2 focus:ring-white/10 text-white placeholder-white/40 px-4 py-3 rounded-xl outline-none transition-colors text-sm disabled:opacity-60"
         />
@@ -131,8 +169,7 @@ export default function CapitoloForm() {
             >
               Privacy Policy
             </a>{" "}
-            e il trattamento dei miei dati per ricevere la risorsa richiesta.
-            Nessuno spam, cancellazione in un click.
+            e il trattamento dei dati personali. *
           </span>
         </label>
 
@@ -144,6 +181,7 @@ export default function CapitoloForm() {
           {status === "loading" ? "Invio in corso..." : "Invia e scarica →"}
         </button>
       </form>
+
 
       {status === "error" && (
         <p className="text-red-400 text-xs mt-3">

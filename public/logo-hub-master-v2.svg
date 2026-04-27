@@ -1,0 +1,20 @@
+<svg width="800" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="300" fill="none" />
+  
+  <g transform="translate(40, 40)">
+    <!-- F Stilizzata con taglio curvo -->
+    <path d="M0,0 H90 V25 H30 V55 H80 V80 H30 V115 C30,125 25,135 0,135 V110 C10,110 12,105 12,100 V0 Z" fill="#FFFFFF" />
+    
+    <!-- M Stilizzata con pendenza Gold -->
+    <path d="M105,0 H135 L165,55 L195,0 H225 V135 H195 V50 L165,110 L135,50 V135 H105 V0 Z" fill="#C8A45A" />
+    
+    <!-- HUB Bold -->
+    <text x="250" y="115" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight: 900; font-size: 130px;" fill="#FFFFFF">HUB</text>
+    
+    <!-- DIGITALE Gold -->
+    <text x="255" y="165" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight: 700; font-size: 45px;" fill="#C8A45A" letter-spacing="8">DIGITALE</text>
+    
+    <!-- Payoff -->
+    <text x="5" y="210" style="font-family: 'Segoe UI', Arial, sans-serif; font-weight: 400; font-size: 18px;" fill="#FFFFFF" opacity="0.9" letter-spacing="3">DIGITAL INNOVATION | GLOBAL NETWORKING</text>
+  </g>
+</svg>
