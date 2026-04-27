@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 
 const agencyFaqs = [
   { 
+    question: "A chi si rivolge il vostro sistema di acquisizione?",
     answer: "Lavoriamo principalmente con PMI e professionisti d'alto valore che hanno già un'offerta solida ma faticano a generare un flusso costante e prevedibile di nuovi clienti. Il nostro sistema AI si adatta a diversi settori, dal B2B ai servizi professionali." 
   },
   { 

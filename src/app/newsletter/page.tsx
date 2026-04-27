@@ -30,10 +30,7 @@ export default function NewsletterPage() {
           </p>
           
           <div className="bg-[#FAFAF8] p-2 rounded-2xl border border-hub-border max-w-md mx-auto shadow-sm">
-            <Newsletter 
-              title="" 
-              description="Unisciti agli oltre 3.000 professionisti che leggono Fabio Micale ogni domenica."
-            />
+            <Newsletter />
           </div>
         </div>
       </section>
@@ -179,10 +176,7 @@ export default function NewsletterPage() {
             Iscriviti ora per ricevere il prossimo dossier e sbloccare il tuo accesso immediato all&apos;Hub Digitale.
           </p>
           <div className="bg-[#FAFAF8] p-8 rounded-3xl border border-hub-border shadow-xl">
-            <Newsletter 
-              title="Assicurati il tuo posto" 
-              description="Inserisci la tua email e unisciti alla community."
-            />
+            <Newsletter />
           </div>
           <p className="text-[10px] text-hub-ink/30 mt-8 uppercase font-bold tracking-widest">
             Nessun costo. Nessuno spam. Solo evoluzione.
