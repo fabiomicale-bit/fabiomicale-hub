@@ -9,8 +9,8 @@ const defaultHubLinks = [
   { label: "Il Metodo", href: "/il-metodo" },
   { label: "Accademia", href: "/accademia" },
   { label: "I Libri", href: "/il-libro" },
-  { label: "Newsletter", href: "/newsletter" },
-  { label: "Blog", href: "/blog" },
+  { label: "Aggiornamenti", href: "/newsletter" },
+  { label: "Articoli", href: "/blog" },
   { label: "Contatti", href: "/contatti" },
 ];
 
@@ -30,12 +30,12 @@ export default function Navbar() {
       scrolled ? "bg-white/95 backdrop-blur-md py-2 shadow-md" : "bg-transparent py-4"
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        {/* Hub Logo */}
-        <Link href="/" className="flex items-center group">
+        {/* Hub Logo - Professional Size */}
+        <Link href="/" className="flex items-center group overflow-hidden h-20 w-52 relative">
           <img 
             src="/logo-hub-definitive.png" 
-            alt="Fabio Micale - Hub Digitale" 
-            className="h-24 md:h-28 w-auto transition-transform group-hover:scale-105"
+            alt="Fabio Micale - Portale Digitale" 
+            className="absolute inset-0 w-full h-full object-contain scale-[2] transition-transform group-hover:scale-[2.1]"
           />
         </Link>
 

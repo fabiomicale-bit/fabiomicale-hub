@@ -132,6 +132,16 @@ export default function ImpresaLiquidaPage() {
         </div>
       </section>
 
+      {/* ── BANNER 01 (DARK STRIP) ───────────────────────────── */}
+      <div className="bg-[#0A0A0A] py-10 border-y border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#065F46] opacity-[0.03] blur-3xl rounded-full -translate-x-1/2" />
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <p className="text-white text-xs md:text-sm font-black tracking-[0.5em] uppercase leading-relaxed">
+            L&apos;impresa non è un lavoro, è un <span className="text-[#065F46]">asset</span> che deve produrre valore senza di te.
+          </p>
+        </div>
+      </div>
+
       {/* ── IL PUNTO DI ROTTURA (GLASS TEXTURE) ────────────────────── */}
       <section className="py-40 px-6 bg-[#F9FAFB] border-y border-black/[0.03] relative overflow-hidden text-center">
         <div className="absolute inset-0 bg-grid-black/[0.01]" />
@@ -147,55 +157,180 @@ export default function ImpresaLiquidaPage() {
           <div className="grid md:grid-cols-2 gap-12 text-left">
             <div className="p-12 rounded-[50px] bg-white border border-black/[0.03] shadow-[0_20px_60px_rgba(0,0,0,0.02)] transition-transform hover:-translate-y-2 duration-500">
                <div className="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 font-serif italic text-3xl mb-10 border border-red-100/50 shadow-sm">!</div>
-               <h3 className="text-2xl font-serif text-[#0A0A0A] mb-6 italic">Gabbia Operativa</h3>
+               <h3 className="text-2xl font-serif text-[#0A0A0A] mb-6 italic">Stato di Caos</h3>
                <ul className="space-y-5 text-black/40 text-sm font-light">
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Telefonate ad ogni ora</li>
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Urgenze costanti in azienda</li>
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Margini fragili senza controllo</li>
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Zero spazio per la strategia</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Telefonate ad ogni ora per decisioni banali</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Urgenze costanti che bloccano la strategia</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Processi "nella testa" e mai codificati</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-red-400" /> Margini fragili che dipendono dal tuo sforzo</li>
                </ul>
             </div>
             
             <div className="p-12 rounded-[50px] bg-[#065F46] border border-[#065F46]/20 shadow-[0_40px_100px_rgba(6,95,70,0.15)] transition-transform hover:-translate-y-2 duration-500">
                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white font-serif italic text-3xl mb-10 border border-white/10 backdrop-blur-sm">✓</div>
-               <h3 className="text-2xl font-serif text-white mb-6 italic">Protocollo Liquido</h3>
+               <h3 className="text-2xl font-serif text-white mb-6 italic">Sistema Liquido</h3>
                <ul className="space-y-5 text-white/60 text-sm font-light">
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Processi ingegnerizzati autonomi</li>
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Team formato alla decisione</li>
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Cruscotti di controllo proattivi</li>
-                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Libertà di tempo garantita</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Mappa Operativa ingegnerizzata</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Team autonomo formato alla decisione</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Cruscotti di controllo predittivi</li>
+                  <li className="flex items-center gap-3"><span className="w-1 h-1 rounded-full bg-white/40" /> Libertà di tempo e scalabilità garantite</li>
                </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SUCCESS STORIES & AUTHORITY ──────────────────── */}
-      <section id="metodo" className="py-32 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="p-14 rounded-[60px] bg-[#065F46]/5 border border-[#065F46]/10">
-              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#065F46] mb-8 block">Caso di Successo</span>
-              <h3 className="text-4xl font-serif italic mb-8">Da 70 a 15 ore.</h3>
-              <p className="text-black/50 text-lg leading-relaxed mb-10 font-light italic font-serif">
-                Un imprenditore nel settore retail era intrappolato nella gestione quotidiana di 4 punti vendita. Attraverso la codifica dei processi e l'AI-Assistant, ha ridotto del 75% l'impegno operativo, mantenendo intatti i margini.
+      {/* ── BANNER 02 (DARK STRIP) ───────────────────────────── */}
+      <div className="bg-[#0A0A0A] py-10 border-y border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#065F46] opacity-[0.03] blur-3xl rounded-full" />
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <p className="text-white text-xs md:text-sm font-black tracking-[0.5em] uppercase leading-relaxed">
+            Smetti di gestire emergenze, inizia a pilotare <span className="text-[#065F46]">sistemi ingegnerizzati</span>.
+          </p>
+        </div>
+      </div>
+
+      {/* ── DAL CAOS AL SISTEMA (NEW INJECTION) ─────────────────────────── */}
+      <section className="py-40 px-6 bg-[#FDFDFD] overflow-hidden relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-24 items-center">
+            <div className="relative">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#065F46] mb-8 block">Ingegneria Gestionale</span>
+              <h2 className="text-5xl md:text-7xl font-light text-[#0A0A0A] mb-10 font-serif leading-[1.05]">
+                La tua <span className="italic text-[#065F46]">Mappa Operativa</span> <br />per lo svincolo totale.
+              </h2>
+              <p className="text-black/50 text-xl leading-relaxed mb-12 font-light italic font-serif border-l-4 border-[#065F46]/10 pl-8">
+                Il caos non si risolve con più fatica, ma con una migliore architettura. Trasformiamo il tuo saper fare in un navigatore satellitare che guida il tuo team verso l&apos;utile, lasciando a te il solo ruolo di armatore della nave.
               </p>
-              <div className="text-2xl font-serif text-[#065F46] italic">Patrimonio Liquido Creato.</div>
+              <div className="space-y-8">
+                {[
+                  { t: "Eliminazione del Caos Decisionale", d: "Rimuoviamo il collo di bottiglia del titolare tuttofare attraverso protocolli certi." },
+                  { t: "Mappatura degli Ingranaggi di Valore", d: "Codifichiamo solo ciò che genera davvero profitto, eliminando gli sprechi operativi." },
+                  { t: "Cruscotto di Controllo Predittivo", d: "Monitora l'andamento dell'azienda senza dover supervisionare ogni singola azione." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6 items-start group">
+                    <div className="mt-2 w-2 h-2 rounded-full bg-[#065F46] group-hover:scale-150 transition-all shadow-[0_0_10px_rgba(6,95,70,0.3)]" />
+                    <div>
+                      <h4 className="text-sm font-black text-[#0A0A0A] uppercase tracking-wider mb-2">{item.t}</h4>
+                      <p className="text-sm text-black/40 font-medium">{item.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
             
-            <div className="p-14 rounded-[60px] bg-[#111827] text-white">
-              <div className="text-[#D4AF37] mb-10 text-4xl font-serif italic opacity-40">"</div>
-              <p className="text-white/70 text-2xl font-serif italic font-light mb-12 leading-relaxed">
-                "Non è solo automazione. È aver ritrovato il piacere di fare l'imprenditore senza l'ansia del controllo totale. Ora il sistema lavora per me."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-px bg-[#065F46]" />
-                <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/40">Luigi V. — Founder & CEO</div>
+            <div className="relative group">
+              <div className="absolute inset-0 bg-[#065F46]/5 blur-3xl rounded-full group-hover:bg-[#065F46]/10 transition-all duration-1000" />
+              <div className="relative p-2 bg-white rounded-[70px] border border-black/5 shadow-2xl overflow-hidden">
+                <div className="aspect-[4/5] bg-[#0A0A0A] rounded-[60px] flex flex-col items-center justify-center p-16 text-center relative overflow-hidden">
+                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.05]" />
+                   <div className="relative z-10 w-20 h-20 rounded-full border border-[#065F46]/30 flex items-center justify-center mb-10 bg-[#065F46]/5">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#065F46" strokeWidth="1">
+                        <path d="M9 11l3 3L22 4" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                   </div>
+                   <h3 className="relative z-10 text-2xl font-serif italic text-white mb-4">Caso di Studio: <br />Ingegneria di Sistema</h3>
+                   <p className="relative z-10 text-sm text-white/40 font-light max-w-xs mb-12">Dalla gestione "a braccio" alla Mappa Operativa: come abbiamo liberato 40 ore/settimana a un imprenditore Over 40.</p>
+                   <div className="relative z-10 flex gap-6 items-center">
+                      <div className="w-12 h-px bg-white/10" />
+                      <div className="px-6 py-2 rounded-full border border-white/10 text-[10px] font-bold text-white/40 tracking-[0.3em] uppercase">Mappa Attiva</div>
+                      <div className="w-12 h-px bg-white/10" />
+                   </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* ── DAL CAOS ALL'ALGORITMO (REBRANDED) ─────────────────────────── */}
+      <section className="py-40 px-6 bg-[#FDFDFD] overflow-hidden relative">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-24 items-center">
+            <div className="relative">
+              <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#065F46] mb-8 block">Architettura d&apos;Impresa</span>
+              <h2 className="text-5xl md:text-7xl font-light text-[#0A0A0A] mb-10 font-serif leading-[1.05]">
+                Il tuo <span className="italic text-[#065F46]">Algoritmo di Pilotaggio</span> <br />per lo svincolo totale.
+              </h2>
+              <p className="text-black/50 text-xl leading-relaxed mb-12 font-light italic font-serif border-l-4 border-[#065F46]/10 pl-8">
+                La dissipazione strategica non si cura con più fatica, ma con una migliore architettura. Trasformiamo il tuo saper fare in un Algoritmo Operativo che guida il team verso l&apos;utile, lasciando a te il solo ruolo di armatore della flotta.
+              </p>
+              <div className="space-y-8">
+                {[
+                  { t: "Eliminazione della Dipendenza Nodale", d: "Rimuoviamo il collo di bottiglia del titolare attraverso protocolli di disaccoppiamento." },
+                  { t: "Mappatura dei Flussi ad Alto Valore", d: "Ingegnerizziamo solo ciò che genera profitto reale, eliminando le interferenze operative." },
+                  { t: "Radar di Controllo Predittivo", d: "Vigila sull'andamento dell'asset senza dover supervisionare ogni singola micro-azione." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6 items-start group">
+                    <div className="mt-2 w-2 h-2 rounded-full bg-[#065F46] group-hover:scale-150 transition-all shadow-[0_0_10px_rgba(6,95,70,0.3)]" />
+                    <div>
+                      <h4 className="text-sm font-black text-[#0A0A0A] uppercase tracking-wider mb-2">{item.t}</h4>
+                      <p className="text-sm text-black/40 font-medium">{item.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative group">
+              <div className="absolute inset-0 bg-[#065F46]/5 blur-3xl rounded-full group-hover:bg-[#065F46]/10 transition-all duration-1000" />
+              <div className="relative p-2 bg-white rounded-[70px] border border-black/5 shadow-2xl overflow-hidden">
+                <div className="aspect-[4/5] bg-[#0A0A0A] rounded-[60px] flex flex-col items-center justify-center p-16 text-center relative overflow-hidden">
+                   <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.05]" />
+                   <div className="relative z-10 w-20 h-20 rounded-full border border-[#065F46]/30 flex items-center justify-center mb-10 bg-[#065F46]/5">
+                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#065F46" strokeWidth="1">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                   </div>
+                   <h3 className="relative z-10 text-2xl font-serif italic text-white mb-4">Caso di Studio: <br />Ingegneria di Svincolo</h3>
+                   <p className="relative z-10 text-sm text-white/40 font-light max-w-xs mb-12">Dal Rumore Operativo all&apos;Algoritmo di Pilotaggio: come abbiamo liberato 40 ore/settimana a un imprenditore d&apos;eccellenza.</p>
+                   <div className="relative z-10 flex gap-6 items-center">
+                      <div className="w-12 h-px bg-white/10" />
+                      <div className="px-6 py-2 rounded-full border border-white/10 text-[10px] font-bold text-white/40 tracking-[0.3em] uppercase">Sistema Attivo</div>
+                      <div className="w-12 h-px bg-white/10" />
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── I 4 ASSET DELL'INGEGNERIA LIQUIDA (NEW) ────────────────── */}
+      <section className="py-40 px-6 bg-white border-t border-black/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-24">
+            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#065F46] mb-6 block">Asset Infrastrutturali</span>
+            <h2 className="text-5xl md:text-7xl font-light text-[#0A0A0A] font-serif leading-tight">Gli strumenti per <br /><span className="italic text-[#065F46]">l&apos;architettura della libertà.</span></h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { t: "Protocollo di Disaccoppiamento", d: "Sleghiamo il tuo tempo dal profitto aziendale attraverso l'eliminazione dei nodi di dipendenza dal titolare.", i: "🔗" },
+              { t: "Matrice delle Autonomie", d: "Ridefiniamo l'organigramma non per gerarchia, ma per flussi di responsabilità auto-gestiti dal team.", i: "📡" },
+              { t: "Algoritmo Operativo 90D", d: "Un framework di gestione che ricalcola le priorità aziendali in tempo reale, come un radar strategico.", i: "🧭" },
+              { t: "Cruscotto di Pilotaggio", d: "Tutti i KPI vitali della tua azienda sotto controllo chirurgico, direttamente dal tuo smartphone.", i: "📱" }
+            ].map((asset, i) => (
+              <div key={i} className="p-10 rounded-[50px] bg-[#F9FAFB] border border-black/[0.03] hover:border-[#065F46]/20 transition-all group flex flex-col h-full">
+                <div className="text-4xl mb-10 group-hover:scale-110 transition-transform duration-500">{asset.i}</div>
+                <h3 className="text-xl font-black text-[#0A0A0A] uppercase tracking-tighter mb-6 leading-tight h-14 flex items-center">{asset.t}</h3>
+                <p className="text-sm text-black/40 font-medium leading-relaxed italic font-serif">&ldquo;{asset.d}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── BANNER 04 (DARK STRIP) ───────────────────────────── */}
+      <div className="bg-[#0A0A0A] py-10 border-y border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#065F46] opacity-[0.03] blur-3xl rounded-full -translate-x-1/4" />
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <p className="text-white text-xs md:text-sm font-black tracking-[0.5em] uppercase leading-relaxed">
+            Non costruire una prigione, edifica un <span className="text-[#065F46]">patrimonio</span> che scala senza il tuo sforzo diretto.
+          </p>
+        </div>
+      </div>
 
       {/* ── I SERVIZI (EMERALD & GOLD) ────────────────────────────── */}
       <section id="servizi" className="py-48 px-6 bg-white border-t border-black/5">
@@ -213,13 +348,13 @@ export default function ImpresaLiquidaPage() {
                </div>
                <div className="relative z-10">
                   <div className="text-[10px] uppercase font-bold text-black/30 mb-8 tracking-[0.4em]">Fase 01</div>
-                  <h3 className="text-4xl font-serif text-[#0A0A0A] mb-8 italic">Check-up di Autonomia Operativa</h3>
+                  <h3 className="text-4xl font-serif text-[#0A0A0A] mb-8 italic">Verifica di Autonomia Operativa</h3>
                   <p className="text-black/50 text-lg leading-relaxed mb-12 font-light italic font-serif">
                     Un&apos;analisi profonda della tua struttura operativa. Individuiamo i colli di bottiglia e ti consegniamo il tuo &quot;Piano di Svincolo&quot;: la strategia per staccarti dal quotidiano.
                   </p>
                   <div className="text-4xl font-serif text-[#065F46] mb-14 italic tracking-tighter">Primo Passo Strategico</div>
                </div>
-               <a href="mailto:info@fabiomicale.com" className="w-full py-6 rounded-full border border-black/10 text-[10px] font-bold tracking-[0.3em] text-center hover:bg-black hover:text-white transition-all">INIZIA IL CHECK-UP</a>
+               <a href="mailto:info@fabiomicale.com" className="w-full py-6 rounded-full border border-black/10 text-[10px] font-bold tracking-[0.3em] text-center hover:bg-black hover:text-white transition-all">INIZIA LA VERIFICA</a>
             </div>
 
             {/* Implementation */}
@@ -239,12 +374,32 @@ export default function ImpresaLiquidaPage() {
         </div>
       </section>
 
+      {/* ── BANNER 05 (DARK STRIP) ───────────────────────────── */}
+      <div className="bg-[#0A0A0A] py-10 border-y border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#065F46] opacity-[0.03] blur-3xl rounded-full translate-x-1/4" />
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <p className="text-white text-xs md:text-sm font-black tracking-[0.5em] uppercase leading-relaxed">
+            La complessità è il nemico della scalabilità. L&apos;<span className="text-[#065F46]">Algoritmo Operativo</span> è la tua soluzione.
+          </p>
+        </div>
+      </div>
+
       <FAQSection 
         items={liquidaFaqs} 
         theme="liquida" 
         title="Domande sul Protocollo" 
         subtitle="Analizziamo le dinamiche della libertà aziendale."
       />
+
+      {/* ── BANNER 03 (DARK STRIP) ───────────────────────────── */}
+      <div className="bg-[#0A0A0A] py-10 border-y border-white/5 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#065F46] opacity-[0.03] blur-3xl rounded-full translate-x-1/2" />
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <p className="text-white text-xs md:text-sm font-black tracking-[0.5em] uppercase leading-relaxed">
+            Il tuo secondo tempo inizia quando il tuo sistema diventa finalmente <span className="text-[#065F46]">autonomo</span>.
+          </p>
+        </div>
+      </div>
 
       {/* ── CTA FINALE: IL SECONDO TEMPO ─────────────────────────── */}
       <section className="py-48 px-6 bg-[#0A0A0A] text-white relative overflow-hidden">

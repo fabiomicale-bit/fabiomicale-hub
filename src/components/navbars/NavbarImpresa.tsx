@@ -17,7 +17,7 @@ export default function NavbarImpresa() {
   const links = [
     { label: "Chi Siamo", href: "/impresa-liquida/chi-siamo" },
     { label: "Metodo", href: "/impresa-liquida#metodo" },
-    { label: "Aggiornamenti", href: "/impresa-liquida/aggiornamenti" },
+    { label: "Articoli", href: "/impresa-liquida/aggiornamenti" },
     { label: "Contatti", href: "/impresa-liquida/contatti" },
   ];
 
@@ -26,11 +26,21 @@ export default function NavbarImpresa() {
       scrolled ? "bg-white/95 backdrop-blur-md py-2 shadow-md border-b border-brand-green/10" : "bg-transparent py-4"
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link href="/impresa-liquida" className="flex items-center group">
+        <Link href="/impresa-liquida" className="block h-10 w-48 md:w-64 relative overflow-hidden group">
           <img 
             src="/logos/impresa-liquida.png" 
             alt="Impresa Liquida Logo" 
-            className="h-16 md:h-20 w-auto transition-transform group-hover:scale-105"
+            style={{ 
+              position: 'absolute',
+              height: '140px',
+              width: 'auto',
+              maxWidth: 'none',
+              top: '-58px',
+              left: '50%',
+              transform: 'translateX(-53%)',
+              transition: 'transform 0.5s ease'
+            }}
+            className="group-hover:scale-105"
           />
         </Link>
 
@@ -50,7 +60,7 @@ export default function NavbarImpresa() {
             href="/"
             className="ml-4 px-6 py-2 bg-brand-green text-white rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-[#059669] transition-all"
           >
-            HUB FABIO MICALE
+            SITO FABIO MICALE
           </Link>
         </div>
 
@@ -90,7 +100,7 @@ export default function NavbarImpresa() {
                 onClick={() => setIsOpen(false)}
                 className="bg-brand-green text-white px-8 py-4 rounded-xl text-center font-bold uppercase tracking-widest text-xs"
               >
-                TORNA ALL&apos;HUB PRINCIPALE
+                TORNA AL SITO PRINCIPALE
               </Link>
             </div>
           </motion.div>
