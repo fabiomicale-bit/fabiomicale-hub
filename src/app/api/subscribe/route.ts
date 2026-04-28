@@ -25,23 +25,33 @@ export async function POST(req: NextRequest) {
   }
 
   // --- 1. Forward to Dashboard Backend ---
-  try {
-    await fetch("http://localhost:8000/api/v1/leads", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email,
-        first_name: nome,
-        last_name: cognome,
-        phone: telefono,
-        website: sitoweb,
-        source: "form",
-        tag: utmSource === "risorse_ebook" || notify === "capitolo1" ? "consulenza" : "newsletter",
-        notes: `Lead da Hub Form: ${utmSource}`
-      }),
-    });
-  } catch (err) {
-    console.error("Failed to forward lead to dashboard:", err);
+  const BACKEND_URL = process.env.BACKEND_API_URL;
+  const DASHBOARD_KEY = process.env.DASHBOARD_API_KEY;
+
+  if (BACKEND_URL && DASHBOARD_KEY) {
+    try {
+      await fetch(`${BACKEND_URL}/leads`, {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "X-API-Key": DASHBOARD_KEY
+        },
+        body: JSON.stringify({
+          email,
+          first_name: nome,
+          last_name: cognome,
+          phone: telefono,
+          website: sitoweb,
+          source: "hub_form",
+          tag: utmSource === "risorse_ebook" || notify === "capitolo1" ? "consulenza" : "newsletter",
+          notes: `Lead da Hub Form: ${utmSource}`
+        }),
+      });
+    } catch (err) {
+      console.error("Failed to forward lead to dashboard:", err);
+    }
+  } else {
+    console.warn("Backend forwarding skipped: BACKEND_API_URL or DASHBOARD_API_KEY missing.");
   }
 
   // --- 2. Subscribe to Beehiiv ---

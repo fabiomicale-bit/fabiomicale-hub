@@ -4,6 +4,31 @@ export async function POST(req: NextRequest) {
   try {
     const { nome, email, situazione, problema, esperienze, obiettivo, tempo } = await req.json()
 
+    // --- Forward to Dashboard ---
+    const BACKEND_URL = process.env.BACKEND_API_URL;
+    const DASHBOARD_KEY = process.env.DASHBOARD_API_KEY;
+
+    if (BACKEND_URL && DASHBOARD_KEY) {
+      try {
+        await fetch(`${BACKEND_URL}/leads`, {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            "X-API-Key": DASHBOARD_KEY
+          },
+          body: JSON.stringify({
+            email,
+            first_name: nome,
+            source: "questionario",
+            tag: "consulenza",
+            notes: `Questionario: ${situazione.substring(0, 50)}...`
+          }),
+        });
+      } catch (err) {
+        console.error("Dashboard forward failed:", err);
+      }
+    }
+
     if (!nome || !email) {
       return NextResponse.json({ success: false, error: 'Nome ed email sono obbligatori.' }, { status: 400 })
     }

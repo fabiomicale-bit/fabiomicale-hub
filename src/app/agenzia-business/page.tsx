@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import FAQSection from "@/components/FAQSection";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
 
 export const metadata: Metadata = {
   title: "Agenzia Business | Sistemi di Acquisizione Clienti Basati su AI — Fabio Micale",
   description: "Trasforma il tuo business con un sistema unico: Pubblicità Online, Percorsi di Conversione e Automazioni AI per contatti qualificati ricorrenti.",
 };
 
-const agencyFaqs = [
+const agencyFaqs: FAQItem[] = [
   { 
     question: "A chi si rivolge il vostro sistema di acquisizione?",
     answer: "Lavoriamo principalmente con PMI e professionisti d'alto valore che hanno già un'offerta solida ma faticano a generare un flusso costante e prevedibile di nuovi clienti. Il nostro sistema AI si adatta a diversi settori, dal B2B ai servizi professionali." 

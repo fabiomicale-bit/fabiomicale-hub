@@ -2,10 +2,10 @@ import Hero from "@/components/mepa/Hero";
 import ServiceInfo from "@/components/mepa/ServiceInfo";
 import Comparison from "@/components/mepa/Comparison";
 import PricingCards from "@/components/mepa/PricingCards";
-import FAQSection from "@/components/FAQSection";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
 import Link from "next/link";
 
-const mepaFaqs = [
+const mepaFaqs: FAQItem[] = [
   {
     question: "Cosa succede se un'amministrazione non paga?", 
     answer: "La Pubblica Amministrazione è oggi uno dei pagatori più sicuri grazie alla fatturazione elettronica e alla tracciabilità dei flussi. Inoltre, ti assistiamo nella gestione del DURC e di tutta la regolarità contributiva necessaria." 

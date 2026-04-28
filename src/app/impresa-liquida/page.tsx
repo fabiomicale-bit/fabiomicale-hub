@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import EbookForm from "@/components/EbookForm";
-import FAQSection from "@/components/FAQSection";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
 
 export const metadata: Metadata = {
   title: "Impresa Liquida | Automazione Aziendale e Libertà Operativa — Fabio Micale",
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 };
 
-const liquidaFaqs = [
+const liquidaFaqs: FAQItem[] = [
   { 
     question: "Devo stravolgere il mio attuale organico?", 
     answer: "No. L'obiettivo dell'Impresa Liquida è potenziare le persone che già lavorano con te. Automatizziamo i processi ripetitivi e codifichiamo le decisioni, affinché il tuo staff possa operare con autonomia e tu possa finalmente delegare con serenità." 

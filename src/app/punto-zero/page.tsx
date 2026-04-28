@@ -1,7 +1,7 @@
 import EbookForm from "@/components/EbookForm";
-import FAQSection from "@/components/FAQSection";
+import FAQSection, { FAQItem } from "@/components/FAQSection";
 
-const silverFaqs = [
+const silverFaqs: FAQItem[] = [
   { 
     question: "Cos'è realmente il Punto Zero?", 
     answer: "Non è una crisi, ma un momento di estrema lucidità. È il punto in cui smetti di aggiungere complessità e inizi a togliere ciò che non ha più senso portare con te." 

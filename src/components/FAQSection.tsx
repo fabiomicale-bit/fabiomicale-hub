@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 
-interface FAQItem {
+export interface FAQItem {
   question: string;
   answer: string;
 }
 
-interface FAQSectionProps {
+export interface FAQSectionProps {
   items: FAQItem[];
   title?: string;
   subtitle?: string;
