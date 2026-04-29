@@ -26,22 +26,15 @@ export default function NavbarImpresa() {
       scrolled ? "bg-white/95 backdrop-blur-md py-2 shadow-md border-b border-brand-green/10" : "bg-transparent py-4"
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link href="/impresa-liquida" className="block h-10 w-48 md:w-64 relative overflow-hidden group">
-          <img 
-            src="/logos/impresa-liquida.png" 
-            alt="Impresa Liquida Logo" 
-            style={{ 
-              position: 'absolute',
-              height: '140px',
-              width: 'auto',
-              maxWidth: 'none',
-              top: '-58px',
-              left: '50%',
-              transform: 'translateX(-53%)',
-              transition: 'transform 0.5s ease'
-            }}
-            className="group-hover:scale-105"
-          />
+        <Link href="/impresa-liquida" className="flex flex-col group py-1">
+          <div className="flex flex-col leading-none">
+            <span className="text-[20px] font-black tracking-[0.2em] text-[#0A0A0A] uppercase font-serif group-hover:text-brand-green transition-colors">
+              Impresa
+            </span>
+            <span className="text-[18px] font-light italic tracking-[0.1em] text-brand-green font-serif -mt-1">
+              Liquida
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

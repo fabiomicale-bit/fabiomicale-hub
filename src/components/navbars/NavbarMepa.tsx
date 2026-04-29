@@ -27,12 +27,15 @@ export default function NavbarMepa() {
       scrolled ? "bg-white/95 backdrop-blur-md py-2 shadow-md border-b border-pa-green/10" : "bg-transparent py-4"
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link href="/mepa-elite" className="flex items-center group">
-          <img 
-            src="/logo-mepa-elite.png" 
-            alt="MEPA Elite Logo" 
-            className="h-14 md:h-16 w-auto transition-transform group-hover:scale-105"
-          />
+        <Link href="/mepa-elite" className="flex flex-col group py-1">
+          <div className="flex flex-col leading-none">
+            <span className="text-[20px] font-black tracking-[0.2em] text-[#166534] uppercase font-serif group-hover:text-pa-green-bright transition-colors">
+              MePA
+            </span>
+            <span className="text-[18px] font-light italic tracking-[0.1em] text-pa-green-bright font-serif -mt-1">
+              Elite
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

@@ -30,13 +30,15 @@ export default function Navbar() {
       scrolled ? "bg-white/95 backdrop-blur-md py-2 shadow-md" : "bg-transparent py-4"
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        {/* Hub Logo - Professional Size */}
-        <Link href="/" className="flex items-center group overflow-hidden h-20 w-52 relative">
-          <img 
-            src="/logo-hub-definitive.png" 
-            alt="Fabio Micale - Portale Digitale" 
-            className="absolute inset-0 w-full h-full object-contain scale-[2] transition-transform group-hover:scale-[2.1]"
-          />
+        <Link href="/" className="flex flex-col group py-1">
+          <div className="flex flex-col leading-none">
+            <span className="text-[20px] font-black tracking-[0.2em] text-hub-ink uppercase font-serif group-hover:text-hub-gold transition-colors">
+              Fabio Micale
+            </span>
+            <span className="text-[10px] font-bold tracking-[0.4em] text-hub-gold uppercase mt-1">
+              Metodologo della Crescita
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

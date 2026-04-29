@@ -26,12 +26,15 @@ export default function NavbarPunto() {
       scrolled ? "bg-obsidian/95 backdrop-blur-md py-2 border-b border-white/5" : "bg-transparent py-4"
     }`}>
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link href="/punto-zero" className="flex items-center group">
-          <img 
-            src="/logo-punto-zero-temp.svg" 
-            alt="Punto Zero Logo" 
-            className="h-16 md:h-20 w-auto transition-all duration-700 group-hover:brightness-125"
-          />
+        <Link href="/punto-zero" className="flex flex-col group py-1">
+          <div className="flex flex-col leading-none">
+            <span className="text-[20px] font-black tracking-[0.2em] text-white uppercase font-serif group-hover:text-platinum-300 transition-colors">
+              Punto
+            </span>
+            <span className="text-[18px] font-light italic tracking-[0.1em] text-platinum-300 font-serif -mt-1">
+              Zero
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
