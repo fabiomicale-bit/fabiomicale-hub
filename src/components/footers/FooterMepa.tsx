@@ -48,6 +48,7 @@ export default function FooterMepa() {
             APPALTI PUBBLICI · ABILITAZIONE MEPA · CONSULENZA GARE
           </div>
           <div className="flex gap-8">
+            <Link href="/note-legali" className="text-[10px] uppercase tracking-widest text-slate-400 hover:text-pa-green transition-colors">Note Legali</Link>
             <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-slate-400 hover:text-pa-green transition-colors">Privacy Policy</Link>
             <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-slate-400 hover:text-pa-green transition-colors">Cookie Policy</Link>
           </div>

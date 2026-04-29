@@ -57,6 +57,7 @@ export default function Footer() {
             © 2026 Fabio Micale · Progetto editoriale e divulgativo
           </div>
           <div className="flex gap-8">
+            <Link href="/note-legali" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Note Legali</Link>
             <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Cookie Policy</Link>
           </div>
