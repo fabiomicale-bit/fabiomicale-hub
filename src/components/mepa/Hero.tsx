@@ -16,7 +16,7 @@ export default function Hero() {
         </span>
         
         <h1 className="text-6xl md:text-9xl font-black mb-12 leading-[0.9] font-serif italic tracking-tighter transition-all">
-          Collaboratore <br className="hidden md:block" /> Delegato.
+          Appalti Pubblici <br className="hidden md:block" /> con MEPA Elite.
         </h1>
 
         <div className="mb-12 inline-flex items-center gap-4 px-6 py-2 bg-white/10 rounded-full backdrop-blur-sm border border-white/20">

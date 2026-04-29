@@ -15,7 +15,7 @@ export default function HeroEditorial() {
           <div className="max-w-2xl">
             {/* Headline */}
             <h1 className="animate-reveal-up delay-100 text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.05] tracking-tight text-hub-ink mb-8">
-              Scrivo per chi vuole{" "}
+              Ingegneria della Crescita per chi vuole{" "}
               <span className="italic text-hub-gold">vincere</span>
               <br />
               nella vita.
@@ -61,7 +61,7 @@ export default function HeroEditorial() {
               <div className="relative z-10">
                 <Image
                   src="/fabio-hero-transparent.png"
-                  alt="Fabio Micale — Autore e Formatore"
+                  alt="Fabio Micale — Autore, Formatore e Metodologo della Crescita Over 40"
                   width={550}
                   height={700}
                   priority
@@ -76,7 +76,7 @@ export default function HeroEditorial() {
               <div className="absolute -left-16 bottom-24 z-30 bg-white rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-hub-border p-5 animate-float hidden xl:flex items-center gap-4 max-w-[260px]">
                 <Image
                   src="/copertina-libro.png"
-                  alt="Successo in 3 Passi"
+                  alt="Copertina Libro Successo in 3 Passi - Fabio Micale Edizione 2026"
                   width={60}
                   height={85}
                   className="rounded-lg shadow-md flex-shrink-0"

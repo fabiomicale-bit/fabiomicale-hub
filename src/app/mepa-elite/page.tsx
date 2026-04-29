@@ -4,6 +4,18 @@ import Comparison from "@/components/mepa/Comparison";
 import PricingCards from "@/components/mepa/PricingCards";
 import FAQSection, { FAQItem } from "@/components/FAQSection";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: "MEPA Elite | Supporto Gare Appalti Pubblici & Abilitazione MePA",
+    description: "Domina il mercato degli appalti pubblici con MEPA Elite. Gestiamo il tuo ufficio gare MePA, dall'abilitazione all'incasso, per trasformare la Pubblica Amministrazione nel tuo miglior cliente.",
+    openGraph: {
+      title: "MEPA Elite — Il Tuo Ufficio Gare Dedicato",
+      description: "Supporto strategico e operativo per vincere appalti pubblici senza stress burocratico.",
+    }
+  };
+}
 
 const mepaFaqs: FAQItem[] = [
   {

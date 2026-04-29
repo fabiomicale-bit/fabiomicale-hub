@@ -12,10 +12,14 @@ import Footer from "@/components/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Fabio Micale — Autore, Formatore, Metodologo della Crescita",
+    title: "Fabio Micale | Metodologo della Crescita, Autore & Sistemi per Over 40",
     description:
-      "Scrivo libri per chi vuole vincere nella vita. Corsi online, coaching e sistemi per professionisti Over 40. Crescita personale, business e intelligenza artificiale.",
+      "Sistemi operativi per la tua evoluzione professionale. Fabio Micale, autore di 'Successo in 3 Passi', aiuta imprenditori e professionisti Over 40 a costruire libertà, scalabilità e autodisciplina.",
     alternates: { canonical: "https://www.fabiomicale.com" },
+    openGraph: {
+      title: "Fabio Micale | Ingegneria della Crescita per Professionisti",
+      description: "Protocolli testati per vincere nel business e nella vita. Oltre la teoria, sistemi reali.",
+    }
   };
 }
 

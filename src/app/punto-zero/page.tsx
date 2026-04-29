@@ -1,5 +1,15 @@
 import EbookForm from "@/components/EbookForm";
 import FAQSection, { FAQItem } from "@/components/FAQSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Punto Zero | Reset Strategico & Protocollo di Rinascita Over 40",
+  description: "Il punto di reset strategico per professionisti e imprenditori Over 40 che cercano nuova chiarezza. Un protocollo di ingegneria della rinascita per ripartire con integrità, visione e calma operativa.",
+  openGraph: {
+    title: "Punto Zero — Oltre il Disallineamento Professionale",
+    description: "Smetti di spingere e inizia a vedere. Lo spazio tra ciò che eri e il tuo nuovo tempo professionale.",
+  },
+};
 
 const silverFaqs: FAQItem[] = [
   { 
@@ -34,8 +44,8 @@ export default function PuntoZeroPage() {
             <span>Oltre il Disallineamento</span>
           </div>
           <h1 className="text-5xl md:text-8xl font-light leading-[1.05] tracking-tight mb-8 font-serif">
-            La Soglia della tua <br />
-            <span className="italic text-platinum-100 uppercase tracking-tighter">Nuova Chiarezza.</span>
+            Punto Zero: <br />
+            <span className="italic text-platinum-100 uppercase tracking-tighter">Reset Strategico.</span>
           </h1>
           <p className="text-white/40 text-xl leading-relaxed mb-12 max-w-2xl mx-auto font-light">
             Non è una questione di fare meglio, ma di smettere di fingere che tutto abbia ancora senso. Punto Zero è lo spazio tra ciò che eri e ciò che ancora non sai di poter diventare.

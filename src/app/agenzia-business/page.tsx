@@ -3,8 +3,12 @@ import Link from "next/link";
 import FAQSection, { FAQItem } from "@/components/FAQSection";
 
 export const metadata: Metadata = {
-  title: "Agenzia Business | Sistemi di Acquisizione Clienti Basati su AI — Fabio Micale",
-  description: "Trasforma il tuo business con un sistema unico: Pubblicità Online, Percorsi di Conversione e Automazioni AI per contatti qualificati ricorrenti.",
+  title: "Agenzia Business | Acquisizione Clienti con IA & Sistemi Lead Generation",
+  description: "Trasforma il tuo business con un sistema di acquisizione clienti unico. Integriamo Pubblicità Online (Meta, Google) e Automazioni AI per generare appuntamenti commerciali qualificati e ricorrenti.",
+  openGraph: {
+    title: "Agenzia Business — Sistemi di Acquisizione Basati su AI",
+    description: "Generiamo appuntamenti commerciali, non solo click. Il tuo motore di crescita automatizzato.",
+  },
 };
 
 const agencyFaqs: FAQItem[] = [
@@ -49,8 +53,8 @@ export default function AgenziaBusinessPage() {
             Agenzia di Sviluppo e Automazione Business
           </div>
           <h1 className="agency-title text-5xl md:text-8xl mb-8 animate-reveal-up">
-            Generiamo <span className="italic text-agency-accent font-light">Clienti</span>, <br /> 
-            non solo click.
+            Agenzia Business: <br /> 
+            <span className="italic text-agency-accent font-light">Lead Generation AI.</span>
           </h1>
           <p className="agency-text-lead max-w-2xl mx-auto mb-12 animate-reveal-up delay-100">
             Sviluppiamo e gestiamo sistemi completi di acquisizione che integrano Pubblicità, Conversione e AI per trasformare ogni contatto in un appuntamento commerciale.
