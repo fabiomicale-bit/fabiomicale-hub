@@ -110,6 +110,16 @@ export default function RootLayout({
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
+          
+          // FM Ghost Mode: Esclusione traffico amministratore
+          if (typeof document !== 'undefined' && (document.cookie.includes('fm_admin=true') || window.location.search.includes('fm_admin=true'))) {
+            if (window.location.search.includes('fm_admin=true')) {
+              document.cookie = "fm_admin=true; path=/; max-age=" + (365*24*60*60);
+            }
+            window['ga-disable-G-X3T310RBZ0'] = true;
+            console.log('FM Ghost Mode: ATTIVO - Navigazione invisibile');
+          }
+
           gtag('js', new Date());
           gtag('config', 'G-X3T310RBZ0');
         `}
