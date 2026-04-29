@@ -8,22 +8,15 @@ export default function FooterImpresa() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/impresa-liquida" className="block h-10 w-48 md:w-64 relative overflow-hidden group mb-8">
-              <img 
-                src="/logos/impresa-liquida.png" 
-                alt="Impresa Liquida Logo" 
-                style={{ 
-                  position: 'absolute',
-                  height: '120px',
-                  width: 'auto',
-                  maxWidth: 'none',
-                  top: '-42px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  transition: 'transform 0.5s ease'
-                }}
-                className="group-hover:scale-105"
-              />
+            <Link href="/impresa-liquida" className="flex flex-col group py-1 mb-8">
+              <div className="flex flex-col leading-none text-white">
+                <span className="text-[20px] font-black tracking-[0.2em] uppercase font-serif group-hover:text-brand-green transition-colors">
+                  Impresa
+                </span>
+                <span className="text-[18px] font-light italic tracking-[0.1em] text-brand-green font-serif -mt-1">
+                  Liquida
+                </span>
+              </div>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed max-w-sm font-light">
               Protocolli di automazione per trasformare il tuo business in un asset scalabile che funziona senza la tua presenza costante.
@@ -44,8 +37,8 @@ export default function FooterImpresa() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-brand-green mb-8">Connessione</h4>
             <ul className="space-y-4">
               <li><Link href="/" className="text-brand-green hover:text-white text-sm font-bold transition-colors">VAI AL SITO PRINCIPALE</Link></li>
-              <li className="text-white/20 text-xs mt-8">© 2026 Impresa Liquida.</li>
-              <li className="text-white/20 text-xs">Parte dell&apos;Ecosistema Fabio Micale.</li>
+              <li className="text-white/20 text-[10px] uppercase tracking-widest mt-8">© 2026 Fabio Micale.</li>
+              <li className="text-white/20 text-[10px] uppercase tracking-widest italic">Progetto editoriale e divulgativo.</li>
             </ul>
           </div>
         </div>
@@ -55,8 +48,8 @@ export default function FooterImpresa() {
             SCALABILITÀ · AUTOMAZIONE · LIBERTÀ OPERATIVA
           </div>
           <div className="flex gap-8">
-            <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Privacy</Link>
-            <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Cookie</Link>
+            <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Privacy Policy</Link>
+            <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

@@ -8,8 +8,15 @@ export default function FooterPunto() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/punto-zero" className="inline-block mb-8">
-              <img src="/logo-punto-zero-temp.svg" alt="Punto Zero" className="h-16 w-auto opacity-80" />
+            <Link href="/punto-zero" className="flex flex-col group py-1 mb-8">
+              <div className="flex flex-col leading-none text-white">
+                <span className="text-[20px] font-black tracking-[0.2em] uppercase font-serif group-hover:text-platinum-300 transition-colors">
+                  Punto
+                </span>
+                <span className="text-[18px] font-light italic tracking-[0.1em] text-platinum-300 font-serif -mt-1">
+                  Zero
+                </span>
+              </div>
             </Link>
             <p className="text-white/30 text-sm leading-relaxed max-w-sm font-light italic">
               Il luogo di reset per chi ha deciso di ricostruire la propria autorità attraverso l&apos;ordine chirurgico. Riservatezza, Integrità, Rinascita.
@@ -30,8 +37,8 @@ export default function FooterPunto() {
             <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-platinum-300 mb-8">Connessione</h4>
             <ul className="space-y-4">
               <li><Link href="/" className="text-white/40 hover:text-platinum-300 text-sm font-bold transition-colors">VAI ALL&apos;HUB PRINCIPALE</Link></li>
-              <li className="text-white/20 text-xs mt-8">© 2026 Punto Zero.</li>
-              <li className="text-white/20 text-xs">Proprietà di Fabio Micale.</li>
+              <li className="text-white/20 text-[10px] uppercase tracking-widest mt-8">© 2026 Fabio Micale.</li>
+              <li className="text-white/20 text-[10px] uppercase tracking-widest italic">Progetto editoriale e divulgativo.</li>
             </ul>
           </div>
         </div>
@@ -42,7 +49,7 @@ export default function FooterPunto() {
           </div>
           <div className="flex gap-8">
             <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Cookie Settings</Link>
+            <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

@@ -12,8 +12,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           {/* Logo & About */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="inline-block mb-8">
-              <img src="/logo-hub-definitive.png" alt="Fabio Micale" className="h-20 w-auto brightness-0 invert" />
+            <Link href="/" className="flex flex-col group py-1 mb-8">
+              <div className="flex flex-col leading-none text-white">
+                <span className="text-[20px] font-black tracking-[0.2em] uppercase font-serif group-hover:text-hub-gold transition-colors">
+                  Fabio Micale
+                </span>
+                <span className="text-[10px] font-bold tracking-[0.4em] text-hub-gold uppercase mt-1">
+                  Metodologo della Crescita
+                </span>
+              </div>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed max-w-sm font-light italic">
               Metodologo della Crescita, Autore e Formatore. <br />
@@ -47,7 +54,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-[10px] uppercase tracking-widest text-white/20 font-bold">
-            © 2026 Fabio Micale · All Rights Reserved
+            © 2026 Fabio Micale · Progetto editoriale e divulgativo
           </div>
           <div className="flex gap-8">
             <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-white/20 hover:text-white transition-colors">Privacy Policy</Link>

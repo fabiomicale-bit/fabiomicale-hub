@@ -8,8 +8,15 @@ export default function FooterMepa() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-1 md:col-span-2">
-            <Link href="/mepa-elite" className="inline-block mb-8">
-              <img src="/logo-mepa-elite.png" alt="MEPA Elite" className="h-12 w-auto" />
+            <Link href="/mepa-elite" className="flex flex-col group py-1 mb-8">
+              <div className="flex flex-col leading-none text-[#166534]">
+                <span className="text-[20px] font-black tracking-[0.2em] uppercase font-serif group-hover:text-pa-green-bright transition-colors">
+                  MePA
+                </span>
+                <span className="text-[18px] font-light italic tracking-[0.1em] text-pa-green-bright font-serif -mt-1">
+                  Elite
+                </span>
+              </div>
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed max-w-sm font-light">
               Il tuo ufficio gare dedicato per il mercato della Pubblica Amministrazione. Trasformiamo la burocrazia in fatturato reale e misurabile.
@@ -30,8 +37,8 @@ export default function FooterMepa() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-pa-green mb-8">Connessione</h4>
             <ul className="space-y-4">
               <li><Link href="/" className="text-pa-green hover:text-slate-900 text-sm font-bold transition-colors">VAI ALL&apos;HUB PRINCIPALE</Link></li>
-              <li className="text-slate-400 text-xs mt-8">© 2026 MEPA Elite.</li>
-              <li className="text-slate-400 text-xs">A Fabio Micale Brand.</li>
+              <li className="text-slate-400 text-[10px] uppercase tracking-widest mt-8">© 2026 Fabio Micale.</li>
+              <li className="text-slate-400 text-[10px] uppercase tracking-widest italic">Progetto editoriale e divulgativo.</li>
             </ul>
           </div>
         </div>
@@ -41,8 +48,8 @@ export default function FooterMepa() {
             APPALTI PUBBLICI · ABILITAZIONE MEPA · CONSULENZA GARE
           </div>
           <div className="flex gap-8">
-            <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-slate-400 hover:text-pa-green transition-colors">Privacy</Link>
-            <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-slate-400 hover:text-pa-green transition-colors">Cookies</Link>
+            <Link href="/privacy" className="text-[10px] uppercase tracking-widest text-slate-400 hover:text-pa-green transition-colors">Privacy Policy</Link>
+            <Link href="/cookies" className="text-[10px] uppercase tracking-widest text-slate-400 hover:text-pa-green transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>
