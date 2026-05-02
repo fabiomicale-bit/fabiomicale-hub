@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ProtocolloModal from "@/components/ProtocolloModal";
 
 export default function HeroEditorial() {
   return (
@@ -35,12 +35,7 @@ export default function HeroEditorial() {
 
             {/* CTA Group */}
             <div className="animate-reveal-up delay-300 flex flex-col sm:flex-row gap-5 items-start">
-              <Link href="/protocollo-anti-caos" className="btn-gold px-10 py-4 group">
-                Scarica il Protocollo Gratuito
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+              <ProtocolloModal />
             </div>
 
             {/* Sub-CTA note */}
