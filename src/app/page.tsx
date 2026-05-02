@@ -12,46 +12,38 @@ import Footer from "@/components/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Fabio Micale | Metodologo della Crescita, Autore & Sistemi per Over 40",
+    title: "Fabio Micale | AI e Metodo per Imprenditori Over 40",
     description:
-      "Sistemi operativi per la tua evoluzione professionale. Fabio Micale, autore di 'Successo in 3 Passi', aiuta imprenditori e professionisti Over 40 a costruire libertà, scalabilità e autodisciplina.",
+      "Porto AI e metodo dentro la tua azienda. La rendo autonoma. Tu torni a fare il CEO. Scopri Impresa Liquida, Nexus Lab e l'ecosistema per imprenditori Over 40.",
     alternates: { canonical: "https://www.fabiomicale.com" },
     openGraph: {
-      title: "Fabio Micale | Ingegneria della Crescita per Professionisti",
-      description: "Protocolli testati per vincere nel business e nella vita. Oltre la teoria, sistemi reali.",
+      title: "Fabio Micale | Imprenditore Over 40? Fai girare l'azienda senza di te.",
+      description: "Sistemi, protocolli e AI integrata per imprenditori Over 40. Scarica il Protocollo Anti-Caos gratuito.",
     }
   };
 }
 
 const hubFaqs = [
-  { 
-    question: "Chi è esattamente Fabio Micale?", 
-    answer: "Fabio Micale è un metodologo della crescita, autore e consulente strategico. La sua specializzazione è l'ingegneria dei processi applicata sia alla vita personale che al business, con un focus particolare sui professionisti Over 40 che cercano un 'secondo tempo' di valore." 
+  {
+    question: "Chi è Fabio Micale?",
+    answer: "Consulente aziendale e AI integrator con 25 anni di esperienza operativa. Specializzato in imprenditori Over 40 che vogliono un'azienda autonoma e scalabile.",
   },
-  { 
-    question: "Come posso iniziare il mio percorso?", 
-    answer: "Il punto d'ingresso consigliato è il libro 'Successo in 3 Passi', che contiene le basi del Metodo. In alternativa, puoi iscriverti al Protocollo (la nostra newsletter strategica) per ricevere analisi e spunti settimanali direttamente nella tua casella email." 
+  {
+    question: "Da dove inizio?",
+    answer: "Dal Protocollo Anti-Caos gratuito. 9 pagine operative che ti danno subito il primo strumento concreto. Zero impegni.",
   },
-  { 
-    question: "Cos'è l'Accademia di Fabio Micale?", 
-    answer: "L'Accademia è il nostro programma di coaching e mentorship d'élite. È un percorso guidato dove Fabio e il suo team aiutano un gruppo ristretto di professionisti a implementare i sistemi di crescita e automazione discussi nei libri." 
+  {
+    question: "Cos'è Nexus Lab?",
+    answer: "Il sistema operativo mensile per imprenditori Over 40. Template, webinar pratici, community e Q&A. 49€/mese, cancelli quando vuoi.",
   },
-  { 
-    question: "Qual è la differenza tra i vari mondi (MePA, Agenzia, ecc.)?", 
-    answer: "Il Fabio Micale Hub è il centro editoriale e metodologico. Gli altri mondi sono declinazioni verticali: l'Agenzia si occupa di acquisizione clienti AI per aziende, MEPA Elite di appalti pubblici, e Impresa Liquida di automazione aziendale per la libertà del titolare." 
+  {
+    question: "Devo essere esperto di tecnologia?",
+    answer: "No. Il metodo è progettato per imprenditori che vogliono risultati — non per tecnici. Se usi WhatsApp, puoi usare l'AI.",
   },
-  { 
-    question: "Cosa trovo all'interno del portale?", 
-    answer: "Un ecosistema completo: dalle guide gratuite ai percorsi d'élite, ogni risorsa è progettata per portarti un passo più vicino alla tua libertà professionale e alla padronanza del tuo tempo." 
+  {
+    question: "Qual è la differenza tra i verticali?",
+    answer: "Impresa Liquida lavora sui sistemi interni e l'autonomia operativa. Agenzia Business sull'acquisizione clienti con AI. MEPA Elite sugli appalti pubblici. Punto Zero è il punto di partenza per chi vuole fare reset.",
   },
-  { 
-    question: "I contenuti sono adatti anche a chi parte da zero?", 
-    answer: "Assolutamente sì. Sebbene lavoriamo molto con professionisti affermati, i principi dell'ingegneria della crescita sono universali e fondamentali per chiunque voglia costruire basi solide per il proprio futuro." 
-  },
-  { 
-    question: "Come posso restare aggiornato sulle ultime metodologie?", 
-    answer: "La Via del Metodo è in costante evoluzione. Iscrivendoti alla newsletter 'Protocollo' avrai accesso prioritario alle nuove scoperte, ai casi di studio inediti e alle analisi di mercato di Fabio." 
-  }
 ];
 
 export default async function HomePage() {
@@ -61,6 +53,47 @@ export default async function HomePage() {
       <Navbar />
       <HeroEditorial />
       <MetodoSection />
+
+      {/* ── LEAD MAGNET ─────────────────────────────────────── */}
+      <section className="py-32 px-6" style={{ backgroundColor: "#111111" }}>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-serif font-medium text-white leading-tight mb-6">
+            Inizia adesso.{" "}
+            <span className="italic text-hub-gold">Costa zero.</span>
+          </h2>
+          <p className="text-white/60 text-lg font-light leading-relaxed mb-12 max-w-2xl mx-auto">
+            Scarica il Protocollo Anti-Caos: come liberare 10 ore a settimana nella tua azienda usando l&apos;AI — anche se non sei un tecnico.
+          </p>
+
+          <ul className="flex flex-col sm:flex-row justify-center gap-6 mb-12 text-left">
+            {[
+              "9 pagine operative — niente teoria",
+              "3 passi con esercizi pratici inclusi",
+              "Piano d'azione settimana per settimana",
+            ].map((item, i) => (
+              <li key={i} className="flex items-start gap-3 text-white/70 text-sm font-light">
+                <span className="text-hub-gold mt-0.5 flex-shrink-0">→</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href="/protocollo-anti-caos"
+            className="btn-gold inline-flex items-center gap-3 px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]"
+          >
+            Scarica Gratis
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+
+          <p className="text-white/30 text-xs mt-6">
+            Ricevi anche la newsletter settimanale &ldquo;Un Passo Avanti&rdquo;. Cancellati quando vuoi.
+          </p>
+        </div>
+      </section>
+
       <LibriShowcase />
       
       {/* ── TESTIMONIALS & AUTHORITY ────────────────────────── */}
@@ -118,6 +151,43 @@ export default async function HomePage() {
       </section>
 
       <AccademiaPreview />
+
+      {/* ── BIO FABIO ───────────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-alt relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-hub-gold/20 to-transparent" />
+        <div className="max-w-4xl mx-auto">
+          <div className="section-label justify-center mb-6">Chi sono</div>
+          <h2 className="text-4xl md:text-5xl font-serif font-medium text-hub-ink leading-tight mb-12 text-center">
+            Chi ha costruito{" "}
+            <span className="italic text-hub-gold">questo metodo.</span>
+          </h2>
+
+          <div className="card-editorial p-10 md:p-14">
+            <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-6">
+              Ho 56 anni. Ho gestito aziende, cantieri e team per 25 anni. Ho vissuto in prima persona la prigione operativa — l&apos;azienda che cresce ma non riesce a girare senza di te.
+            </p>
+            <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-6">
+              Ho trovato un modo per uscirne. Oggi aiuto altri imprenditori Over 40 a fare lo stesso — con metodo, protocolli e AI integrata nei processi reali.
+            </p>
+            <p className="text-hub-ink text-lg font-serif italic leading-relaxed mb-12">
+              Non ti vendo sogni. Ti do strumenti.
+            </p>
+
+            <div className="pt-8 border-t border-hub-border flex flex-wrap gap-4">
+              {["Autore", "Consulente Aziendale", "AI Integrator", "25+ anni di esperienza operativa", "150+ aziende"].map((tag, i) => (
+                <span key={i} className="text-[10px] font-bold uppercase tracking-[0.2em] text-hub-ink-muted bg-hub-bg px-4 py-2 rounded-full border border-hub-border">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <p className="text-center text-[10px] text-hub-ink-light uppercase tracking-[0.2em] mt-6">
+            Placeholder — Fabio integrerà con foto e dati reali
+          </p>
+        </div>
+      </section>
+
       <MondiSection />
       <NumeriAuthority />
 

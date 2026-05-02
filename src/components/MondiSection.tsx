@@ -2,48 +2,48 @@ import Link from "next/link";
 
 const mondi = [
   {
-    sigla: "M",
-    nome: "MEPA Elite",
-    sottotitolo: "Il Tuo Ufficio Gare Dedicato",
-    descrizione: "Il protocollo per dominare il mercato degli appalti pubblici. Dall'abilitazione al MePA all'incasso: gestiamo tutto noi.",
-    href: "/mepa-elite",
-    colore: "from-[#006643] to-[#00895a]",
-    coloreBordo: "group-hover:border-[#006643]/30",
-    coloreAccento: "text-[#006643]",
-    stats: "113 Mld € di mercato",
-  },
-  {
     sigla: "L",
     nome: "Impresa Liquida",
-    sottotitolo: "Ingegneria della Libertà",
-    descrizione: "Trasforma la tua azienda da un cantiere di problemi a un asset scalabile che funziona senza la tua presenza costante.",
+    sottotitolo: "Automazione & Sistemi",
+    descrizione: "Ingegnerizziamo l'autonomia operativa. Trasformiamo la tua azienda da cantiere permanente ad asset scalabile.",
     href: "/impresa-liquida",
     colore: "from-[#2E7D32] to-[#43A047]",
     coloreBordo: "group-hover:border-[#2E7D32]/30",
     coloreAccento: "text-[#2E7D32]",
-    stats: "Efficienza operativa",
-  },
-  {
-    sigla: "0",
-    nome: "Punto Zero",
-    sottotitolo: "Reset Strategico Over 40",
-    descrizione: "Il luogo di reset e rivincita per chi ha superato i 40 anni. Una community di chi non molla e riparte più forte di prima.",
-    href: "/punto-zero",
-    colore: "from-[#1A1A1A] to-[#3A3A3A]",
-    coloreBordo: "group-hover:border-white/20",
-    coloreAccento: "text-white/80",
-    stats: "Reset & Rivincita",
+    stats: "Scopri il metodo →",
   },
   {
     sigla: "A",
     nome: "Agenzia Business",
-    sottotitolo: "Sistemi di Acquisizione AI",
-    descrizione: "Integrazione di intelligenza artificiale e strategie pubblicitarie ad alto rendimento per trasformare la generazione contatti in un processo automatico.",
+    sottotitolo: "Lead Gen & AI",
+    descrizione: "Sistemi di acquisizione clienti basati su AI. Trasformiamo il traffico in appuntamenti commerciali reali.",
     href: "/agenzia-business",
     colore: "from-[#2563EB] to-[#1D4ED8]",
     coloreBordo: "group-hover:border-blue-600/30",
     coloreAccento: "text-blue-600",
-    stats: "Sviluppo & AI",
+    stats: "Vedi come funziona →",
+  },
+  {
+    sigla: "M",
+    nome: "MEPA Elite",
+    sottotitolo: "Appalti Pubblici",
+    descrizione: "Il protocollo per dominare il mercato degli appalti pubblici. 113 miliardi di euro di opportunità.",
+    href: "/mepa-elite",
+    colore: "from-[#006643] to-[#00895a]",
+    coloreBordo: "group-hover:border-[#006643]/30",
+    coloreAccento: "text-[#006643]",
+    stats: "Entra nel mercato →",
+  },
+  {
+    sigla: "0",
+    nome: "Punto Zero",
+    sottotitolo: "Reset & Ripartenza",
+    descrizione: "Il luogo di reset per chi ha superato i 40 anni e sente che può fare molto di più. Il primo passo è accettarlo.",
+    href: "/punto-zero",
+    colore: "from-[#1A1A1A] to-[#3A3A3A]",
+    coloreBordo: "group-hover:border-white/20",
+    coloreAccento: "text-white/80",
+    stats: "Inizia il reset →",
   },
 ];
 
@@ -55,11 +55,11 @@ export default function MondiSection() {
         <div className="text-center mb-20">
           <div className="section-label justify-center mb-6">L&apos;Ecosistema</div>
           <h2 className="text-4xl md:text-6xl font-serif font-medium text-hub-ink leading-tight mb-6">
-            I Mondi di{" "}
-            <span className="italic text-hub-gold">Fabio Micale.</span>
+            <span className="italic text-hub-gold">L&apos;ecosistema.</span>
           </h2>
           <p className="text-hub-ink-muted text-lg max-w-2xl mx-auto font-light leading-relaxed">
-            Smetti di lavorare <span className="italic text-hub-ink font-medium">per</span> l&apos;azienda, inizia a farla <span className="text-hub-gold font-medium">crescere.</span> Quattro business verticali progettati per chi vuole vincere.
+            Quattro verticali. Un solo obiettivo:{" "}
+            <span className="italic text-hub-ink font-medium">un&apos;azienda che funziona senza di te.</span>
           </p>
         </div>
 

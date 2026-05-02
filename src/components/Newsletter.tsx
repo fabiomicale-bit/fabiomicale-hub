@@ -49,10 +49,11 @@ export default function Newsletter() {
         </div>
 
         <h2 className="text-3xl md:text-5xl font-serif font-medium text-hub-ink mb-6 leading-tight">
-          Entra nel <span className="italic text-hub-gold">Protocollo.</span>
+          Un Passo Avanti —{" "}
+          <span className="italic text-hub-gold">ogni settimana.</span>
         </h2>
         <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-12 max-w-lg mx-auto">
-          Crescita personale, business online e intelligenza artificiale. Inviaci un messaggio per iniziare il tuo percorso.
+          Analisi operative, strumenti pratici e casi reali per imprenditori Over 40 che vogliono un&apos;azienda autonoma. Nessuno spam. Cancellati quando vuoi.
         </p>
 
         {/* Form */}
@@ -63,7 +64,7 @@ export default function Newsletter() {
             <p className="text-hub-ink-muted text-sm mt-2">Riceverai una risposta entro 24 ore.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-2xl mx-auto text-left">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-2xl mx-auto text-left" suppressHydrationWarning>
             <div className="grid md:grid-cols-2 gap-6">
               <input
                 type="text"
@@ -138,7 +139,7 @@ export default function Newsletter() {
               disabled={status === "loading"}
               className="btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] disabled:opacity-50"
             >
-              {status === "loading" ? "Inviando..." : "Invia Messaggio"}
+              {status === "loading" ? "Inviando..." : "Iscriviti gratis →"}
             </button>
           </form>
         )}

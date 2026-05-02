@@ -13,41 +13,51 @@ export default function HeroEditorial() {
 
           {/* LEFT: Editorial Copy */}
           <div className="max-w-2xl">
+            {/* Tag */}
+            <div className="animate-reveal-up delay-0 text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-6">
+              Per imprenditori Over 40
+            </div>
+
             {/* Headline */}
             <h1 className="animate-reveal-up delay-100 text-5xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.05] tracking-tight text-hub-ink mb-8">
-              Ingegneria della Crescita per chi vuole{" "}
-              <span className="italic text-hub-gold">vincere</span>
+              Hai costruito qualcosa.{" "}
               <br />
-              nella vita.
+              <span className="italic text-hub-gold">Adesso fallo girare</span>
+              <br />
+              senza di te.
             </h1>
 
             {/* Subheadline */}
             <p className="animate-reveal-up delay-200 text-xl text-hub-ink-muted leading-relaxed mb-12 max-w-lg font-light">
-              Libri, corsi e sistemi per professionisti Over 40 che vogliono crescita personale, 
-              autodisciplina e un business che funziona — anche con l&apos;intelligenza artificiale.
+              Porto AI e metodo dentro la tua azienda.
+              La rendo autonoma. Tu torni a fare il CEO.
             </p>
 
             {/* CTA Group */}
             <div className="animate-reveal-up delay-300 flex flex-col sm:flex-row gap-5 items-start">
-              <Link href="/il-libro" className="btn-gold px-10 py-4 group">
-                Scopri il Libro
+              <Link href="/protocollo-anti-caos" className="btn-gold px-10 py-4 group">
+                Scarica il Protocollo Gratuito
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link href="/accademia" className="btn-outline px-10 py-4">
-                Entra nell&apos;Accademia
-              </Link>
             </div>
 
+            {/* Sub-CTA note */}
+            <p className="animate-reveal-up delay-350 text-xs text-hub-ink-light mt-4">
+              PDF gratuito · 9 pagine · Nessuna carta di credito
+            </p>
+
             {/* Social Proof Micro */}
-            <div className="animate-reveal-up delay-400 mt-14 flex items-center gap-6 text-hub-ink-light text-sm">
+            <div className="animate-reveal-up delay-400 mt-10 flex items-center gap-6 text-hub-ink-light text-sm">
               <div className="flex items-center gap-2">
                 <span className="text-hub-gold">★★★★★</span>
                 <span>4.8 su Amazon</span>
               </div>
               <div className="w-px h-4 bg-hub-border" />
               <span>25+ anni di esperienza</span>
+              <div className="w-px h-4 bg-hub-border" />
+              <span>150+ aziende</span>
             </div>
           </div>
 

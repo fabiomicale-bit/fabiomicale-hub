@@ -48,10 +48,10 @@ export default function LibriShowcase() {
         <div className="text-center mb-20">
           <div className="section-label justify-center mb-6">La Libreria</div>
           <h2 className="text-4xl md:text-6xl font-serif font-medium text-hub-ink leading-tight mb-6">
-            I miei <span className="italic text-hub-gold">Libri.</span>
+            Il Metodo in <span className="italic text-hub-gold">un libro.</span>
           </h2>
           <p className="text-hub-ink-muted text-lg max-w-2xl mx-auto font-light">
-            Ogni libro è un sistema operativo per la tua evoluzione. Non teoria, ma protocolli testati sul campo.
+            Non teoria. Un protocollo operativo da leggere e applicare subito.
           </p>
         </div>
 
