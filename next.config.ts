@@ -43,6 +43,17 @@ const nextConfig: NextConfig = {
         destination: '/lavora-con-me',
         permanent: true,
       },
+      // Migrazione MEPA Elite → Fatturato Garantito
+      {
+        source: '/mepa-elite',
+        destination: '/fatturato-garantito',
+        permanent: true,
+      },
+      {
+        source: '/mepa-elite/:path*',
+        destination: '/fatturato-garantito/:path*',
+        permanent: true,
+      },
       // Nuova migrazione Punto Zero
       {
         source: '/puntozero',
