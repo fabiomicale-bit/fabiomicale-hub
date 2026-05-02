@@ -54,11 +54,9 @@ export default function ProtocolloModal() {
       {/* Modal Overlay */}
       {open && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center px-4"
+          className="fixed inset-0 z-[200] flex items-center justify-center px-4 bg-black/95"
           onClick={(e) => { if (e.target === e.currentTarget) handleClose(); }}
         >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
 
           {/* Modal Panel */}
           <div className="relative z-10 w-full max-w-2xl bg-hub-bg border border-hub-border rounded-[40px] shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto">
