@@ -2,10 +2,21 @@ import Link from "next/link";
 
 const mondi = [
   {
+    sigla: "0",
+    nome: "Punto Zero",
+    sottotitolo: "Reset & Ripartenza",
+    descrizione: "Il luogo di reset per chi ha superato i 40 e sente che può fare molto di più. Il primo passo è accettarlo.",
+    href: "/punto-zero",
+    colore: "from-[#1A1A1A] to-[#3A3A3A]",
+    coloreBordo: "group-hover:border-white/20",
+    coloreAccento: "text-white/80",
+    stats: "Inizia il reset →",
+  },
+  {
     sigla: "L",
     nome: "Impresa Liquida",
-    sottotitolo: "Automazione & Sistemi",
-    descrizione: "Ingegnerizziamo l'autonomia operativa. Trasformiamo la tua azienda da cantiere permanente ad asset scalabile.",
+    sottotitolo: "Autonomia & Sistemi",
+    descrizione: "Ingegnerizziamo l'autonomia operativa. Trasformiamo la tua azienda da cantiere permanente ad asset scalabile che gira senza di te.",
     href: "/impresa-liquida",
     colore: "from-[#2E7D32] to-[#43A047]",
     coloreBordo: "group-hover:border-[#2E7D32]/30",
@@ -16,34 +27,23 @@ const mondi = [
     sigla: "A",
     nome: "Agenzia Business",
     sottotitolo: "Lead Gen & AI",
-    descrizione: "Sistemi di acquisizione clienti basati su AI. Trasformiamo il traffico in appuntamenti commerciali reali.",
+    descrizione: "Sistemi di acquisizione clienti basati su AI. Trasformiamo il traffico in appuntamenti commerciali reali — in automatico.",
     href: "/agenzia-business",
     colore: "from-[#2563EB] to-[#1D4ED8]",
     coloreBordo: "group-hover:border-blue-600/30",
     coloreAccento: "text-blue-600",
-    stats: "Vedi come funziona →",
+    stats: "Attiva il sistema →",
   },
   {
-    sigla: "M",
-    nome: "MEPA Elite",
-    sottotitolo: "Appalti Pubblici",
-    descrizione: "Il protocollo per dominare il mercato degli appalti pubblici. 113 miliardi di euro di opportunità.",
-    href: "/mepa-elite",
+    sigla: "F",
+    nome: "Fatturato Garantito",
+    sottotitolo: "Crescita & Fatturato",
+    descrizione: "Nuove fonti di ricavo stabili e prevedibili, gestite da noi con pilota automatico. Senza burocrazia. Senza sforzo aggiuntivo.",
+    href: "/fatturato-garantito",
     colore: "from-[#006643] to-[#00895a]",
     coloreBordo: "group-hover:border-[#006643]/30",
     coloreAccento: "text-[#006643]",
-    stats: "Entra nel mercato →",
-  },
-  {
-    sigla: "0",
-    nome: "Punto Zero",
-    sottotitolo: "Reset & Ripartenza",
-    descrizione: "Il luogo di reset per chi ha superato i 40 anni e sente che può fare molto di più. Il primo passo è accettarlo.",
-    href: "/punto-zero",
-    colore: "from-[#1A1A1A] to-[#3A3A3A]",
-    coloreBordo: "group-hover:border-white/20",
-    coloreAccento: "text-white/80",
-    stats: "Inizia il reset →",
+    stats: "Scopri come →",
   },
 ];
 
@@ -55,11 +55,11 @@ export default function MondiSection() {
         <div className="text-center mb-20">
           <div className="section-label justify-center mb-6">L&apos;Ecosistema</div>
           <h2 className="text-4xl md:text-6xl font-serif font-medium text-hub-ink leading-tight mb-6">
-            <span className="italic text-hub-gold">L&apos;ecosistema.</span>
+            <span className="italic text-hub-gold">L&apos;Ecosistema.</span>
           </h2>
           <p className="text-hub-ink-muted text-lg max-w-2xl mx-auto font-light leading-relaxed">
             Quattro verticali. Un solo obiettivo:{" "}
-            <span className="italic text-hub-ink font-medium">un&apos;azienda che funziona senza di te.</span>
+            <span className="italic text-hub-ink font-medium">un&apos;azienda che produce valore — anche senza di te.</span>
           </p>
         </div>
 

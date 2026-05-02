@@ -15,7 +15,7 @@ export default function HeroEditorial() {
           <div className="max-w-2xl">
             {/* Tag */}
             <div className="animate-reveal-up delay-0 text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-6">
-              Per imprenditori Over 40
+              Per imprenditori e professionisti Over 40
             </div>
 
             {/* Headline */}
@@ -45,7 +45,7 @@ export default function HeroEditorial() {
 
             {/* Sub-CTA note */}
             <p className="animate-reveal-up delay-350 text-xs text-hub-ink-light mt-4">
-              PDF gratuito · 9 pagine · Nessuna carta di credito
+              PDF gratuito · 9 pagine operative · Zero impegni
             </p>
 
             {/* Social Proof Micro */}

@@ -4,25 +4,25 @@ const passi = [
   {
     numero: "I",
     titolo: "Ferma il Caos",
-    descrizione: "Il tuo tempo sparisce in urgenze, approvazioni e decisioni che il team dovrebbe prendere da solo. Prima di costruire, devi capire dove va davvero il tuo tempo.",
-    collegamento: "Inizia da qui · Punto Zero",
+    descrizione: "Prima di correre nella direzione giusta, devi accettare di aver corso in quella sbagliata. Il reset è il primo atto di coraggio.",
+    collegamento: "→ Punto Zero",
     href: "/punto-zero",
     accent: "hub-gold",
   },
   {
     numero: "II",
     titolo: "Costruisci il Sistema",
-    descrizione: "Trasformi i processi che hai in testa in protocolli scritti. Il team diventa autonomo. Tu smetti di essere l'ingranaggio centrale.",
-    collegamento: "Vai al metodo · Impresa Liquida",
+    descrizione: "L'identità precede la direzione. Senza sistemi sei solo un passeggero della tua vita. È tempo di costruire l'architettura.",
+    collegamento: "→ Impresa Liquida",
     href: "/impresa-liquida",
     accent: "hub-ink",
   },
   {
     numero: "III",
     titolo: "Dominio Sistemico",
-    descrizione: "Integri l'AI come terzo socio silenzioso. L'azienda scala, i costi non crescono, il tuo tempo torna a te.",
-    collegamento: "Scala con l'AI · Nexus Lab",
-    href: "/impresa-liquida/nexus",
+    descrizione: "La libertà non è l'assenza di regole, ma la presenza di un sistema che le gestisce per te. L'AI è il tuo terzo socio silenzioso.",
+    collegamento: "→ Fatturato Garantito",
+    href: "/fatturato-garantito",
     accent: "hub-charcoal",
   },
 ];
@@ -38,12 +38,12 @@ export default function MetodoSection() {
         <div className="text-center mb-20">
           <div className="section-label justify-center mb-6">Il Metodo</div>
           <h2 className="text-4xl md:text-6xl font-serif font-medium text-hub-ink leading-tight mb-6">
-            Dove sei{" "}
-            <span className="italic text-hub-gold">adesso?</span>
+            Il Metodo:{" "}
+            <span className="italic text-hub-gold">3 Passi.</span>
           </h2>
           <p className="text-hub-ink-muted text-lg max-w-2xl mx-auto font-light leading-relaxed">
-            Il metodo funziona perché parte da una diagnosi onesta.
-            Riconosci il tuo passo.
+            Un protocollo ingegneristico che si ripete in ogni ciclo di evoluzione — personale e professionale.
+            Ogni passo ha un mondo dedicato.
           </p>
         </div>
 
