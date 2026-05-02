@@ -5,6 +5,13 @@ export function middleware(request: NextRequest) {
   const host = request.headers.get("host") || "";
   const pathname = request.nextUrl.pathname;
 
+  // 0. MAINTENANCE MODE (Radical Toggle)
+  const MAINTENANCE_MODE = true; 
+  const isLocal = host.includes("localhost") || host.includes("127.0.0.1");
+  if (MAINTENANCE_MODE && !isLocal && pathname !== "/manutenzione" && !pathname.startsWith("/_next") && !pathname.startsWith("/api") && !pathname.includes(".")) {
+    return NextResponse.redirect(new URL("/manutenzione", request.url));
+  }
+
   // 1. Skip middleware for static assets, apis, and shared pages
   const sharedPaths = ["/recensioni", "/privacy", "/cookie", "/contatti"];
   if (
