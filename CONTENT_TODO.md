@@ -75,7 +75,16 @@ I componenti `src/components/mepa/` (`Hero`, `ServiceInfo`, `Comparison`, `Prici
 
 ## /src/app/agenzia-business/page.tsx
 
-*[da compilare dopo Fase 3 — diff 4/4]*
+### Sezioni legacy archiviate
+File: `/src/components/_archive/agenzia-business-legacy.tsx`
+
+| Sezione rimossa | Note |
+|---|---|
+| Hero custom (`AgenziaBusinessHeroLegacy`) | Hero `bg-hub-bg-alt` con titolo + 2 CTA inline. Sostituito da `EditorialHero variant="vertical"`. |
+| "Il Sistema Unico" (`AgenziaBusinessSistemaLegacy`) | Griglia 3 card: Traffico Strategico, Protocolli di Conversione, Automazioni AI. `MethodPillars context="agenzia-business"` copre concettualmente questa funzione. Se le 3 leve operative specifiche dell'agenzia devono restare visibili, valutare in fase successiva un componente dedicato `OperationalLevers` riusabile anche per altri verticali. |
+| "Casi di Successo" (`AgenziaBusinessCasiSuccessoLegacy`) | **KPI placeholder non verificati: +148%, 320h, -58%.** Archiviati. Da rifornire con dati reali quando Fabio passa i numeri certificati. Stessa logica delle Success Stories di Fatturato Garantito. `ProofRibbon` copre la prova sociale nella fase attuale. |
+| CTA finale standalone (`AgenziaBusinessCTALegacy`) | Sezione `bg-hub-bg` con copy "Inizia a ricevere Appuntamenti non problemi". `NewsletterCTA` copre la cattura nella fase attuale. |
+| `theme="hub"` su FAQSection | Corretto a `theme="agency"` — fix coerente con gli altri verticali. |
 
 ---
 
