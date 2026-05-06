@@ -38,7 +38,19 @@ File: `/src/components/_archive/punto-zero-legacy.tsx`
 
 ## /src/app/impresa-liquida/page.tsx
 
-*[da compilare dopo Fase 3 — diff 2/4]*
+### Sezioni legacy archiviate
+File: `/src/components/_archive/impresa-liquida-legacy.tsx`
+
+| Sezione rimossa | Note |
+|---|---|
+| Hero glassmorphism (`ImpresaLiquidaHeroLegacy`) | Hero premium con griglia 2 colonne, visual glass interface animata con 4 card "Flusso". Sostituito da `EditorialHero variant="vertical"`. |
+| Dark Strip ×5 (`ImpresaLiquidaDarkStripLegacy`) | 5 banner `bg-hub-charcoal` con testi sloganistici in uppercase gold. Eliminati: `EditorialHero` e `MethodReconnect` coprono il posizionamento narrativo. |
+| "Sindrome dell'Imprenditore Intrappolato" (`ImpresaLiquidaSindromeLegacy`) | Sezione confronto Stato di Caos vs Sistema Liquido con due card. Valutare reintroduzione come componente `DiagnosticCompare` se serve evidenza visiva del problema/soluzione. |
+| "Mappa Operativa" (`ImpresaLiquidaMappaLegacy`) | Sezione 2-colonne con lista punti + visual dark card. Contiene URL `transparenttextures.com` commentato. Vedi SECURITY_AUDIT.md. |
+| "Algoritmo di Pilotaggio" (`ImpresaLiquidaAlgoritmoLegacy`) | Sezione parallela a Mappa Operativa — contenuto sovrapposto, rimossa come duplicato. Contiene URL `transparenttextures.com` commentato. |
+| "I 4 Asset dell'Ingegneria Liquida" (`ImpresaLiquidaAssetLegacy`) | Griglia 4 card con emoji + descrizione asset operativi. `MethodPillars context="impresa-liquida"` copre questa funzione. |
+| "I Servizi" (`ImpresaLiquidaServiziLegacy`) | Due card Fase 01 / Fase 02 con prezzi "Richiedi Analisi". Valutare reintroduzione come componente `ServicesGrid` dopo che Fabio definisce pricing e offer. |
+| CTA Finale "Il Secondo Tempo" (`ImpresaLiquidaCTAFinaLeLegacy`) | Sezione `bg-hub-charcoal` con copy "Costruisci il tuo secondo tempo". `NewsletterCTA` copre la cattura nella fase attuale. |
 
 ---
 
