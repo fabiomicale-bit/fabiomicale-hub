@@ -65,6 +65,17 @@ const nextConfig: NextConfig = {
         destination: '/punto-zero/:path*',
         permanent: true,
       },
+      // Migrazione Il Libro → Successo in 3 Passi
+      {
+        source: '/il-libro',
+        destination: '/successo-in-3-passi',
+        permanent: true,
+      },
+      {
+        source: '/il-libro/:path*',
+        destination: '/successo-in-3-passi/:path*',
+        permanent: true,
+      },
     ];
   },
 };

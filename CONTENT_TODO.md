@@ -4,6 +4,14 @@
 
 ---
 
+## Debito tecnico (da risolvere in Fase 6)
+
+| Componente | Problema | Azione |
+|---|---|---|
+| `MethodPillars.tsx` | `readonly` array castato con `as unknown as` per aggirare incompatibilità di tipo | Risolvere in Fase 6 con tipizzazione esplicita di `method-pillars.ts` (rimuovere `as const` sui sotto-array, oppure adattare la firma del componente per accettare `readonly`). |
+
+---
+
 ## /src/content/ — Testi da Fabio
 
 ### method-pillars.ts — Declinazioni verticali (tutti i passi 1/2/3)
@@ -90,7 +98,17 @@ File: `/src/components/_archive/agenzia-business-legacy.tsx`
 
 ## /src/app/successo-in-3-passi/page.tsx
 
-*[da compilare dopo Fase 4]*
+### Rotta rinominata da `/il-libro/`
+Redirect 301 in `next.config.ts`. Archivio: `/src/components/_archive/il-libro-legacy.tsx`.
+
+| Sezione rimossa | Note |
+|---|---|
+| Hero con copertina (`/fabio libro.jpg`) | `EditorialHero variant="book"` + `BookFeature` coprono hero e copertina. La nuova cover asset è `/copertina-libro.png`. |
+| Focus Cards (Protocollo / Dossier Reali / Operatività) | `MethodPillars context="book"` copre la struttura del libro. |
+| I 3 Passi con citazioni | Citazioni nelle card archiviate — valutare se recuperarle in `book.ts` come campo `stepQuotes`. |
+| "Per chi è" con 4 bullet + CTA email | Valutare reintroduzione come `BookAudience` component con testi validati da Fabio. |
+| Edizione 2017 (sezione completa) | Sostituita dal blocco editoriale `BookEditionsHistory` inline. **Testo del blocco da rifinire con Fabio** se il placeholder attuale non è sufficiente. |
+| CTA finale `bg-hub-charcoal` | `NewsletterCTA variant="book-excerpt"` copre la cattura. |
 
 ---
 
