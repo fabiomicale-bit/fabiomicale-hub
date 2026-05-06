@@ -56,7 +56,20 @@ File: `/src/components/_archive/impresa-liquida-legacy.tsx`
 
 ## /src/app/fatturato-garantito/page.tsx
 
-*[da compilare dopo Fase 3 — diff 3/4]*
+### Sezioni legacy archiviate
+File: `/src/components/_archive/fatturato-garantito-legacy.tsx`
+
+| Sezione rimossa | Note |
+|---|---|
+| Hero MEPA custom (`Hero` da `mepa/`) | **Non eliminato** da `src/components/mepa/Hero.tsx`. Componente mepa/* preservato (vedi nota sotto). |
+| "Il paradosso del tempo perso" (sezione vuota) | Sezione `id="sistema"` con placeholder — solo titolo, nessun contenuto reale. Rimossa. |
+| "Cos'è il MePA?" | Blocco 2-colonne con testo introduttivo. Valutare reintroduzione con contenuto completo approvato da Fabio. |
+| "Success Stories" (case study + testimoniale) | **Testi placeholder — DA RIFORNIRE.** Case study "Da zero a 85k in 4 mesi" e testimoniale "Paolo R." non verificati. Restituire a Fabio per approvazione prima di qualsiasi reintroduzione. |
+| CTA finale doppia (2 sezioni `bg-hub-charcoal`) | "Trasforma il MEPA nel Tuo Ufficio Gare Privato" + "Agiamo Insieme". `NewsletterCTA` copre la cattura nella fase attuale. |
+| EbookForm (se presente in evoluzioni future) | Qualsiasi lead magnet specifico per Fatturato Garantito va gestito via `NewsletterCTA` (variante futura `variant="fatturato-garantito-excerpt"`), non via `EbookForm`. |
+
+### Componenti mepa/* — nota di audit
+I componenti `src/components/mepa/` (`Hero`, `ServiceInfo`, `Comparison`, `PricingCards`) **non vengono eliminati**. Non sono più usati da `fatturato-garantito/page.tsx` ma potrebbero essere importati da route figlie (`/fatturato-garantito/contatti`, etc.). **Azione in Fase 6 (audit orfani):** verificare con grep quali route li importano davvero; se nessuna, decidere se archiviarli o mantenerli per evoluzioni future.
 
 ---
 
