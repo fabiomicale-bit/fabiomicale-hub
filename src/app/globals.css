@@ -11,6 +11,7 @@
   --hub-bg: #FAFAF8;
   --hub-bg-alt: #F2F0EC;
   --hub-bg-warm: #F7F3ED;
+  --hub-cream: var(--hub-bg-warm);
   --hub-ink: #1A1A1A;
   --hub-ink-muted: #6B6B6B;
   --hub-ink-light: #999999;
@@ -23,38 +24,39 @@
   --hub-border: rgba(0, 0, 0, 0.06);
   --hub-border-hover: rgba(0, 0, 0, 0.12);
 
-  /* Legacy PA tokens (kept for satellite sub-routes compatibility) */
-  --pa-green: #006643;
-  --pa-green-bright: #00895a;
-  --pa-blue: #004B87;
-  --pa-bg: #F8F9FA;
-  --pa-bg-light: #FFFFFF;
-  --pa-bg-footer: #006643;
-  --pa-text: #333333;
-  --pa-text-muted: #666666;
-  --gold: #C8A45A;
-  --bg: #FAFAF8;
-  --text: #1A1A1A;
+  /* Unified satellite tokens (aligned with Hub Editorial) */
+  --pa-green: var(--hub-gold);
+  --pa-green-bright: var(--hub-gold-light);
+  --pa-blue: var(--hub-ink);
+  --pa-bg: var(--hub-bg);
+  --pa-bg-light: var(--hub-white);
+  --pa-bg-footer: var(--hub-ink);
+  --pa-text: var(--hub-ink);
+  --pa-text-muted: var(--hub-ink-muted);
+  --gold: var(--hub-gold);
+  --bg: var(--hub-bg);
+  --text: var(--hub-ink);
   
   /* MEPA Elite V2 tokens */
-  --brand-blue: #1E40AF;
-  --brand-green: #10B981;
+  --brand-blue: var(--hub-ink);
+  --brand-green: var(--hub-gold);
 
-  /* Punto Zero Platinum Tokens */
-  --pz-platinum-50: #f8fafc;
-  --pz-platinum-100: #f1f5f9;
-  --pz-platinum-200: #e2e8f0;
-  --pz-platinum-300: #cbd5e1;
-  --pz-platinum-400: #94a3b8;
-  --pz-platinum-500: #64748b;
-  --pz-obsidian: #020617;
-  --pz-obsidian-alt: #050B1A;
+  /* Punto Zero Platinum Tokens (aligned) */
+  --pz-platinum-50: var(--hub-bg);
+  --pz-platinum-100: var(--hub-bg-alt);
+  --pz-platinum-200: var(--hub-gold-light);
+  --pz-platinum-300: var(--hub-gold);
+  --pz-platinum-400: var(--hub-gold-dark);
+  --pz-platinum-500: var(--hub-ink-muted);
+  --pz-obsidian: var(--hub-bg);
+  --pz-obsidian-alt: var(--hub-bg-alt);
 }
 
 @theme inline {
   --color-hub-bg: var(--hub-bg);
   --color-hub-bg-alt: var(--hub-bg-alt);
   --color-hub-bg-warm: var(--hub-bg-warm);
+  --color-hub-cream: var(--hub-cream);
   --color-hub-ink: var(--hub-ink);
   --color-hub-ink-muted: var(--hub-ink-muted);
   --color-hub-ink-light: var(--hub-ink-light);
@@ -75,13 +77,13 @@
   --color-obsidian-alt: var(--pz-obsidian-alt);
 
   /* Agency B2B Theme */
-  --color-agency-bg: #FDFDFD;
-  --color-agency-bg-alt: #F1F5F9;
-  --color-agency-navy: #0F172A;
-  --color-agency-navy-light: #1E293B;
-  --color-agency-accent: #3B82F6;
-  --color-agency-text: #1E293B;
-  --color-agency-text-muted: #64748B;
+  --color-agency-bg: var(--hub-bg);
+  --color-agency-bg-alt: var(--hub-bg-alt);
+  --color-agency-navy: var(--hub-ink);
+  --color-agency-navy-light: var(--hub-charcoal);
+  --color-agency-accent: var(--hub-gold);
+  --color-agency-text: var(--hub-ink);
+  --color-agency-text-muted: var(--hub-ink-muted);
 
   /* Legacy compatibility */
   --color-pa-green: var(--pa-green);
