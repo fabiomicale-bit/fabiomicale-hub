@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogContent from "./BlogContent";
@@ -47,7 +48,9 @@ export default function BlogPage() {
       </section>
 
       {/* ── CONTENUTO DINAMICO ────────────────────────────────── */}
-      <BlogContent manifestoPosts={manifestoPosts} regularPosts={regularPosts} />
+      <Suspense fallback={<div className="py-40 text-center text-hub-ink-light text-sm">Caricamento…</div>}>
+        <BlogContent manifestoPosts={manifestoPosts} regularPosts={regularPosts} />
+      </Suspense>
 
       <Footer />
     </main>

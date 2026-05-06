@@ -1,12 +1,29 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { Post } from "@/lib/posts";
 
 type Props = {
   manifestoPosts: Post[];
   regularPosts: Post[];
 };
+
+const stepLabels: Record<string, string> = {
+  "Tutti": "Tutti",
+  "1": "Passo 1",
+  "2": "Passo 2",
+  "3": "Passo 3",
+};
+
+const formatLabels: Record<string, string> = {
+  "caso-reale": "Casi reali",
+  "appunti-di-metodo": "Appunti di metodo",
+  "strumento-pratico": "Strumenti pratici",
+  "diario-di-costruzione": "Diario di costruzione",
+};
+
+const ALL_FORMATS = Object.keys(formatLabels) as Post["formats"][number][];
+const ALL_STEPS = ["Tutti", "1", "2", "3"];
 
 const StarIcon = () => (
   <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor">
@@ -15,43 +32,91 @@ const StarIcon = () => (
 );
 
 export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
-  const [activeCategory, setActiveCategory] = useState("Tutti");
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
-  const allPosts = [...manifestoPosts, ...regularPosts];
-  const categories = [
-    "Tutti",
-    ...Array.from(new Set(allPosts.map((p) => p.categoria))),
-  ];
+  const activeStep = searchParams.get("step") ?? "Tutti";
+  const activeFormats = searchParams.get("format")?.split(",").filter(Boolean) ?? [];
 
-  const filteredManifesto =
-    activeCategory === "Tutti"
-      ? manifestoPosts
-      : manifestoPosts.filter((p) => p.categoria === activeCategory);
+  const matchesStep = (p: Post) => {
+    if (activeStep === "Tutti") return true;
+    if (activeStep === "3") return p.step === "3A" || p.step === "3B";
+    return String(p.step) === activeStep;
+  };
 
-  const filteredRegular =
-    activeCategory === "Tutti"
-      ? regularPosts
-      : regularPosts.filter((p) => p.categoria === activeCategory);
+  const matchesFormats = (p: Post) => {
+    if (activeFormats.length === 0) return true;
+    return activeFormats.some((f) => p.formats.includes(f as Post["formats"][number]));
+  };
+
+  const filteredManifesto = manifestoPosts.filter((p) => matchesStep(p) && matchesFormats(p));
+  const filteredRegular = regularPosts.filter((p) => matchesStep(p) && matchesFormats(p));
+
+  const handleStepChange = (step: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (step === "Tutti") {
+      params.delete("step");
+    } else {
+      params.set("step", step);
+    }
+    const qs = params.toString();
+    router.replace(qs ? `/blog?${qs}` : "/blog", { scroll: false });
+  };
+
+  const handleFormatToggle = (format: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    const current = params.get("format")?.split(",").filter(Boolean) ?? [];
+    const next = current.includes(format)
+      ? current.filter((f) => f !== format)
+      : [...current, format];
+    if (next.length > 0) {
+      params.set("format", next.join(","));
+    } else {
+      params.delete("format");
+    }
+    const qs = params.toString();
+    router.replace(qs ? `/blog?${qs}` : "/blog", { scroll: false });
+  };
 
   return (
     <div className="py-20 px-6 pb-40 bg-hub-bg">
       <div className="max-w-6xl mx-auto">
 
-        {/* ── Filtro categorie Editorial ──────────────────────────── */}
-        <div className="flex flex-wrap gap-3 mb-24 justify-center">
-          {categories.map((cat) => (
+        {/* ── Filtri Passo (pill primari) ────────────────────────── */}
+        <div className="flex flex-wrap gap-3 mb-8 justify-center">
+          {ALL_STEPS.map((step) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
+              key={step}
+              onClick={() => handleStepChange(step)}
               className={`text-[10px] font-bold uppercase tracking-[0.25em] px-8 py-4 rounded-full transition-all duration-500 border ${
-                activeCategory === cat
+                activeStep === step
                   ? "bg-hub-ink border-hub-ink text-white shadow-xl"
                   : "bg-white border-hub-border text-hub-ink-muted hover:border-hub-gold/50 hover:text-hub-ink"
               }`}
             >
-              {cat}
+              {stepLabels[step]}
             </button>
           ))}
+        </div>
+
+        {/* ── Filtri Formato (chip secondari, multi-select) ───────── */}
+        <div className="flex flex-wrap gap-2 mb-24 justify-center">
+          {ALL_FORMATS.map((fmt) => {
+            const isActive = activeFormats.includes(fmt);
+            return (
+              <button
+                key={fmt}
+                onClick={() => handleFormatToggle(fmt)}
+                className={`text-[9px] font-bold uppercase tracking-[0.2em] px-5 py-2.5 rounded-full transition-all duration-300 border ${
+                  isActive
+                    ? "bg-hub-gold border-hub-gold text-hub-charcoal"
+                    : "bg-transparent border-hub-border/60 text-hub-ink-light hover:border-hub-gold/40 hover:text-hub-ink-muted"
+                }`}
+              >
+                {formatLabels[fmt]}
+              </button>
+            );
+          })}
         </div>
 
         {/* ── Letture Fondamentali (Manifesto) ─────────────────── */}
@@ -106,7 +171,7 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
           </div>
         )}
 
-        {/* ── Ultimi Articoli ───────────────────────────────────── */}
+        {/* ── Approfondimenti Strategici ────────────────────────── */}
         {filteredRegular.length > 0 && (
           <>
             <div className="flex items-center gap-6 mb-16">
@@ -150,7 +215,9 @@ export default function BlogContent({ manifestoPosts, regularPosts }: Props) {
         {/* ── No Results ────────────────────────────────────────── */}
         {filteredManifesto.length === 0 && filteredRegular.length === 0 && (
           <div className="text-center py-40">
-            <p className="text-hub-ink-light text-lg italic font-serif">Nessuna analisi strategica disponibile per questa selezione.</p>
+            <p className="text-hub-ink-light text-lg italic font-serif">
+              Nessuna analisi strategica disponibile per questa selezione.
+            </p>
           </div>
         )}
       </div>

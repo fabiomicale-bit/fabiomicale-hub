@@ -4,7 +4,10 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { posts, getPost, getPostsBySlug } from "@/lib/posts";
+import { posts, getPost, getPostsBySlug, getPostsByStep } from "@/lib/posts";
+import ArticleStepBox from "@/components/ArticleStepBox";
+import ArticleVerticalCTA from "@/components/ArticleVerticalCTA";
+import NewsletterCTA from "@/components/NewsletterCTA";
 import ReadingProgress from "./ReadingProgress";
 import TableOfContents from "./TableOfContents";
 import { injectHeadingIds } from "./headingUtils";
@@ -49,7 +52,17 @@ export default async function BlogPostPage({ params }: Props) {
   const post = getPost(slug);
   if (!post) notFound();
 
-  const correlati = getPostsBySlug(post.correlati);
+  const bySlug = getPostsBySlug(post.correlati);
+  const correlati = bySlug.length > 0
+    ? bySlug
+    : getPostsByStep(post.step).filter((p) => p.slug !== post.slug).slice(0, 3);
+
+  const stepSectionLabels: Record<string, string> = {
+    "1": "Passo 1 — Ferma il Caos",
+    "2": "Passo 2 — Rimetti Struttura",
+    "3A": "Passo 3A — Mantieni il Controllo",
+    "3B": "Passo 3B — Mantieni il Controllo",
+  };
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -58,6 +71,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.seoDescription,
     keywords: post.keywords,
     datePublished: post.dataISO,
+    articleSection: stepSectionLabels[String(post.step)] ?? "Metodo Successo in 3 Passi",
     author: {
       "@type": "Person",
       "@id": "https://www.fabiomicale.com/#person",
@@ -140,6 +154,9 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
+      {/* ── STEP BOX ────────────────────────────────────────────── */}
+      <ArticleStepBox step={post.step} />
+
       {/* ── CONTENUTO ───────────────────────────────────────────── */}
       <section className="py-20 px-6 pb-32 relative">
         <div className="max-w-3xl mx-auto">
@@ -205,6 +222,14 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* ── CTA VERTICALE + NEWSLETTER ──────────────────────────── */}
+      <section className="py-16 px-6 bg-hub-bg">
+        <div className="max-w-3xl mx-auto">
+          <ArticleVerticalCTA step={post.step} />
+        </div>
+      </section>
+      <NewsletterCTA variant="article" />
 
       {/* ── FORM COMMENTI ───────────────────────────────────────── */}
       <section className="py-32 px-6 bg-hub-bg">

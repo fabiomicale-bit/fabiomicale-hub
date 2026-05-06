@@ -4,11 +4,19 @@
 
 ---
 
+## Decisioni strategiche aperte
+
+- `/il-metodo` espone framework 3-pilastri (Architettura Mentale / Potenziamento Tecnico / Eccellenza Sistemica) concorrente al Metodo Successo in 3 Passi. Decidere prima del merge PR finale: (a) deprecare con redirect 301 verso `/successo-in-3-passi`, (b) riscrivere come traduzione operativa dei 3 Passi, (c) mantenere come framework parallelo distinto. Decisione richiede input di Fabio.
+- Landing tematiche `/ai-per-professionisti` e `/reinvenzione-over-40` indipendenti dal sistema 3 Passi. Verificare in fase di merge se valga la pena collegarle al framework (es. `/reinvenzione-over-40` → naturale ingresso al Passo 1) o lasciarle autonome.
+
+---
+
 ## Debito tecnico (da risolvere in Fase 6)
 
 | Componente | Problema | Azione |
 |---|---|---|
 | `MethodPillars.tsx` | `readonly` array castato con `as unknown as` per aggirare incompatibilità di tipo | Risolvere in Fase 6 con tipizzazione esplicita di `method-pillars.ts` (rimuovere `as const` sui sotto-array, oppure adattare la firma del componente per accettare `readonly`). |
+| Mini-blog Agenzia Business | Articoli hardcoded in `agenzia-business/analisi-strategiche/[slug]/page.tsx`, fuori dal sistema `posts.ts` | Valutare migrazione a `posts.ts` con campo `verticalScope: 'agenzia-business'` opzionale, oppure mantenere separato come scelta editoriale. Decisione futura. |
 
 ---
 
@@ -114,4 +122,10 @@ Redirect 301 in `next.config.ts`. Archivio: `/src/components/_archive/il-libro-l
 
 ## /src/app/blog/
 
-*[da compilare dopo Fase 5]*
+### Content gap — Passo 3
+
+Nessun articolo mappa attualmente sul Passo 3 (step `"3A"` o `"3B"`). Quando il blog filtra per Passo 3, gli archivi `/blog/passo-3-mantieni-il-controllo/` saranno vuoti. Considerare:
+1. Primo articolo MEPA-PA (step `"3A"`) — es. "Come funziona il portale acquisti PA" o case study fatturato garantito
+2. Primo articolo lead gen AI (step `"3B"`) — es. "Come ho costruito il mio primo sistema di acquisizione clienti con AI"
+
+Da pianificare con Fabio prima del lancio del filtro Passo 3 nel blog.

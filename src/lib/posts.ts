@@ -12,6 +12,8 @@ export type Post = {
   excerpt: string;
   contentHtml: string;
   correlati: string[];
+  step: 1 | 2 | "3A" | "3B";
+  formats: Array<"caso-reale" | "appunti-di-metodo" | "strumento-pratico" | "diario-di-costruzione">;
   manifesto?: boolean;
   featured?: boolean;
   ogImage?: string;
@@ -40,6 +42,8 @@ export const posts: Post[] = [
     excerpt:
       "C'è una differenza fondamentale tra essere occupati e lavorare bene. L'AI non ti rende automaticamente più produttivo — ma un sistema costruito bene, sì.",
     correlati: ["manifesto-sistemi-autonomi", "sistemi-che-lavorano-per-te"],
+    step: 2,
+    formats: ["strumento-pratico"],
     contentHtml: `
     <p>C'è una trappola in cui cadono quasi tutti quando iniziano a usare l'AI
     nel lavoro. La chiamano produttività, ma in realtà è solo velocità.</p>
@@ -160,6 +164,8 @@ export const posts: Post[] = [
     coverAlt: "Intelligenza artificiale incandescente che analizza ed organizza task geometrici",
     excerpt: "Sei un professionista over 40 e pensi che l'AI sia roba da giovani smanettoni? Ecco 10 compiti ripetitivi che puoi delegare oggi stesso. Senza diventare esperto di prompt.",
     correlati: ["claude-ai-come-usarlo-al-lavoro", "recuperare-tempo-delegare-ai-sistema", "sistemi-che-lavorano-per-te"],
+    step: 2,
+    formats: ["strumento-pratico"],
     contentHtml: `
 <p>Sei un professionista over 40 e pensi che l'AI sia roba da giovani smanettoni?</p>
 
@@ -452,6 +458,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     excerpt:
       "Non una lista di consigli motivazionali. Non una promessa che andrà tutto bene. La paura di diventare obsoleto è reale — e ha qualcosa importante da dirti.",
     correlati: ["manifesto-reinvenzione-over40", "reinventarsi-dopo-i-40-metodo"],
+    step: 1,
+    formats: ["appunti-di-metodo"],
     contentHtml: `
     <p>C'è una cosa che non sento quasi mai dire nei convegni sull'AI,
     nei webinar sul futuro del lavoro, nei post LinkedIn pieni di
@@ -568,6 +576,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     excerpt:
       "Tutti parlano di AI come se premiasse solo i giovani e penalizzasse chi ha esperienza. È esattamente il contrario — ma solo se sai come usarla.",
     correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
+    step: 1,
+    formats: ["appunti-di-metodo"],
     contentHtml: `
     <p>C'è un racconto che mi stanca ogni volta che lo sento.
     Quello secondo cui l'intelligenza artificiale premia i giovani — i nativi digitali,
@@ -735,6 +745,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p><a href="/lavora-con-me">Se vuoi capire come farlo nel tuo caso specifico, inizia da qui</a></p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
+    step: 1,
+    formats: ["appunti-di-metodo"],
   },
 
   {
@@ -828,6 +840,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p><a href="/lavora-con-me">Se vuoi farlo con una guida, ecco come possiamo lavorare insieme</a></p>
     `,
     correlati: ["manifesto-ai-esperienza-vince", "manifesto-sistemi-autonomi"],
+    step: 1,
+    formats: ["appunti-di-metodo", "diario-di-costruzione"],
   },
 
   {
@@ -918,6 +932,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p><a href="/contatti">Se vuoi parlarne, sono qui</a></p>
     `,
     correlati: ["manifesto-reinvenzione-over40", "sistemi-che-lavorano-per-te"],
+    step: 2,
+    formats: ["appunti-di-metodo"],
   },
 
   // ── ARTICOLI ──────────────────────────────────────────────────
@@ -979,6 +995,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p>Se vuoi capire come applicare tutto questo alla tua situazione specifica, <a href="/contatti">scrivimi e ne parliamo</a>.</p>
     `,
     correlati: ["reinventarsi-dopo-i-40-metodo", "sistemi-che-lavorano-per-te"],
+    step: 1,
+    formats: ["appunti-di-metodo"],
   },
 
   {
@@ -1040,6 +1058,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p>Da lì si costruisce tutto il resto. Se vuoi farlo insieme, <a href="/lavora-con-me">scopri come possiamo lavorare insieme</a>.</p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "sistemi-che-lavorano-per-te"],
+    step: 1,
+    formats: ["appunti-di-metodo"],
   },
 
   {
@@ -1100,6 +1120,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p>Hai bisogno di aiuto per iniziare? <a href="/contatti">Scrivimi, ne parliamo</a>.</p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "reinventarsi-dopo-i-40-metodo"],
+    step: 2,
+    formats: ["strumento-pratico"],
   },
   {
     slug: "claude-ai-come-usarlo-al-lavoro",
@@ -1119,6 +1141,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     excerpt:
       "Non sai da dove iniziare con Claude AI? Ecco come lo uso ogni giorno per risparmiare ore di lavoro. Guida pratica per professionisti over 40, senza bisogno di essere tecnici.",
     correlati: ["recuperare-tempo-delegare-ai-sistema", "paura-obsolescenza-professionale-ai"],
+    step: 2,
+    formats: ["strumento-pratico"],
     contentHtml: `
 <p>Ogni settimana mi arriva la stessa domanda. A volte da un commercialista, a volte da un imprenditore, a volte da un ingegnere con vent'anni di esperienza alle spalle: "Fabio, ho sentito parlare di Claude. Ma come si usa davvero? Cosa ci faccio concretamente?"</p>
 
@@ -1233,6 +1257,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p>Inizia a costruire il tuo ecosistema: <a href="/il-libro">Scarica ora il Capitolo 1 del mio libro</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
     `,
     correlati: ["ai-esperienza-professionale-vantaggio", "paura-obsolescenza-professionale-ai"],
+    step: 1,
+    formats: ["appunti-di-metodo"],
   },
 ];
 
@@ -1254,4 +1280,15 @@ export function getRegularPosts(): Post[] {
   return posts
     .filter((p) => !p.manifesto)
     .sort((a, b) => b.dataISO.localeCompare(a.dataISO));
+}
+
+export function getPostsByStep(step: Post["step"] | "3"): Post[] {
+  if (step === "3") {
+    return posts.filter((p) => p.step === "3A" || p.step === "3B");
+  }
+  return posts.filter((p) => p.step === step);
+}
+
+export function getPostsByFormat(format: Post["formats"][number]): Post[] {
+  return posts.filter((p) => p.formats.includes(format));
 }
