@@ -35,6 +35,7 @@ export default function AgenziaBusinessPage() {
     <main className="min-h-screen bg-hub-bg">
       <EditorialHero
         variant="vertical"
+        theme="agency"
         eyebrow={v.eyebrow}
         title={v.heroTitle}
         titleAccent={v.heroAccent}

@@ -10,6 +10,7 @@
 - Asimmetria sub-rotte Impresa Liquida: `/impresa-liquida/chi-siamo`, `/contatti`, `/aggiornamenti` usano theme verde IL distinto dalla pagina principale `/impresa-liquida` (che ora segue tema hub). Decidere se uniformare le sub-rotte al tema hub o accettare il verde IL come scelta editoriale del verticale. Decisione richiede input di Fabio prima del merge PR finale.
 - `MetodoSection.tsx` (componente attivo) e `/il-metodo` (rotta attiva) espongono un framework concorrente al Metodo Successo in 3 Passi. `MetodoSection` è usato da `/accademia/page.tsx`. Decisione richiesta da Fabio prima del merge PR finale: deprecare entrambi e migrare `/accademia` al framework 3 Passi, oppure mantenere il framework parallelo come scelta editoriale per Accademia. **NON archiviare `MetodoSection` — è attivo.**
 - Landing tematiche `/ai-per-professionisti` e `/reinvenzione-over-40` indipendenti dal sistema 3 Passi. Verificare in fase di merge se valga la pena collegarle al framework (es. `/reinvenzione-over-40` → naturale ingresso al Passo 1) o lasciarle autonome.
+- Theme variants per `EditorialHero`: introdotto `"agency"` per ripristinare distinzione cromatica del verticale Agenzia Business (regressione Fase 3 corretta). Valutare se introdurre `"mepa"` per Fatturato Garantito (theme verde-PA potrebbe rafforzare il legame con il mondo PA) e/o `"platinum"` per Punto Zero. Decisione richiesta a Fabio.
 
 ---
 

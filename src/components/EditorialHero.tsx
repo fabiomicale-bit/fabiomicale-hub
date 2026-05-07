@@ -1,5 +1,16 @@
 import Link from "next/link";
 
+/**
+ * theme: tema visuale dell'hero.
+ * - "default" usa hub-gold per il primary CTA (.btn-gold).
+ * - "agency" usa agency-navy via .btn-agency, allineandosi al theme
+ *   tokenizzato @theme di Agenzia Business.
+ * Estendibile a futuri temi se altri verticali richiederanno distinzione
+ * visiva (es. "mepa" per Fatturato Garantito, "platinum" per Punto Zero).
+ * Per ora il theme influenza esclusivamente il primary CTA button.
+ */
+type EditorialHeroTheme = "default" | "agency";
+
 interface EditorialHeroProps {
   eyebrow?: string;
   title: string;
@@ -9,6 +20,8 @@ interface EditorialHeroProps {
   secondaryCTA?: { label: string; href: string };
   /** hub = fullscreen con griglia; vertical = focalizzato; book = centrato con accent bar */
   variant?: "hub" | "vertical" | "book";
+  /** tema visuale: influenza il primary CTA button. Default: "default" (btn-gold). */
+  theme?: EditorialHeroTheme;
 }
 
 export default function EditorialHero({
@@ -19,6 +32,7 @@ export default function EditorialHero({
   primaryCTA,
   secondaryCTA,
   variant = "hub",
+  theme = "default",
 }: EditorialHeroProps) {
   const isHub = variant === "hub";
   const isBook = variant === "book";
@@ -97,7 +111,7 @@ export default function EditorialHero({
         >
           <Link
             href={primaryCTA.href}
-            className="btn-gold inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]"
+            className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]`}
           >
             {primaryCTA.label}
           </Link>
