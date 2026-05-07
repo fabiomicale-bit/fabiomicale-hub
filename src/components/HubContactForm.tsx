@@ -47,7 +47,7 @@ export default function HubContactForm({ theme = "hub" }: HubContactFormProps) {
   const accentColor = isAgency ? "text-blue-600" : (isMepa ? "text-pa-green" : (isPunto ? "text-platinum-300" : "text-hub-gold"));
   const btnClass = isAgency 
     ? "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-200" 
-    : (isMepa ? "bg-pa-green hover:bg-pa-green-dark text-white shadow-pa-green/20" : (isPunto ? "bg-platinum-100 text-obsidian hover:bg-white" : "btn-gold"));
+    : (isMepa ? "bg-pa-green hover:bg-hub-gold-dark text-white shadow-pa-green/20" : (isPunto ? "bg-platinum-100 text-obsidian hover:bg-white" : "btn-gold"));
 
   return (
     <div className="w-full max-w-2xl mx-auto">

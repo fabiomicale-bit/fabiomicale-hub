@@ -79,6 +79,8 @@
   --color-hub-gold-dark: var(--hub-gold-dark);
   --color-hub-charcoal: var(--hub-charcoal);
   --color-hub-white: var(--hub-white);
+  --color-hub-border: var(--hub-border);
+  --color-hub-border-hover: var(--hub-border-hover);
 
   /* Punto Zero Platinum Theme */
   --color-platinum-50: var(--pz-platinum-50);
