@@ -24,7 +24,7 @@ export default function ReadingProgress() {
         zIndex: 50,
         height: "3px",
         width: `${progress}%`,
-        background: "#2E7D32",
+        background: "var(--hub-gold)",
         transition: "width 0.1s linear",
       }}
     />

@@ -19,7 +19,6 @@
   --hub-gold-light: #E8D5A3;
   --hub-gold-dark: #A8873D;
   --hub-charcoal: #2A2A2A;
-  --hub-charcoal-light: #3A3A3A;
   --hub-white: #FCFCFA;
   --hub-border: rgba(0, 0, 0, 0.06);
   --hub-border-hover: rgba(0, 0, 0, 0.12);
@@ -61,6 +60,10 @@
   --il-green: #065F46;
   --il-green-dark: #044E39;
   --il-ink: #0A0A0A;
+
+  /* Agency B2B theme — CSS var aliases for .btn-agency and inline CSS consumers */
+  --agency-navy: var(--hub-ink);
+  --agency-navy-light: var(--hub-charcoal);
 }
 
 @theme inline {

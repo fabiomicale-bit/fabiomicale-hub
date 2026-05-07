@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function NewsletterPage() {
   return (
-    <main className="min-h-screen bg-[#FAFAF8] pt-20">
+    <main className="min-h-screen bg-hub-bg pt-20">
       <Navbar />
       
       {/* 1. MANIFESTO HERO */}
@@ -29,7 +29,7 @@ export default function NewsletterPage() {
             &quot;Un Passo Avanti&quot; non è una raccolta di link. È l&apos;unico appuntamento settimanale progettato per darti la chiarezza strategica necessaria a dominare il tuo settore.
           </p>
           
-          <div className="bg-[#FAFAF8] p-2 rounded-2xl border border-hub-border max-w-md mx-auto shadow-sm">
+          <div className="bg-hub-bg p-2 rounded-2xl border border-hub-border max-w-md mx-auto shadow-sm">
             <Newsletter />
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function NewsletterPage() {
                 desc: "Riflessioni sulla costruzione di un business che duri nel tempo. Come scalare senza perdere la tua libertà personale." 
               }
             ].map((item, i) => (
-              <div key={i} className="bg-white p-12 hover:bg-[#FAFAF8] transition-colors group">
+              <div key={i} className="bg-white p-12 hover:bg-hub-bg transition-colors group">
                 <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-500 inline-block">{item.icon}</div>
                 <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-hub-ink">{item.title}</h3>
                 <p className="text-hub-ink-muted leading-relaxed font-light text-lg">{item.desc}</p>
@@ -109,7 +109,7 @@ export default function NewsletterPage() {
       </section>
 
       {/* 4. TESTIMONIALS (ESPLICITI) */}
-      <section className="py-24 px-4 bg-[#FAFAF8] border-y border-hub-border">
+      <section className="py-24 px-4 bg-hub-bg border-y border-hub-border">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-10px font-black uppercase tracking-[0.4em] text-hub-gold mb-4">La Voce dei Lettori</h2>
@@ -175,7 +175,7 @@ export default function NewsletterPage() {
           <p className="text-hub-ink-muted mb-12 text-lg">
             Iscriviti ora per ricevere il prossimo dossier e sbloccare il tuo accesso immediato all&apos;Hub Digitale.
           </p>
-          <div className="bg-[#FAFAF8] p-8 rounded-3xl border border-hub-border shadow-xl">
+          <div className="bg-hub-bg p-8 rounded-3xl border border-hub-border shadow-xl">
             <Newsletter />
           </div>
           <p className="text-[10px] text-hub-ink/30 mt-8 uppercase font-bold tracking-widest">
