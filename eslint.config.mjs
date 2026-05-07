@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Archive directories — dead code, not part of active codebase
+    "src/components/_archive/**",
+    "src/app/_archive/**",
   ]),
 ]);
 

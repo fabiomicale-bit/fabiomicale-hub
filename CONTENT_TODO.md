@@ -7,6 +7,7 @@
 ## Decisioni strategiche aperte
 
 - `/il-metodo` espone framework 3-pilastri (Architettura Mentale / Potenziamento Tecnico / Eccellenza Sistemica) concorrente al Metodo Successo in 3 Passi. Decidere prima del merge PR finale: (a) deprecare con redirect 301 verso `/successo-in-3-passi`, (b) riscrivere come traduzione operativa dei 3 Passi, (c) mantenere come framework parallelo distinto. Decisione richiede input di Fabio.
+- `MetodoSection.tsx` (componente attivo) e `/il-metodo` (rotta attiva) espongono un framework concorrente al Metodo Successo in 3 Passi. `MetodoSection` è usato da `/accademia/page.tsx`. Decisione richiesta da Fabio prima del merge PR finale: deprecare entrambi e migrare `/accademia` al framework 3 Passi, oppure mantenere il framework parallelo come scelta editoriale per Accademia. **NON archiviare `MetodoSection` — è attivo.**
 - Landing tematiche `/ai-per-professionisti` e `/reinvenzione-over-40` indipendenti dal sistema 3 Passi. Verificare in fase di merge se valga la pena collegarle al framework (es. `/reinvenzione-over-40` → naturale ingresso al Passo 1) o lasciarle autonome.
 
 ---
