@@ -50,6 +50,17 @@
   --pz-platinum-500: var(--hub-ink-muted);
   --pz-obsidian: var(--hub-bg);
   --pz-obsidian-alt: var(--hub-bg-alt);
+  --pz-ink: #020617;
+
+  /* Dark Editorial theme (recensioni, ai-per-professionisti, reinvenzione-over-40, legal, 404) */
+  --dark-bg: #0D0D0D;
+  --dark-bg-alt: #141414;
+  --dark-accent: #F5A623;
+
+  /* Impresa Liquida theme */
+  --il-green: #065F46;
+  --il-green-dark: #044E39;
+  --il-ink: #0A0A0A;
 }
 
 @theme inline {
@@ -101,6 +112,19 @@
   /* MEPA Elite V2 compatibility */
   --color-brand-blue: var(--brand-blue);
   --color-brand-green: var(--brand-green);
+
+  /* Platinum theme — completion */
+  --color-pz-ink: var(--pz-ink);
+
+  /* Dark Editorial theme */
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-bg-alt: var(--dark-bg-alt);
+  --color-dark-accent: var(--dark-accent);
+
+  /* Impresa Liquida theme */
+  --color-il-green: var(--il-green);
+  --color-il-green-dark: var(--il-green-dark);
+  --color-il-ink: var(--il-ink);
 }
 
 /* ── BASE ───────────────────────────────────────────────────── */

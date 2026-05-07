@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function MaintenancePage() {
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col items-center justify-center p-8 font-sans">
+        <div className="min-h-screen bg-dark-bg text-white flex flex-col items-center justify-center p-8 font-sans">
             <div className="max-w-md w-full text-center space-y-8">
                 {/* Logo / Brand Name */}
                 <div className="space-y-2">

@@ -7,6 +7,7 @@
 ## Decisioni strategiche aperte
 
 - `/il-metodo` espone framework 3-pilastri (Architettura Mentale / Potenziamento Tecnico / Eccellenza Sistemica) concorrente al Metodo Successo in 3 Passi. Decidere prima del merge PR finale: (a) deprecare con redirect 301 verso `/successo-in-3-passi`, (b) riscrivere come traduzione operativa dei 3 Passi, (c) mantenere come framework parallelo distinto. Decisione richiede input di Fabio.
+- Asimmetria sub-rotte Impresa Liquida: `/impresa-liquida/chi-siamo`, `/contatti`, `/aggiornamenti` usano theme verde IL distinto dalla pagina principale `/impresa-liquida` (che ora segue tema hub). Decidere se uniformare le sub-rotte al tema hub o accettare il verde IL come scelta editoriale del verticale. Decisione richiede input di Fabio prima del merge PR finale.
 - `MetodoSection.tsx` (componente attivo) e `/il-metodo` (rotta attiva) espongono un framework concorrente al Metodo Successo in 3 Passi. `MetodoSection` è usato da `/accademia/page.tsx`. Decisione richiesta da Fabio prima del merge PR finale: deprecare entrambi e migrare `/accademia` al framework 3 Passi, oppure mantenere il framework parallelo come scelta editoriale per Accademia. **NON archiviare `MetodoSection` — è attivo.**
 - Landing tematiche `/ai-per-professionisti` e `/reinvenzione-over-40` indipendenti dal sistema 3 Passi. Verificare in fase di merge se valga la pena collegarle al framework (es. `/reinvenzione-over-40` → naturale ingresso al Passo 1) o lasciarle autonome.
 
@@ -19,6 +20,7 @@
 | `MethodPillars.tsx` | `readonly` array castato con `as unknown as` per aggirare incompatibilità di tipo | Risolvere in Fase 6 con tipizzazione esplicita di `method-pillars.ts` (rimuovere `as const` sui sotto-array, oppure adattare la firma del componente per accettare `readonly`). |
 | Mini-blog Agenzia Business | Articoli hardcoded in `agenzia-business/analisi-strategiche/[slug]/page.tsx`, fuori dal sistema `posts.ts` | Valutare migrazione a `posts.ts` con campo `verticalScope: 'agenzia-business'` opzionale, oppure mantenere separato come scelta editoriale. Decisione futura. |
 | Architettura Navbar/Footer | Ogni route importa `<Navbar />` e `<Footer />` individualmente invece di delegare al layout globale (`src/app/layout.tsx`). Anti-pattern Next.js: il layout globale è il punto canonico per shell UI condivisa. La migrazione richiede: (1) aggiungere Navbar/Footer a `layout.tsx`, (2) rimuovere i 20+ import duplicati da ogni `page.tsx`. Farlo in un commit atomico dopo audit completo delle rotte. Priorità bassa — funzionale ma non idiomatico. |
+| Migrazione hardcoded → token | 8 pagine dark-editorial (`recensioni`, `ai-per-professionisti`, `reinvenzione-over-40`, `not-found`, `privacy`, `note-legali`, `cookies`, `manutenzione`) e 6 pagine IL satellite usano valori hex hardcoded che hanno ora i token corrispondenti formalizzati (`--dark-bg`, `--dark-bg-alt`, `--dark-accent`, `--il-green`, `--il-green-dark`, `--il-ink`). Migrazione massiva da pianificare come task autonomo. Stima: ~250 sostituzioni totali. |
 
 ---
 
