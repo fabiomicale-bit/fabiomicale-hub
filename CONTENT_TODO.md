@@ -17,6 +17,7 @@
 |---|---|---|
 | `MethodPillars.tsx` | `readonly` array castato con `as unknown as` per aggirare incompatibilità di tipo | Risolvere in Fase 6 con tipizzazione esplicita di `method-pillars.ts` (rimuovere `as const` sui sotto-array, oppure adattare la firma del componente per accettare `readonly`). |
 | Mini-blog Agenzia Business | Articoli hardcoded in `agenzia-business/analisi-strategiche/[slug]/page.tsx`, fuori dal sistema `posts.ts` | Valutare migrazione a `posts.ts` con campo `verticalScope: 'agenzia-business'` opzionale, oppure mantenere separato come scelta editoriale. Decisione futura. |
+| Architettura Navbar/Footer | Ogni route importa `<Navbar />` e `<Footer />` individualmente invece di delegare al layout globale (`src/app/layout.tsx`). Anti-pattern Next.js: il layout globale è il punto canonico per shell UI condivisa. La migrazione richiede: (1) aggiungere Navbar/Footer a `layout.tsx`, (2) rimuovere i 20+ import duplicati da ogni `page.tsx`. Farlo in un commit atomico dopo audit completo delle rotte. Priorità bassa — funzionale ma non idiomatico. |
 
 ---
 

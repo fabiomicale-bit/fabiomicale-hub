@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-hub-gold mb-8">Mondi Verticali</h4>
             <ul className="space-y-4">
-              <li><Link href="/mepa-elite" className="text-white/50 hover:text-white text-sm transition-colors">MEPA Elite</Link></li>
+              <li><Link href="/fatturato-garantito" className="text-white/50 hover:text-white text-sm transition-colors">Fatturato Garantito</Link></li>
               <li><Link href="/impresa-liquida" className="text-white/50 hover:text-white text-sm transition-colors">Impresa Liquida</Link></li>
               <li><Link href="/punto-zero" className="text-white/50 hover:text-white text-sm transition-colors">Punto Zero</Link></li>
               <li><Link href="/agenzia-business" className="text-white/50 hover:text-white text-sm transition-colors">Agenzia Business</Link></li>
