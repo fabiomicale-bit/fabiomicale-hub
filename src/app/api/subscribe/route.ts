@@ -85,8 +85,28 @@ export async function POST(req: NextRequest) {
 
   // --- 3. Delivery via Resend ---
   const RESEND_API_KEY = process.env.RESEND_API_KEY;
+  const isBookExcerpt = body?.variant === "book-excerpt";
   const isCapitolo1 = utmSource === "capitolo1" || notify === "capitolo1";
-  const resourceUrl = isCapitolo1 ? CAPITOLO1_URL : EBOOK_URL;
+  
+  let subject = "Accesso Autorizzato: Il tuo Manuale PuntoZero";
+  let resourceUrl = EBOOK_URL;
+  let htmlContent = `
+    <h2 style="color: #000; font-style: italic;">Benvenuto, ${nome || "Navigante"}.</h2>
+    <p>Hai appena attraversato la Soglia. Ecco il link per accedere alla risorsa:</p>
+  `;
+
+  if (isBookExcerpt) {
+    subject = "Ecco il tuo estratto: Successo in 3 Passi (Edizione 2026)";
+    resourceUrl = "https://fabiomicale.com/assets/ESTRATTO_LANCIO_2026.pdf";
+    htmlContent = `
+      <h2 style="color: #000; font-style: italic;">Iniziamo da qui, ${nome || "Amico"}.</h2>
+      <p>Hai richiesto l'estratto gratuito di <strong>Successo in 3 Passi — Edizione 2026</strong>. È il primo passo per rimettere struttura e fermare il caos.</p>
+      <p>Oltre all'estratto, ti ho allegato la <strong>Operational Checklist 2026</strong> per iniziare subito a spuntare le prime azioni.</p>
+    `;
+  } else if (isCapitolo1) {
+    subject = "Ecco il primo capitolo: Il Disallineamento";
+    resourceUrl = CAPITOLO1_URL;
+  }
 
   if (RESEND_API_KEY) {
     try {
@@ -99,18 +119,19 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           from: "Fabio Micale <info@fabiomicale-hub.com>",
           to: email,
-          subject: isCapitolo1 
-            ? "Ecco il primo capitolo: Il Disallineamento" 
-            : "Accesso Autorizzato: Il tuo Manuale PuntoZero",
+          subject: subject,
           html: `
             <div style="font-family: serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
-              <h2 style="color: #000; font-style: italic;">Benvenuto, ${nome || "Navigante"}.</h2>
-              <p>Hai appena attraversato la Soglia. Ecco il link per accedere alla risorsa:</p>
+              ${htmlContent}
               <div style="margin: 30px 0; text-align: center;">
-                <a href="${resourceUrl}" style="background-color: #000; color: #fff; padding: 15px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 2px;">Accedi ora</a>
+                <a href="${resourceUrl}" style="background-color: #000; color: #fff; padding: 15px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 2px;">Scarica ora</a>
               </div>
+              ${isBookExcerpt ? `
+              <p style="font-size: 14px;">Puoi scaricare anche la checklist qui: <br/>
+              <a href="https://fabiomicale.com/assets/CHECKLIST_OPERATIVA_2026.pdf">Scarica Checklist Operativa</a></p>
+              ` : ''}
               <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;" />
-              <p style="font-size: 12px; color: #999;">Fabio Micale — Area Riservata</p>
+              <p style="font-size: 12px; color: #999;">Fabio Micale — Successo in 3 Passi</p>
             </div>
           `,
         }),

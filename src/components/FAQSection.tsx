@@ -57,9 +57,9 @@ export default function FAQSection({
       bg: "bg-[#FDFDFD]",
       text: "text-[#111827]",
       textMuted: "text-black/50",
-      accent: "text-[#065F46]",
-      accentBg: "bg-[#065F46]/5",
-      border: "border-[#065F46]/10",
+      accent: "text-il-green",
+      accentBg: "bg-il-green/5",
+      border: "border-il-green/10",
       itemBg: "bg-white",
       itemBorder: "border-black/[0.03]"
     },

@@ -1,275 +1,214 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import HeroEditorial from "@/components/HeroEditorial";
+import Link from "next/link";
+import EditorialHero from "@/components/EditorialHero";
 import MetodoSection from "@/components/MetodoSection";
-import LibriShowcase from "@/components/LibriShowcase";
-import AccademiaPreview from "@/components/AccademiaPreview";
-import MondiSection from "@/components/MondiSection";
-import NumeriAuthority from "@/components/NumeriAuthority";
-import FAQSection from "@/components/FAQSection";
-import Newsletter from "@/components/Newsletter";
-import Footer from "@/components/Footer";
+import BookFeature from "@/components/BookFeature";
+import NewsletterCTA from "@/components/NewsletterCTA";
+import AuthorBio from "@/components/AuthorBio";
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Fabio Micale | Metodologo della Crescita per Imprenditori Over 40",
-    description:
-      "Porto AI, protocolli e metodo dentro la tua azienda. Per imprenditori Over 40 che vogliono crescere — senza lavorare di più.",
-    alternates: { canonical: "https://www.fabiomicale.com" },
-    openGraph: {
-      title: "Fabio Micale | Metodologo della Crescita per Imprenditori Over 40",
-      description: "Porto AI, protocolli e metodo dentro la tua azienda. Per imprenditori Over 40 che vogliono crescere — senza lavorare di più.",
-    }
-  };
-}
+export const metadata: Metadata = {
+  title: "Fabio Micale | Metodo Successo in 3 Passi per Over 40",
+  description:
+    "Fabio Micale, scrittore e formatore, aiuta professionisti Over 40 a ripartire con metodo, lucidità e strumenti pratici nell’era dell’intelligenza artificiale.",
+  alternates: { canonical: "https://www.fabiomicale.com" },
+};
 
-const hubFaqs = [
-  {
-    question: "Chi è Fabio Micale?",
-    answer: "Metodologo della Crescita con 25 anni di esperienza operativa in aziende, cantieri e team. Non un coach — un ingegnere di sistemi che riprogetta la tua azienda per farla girare senza di te.",
-  },
-  {
-    question: "Da dove inizio?",
-    answer: "Dal Protocollo Anti-Caos gratuito. 9 pagine operative che ti danno subito il primo strumento concreto — senza impegni, senza vendite.",
-  },
-  {
-    question: "Cos'è il Selettore di Percorso?",
-    answer: "È il punto di ingresso nell'ecosistema. Ogni verticale nasce da un problema reale: caos, dipendenza operativa, mancanza di clienti, bisogno di nuovo fatturato. Identifichi il tuo problema e vai diretto alla soluzione.",
-  },
-  {
-    question: "Devo essere esperto di tecnologia?",
-    answer: "No. Il metodo è progettato per imprenditori che vogliono risultati — non per tecnici. Se usi WhatsApp, puoi usare l'AI.",
-  },
-  {
-    question: "Come funziona Nexus Lab?",
-    answer: "È il sistema operativo mensile per imprenditori Over 40. Template pronti, webinar pratici, community attiva e sessioni Q&A con Fabio. 49€/mese, cancelli quando vuoi.",
-  },
-];
-
-export default async function HomePage() {
-  // ── RENDER EDITORIAL HUB ────────────────────────────────────
+export default function HomePage() {
   return (
-    <main className="min-h-screen bg-hub-bg">
-      <Navbar />
-      <HeroEditorial />
+    <main className="min-h-screen bg-hub-bg text-hub-ink">
+      {/* ── SEZIONE 1 — HERO ─────────────────────────────────────────────── */}
+      <EditorialHero
+        title="Ripartire dopo i 40 anni non richiede motivazione."
+        titleAccent="Richiede metodo."
+        subtitle="Sono Fabio Micale, autore di Successo in 3 Passi. Aiuto professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione personale e professionale nell’era dell’intelligenza artificiale."
+        primaryCTA={{ label: "Scarica un estratto gratuito", href: "/area-riservata" }}
+        secondaryCTA={{ label: "Scopri il Metodo in 3 Passi", href: "/il-metodo" }}
+      />
 
-      {/* ── SELETTORE DI PERCORSO ───────────────────────────── */}
-      <section className="py-32 px-6 bg-hub-bg-alt relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-hub-gold/20 to-transparent" />
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-medium text-hub-ink leading-tight mb-6">
-              Dimmi dove sei adesso.{" "}
-              <span className="italic text-hub-gold">Ti indico dove andare.</span>
-            </h2>
-            <p className="text-hub-ink-muted text-lg max-w-2xl mx-auto font-light leading-relaxed">
-              Ogni verticale nasce da un problema reale.
-              Riconosci il tuo — e vai diretto alla soluzione.
+      {/* Payoff visibile */}
+      <div className="bg-hub-cream border-y border-hub-border py-6 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 flex justify-center">
+          <p className="text-[11px] font-bold uppercase tracking-[0.6em] text-hub-gold animate-pulse">
+            Non ti vendo sogni. Ti do strumenti.
+          </p>
+        </div>
+      </div>
+
+      {/* ── SEZIONE 2 — PROBLEMA ────────────────────────────────────────── */}
+      <section className="py-32 px-6 relative bg-hub-bg">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-serif font-medium mb-10 leading-tight">
+            Il problema non è la tua età. <br />
+            <span className="italic text-hub-gold">È la mancanza di un sistema.</span>
+          </h2>
+          <div className="space-y-6 text-hub-ink-muted text-lg leading-relaxed font-light">
+            <p>
+              Dopo i 40 anni molti professionisti non sono finiti. Sono pieni di rumore: decisioni sospese, competenze da aggiornare, strumenti nuovi, lavoro che cambia, intelligenza artificiale che avanza e tempo che sembra ridursi.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {[
-              {
-                emoji: "🔴",
-                titolo: "Sono nel caos",
-                testo: "Hai perso il filo. Senti che stai correndo nella direzione sbagliata. Prima di costruire qualcosa di nuovo, devi fare chiarezza su cosa lasciare indietro.",
-                cta: "Inizia il reset →",
-                href: "/punto-zero",
-              },
-              {
-                emoji: "⚙️",
-                titolo: "La mia azienda dipende da me",
-                testo: "Sei bravo nel tuo lavoro — ma senza di te si ferma tutto. Telefonate, approvazioni, decisioni che il team non riesce a prendere da solo. È ora di costruire il sistema.",
-                cta: "Costruisci l'autonomia →",
-                href: "/impresa-liquida",
-              },
-              {
-                emoji: "📈",
-                titolo: "Ho bisogno di più clienti",
-                testo: "Il tuo servizio è buono. Il problema è l'acquisizione: non hai un sistema che porta contatti qualificati in modo costante e prevedibile, senza dipendere dal passaparola.",
-                cta: "Attiva il sistema →",
-                href: "/agenzia-business",
-              },
-              {
-                emoji: "💰",
-                titolo: "Voglio più fatturato",
-                testo: "Hai bisogno di nuove fonti di ricavo stabili — non un'altra campagna, non un altro sforzo. Un canale che genera entrate prevedibili ogni mese, gestito quasi interamente da noi.",
-                cta: "Scopri come →",
-                href: "/fatturato-garantito",
-              },
-            ].map((card, i) => (
-              <a
-                key={i}
-                href={card.href}
-                className="card-editorial p-8 md:p-10 flex flex-col group hover:border-hub-gold/40 transition-all duration-500"
-              >
-                <div className="text-3xl mb-6">{card.emoji}</div>
-                <h3 className="text-xl font-bold text-hub-ink uppercase tracking-wider mb-4 group-hover:text-hub-gold transition-colors">
-                  {card.titolo}
-                </h3>
-                <p className="text-hub-ink-muted font-light leading-relaxed flex-1 mb-8">
-                  {card.testo}
-                </p>
-                <div className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold inline-flex items-center gap-2">
-                  {card.cta}
-                </div>
-              </a>
-            ))}
+            <p>
+              Il Metodo Successo in 3 Passi nasce per questo: rimettere ordine dove oggi c’è dispersione.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* ── SEZIONE 3 — IL METODO IN 3 PASSI ────────────────────────────── */}
       <MetodoSection />
 
-      {/* ── LEAD MAGNET ─────────────────────────────────────── */}
-      <section className="py-32 px-6" style={{ backgroundColor: "#111111" }}>
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-hub-gold mb-8">
-            Inizia da qui — è gratuito
-          </div>
-          <h2 className="text-4xl md:text-5xl font-serif font-medium text-white leading-tight mb-6">
-            Scarica il Protocollo{" "}
-            <span className="italic text-hub-gold">Anti-Caos.</span>
-          </h2>
-          <p className="text-white/60 text-lg font-light leading-relaxed mb-12 max-w-2xl mx-auto">
-            Come liberare 10 ore a settimana nella tua azienda usando l&apos;AI — anche se non sei un tecnico.
-          </p>
-
-          <ul className="flex flex-col sm:flex-row justify-center gap-6 mb-12 text-left">
-            {[
-              "9 pagine operative — niente teoria",
-              "3 passi con esercizi pratici inclusi",
-              "Piano d'azione settimana per settimana",
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3 text-white/70 text-sm font-light">
-                <span className="text-hub-gold mt-0.5 flex-shrink-0">→</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-
-          <a
-            href="/protocollo-anti-caos"
-            className="btn-gold inline-flex items-center gap-3 px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]"
-          >
-            Scarica Gratis
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-
-          <p className="text-white/30 text-xs mt-6">
-            Ricevi anche la newsletter settimanale &ldquo;Un Passo Avanti&rdquo;. Cancellati quando vuoi.
-          </p>
-        </div>
-      </section>
-
-      <LibriShowcase />
-      
-      {/* ── TESTIMONIALS & AUTHORITY ────────────────────────── */}
-      <section className="py-32 px-6 bg-white/5 border-y border-white/5 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-hub-gold mb-6 block">Storie di Trasformazione</span>
-            <h2 className="text-4xl md:text-6xl font-serif font-medium text-hub-ink leading-tight">L'impatto del <br /><span className="italic text-hub-gold">Metodo.</span></h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-10 rounded-[40px] bg-white border border-hub-border group hover:border-hub-gold/30 transition-all duration-500">
-              <div className="text-hub-gold mb-6 text-2xl font-serif italic font-light opacity-30">"</div>
-              <p className="text-hub-ink-muted text-lg font-serif italic font-light mb-8 leading-relaxed">
-                "Il Metodo di Fabio mi ha permesso di rimettere ordine in un momento di caos assoluto. Non è solo business, è ingegneria di vita millimetrica."
+      {/* ── SEZIONE 4 — IL LIBRO ────────────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-warm">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">
+                Il libro è il <br />
+                <span className="italic text-hub-gold">punto di partenza.</span>
+              </h2>
+              <p className="text-lg text-hub-ink-muted leading-relaxed mb-10 font-light">
+                Successo in 3 Passi non è solo un libro. È il manifesto operativo del metodo. Da qui nasce l’intero sito: articoli, esercizi, newsletter, area riservata, percorsi futuri e contenuti premium.
               </p>
-              <div className="flex items-center gap-4">
-                <div className="w-1.5 h-10 bg-hub-gold/20 rounded-full" />
-                <div>
-                  <div className="text-hub-ink font-bold uppercase tracking-widest text-[10px]">Stefano B.</div>
-                  <div className="text-hub-ink-light text-[9px] uppercase tracking-widest">Imprenditore</div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/area-riservata" className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]">
+                  Scarica l'estratto gratuito
+                </Link>
+                <Link href="/successo-in-3-passi" className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full">
+                  Scopri il libro
+                </Link>
               </div>
             </div>
-
-            <div className="p-10 rounded-[40px] bg-white border border-hub-border group hover:border-hub-gold/30 transition-all duration-500">
-              <div className="text-hub-gold mb-6 text-2xl font-serif italic font-light opacity-30">"</div>
-              <p className="text-hub-ink-muted text-lg font-serif italic font-light mb-8 leading-relaxed">
-                "Il libro 'Successo in 3 Passi' è la guida che avrei voluto avere 10 anni fa. Pratico, diretto, privo di inutile fuffa. Un manuale operativo vero."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-1.5 h-10 bg-hub-gold/20 rounded-full" />
-                <div>
-                  <div className="text-hub-ink font-bold uppercase tracking-widest text-[10px]">Elena G.</div>
-                  <div className="text-hub-ink-light text-[9px] uppercase tracking-widest">Libera Professionista</div>
+            <div className="order-1 lg:order-2 flex justify-center">
+              <div className="relative w-full max-w-sm aspect-[2/3] bg-hub-ink rounded-xl shadow-2xl flex items-center justify-center p-12 text-center border-4 border-hub-gold/20 overflow-hidden group">
+                <div className="absolute inset-0 bg-grid-editorial opacity-20" />
+                <div className="relative z-10">
+                  <p className="text-hub-ink-light text-[10px] font-bold uppercase tracking-[0.4em] mb-4">Edizione 2026</p>
+                  <h3 className="text-3xl md:text-4xl font-serif text-white mb-6 leading-tight">Successo in <br /> 3 Passi</h3>
+                  <p className="text-white/40 text-[11px] font-bold uppercase tracking-[0.3em]">Fabio Micale</p>
                 </div>
-              </div>
-            </div>
-
-            <div className="p-10 rounded-[40px] bg-hub-ink border border-hub-ink group hover:shadow-2xl transition-all duration-500 text-white">
-              <div className="text-hub-gold mb-6 text-2xl font-serif italic font-light opacity-30">"</div>
-              <p className="text-white/80 text-lg font-serif italic font-light mb-8 leading-relaxed">
-                "Dalla saturazione operativa alla libertà personale. Il percorso di Reset Strategico è stato il miglior investimento degli ultimi vent'anni."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-1.5 h-10 bg-hub-gold rounded-full" />
-                <div>
-                  <div className="text-white font-bold uppercase tracking-widest text-[10px]">Marco L.</div>
-                  <div className="text-white/40 text-[9px] uppercase tracking-widest">CEO & Founder</div>
-                </div>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-hub-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <AccademiaPreview />
-
-      {/* ── BIO FABIO ───────────────────────────────────────── */}
-      <section className="py-32 px-6 bg-hub-bg-alt relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-hub-gold/20 to-transparent" />
+      {/* ── SEZIONE 5 — NEWSLETTER CENTRALE ────────────────────────────── */}
+      <section className="py-32 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="section-label justify-center mb-6">Chi sono</div>
-          <h2 className="text-4xl md:text-5xl font-serif font-medium text-hub-ink leading-tight mb-12 text-center">
-            Chi ha costruito{" "}
-            <span className="italic text-hub-gold">questo metodo.</span>
-          </h2>
-
-          <div className="card-editorial p-10 md:p-14">
-            <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-6">
-              Ho 56 anni. Ho gestito aziende, cantieri e team per 25 anni. Ho vissuto in prima persona la prigione operativa — l&apos;azienda che cresce ma non riesce a girare senza di te.
-            </p>
-            <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-6">
-              Ho trovato un modo per uscirne. Oggi aiuto altri imprenditori Over 40 a fare lo stesso — con metodo, protocolli e AI integrata nei processi reali.
-            </p>
-            <p className="text-hub-ink text-lg font-serif italic leading-relaxed mb-8">
-              Non ti vendo sogni. Ti do strumenti.
-            </p>
-
-            <p className="text-hub-ink-muted text-base font-light leading-relaxed mb-12 border-l-2 border-hub-gold/30 pl-6">
-              Metodologo della Crescita: non un coach, non un formatore. Un ingegnere di sistemi che entra nella tua azienda e la riprogetta per funzionare senza di te.
-            </p>
-
-            <div className="pt-8 border-t border-hub-border flex flex-wrap gap-4">
-              {["Autore", "Consulente Aziendale", "AI Integrator", "25+ anni di esperienza operativa", "150+ aziende"].map((tag, i) => (
-                <span key={i} className="text-[10px] font-bold uppercase tracking-[0.2em] text-hub-ink-muted bg-hub-bg px-4 py-2 rounded-full border border-hub-border">
-                  {tag}
-                </span>
-              ))}
+          <div className="bg-white border border-hub-border rounded-[40px] overflow-hidden shadow-2xl">
+            <div className="p-12 md:p-20 text-center border-b border-hub-border bg-hub-cream/30">
+               <h2 className="text-4xl font-serif font-medium mb-6">Un Passo Avanti</h2>
+               <p className="text-hub-gold text-[11px] font-bold uppercase tracking-[0.3em] mb-8">La newsletter settimanale per applicare il Metodo</p>
+               <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-10 max-w-2xl mx-auto">
+                 Ogni settimana ricevi un contenuto pratico per rimettere ordine nel tuo percorso professionale: una riflessione, uno strumento, un esercizio o un’applicazione concreta dell’AI alla crescita Over 40.
+               </p>
+               <div className="inline-block bg-hub-gold/10 border border-hub-gold/20 px-6 py-3 rounded-full">
+                 <p className="text-hub-ink text-xs font-medium">
+                   🎁 Iscrivendoti ricevi anche un <span className="text-hub-gold font-bold">estratto gratuito</span> di Successo in 3 Passi.
+                 </p>
+               </div>
             </div>
+            <NewsletterCTA />
           </div>
-
-          <p className="text-center text-[10px] text-hub-ink-light uppercase tracking-[0.2em] mt-6">
-            Placeholder — Fabio integrerà con foto e dati reali
-          </p>
         </div>
       </section>
 
-      <MondiSection />
-      <NumeriAuthority />
+      {/* ── SEZIONE 6 — AREA RISERVATA ────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-alt border-y border-hub-border/50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif font-medium mb-4">Area Riservata</h2>
+            <p className="text-hub-ink-muted text-lg font-light">Uno spazio in evoluzione per applicare il Metodo Successo in 3 Passi.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="card-editorial p-10 flex flex-col justify-between group">
+              <div>
+                <div className="w-12 h-12 bg-hub-gold/10 rounded-xl flex items-center justify-center text-hub-gold mb-6 group-hover:bg-hub-gold group-hover:text-white transition-all duration-500">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-serif font-medium mb-4">Area Free</h3>
+                <p className="text-hub-ink-muted text-sm leading-relaxed mb-8 font-light">
+                  Accesso gratuito con iscrizione alla newsletter. Qui troverai estratti del libro, schede operative, appunti di metodo, aggiornamenti e materiali pratici per iniziare.
+                </p>
+              </div>
+              <Link href="/area-riservata" className="btn-gold text-center py-4 text-[10px] tracking-[0.2em]">
+                Entra nell'area free
+              </Link>
+            </div>
+            <div className="card-editorial p-10 flex flex-col justify-between bg-hub-charcoal text-white group">
+              <div>
+                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-hub-gold mb-6 group-hover:bg-hub-gold group-hover:text-hub-ink transition-all duration-500">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-serif font-medium mb-4">Area Premium</h3>
+                <p className="text-white/40 text-sm leading-relaxed mb-8 font-light">
+                  Uno spazio a pagamento che si arricchirà nel tempo con corsi, ebook, masterclass, community e strumenti pratici per applicare il metodo alla tua crescita professionale.
+                </p>
+              </div>
+              <Link href="/area-riservata" className="btn-outline border-white/20 text-white/70 hover:border-hub-gold hover:text-hub-gold text-center py-4 text-[10px] tracking-[0.2em]">
+                Scopri cosa arriverà
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <FAQSection items={hubFaqs} theme="hub" />
+      {/* ── SEZIONE 7 — PER CHI È QUESTO SITO ────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif font-medium mb-6">Per chi è questo sito</h2>
+            <p className="text-hub-ink-muted text-lg font-light leading-relaxed">
+              Questo sito è per chi non vuole ricominciare da zero, ma ricominciare con ordine.
+            </p>
+          </div>
+          <div className="space-y-4">
+            {[
+              "Hai più di 40 anni e senti che devi ripensare il tuo futuro professionale.",
+              "Hai esperienza, ma non vuoi restare fermo a vecchi modelli.",
+              "Vuoi usare l’intelligenza artificiale senza farti travolgere dalla moda del momento.",
+              "Vuoi metodo, non motivazione temporanea.",
+              "Vuoi strumenti pratici, non slogan."
+            ].map((text, i) => (
+              <div key={i} className="flex items-start gap-4 p-6 bg-hub-cream/50 rounded-2xl border border-hub-border/50">
+                <div className="w-6 h-6 rounded-full bg-hub-gold/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-1.5 h-1.5 rounded-full bg-hub-gold" />
+                </div>
+                <p className="text-hub-ink font-light">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <Newsletter />
-      <Footer />
+      {/* ── SEZIONE 8 — CHI È FABIO ────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-alt">
+        <div className="max-w-6xl mx-auto">
+          <div className="card-editorial p-12 md:p-20">
+            <div className="grid lg:grid-cols-[1.5fr_1fr] gap-16 items-center">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">Chi è Fabio Micale</h2>
+                <p className="text-lg text-hub-ink-muted leading-relaxed mb-10 font-light">
+                  Fabio Micale è scrittore e formatore. Da oltre trent’anni lavora su crescita personale, metodo, impresa e sviluppo professionale. Con Successo in 3 Passi ha trasformato esperienza, errori, ripartenze e strumenti pratici in un sistema pensato per chi vuole ricostruire direzione dopo i 40 anni.
+                </p>
+                <Link href="/chi-sono" className="btn-gold px-10 py-4 text-[11px] font-bold uppercase tracking-[0.2em]">
+                  Leggi la storia di Fabio
+                </Link>
+              </div>
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden grayscale border border-hub-border shadow-2xl">
+                <div className="absolute inset-0 bg-hub-gold/5" />
+                {/* Image placeholder or real image if exists */}
+                <div className="absolute inset-0 flex items-center justify-center text-hub-ink/20 font-serif italic text-xl">
+                  Fabio Micale
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 import FaqAccordion from "./FaqAccordion";
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function LavoraConMePage() {
   return (
     <main className="min-h-screen bg-hub-bg text-hub-ink">
-      <Navbar />
+      
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className="relative pt-44 pb-32 px-6 overflow-hidden">
@@ -188,7 +188,7 @@ export default function LavoraConMePage() {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
   );
 }

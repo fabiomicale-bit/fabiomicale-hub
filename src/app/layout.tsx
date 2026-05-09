@@ -5,6 +5,8 @@ import "./globals.css";
 import BackToTop from "@/components/BackToTop";
 import JsonLd from "./JsonLd";
 import CookieBanner from "@/components/CookieBanner";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import Script from "next/script";
 
 const inter = Inter({
@@ -138,9 +140,13 @@ export default function RootLayout({
           fbq('track', 'PageView');
         `}
       </Script>
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+      <body className={`${inter.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}>
         <JsonLd />
-        {children}
+        <Navbar />
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
         <BackToTop />
         <CookieBanner />
       </body>

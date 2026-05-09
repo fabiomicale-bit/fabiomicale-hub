@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 
 const caseStudies = [
   {
@@ -87,7 +87,7 @@ const feedbackOptions = [
 export default function RecensioniPage() {
   return (
     <main className="min-h-screen bg-[#0D0D0D] text-white selection:bg-[#F5A623]/20">
-      <Navbar />
+      
 
       {/* ── HERO: RISULTATI ────────────────────────────────────── */}
       <section className="pt-44 pb-20 px-6 relative overflow-hidden">
@@ -195,7 +195,7 @@ export default function RecensioniPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
   );
 }

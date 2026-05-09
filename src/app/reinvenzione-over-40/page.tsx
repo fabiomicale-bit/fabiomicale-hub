@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 
 export const metadata: Metadata = {
   title: "Reinvenzione Professionale Over 40 | Guida Strategica — Fabio Micale",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function ReinvenzioneOver40Page() {
   return (
     <main className="min-h-screen bg-[#0D0D0D] text-white">
-      <Navbar />
+      
 
       {/* ── HERO EDITORIALE ─────────────────────────────────────── */}
       <section className="relative pt-44 pb-32 px-6 overflow-hidden">
@@ -125,7 +125,7 @@ export default function ReinvenzioneOver40Page() {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
   );
 }

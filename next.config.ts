@@ -40,29 +40,100 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/sessioni-di-coaching',
-        destination: '/lavora-con-me',
+        destination: '/chi-sono',
         permanent: true,
       },
-      // Migrazione MEPA Elite → Fatturato Garantito
+      // Redirect Verticali verso Il Metodo
+      {
+        source: '/fatturato-garantito',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/fatturato-garantito/:path*',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/impresa-liquida',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/impresa-liquida/:path*',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/punto-zero',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/punto-zero/:path*',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/agenzia-business',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/agenzia-business/:path*',
+        destination: '/il-metodo',
+        permanent: true,
+      },
       {
         source: '/mepa-elite',
-        destination: '/fatturato-garantito',
+        destination: '/il-metodo',
         permanent: true,
       },
       {
         source: '/mepa-elite/:path*',
-        destination: '/fatturato-garantito/:path*',
+        destination: '/il-metodo',
         permanent: true,
       },
-      // Nuova migrazione Punto Zero
       {
         source: '/puntozero',
-        destination: '/punto-zero',
+        destination: '/il-metodo',
         permanent: true,
       },
       {
         source: '/puntozero/:path*',
-        destination: '/punto-zero/:path*',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      // Migrazione Il Libro → Successo in 3 Passi
+      {
+        source: '/il-libro',
+        destination: '/successo-in-3-passi',
+        permanent: true,
+      },
+      {
+        source: '/il-libro/:path*',
+        destination: '/successo-in-3-passi',
+        permanent: true,
+      },
+      // Redirect altri vecchi verticali
+      {
+        source: '/accademia',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/ai-per-professionisti',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/reinvenzione-over-40',
+        destination: '/il-metodo',
+        permanent: true,
+      },
+      {
+        source: '/lavora-con-me',
+        destination: '/chi-sono',
         permanent: true,
       },
     ];

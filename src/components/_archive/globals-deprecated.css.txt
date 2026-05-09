@@ -1,0 +1,212 @@
+/* ══════════════════════════════════════════════════════════════
+   GLOBALS.CSS — REGOLE DEPRECATE
+   Rimosso in: refactor(css): remove orphan rules and consolidate identical declarations
+   Branch: refactor/3-passi-positioning
+   Data: 2026-05-07
+
+   NOTA: Questo file è .txt per evitare che venga processato da
+   Tailwind/PostCSS. Conservato solo come riferimento storico.
+   ══════════════════════════════════════════════════════════════ */
+
+
+/* ── 1. .badge ──────────────────────────────────────────────────
+   RIMOSSO: identico byte-for-byte a .badge-editorial (body, valori,
+   proprietà). Orfano in codice attivo — solo in _archive/components/Hero.tsx.
+   Il selettore pubblico .badge-editorial resta il canonical.
+   ─────────────────────────────────────────────────────────────── */
+/* Legacy badges for satellite sub-routes */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 100px;
+  background: rgba(200, 164, 90, 0.06);
+  border: 1px solid rgba(200, 164, 90, 0.15);
+  color: var(--hub-gold-dark);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+}
+
+
+/* ── 2. .bg-grid-slate ──────────────────────────────────────────
+   RIMOSSO: orfano in codice attivo. Variante griglia per tema PZ
+   platinum (50px, tinta slate rgba(203,213,225,0.03)). Non usata da
+   nessun componente attivo. Se il tema Punto Zero richiederà una
+   griglia slate in futuro, ricreare come token dedicato.
+   ─────────────────────────────────────────────────────────────── */
+.bg-grid-slate {
+  background-size: 50px 50px;
+  background-image: linear-gradient(to right, rgba(203, 213, 225, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(203, 213, 225, 0.03) 1px, transparent 1px);
+}
+
+
+/* ── 3. .animate-spin-slow + @keyframes spin-slow ───────────────
+   RIMOSSO: orfano in codice attivo. Usato solo in
+   _archive/punto-zero-legacy.tsx (cerchio SVG animato rimosso).
+   Se reintrodouce un elemento rotante nel design, ricreare la classe.
+   ─────────────────────────────────────────────────────────────── */
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* ── 4. .card-agency ────────────────────────────────────────────
+   RIMOSSO: orfano in codice attivo. Puro @apply Tailwind — le pagine
+   agenzia-business usano classi Tailwind inline direttamente.
+   ─────────────────────────────────────────────────────────────── */
+.card-agency {
+  @apply bg-white border border-slate-200 rounded-2xl p-8 shadow-sm transition-all duration-500 hover:shadow-xl hover:border-agency-accent/20 hover:-translate-y-1;
+}
+
+
+/* ── 5. .glass-premium ──────────────────────────────────────────
+   RIMOSSO: orfano in codice attivo. Puro @apply Tailwind. Usato solo
+   in _archive/components/Hero.tsx (legacy hero rimosso).
+   ─────────────────────────────────────────────────────────────── */
+.glass-premium {
+  @apply bg-white/95 backdrop-blur-xl border border-black/5 rounded-[40px] shadow-2xl;
+}
+
+
+/* ── 6. .text-gradient-pa ───────────────────────────────────────
+   RIMOSSO: orfano in codice attivo. Puro @apply Tailwind. Semantica
+   obsoleta dopo rinomina pa-green → hub-gold: il gradiente
+   from-pa-text to-pa-green-bright = from-hub-ink to-hub-gold-light,
+   esprimibile direttamente con utility Tailwind.
+   ─────────────────────────────────────────────────────────────── */
+.text-gradient-pa {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pa-text to-pa-green-bright;
+}
+
+
+/* ── 7. .bg-grid-pa ─────────────────────────────────────────────
+   RIMOSSO: orfano in codice attivo. Variante griglia tinta verde PA
+   rgba(0,98,33,0.03). Semantica doppiamente obsoleta: (a) pa-green è
+   ora alias di hub-gold, non verde; (b) nessun componente attivo la
+   usa. Non sostituire — usare .bg-grid-editorial per griglia neutra.
+   ─────────────────────────────────────────────────────────────── */
+.bg-grid-pa {
+  background-image:
+    linear-gradient(to right, rgba(0, 98, 33, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 98, 33, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+
+/* ── 8. .faq-item / .faq-question / .faq-answer / .faq-item.active ──
+   RIMOSSI: orfani. FAQSection.tsx usa Tailwind inline nel componente
+   e non consuma queste classi CSS. Probabilmente predate la
+   migrazione del componente a Tailwind.
+   ─────────────────────────────────────────────────────────────── */
+/* ── FAQ (shared) ───────────────────────────────────────────── */
+.faq-item {
+  @apply border-b border-black/5 py-6 transition-all duration-300;
+}
+
+.faq-question {
+  @apply flex items-center justify-between w-full text-left text-lg font-serif italic hover:text-hub-gold transition-colors;
+  color: var(--hub-ink);
+}
+
+.faq-answer {
+  @apply max-h-0 overflow-hidden transition-all duration-[600ms] ease-[cubic-bezier(0.16,1,0.3,1)];
+}
+
+.faq-item.active .faq-answer {
+  @apply max-h-[300px] mt-6;
+}
+
+
+/* ── 9. .scroll-top-btn / .scroll-top-btn.visible / .scroll-top-icon ──
+   RIMOSSI: orfani. Nessun componente attivo usa queste classi.
+   Il componente BackToTop.tsx (se attivo) applica classi Tailwind
+   inline e non dipende da questi selettori.
+   ─────────────────────────────────────────────────────────────── */
+/* ── SCROLL TO TOP ──────────────────────────────────────────── */
+.scroll-top-btn {
+  @apply fixed bottom-8 right-8 z-[110] bg-white border border-black/5 rounded-full shadow-xl p-3 flex items-center justify-center transition-all duration-500 transform scale-0 opacity-0 cursor-pointer hover:shadow-2xl hover:border-hub-gold;
+}
+
+.scroll-top-btn.visible {
+  @apply scale-100 opacity-100;
+}
+
+.scroll-top-icon {
+  @apply w-5 h-5;
+  color: var(--hub-ink);
+}
+
+
+/* ── 10. Keyframes orfani + relative classi ─────────────────────
+   RIMOSSI: keyframe/classi non usati in codice attivo.
+
+   @keyframes revealFadeIn / .reveal-fade-in
+     — quasi-duplicato di revealUp (20px vs 30px translateY).
+     .reveal-fade-in orfana in codice attivo. Se reintrodouce
+     un'animazione con translateY minore, usare revealUp con
+     CSS transform override oppure ricreate.
+
+   @keyframes lineExtend / .animate-line-extend
+     — orfani. Animazione width 0→3rem. Nessun componente attivo
+     la usa.
+
+   @keyframes float / .animate-float
+     — orfani in codice attivo (solo _archive/ Hero/HeroEditorial).
+     Animazione floating. Se reintrodouce floating elements,
+     ricreare.
+
+   @keyframes shimmer
+     — KEYFRAME ORFANO: nessuna classe .animate-* lo consumava.
+     Nessun rimpiazzo necessario.
+   ─────────────────────────────────────────────────────────────── */
+@keyframes revealFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineExtend {
+  from { width: 0; }
+  to { width: 3rem; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-line-extend {
+  animation: lineExtend 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.reveal-fade-in {
+  animation: revealFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+
+/* ── 11. *, *::before, *::after { box-sizing: border-box } ─────
+   RIMOSSO: duplicato del Tailwind preflight. Tailwind v4 include già
+   `*, ::before, ::after { box-sizing: border-box }` in @layer base.
+   Nessun Web Component / Shadow DOM nel progetto
+   (grep customElements.define / attachShadow = 0 risultati).
+   ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
