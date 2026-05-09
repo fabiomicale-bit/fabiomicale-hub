@@ -7,6 +7,7 @@
  */
 
 import { useState } from "react";
+import Link from "next/link";
 
 type NewsletterVariant = "default" | "book-excerpt" | "article";
 
