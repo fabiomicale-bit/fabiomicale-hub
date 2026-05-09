@@ -162,9 +162,8 @@ export default function EditorialHero({
 
           {/* Image side */}
           {(isHub || (isBook && image)) && image && (
-            <div className={`relative flex justify-center lg:justify-end animate-fade-in-up ${isBook ? "book-container" : ""}`}>
-              <div className={`relative w-full max-w-[320px] md:max-w-md ${isBook ? "book-mockup" : ""}`}>
-                {isBook && <div className="book-spine" />}
+            <div className="relative flex justify-center lg:justify-end animate-fade-in-up">
+              <div className="relative w-full max-w-md">
                 <div className="absolute -inset-10 bg-hub-gold/[0.08] blur-[80px] rounded-full pointer-events-none" />
                 <Image
                   src={image.src}
@@ -176,7 +175,6 @@ export default function EditorialHero({
                   priority={image.priority}
                 />
                 {!isBook && <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-hub-bg to-transparent z-20" />}
-                {isBook && <div className="book-pages" />}
               </div>
             </div>
           )}

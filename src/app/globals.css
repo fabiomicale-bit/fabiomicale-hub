@@ -558,50 +558,6 @@ body {
   border: 1px solid rgba(200, 164, 90, 0.1);
 }
 
-/* ── 3D BOOK MOCKUP ────────────────────────────────────────── */
-.book-container {
-  perspective: 2000px;
-}
-
-.book-mockup {
-  position: relative;
-  width: 100%;
-  height: auto;
-  transform-style: preserve-3d;
-  transform: rotateY(-20deg) rotateX(5deg);
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.book-container:hover .book-mockup {
-  transform: rotateY(-10deg) rotateX(2deg);
-}
-
-.book-spine {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 40px;
-  height: 100%;
-  background: #222;
-  transform: rotateY(-90deg) translateX(-20px);
-  transform-origin: left;
-  border-right: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.book-pages {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 100%;
-  background: #fff;
-  transform: rotateY(90deg) translateX(20px);
-  transform-origin: right;
-  background-image: repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 0, 0, 0.05) 2px, rgba(0, 0, 0, 0.05) 4px);
-}
-
 /* ── SELECTION ──────────────────────────────────────────────── */
 ::selection {
   background: rgba(200, 164, 90, 0.15);
