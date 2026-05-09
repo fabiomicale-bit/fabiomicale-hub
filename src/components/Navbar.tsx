@@ -89,12 +89,14 @@ export default function Navbar() {
             </div>
           ))}
 
-          <button 
-            disabled
-            className="bg-hub-gold text-hub-ink px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-50 cursor-not-allowed shadow-lg shadow-hub-gold/20"
-          >
-            Estratto in arrivo
-          </button>
+          <div className="flex flex-col items-end">
+            <div 
+              className="bg-hub-gold/10 text-hub-gold px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-hub-gold/20"
+            >
+              Estratto in arrivo
+            </div>
+            <span className="text-[8px] uppercase tracking-widest text-hub-gold/40 mt-1 mr-2">Edizione 2026</span>
+          </div>
         </div>
 
         {/* Mobile Toggle */}

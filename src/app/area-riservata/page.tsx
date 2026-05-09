@@ -43,10 +43,13 @@ export default function AreaRiservataPage() {
                 </p>
               </div>
               <div className="pt-8 border-t border-hub-border">
-                <p className="text-hub-gold text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Stato: In fase di attivazione</p>
-                <button disabled className="btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] opacity-50">
+              <div className="flex flex-col items-center">
+                <div className="w-full bg-hub-gold/10 text-hub-gold text-center py-5 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-gold/20">
                   Accesso in preparazione
-                </button>
+                </div>
+                <p className="text-[10px] font-serif italic text-hub-ink/40 mt-4 text-center">
+                  Sarai avvisato via email non appena i materiali saranno pronti.
+                </p>
               </div>
             </div>
 
@@ -63,11 +66,14 @@ export default function AreaRiservataPage() {
                   Uno spazio dedicato a chi vuole approfondire con corsi, masterclass e strumenti avanzati. L'Area Premium sarà attivata in una fase successiva del lancio.
                 </p>
               </div>
-              <div className="pt-8 border-t border-white/10">
-                <p className="text-white/30 text-[10px] font-bold uppercase tracking-[0.3em] mb-4">Stato: Progetto futuro</p>
-                <button disabled className="btn-outline border-white/20 text-white/40 w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
-                  Non ancora disponibile
-                </button>
+              <div className="flex flex-col items-center">
+                <div className="w-full bg-white/5 text-white/30 text-center py-5 rounded-full text-[11px] font-bold uppercase tracking-[0.2em] border border-white/10">
+                  Progetto Futuro
+                </div>
+                <p className="text-[10px] font-serif italic text-white/20 mt-4 text-center">
+                  I contenuti avanzati saranno sbloccati nella fase post-lancio.
+                </p>
+              </div>
               </div>
             </div>
           </div>

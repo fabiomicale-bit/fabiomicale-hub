@@ -40,13 +40,13 @@ export default function SuccessoIn3PassiPage() {
         title="Successo in 3 Passi"
         titleAccent="Edizione 2026"
         subtitle="Il metodo pratico per professionisti Over 40 che vogliono fermare il caos, rimettere struttura e costruire una nuova direzione personale e professionale nell’era dell’intelligenza artificiale."
-        primaryCTA={{ label: "Estratto disponibile a breve", href: "#estratto" }}
+        primaryCTA={{ 
+          label: "Estratto disponibile a breve", 
+          href: "#estratto",
+          disabled: true,
+          disclaimer: "I materiali gratuiti saranno attivati nella prossima fase di lancio."
+        }}
       />
-      <div className="max-w-4xl mx-auto px-6 -mt-12 mb-20">
-        <p className="text-[10px] uppercase tracking-[0.3em] text-hub-gold/60 text-center font-bold">
-          L'estratto e i materiali gratuiti saranno attivati nella prossima fase di lancio.
-        </p>
-      </div>
 
       {/* ── SEZIONE 1 — NON UN LIBRO MOTIVAZIONALE ────────────────── */}
       <section className="py-32 px-6 bg-hub-bg">
@@ -188,21 +188,31 @@ export default function SuccessoIn3PassiPage() {
               Il libro, l’estratto gratuito e i materiali collegati al Metodo Successo in 3 Passi sono in fase di completamento. Il sito resta live per accompagnare la costruzione pubblica del progetto.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-16 text-left">
-              <div className="p-10 bg-white/5 rounded-3xl border border-white/10 flex flex-col items-center text-center group">
-                 <h3 className="text-xl font-serif mb-4 text-hub-gold">Estratto Gratuito</h3>
-                 <p className="text-white/40 text-sm font-light mb-8">Disponibile a breve per gli iscritti alla newsletter.</p>
-                 <button disabled className="btn-outline border-white/20 text-white/40 w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em]">
-                    Disponibile a breve
-                 </button>
+            <div className="grid md:grid-cols-2 gap-10 items-start mb-16 text-left">
+              <div className="flex flex-col items-center text-center">
+                <div className="p-10 bg-white/5 rounded-3xl border border-white/10 w-full mb-4">
+                   <h3 className="text-xl font-serif mb-4 text-hub-gold">Estratto Gratuito</h3>
+                   <p className="text-white/40 text-sm font-light mb-0">Disponibile a breve per gli iscritti alla newsletter.</p>
+                   <div className="mt-8 btn-outline border-white/20 text-white/40 w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em] cursor-not-allowed">
+                      Presto disponibile
+                   </div>
+                </div>
+                <p className="text-[10px] font-serif italic text-hub-gold/40 px-4">
+                  L'estratto sarà inviato automaticamente al completamento della fase di revisione.
+                </p>
               </div>
               
-              <div className="p-10 bg-white/5 rounded-3xl border border-white/10 flex flex-col items-center text-center group">
-                 <h3 className="text-xl font-serif mb-4 text-hub-gold">Il Libro Completo</h3>
-                 <p className="text-white/40 text-sm font-light mb-8">L'acquisto sarà attivato al termine della fase di lancio.</p>
-                 <button disabled className="btn-gold opacity-50 w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em]">
-                    Acquisto in arrivo
-                 </button>
+              <div className="flex flex-col items-center text-center">
+                <div className="p-10 bg-white/5 rounded-3xl border border-white/10 w-full mb-4">
+                   <h3 className="text-xl font-serif mb-4 text-hub-gold">Il Libro Completo</h3>
+                   <p className="text-white/40 text-sm font-light mb-0">L'acquisto sarà attivato al termine della fase di lancio.</p>
+                   <div className="mt-8 btn-gold opacity-30 w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em] cursor-not-allowed">
+                      Lancio in corso
+                   </div>
+                </div>
+                <p className="text-[10px] font-serif italic text-hub-gold/40 px-4">
+                  Sarai avvisato non appena il sistema di pre-ordine sarà operativo.
+                </p>
               </div>
             </div>
 

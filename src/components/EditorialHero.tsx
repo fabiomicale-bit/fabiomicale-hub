@@ -16,8 +16,8 @@ interface EditorialHeroProps {
   title: string;
   titleAccent?: string;
   subtitle: string;
-  primaryCTA: { label: string; href: string };
-  secondaryCTA?: { label: string; href: string };
+  primaryCTA: { label: string; href: string; disabled?: boolean; disclaimer?: string };
+  secondaryCTA?: { label: string; href: string; disabled?: boolean; disclaimer?: string };
   /** hub = fullscreen con griglia; vertical = focalizzato; book = centrato con accent bar */
   variant?: "hub" | "vertical" | "book";
   /** tema visuale: influenza il primary CTA button. Default: "default" (btn-gold). */
@@ -103,26 +103,48 @@ export default function EditorialHero({
 
         <div
           className={[
-            "flex gap-4 flex-wrap",
+            "flex gap-6 flex-wrap",
             isBook ? "justify-center" : "items-start",
           ]
             .filter(Boolean)
             .join(" ")}
         >
-          <Link
-            href={primaryCTA.href}
-            className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]`}
-          >
-            {primaryCTA.label}
-          </Link>
+          <div className="flex flex-col gap-3">
+            {primaryCTA.disabled ? (
+              <div className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] opacity-40 cursor-not-allowed`}>
+                {primaryCTA.label}
+              </div>
+            ) : (
+              <Link
+                href={primaryCTA.href}
+                className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]`}
+              >
+                {primaryCTA.label}
+              </Link>
+            )}
+            {primaryCTA.disclaimer && (
+              <p className="text-[10px] font-serif italic text-hub-gold/60 text-center">{primaryCTA.disclaimer}</p>
+            )}
+          </div>
 
           {secondaryCTA && (
-            <Link
-              href={secondaryCTA.href}
-              className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full"
-            >
-              {secondaryCTA.label}
-            </Link>
+            <div className="flex flex-col gap-3">
+              {secondaryCTA.disabled ? (
+                <div className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink/40 cursor-not-allowed rounded-full">
+                  {secondaryCTA.label}
+                </div>
+              ) : (
+                <Link
+                  href={secondaryCTA.href}
+                  className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full"
+                >
+                  {secondaryCTA.label}
+                </Link>
+              )}
+              {secondaryCTA.disclaimer && (
+                <p className="text-[10px] font-serif italic text-hub-ink-light/60 text-center">{secondaryCTA.disclaimer}</p>
+              )}
+            </div>
           )}
         </div>
       </div>

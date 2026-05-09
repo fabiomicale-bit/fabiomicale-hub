@@ -58,12 +58,12 @@ export default function Footer() {
             <p className="text-hub-ink/70 text-xs leading-relaxed mb-6">
               La newsletter settimanale per applicare il Metodo Successo in 3 Passi.
             </p>
-            <button 
-              disabled 
-              className="inline-block bg-hub-ink/20 text-hub-ink/40 text-[9px] font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full cursor-not-allowed"
-            >
-              In arrivo
-            </button>
+            <div className="pt-4 border-t border-hub-border/50">
+               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-hub-gold/40">Servizio in attivazione</p>
+               <p className="text-hub-ink/30 text-[9px] mt-2 italic font-serif">
+                 Le iscrizioni saranno aperte in concomitanza con il rilascio del Manifesto 2026.
+               </p>
+            </div>
           </div>
         </div>
  

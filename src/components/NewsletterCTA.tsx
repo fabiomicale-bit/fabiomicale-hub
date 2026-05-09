@@ -81,24 +81,24 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           {copy.subtitle}
         </p>
 
-        <div className="bg-hub-white border border-hub-border rounded-2xl p-8 max-w-md mx-auto">
-          <p className="text-hub-ink font-medium mb-2">Iscrizione in fase di attivazione</p>
-          <p className="text-hub-ink-muted text-sm leading-relaxed mb-6 font-light">
+        <div className="bg-hub-white border border-hub-border rounded-2xl p-8 max-w-md mx-auto relative overflow-hidden">
+          <div className="absolute inset-0 bg-hub-cream/10 backdrop-blur-[2px] z-10 flex items-center justify-center">
+             <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-ink/40">In fase di attivazione</p>
+          </div>
+          <p className="text-hub-ink font-medium mb-2 opacity-30">Iscrizione in fase di attivazione</p>
+          <p className="text-hub-ink-muted text-sm leading-relaxed mb-6 font-light opacity-30">
             Stiamo completando l'area di iscrizione e l'accesso ai materiali gratuiti. 
-            Il servizio sarà disponibile a breve per accompagnare il lancio dell'edizione 2026.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 opacity-50 pointer-events-none">
-            <input
-              type="email"
-              placeholder="La tua email..."
-              disabled
-              className="flex-1 px-6 py-4 rounded-full border border-hub-border text-sm"
-            />
+          <div className="flex flex-col gap-4 opacity-20 pointer-events-none">
+            <div className="h-12 w-full border border-hub-border rounded-full" />
             <button disabled className="btn-gold px-8 py-4 text-[10px] tracking-[0.2em] whitespace-nowrap">
               Presto disponibile
             </button>
           </div>
         </div>
+        <p className="text-hub-gold text-[10px] italic mt-4 font-serif">
+          Il servizio sarà attivato a breve per accompagnare il lancio dell'edizione 2026.
+        </p>
 
         {status === "error" && (
           <p className="text-red-500 text-xs mt-4">Qualcosa è andato storto. Riprova.</p>

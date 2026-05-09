@@ -21,8 +21,16 @@ export default function HomePage() {
         title="Ripartire dopo i 40 anni non richiede motivazione."
         titleAccent="Richiede metodo."
         subtitle="Sono Fabio Micale, autore di Successo in 3 Passi. Aiuto professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione personale e professionale nell’era dell’intelligenza artificiale."
-        primaryCTA={{ label: "Estratto disponibile a breve", href: "/area-riservata" }}
-        secondaryCTA={{ label: "Scopri il Metodo in 3 Passi", href: "/il-metodo" }}
+        primaryCTA={{ 
+          label: "Estratto disponibile a breve", 
+          href: "/area-riservata",
+          disabled: true,
+          disclaimer: "L'estratto sarà scaricabile con l'avvio del lancio 2026."
+        }}
+        secondaryCTA={{ 
+          label: "Scopri il Metodo in 3 Passi", 
+          href: "/il-metodo" 
+        }}
       />
 
       {/* Payoff visibile */}
@@ -132,9 +140,12 @@ export default function HomePage() {
                   Accesso gratuito con iscrizione alla newsletter. Qui troverai estratti del libro, schede operative, appunti di metodo, aggiornamenti e materiali pratici per iniziare.
                 </p>
               </div>
-              <button disabled className="btn-gold text-center py-4 text-[10px] tracking-[0.2em] opacity-50">
-                Disponibile a breve
-              </button>
+              <div className="flex flex-col items-center">
+                <div className="w-full bg-hub-gold/10 text-hub-gold text-center py-4 rounded-full text-[10px] tracking-[0.2em] font-bold border border-hub-gold/20">
+                  Accesso in preparazione
+                </div>
+                <p className="text-[9px] font-serif italic text-hub-ink/40 mt-3">Area riservata agli iscritti alla newsletter.</p>
+              </div>
             </div>
             <div className="card-editorial p-10 flex flex-col justify-between bg-hub-charcoal text-white group">
               <div>
@@ -148,9 +159,12 @@ export default function HomePage() {
                   Uno spazio a pagamento che si arricchirà nel tempo con corsi, ebook, masterclass, community e strumenti pratici per applicare il metodo alla tua crescita professionale.
                 </p>
               </div>
-              <button disabled className="btn-outline border-white/20 text-white/40 text-center py-4 text-[10px] tracking-[0.2em]">
-                In fase di attivazione
-              </button>
+              <div className="flex flex-col items-center">
+                <div className="w-full bg-white/5 text-white/30 text-center py-4 rounded-full text-[10px] tracking-[0.2em] font-bold border border-white/10">
+                  Progetto Futuro
+                </div>
+                <p className="text-[9px] font-serif italic text-white/20 mt-3">Contenuti avanzati in fase di sviluppo.</p>
+              </div>
             </div>
           </div>
         </div>
