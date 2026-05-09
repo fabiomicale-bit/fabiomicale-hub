@@ -96,12 +96,16 @@ export async function POST(req: NextRequest) {
   `;
 
   if (isBookExcerpt) {
-    subject = "Ecco il tuo estratto: Successo in 3 Passi (Edizione 2026)";
-    resourceUrl = "https://fabiomicale.com/assets/ESTRATTO_LANCIO_2026.pdf";
+    subject = "Il tuo estratto di Successo in 3 Passi";
+    resourceUrl = "https://www.fabiomicale.com/downloads/estratto-successo-in-3-passi-2026.pdf";
     htmlContent = `
-      <h2 style="color: #000; font-style: italic;">Iniziamo da qui, ${nome || "Amico"}.</h2>
-      <p>Hai richiesto l'estratto gratuito di <strong>Successo in 3 Passi — Edizione 2026</strong>. È il primo passo per rimettere struttura e fermare il caos.</p>
-      <p>Oltre all'estratto, ti ho allegato la <strong>Operational Checklist 2026</strong> per iniziare subito a spuntare le prime azioni.</p>
+      <p>Ciao ${nome || "Amico"},</p>
+      <p>ecco l’estratto gratuito di “Successo in 3 Passi — Edizione 2026”.</p>
+      <p>Puoi leggerlo con calma. Non è un riassunto promozionale: è un primo ingresso reale nel Metodo.</p>
+      <p>Il punto di partenza è semplice:<br/>
+      non serve aggiungere altra confusione.<br/>
+      Serve fermare il caos, rimettere struttura e mantenere il controllo.</p>
+      <p>Nei prossimi messaggi riceverai contenuti pratici collegati al Metodo Successo in 3 Passi e alla newsletter “Un Passo Avanti”.</p>
     `;
   } else if (isCapitolo1) {
     subject = "Ecco il primo capitolo: Il Disallineamento";
@@ -114,24 +118,27 @@ export async function POST(req: NextRequest) {
         method: "POST",
         headers: {
           Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          from: "Fabio Micale <info@fabiomicale-hub.com>",
+          from: "Fabio Micale <info@fabiomicale.com>",
           to: email,
           subject: subject,
           html: `
-            <div style="font-family: serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto;">
-              ${htmlContent}
-              <div style="margin: 30px 0; text-align: center;">
-                <a href="${resourceUrl}" style="background-color: #000; color: #fff; padding: 15px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 2px;">Scarica ora</a>
+            <div style="font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #0A0A0A; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+              <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 24px; font-family: serif;">Successo in 3 Passi</h1>
+              <div style="font-size: 16px;">
+                ${htmlContent}
               </div>
-              ${isBookExcerpt ? `
-              <p style="font-size: 14px;">Puoi scaricare anche la checklist qui: <br/>
-              <a href="https://fabiomicale.com/assets/CHECKLIST_OPERATIVA_2026.pdf">Scarica Checklist Operativa</a></p>
-              ` : ''}
-              <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;" />
-              <p style="font-size: 12px; color: #999;">Fabio Micale — Successo in 3 Passi</p>
+              <div style="margin: 40px 0; text-align: left;">
+                <a href="${resourceUrl}" style="background-color: #C8A45A; color: #fff; padding: 16px 32px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; border-radius: 4px; display: inline-block;">Scarica l'estratto</a>
+              </div>
+              <hr style="border: none; border-top: 1px solid #EEE; margin: 40px 0;" />
+              <p style="font-size: 13px; color: #666;">
+                A presto,<br/>
+                <strong>Fabio Micale</strong><br/>
+                <a href="https://www.fabiomicale.com" style="color: #C8A45A; text-decoration: none;">fabiomicale.com</a>
+              </p>
             </div>
           `,
         }),

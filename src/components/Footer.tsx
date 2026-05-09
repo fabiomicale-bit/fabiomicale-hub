@@ -59,9 +59,9 @@ export default function Footer() {
               La newsletter settimanale per applicare il Metodo Successo in 3 Passi.
             </p>
             <div className="pt-4 border-t border-hub-border/50">
-               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-hub-gold/40">Servizio in attivazione</p>
-               <p className="text-hub-ink/30 text-[9px] mt-2 italic font-serif">
-                 Le iscrizioni saranno aperte in concomitanza con il rilascio del Manifesto 2026.
+               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-hub-gold">Iscrizioni Aperte</p>
+               <p className="text-hub-ink/60 text-[9px] mt-2 italic font-serif">
+                 Iscriviti per ricevere l'estratto gratuito e gli aggiornamenti del Metodo.
                </p>
             </div>
           </div>

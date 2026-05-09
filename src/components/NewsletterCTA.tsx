@@ -44,26 +44,44 @@ const variantCopy: Record<
 export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProps) {
   const copy = variantCopy[variant];
   const [email, setEmail] = useState("");
+  const [nome, setNome] = useState("");
   const [honeypot, setHoneypot] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (honeypot) return; // antispam silenzioso
-    if (!email) return;
+    if (honeypot) return; 
+    if (!email || !privacyAccepted) return;
     setStatus("loading");
 
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, variant, website_url: honeypot }),
+        body: JSON.stringify({ 
+          email, 
+          nome,
+          variant, 
+          website_url: honeypot,
+          privacy_consent: privacyAccepted,
+          newsletter_consent: newsletterAccepted
+        }),
       });
-      setStatus(res.ok ? "success" : "error");
+      
+      if (res.ok) {
+        setStatus("success");
+        window.location.href = "/grazie-estratto";
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
   };
+
+  if (status === "success") return null;
 
   return (
     <section
@@ -81,30 +99,93 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           {copy.subtitle}
         </p>
 
-        <div className="bg-hub-white border border-hub-border rounded-2xl p-8 max-w-md mx-auto relative overflow-hidden">
-          <div className="absolute inset-0 bg-hub-cream/10 backdrop-blur-[2px] z-10 flex items-center justify-center">
-             <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-ink/40">In fase di attivazione</p>
-          </div>
-          <p className="text-hub-ink font-medium mb-2 opacity-30">Iscrizione in fase di attivazione</p>
-          <p className="text-hub-ink-muted text-sm leading-relaxed mb-6 font-light opacity-30">
-            Stiamo completando l'area di iscrizione e l'accesso ai materiali gratuiti. 
-          </p>
-          <div className="flex flex-col gap-4 opacity-20 pointer-events-none">
-            <div className="h-12 w-full border border-hub-border rounded-full" />
-            <button disabled className="btn-gold px-8 py-4 text-[10px] tracking-[0.2em] whitespace-nowrap">
-              Presto disponibile
+        <form onSubmit={handleSubmit} className="bg-hub-white border border-hub-border rounded-2xl p-8 max-w-md mx-auto shadow-sm">
+          <div className="flex flex-col gap-6 text-left">
+            {/* Campo Nome */}
+            <div className="space-y-2">
+              <label htmlFor="nome" className="text-[10px] uppercase tracking-widest font-bold text-hub-ink/60 ml-2">
+                Nome
+              </label>
+              <input
+                id="nome"
+                type="text"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                placeholder="Il tuo nome"
+                required
+                className="w-full px-6 py-4 rounded-xl border border-hub-border focus:border-hub-gold outline-none transition-colors text-sm font-light bg-hub-bg/30"
+              />
+            </div>
+
+            {/* Campo Email */}
+            <div className="space-y-2">
+              <label htmlFor="email" className="text-[10px] uppercase tracking-widest font-bold text-hub-ink/60 ml-2">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="la-tua-email@esempio.it"
+                required
+                className="w-full px-6 py-4 rounded-xl border border-hub-border focus:border-hub-gold outline-none transition-colors text-sm font-light bg-hub-bg/30"
+              />
+            </div>
+
+            {/* Honeypot */}
+            <input
+              type="text"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+
+            {/* Checkboxes */}
+            <div className="space-y-4 pt-2">
+              <label className="flex items-start gap-3 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                  required
+                  className="mt-1 w-4 h-4 rounded border-hub-border text-hub-gold focus:ring-hub-gold"
+                />
+                <span className="text-[11px] text-hub-ink-muted leading-tight font-light group-hover:text-hub-ink transition-colors">
+                  Ho letto l’<Link href="/privacy" className="underline decoration-hub-gold/30 hover:decoration-hub-gold transition-all">informativa privacy</Link>.
+                </span>
+              </label>
+
+              <label className="flex items-start gap-3 cursor-pointer group">
+                <input
+                  type="checkbox"
+                  checked={newsletterAccepted}
+                  onChange={(e) => setNewsletterAccepted(e.target.checked)}
+                  className="mt-1 w-4 h-4 rounded border-hub-border text-hub-gold focus:ring-hub-gold"
+                />
+                <span className="text-[11px] text-hub-ink-muted leading-tight font-light group-hover:text-hub-ink transition-colors">
+                  Acconsento a ricevere la newsletter <span className="italic">Un Passo Avanti</span> e comunicazioni collegate al Metodo Successo in 3 Passi.
+                </span>
+              </label>
+            </div>
+
+            <button 
+              type="submit" 
+              disabled={status === "loading" || !privacyAccepted}
+              className={`btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] transition-all ${status === "loading" || !privacyAccepted ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.02]'}`}
+            >
+              {status === "loading" ? "Invio in corso..." : copy.cta}
             </button>
           </div>
-        </div>
-        <p className="text-hub-gold text-[10px] italic mt-4 font-serif">
-          Il servizio sarà attivato a breve per accompagnare il lancio dell'edizione 2026.
-        </p>
+        </form>
 
         {status === "error" && (
-          <p className="text-red-500 text-xs mt-4">Qualcosa è andato storto. Riprova.</p>
+          <p className="text-red-500 text-xs mt-4">Qualcosa è andato storto. Riprova o scrivimi a info@fabiomicale.com</p>
         )}
 
-        <p className="text-hub-ink-light text-xs mt-6">
+        <p className="text-hub-ink-light text-[10px] mt-8 uppercase tracking-widest font-medium">
           Zero spam. Privacy rispettata. Cancellati quando vuoi.
         </p>
       </div>

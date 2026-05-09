@@ -90,11 +90,12 @@ export default function Navbar() {
           ))}
 
           <div className="flex flex-col items-end">
-            <div 
-              className="bg-hub-gold/10 text-hub-gold px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest border border-hub-gold/20"
+            <Link 
+              href="/successo-in-3-passi#estratto"
+              className="bg-hub-gold text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-hub-ink transition-colors"
             >
-              Estratto in arrivo
-            </div>
+              Scarica l’estratto gratuito
+            </Link>
             <span className="text-[8px] uppercase tracking-widest text-hub-gold/40 mt-1 mr-2">Edizione 2026</span>
           </div>
         </div>

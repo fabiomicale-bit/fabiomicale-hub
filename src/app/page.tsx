@@ -22,10 +22,10 @@ export default function HomePage() {
         titleAccent="Richiede metodo."
         subtitle="Sono Fabio Micale, autore di Successo in 3 Passi. Aiuto professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione personale e professionale nell’era dell’intelligenza artificiale."
         primaryCTA={{ 
-          label: "Estratto disponibile a breve", 
-          href: "/area-riservata",
-          disabled: true,
-          disclaimer: "L'estratto sarà scaricabile con l'avvio del lancio 2026."
+          label: "Scarica l’estratto gratuito", 
+          href: "#newsletter",
+          disabled: false,
+          disclaimer: "Ricevi gratuitamente l’estratto ufficiale del libro e il primo esercizio pratico del Metodo."
         }}
         secondaryCTA={{ 
           label: "Scopri il Metodo in 3 Passi", 
@@ -82,9 +82,9 @@ export default function HomePage() {
                 Successo in 3 Passi non è solo un libro. È il manifesto operativo del metodo. Da qui nasce l’intero sito: articoli, esercizi, newsletter, area riservata, percorsi futuri e contenuti premium.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button disabled className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] opacity-50">
-                  Estratto in arrivo
-                </button>
+                <Link href="#newsletter" className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-center">
+                  Scarica l’estratto gratuito
+                </Link>
                 <Link href="/successo-in-3-passi" className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full text-center">
                   Scopri il libro
                 </Link>
@@ -121,7 +121,7 @@ export default function HomePage() {
                  </p>
                </div>
             </div>
-            <NewsletterCTA />
+            <NewsletterCTA variant="book-excerpt" />
           </div>
         </div>
       </section>

@@ -13,18 +13,31 @@ export default function HubContactForm({ theme = "default" }: { theme?: string }
         Il modulo contatti è in fase di configurazione. Per ora questa sezione resta visibile come anteprima del progetto Fabio Micale Hub. Saremo operativi a breve.
       </p>
       
-      <div className="grid grid-cols-1 gap-6 opacity-20 pointer-events-none max-w-md mx-auto text-left">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-20 pointer-events-none max-w-2xl mx-auto text-left">
         <div className="space-y-2">
-          <div className="h-4 w-12 bg-hub-border rounded" />
+          <label className="text-[10px] uppercase tracking-widest font-bold text-hub-ink/60 ml-2">Nome</label>
           <div className="w-full h-12 bg-hub-white border border-hub-border rounded-xl" />
         </div>
         <div className="space-y-2">
-          <div className="h-4 w-12 bg-hub-border rounded" />
+          <label className="text-[10px] uppercase tracking-widest font-bold text-hub-ink/60 ml-2">Cognome</label>
           <div className="w-full h-12 bg-hub-white border border-hub-border rounded-xl" />
         </div>
         <div className="space-y-2">
-          <div className="h-4 w-12 bg-hub-border rounded" />
+          <label className="text-[10px] uppercase tracking-widest font-bold text-hub-ink/60 ml-2">Email</label>
+          <div className="w-full h-12 bg-hub-white border border-hub-border rounded-xl" />
+        </div>
+        <div className="space-y-2">
+          <label className="text-[10px] uppercase tracking-widest font-bold text-hub-ink/60 ml-2">Cellulare (Facoltativo)</label>
+          <div className="w-full h-12 bg-hub-white border border-hub-border rounded-xl" />
+          <p className="text-[9px] text-hub-ink/40 ml-2 italic">Facoltativo. Inseriscilo solo se preferisci essere ricontattato telefonicamente.</p>
+        </div>
+        <div className="md:col-span-2 space-y-2">
+          <label className="text-[10px] uppercase tracking-widest font-bold text-hub-ink/60 ml-2">Messaggio</label>
           <div className="w-full h-32 bg-hub-white border border-hub-border rounded-xl" />
+        </div>
+        <div className="md:col-span-2 flex items-start gap-3 mt-2">
+          <div className="w-4 h-4 border border-hub-border rounded bg-hub-white" />
+          <span className="text-[10px] text-hub-ink/40 leading-tight">Ho letto l'informativa privacy.</span>
         </div>
       </div>
       
