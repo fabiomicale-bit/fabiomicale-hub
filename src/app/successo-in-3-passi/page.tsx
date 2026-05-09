@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import EditorialHero from "@/components/EditorialHero";
 import NewsletterCTA from "@/components/NewsletterCTA";
 
@@ -45,6 +46,11 @@ export default function SuccessoIn3PassiPage() {
           href: "#estratto",
           disabled: true,
           disclaimer: "I materiali gratuiti saranno attivati nella prossima fase di lancio."
+        }}
+        image={{
+          src: "/copertina-libro.png",
+          alt: "Copertina Successo in 3 Passi",
+          priority: true
         }}
       />
 
@@ -146,16 +152,14 @@ export default function SuccessoIn3PassiPage() {
                 ))}
               </ul>
             </div>
-            <div className="relative aspect-square card-editorial p-12 flex items-center justify-center bg-hub-white shadow-2xl">
-              <div className="text-center">
-                <div className="text-[120px] font-serif italic text-hub-gold opacity-10 absolute inset-0 flex items-center justify-center select-none pointer-events-none">Book</div>
-                <div className="relative z-10">
-                   <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-hub-gold mb-4">Coming 2026</p>
-                   <h3 className="text-3xl font-serif mb-6">Successo in 3 Passi</h3>
-                   <div className="h-px w-12 bg-hub-gold mx-auto" />
-                   <p className="mt-8 text-hub-ink-muted text-[10px] uppercase tracking-widest font-bold">Lancio in preparazione</p>
-                </div>
-              </div>
+            <div className="relative aspect-[3/4] card-editorial overflow-hidden flex items-center justify-center bg-hub-white shadow-2xl group">
+               <Image 
+                src="/copertina-libro.png"
+                alt="Successo in 3 Passi — Fabio Micale"
+                fill
+                className="object-contain p-8 group-hover:scale-105 transition-transform duration-700"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-hub-ink/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
             </div>
           </div>
         </div>

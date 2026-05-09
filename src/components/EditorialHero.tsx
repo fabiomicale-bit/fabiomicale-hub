@@ -68,13 +68,13 @@ export default function EditorialHero({
       <div
         className={[
           "relative z-10 max-w-7xl mx-auto px-6 w-full",
-          isBook ? "text-center" : "",
+          isBook && !image ? "text-center" : "",
         ]
           .filter(Boolean)
           .join(" ")}
       >
-        <div className={isHub ? "grid lg:grid-cols-2 gap-12 items-center" : ""}>
-          <div className={isHub ? "max-w-2xl" : ""}>
+        <div className={(isHub || (isBook && image)) ? "grid lg:grid-cols-2 gap-12 items-center" : ""}>
+          <div className={(isHub || (isBook && image)) ? "max-w-2xl" : ""}>
             {eyebrow && (
               <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-6">
                 {eyebrow}
@@ -161,7 +161,7 @@ export default function EditorialHero({
           </div>
 
           {/* Image side */}
-          {isHub && image && (
+          {(isHub || (isBook && image)) && image && (
             <div className="relative flex justify-center lg:justify-end animate-fade-in-up">
               <div className="relative w-full max-w-md">
                 <div className="absolute -inset-10 bg-hub-gold/[0.08] blur-[80px] rounded-full pointer-events-none" />
@@ -170,7 +170,7 @@ export default function EditorialHero({
                   alt={image.alt}
                   width={600}
                   height={800}
-                  className="relative z-10 w-full h-auto drop-shadow-2xl grayscale contrast-[1.1]"
+                  className={`relative z-10 w-full h-auto drop-shadow-2xl ${isBook ? "" : "grayscale contrast-[1.1]"}`}
                   style={image.flip ? { transform: "scaleX(-1)" } : {}}
                   priority={image.priority}
                 />
