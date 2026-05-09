@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 /**
  * theme: tema visuale dell'hero.
@@ -22,6 +23,13 @@ interface EditorialHeroProps {
   variant?: "hub" | "vertical" | "book";
   /** tema visuale: influenza il primary CTA button. Default: "default" (btn-gold). */
   theme?: EditorialHeroTheme;
+  /** Immagine opzionale da mostrare sulla destra (tipicamente in variante 'hub') */
+  image?: {
+    src: string;
+    alt: string;
+    priority?: boolean;
+    flip?: boolean;
+  };
 }
 
 export default function EditorialHero({
@@ -33,6 +41,7 @@ export default function EditorialHero({
   secondaryCTA,
   variant = "hub",
   theme = "default",
+  image,
 }: EditorialHeroProps) {
   const isHub = variant === "hub";
   const isBook = variant === "book";
@@ -64,86 +73,109 @@ export default function EditorialHero({
           .filter(Boolean)
           .join(" ")}
       >
-        {eyebrow && (
-          <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-6">
-            {eyebrow}
-          </p>
-        )}
+        <div className={isHub ? "grid lg:grid-cols-2 gap-12 items-center" : ""}>
+          <div className={isHub ? "max-w-2xl" : ""}>
+            {eyebrow && (
+              <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-6">
+                {eyebrow}
+              </p>
+            )}
 
-        <h1
-          className={[
-            "font-serif font-medium leading-[1.05] tracking-tight text-hub-ink mb-8",
-            isHub ? "text-5xl md:text-6xl lg:text-7xl max-w-3xl" : "",
-            !isHub ? "text-4xl md:text-6xl" : "",
-            isBook ? "mx-auto max-w-2xl" : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          {title}
-          {titleAccent && (
-            <>
-              {" "}
-              <span className="italic text-hub-gold">{titleAccent}</span>
-            </>
-          )}
-        </h1>
+            <h1
+              className={[
+                "font-serif font-medium leading-[1.05] tracking-tight text-hub-ink mb-8",
+                isHub ? "text-5xl md:text-6xl lg:text-7xl" : "",
+                !isHub ? "text-4xl md:text-6xl" : "",
+                isBook ? "mx-auto max-w-2xl" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              {title}
+              {titleAccent && (
+                <>
+                  {" "}
+                  <span className="italic text-hub-gold">{titleAccent}</span>
+                </>
+              )}
+            </h1>
 
-        <p
-          className={[
-            "text-hub-ink-muted font-light leading-relaxed mb-12",
-            isHub ? "text-xl max-w-xl" : "text-lg max-w-2xl",
-            isBook ? "mx-auto" : "",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          {subtitle}
-        </p>
+            <p
+              className={[
+                "text-hub-ink-muted font-light leading-relaxed mb-12",
+                isHub ? "text-xl max-w-xl" : "text-lg max-w-2xl",
+                isBook ? "mx-auto" : "",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              {subtitle}
+            </p>
 
-        <div
-          className={[
-            "flex gap-6 flex-wrap",
-            isBook ? "justify-center" : "items-start",
-          ]
-            .filter(Boolean)
-            .join(" ")}
-        >
-          <div className="flex flex-col gap-3">
-            {primaryCTA.disabled ? (
-              <div className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] opacity-40 cursor-not-allowed`}>
-                {primaryCTA.label}
+            <div
+              className={[
+                "flex gap-6 flex-wrap",
+                isBook ? "justify-center" : "items-start",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+            >
+              <div className="flex flex-col gap-3">
+                {primaryCTA.disabled ? (
+                  <div className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] opacity-40 cursor-not-allowed`}>
+                    {primaryCTA.label}
+                  </div>
+                ) : (
+                  <Link
+                    href={primaryCTA.href}
+                    className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]`}
+                  >
+                    {primaryCTA.label}
+                  </Link>
+                )}
+                {primaryCTA.disclaimer && (
+                  <p className="text-[10px] font-serif italic text-hub-gold/60 text-center">{primaryCTA.disclaimer}</p>
+                )}
               </div>
-            ) : (
-              <Link
-                href={primaryCTA.href}
-                className={`${theme === "agency" ? "btn-agency" : "btn-gold"} inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]`}
-              >
-                {primaryCTA.label}
-              </Link>
-            )}
-            {primaryCTA.disclaimer && (
-              <p className="text-[10px] font-serif italic text-hub-gold/60 text-center">{primaryCTA.disclaimer}</p>
-            )}
+
+              {secondaryCTA && (
+                <div className="flex flex-col gap-3">
+                  {secondaryCTA.disabled ? (
+                    <div className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink/40 cursor-not-allowed rounded-full">
+                      {secondaryCTA.label}
+                    </div>
+                  ) : (
+                    <Link
+                      href={secondaryCTA.href}
+                      className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full"
+                    >
+                      {secondaryCTA.label}
+                    </Link>
+                  )}
+                  {secondaryCTA.disclaimer && (
+                    <p className="text-[10px] font-serif italic text-hub-ink-light/60 text-center">{secondaryCTA.disclaimer}</p>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
 
-          {secondaryCTA && (
-            <div className="flex flex-col gap-3">
-              {secondaryCTA.disabled ? (
-                <div className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink/40 cursor-not-allowed rounded-full">
-                  {secondaryCTA.label}
-                </div>
-              ) : (
-                <Link
-                  href={secondaryCTA.href}
-                  className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full"
-                >
-                  {secondaryCTA.label}
-                </Link>
-              )}
-              {secondaryCTA.disclaimer && (
-                <p className="text-[10px] font-serif italic text-hub-ink-light/60 text-center">{secondaryCTA.disclaimer}</p>
-              )}
+          {/* Image side */}
+          {isHub && image && (
+            <div className="relative flex justify-center lg:justify-end animate-fade-in-up">
+              <div className="relative w-full max-w-md">
+                <div className="absolute -inset-10 bg-hub-gold/[0.08] blur-[80px] rounded-full pointer-events-none" />
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={600}
+                  height={800}
+                  className="relative z-10 w-full h-auto drop-shadow-2xl grayscale contrast-[1.1]"
+                  style={image.flip ? { transform: "scaleX(-1)" } : {}}
+                  priority={image.priority}
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-hub-bg to-transparent z-20" />
+              </div>
             </div>
           )}
         </div>

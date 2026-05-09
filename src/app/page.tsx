@@ -31,6 +31,12 @@ export default function HomePage() {
           label: "Scopri il Metodo in 3 Passi", 
           href: "/il-metodo" 
         }}
+        image={{
+          src: "/foto fabio cravatta no sfondo.png",
+          alt: "Fabio Micale",
+          priority: true,
+          flip: true
+        }}
       />
 
       {/* Payoff visibile */}
