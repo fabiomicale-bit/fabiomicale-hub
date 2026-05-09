@@ -21,7 +21,7 @@ export default function HomePage() {
         title="Ripartire dopo i 40 anni non richiede motivazione."
         titleAccent="Richiede metodo."
         subtitle="Sono Fabio Micale, autore di Successo in 3 Passi. Aiuto professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione personale e professionale nell’era dell’intelligenza artificiale."
-        primaryCTA={{ label: "Scarica un estratto gratuito", href: "/area-riservata" }}
+        primaryCTA={{ label: "Estratto disponibile a breve", href: "/area-riservata" }}
         secondaryCTA={{ label: "Scopri il Metodo in 3 Passi", href: "/il-metodo" }}
       />
 
@@ -68,10 +68,10 @@ export default function HomePage() {
                 Successo in 3 Passi non è solo un libro. È il manifesto operativo del metodo. Da qui nasce l’intero sito: articoli, esercizi, newsletter, area riservata, percorsi futuri e contenuti premium.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/area-riservata" className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]">
-                  Scarica l'estratto gratuito
-                </Link>
-                <Link href="/successo-in-3-passi" className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full">
+                <button disabled className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] opacity-50">
+                  Estratto in arrivo
+                </button>
+                <Link href="/successo-in-3-passi" className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full text-center">
                   Scopri il libro
                 </Link>
               </div>
@@ -132,9 +132,9 @@ export default function HomePage() {
                   Accesso gratuito con iscrizione alla newsletter. Qui troverai estratti del libro, schede operative, appunti di metodo, aggiornamenti e materiali pratici per iniziare.
                 </p>
               </div>
-              <Link href="/area-riservata" className="btn-gold text-center py-4 text-[10px] tracking-[0.2em]">
-                Entra nell'area free
-              </Link>
+              <button disabled className="btn-gold text-center py-4 text-[10px] tracking-[0.2em] opacity-50">
+                Disponibile a breve
+              </button>
             </div>
             <div className="card-editorial p-10 flex flex-col justify-between bg-hub-charcoal text-white group">
               <div>
@@ -148,9 +148,9 @@ export default function HomePage() {
                   Uno spazio a pagamento che si arricchirà nel tempo con corsi, ebook, masterclass, community e strumenti pratici per applicare il metodo alla tua crescita professionale.
                 </p>
               </div>
-              <Link href="/area-riservata" className="btn-outline border-white/20 text-white/70 hover:border-hub-gold hover:text-hub-gold text-center py-4 text-[10px] tracking-[0.2em]">
-                Scopri cosa arriverà
-              </Link>
+              <button disabled className="btn-outline border-white/20 text-white/40 text-center py-4 text-[10px] tracking-[0.2em]">
+                In fase di attivazione
+              </button>
             </div>
           </div>
         </div>

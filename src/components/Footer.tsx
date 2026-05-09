@@ -58,12 +58,12 @@ export default function Footer() {
             <p className="text-hub-ink/70 text-xs leading-relaxed mb-6">
               La newsletter settimanale per applicare il Metodo Successo in 3 Passi.
             </p>
-            <Link 
-              href="/area-riservata" 
-              className="inline-block bg-hub-ink text-white text-[9px] font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full hover:bg-hub-gold hover:text-hub-ink transition-all"
+            <button 
+              disabled 
+              className="inline-block bg-hub-ink/20 text-hub-ink/40 text-[9px] font-bold uppercase tracking-[0.2em] px-6 py-3 rounded-full cursor-not-allowed"
             >
-              Iscriviti
-            </Link>
+              In arrivo
+            </button>
           </div>
         </div>
  

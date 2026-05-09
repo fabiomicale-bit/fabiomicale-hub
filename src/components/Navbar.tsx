@@ -89,12 +89,12 @@ export default function Navbar() {
             </div>
           ))}
 
-          <Link 
-            href="/area-riservata"
-            className="bg-hub-gold text-hub-ink px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-hub-ink hover:text-white transition-all shadow-lg shadow-hub-gold/20"
+          <button 
+            disabled
+            className="bg-hub-gold text-hub-ink px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest opacity-50 cursor-not-allowed shadow-lg shadow-hub-gold/20"
           >
-            Scarica l'estratto
-          </Link>
+            Estratto in arrivo
+          </button>
         </div>
 
         {/* Mobile Toggle */}

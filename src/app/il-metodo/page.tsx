@@ -146,9 +146,9 @@ export default function MetodoPage() {
             <Link href="/successo-in-3-passi" className="btn-gold px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
               Scopri il libro
             </Link>
-            <Link href="/area-riservata" className="btn-outline px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
-              Scarica un estratto
-            </Link>
+            <button disabled className="btn-outline px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em] opacity-50">
+              Estratto in arrivo
+            </button>
           </div>
         </div>
       </section>

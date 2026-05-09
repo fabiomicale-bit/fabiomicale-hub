@@ -81,42 +81,24 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           {copy.subtitle}
         </p>
 
-        {status === "success" ? (
-          <div className="rounded-2xl border border-hub-border bg-hub-white p-8">
-            <p className="text-hub-gold text-2xl mb-2">✓</p>
-            <p className="font-serif text-hub-ink text-lg">Fatto.</p>
-            <p className="text-hub-ink-muted text-sm mt-1">Controlla la tua email.</p>
-          </div>
-        ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            {/* Honeypot antispam */}
-            <input
-              type="text"
-              name="website_url"
-              value={honeypot}
-              onChange={(e) => setHoneypot(e.target.value)}
-              tabIndex={-1}
-              aria-hidden
-              style={{ display: "none" }}
-            />
-
+        <div className="bg-hub-white border border-hub-border rounded-2xl p-8 max-w-md mx-auto">
+          <p className="text-hub-ink font-medium mb-2">Iscrizione in fase di attivazione</p>
+          <p className="text-hub-ink-muted text-sm leading-relaxed mb-6 font-light">
+            Stiamo completando l'area di iscrizione e l'accesso ai materiali gratuiti. 
+            Il servizio sarà disponibile a breve per accompagnare il lancio dell'edizione 2026.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 opacity-50 pointer-events-none">
             <input
               type="email"
-              placeholder="La tua email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="flex-1 px-6 py-4 rounded-full bg-hub-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+              placeholder="La tua email..."
+              disabled
+              className="flex-1 px-6 py-4 rounded-full border border-hub-border text-sm"
             />
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] whitespace-nowrap disabled:opacity-50"
-            >
-              {status === "loading" ? "..." : copy.cta}
+            <button disabled className="btn-gold px-8 py-4 text-[10px] tracking-[0.2em] whitespace-nowrap">
+              Presto disponibile
             </button>
-          </form>
-        )}
+          </div>
+        </div>
 
         {status === "error" && (
           <p className="text-red-500 text-xs mt-4">Qualcosa è andato storto. Riprova.</p>
