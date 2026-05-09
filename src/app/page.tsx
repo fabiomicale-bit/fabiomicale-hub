@@ -32,7 +32,7 @@ export default function HomePage() {
           href: "/il-metodo" 
         }}
         image={{
-          src: "/foto fabio cravatta no sfondo.png",
+          src: "/fabio-hero-transparent.png",
           alt: "Fabio Micale",
           priority: true,
           flip: true
