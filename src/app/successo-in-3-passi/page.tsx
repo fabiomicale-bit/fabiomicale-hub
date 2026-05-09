@@ -48,8 +48,8 @@ export default function SuccessoIn3PassiPage() {
           disclaimer: "I materiali gratuiti saranno attivati nella prossima fase di lancio."
         }}
         image={{
-          src: "/book-mockup-3d.png",
-          alt: "Copertina 3D Successo in 3 Passi",
+          src: "/cover-3d-real.png",
+          alt: "Cover 3D Successo in 3 Passi",
           priority: true
         }}
       />
@@ -154,7 +154,7 @@ export default function SuccessoIn3PassiPage() {
             </div>
             <div className="relative w-full max-w-sm mx-auto">
                <Image 
-                src="/book-mockup-3d.png"
+                src="/cover-3d-real.png"
                 alt="Successo in 3 Passi — Fabio Micale"
                 width={450}
                 height={600}
