@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 import { posts, getPost, getPostsBySlug, getPostsByStep } from "@/lib/posts";
 import ArticleStepBox from "@/components/ArticleStepBox";
 import ArticleVerticalCTA from "@/components/ArticleVerticalCTA";
@@ -94,7 +94,7 @@ export default async function BlogPostPage({ params }: Props) {
     <>
       <ReadingProgress />
       <main className="min-h-screen bg-hub-bg text-hub-ink">
-      <Navbar />
+      
 
       {/* JSON-LD Schema */}
       <script
@@ -241,7 +241,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
     </>
   );

@@ -10,9 +10,9 @@ type Props = {
 
 const stepLabels: Record<string, string> = {
   "Tutti": "Tutti",
-  "1": "Passo 1",
-  "2": "Passo 2",
-  "3": "Passo 3",
+  "1": "1. Ferma il caos",
+  "2": "2. Rimetti struttura",
+  "3": "3. Mantieni il controllo",
 };
 
 const formatLabels: Record<string, string> = {

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import NavbarMepa from "@/components/navbars/NavbarMepa";
-import FooterMepa from "@/components/footers/FooterMepa";
+
+
 
 export const metadata: Metadata = {
   title: "MEPA Elite | Fabio Micale - Il Tuo Ufficio Gare Personale",
@@ -14,11 +14,11 @@ export default function MepaLayout({
 }) {
   return (
     <>
-      <NavbarMepa />
+      
       <main className="flex-grow">
         {children}
       </main>
-      <FooterMepa />
+      
     </>
   );
 }

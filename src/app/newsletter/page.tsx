@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Newsletter from "@/components/Newsletter";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function NewsletterPage() {
   return (
     <main className="min-h-screen bg-hub-bg pt-20">
-      <Navbar />
+      
       
       {/* 1. MANIFESTO HERO */}
       <section className="py-24 px-4 relative overflow-hidden bg-white border-b border-hub-border">
@@ -184,7 +184,7 @@ export default function NewsletterPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
   );
 }

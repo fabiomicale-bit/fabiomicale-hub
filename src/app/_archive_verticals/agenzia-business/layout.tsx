@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import NavbarAgency from "@/components/navbars/NavbarAgency";
-import FooterAgency from "@/components/footers/FooterAgency";
+
+
 
 export const metadata: Metadata = {
   title: "Agenzia Business | Sistemi di Acquisizione Clienti AI — Fabio Micale",
@@ -14,11 +14,11 @@ export default function AgencyLayout({
 }) {
   return (
     <>
-      <NavbarAgency />
+      
       <main className="flex-grow">
         {children}
       </main>
-      <FooterAgency />
+      
     </>
   );
 }

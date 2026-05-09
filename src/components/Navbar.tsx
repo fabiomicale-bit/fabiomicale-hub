@@ -9,25 +9,12 @@ type NavChild = { label: string; href: string };
 type NavLink = { label: string; href?: string; children?: NavChild[] };
 
 const defaultHubLinks: NavLink[] = [
+  { label: "Home", href: "/" },
+  { label: "Chi sono", href: "/chi-sono" },
   { label: "Il Metodo", href: "/il-metodo" },
-  {
-    label: "Mondi",
-    children: [
-      { label: "Fatturato Garantito", href: "/fatturato-garantito" },
-      { label: "Impresa Liquida", href: "/impresa-liquida" },
-      { label: "Punto Zero", href: "/punto-zero" },
-      { label: "Agenzia Business", href: "/agenzia-business" },
-    ],
-  },
-  {
-    label: "Risorse",
-    children: [
-      { label: "Blog", href: "/blog" },
-      { label: "Newsletter", href: "/newsletter" },
-    ],
-  },
-  { label: "Accademia", href: "/accademia" },
   { label: "Il Libro", href: "/successo-in-3-passi" },
+  { label: "Blog", href: "/blog" },
+  { label: "Area riservata", href: "/area-riservata" },
   { label: "Contatti", href: "/contatti" },
 ];
 
@@ -58,7 +45,7 @@ export default function Navbar() {
               Fabio Micale
             </span>
             <span className="text-[10px] font-bold tracking-[0.4em] text-hub-gold uppercase mt-1">
-              Metodologo della Crescita
+              Scrittore e Formatore
             </span>
           </div>
         </Link>
@@ -102,9 +89,12 @@ export default function Navbar() {
             </div>
           ))}
 
-          <div className="bg-hub-ink/10 text-hub-ink/40 px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest cursor-default">
-            AREA RISERVATA
-          </div>
+          <Link 
+            href="/area-riservata"
+            className="bg-hub-gold text-hub-ink px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-hub-ink hover:text-white transition-all shadow-lg shadow-hub-gold/20"
+          >
+            Scarica l'estratto
+          </Link>
         </div>
 
         {/* Mobile Toggle */}

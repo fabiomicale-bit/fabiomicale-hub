@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 import { HubWaitlist } from "@/components/HubWaitlist";
 import MetodoSection from "@/components/MetodoSection";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function AccademiaPage() {
   return (
     <main className="min-h-screen bg-hub-bg pt-20">
-      <Navbar />
+      
       
       {/* Hero Section */}
       <section className="py-24 px-4 relative overflow-hidden">
@@ -119,9 +119,9 @@ export default function AccademiaPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Impresa Liquida", desc: "Come digitalizzare e snellire la tua struttura operativa.", tag: "Efficiency" },
-              { title: "MEPA Elite", desc: "Vincere appalti nella Pubblica Amministrazione.", tag: "Public Sector" },
-              { title: "AI for Business", desc: "Implementazione pratica dell'Intelligenza Artificiale.", tag: "Innovation" }
+              { title: "Architettura Mentale", desc: "Il mindset per smettere di rincorrere le urgenze e iniziare a costruire.", tag: "Mindset" },
+              { title: "Potenziamento Tecnico", desc: "Digitalizzare e snellire la tua struttura operativa con l'AI.", tag: "Tech" },
+              { title: "Eccellenza Sistemica", desc: "Protocolli avanzati per garantire crescita e libertà nel lungo termine.", tag: "Systems" }
             ].map((curso, i) => (
               <div key={i} className="bg-white p-8 rounded-2xl border border-hub-border hover:border-hub-gold transition-all group">
                 <div className="text-[10px] uppercase font-bold tracking-widest text-hub-gold mb-4">{curso.tag}</div>
@@ -146,7 +146,7 @@ export default function AccademiaPage() {
 
       <MetodoSection />
       
-      <Footer />
+      
     </main>
   );
 }

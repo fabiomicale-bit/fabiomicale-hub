@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen bg-[#0D0D0D] text-white">
-      <Navbar />
+      
       
       <section className="pt-44 pb-32 px-6 max-w-3xl mx-auto animate-fade-in">
         <div className="badge mb-8">Conformità GDPR</div>
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </main>
   );
 }

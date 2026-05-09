@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import NavbarPunto from "@/components/navbars/NavbarPunto";
-import FooterPunto from "@/components/footers/FooterPunto";
+
+
 
 export const metadata: Metadata = {
   title: "Punto Zero | Reset Strategico e Rivincita Professionale — Fabio Micale",
@@ -14,11 +14,11 @@ export default function PuntoZeroLayout({
 }) {
   return (
     <>
-      <NavbarPunto />
+      
       <main className="flex-grow">
         {children}
       </main>
-      <FooterPunto />
+      
     </>
   );
 }

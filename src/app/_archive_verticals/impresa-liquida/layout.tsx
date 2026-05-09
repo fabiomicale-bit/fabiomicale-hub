@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
-import NavbarImpresa from "@/components/navbars/NavbarImpresa";
-import FooterImpresa from "@/components/footers/FooterImpresa";
+
+
 
 export const metadata: Metadata = {
   title: "Impresa Liquida | Ingegneria della Libertà — Fabio Micale",
@@ -14,11 +14,11 @@ export default function ImpresaLayout({
 }) {
   return (
     <>
-      <NavbarImpresa />
+      
       <main className="flex-grow">
         {children}
       </main>
-      <FooterImpresa />
+      
     </>
   );
 }

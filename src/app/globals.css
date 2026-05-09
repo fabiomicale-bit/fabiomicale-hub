@@ -7,29 +7,29 @@
 
 /* ── TOKENS ──────────────────────────────────────────────────── */
 :root {
-  /* Editorial Palette */
+  /* Editorial Palette (Light/Gold Theme) */
   --hub-bg: #FAFAF8;
-  --hub-bg-alt: #F2F0EC;
-  --hub-bg-warm: #F7F3ED;
+  --hub-bg-alt: #F4F4F2;
+  --hub-bg-warm: #F0EFEA;
   --hub-cream: var(--hub-bg-warm);
-  --hub-ink: #1A1A1A;
-  --hub-ink-muted: #6B6B6B;
-  --hub-ink-light: #999999;
+  --hub-ink: #0A0A0A;
+  --hub-ink-muted: #4B5563;
+  --hub-ink-light: #9CA3AF;
   --hub-gold: #C8A45A;
   --hub-gold-light: #E8D5A3;
   --hub-gold-dark: #A8873D;
-  --hub-charcoal: #2A2A2A;
-  --hub-white: #FCFCFA;
-  --hub-border: rgba(0, 0, 0, 0.06);
-  --hub-border-hover: rgba(0, 0, 0, 0.12);
+  --hub-charcoal: #222222;
+  --hub-white: #FFFFFF;
+  --hub-border: rgba(0, 0, 0, 0.08);
+  --hub-border-hover: rgba(0, 0, 0, 0.16);
 
   /* Unified satellite tokens (aligned with Hub Editorial) */
   --pa-green: var(--hub-gold);
   --pa-green-bright: var(--hub-gold-light);
-  --pa-blue: var(--hub-ink);
+  --pa-blue: var(--hub-bg-alt);
   --pa-bg: var(--hub-bg);
   --pa-bg-light: var(--hub-white);
-  --pa-bg-footer: var(--hub-ink);
+  --pa-bg-footer: var(--hub-charcoal);
   --pa-text: var(--hub-ink);
   --pa-text-muted: var(--hub-ink-muted);
   --gold: var(--hub-gold);
@@ -37,7 +37,7 @@
   --text: var(--hub-ink);
 
   /* MEPA Elite V2 tokens */
-  --brand-blue: var(--hub-ink);
+  --brand-blue: var(--hub-bg-alt);
   --brand-green: var(--hub-gold);
 
   /* Punto Zero Platinum Tokens (aligned) */
@@ -49,21 +49,21 @@
   --pz-platinum-500: var(--hub-ink-muted);
   --pz-obsidian: var(--hub-bg);
   --pz-obsidian-alt: var(--hub-bg-alt);
-  --pz-ink: #020617;
+  --pz-ink: var(--hub-ink);
 
   /* Dark Editorial theme (recensioni, ai-per-professionisti, reinvenzione-over-40, legal, 404) */
-  --dark-bg: #0D0D0D;
-  --dark-bg-alt: #141414;
-  --dark-accent: #F5A623;
+  --dark-bg: var(--hub-bg);
+  --dark-bg-alt: var(--hub-bg-alt);
+  --dark-accent: var(--hub-gold);
 
   /* Impresa Liquida theme */
-  --il-green: #065F46;
-  --il-green-dark: #044E39;
-  --il-ink: #0A0A0A;
+  --il-green: var(--hub-gold);
+  --il-green-dark: var(--hub-gold-dark);
+  --il-ink: var(--hub-bg);
 
   /* Agency B2B theme — CSS var aliases for .btn-agency and inline CSS consumers */
-  --agency-navy: var(--hub-ink);
-  --agency-navy-light: var(--hub-charcoal);
+  --agency-navy: var(--hub-charcoal);
+  --agency-navy-light: var(--hub-bg-alt);
 }
 
 @theme inline {
@@ -135,13 +135,14 @@
 /* ── BASE ───────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
-  background: var(--hub-bg);
+  background-color: #FAFAF8 !important;
+  color-scheme: light;
 }
 
 body {
   font-family: var(--font-sans), system-ui, sans-serif;
-  color: var(--hub-ink);
-  background: var(--hub-bg);
+  color: #0A0A0A !important;
+  background-color: #FAFAF8 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.7;

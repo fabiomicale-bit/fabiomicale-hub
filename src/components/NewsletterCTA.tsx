@@ -19,25 +19,25 @@ const variantCopy: Record<
   { eyebrow: string; title: string; subtitle: string; cta: string }
 > = {
   default: {
-    eyebrow: "LA NEWSLETTER",
-    title: "Un Passo Avanti — ogni settimana.",
+    eyebrow: "UN PASSO AVANTI",
+    title: "La newsletter per applicare il Metodo.",
     subtitle:
-      "Analisi operative, strumenti pratici e casi reali per professionisti Over 40. Nessuno spam. Cancellati quando vuoi.",
-    cta: "Iscriviti gratis",
+      "Ogni settimana un contenuto pratico per rimettere ordine: una riflessione, uno strumento, un esercizio o un'applicazione dell'AI alla crescita Over 40. Iscrivendoti ricevi l'estratto gratuito del libro.",
+    cta: "Iscriviti e scarica l'estratto",
   },
   "book-excerpt": {
-    eyebrow: "ESTRATTO GRATUITO",
-    title: "Ricevi i primi tre capitoli.",
+    eyebrow: "AREA RESERVATA",
+    title: "Scarica l'estratto gratuito.",
     subtitle:
-      "Tre capitoli del libro, una volta sola. Niente lista, niente sequenze. Solo il metodo, subito.",
-    cta: "Ricevi l'estratto",
+      "Ricevi i primi capitoli di 'Successo in 3 Passi — Edizione 2026' e iscriviti alla newsletter settimanale per iniziare il tuo percorso di ripartenza con metodo.",
+    cta: "Scarica l'estratto ora",
   },
   article: {
-    eyebrow: "VAI OLTRE L'ARTICOLO",
-    title: "Il metodo ogni settimana, nella tua inbox.",
+    eyebrow: "IL METODO NELLA TUA INBOX",
+    title: "Un Passo Avanti, ogni settimana.",
     subtitle:
-      "Iscriviti alla newsletter di Fabio Micale e ricevi casi reali e strumenti dal Metodo Successo in 3 Passi.",
-    cta: "Iscriviti",
+      "Questo contenuto appartiene al Metodo Successo in 3 Passi. Iscriviti per ricevere applicazioni pratiche e l'estratto del libro.",
+    cta: "Iscriviti e ricevi l'estratto",
   },
 };
 

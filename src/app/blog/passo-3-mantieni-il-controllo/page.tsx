@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+
+
 import NewsletterCTA from "@/components/NewsletterCTA";
 import { getPostsByStep } from "@/lib/posts";
 import { methodPillars } from "@/content/method-pillars";
@@ -36,7 +36,7 @@ export default function Passo3Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navbar />
+      
 
       {/* ── HERO ─────────────────────────────────────────────────── */}
       <section className="relative pt-44 pb-20 px-6 overflow-hidden">
@@ -142,7 +142,7 @@ export default function Passo3Page() {
       </section>
 
       <NewsletterCTA />
-      <Footer />
+      
     </main>
   );
 }

@@ -145,7 +145,7 @@ export const posts: Post[] = [
     di insegnarlo ad altri</a>. Non perché fossi particolarmente
     bravo con la tecnologia — ma perché avevo bisogno di una soluzione
     che funzionasse davvero, non di una promessa.</p>
-    <p><a href="/lavora-con-me">Se vuoi costruire il tuo sistema,
+    <p><a href="/contatti">Se vuoi costruire il tuo sistema,
     parti da qui</a>.</p>
   `,
   },
@@ -414,13 +414,13 @@ A presto,
 <h2>🎁 Risorse Gratuite per Iniziare</h2>
 
 <p><strong>1. Ebook: "I 3 Passi per Iniziare con l'AI"</strong>
-Una guida pratica di 20 pagine per muovere i primi passi senza perdere tempo. <a href="/risorse">Scaricala gratis qui</a></p>
+Una guida pratica di 20 pagine per muovere i primi passi senza perdere tempo. <a href="/area-riservata">Scaricala gratis qui</a></p>
 
 <p><strong>2. Newsletter Settimanale</strong>
-Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso reale. <a href="/lavora-con-me">Iscriviti gratis</a></p>
+Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso reale. <a href="/contatti">Iscriviti gratis</a></p>
 
 <p><strong>3. Call Esplorativa Gratuita</strong>
-Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota una call di 30 minuti. <a href="/lavora-con-me">Prenota ora</a></p>
+Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota una call di 30 minuti. <a href="/contatti">Prenota ora</a></p>
 
 <hr>
 
@@ -554,7 +554,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     <p>È quando smettono di chiedersi "ce la farò?" e iniziano a
     chiedersi "da dove inizio?"</p>
     <p>La seconda domanda ha una risposta. La prima è un pozzo senza fondo.</p>
-    <p><a href="/lavora-con-me">Se sei pronto a passare dalla prima
+    <p><a href="/contatti">Se sei pronto a passare dalla prima
     domanda alla seconda, inizia da qui</a>.</p>
   `,
   },
@@ -660,7 +660,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     <p>Non passerà. Ma non è una minaccia — è un'opportunità con una finestra temporale.</p>
     <p>Chi la coglie adesso, mentre la maggior parte ancora osserva, costruisce un
     vantaggio competitivo difficile da colmare.</p>
-    <p><a href="/lavora-con-me">Se vuoi capire come farlo nel tuo caso specifico,
+    <p><a href="/contatti">Se vuoi capire come farlo nel tuo caso specifico,
     inizia da qui</a>.</p>
   `,
   },
@@ -742,7 +742,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Chi la coglie adesso, mentre la maggior parte ancora osserva, costruisce un vantaggio competitivo difficile da colmare.</p>
 
-<p><a href="/lavora-con-me">Se vuoi capire come farlo nel tuo caso specifico, inizia da qui</a></p>
+<p><a href="/contatti">Se vuoi capire come farlo nel tuo caso specifico, inizia da qui</a></p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
     step: 1,
@@ -837,7 +837,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Ma è anche possibile. E chi lo fa con metodo, con onestà verso se stesso e con gli strumenti giusti, quasi sempre arriva dall'altra parte con qualcosa di più solido di quello che aveva prima.</p>
 
-<p><a href="/lavora-con-me">Se vuoi farlo con una guida, ecco come possiamo lavorare insieme</a></p>
+<p><a href="/contatti">Se vuoi farlo con una guida, ecco come possiamo lavorare insieme</a></p>
     `,
     correlati: ["manifesto-ai-esperienza-vince", "manifesto-sistemi-autonomi"],
     step: 1,
@@ -892,7 +892,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p><strong>Livello 1: Automatizzare il ripetibile</strong></p>
 <p>Ogni attività che fai più di una volta con gli stessi passaggi può essere automatizzata o sistematizzata. Email ricorrenti. Report periodici. Processi di onboarding. Follow-up commerciali.</p>
-<p>In questo livello l'AI è uno strumento potentissimo. <a href="/lavora-con-me">Nei servizi AI che offro</a> mi occupo esattamente di questo: identificare i processi ripetibili e costruire i sistemi che li gestiscono.</p>
+<p>In questo livello l'AI è uno strumento potentissimo. <a href="/contatti">Nei servizi AI che offro</a> mi occupo esattamente di questo: identificare i processi ripetibili e costruire i sistemi che li gestiscono.</p>
 
 <p><strong>Livello 2: Documentare la conoscenza</strong></p>
 <p>La tua competenza è nella tua testa. Questo la rende fragile.</p>
@@ -1055,7 +1055,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Non dove pensi di essere. Non dove vorresti essere. Dove sei.</p>
 
-<p>Da lì si costruisce tutto il resto. Se vuoi farlo insieme, <a href="/lavora-con-me">scopri come possiamo lavorare insieme</a>.</p>
+<p>Da lì si costruisce tutto il resto. Se vuoi farlo insieme, <a href="/contatti">scopri come possiamo lavorare insieme</a>.</p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "sistemi-che-lavorano-per-te"],
     step: 1,
@@ -1102,7 +1102,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <h2>L'AI come acceleratore di sistemi</h2>
 
-<p>Oggi l'intelligenza artificiale permette di costruire sistemi in tempi che fino a pochi anni fa erano impensabili. <a href="/lavora-con-me">Se vuoi implementare sistemi AI nel tuo business, scopri i miei servizi</a></p>
+<p>Oggi l'intelligenza artificiale permette di costruire sistemi in tempi che fino a pochi anni fa erano impensabili. <a href="/contatti">Se vuoi implementare sistemi AI nel tuo business, scopri i miei servizi</a></p>
 
 <div class="blog-cta">
   <p>Vuoi approfondire questo tema?</p>
@@ -1210,7 +1210,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <div class="blog-cta">
   <p>Vuoi un percorso guidato per usare l'AI nel tuo lavoro specifico?</p>
-  <a href="/lavora-con-me">→ Scopri come lavorare con me</a>
+  <a href="/contatti">→ Scopri come lavorare con me</a>
 </div>
 
 <h2>Una cosa sola da fare oggi</h2>
@@ -1254,7 +1254,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p>Smetti di chiederti "Come funziona questo algoritmo?". Inizia a chiederti: <em>"Cosa posso far fare a questo software per sbloccare la mia mente per farle fare vero lavoro dirigenziale?"</em></p>
 <p>Non serve essere nativi digitali. L'AI non rimpiazza il giudizio strategico, lo esegue. Metti a frutto i decenni della tua esperienza e usa questi nuovi alleati digitali per fare ciò in cui sei insostituibile: <strong>prendere decisioni e gestire esseri umani.</strong></p>
 
-<p>Inizia a costruire il tuo ecosistema: <a href="/il-libro">Scarica ora il Capitolo 1 del mio libro</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
+<p>Inizia a costruire il tuo ecosistema: <a href="/successo-in-3-passi">Scarica ora il Capitolo 1 del mio libro</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
     `,
     correlati: ["ai-esperienza-professionale-vantaggio", "paura-obsolescenza-professionale-ai"],
     step: 1,

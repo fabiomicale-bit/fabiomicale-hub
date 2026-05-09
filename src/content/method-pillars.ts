@@ -5,66 +5,22 @@ export const methodPillars = {
     pillars: [
       {
         number: "1",
-        name: "Ferma il Caos",
+        name: "Architettura Mentale",
         description:
           "Il primo passo è smettere, non iniziare. Riconoscere il rumore che guida le decisioni e ridurre la reattività. Senza questa pulizia, ogni nuova iniziativa si aggiunge al disordine invece di risolverlo.",
-        verticalLabel: "Applicazione personale",
-        verticalHref: "/punto-zero",
       },
       {
         number: "2",
-        name: "Rimetti Struttura",
+        name: "Potenziamento Tecnico",
         description:
-          "Quando il caos si è fermato, è il momento di costruire. Valori che guidano davvero. Micro-decisioni quotidiane. Architettura del lavoro e dell'impresa. Una struttura che regge senza dipendere dalla forza di volontà.",
-        verticalLabel: "Applicazione operativa",
-        verticalHref: "/impresa-liquida",
+          "Quando il caos si è fermato, è il momento di costruire. Valori che guidano davvero. Micro-decisioni quotidiane. Un'architettura che regge senza dipendere dalla tua sola forza di volontà.",
       },
       {
         number: "3",
-        name: "Mantieni il Controllo nel Tempo",
+        name: "Eccellenza Sistemica",
         description:
-          "Il sistema serve quando smette di servire chi l'ha costruito. Per durare, servono motori di continuità: ricavi prevedibili e acquisizione clienti che funzionano da sé.",
-        subVerticals: [
-          { label: "Motore fatturato (PA/MEPA)", href: "/fatturato-garantito" },
-          { label: "Motore acquisizione (lead AI)", href: "/agenzia-business" },
-        ],
+          "Il sistema serve quando smette di servire chi l'ha costruito. Costruiamo protocolli che lavorano per te. Automazioni, flussi delegabili e strutture indipendenti dalla tua presenza continua.",
       },
-    ],
-  },
-  "punto-zero": {
-    eyebrow: "PASSO 1 APPLICATO ALLA RICOSTRUZIONE PERSONALE",
-    title: "I tre passi del Metodo, applicati al tuo punto zero",
-    pillars: [
-      { number: "1", name: "Ferma", description: "[TODO: testo da Fabio — versione personale del Passo 1]" },
-      { number: "2", name: "Rimetti", description: "[TODO: testo da Fabio]" },
-      { number: "3", name: "Mantieni", description: "[TODO: testo da Fabio]" },
-    ],
-  },
-  "impresa-liquida": {
-    eyebrow: "PASSO 2 APPLICATO ALLE OPERAZIONI",
-    title: "I tre passi del Metodo, applicati alla tua impresa",
-    pillars: [
-      { number: "1", name: "Ferma", description: "[TODO: testo da Fabio]" },
-      { number: "2", name: "Rimetti", description: "[TODO: testo da Fabio]" },
-      { number: "3", name: "Mantieni", description: "[TODO: testo da Fabio]" },
-    ],
-  },
-  "fatturato-garantito": {
-    eyebrow: "PASSO 3A · MOTORE FATTURATO",
-    title: "I tre passi del Metodo, applicati alla vendita verso la PA",
-    pillars: [
-      { number: "1", name: "Ferma", description: "[TODO: testo da Fabio]" },
-      { number: "2", name: "Rimetti", description: "[TODO: testo da Fabio]" },
-      { number: "3", name: "Mantieni", description: "[TODO: testo da Fabio]" },
-    ],
-  },
-  "agenzia-business": {
-    eyebrow: "PASSO 3B · MOTORE ACQUISIZIONE",
-    title: "I tre passi del Metodo, applicati alla generazione lead",
-    pillars: [
-      { number: "1", name: "Ferma", description: "[TODO: testo da Fabio]" },
-      { number: "2", name: "Rimetti", description: "[TODO: testo da Fabio]" },
-      { number: "3", name: "Mantieni", description: "[TODO: testo da Fabio]" },
     ],
   },
   book: {

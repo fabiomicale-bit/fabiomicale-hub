@@ -1,194 +1,166 @@
+import { Metadata } from "next";
 import Link from "next/link";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import NewsletterCTA from "@/components/NewsletterCTA";
 
-export const metadata = {
-  title: "Il Metodo | Fabio Micale — Il Framework della Crescita",
-  description:
-    "Un protocollo operativo in 3 fasi per integrare sistemi, tecnologia e mindset. Trasforma la tua vita e il tuo business con un metodo testato.",
+export const metadata: Metadata = {
+  title: "Il Metodo Successo in 3 Passi | Fabio Micale",
+  description: "Ferma il caos, rimetti struttura e mantieni il controllo. Il Metodo Successo in 3 Passi per la rinascita professionale Over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/il-metodo" },
 };
 
-const pilastri = [
-  {
-    emoji: "🧠",
-    label: "Architettura Mentale",
-    testo: "Il fondamento. Sostituiamo la reazione al caos con una visione sistemica. Senza il mindset del 'Builder', ogni tecnologia è solo un costo.",
-  },
-  {
-    emoji: "⚡",
-    label: "Potenziamento Tecnico",
-    testo: "L'acceleratore. Integriamo l'AI non come giocattolo, ma come leva operativa per moltiplicare l'output senza moltiplicare le ore.",
-  },
-  {
-    emoji: "⚙️",
-    label: "Eccellenza Sistemica",
-    testo: "Il motore. Costruiamo protocolli che lavorano per te. Automazioni, flussi delegabili e strutture indipendenti dalla tua presenza.",
-  },
-];
-
-const fasi = [
-  {
-    numero: "01",
-    titolo: "Diagnosi",
-    testo: "Analizziamo i flussi attuali, identifichiamo i colli di bottiglia. Capisci dove sei per sapere dove puoi arrivare.",
-  },
-  {
-    numero: "02",
-    titolo: "Strategia",
-    testo: "Progettiamo il tuo nuovo sistema. Definiamo i protocolli e gli strumenti adatti alla tua realtà specifica.",
-  },
-  {
-    numero: "03",
-    titolo: "Implementazione",
-    testo: "Installiamo gli strumenti. Integriamo AI e automazioni nei tuoi workflow quotidiani. Creiamo valore, non complessità.",
-  },
-  {
-    numero: "04",
-    titolo: "Dominio",
-    testo: "Monitoriamo i risultati e ottimizziamo. Il sistema regge l'impatto della crescita e ti restituisce libertà.",
-  },
-];
-
-export default function IlMetodoPage() {
+export default function MetodoPage() {
   return (
     <main className="min-h-screen bg-hub-bg text-hub-ink">
-      <Navbar />
-
-      {/* ── HERO ─────────────────────────────────────────── */}
+      {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="relative pt-44 pb-32 px-6 overflow-hidden">
         <div className="absolute top-0 right-0 w-[50%] h-[60%] bg-gradient-to-bl from-hub-gold/[0.04] to-transparent rounded-full blur-[100px]" />
         <div className="absolute inset-0 bg-grid-editorial opacity-40" />
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center animate-reveal-up">
-          <div className="badge-editorial mb-8 mx-auto">Il Framework</div>
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <div className="badge-editorial mb-8 mx-auto">La Sequenza del Successo</div>
           <h1 className="text-5xl md:text-7xl font-serif font-medium leading-[1.05] tracking-tight mb-8">
-            Il Sistema di{" "}
-            <span className="italic text-hub-gold">Libertà.</span>
+            Il successo non è un colpo di fortuna.{" "}
+            <span className="italic text-hub-gold">È una sequenza.</span>
           </h1>
           <p className="text-xl text-hub-ink-muted leading-relaxed max-w-2xl mx-auto font-light">
-            Nessuna improvvisazione. Un protocollo ingegneristico per trasformare la tua esperienza in un asset scalabile e autonomo.
+            Prima fermi il caos. Poi rimetti struttura. Poi impari a mantenere il controllo nel tempo. 
+            Questa è la base del Metodo Successo in 3 Passi.
           </p>
         </div>
       </section>
 
-      {/* ── I PILASTRI ──────────────────────────────────── */}
-      <section className="py-32 px-6 relative bg-hub-bg">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-[1fr_2fr] gap-20 mb-32 items-start">
-            <div className="lg:sticky lg:top-32">
-              <div className="section-label mb-6">Il Principio</div>
-              <h2 className="text-4xl font-serif font-medium mb-8">
-                Tre pilastri.{" "}
-                <span className="text-hub-gold italic">Zero Alibi.</span>
-              </h2>
-              <p className="text-hub-ink-muted text-lg leading-relaxed font-light">
-                Dopo 25 anni di business, ho ridotto la complessità a tre elementi fondamentali. Se ne manca uno, non hai un business: hai un lavoro a tempo pieno che ti sta consumando.
-              </p>
-            </div>
-
-            <div className="grid gap-6">
-              {pilastri.map((p, i) => (
-                <div key={i} className="card-editorial p-10 flex gap-8 group">
-                  <div className="text-4xl shrink-0 grayscale group-hover:grayscale-0 transition-all">{p.emoji}</div>
-                  <div>
-                    <h3 className="text-xs font-bold tracking-[0.2em] text-hub-gold mb-3 uppercase">{p.label}</h3>
-                    <p className="text-hub-ink-muted leading-relaxed text-lg font-light">{p.testo}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Formula visiva */}
-          <div className="relative p-12 md:p-20 rounded-[40px] bg-hub-charcoal text-white overflow-hidden">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-hub-gold opacity-[0.04] blur-[100px]" />
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
-              <div className="flex flex-col items-center">
-                <span className="text-white/30 font-bold text-sm tracking-[0.3em] uppercase mb-4">Mindset</span>
-                <div className="text-3xl md:text-5xl font-serif italic">Visione</div>
-              </div>
-              <span className="text-hub-gold text-4xl font-light">+</span>
-              <div className="flex flex-col items-center">
-                <span className="text-white/30 font-bold text-sm tracking-[0.3em] uppercase mb-4">Tech</span>
-                <div className="text-3xl md:text-5xl font-serif italic">Potenza</div>
-              </div>
-              <span className="text-hub-gold text-4xl font-light">+</span>
-              <div className="flex flex-col items-center">
-                <span className="text-white/30 font-bold text-sm tracking-[0.3em] uppercase mb-4">Systems</span>
-                <div className="text-3xl md:text-5xl font-serif italic">Ordine</div>
-              </div>
-              <span className="hidden md:block text-hub-gold text-4xl font-light">=</span>
-              <div className="bg-hub-gold text-hub-charcoal px-10 py-6 rounded-2xl font-bold text-2xl tracking-[0.1em] uppercase shadow-[0_0_50px_rgba(200,164,90,0.3)]">
-                Evoluzione
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── LE FASI ─────────────────────────────────────── */}
-      <section className="py-32 px-6 bg-hub-bg-alt">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-hub-gold/20 to-transparent" />
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-24">
-            <div className="section-label justify-center mb-6">Execution</div>
-            <h2 className="text-4xl md:text-6xl font-serif font-medium leading-tight">
-              Il Protocollo di{" "}
-              <span className="italic text-hub-gold">Trasformazione.</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {fasi.map((f, i) => (
-              <div key={i} className="card-editorial p-8 group h-full flex flex-col items-start">
-                <span className="text-5xl font-serif font-medium text-hub-ink/5 mb-8 group-hover:text-hub-gold/20 transition-colors">{f.numero}</span>
-                <h3 className="text-xs font-bold tracking-[0.2em] text-hub-ink-muted mb-4 uppercase group-hover:text-hub-gold transition-colors">{f.titolo}</h3>
-                <p className="text-hub-ink-muted text-sm leading-relaxed font-light">{f.testo}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── CITAZIONE ────────────────────────────────────── */}
-      <section className="py-32 px-6 bg-hub-bg">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="card-editorial p-12 md:p-16 relative">
-            <p className="text-2xl md:text-3xl font-serif italic text-hub-ink-muted leading-relaxed mb-10">
-              &ldquo;Non pensavo fosse per me. Pensavo servisse essere giovani o smanettoni. In sei sessioni ho cambiato completamente il mio modo di lavorare e di pensare il mio business.&rdquo;
-            </p>
+      {/* ── PASSO 1 ────────────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg border-t border-hub-border/50">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-hub-ink font-bold tracking-widest uppercase text-sm mb-1">Laura B.</p>
-              <p className="text-hub-ink-light text-xs font-bold uppercase tracking-[0.2em]">Studio Professionale Certificato</p>
+              <div className="text-hub-gold font-serif italic text-6xl mb-6 opacity-20">01</div>
+              <h2 className="text-4xl font-serif font-medium mb-8">Passo 1 — Ferma il caos</h2>
+              <div className="space-y-6 text-hub-ink-muted text-lg leading-relaxed font-light">
+                <p>
+                  Quando tutto si muove troppo velocemente, la prima tentazione è aggiungere: nuovi strumenti, nuovi obiettivi, nuovi corsi, nuove strategie. Ma se il sistema è già saturo, aggiungere peggiora il problema.
+                </p>
+                <p>
+                  Il primo passo è fermare il caos: riconoscere il rumore, ridurre la reattività, smettere di inseguire ogni stimolo e tornare a vedere con lucidità.
+                </p>
+              </div>
+              <div className="mt-10 flex items-center gap-3">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold">Obiettivo:</span>
+                <span className="text-hub-ink font-medium">Ritrovare lucidità.</span>
+              </div>
+            </div>
+            <div className="card-editorial p-12 bg-hub-cream/30 border-dashed border-2 border-hub-gold/20 rounded-3xl flex items-center justify-center aspect-square">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-hub-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-10 h-10 text-hub-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                </div>
+                <p className="text-hub-ink-light text-sm italic">"Riconoscere il rumore prima che diventi assordante."</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA FINALE ───────────────────────────────────── */}
-      <section className="py-32 px-6 bg-hub-charcoal text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid opacity-[0.03]" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl md:text-6xl font-serif font-medium mb-8 leading-tight">
-            Non restare a guardare mentre{" "}
-            <span className="italic text-hub-gold">il mondo accelera.</span>
+      {/* ── PASSO 2 ────────────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-alt border-y border-hub-border/50">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div className="order-2 md:order-1 card-editorial p-12 bg-hub-ink text-white rounded-3xl flex items-center justify-center aspect-square">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-hub-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-10 h-10 text-hub-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <p className="text-white/50 text-sm italic">"L'architettura che sostiene la tua evoluzione."</p>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <div className="text-hub-gold font-serif italic text-6xl mb-6 opacity-20">02</div>
+              <h2 className="text-4xl font-serif font-medium mb-8">Passo 2 — Rimetti struttura</h2>
+              <div className="space-y-6 text-hub-ink-muted text-lg leading-relaxed font-light">
+                <p>
+                  Una volta fermato il caos, serve una nuova architettura. Non basta sapere cosa non funziona. Devi costruire routine, criteri, priorità, strumenti e decisioni che ti aiutino a procedere senza ricadere nella confusione.
+                </p>
+                <p>
+                  Qui entrano metodo, organizzazione, intelligenza artificiale e sistemi pratici.
+                </p>
+              </div>
+              <div className="mt-10 flex items-center gap-3">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold">Obiettivo:</span>
+                <span className="text-hub-ink font-medium">Costruire una struttura che ti sostiene.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PASSO 3 ────────────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg border-b border-hub-border/50">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-20 items-center">
+            <div>
+              <div className="text-hub-gold font-serif italic text-6xl mb-6 opacity-20">03</div>
+              <h2 className="text-4xl font-serif font-medium mb-8">Passo 3 — Mantieni il controllo</h2>
+              <div className="space-y-6 text-hub-ink-muted text-lg leading-relaxed font-light">
+                <p>
+                  Il problema non è cambiare per qualche giorno. Il problema è mantenere il controllo quando tornano stanchezza, pressione, imprevisti e vecchie abitudini.
+                </p>
+                <p>
+                  Il terzo passo serve a trasformare il metodo in continuità: revisione, disciplina, adattamento, strumenti di controllo e capacità di correggere rotta.
+                </p>
+              </div>
+              <div className="mt-10 flex items-center gap-3">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold">Obiettivo:</span>
+                <span className="text-hub-ink font-medium">Rendere il cambiamento sostenibile.</span>
+              </div>
+            </div>
+            <div className="card-editorial p-12 bg-hub-white border border-hub-border rounded-3xl flex items-center justify-center aspect-square shadow-xl">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-hub-gold/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-10 h-10 text-hub-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <p className="text-hub-ink-light text-sm italic">"La continuità è la forma più alta di forza."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── IL LIBRO ────────────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-warm">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="badge-editorial mb-8 mx-auto">Il Manifesto Operativo</div>
+          <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8">
+            Il metodo nasce dal libro <br className="hidden md:block" />
+            <span className="italic text-hub-gold">Successo in 3 Passi.</span>
           </h2>
-          <p className="text-white/50 text-xl leading-relaxed mb-12 max-w-2xl mx-auto font-light">
-            Il primo passo è leggere il libro. Il secondo è applicare il metodo. Il terzo è contattarmi.
+          <p className="text-lg text-hub-ink-muted leading-relaxed mb-12 max-w-2xl mx-auto font-light">
+            Il libro è il manifesto completo del metodo. Il sito ne è l'estensione pratica: articoli, esercizi, strumenti, area riservata e contenuti futuri nascono da questa struttura.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/il-libro" className="btn-gold px-12 py-5 text-sm tracking-[0.3em] font-bold">
-              Scopri il Libro
+            <Link href="/successo-in-3-passi" className="btn-gold px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
+              Scopri il libro
             </Link>
-            <Link href="/contatti" className="btn-outline px-12 py-5 text-sm tracking-[0.3em] border-white/20 text-white/70 hover:border-hub-gold hover:text-hub-gold">
-              Contattami
+            <Link href="/area-riservata" className="btn-outline px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
+              Scarica un estratto
             </Link>
           </div>
         </div>
       </section>
 
-      <Footer />
+      {/* ── NEWSLETTER ──────────────────────────────────────── */}
+      <section className="py-24">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-white border border-hub-border rounded-[40px] overflow-hidden shadow-2xl">
+            <NewsletterCTA />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
