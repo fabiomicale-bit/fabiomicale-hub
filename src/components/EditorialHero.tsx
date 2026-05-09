@@ -73,7 +73,7 @@ export default function EditorialHero({
           .filter(Boolean)
           .join(" ")}
       >
-        <div className={(isHub || (isBook && image)) ? "grid lg:grid-cols-2 gap-12 items-center" : ""}>
+        <div className={(isHub || (isBook && image)) ? "grid lg:grid-cols-2 gap-12 lg:gap-16 items-center" : ""}>
           <div className={(isHub || (isBook && image)) ? "max-w-2xl" : ""}>
             {eyebrow && (
               <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-6">
@@ -163,7 +163,7 @@ export default function EditorialHero({
           {/* Image side */}
           {(isHub || (isBook && image)) && image && (
             <div className="relative flex justify-center lg:justify-end animate-fade-in-up">
-              <div className="relative w-full max-w-md">
+              <div className={`relative w-full max-w-sm md:max-w-md lg:max-w-lg ${isBook ? "lg:-mt-10 lg:mb-4" : ""}`}>
                 <div className="absolute -inset-10 bg-hub-gold/[0.08] blur-[80px] rounded-full pointer-events-none" />
                 <Image
                   src={image.src}
