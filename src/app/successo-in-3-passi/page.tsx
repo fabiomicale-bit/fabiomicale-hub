@@ -152,14 +152,18 @@ export default function SuccessoIn3PassiPage() {
                 ))}
               </ul>
             </div>
-            <div className="relative aspect-[3/4] card-editorial overflow-hidden flex items-center justify-center bg-hub-white shadow-2xl group">
-               <Image 
-                src="/copertina-libro.png"
-                alt="Successo in 3 Passi — Fabio Micale"
-                fill
-                className="object-contain p-8 group-hover:scale-105 transition-transform duration-700"
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-hub-ink/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            <div className="relative w-full max-w-sm mx-auto book-container">
+              <div className="book-mockup">
+                <div className="book-spine" />
+                <Image 
+                  src="/copertina-libro.png"
+                  alt="Successo in 3 Passi — Fabio Micale"
+                  width={400}
+                  height={600}
+                  className="relative z-10 w-full h-auto drop-shadow-2xl"
+                />
+                <div className="book-pages" />
+              </div>
             </div>
           </div>
         </div>
