@@ -24,9 +24,6 @@ export default function MethodPillars({ context }: MethodPillarsProps) {
         {/* Pillars grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {data.pillars.map((pillar) => {
-            const hasSubVerticals = "subVerticals" in pillar;
-            const hasVerticalLink = "verticalHref" in pillar;
-
             return (
               <div
                 key={pillar.number}
@@ -46,37 +43,6 @@ export default function MethodPillars({ context }: MethodPillarsProps) {
                 <p className="text-hub-ink-muted text-sm leading-relaxed font-light flex-1">
                   {pillar.description}
                 </p>
-
-                {/* Single vertical link */}
-                {hasVerticalLink && (
-                  <Link
-                    href={(pillar as { verticalHref: string }).verticalHref}
-                    className="mt-8 text-[11px] font-bold uppercase tracking-[0.2em] text-hub-gold hover:text-hub-gold-dark transition-colors inline-flex items-center gap-2"
-                  >
-                    {(pillar as { verticalLabel: string }).verticalLabel}
-                    <span aria-hidden>→</span>
-                  </Link>
-                )}
-
-                {/* Sub-verticals (Passo 3) */}
-                {hasSubVerticals && (
-                  <div className="mt-8 flex flex-col gap-3">
-                    {(
-                      pillar as unknown as {
-                        subVerticals: { label: string; href: string }[];
-                      }
-                    ).subVerticals.map((sv) => (
-                      <Link
-                        key={sv.href}
-                        href={sv.href}
-                        className="text-[11px] font-bold uppercase tracking-[0.2em] text-hub-gold hover:text-hub-gold-dark transition-colors inline-flex items-center gap-2"
-                      >
-                        {sv.label}
-                        <span aria-hidden>→</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
 
                 {/* Decorative gold dot */}
                 <div className="absolute top-10 right-10 w-2 h-2 rounded-full bg-hub-gold/30 group-hover:bg-hub-gold/60 transition-colors" />
