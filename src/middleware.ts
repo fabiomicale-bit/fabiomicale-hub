@@ -6,7 +6,7 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // 0. MAINTENANCE MODE (Radical Toggle)
-  const MAINTENANCE_MODE = true; 
+  const MAINTENANCE_MODE = false; 
   const isLocal = host.includes("localhost") || host.includes("127.0.0.1");
   if (MAINTENANCE_MODE && !isLocal && pathname !== "/manutenzione" && !pathname.startsWith("/_next") && !pathname.startsWith("/api") && !pathname.includes(".")) {
     return NextResponse.redirect(new URL("/manutenzione", request.url));
