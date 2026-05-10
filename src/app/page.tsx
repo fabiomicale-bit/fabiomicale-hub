@@ -5,6 +5,7 @@ import MetodoSection from "@/components/MetodoSection";
 import BookFeature from "@/components/BookFeature";
 import NewsletterCTA from "@/components/NewsletterCTA";
 import AuthorBio from "@/components/AuthorBio";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Fabio Micale | Metodo Successo in 3 Passi per Over 40",
@@ -73,7 +74,7 @@ export default function HomePage() {
       <section className="py-32 px-6 bg-hub-bg-warm">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-1 lg:order-1">
               <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">
                 Il libro è il <br />
                 <span className="italic text-hub-gold">punto di partenza.</span>
@@ -90,15 +91,17 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative w-full max-w-sm aspect-[2/3] bg-hub-ink rounded-xl shadow-2xl flex items-center justify-center p-12 text-center border-4 border-hub-gold/20 overflow-hidden group">
-                <div className="absolute inset-0 bg-grid-editorial opacity-20" />
-                <div className="relative z-10">
-                  <p className="text-hub-ink-light text-[10px] font-bold uppercase tracking-[0.4em] mb-4">Edizione 2026</p>
-                  <h3 className="text-3xl md:text-4xl font-serif text-white mb-6 leading-tight">Successo in <br /> 3 Passi</h3>
-                  <p className="text-white/40 text-[11px] font-bold uppercase tracking-[0.3em]">Fabio Micale</p>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-hub-gold transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+            <div className="order-2 lg:order-2 flex justify-center">
+              <div className="relative w-full max-w-lg animate-fade-in">
+                <div className="absolute -inset-10 bg-hub-gold/[0.05] blur-[80px] rounded-full pointer-events-none" />
+                <Image 
+                  src="/mockup-estratto-home.png"
+                  alt="Estratto gratuito del libro Successo in 3 Passi di Fabio Micale"
+                  width={600}
+                  height={600}
+                  className="relative z-10 w-full h-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:scale-[1.02] transition-transform duration-700"
+                  priority
+                />
               </div>
             </div>
           </div>
