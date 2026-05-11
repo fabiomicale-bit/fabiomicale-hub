@@ -110,8 +110,8 @@ export default function ChiSonoPage() {
           <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-10">
             Una volta alla settimana, un contenuto pratico per applicare il Metodo Successo in 3 Passi.
           </p>
-          <Link href="/area-riservata" className="btn-outline px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
-            Iscriviti alla newsletter
+          <Link href="/estratto" className="btn-gold px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
+            Inizia dall&apos;estratto gratuito
           </Link>
         </div>
       </section>

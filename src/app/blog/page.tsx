@@ -1,7 +1,4 @@
-import Image from "next/image";
 import { Suspense } from "react";
-
-
 import BlogContent from "./BlogContent";
 import { getManifestoPosts, getRegularPosts } from "@/lib/posts";
 
@@ -37,9 +34,6 @@ export default function BlogPage() {
           <p className="text-xl text-hub-ink-muted leading-relaxed max-w-2xl mx-auto font-light mb-10">
             Appunti, strumenti e riflessioni per applicare il Metodo Successo in 3 Passi alla crescita professionale Over 40 nell’era dell’AI.
           </p>
-          <div className="inline-block bg-hub-gold/5 border border-hub-gold/10 px-6 py-2 rounded-full">
-            <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-hub-gold">Il laboratorio editoriale è in fase di attivazione</p>
-          </div>
         </div>
       </section>
 

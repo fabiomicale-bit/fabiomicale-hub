@@ -185,45 +185,41 @@ export default function SuccessoIn3PassiPage() {
       {/* ── SEZIONE 6 — CTA FINALE ────────────────────────────── */}
       <section className="py-32 px-6 bg-hub-charcoal text-white text-center">
          <div className="max-w-3xl mx-auto">
-            <div className="badge-editorial border-white/20 text-hub-gold mb-8 mx-auto">Evoluzione Pubblica</div>
+            <div className="badge-editorial border-white/20 text-hub-gold mb-8 mx-auto">Inizia da qui</div>
             <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">
-              Il percorso sta prendendo <span className="text-hub-gold italic">forma.</span>
+              Il primo passo è <span className="text-hub-gold italic">gratuito.</span>
             </h2>
             <p className="text-white/60 text-lg font-light leading-relaxed mb-16">
-              Il libro, l’estratto gratuito e i materiali collegati al Metodo Successo in 3 Passi sono in fase di completamento. Il sito resta live per accompagnare la costruzione pubblica del progetto.
+              Nel frattempo puoi iniziare dal primo estratto gratuito.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-10 items-start mb-16 text-left">
               <div className="flex flex-col items-center text-center">
                 <div className="p-10 bg-white/5 rounded-3xl border border-white/10 w-full mb-4">
                    <h3 className="text-xl font-serif mb-4 text-hub-gold">Estratto Gratuito</h3>
-                   <p className="text-white/40 text-sm font-light mb-0">Disponibile a breve per gli iscritti alla newsletter.</p>
-                   <Link href="#estratto" className="mt-8 btn-gold w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-center inline-block">
-                      Scarica l'estratto
+                   <p className="text-white/60 text-sm font-light mb-0">Ricevi i primi capitoli di Successo in 3 Passi e il primo esercizio pratico del Metodo.</p>
+                   <Link href="/estratto" className="mt-8 btn-gold w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-center inline-block">
+                      Ricevi l&apos;estratto gratis
                    </Link>
                 </div>
                 <p className="text-[10px] font-serif italic text-hub-gold/40 px-4">
-                  L'estratto sarà inviato automaticamente al completamento della fase di revisione.
+                  PDF via email. Zero spam. Cancellazione in ogni momento.
                 </p>
               </div>
-              
+
               <div className="flex flex-col items-center text-center">
                 <div className="p-10 bg-white/5 rounded-3xl border border-white/10 w-full mb-4">
                    <h3 className="text-xl font-serif mb-4 text-hub-gold">Il Libro Completo</h3>
-                   <p className="text-white/40 text-sm font-light mb-0">L'acquisto sarà attivato al termine della fase di lancio.</p>
+                   <p className="text-white/40 text-sm font-light mb-0">Il volume completo sarà disponibile per l&apos;acquisto nei prossimi mesi.</p>
                    <div className="mt-8 btn-gold opacity-30 w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em] cursor-not-allowed">
-                      Lancio in corso
+                      In arrivo
                    </div>
                 </div>
                 <p className="text-[10px] font-serif italic text-hub-gold/40 px-4">
-                  Sarai avvisato non appena il sistema di pre-ordine sarà operativo.
+                  Iscriviti alla newsletter per essere avvisato al lancio.
                 </p>
               </div>
             </div>
-
-            <p className="text-white/20 text-[10px] uppercase tracking-widest font-bold">
-              Stiamo lavorando per garantirti la migliore esperienza operativa.
-            </p>
          </div>
       </section>
 

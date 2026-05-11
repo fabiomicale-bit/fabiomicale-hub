@@ -143,12 +143,12 @@ export default function MetodoPage() {
             Il libro è il manifesto completo del metodo. Il sito ne è l'estensione pratica: articoli, esercizi, strumenti, area riservata e contenuti futuri nascono da questa struttura.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/successo-in-3-passi" className="btn-gold px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
+            <Link href="/estratto" className="btn-gold px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
+              Prova il primo passo
+            </Link>
+            <Link href="/successo-in-3-passi" className="btn-outline px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
               Scopri il libro
             </Link>
-            <button disabled className="btn-outline px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em] opacity-50">
-              Estratto in arrivo
-            </button>
           </div>
         </div>
       </section>

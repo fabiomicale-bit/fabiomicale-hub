@@ -22,9 +22,9 @@ export default function HomePage() {
         title="Ripartire dopo i 40 anni non richiede motivazione."
         titleAccent="Richiede metodo."
         subtitle="Sono Fabio Micale, autore di Successo in 3 Passi. Aiuto professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione personale e professionale nell’era dell’intelligenza artificiale."
-        primaryCTA={{ 
-          label: "Scarica l’estratto gratuito", 
-          href: "#newsletter",
+        primaryCTA={{
+          label: "Ricevi i primi capitoli — gratis",
+          href: "/estratto",
           disabled: false,
           disclaimer: "Ricevi gratuitamente l’estratto ufficiale del libro e il primo esercizio pratico del Metodo."
         }}
@@ -83,8 +83,8 @@ export default function HomePage() {
                 Successo in 3 Passi non è solo un libro. È il manifesto operativo del metodo. Da qui nasce l’intero sito: articoli, esercizi, newsletter, area riservata, percorsi futuri e contenuti premium.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="#newsletter" className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-center">
-                  Scarica l’estratto gratuito
+                <Link href="/estratto" className="btn-gold px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-center">
+                  Ricevi i primi capitoli — gratis
                 </Link>
                 <Link href="/successo-in-3-passi" className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full text-center">
                   Scopri il libro
@@ -129,53 +129,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── SEZIONE 6 — AREA RISERVATA ────────────────────────────────── */}
-      <section className="py-32 px-6 bg-hub-bg-alt border-y border-hub-border/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-medium mb-4">Area Riservata</h2>
-            <p className="text-hub-ink-muted text-lg font-light">Uno spazio in evoluzione per applicare il Metodo Successo in 3 Passi.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card-editorial p-10 flex flex-col justify-between group">
-              <div>
-                <div className="w-12 h-12 bg-hub-gold/10 rounded-xl flex items-center justify-center text-hub-gold mb-6 group-hover:bg-hub-gold group-hover:text-white transition-all duration-500">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-serif font-medium mb-4">Area Free</h3>
-                <p className="text-hub-ink-muted text-sm leading-relaxed mb-8 font-light">
-                  Accesso gratuito con iscrizione alla newsletter. Qui troverai estratti del libro, schede operative, appunti di metodo, aggiornamenti e materiali pratici per iniziare.
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-full bg-hub-gold/10 text-hub-gold text-center py-4 rounded-full text-[10px] tracking-[0.2em] font-bold border border-hub-gold/20">
-                  Accesso in preparazione
-                </div>
-                <p className="text-[9px] font-serif italic text-hub-ink/40 mt-3">Area riservata agli iscritti alla newsletter.</p>
-              </div>
-            </div>
-            <div className="card-editorial p-10 flex flex-col justify-between bg-hub-charcoal text-white group">
-              <div>
-                <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-hub-gold mb-6 group-hover:bg-hub-gold group-hover:text-hub-ink transition-all duration-500">
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-serif font-medium mb-4">Area Premium</h3>
-                <p className="text-white/40 text-sm leading-relaxed mb-8 font-light">
-                  Uno spazio a pagamento che si arricchirà nel tempo con corsi, ebook, masterclass, community e strumenti pratici per applicare il metodo alla tua crescita professionale.
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-full bg-white/5 text-white/30 text-center py-4 rounded-full text-[10px] tracking-[0.2em] font-bold border border-white/10">
-                  Progetto Futuro
-                </div>
-                <p className="text-[9px] font-serif italic text-white/20 mt-3">Contenuti avanzati in fase di sviluppo.</p>
-              </div>
-            </div>
-          </div>
+      {/* ── SEZIONE 6 — CTA ESTRATTO ────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-charcoal text-white text-center">
+        <div className="max-w-3xl mx-auto">
+          <div className="badge-editorial border-white/20 text-hub-gold mb-8 mx-auto">Inizia da qui</div>
+          <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">
+            Il primo passo è <span className="text-hub-gold italic">gratuito.</span>
+          </h2>
+          <p className="text-white/60 text-lg font-light leading-relaxed mb-12">
+            Ricevi i primi capitoli di Successo in 3 Passi e il primo esercizio pratico del Metodo. Via email, gratis, subito.
+          </p>
+          <Link
+            href="/estratto"
+            className="btn-gold px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em] inline-block"
+          >
+            Ricevi l&apos;estratto gratuito
+          </Link>
+          <p className="text-white/30 text-[10px] mt-6 uppercase tracking-widest font-medium">
+            PDF via email. Zero spam. Cancellazione in ogni momento.
+          </p>
         </div>
       </section>
 

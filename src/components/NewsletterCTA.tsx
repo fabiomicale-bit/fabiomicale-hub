@@ -27,7 +27,7 @@ const variantCopy: Record<
     cta: "Iscriviti e scarica l'estratto",
   },
   "book-excerpt": {
-    eyebrow: "AREA RESERVATA",
+    eyebrow: "ESTRATTO GRATUITO",
     title: "Scarica l'estratto gratuito.",
     subtitle:
       "Ricevi i primi capitoli di 'Successo in 3 Passi — Edizione 2026' e iscriviti alla newsletter settimanale per iniziare il tuo percorso di ripartenza con metodo.",
