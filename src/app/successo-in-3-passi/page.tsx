@@ -41,11 +41,11 @@ export default function SuccessoIn3PassiPage() {
         title="Successo in 3 Passi"
         titleAccent="Edizione 2026"
         subtitle="Il metodo pratico per professionisti Over 40 che vogliono fermare il caos, rimettere struttura e costruire una nuova direzione personale e professionale nell’era dell’intelligenza artificiale."
-        primaryCTA={{ 
-          label: "Scarica l’estratto gratuito", 
-          href: "#estratto",
-          disabled: false,
-          disclaimer: "Ricevi gratuitamente l’estratto ufficiale del libro e il primo esercizio pratico del Metodo."
+        primaryCTA={{
+          label: "In arrivo",
+          href: "#",
+          disabled: true,
+          disclaimer: "Il volume completo sarà disponibile per l’acquisto nei prossimi mesi."
         }}
         image={{
           src: "/cover-3d-real.png",
