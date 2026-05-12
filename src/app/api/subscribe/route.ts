@@ -114,13 +114,23 @@ export async function POST(req: NextRequest) {
               send_welcome_email: false,
               utm_source: utmSource,
               utm_medium: utmMedium,
-              tags: [beehiivTag],
+              // custom_fields richiede che "lead_source" esista nella pubblicazione Beehiiv.
+              // Creare il campo in Beehiiv: Settings → Custom Fields → Add field "lead_source".
+              // Il campo "tags" non è supportato dall'API v2 di Beehiiv: ignorato silenziosamente.
+              custom_fields: [
+                { name: "lead_source", value: beehiivTag },
+              ],
             }),
           }
         );
 
+        const beehiivData = await beehiivRes.json().catch(() => null);
+        const subscriberId = beehiivData?.data?.id ?? "none";
+        console.log(`[beehiiv] status:${beehiivRes.status} subscriber_id:${subscriberId} variant:${variant} utm_source:${utmSource}`);
+
         if (!beehiivRes.ok && beehiivRes.status !== 409) {
-          console.error("Beehiiv error:", beehiivRes.status);
+          const errDetail = beehiivData?.errors ?? beehiivData?.message ?? "unknown";
+          console.error("[beehiiv] error:", beehiivRes.status, JSON.stringify(errDetail));
         }
       } catch (err) {
         console.error("Beehiiv fetch error:", err);
