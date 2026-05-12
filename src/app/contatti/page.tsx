@@ -107,7 +107,7 @@ export default function ContattiPage() {
               Iscriviti a Un Passo Avanti per ricevere contenuti pratici ogni settimana.
             </p>
           </div>
-          <NewsletterCTA />
+          <NewsletterCTA variant="newsletter" />
         </div>
       </section>
 

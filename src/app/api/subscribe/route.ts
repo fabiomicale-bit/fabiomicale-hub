@@ -1,22 +1,46 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const EBOOK_URL =
-  "https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=sharing";
+const ESTRATTO_PDF_URL =
+  "https://www.fabiomicale.com/downloads/estratto-successo-in-3-passi-2026.pdf";
 
-const CAPITOLO1_URL =
-  "https://drive.google.com/file/d/1_68po3qufRO90yVx1tbFORMRzs3UUip9/view?usp=sharing";
+// Varianti che corrispondono a iscrizione newsletter (senza invio PDF)
+const NEWSLETTER_VARIANTS = ["newsletter", "default", "article"];
 
 export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
+
+  if (!body) {
+    return NextResponse.json(
+      { success: false, error: "Richiesta non valida." },
+      { status: 400 }
+    );
+  }
+
   const email: string | undefined = body?.email;
   const nome: string | undefined = body?.nome;
   const cognome: string | undefined = body?.cognome;
   const telefono: string | undefined = body?.telefono;
   const sitoweb: string | undefined = body?.sitoweb;
-  const utmSource: string = body?.utm_source ?? "website";
+  const variant: string = body?.variant ?? "";
+  const privacyConsent: boolean = body?.privacy_consent === true;
+  const newsletterConsent: boolean = body?.newsletter_consent === true;
   const utmMedium: string = body?.utm_medium ?? "organic";
-  const notify: string | undefined = body?.notify; // "capitolo1" triggers Resend notification
 
+  // --- Honeypot server-side ---
+  const honeypot: string | undefined = body?.website_url;
+  if (honeypot) {
+    return NextResponse.json({ success: true });
+  }
+
+  // --- Privacy obbligatoria ---
+  if (!privacyConsent) {
+    return NextResponse.json(
+      { success: false, error: "Accettazione della privacy obbligatoria." },
+      { status: 400 }
+    );
+  }
+
+  // --- Email validation ---
   if (!email || !email.includes("@")) {
     return NextResponse.json(
       { success: false, error: "Email non valida." },
@@ -24,7 +48,24 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // --- 1. Forward to Dashboard Backend ---
+  // --- Variant routing ---
+  const isBookExcerpt = variant === "book-excerpt";
+  const isNewsletter = NEWSLETTER_VARIANTS.includes(variant);
+
+  if (!isBookExcerpt && !isNewsletter) {
+    console.warn(`[subscribe] Variant non supportata: "${variant}" — richiesta rifiutata.`);
+    return NextResponse.json(
+      { success: false, error: "Tipo di richiesta non supportato." },
+      { status: 400 }
+    );
+  }
+
+  const backendSource = isBookExcerpt ? "estratto_s3p_2026" : "newsletter_un_passo_avanti";
+  const backendTag = isBookExcerpt ? "lead_magnet_s3p_2026" : "un_passo_avanti";
+  const beehiivTag = isBookExcerpt ? "lead_magnet_s3p_2026" : "un_passo_avanti";
+  const utmSource = isBookExcerpt ? "estratto_s3p_2026" : "newsletter_un_passo_avanti";
+
+  // --- 1. Backend Dashboard ---
   const BACKEND_URL = process.env.BACKEND_API_URL;
   const DASHBOARD_KEY = process.env.DASHBOARD_API_KEY;
 
@@ -32,9 +73,9 @@ export async function POST(req: NextRequest) {
     try {
       await fetch(`${BACKEND_URL}/leads`, {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
-          "X-API-Key": DASHBOARD_KEY
+          "X-API-Key": DASHBOARD_KEY,
         },
         body: JSON.stringify({
           email,
@@ -42,111 +83,96 @@ export async function POST(req: NextRequest) {
           last_name: cognome,
           phone: telefono,
           website: sitoweb,
-          source: "hub_form",
-          tag: utmSource === "risorse_ebook" || notify === "capitolo1" ? "consulenza" : "newsletter",
-          notes: `Lead da Hub Form: ${utmSource}`
+          source: backendSource,
+          tag: backendTag,
+          notes: `Lead da Hub Form: ${variant}`,
         }),
       });
     } catch (err) {
-      console.error("Failed to forward lead to dashboard:", err);
+      console.error("Dashboard forward failed:", err);
     }
-  } else {
-    console.warn("Backend forwarding skipped: BACKEND_API_URL or DASHBOARD_API_KEY missing.");
   }
 
-  // --- 2. Subscribe to Beehiiv ---
-  const apiKey = process.env.BEEHIIV_API_KEY;
-  const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
+  // --- 2. Beehiiv (solo se newsletter_consent === true) ---
+  if (newsletterConsent) {
+    const apiKey = process.env.BEEHIIV_API_KEY;
+    const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
 
-  if (apiKey && publicationId) {
-    const beehiivRes = await fetch(
-      `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          reactivate_existing: true,
-          send_welcome_email: false,
-          utm_source: utmSource,
-          utm_medium: utmMedium,
-          tags: utmSource === "risorse_ebook" || notify === "capitolo1" ? ["puntozero"] : ["newsletter"],
-        }),
+    if (apiKey && publicationId) {
+      try {
+        const beehiivRes = await fetch(
+          `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${apiKey}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email,
+              reactivate_existing: true,
+              send_welcome_email: false,
+              utm_source: utmSource,
+              utm_medium: utmMedium,
+              tags: [beehiivTag],
+            }),
+          }
+        );
+
+        if (!beehiivRes.ok && beehiivRes.status !== 409) {
+          console.error("Beehiiv error:", beehiivRes.status);
+        }
+      } catch (err) {
+        console.error("Beehiiv fetch error:", err);
       }
-    );
-
-    if (!beehiivRes.ok && beehiivRes.status !== 409) {
-      console.error("Beehiiv error:", beehiivRes.status);
     }
   }
 
-  // --- 3. Delivery via Resend ---
-  const RESEND_API_KEY = process.env.RESEND_API_KEY;
-  const isBookExcerpt = body?.variant === "book-excerpt";
-  const isCapitolo1 = utmSource === "capitolo1" || notify === "capitolo1";
-  
-  let subject = "Accesso Autorizzato: Il tuo Manuale PuntoZero";
-  let resourceUrl = EBOOK_URL;
-  let htmlContent = `
-    <h2 style="color: #000; font-style: italic;">Benvenuto, ${nome || "Navigante"}.</h2>
-    <p>Hai appena attraversato la Soglia. Ecco il link per accedere alla risorsa:</p>
-  `;
-
+  // --- 3. Resend (solo book-excerpt) ---
   if (isBookExcerpt) {
-    subject = "Il tuo estratto di Successo in 3 Passi";
-    resourceUrl = "https://www.fabiomicale.com/downloads/estratto-successo-in-3-passi-2026.pdf";
-    htmlContent = `
-      <p>Ciao ${nome || "Amico"},</p>
-      <p>ecco l’estratto gratuito di “Successo in 3 Passi — Edizione 2026”.</p>
-      <p>Puoi leggerlo con calma. Non è un riassunto promozionale: è un primo ingresso reale nel Metodo.</p>
-      <p>Il punto di partenza è semplice:<br/>
-      non serve aggiungere altra confusione.<br/>
-      Serve fermare il caos, rimettere struttura e mantenere il controllo.</p>
-      <p>Nei prossimi messaggi riceverai contenuti pratici collegati al Metodo Successo in 3 Passi e alla newsletter “Un Passo Avanti”.</p>
-    `;
-  } else if (isCapitolo1) {
-    subject = "Ecco il primo capitolo: Il Disallineamento";
-    resourceUrl = CAPITOLO1_URL;
-  }
+    const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
-  if (RESEND_API_KEY) {
-    try {
-      await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          from: "Fabio Micale <info@fabiomicale.com>",
-          to: email,
-          subject: subject,
-          html: `
-            <div style="font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #0A0A0A; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-              <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 24px; font-family: serif;">Successo in 3 Passi</h1>
-              <div style="font-size: 16px;">
-                ${htmlContent}
+    if (RESEND_API_KEY) {
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${RESEND_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            from: "Fabio Micale <info@fabiomicale.com>",
+            to: email,
+            subject: "Il tuo estratto di Successo in 3 Passi",
+            html: `
+              <div style="font-family: 'Inter', -apple-system, sans-serif; line-height: 1.6; color: #0A0A0A; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
+                <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 24px; font-family: serif;">Successo in 3 Passi</h1>
+                <p>Ciao ${nome || "Amico"},</p>
+                <p>ecco l'estratto gratuito di <em>Successo in 3 Passi — Edizione 2026</em>.</p>
+                <p>Non è un riassunto promozionale: è un primo ingresso reale nel Metodo.</p>
+                <p>Il punto di partenza è semplice:<br/>
+                non serve aggiungere altra confusione.<br/>
+                Serve fermare il caos, rimettere struttura e mantenere il controllo.</p>
+                <div style="margin: 40px 0; text-align: left;">
+                  <a href="${ESTRATTO_PDF_URL}" style="background-color: #C8A45A; color: #fff; padding: 16px 32px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; border-radius: 4px; display: inline-block;">Scarica l'estratto</a>
+                </div>
+                <hr style="border: none; border-top: 1px solid #EEE; margin: 40px 0;" />
+                <p style="font-size: 13px; color: #666;">
+                  A presto,<br/>
+                  <strong>Fabio Micale</strong><br/>
+                  <a href="https://www.fabiomicale.com" style="color: #C8A45A; text-decoration: none;">fabiomicale.com</a>
+                </p>
               </div>
-              <div style="margin: 40px 0; text-align: left;">
-                <a href="${resourceUrl}" style="background-color: #C8A45A; color: #fff; padding: 16px 32px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; border-radius: 4px; display: inline-block;">Scarica l'estratto</a>
-              </div>
-              <hr style="border: none; border-top: 1px solid #EEE; margin: 40px 0;" />
-              <p style="font-size: 13px; color: #666;">
-                A presto,<br/>
-                <strong>Fabio Micale</strong><br/>
-                <a href="https://www.fabiomicale.com" style="color: #C8A45A; text-decoration: none;">fabiomicale.com</a>
-              </p>
-            </div>
-          `,
-        }),
-      });
-    } catch (err) {
-      console.error("Resend error:", err);
+            `,
+          }),
+        });
+      } catch (err) {
+        console.error("Resend error:", err);
+      }
+    } else {
+      console.log(`[subscribe] RESEND_API_KEY non configurato — email a ${email} non inviata.`);
     }
   }
 
-  return NextResponse.json({ success: true, ebookUrl: resourceUrl });
+  return NextResponse.json({ success: true });
 }

@@ -3,27 +3,28 @@
 import { useState } from "react";
 
 export default function Newsletter() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    cognome: "",
-    email: "",
-    telefono: "",
-    sitoweb: "",
-    messaggio: "",
-    privacy: false
-  });
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.nome || !formData.cognome || !formData.email || !formData.telefono || !formData.privacy) return;
+    if (!nome || !email || !privacyAccepted) return;
     setStatus("loading");
 
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          nome,
+          email,
+          variant: "newsletter",
+          privacy_consent: privacyAccepted,
+          newsletter_consent: newsletterAccepted,
+        }),
       });
 
       if (res.ok) {
@@ -53,97 +54,73 @@ export default function Newsletter() {
           <span className="italic text-hub-gold">ogni settimana.</span>
         </h2>
         <p className="text-hub-ink-muted text-lg font-light leading-relaxed mb-12 max-w-lg mx-auto">
-          Analisi operative, strumenti pratici e casi reali per imprenditori Over 40 che vogliono un&apos;azienda autonoma. Nessuno spam. Cancellati quando vuoi.
+          Analisi operative, strumenti pratici e casi reali per professionisti Over 40. Nessuno spam. Cancellati quando vuoi.
         </p>
 
-        {/* Form */}
         {status === "success" ? (
           <div className="card-editorial p-8 max-w-md mx-auto">
             <div className="text-hub-gold text-2xl mb-3">✓</div>
-            <p className="text-hub-ink font-serif text-lg">Messaggio Inviato.</p>
-            <p className="text-hub-ink-muted text-sm mt-2">Riceverai una risposta entro 24 ore.</p>
+            <p className="text-hub-ink font-serif text-lg">Iscrizione ricevuta.</p>
+            <p className="text-hub-ink-muted text-sm mt-2">
+              {newsletterAccepted
+                ? "Da ora riceverai Un Passo Avanti ogni settimana."
+                : "I tuoi dati sono stati registrati."}
+            </p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-2xl mx-auto text-left" suppressHydrationWarning>
-            <div className="grid md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                placeholder="Nome *"
-                value={formData.nome}
-                onChange={(e) => setFormData({...formData, nome: e.target.value})}
-                required
-                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
-              />
-              <input
-                type="text"
-                placeholder="Cognome *"
-                value={formData.cognome}
-                onChange={(e) => setFormData({...formData, cognome: e.target.value})}
-                required
-                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
-              />
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <input
-                type="email"
-                placeholder="La tua email *"
-                value={formData.email}
-                onChange={(e) => setFormData({...formData, email: e.target.value})}
-                required
-                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
-              />
-              <input
-                type="tel"
-                placeholder="Telefono *"
-                value={formData.telefono}
-                onChange={(e) => setFormData({...formData, telefono: e.target.value})}
-                required
-                className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
-              />
-            </div>
-
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6 max-w-md mx-auto text-left" suppressHydrationWarning>
             <input
-              type="url"
-              placeholder="Sito Web (opzionale)"
-              value={formData.sitoweb}
-              onChange={(e) => setFormData({...formData, sitoweb: e.target.value})}
+              type="text"
+              placeholder="Nome *"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              required
+              className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+            />
+            <input
+              type="email"
+              placeholder="La tua email *"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
               className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
             />
 
-            <textarea
-              placeholder="Scrivi il motivo per cui ci contatti *"
-              value={formData.messaggio}
-              onChange={(e) => setFormData({...formData, messaggio: e.target.value})}
-              rows={4}
-              required
-              className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all resize-none"
-            />
-
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="privacy"
-                checked={formData.privacy}
-                onChange={(e) => setFormData({...formData, privacy: e.target.checked})}
-                required
-                className="mt-1 w-4 h-4 accent-hub-gold"
-              />
-              <label htmlFor="privacy" className="text-xs text-hub-ink-light leading-relaxed">
-                Dichiaro di aver letto l&apos;informativa sulla privacy e acconsento al trattamento dei dati personali. *
+            <div className="space-y-3">
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                  required
+                  className="mt-1 w-4 h-4 accent-hub-gold"
+                />
+                <span className="text-xs text-hub-ink-light leading-relaxed">
+                  Ho letto l&apos;informativa sulla privacy e acconsento al trattamento dei dati personali. *
+                </span>
+              </label>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={newsletterAccepted}
+                  onChange={(e) => setNewsletterAccepted(e.target.checked)}
+                  className="mt-1 w-4 h-4 accent-hub-gold"
+                />
+                <span className="text-xs text-hub-ink-light leading-relaxed">
+                  Acconsento a ricevere la newsletter <em>Un Passo Avanti</em> e comunicazioni collegate al Metodo Successo in 3 Passi.
+                </span>
               </label>
             </div>
 
             <button
               type="submit"
-              disabled={status === "loading"}
+              disabled={status === "loading" || !privacyAccepted}
               className="btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] disabled:opacity-50"
             >
               {status === "loading" ? "Inviando..." : "Iscriviti gratis →"}
             </button>
           </form>
         )}
-
 
         {status === "error" && (
           <p className="text-red-500 text-sm mt-4">Qualcosa è andato storto. Riprova.</p>

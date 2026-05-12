@@ -9,7 +9,7 @@
 import { useState } from "react";
 import Link from "next/link";
 
-type NewsletterVariant = "default" | "book-excerpt" | "article";
+type NewsletterVariant = "default" | "book-excerpt" | "article" | "newsletter";
 
 interface NewsletterCTAProps {
   variant?: NewsletterVariant;
@@ -39,6 +39,13 @@ const variantCopy: Record<
     subtitle:
       "Questo contenuto appartiene al Metodo Successo in 3 Passi. Iscriviti per ricevere applicazioni pratiche e l'estratto del libro.",
     cta: "Iscriviti e ricevi l'estratto",
+  },
+  newsletter: {
+    eyebrow: "UN PASSO AVANTI",
+    title: "La newsletter per applicare il Metodo.",
+    subtitle:
+      "Ogni settimana un contenuto pratico per rimettere ordine: una riflessione, uno strumento, un esercizio o un'applicazione dell'AI alla crescita Over 40.",
+    cta: "Iscriviti gratis",
   },
 };
 
@@ -73,7 +80,9 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
       
       if (res.ok) {
         setStatus("success");
-        window.location.href = "/grazie-estratto";
+        if (variant === "book-excerpt") {
+          window.location.href = "/grazie-estratto";
+        }
       } else {
         setStatus("error");
       }
@@ -82,7 +91,29 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
     }
   };
 
-  if (status === "success") return null;
+  if (status === "success") {
+    if (variant === "book-excerpt") return null; // redirect in corso
+    return (
+      <section
+        id="newsletter"
+        className="py-24 px-6 bg-hub-cream border-t border-hub-border"
+      >
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="w-16 h-16 bg-hub-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-hub-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <p className="text-2xl font-serif text-hub-ink mb-3">Iscrizione ricevuta.</p>
+          <p className="text-hub-ink-muted font-light">
+            {newsletterAccepted
+              ? "Da ora riceverai Un Passo Avanti ogni settimana."
+              : "I tuoi dati sono stati registrati."}
+          </p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
