@@ -6,7 +6,9 @@ export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
   // 0. MAINTENANCE MODE (Radical Toggle)
-  const MAINTENANCE_MODE = false; 
+  // Modalità manutenzione temporanea — rimuovere quando form/Beehiiv/Resend sono riallineati.
+  // Per disattivare: impostare NEXT_PUBLIC_MAINTENANCE_MODE=false su Vercel (o rimuovere la variabile) e fare redeploy.
+  const MAINTENANCE_MODE = true; // Modalità manutenzione attiva — cambiare in false per ripristinare il sito
   const isLocal = host.includes("localhost") || host.includes("127.0.0.1");
   if (MAINTENANCE_MODE && !isLocal && pathname !== "/manutenzione" && !pathname.startsWith("/_next") && !pathname.startsWith("/api") && !pathname.includes(".")) {
     return NextResponse.redirect(new URL("/manutenzione", request.url));
