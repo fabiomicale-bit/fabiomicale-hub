@@ -193,12 +193,15 @@ export default function HomePage() {
                   Leggi la storia di Fabio
                 </Link>
               </div>
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden grayscale border border-hub-border shadow-2xl">
-                <div className="absolute inset-0 bg-hub-gold/5" />
-                {/* Image placeholder or real image if exists */}
-                <div className="absolute inset-0 flex items-center justify-center text-hub-ink/20 font-serif italic text-xl">
-                  Fabio Micale
-                </div>
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-hub-border shadow-2xl">
+                <Image
+                  src="/fabio-micale-speaker-square.webp"
+                  alt="Fabio Micale durante un intervento formativo"
+                  fill
+                  className="object-cover object-top grayscale"
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                />
+                <div className="absolute inset-0 bg-hub-gold/5 pointer-events-none" />
               </div>
             </div>
           </div>
