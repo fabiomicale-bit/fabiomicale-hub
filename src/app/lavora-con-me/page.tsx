@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   description:
     "Libri, corsi, coaching e sistemi operativi per imprenditori e professionisti over 40. Scopri il percorso giusto per te.",
   alternates: { canonical: "https://www.fabiomicale.com/lavora-con-me" },
+  robots: { index: false, follow: false },
 };
 
 export default function LavoraConMePage() {
@@ -47,7 +48,7 @@ export default function LavoraConMePage() {
               <p className="text-hub-ink-muted text-lg leading-relaxed mb-10 font-light">
                 Il punto di partenza per tutti. &quot;Successo in 3 Passi&quot; condensa 25 anni di esperienza in un protocollo pratico con 27 esercizi e 5 casi studio reali.
               </p>
-              <Link href="/il-libro" className="btn-outline px-10 py-4">
+              <Link href="/successo-in-3-passi" className="btn-outline px-10 py-4">
                 Scopri il Libro →
               </Link>
             </div>
@@ -75,24 +76,22 @@ export default function LavoraConMePage() {
             </div>
           </div>
 
-          {/* Percorso 3: I Mondi */}
+          {/* Il punto di partenza */}
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
-              <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-hub-gold mb-6">Business Verticali</div>
+              <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-hub-gold mb-6">Il punto di partenza</div>
               <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8">
-                I <span className="italic text-hub-gold">Mondi.</span>
+                L&apos;<span className="italic text-hub-gold">Estratto.</span>
               </h2>
               <p className="text-hub-ink-muted text-lg leading-relaxed mb-10 font-light">
-                Tre business specializzati per esigenze specifiche: MEPA Elite per l&apos;appalti pubblici, Impresa Liquida per l&apos;automazione, Punto Zero per il reset Over 40.
+                Prima di scegliere un percorso, capisci il Metodo. L&apos;estratto gratuito di Successo in 3 Passi è il punto di partenza per tutti.
               </p>
-              <div className="flex flex-col gap-3">
-                <Link href="/mepa-elite" className="text-xs font-bold uppercase tracking-[0.3em] text-hub-ink-muted hover:text-hub-gold transition-colors">MEPA Elite →</Link>
-                <Link href="/impresa-liquida" className="text-xs font-bold uppercase tracking-[0.3em] text-hub-ink-muted hover:text-hub-gold transition-colors">Impresa Liquida →</Link>
-                <Link href="/punto-zero" className="text-xs font-bold uppercase tracking-[0.3em] text-hub-ink-muted hover:text-hub-gold transition-colors">Punto Zero →</Link>
-              </div>
+              <Link href="/estratto" className="btn-outline px-10 py-4">
+                Scarica l&apos;estratto gratuito →
+              </Link>
             </div>
             <div className="order-1 md:order-2 card-editorial aspect-[4/3] flex items-center justify-center bg-hub-bg-alt">
-              <div className="text-8xl font-serif italic text-hub-ink/5">🌍</div>
+              <div className="text-8xl font-serif italic text-hub-ink/5">📖</div>
             </div>
           </div>
 

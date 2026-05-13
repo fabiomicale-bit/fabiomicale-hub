@@ -124,13 +124,13 @@ export default function AiPerProfessionistiPage() {
               href="/newsletter"
               className="btn-gold px-12 py-6 text-sm tracking-[0.3em] font-bold"
             >
-              SCARICA IL MANIFESTO
+              ISCRIVITI ALLA NEWSLETTER
             </Link>
             <Link
-              href="/lavora-con-me"
+              href="/newsletter"
               className="px-12 py-6 text-xs tracking-[0.3em] font-bold border border-white/10 hover:border-white/30 transition-all rounded-xl uppercase flex items-center justify-center"
             >
-              PERCORSI DI AUTOMAZIONE
+              RICEVI AGGIORNAMENTI SETTIMANALI
             </Link>
           </div>
         </div>

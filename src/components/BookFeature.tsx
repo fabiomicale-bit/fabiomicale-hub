@@ -49,7 +49,7 @@ export default function BookFeature() {
                 Scopri il libro
               </Link>
               <Link
-                href="/area-riservata"
+                href="/estratto"
                 className="inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] border border-hub-border text-hub-ink hover:border-hub-gold transition-colors rounded-full"
               >
                 Scarica l'estratto gratuito

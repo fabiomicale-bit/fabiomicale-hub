@@ -11,7 +11,7 @@ const pillar = methodPillars.hub.pillars[2];
 export const metadata: Metadata = {
   title: "Passo 3 — Mantieni il Controllo | Blog di Fabio Micale",
   description:
-    "Articoli sul Passo 3 del Metodo Successo in 3 Passi: fatturato prevedibile verso la PA (3A) e acquisizione clienti con sistemi AI (3B). In costruzione.",
+    "Articoli sul Passo 3 del Metodo Successo in 3 Passi: costruire sistemi duraturi, consolidare la direzione professionale e mantenere il controllo nel tempo.",
   alternates: { canonical: "https://www.fabiomicale.com/blog/passo-3-mantieni-il-controllo" },
 };
 
@@ -19,7 +19,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: "Passo 3 — Mantieni il Controllo nel Tempo",
-  description: "Articoli sul Passo 3 del Metodo Successo in 3 Passi (3A · Fatturato Garantito e 3B · Agenzia Business)",
+  description: "Articoli sul Passo 3 del Metodo Successo in 3 Passi: costruire sistemi duraturi e mantenere il controllo professionale nel tempo.",
   url: "https://www.fabiomicale.com/blog/passo-3-mantieni-il-controllo",
   isPartOf: { "@type": "WebSite", url: "https://www.fabiomicale.com" },
 };
@@ -60,14 +60,6 @@ export default function Passo3Page() {
           <p className="text-xl text-hub-ink-muted leading-relaxed max-w-2xl font-light font-serif italic">
             {pillar.description}
           </p>
-          <div className="flex gap-6 mt-8">
-            <Link href="/fatturato-garantito" className="text-[10px] font-bold uppercase tracking-[0.25em] text-hub-ink-muted hover:text-hub-gold transition-colors border-b border-hub-border/60 pb-1">
-              3A · Fatturato Garantito →
-            </Link>
-            <Link href="/agenzia-business" className="text-[10px] font-bold uppercase tracking-[0.25em] text-hub-ink-muted hover:text-hub-gold transition-colors border-b border-hub-border/60 pb-1">
-              3B · Agenzia Business →
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -128,7 +120,7 @@ export default function Passo3Page() {
                 In costruzione
               </p>
               <p className="text-hub-ink-muted text-lg font-light font-serif italic leading-relaxed mb-10">
-                Stiamo costruendo i contenuti del Passo 3. Iscriviti alla newsletter per non perdere i primi articoli su Fatturato Garantito e Agenzia Business.
+                Stiamo costruendo i contenuti del Passo 3. Iscriviti alla newsletter per non perdere i prossimi articoli sul controllo professionale e la crescita nel tempo.
               </p>
               <Link
                 href="/newsletter"

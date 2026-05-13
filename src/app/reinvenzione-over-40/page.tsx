@@ -110,16 +110,16 @@ export default function ReinvenzioneOver40Page() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link
-              href="/punto-zero"
+              href="/estratto"
               className="btn-gold px-12 py-6 text-sm tracking-[0.3em] font-bold"
             >
-              AVVIA IL RESET STRATEGICO
+              SCARICA L&apos;ESTRATTO GRATUITO
             </Link>
             <Link
-              href="/lavora-con-me"
+              href="/contatti"
               className="px-12 py-6 text-xs tracking-[0.3em] font-bold border border-white/10 hover:border-white/30 transition-all rounded-xl uppercase flex items-center justify-center"
             >
-              VEDI TUTTI I PERCORSI
+              CONTATTAMI
             </Link>
           </div>
         </div>

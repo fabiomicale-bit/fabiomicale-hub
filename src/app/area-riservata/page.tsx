@@ -5,6 +5,7 @@ import NewsletterCTA from "@/components/NewsletterCTA";
 export const metadata: Metadata = {
   title: "Area Riservata | Fabio Micale",
   description: "Accedi ai contenuti esclusivi e agli strumenti del Metodo Successo in 3 Passi.",
+  robots: { index: false, follow: false },
 };
 
 export default function AreaRiservataPage() {

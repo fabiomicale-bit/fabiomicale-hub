@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Grazie! | Successo in 3 Passi",
   description: "Grazie per aver acquistato Successo in 3 Passi. Scarica qui i tuoi bonus.",
+  robots: { index: false, follow: false },
 };
 
 export default function GrazieSuccessoPage() {
@@ -24,35 +25,30 @@ export default function GrazieSuccessoPage() {
 
         <div className="grid md:grid-cols-2 gap-8 text-left">
           {/* Bonus 1 */}
-          <div className="card-editorial p-10 bg-white border border-hub-border group hover:border-hub-gold transition-all">
+          <div className="card-editorial p-10 bg-white border border-hub-border">
             <div className="text-hub-gold text-xs font-bold uppercase tracking-widest mb-4">Bonus Immediato</div>
             <h3 className="text-xl font-serif font-medium mb-4">Operational Checklist 2026</h3>
             <p className="text-hub-ink-muted text-sm font-light mb-8">
               Il protocollo d'azione rapido per applicare il metodo in 14 giorni.
             </p>
-            <a 
-              href="/assets/CHECKLIST_OPERATIVA_2026.pdf" 
-              download
-              className="inline-block text-[10px] font-bold uppercase tracking-widest text-hub-gold border-b border-hub-gold pb-1 group-hover:gap-2 transition-all"
-            >
-              Scarica ora ↓
-            </a>
+            <p className="text-[10px] font-bold uppercase tracking-widest text-hub-ink/30">
+              In arrivo via email
+            </p>
           </div>
 
           {/* Bonus 2 */}
-          <div className="card-editorial p-10 bg-white border border-hub-border group hover:border-hub-gold transition-all">
-            <div className="text-hub-gold text-xs font-bold uppercase tracking-widest mb-4">Estratto Esclusivo</div>
-            <h3 className="text-xl font-serif font-medium mb-4">Primi 3 Capitoli (Preview)</h3>
+          <div className="card-editorial p-10 bg-white border border-hub-border">
+            <div className="text-hub-gold text-xs font-bold uppercase tracking-widest mb-4">Estratto Gratuito</div>
+            <h3 className="text-xl font-serif font-medium mb-4">Successo in 3 Passi</h3>
             <p className="text-hub-ink-muted text-sm font-light mb-8">
-              Inizia subito a leggere i primi tre capitoli del libro manifesto.
+              Leggi i primi capitoli del libro manifesto mentre aspetti la consegna.
             </p>
-            <a 
-              href="/assets/ESTRATTO_LANCIO_2026.pdf" 
-              download
-              className="inline-block text-[10px] font-bold uppercase tracking-widest text-hub-gold border-b border-hub-gold pb-1 group-hover:gap-2 transition-all"
+            <Link
+              href="/estratto"
+              className="inline-block text-[10px] font-bold uppercase tracking-widest text-hub-gold border-b border-hub-gold pb-1 transition-all"
             >
-              Scarica ora ↓
-            </a>
+              Leggi l&apos;estratto gratuito →
+            </Link>
           </div>
         </div>
 

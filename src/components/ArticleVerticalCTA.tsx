@@ -8,35 +8,31 @@ interface ArticleVerticalCTAProps {
 
 const ctaMeta: Record<
   string,
-  { problem: string; stepLabel: string; verticalName: string; href: string; ctaLabel: string }
+  { problem: string; stepLabel: string; href: string; ctaLabel: string }
 > = {
   "1": {
     problem: "il tuo problema principale è il caos e la mancanza di direzione personale",
     stepLabel: "Passo 1",
-    verticalName: "Punto Zero",
-    href: "/punto-zero",
-    ctaLabel: "Vai a Punto Zero",
+    href: "/estratto",
+    ctaLabel: "Scarica l'estratto gratuito",
   },
   "2": {
     problem: "la tua azienda dipende troppo da te e manca di struttura operativa",
     stepLabel: "Passo 2",
-    verticalName: "Impresa Liquida",
-    href: "/impresa-liquida",
-    ctaLabel: "Vai a Impresa Liquida",
+    href: "/estratto",
+    ctaLabel: "Scarica l'estratto gratuito",
   },
   "3A": {
     problem: "il tuo fatturato dipende da clienti privati e vuoi aprire la PA",
     stepLabel: "Passo 3A",
-    verticalName: "Fatturato Garantito",
-    href: "/fatturato-garantito",
-    ctaLabel: "Vai a Fatturato Garantito",
+    href: "/newsletter",
+    ctaLabel: "Iscriviti alla newsletter",
   },
   "3B": {
     problem: "la tua acquisizione clienti dipende ancora dal passaparola",
     stepLabel: "Passo 3B",
-    verticalName: "Agenzia Business",
-    href: "/agenzia-business",
-    ctaLabel: "Vai ad Agenzia Business",
+    href: "/newsletter",
+    ctaLabel: "Iscriviti alla newsletter",
   },
 };
 
@@ -54,7 +50,7 @@ export default function ArticleVerticalCTA({ step }: ArticleVerticalCTAProps) {
       </h3>
       <p className="text-hub-ink-muted text-sm font-light leading-relaxed mb-8">
         Allora il <strong className="text-hub-ink">{meta.stepLabel}</strong> è dove devi guardare.{" "}
-        <strong className="text-hub-ink">{meta.verticalName}</strong> è l&apos;applicazione operativa di questo passaggio del Metodo.
+        Inizia dall&apos;estratto gratuito per capire il Metodo Successo in 3 Passi.
       </p>
       <Link
         href={meta.href}

@@ -47,7 +47,7 @@ export default function Footer() {
             <h4 className="text-xs font-bold uppercase tracking-[0.3em] text-hub-gold mb-8">Piattaforma</h4>
             <ul className="space-y-4">
               <li><Link href="/blog" className="text-hub-ink/50 hover:text-hub-ink text-sm transition-colors font-medium uppercase tracking-wider text-[10px]">Blog</Link></li>
-              <li><Link href="/area-riservata" className="text-hub-ink/50 hover:text-hub-ink text-sm transition-colors font-medium uppercase tracking-wider text-[10px]">Area Riservata</Link></li>
+              <li><Link href="/estratto" className="text-hub-ink/50 hover:text-hub-ink text-sm transition-colors font-medium uppercase tracking-wider text-[10px]">Estratto Gratuito</Link></li>
               <li><Link href="/contatti" className="text-hub-ink/50 hover:text-hub-ink text-sm transition-colors font-medium uppercase tracking-wider text-[10px]">Contatti</Link></li>
             </ul>
           </div>

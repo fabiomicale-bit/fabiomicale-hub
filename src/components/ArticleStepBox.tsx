@@ -13,26 +13,26 @@ const stepMeta: Record<
   "1": {
     name: "Passo 1 — Ferma il Caos",
     description: "Riconoscere il rumore che guida le decisioni e ridurre la reattività.",
-    href: "/punto-zero",
-    label: "Vai a Punto Zero",
+    href: "/estratto",
+    label: "Scarica l'estratto gratuito",
   },
   "2": {
     name: "Passo 2 — Rimetti Struttura",
     description: "Costruire un'architettura operativa che regge senza dipendere dalla forza di volontà.",
-    href: "/impresa-liquida",
-    label: "Vai a Impresa Liquida",
+    href: "/estratto",
+    label: "Scarica l'estratto gratuito",
   },
   "3A": {
     name: "Passo 3A — Motore Fatturato",
     description: "Costruire un canale stabile di partecipazione alla PA e MEPA.",
-    href: "/fatturato-garantito",
-    label: "Vai a Fatturato Garantito",
+    href: "/newsletter",
+    label: "Iscriviti alla newsletter",
   },
   "3B": {
     name: "Passo 3B — Motore Acquisizione",
     description: "Un sistema AI di lead generation che funziona in autonomia.",
-    href: "/agenzia-business",
-    label: "Vai ad Agenzia Business",
+    href: "/newsletter",
+    label: "Iscriviti alla newsletter",
   },
 };
 

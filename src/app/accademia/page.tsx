@@ -8,6 +8,7 @@ import MetodoSection from "@/components/MetodoSection";
 export const metadata: Metadata = {
   title: "Accademia | Corsi, Consulenze e Gruppi di Lavoro — Fabio Micale",
   description: "Formazione avanzata, percorsi personalizzati e supporto operativo per professionisti che puntano all'eccellenza.",
+  robots: { index: false, follow: false },
 };
 
 export default function AccademiaPage() {
