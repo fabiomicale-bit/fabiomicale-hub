@@ -32,7 +32,7 @@ export const posts: Post[] = [
       "produttività con l'AI, delegare all'AI, sistema produttività, recuperare tempo lavoro, automazione lavoro intelligente, AI strumento produttività",
     titolo:
       "Come ho recuperato 3 ore a settimana delegando all'AI quello che non richiede la mia testa.",
-    categoria: "Produttività",
+    categoria: "Passo 2 — Rimetti Struttura",
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
@@ -41,7 +41,7 @@ export const posts: Post[] = [
     coverAlt: "Orologio digitale etereo su scrivania vuota che rappresenta il recupero del tempo",
     excerpt:
       "C'è una differenza fondamentale tra essere occupati e lavorare bene. L'AI non ti rende automaticamente più produttivo — ma un sistema costruito bene, sì.",
-    correlati: ["manifesto-sistemi-autonomi", "sistemi-che-lavorano-per-te"],
+    correlati: ["manifesto-sistemi-autonomi", "sistemi-che-lavorano-per-te", "10-task-delegare-ai-lavoro"],
     step: 2,
     formats: ["strumento-pratico"],
     contentHtml: `
@@ -107,7 +107,7 @@ export const posts: Post[] = [
     spendendo il tuo tempo adesso.</p>
     <div class="blog-cta">
       <p>Vuoi mappare le tue attività e costruire il tuo sistema?</p>
-      <a href="/contatti">→ Scrivimi a info@fabiomicale.com</a>
+      <a href="/estratto">→ Inizia dall'estratto gratuito di Successo in 3 Passi</a>
     </div>
     <h2>Il sistema che funziona anche quando non ci sei tu</h2>
     <p>Il livello successivo non è usare l'AI per lavorare più velocemente.
@@ -145,8 +145,8 @@ export const posts: Post[] = [
     di insegnarlo ad altri</a>. Non perché fossi particolarmente
     bravo con la tecnologia — ma perché avevo bisogno di una soluzione
     che funzionasse davvero, non di una promessa.</p>
-    <p><a href="/contatti">Se vuoi costruire il tuo sistema,
-    parti da qui</a>.</p>
+    <p><a href="/estratto">Se vuoi costruire il tuo sistema,
+    inizia dall'estratto gratuito</a>.</p>
   `,
   },
   {
@@ -155,7 +155,7 @@ export const posts: Post[] = [
     seoDescription: "Scopri 10 attività concrete che puoi delegare all'intelligenza artificiale anche se non sei tecnico. Recupera fino a 5 ore a settimana. Guida pratica 2026.",
     keywords: "delegare all'AI, task AI lavoro, automazione lavoro, AI produttività professionisti, attività ripetitive AI, risparmiare tempo AI",
     titolo: "10 Task che Puoi Delegare all'AI Oggi (Anche se Non Sei Tecnico)",
-    categoria: "Produttività",
+    categoria: "Passo 2 — Rimetti Struttura",
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "6 aprile 2026",
     dataISO: "2026-04-06",
@@ -419,8 +419,8 @@ Una guida pratica di 20 pagine per capire il Metodo e muovere i primi passi. <a 
 <p><strong>2. Newsletter Settimanale</strong>
 Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso reale. <a href="/newsletter">Iscriviti gratis</a></p>
 
-<p><strong>3. Call Esplorativa Gratuita</strong>
-Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota una call di 30 minuti. <a href="/contatti">Prenota ora</a></p>
+<p><strong>3. Newsletter Settimanale Avanzata</strong>
+Ogni settimana: un nuovo strumento AI testato, un caso reale, un aggiornamento pratico. <a href="/newsletter">Iscriviti gratis</a></p>
 
 <hr>
 
@@ -436,7 +436,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p><em>Hai trovato utile questo articolo? Condividilo con un collega che ha bisogno di recuperare tempo.</em></p>
 
-<p><em>Domande? Scrivimi a <a href="mailto:info@fabiomicale.com">info@fabiomicale.com</a></em></p>
+<p><em>Hai trovato utile questo articolo? Condividi con un collega che vuole recuperare tempo.</em></p>
     `,
   },
   {
@@ -448,7 +448,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
       "paura obsolescenza professionale, over 40 intelligenza artificiale, reinventarsi professionalmente, mindset cambiamento, futuro del lavoro AI over 40",
     titolo:
       "Paura di essere tagliato fuori dall'AI? Hai ragione ad averla. Ecco cosa fare.",
-    categoria: "Mindset",
+    categoria: "Passo 1 — Ferma il Caos",
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "31 marzo 2026",
     dataISO: "2026-03-31",
@@ -457,7 +457,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     coverAlt: "Siluetta professionale fiduciosa che attraversa una luminosa soglia geometrica futuristica",
     excerpt:
       "Non una lista di consigli motivazionali. Non una promessa che andrà tutto bene. La paura di diventare obsoleto è reale — e ha qualcosa importante da dirti.",
-    correlati: ["manifesto-reinvenzione-over40", "reinventarsi-dopo-i-40-metodo"],
+    correlati: ["manifesto-reinvenzione-over40", "reinventarsi-dopo-i-40-metodo", "non-serve-essere-nativi-digitali"],
     step: 1,
     formats: ["appunti-di-metodo"],
     contentHtml: `
@@ -507,7 +507,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     e dove vuoi andare.</p>
     <div class="blog-cta">
       <p>Vuoi capire da dove iniziare nel tuo caso specifico?</p>
-      <a href="/contatti">→ Scrivimi a info@fabiomicale.com</a>
+      <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
     </div>
     <h2>Come si trasforma la paura in direzione</h2>
     <p>La paura è un segnale. Come tutti i segnali, ha un'informazione
@@ -554,8 +554,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     <p>È quando smettono di chiedersi "ce la farò?" e iniziano a
     chiedersi "da dove inizio?"</p>
     <p>La seconda domanda ha una risposta. La prima è un pozzo senza fondo.</p>
-    <p><a href="/contatti">Se sei pronto a passare dalla prima
-    domanda alla seconda, inizia da qui</a>.</p>
+    <p><a href="/estratto">Se sei pronto a passare dalla prima
+    domanda alla seconda, inizia dall'estratto gratuito</a>.</p>
   `,
   },
   {
@@ -566,8 +566,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     keywords:
       "ai esperienza professionale, intelligenza artificiale over 40, usare l'ai nel lavoro, ai vantaggio competitivo, professionisti e intelligenza artificiale",
     titolo: "Se hai 20 anni di esperienza, l'AI ti rende più forte. Ecco perché.",
-    categoria: "Intelligenza Artificiale",
-    categoriaClasses: "bg-blue-500/15 text-blue-400 border-blue-500/25",
+    categoria: "Passo 1 — Ferma il Caos",
+    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "24 marzo 2026",
     dataISO: "2026-03-24",
     tempoLettura: "8 min",
@@ -640,7 +640,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     <p>Se hai 40 anni, lo sai già. E puoi iniziare subito a costruire il tuo vantaggio.</p>
     <div class="blog-cta">
       <p>Vuoi approfondire questo tema?</p>
-      <a href="/contatti">→ Scrivimi a info@fabiomicale.com</a>
+      <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
     </div>
     <h2>Cosa significa in pratica</h2>
     <p>Ho lavorato con professionisti over 40 che hanno trasformato anni di competenze
@@ -660,8 +660,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     <p>Non passerà. Ma non è una minaccia — è un'opportunità con una finestra temporale.</p>
     <p>Chi la coglie adesso, mentre la maggior parte ancora osserva, costruisce un
     vantaggio competitivo difficile da colmare.</p>
-    <p><a href="/contatti">Se vuoi capire come farlo nel tuo caso specifico,
-    inizia da qui</a>.</p>
+    <p><a href="/estratto">Se vuoi capire come farlo nel tuo caso specifico,
+    inizia dall'estratto gratuito</a>.</p>
   `,
   },
 
@@ -674,8 +674,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     keywords:
       "AI esperienza professionale, intelligenza artificiale over 40, AI lavoro futuro, vantaggio competitivo AI",
     titolo: "Nell'era dell'AI, l'esperienza non è un peso. È il tuo superpotere.",
-    categoria: "Intelligenza Artificiale",
-    categoriaClasses: "bg-blue-500/15 text-blue-400 border-blue-500/25",
+    categoria: "Passo 1 — Ferma il Caos",
+    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "15 marzo 2026",
     dataISO: "2026-03-15",
     tempoLettura: "7 min",
@@ -723,7 +723,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <div class="blog-cta">
   <p>Vuoi approfondire questo tema?</p>
-  <a href="mailto:info@fabiomicale.com">→ Scrivimi a info@fabiomicale.com</a>
+  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
 </div>
 
 <h2>Cosa significa in pratica</h2>
@@ -742,7 +742,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Chi la coglie adesso, mentre la maggior parte ancora osserva, costruisce un vantaggio competitivo difficile da colmare.</p>
 
-<p><a href="/contatti">Se vuoi capire come farlo nel tuo caso specifico, inizia da qui</a></p>
+<p><a href="/estratto">Se vuoi capire come farlo nel tuo caso specifico, inizia dall'estratto gratuito</a></p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
     step: 1,
@@ -757,7 +757,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     keywords:
       "reinvenzione professionale over 40, cambiamento carriera dopo 40, mindset crescita, ripartire a 40 anni",
     titolo: "Reinventarsi dopo i 40: la guida che avrei voluto avere quando ne avevo bisogno.",
-    categoria: "Mindset",
+    categoria: "Passo 1 — Ferma il Caos",
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "14 marzo 2026",
     dataISO: "2026-03-14",
@@ -816,7 +816,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <div class="blog-cta">
   <p>Vuoi approfondire questo tema?</p>
-  <a href="mailto:info@fabiomicale.com">→ Scrivimi a info@fabiomicale.com</a>
+  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
 </div>
 
 <h2>Cosa c'entra l'AI con tutto questo</h2>
@@ -837,9 +837,9 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Ma è anche possibile. E chi lo fa con metodo, con onestà verso se stesso e con gli strumenti giusti, quasi sempre arriva dall'altra parte con qualcosa di più solido di quello che aveva prima.</p>
 
-<p><a href="/contatti">Se vuoi farlo con una guida, ecco come possiamo lavorare insieme</a></p>
+<p><a href="/estratto">Se vuoi farlo con metodo, inizia dall'estratto gratuito</a></p>
     `,
-    correlati: ["manifesto-ai-esperienza-vince", "manifesto-sistemi-autonomi"],
+    correlati: ["manifesto-ai-esperienza-vince", "manifesto-sistemi-autonomi", "non-serve-essere-nativi-digitali"],
     step: 1,
     formats: ["appunti-di-metodo", "diario-di-costruzione"],
   },
@@ -852,7 +852,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     keywords:
       "sistemi automatici business, automazione AI professionale, workflow automatizzati, produttività sistemi",
     titolo: "Il tuo lavoro non dovrebbe dipendere dalla tua presenza. Ecco come costruire sistemi che lavorano per te.",
-    categoria: "Produttività",
+    categoria: "Passo 2 — Rimetti Struttura",
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "13 marzo 2026",
     dataISO: "2026-03-13",
@@ -892,7 +892,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p><strong>Livello 1: Automatizzare il ripetibile</strong></p>
 <p>Ogni attività che fai più di una volta con gli stessi passaggi può essere automatizzata o sistematizzata. Email ricorrenti. Report periodici. Processi di onboarding. Follow-up commerciali.</p>
-<p>In questo livello l'AI è uno strumento potentissimo. <a href="/contatti">Nei servizi AI che offro</a> mi occupo esattamente di questo: identificare i processi ripetibili e costruire i sistemi che li gestiscono.</p>
+<p>In questo livello l'AI è uno strumento potentissimo. <a href="/il-metodo">Nel metodo che ho sviluppato</a> mi occupo esattamente di questo: identificare i processi ripetibili e costruire i sistemi che li gestiscono.</p>
 
 <p><strong>Livello 2: Documentare la conoscenza</strong></p>
 <p>La tua competenza è nella tua testa. Questo la rende fragile.</p>
@@ -906,7 +906,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <div class="blog-cta">
   <p>Vuoi approfondire questo tema?</p>
-  <a href="mailto:info@fabiomicale.com">→ Scrivimi a info@fabiomicale.com</a>
+  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
 </div>
 
 <h2>Perché adesso è il momento giusto</h2>
@@ -929,9 +929,9 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>La domanda non è se puoi permetterti di farlo. È se puoi permetterti di non farlo.</p>
 
-<p><a href="/contatti">Se vuoi parlarne, sono qui</a></p>
+<p><a href="/estratto">Se vuoi costruire il tuo sistema, inizia dall'estratto gratuito</a></p>
     `,
-    correlati: ["manifesto-reinvenzione-over40", "sistemi-che-lavorano-per-te"],
+    correlati: ["manifesto-reinvenzione-over40", "sistemi-che-lavorano-per-te", "10-task-delegare-ai-lavoro"],
     step: 2,
     formats: ["appunti-di-metodo"],
   },
@@ -944,8 +944,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
       "Scopri perché l'AI non è una minaccia per chi ha più di 40 anni ma un'opportunità enorme. Fabio Micale spiega come usarla per reinventarsi professionalmente.",
     keywords: "AI over 40, intelligenza artificiale professionisti, reinvenzione professionale, AI lavoro",
     titolo: "L'AI ha più di 40 anni? Ecco perché è un vantaggio, non una minaccia",
-    categoria: "Intelligenza Artificiale",
-    categoriaClasses: "bg-blue-500/15 text-blue-400 border-blue-500/25",
+    categoria: "Passo 1 — Ferma il Caos",
+    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "10 marzo 2026",
     dataISO: "2026-03-10",
     tempoLettura: "5 min",
@@ -981,7 +981,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <div class="blog-cta">
   <p>Vuoi approfondire questo tema?</p>
-  <a href="mailto:info@fabiomicale.com">→ Scrivimi a info@fabiomicale.com</a>
+  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
 </div>
 
 <h2>Cosa fare adesso</h2>
@@ -992,7 +992,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>L'AI non è qui per sostituirti. È qui per amplificarti.</p>
 
-<p>Se vuoi capire come applicare tutto questo alla tua situazione specifica, <a href="/contatti">scrivimi e ne parliamo</a>.</p>
+<p>Se vuoi capire come applicare tutto questo alla tua situazione specifica, <a href="/estratto">inizia dall'estratto gratuito</a>.</p>
     `,
     correlati: ["reinventarsi-dopo-i-40-metodo", "sistemi-che-lavorano-per-te"],
     step: 1,
@@ -1007,7 +1007,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     keywords:
       "reinventarsi dopo 40 anni, cambiamento professionale, transizione carriera over 40, metodo reinvenzione",
     titolo: "Reinventarsi dopo i 40: non è un salto nel vuoto, è un metodo",
-    categoria: "Mindset",
+    categoria: "Passo 1 — Ferma il Caos",
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "5 marzo 2026",
     dataISO: "2026-03-05",
@@ -1046,7 +1046,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <div class="blog-cta">
   <p>Vuoi approfondire questo tema?</p>
-  <a href="mailto:info@fabiomicale.com">→ Scrivimi a info@fabiomicale.com</a>
+  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
 </div>
 
 <h2>Il primo passo</h2>
@@ -1055,7 +1055,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Non dove pensi di essere. Non dove vorresti essere. Dove sei.</p>
 
-<p>Da lì si costruisce tutto il resto. Se vuoi farlo insieme, <a href="/contatti">scopri come possiamo lavorare insieme</a>.</p>
+<p>Da lì si costruisce tutto il resto. <a href="/estratto">Inizia dall'estratto gratuito</a>.</p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "sistemi-che-lavorano-per-te"],
     step: 1,
@@ -1070,7 +1070,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     keywords:
       "sistemi produttività, automazione lavoro, workflow AI, produttività over 40, sistemi che funzionano",
     titolo: "Costruisci sistemi che lavorano per te, non il contrario",
-    categoria: "Produttività",
+    categoria: "Passo 2 — Rimetti Struttura",
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "28 febbraio 2026",
     dataISO: "2026-02-28",
@@ -1102,11 +1102,11 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <h2>L'AI come acceleratore di sistemi</h2>
 
-<p>Oggi l'intelligenza artificiale permette di costruire sistemi in tempi che fino a pochi anni fa erano impensabili. <a href="/contatti">Se vuoi implementare sistemi AI nel tuo business, scopri i miei servizi</a></p>
+<p>Oggi l'intelligenza artificiale permette di costruire sistemi in tempi che fino a pochi anni fa erano impensabili. <a href="/estratto">Se vuoi costruire il tuo sistema, inizia dall'estratto gratuito</a></p>
 
 <div class="blog-cta">
   <p>Vuoi approfondire questo tema?</p>
-  <a href="mailto:info@fabiomicale.com">→ Scrivimi a info@fabiomicale.com</a>
+  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
 </div>
 
 <h2>Come iniziare</h2>
@@ -1117,7 +1117,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 
 <p>Nel tempo, quei sistemi lavorano per te. Tu lavori su cose che contano davvero.</p>
 
-<p>Hai bisogno di aiuto per iniziare? <a href="/contatti">Scrivimi, ne parliamo</a>.</p>
+<p>Hai bisogno di aiuto per iniziare? <a href="/estratto">Inizia dall'estratto gratuito</a>.</p>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "reinventarsi-dopo-i-40-metodo"],
     step: 2,
@@ -1131,8 +1131,8 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     keywords:
       "Claude AI, come usare Claude, AI per professionisti, intelligenza artificiale lavoro, AI over 40, guida Claude AI, assistente AI per non tecnici",
     titolo: "Claude AI: come usarlo davvero al lavoro (guida per non tecnici)",
-    categoria: "Intelligenza Artificiale",
-    categoriaClasses: "bg-blue-500/15 text-blue-400 border-blue-500/25",
+    categoria: "Passo 2 — Rimetti Struttura",
+    categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
     tempoLettura: "7 min",
@@ -1209,15 +1209,15 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
 <p>Aprilo adesso, anche solo per provare le email difficili. Se non ti cambia almeno una cosa nella tua settimana lavorativa, mi scrivi e parliamo.</p>
 
 <div class="blog-cta">
-  <p>Vuoi un percorso guidato per usare l'AI nel tuo lavoro specifico?</p>
-  <a href="/contatti">→ Scopri come lavorare con me</a>
+  <p>Vuoi ricevere ogni settimana uno strumento pratico come questo?</p>
+  <a href="/newsletter">→ Iscriviti alla newsletter gratuita</a>
 </div>
 
 <h2>Una cosa sola da fare oggi</h2>
 
 <p>Pensa all'ultima email difficile che hai rimandato. Quella che hai in testa da ieri, da tre giorni, forse da una settimana. Aprila. Vai su claude.ai. Scrivi: "Sono [il tuo ruolo]. Ho questa situazione: [descrivi]. Aiutami a scrivere una risposta [tono desiderato], massimo [X] parole."</p>
 
-<p>Poi <a href="/contatti">dimmi com'è andata</a>.</p>
+<p>Poi <a href="/newsletter">iscriviti alla newsletter per altri strumenti pratici ogni settimana</a>.</p>
     `,
   },
   {
@@ -1226,7 +1226,7 @@ Vuoi aiuto personalizzato per implementare questi task nel tuo business? Prenota
     seoDescription: "Sfatare il mito giovanilistico dell'Intelligenza Artificiale. Perché i professionisti over 40 hanno un vantaggio competitivo grazie all'esperienza.",
     keywords: "mindset, nativi digitali, decision makers, over 40, esperienza, intelligenza artificiale, vantaggio competitivo",
     titolo: "Non serve essere 'Nativi Digitali'. Serve essere Decision Makers.",
-    categoria: "Mindset",
+    categoria: "Passo 1 — Ferma il Caos",
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "8 aprile 2026",
     dataISO: "2026-04-08",
