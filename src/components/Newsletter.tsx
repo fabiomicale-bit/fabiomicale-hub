@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/lib/ga";
 
 export default function Newsletter() {
   const [nome, setNome] = useState("");
@@ -28,6 +29,10 @@ export default function Newsletter() {
       });
 
       if (res.ok) {
+        trackEvent("newsletter_submit", {
+          source_page: window.location.pathname,
+          form_name: "newsletter-page-form",
+        });
         setStatus("success");
       } else {
         setStatus("error");

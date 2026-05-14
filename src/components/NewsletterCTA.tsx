@@ -8,6 +8,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { trackEvent } from "@/lib/ga";
 
 type NewsletterVariant = "default" | "book-excerpt" | "article" | "newsletter";
 
@@ -79,9 +80,19 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
       });
       
       if (res.ok) {
-        setStatus("success");
         if (variant === "book-excerpt") {
+          trackEvent("lead_estratto_submit", {
+            source_page: window.location.pathname,
+            form_name: "book-excerpt-form",
+          });
+          setStatus("success");
           window.location.href = "/grazie-estratto";
+        } else {
+          trackEvent("newsletter_submit", {
+            source_page: window.location.pathname,
+            form_name: `newsletter-cta-${variant}`,
+          });
+          setStatus("success");
         }
       } else {
         setStatus("error");

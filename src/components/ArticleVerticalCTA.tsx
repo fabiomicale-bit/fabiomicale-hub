@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { trackEvent } from "@/lib/ga";
 
 type Step = 1 | 2 | "3A" | "3B";
 
@@ -40,6 +42,15 @@ export default function ArticleVerticalCTA({ step }: ArticleVerticalCTAProps) {
   const meta = ctaMeta[String(step)];
   if (!meta) return null;
 
+  const handleCTAClick = () => {
+    const eventName = meta.href === "/estratto" ? "cta_estratto_click" : "cta_newsletter_click";
+    trackEvent(eventName, {
+      source_page: window.location.pathname,
+      cta_text: meta.ctaLabel,
+      destination_url: meta.href,
+    });
+  };
+
   return (
     <div className="my-12 rounded-3xl border border-hub-border bg-hub-bg-alt p-10">
       <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-4">
@@ -54,6 +65,7 @@ export default function ArticleVerticalCTA({ step }: ArticleVerticalCTAProps) {
       </p>
       <Link
         href={meta.href}
+        onClick={handleCTAClick}
         className="btn-gold inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em]"
       >
         {meta.ctaLabel} →

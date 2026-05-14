@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { updateConsent } from '@/lib/ga'
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
@@ -11,11 +12,13 @@ export default function CookieBanner() {
 
   const accept = () => {
     localStorage.setItem('cookie-consent', 'all')
+    updateConsent(true)
     setVisible(false)
   }
 
   const necessary = () => {
     localStorage.setItem('cookie-consent', 'necessary')
+    updateConsent(false)
     setVisible(false)
   }
 
@@ -27,7 +30,7 @@ export default function CookieBanner() {
         <p className="text-sm text-hub-ink-muted max-w-2xl">
           Questo sito usa cookie tecnici e di analytics per migliorare l&apos;esperienza.
           Nessuna pubblicità, nessuna profilazione.{' '}
-          <a href="/privacy" className="text-hub-gold underline hover:text-hub-gold-dark">
+          <a href="/cookies" className="text-hub-gold underline hover:text-hub-gold-dark">
             Cookie Policy
           </a>
         </p>
