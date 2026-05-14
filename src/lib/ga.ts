@@ -31,5 +31,8 @@ export function trackEvent(
 ) {
   if (typeof window === "undefined" || typeof window.gtag !== "function") return;
   if (!hasAnalyticsConsent()) return;
+  if (process.env.NODE_ENV === "development") {
+    console.log(`[GA debug] ${eventName}`, params);
+  }
   window.gtag("event", eventName, params);
 }

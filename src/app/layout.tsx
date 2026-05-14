@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Script from "next/script";
 import GAPageTracker from "@/components/GAPageTracker";
+import CTAClickTracker from "@/components/CTAClickTracker";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -175,6 +176,7 @@ export default function RootLayout({
         <BackToTop />
         <CookieBanner />
         <GAPageTracker />
+        <CTAClickTracker />
       </body>
     </html>
   );
