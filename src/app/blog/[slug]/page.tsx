@@ -71,6 +71,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.seoDescription,
     keywords: post.keywords,
     datePublished: post.dataISO,
+    dateModified: post.dataISO,
     articleSection: stepSectionLabels[String(post.step)] ?? "Metodo Successo in 3 Passi",
     author: {
       "@type": "Person",

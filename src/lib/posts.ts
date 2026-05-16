@@ -416,27 +416,10 @@ A presto,
 <p><strong>1. Estratto gratuito: "Successo in 3 Passi"</strong>
 Una guida pratica di 20 pagine per capire il Metodo e muovere i primi passi. <a href="/estratto">Scaricala gratis qui</a></p>
 
-<p><strong>2. Newsletter Settimanale</strong>
+<p><strong>2. Newsletter "Un Passo Avanti"</strong>
 Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso reale. <a href="/newsletter">Iscriviti gratis</a></p>
 
-<p><strong>3. Newsletter Settimanale Avanzata</strong>
-Ogni settimana: un nuovo strumento AI testato, un caso reale, un aggiornamento pratico. <a href="/newsletter">Iscriviti gratis</a></p>
-
-<hr>
-
-<h2>Articoli Correlati</h2>
-
-<ul>
-<li><a href="/blog/claude-ai-come-usarlo-al-lavoro">Claude AI: come usarlo davvero al lavoro (guida per non tecnici)</a></li>
-<li><a href="/blog/recuperare-tempo-delegare-ai-sistema">Come ho recuperato 3 ore a settimana delegando all'AI</a></li>
-<li><a href="/blog/sistemi-che-lavorano-per-te">Costruisci sistemi che lavorano per te, non il contrario</a></li>
-</ul>
-
-<hr>
-
 <p><em>Hai trovato utile questo articolo? Condividilo con un collega che ha bisogno di recuperare tempo.</em></p>
-
-<p><em>Hai trovato utile questo articolo? Condividi con un collega che vuole recuperare tempo.</em></p>
     `,
   },
   {
@@ -1254,7 +1237,7 @@ Ogni settimana: un nuovo strumento AI testato, un caso reale, un aggiornamento p
 <p>Smetti di chiederti "Come funziona questo algoritmo?". Inizia a chiederti: <em>"Cosa posso far fare a questo software per sbloccare la mia mente per farle fare vero lavoro dirigenziale?"</em></p>
 <p>Non serve essere nativi digitali. L'AI non rimpiazza il giudizio strategico, lo esegue. Metti a frutto i decenni della tua esperienza e usa questi nuovi alleati digitali per fare ciò in cui sei insostituibile: <strong>prendere decisioni e gestire esseri umani.</strong></p>
 
-<p>Inizia a costruire il tuo ecosistema: <a href="/successo-in-3-passi">Scarica ora il Capitolo 1 del mio libro</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
+<p>Inizia a costruire il tuo ecosistema: <a href="/estratto">Leggi l'estratto gratuito di Successo in 3 Passi</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
     `,
     correlati: ["ai-esperienza-professionale-vantaggio", "paura-obsolescenza-professionale-ai"],
     step: 1,
