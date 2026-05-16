@@ -23,16 +23,16 @@ const stepMeta: Record<
     label: "Scarica l'estratto gratuito",
   },
   "3A": {
-    name: "Passo 3A — Motore Fatturato",
-    description: "Costruire un canale stabile di partecipazione alla PA e MEPA.",
-    href: "/newsletter",
-    label: "Iscriviti alla newsletter",
+    name: "Passo 3 — Mantieni il Controllo",
+    description: "Il terzo passo del Metodo Successo in 3 Passi serve a rivedere, correggere e mantenere nel tempo il percorso iniziato.",
+    href: "/estratto",
+    label: "Leggi l'estratto gratuito",
   },
   "3B": {
-    name: "Passo 3B — Motore Acquisizione",
-    description: "Un sistema AI di lead generation che funziona in autonomia.",
-    href: "/newsletter",
-    label: "Iscriviti alla newsletter",
+    name: "Passo 3 — Mantieni il Controllo",
+    description: "Il terzo passo del Metodo Successo in 3 Passi serve a rivedere, correggere e mantenere nel tempo il percorso iniziato.",
+    href: "/estratto",
+    label: "Leggi l'estratto gratuito",
   },
 };
 

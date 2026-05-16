@@ -23,16 +23,16 @@ const ctaMeta: Record<
     ctaLabel: "Scarica l'estratto gratuito",
   },
   "3A": {
-    problem: "il tuo fatturato dipende da clienti privati e vuoi aprire la PA",
-    stepLabel: "Passo 3A",
-    href: "/newsletter",
-    ctaLabel: "Iscriviti alla newsletter",
+    problem: "mantenere il controllo nel tempo richiede un sistema di revisione, non solo volontà",
+    stepLabel: "Passo 3",
+    href: "/estratto",
+    ctaLabel: "Scarica l'estratto gratuito",
   },
   "3B": {
-    problem: "la tua acquisizione clienti dipende ancora dal passaparola",
-    stepLabel: "Passo 3B",
-    href: "/newsletter",
-    ctaLabel: "Iscriviti alla newsletter",
+    problem: "mantenere il controllo nel tempo richiede un sistema di revisione, non solo volontà",
+    stepLabel: "Passo 3",
+    href: "/estratto",
+    ctaLabel: "Scarica l'estratto gratuito",
   },
 };
 
