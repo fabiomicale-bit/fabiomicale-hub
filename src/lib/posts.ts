@@ -37,6 +37,8 @@ export const posts: Post[] = [
     data: "17 maggio 2026",
     dataISO: "2026-05-17",
     tempoLettura: "8 min",
+    ogImage: "/blog/cover_revisione_settimanale.png",
+    coverAlt: "Taccuino di revisione settimanale con bussola e linee digitali, simbolo del Passo 3 del Metodo Successo in 3 Passi: mantenere il controllo con priorità, verifica e correzione.",
     excerpt:
       "Una ripartenza non fallisce sempre per mancanza di volontà. Spesso fallisce perché manca un sistema di revisione che ti riporti in carreggiata.",
     correlati: ["manifesto-sistemi-autonomi", "manifesto-reinvenzione-over40", "recuperare-tempo-delegare-ai-sistema"],
