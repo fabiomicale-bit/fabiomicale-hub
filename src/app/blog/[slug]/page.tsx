@@ -70,6 +70,7 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.titolo,
     description: post.seoDescription,
     keywords: post.keywords,
+    image: `https://www.fabiomicale.com${post.ogImage || "/fabio-hero.jpg"}`,
     datePublished: post.dataISO,
     dateModified: post.dataISO,
     articleSection: stepSectionLabels[String(post.step)] ?? "Metodo Successo in 3 Passi",

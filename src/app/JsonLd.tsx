@@ -8,26 +8,17 @@ const personSchema = {
   name: "Fabio Micale",
   url: "https://www.fabiomicale.com",
   image: "https://www.fabiomicale.com/og-image.jpg",
-  jobTitle: "Expert Advisor in Organizzazione d'Impresa e Appalti Pubblici",
+  jobTitle: "Autore e Formatore",
   description:
-    "30 anni di esperienza operativa nella gestione d'impresa, edilizia e appalti pubblici. Fondatore di MEPA Elite e Impresa Liquida. Ha gestito oltre 13.000.000€ di budget, 150+ cantieri e 30+ appalti pubblici aggiudicati.",
+    "Fabio Micale è scrittore e formatore. Autore di «Successo in 3 Passi», aiuta professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione professionale nell'era dell'intelligenza artificiale.",
   knowsAbout: [
-    "Appalti Pubblici",
-    "MEPA",
-    "Gestione Aziendale",
-    "Organizzazione d'Impresa",
-    "Edilizia e Impiantistica",
-    "Senior Project Management",
-    "Impresa Liquida",
-    "Automazione con AI",
-    "Scalabilità del Fatturato",
-  ],
-  hasCredential: [
-    "Senior Project Manager - Appalti Pubblici e Privati dal 2019",
-    "Gestione Organizzativa Aziendale dal 1996",
-    "13.000.000€+ di Budget Gestito",
-    "150+ Cantieri Realizzati",
-    "30+ Appalti Pubblici Aggiudicati (MEPA/Consob)",
+    "Crescita personale",
+    "Metodo e struttura professionale",
+    "Intelligenza artificiale applicata al lavoro",
+    "Formazione per professionisti Over 40",
+    "Autodisciplina e produttività",
+    "Reinvenzione professionale",
+    "Scrittura e divulgazione",
   ],
   sameAs: [
     "https://www.linkedin.com/in/fabiomicale/",
@@ -43,7 +34,7 @@ const websiteSchema = {
   name: "Fabio Micale",
   url: "https://www.fabiomicale.com",
   description:
-    "Expert Advisor in Organizzazione d'Impresa e Appalti Pubblici. Sistemi operativi per scalare il fatturato (MEPA Elite) e liberare il tempo (Impresa Liquida). Per imprenditori e professionisti over 40 nei settori Edilizia, Impiantistica e Pubblica Amministrazione.",
+    "Sito editoriale di Fabio Micale, autore di Successo in 3 Passi. Metodo, formazione e strumenti pratici per la crescita professionale dei professionisti Over 40 nell'era dell'intelligenza artificiale.",
   inLanguage: "it-IT",
   author: { "@id": "https://www.fabiomicale.com/#person" },
   publisher: { "@id": "https://www.fabiomicale.com/#person" },
@@ -51,67 +42,6 @@ const websiteSchema = {
     "@type": "SearchAction",
     target: "https://www.fabiomicale.com/blog?q={search_term_string}",
     "query-input": "required name=search_term_string",
-  },
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "@id": "https://www.fabiomicale.com/#organization",
-  name: "Fabio Micale - Consulenza Strategica",
-  url: "https://www.fabiomicale.com",
-  founder: { "@id": "https://www.fabiomicale.com/#person" },
-  description:
-    "Consulenza strategica per PMI e professionisti in Appalti Pubblici e Organizzazione d'Impresa.",
-  areaServed: "IT",
-  knowsAbout: [
-    "Appalti Pubblici MEPA",
-    "Organizzazione Aziendale",
-    "Impresa Liquida",
-    "Senior Project Management",
-    "Edilizia e Impiantistica",
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Sistemi Master",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "MEPA Elite",
-          description:
-            "Lifecycle completo appalti pubblici: dall'abilitazione portale MEPA all'incasso certo.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Impresa Liquida",
-          description:
-            "Organizzazione e automazione operativa con AI per uscire dal cantiere e scalare il business.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Agenzia Business",
-          description:
-            "Sistemi di acquisizione clienti basati su AI, Pubblicità Online e Funnel di Conversione.",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Punto Zero",
-          description:
-            "Protocollo di reset strategico e rivincita professionale per over 40.",
-        },
-      },
-    ],
   },
 };
 
@@ -125,10 +55,6 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
     </>
   );
