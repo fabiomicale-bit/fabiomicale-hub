@@ -29,7 +29,9 @@ export function trackEvent(
   eventName: string,
   params: Record<string, string | undefined> = {}
 ) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+  if (typeof window === "undefined") return;
+  if (window.location.hostname !== "www.fabiomicale.com") return;
+  if (typeof window.gtag !== "function") return;
   if (!hasAnalyticsConsent()) return;
   if (process.env.NODE_ENV === "development") {
     console.log(`[GA debug] ${eventName}`, params);

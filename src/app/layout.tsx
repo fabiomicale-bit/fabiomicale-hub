@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import Script from "next/script";
 import GAPageTracker from "@/components/GAPageTracker";
 import CTAClickTracker from "@/components/CTAClickTracker";
+import GAScripts from "@/components/GAScripts";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -110,47 +111,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className="scroll-smooth">
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-X3T310RBZ0"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-
-          // Google Consent Mode v2: default negato — nessun dato raccolto senza consenso
-          gtag('consent', 'default', {
-            analytics_storage: 'denied',
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            wait_for_update: 500,
-          });
-
-          // Ripristino consenso per utenti di ritorno che hanno già accettato
-          if (typeof localStorage !== 'undefined' && localStorage.getItem('cookie-consent') === 'all') {
-            gtag('consent', 'update', {
-              analytics_storage: 'granted',
-              ad_storage: 'granted',
-              ad_user_data: 'granted',
-              ad_personalization: 'granted',
-            });
-          }
-
-          // FM Ghost Mode: Esclusione traffico amministratore
-          if (typeof document !== 'undefined' && (document.cookie.includes('fm_admin=true') || window.location.search.includes('fm_admin=true'))) {
-            if (window.location.search.includes('fm_admin=true')) {
-              document.cookie = "fm_admin=true; path=/; max-age=" + (365*24*60*60);
-            }
-            window['ga-disable-G-X3T310RBZ0'] = true;
-            console.log('FM Ghost Mode: ATTIVO - Navigazione invisibile');
-          }
-
-          gtag('js', new Date());
-          gtag('config', 'G-X3T310RBZ0', { send_page_view: false });
-        `}
-      </Script>
       <Script id="fb-pixel" strategy="afterInteractive">
         {`
           (function() {
@@ -179,6 +139,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         <CookieBanner />
+        <GAScripts />
         <GAPageTracker />
         <CTAClickTracker />
       </body>
