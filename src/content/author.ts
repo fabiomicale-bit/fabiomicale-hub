@@ -2,6 +2,10 @@ export const author = {
   name: "Fabio Micale",
   shortBio:
     "Fabio Micale è autore del Metodo Successo in 3 Passi. Aiuta professionisti e imprenditori Over 40 a fermare il caos, rimettere struttura e costruire sistemi di continuità personale e professionale.",
+  articleBio:
+    "Fabio Micale è autore e formatore. Aiuta professionisti over 40 a ripartire con metodo, struttura e uso pratico dell'AI. È autore di Successo in 3 Passi — Edizione 2026.",
+  articleMicrofrase:
+    "Prima di aggiungere strumenti, costruisci struttura.",
   fullBio: [
     "Fabio Micale ha 56 anni. Vive tra Italia e Polonia. Da oltre venticinque anni si occupa di sviluppo personale e professionale.",
     "Ha costruito e gestito aziende nel settore dei servizi, dell'edilizia e dell'impiantistica. Ha attraversato successi che gli hanno dato fiducia e fallimenti che gli hanno dato saggezza. Ha imparato la differenza tra costruire e accumulare, tra movimento e progresso, tra fare cose e fare le cose giuste.",

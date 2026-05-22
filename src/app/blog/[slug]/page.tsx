@@ -13,6 +13,7 @@ import TableOfContents from "./TableOfContents";
 import { injectHeadingIds } from "./headingUtils";
 import ShareBar from "./ShareBar";
 import CommentoForm from "@/components/CommentoForm";
+import ArticleAuthorBox from "@/components/ArticleAuthorBox";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -232,6 +233,7 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </section>
       <NewsletterCTA variant="article" />
+      <ArticleAuthorBox />
 
       {/* ── FORM COMMENTI ───────────────────────────────────────── */}
       <section className="py-32 px-6 bg-hub-bg">

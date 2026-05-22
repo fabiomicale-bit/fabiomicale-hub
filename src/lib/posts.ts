@@ -1708,8 +1708,18 @@ export function getPostsBySlug(slugs: string[]): Post[] {
     .filter(Boolean) as Post[];
 }
 
+// Selezione stabile: un articolo per Passo, in ordine P1 → P2 → P3.
+// Modificare questi slug quando si vuole promuovere un articolo diverso per ogni Passo.
+const MANIFESTO_SLUGS = [
+  "over-40-ai-esperienza",                       // Passo 1 — Ferma il Caos
+  "manifesto-sistemi-autonomi",                  // Passo 2 — Rimetti Struttura
+  "mantieni-il-controllo-revisione-settimanale", // Passo 3 — Mantieni il Controllo
+];
+
 export function getManifestoPosts(): Post[] {
-  return posts.filter((p) => p.manifesto === true);
+  return MANIFESTO_SLUGS
+    .map((slug) => posts.find((p) => p.slug === slug))
+    .filter(Boolean) as Post[];
 }
 
 export function getRegularPosts(): Post[] {
