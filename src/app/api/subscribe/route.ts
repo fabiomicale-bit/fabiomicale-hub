@@ -50,9 +50,10 @@ export async function POST(req: NextRequest) {
 
   // --- Variant routing ---
   const isBookExcerpt = variant === "book-excerpt";
+  const isBookWaitlist = variant === "book-waitlist";
   const isNewsletter = NEWSLETTER_VARIANTS.includes(variant);
 
-  if (!isBookExcerpt && !isNewsletter) {
+  if (!isBookExcerpt && !isBookWaitlist && !isNewsletter) {
     console.warn(`[subscribe] Variant non supportata: "${variant}" — richiesta rifiutata.`);
     return NextResponse.json(
       { success: false, error: "Tipo di richiesta non supportato." },
@@ -60,10 +61,29 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const backendSource = isBookExcerpt ? "estratto_s3p_2026" : "newsletter_un_passo_avanti";
-  const backendTag = isBookExcerpt ? "lead_magnet_s3p_2026" : "un_passo_avanti";
-  const beehiivTag = isBookExcerpt ? "lead_magnet_s3p_2026" : "un_passo_avanti";
-  const utmSource = isBookExcerpt ? "estratto_s3p_2026" : "newsletter_un_passo_avanti";
+  const backendSource = isBookExcerpt
+    ? "estratto_s3p_2026"
+    : isBookWaitlist
+      ? "book_waitlist_s3p_2026"
+      : "newsletter_un_passo_avanti";
+
+  const backendTag = isBookExcerpt
+    ? "lead_magnet_s3p_2026"
+    : isBookWaitlist
+      ? "book_launch_waitlist_s3p_2026"
+      : "un_passo_avanti";
+
+  const beehiivTag = isBookExcerpt
+    ? "lead_magnet_s3p_2026"
+    : isBookWaitlist
+      ? "book_launch_waitlist_s3p_2026"
+      : "un_passo_avanti";
+
+  const utmSource = isBookExcerpt
+    ? "estratto_s3p_2026"
+    : isBookWaitlist
+      ? "book_waitlist_s3p_2026"
+      : "newsletter_un_passo_avanti";
 
   // --- 1. Backend Dashboard ---
   const BACKEND_URL = process.env.BACKEND_API_URL;

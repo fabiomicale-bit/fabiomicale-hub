@@ -10,7 +10,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/ga";
 
-type NewsletterVariant = "default" | "book-excerpt" | "article" | "newsletter";
+type NewsletterVariant = "default" | "book-excerpt" | "article" | "newsletter" | "book-waitlist";
 
 interface NewsletterCTAProps {
   variant?: NewsletterVariant;
@@ -18,7 +18,7 @@ interface NewsletterCTAProps {
 
 const variantCopy: Record<
   NewsletterVariant,
-  { eyebrow: string; title: string; subtitle: string; cta: string }
+  { eyebrow: string; title: string; subtitle: string; cta: string; successMessage?: string; newsletterLabel?: string }
 > = {
   default: {
     eyebrow: "UN PASSO AVANTI",
@@ -47,6 +47,16 @@ const variantCopy: Record<
     subtitle:
       "Ogni settimana un contenuto pratico per rimettere ordine: una riflessione, uno strumento, un esercizio o un'applicazione dell'AI alla crescita Over 40.",
     cta: "Iscriviti gratis",
+  },
+  "book-waitlist": {
+    eyebrow: "IL LIBRO FISICO",
+    title: "Avvisami quando il libro è disponibile.",
+    subtitle:
+      "La versione fisica di Successo in 3 Passi sarà disponibile a breve. Lascia la tua email e ti avviserò al lancio.",
+    cta: "Avvisami al lancio",
+    successMessage: "Perfetto. Ti avviserò quando il libro sarà disponibile.",
+    newsletterLabel:
+      "Acconsento a ricevere aggiornamenti sul lancio del libro e la newsletter Un Passo Avanti.",
   },
 };
 
@@ -87,6 +97,12 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           });
           setStatus("success");
           window.location.href = "/grazie-estratto";
+        } else if (variant === "book-waitlist") {
+          trackEvent("lead_book_waitlist_submit", {
+            source_page: window.location.pathname,
+            form_name: "book-waitlist-form",
+          });
+          setStatus("success");
         } else {
           trackEvent("newsletter_submit", {
             source_page: window.location.pathname,
@@ -106,7 +122,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
     if (variant === "book-excerpt") return null; // redirect in corso
     return (
       <section
-        id="newsletter"
+        id={variant === "book-waitlist" ? "avviso-lancio" : "newsletter"}
         className="py-24 px-6 bg-hub-cream border-t border-hub-border"
       >
         <div className="max-w-2xl mx-auto text-center">
@@ -115,11 +131,11 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <p className="text-2xl font-serif text-hub-ink mb-3">Iscrizione ricevuta.</p>
+          <p className="text-2xl font-serif text-hub-ink mb-3">Ricevuto.</p>
           <p className="text-hub-ink-muted font-light">
-            {newsletterAccepted
+            {copy.successMessage ?? (newsletterAccepted
               ? "Da ora riceverai Un Passo Avanti ogni settimana."
-              : "I tuoi dati sono stati registrati."}
+              : "I tuoi dati sono stati registrati.")}
           </p>
         </div>
       </section>
@@ -128,7 +144,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
 
   return (
     <section
-      id={variant === "book-excerpt" ? "estratto" : "newsletter"}
+      id={variant === "book-excerpt" ? "estratto" : variant === "book-waitlist" ? "avviso-lancio" : "newsletter"}
       className="py-24 px-6 bg-hub-cream border-t border-hub-border"
     >
       <div className="max-w-2xl mx-auto text-center">
@@ -209,7 +225,9 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
                   className="mt-1 w-4 h-4 rounded border-hub-border text-hub-gold focus:ring-hub-gold"
                 />
                 <span className="text-[11px] text-hub-ink-muted leading-tight font-light group-hover:text-hub-ink transition-colors">
-                  Acconsento a ricevere la newsletter <span className="italic">Un Passo Avanti</span> e comunicazioni collegate al Metodo Successo in 3 Passi.
+                  {copy.newsletterLabel ?? (
+                    <>Acconsento a ricevere la newsletter <span className="italic">Un Passo Avanti</span> e comunicazioni collegate al Metodo Successo in 3 Passi.</>
+                  )}
                 </span>
               </label>
             </div>
