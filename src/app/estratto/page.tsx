@@ -3,7 +3,7 @@ import Link from "next/link";
 import NewsletterCTA from "@/components/NewsletterCTA";
 
 export const metadata: Metadata = {
-  title: "Estratto Gratuito — Successo in 3 Passi | Fabio Micale",
+  title: "Estratto Gratuito — Successo in 3 Passi",
   description:
     "Ricevi gratuitamente i primi capitoli di Successo in 3 Passi — Edizione 2026 e il primo passo pratico del Metodo per professionisti Over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/estratto" },
@@ -24,7 +24,7 @@ export default function EstrattoPage() {
           <div className="badge-editorial mb-8 mx-auto">Edizione 2026</div>
           <h1 className="text-4xl md:text-6xl font-serif font-medium leading-[1.05] tracking-tight mb-6">
             I primi capitoli di{" "}
-            <span className="italic text-hub-gold">Successo in 3 Passi.</span>{" "}
+            <Link href="/successo-in-3-passi" className="italic text-hub-gold hover:underline underline-offset-4">Successo in 3 Passi.</Link>{" "}
             Gratis.
           </h1>
           <p className="text-xl text-hub-ink-muted leading-relaxed max-w-2xl mx-auto font-light mb-10">

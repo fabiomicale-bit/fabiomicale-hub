@@ -13,7 +13,7 @@ const jsonLd = {
     "Un libro pratico per professionisti over 40 che vogliono rimettere ordine nel lavoro e nella direzione professionale — senza ricominciare da zero.",
   inLanguage: "it-IT",
   genre: "Business & Self-Help",
-  numberOfPages: "119",
+  numberOfPages: 119,
   bookFormat: "https://schema.org/Paperback",
   author: {
     "@type": "Person",
@@ -21,10 +21,15 @@ const jsonLd = {
     name: "Fabio Micale",
     url: "https://www.fabiomicale.com/chi-sono",
   },
+  publisher: {
+    "@type": "Person",
+    "@id": "https://www.fabiomicale.com/#person",
+    name: "Fabio Micale",
+  },
 };
 
 export const metadata: Metadata = {
-  title: "Successo in 3 Passi — Edizione 2026 | Fabio Micale",
+  title: "Successo in 3 Passi — Edizione 2026",
   description:
     "Un libro pratico per professionisti over 40 che vogliono rimettere ordine nel lavoro e nella direzione professionale — senza ricominciare da zero.",
   alternates: { canonical: "https://www.fabiomicale.com/successo-in-3-passi" },
