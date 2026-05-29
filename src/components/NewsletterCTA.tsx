@@ -18,7 +18,7 @@ interface NewsletterCTAProps {
 
 const variantCopy: Record<
   NewsletterVariant,
-  { eyebrow: string; title: string; subtitle: string; cta: string; successMessage?: string; newsletterLabel?: string }
+  { eyebrow: string; title: string; subtitle: string; cta: string; successMessage?: string; newsletterLabel?: string; privacyPrefix?: string; privacySuffix?: string }
 > = {
   default: {
     eyebrow: "UN PASSO AVANTI",
@@ -55,8 +55,9 @@ const variantCopy: Record<
       "La versione fisica di Successo in 3 Passi sarà disponibile a breve. Lascia la tua email e ti avviserò al lancio.",
     cta: "Avvisami al lancio",
     successMessage: "Perfetto. Ti avviserò quando il libro sarà disponibile.",
-    newsletterLabel:
-      "Acconsento a ricevere aggiornamenti sul lancio del libro e la newsletter Un Passo Avanti.",
+    privacyPrefix: "Accetto l'",
+    privacySuffix: " e autorizzo l'uso dei dati per ricevere l'avviso sul lancio del libro.",
+    newsletterLabel: "Voglio ricevere anche la newsletter Un Passo Avanti.",
   },
 };
 
@@ -213,7 +214,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
                   className="mt-1 w-4 h-4 rounded border-hub-border text-hub-gold focus:ring-hub-gold"
                 />
                 <span className="text-[11px] text-hub-ink-muted leading-tight font-light group-hover:text-hub-ink transition-colors">
-                  Ho letto l’<Link href="/privacy" className="underline decoration-hub-gold/30 hover:decoration-hub-gold transition-all">informativa privacy</Link>.
+                  {copy.privacyPrefix ?? "Ho letto l’"}<Link href="/privacy" className="underline decoration-hub-gold/30 hover:decoration-hub-gold transition-all">informativa privacy</Link>{copy.privacySuffix ?? "."}
                 </span>
               </label>
 

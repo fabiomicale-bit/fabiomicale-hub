@@ -113,8 +113,10 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // --- 2. Beehiiv (solo se newsletter_consent === true) ---
-  if (newsletterConsent) {
+  // --- 2. Beehiiv ---
+  // book-waitlist: il form è finalizzato all'avviso lancio — Beehiiv riceve sempre il lead.
+  // altri variant: solo se newsletter_consent === true.
+  if (newsletterConsent || isBookWaitlist) {
     const apiKey = process.env.BEEHIIV_API_KEY;
     const publicationId = process.env.BEEHIIV_PUBLICATION_ID;
 
