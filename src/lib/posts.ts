@@ -25,7 +25,7 @@ export const posts: Post[] = [
   {
     slug: "over-40-ai-esperienza",
     seoTitle:
-      "Over 40 e AI: l'esperienza vale più dell'algoritmo | Fabio Micale",
+      "Over 40 e AI: l'esperienza vale più dell'algoritmo",
     seoDescription:
       "Hai più di 40 anni e temi di restare indietro con l'AI? Il problema non è l'età, ma il metodo. Scopri come usare l'intelligenza artificiale con criterio.",
     keywords:
@@ -162,7 +162,7 @@ export const posts: Post[] = [
   {
     slug: "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni",
     seoTitle:
-      "Ferma il caos: il primo passo per ripartire dopo i 40 anni | Fabio Micale",
+      "Ferma il caos: il primo passo per ripartire dopo i 40 anni",
     seoDescription:
       "Senti di fare tanto ma concludere poco? Il caos operativo segue una logica riconoscibile. Scopri il Passo 1 del Metodo Successo in 3 Passi.",
     keywords:
@@ -1104,7 +1104,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
   // ── MANIFESTO ─────────────────────────────────────────────────
   {
     slug: "manifesto-ai-esperienza-vince",
-    seoTitle: "Perché nell'Era AI chi ha Esperienza Vince | Fabio Micale",
+    seoTitle: "Perché nell'Era AI chi ha Esperienza Vince",
     seoDescription:
       "L'AI non penalizza chi ha esperienza — la moltiplica. Ecco perché i professionisti over 40 sono i più avvantaggiati dalla rivoluzione AI se sanno come usarla.",
     keywords:
@@ -1187,7 +1187,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
   {
     slug: "manifesto-reinvenzione-over40",
-    seoTitle: "La Reinvenzione Professionale Over 40: La Guida Definitiva | Fabio Micale",
+    seoTitle: "La Reinvenzione Professionale Over 40: La Guida Definitiva",
     seoDescription:
       "Reinventarsi professionalmente dopo i 40 anni non è una sconfitta — è una scelta strategica. Scopri il framework completo per farlo con metodo e risultati concreti.",
     keywords:
@@ -1282,7 +1282,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
   {
     slug: "manifesto-sistemi-autonomi",
-    seoTitle: "Come Costruire un Business che Funziona Senza di Te | Fabio Micale",
+    seoTitle: "Come Costruire un Business che Funziona Senza di Te",
     seoDescription:
       "Il vero obiettivo di un professionista nell'era AI non è lavorare di più — è costruire sistemi che producono valore in modo autonomo. Ecco come farlo.",
     keywords:
@@ -1375,7 +1375,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
   // ── ARTICOLI ──────────────────────────────────────────────────
   {
     slug: "ai-over-40-opportunita-non-minaccia",
-    seoTitle: "AI e Over 40: Perché l'Intelligenza Artificiale è un Vantaggio | Fabio Micale",
+    seoTitle: "AI e Over 40: Perché l'Intelligenza Artificiale è un Vantaggio",
     seoDescription:
       "Scopri perché l'AI non è una minaccia per chi ha più di 40 anni ma un'opportunità enorme. Fabio Micale spiega come usarla per reinventarsi professionalmente.",
     keywords: "AI over 40, intelligenza artificiale professionisti, reinvenzione professionale, AI lavoro",
@@ -1437,7 +1437,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
   {
     slug: "reinventarsi-dopo-i-40-metodo",
-    seoTitle: "Come Reinventarsi Professionalmente Dopo i 40 Anni | Fabio Micale",
+    seoTitle: "Come Reinventarsi Professionalmente Dopo i 40 Anni",
     seoDescription:
       "Reinventarsi dopo i 40 non è un salto nel vuoto ma un metodo. Scopri l'approccio di Fabio Micale per trasformare l'esperienza in vantaggio competitivo.",
     keywords:
@@ -1500,7 +1500,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
   {
     slug: "sistemi-che-lavorano-per-te",
-    seoTitle: "Come Costruire Sistemi che Lavorano per Te | Produttività e AI | Fabio Micale",
+    seoTitle: "Come Costruire Sistemi che Lavorano per Te | Produttività e AI",
     seoDescription:
       "La differenza tra essere occupati e produttivi sta nei sistemi. Scopri come costruire processi automatizzati che generano valore anche quando non sei presente.",
     keywords:
