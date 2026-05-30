@@ -3,7 +3,7 @@ import HubContactForm from "@/components/HubContactForm";
 import NewsletterCTA from "@/components/NewsletterCTA";
 
 export const metadata: Metadata = {
-  title: "Contatti | Fabio Micale",
+  title: "Contatti",
   description: "Per richieste professionali, collaborazioni, interviste o informazioni sul Metodo Successo in 3 Passi.",
   alternates: { canonical: "https://www.fabiomicale.com/contatti" },
 };

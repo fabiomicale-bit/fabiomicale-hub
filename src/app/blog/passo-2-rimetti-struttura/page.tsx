@@ -9,7 +9,7 @@ import { methodPillars } from "@/content/method-pillars";
 const pillar = methodPillars.hub.pillars[1];
 
 export const metadata: Metadata = {
-  title: "Passo 2 — Rimetti Struttura | Blog di Fabio Micale",
+  title: "Passo 2 — Rimetti Struttura",
   description:
     "Tutti gli articoli sul Passo 2 del Metodo Successo in 3 Passi: costruire sistemi operativi, delegare all'AI, e smettere di dipendere dalla propria presenza per far girare il business.",
   alternates: { canonical: "https://www.fabiomicale.com/blog/passo-2-rimetti-struttura" },

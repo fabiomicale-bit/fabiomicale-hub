@@ -3,7 +3,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Fabio Micale",
+  title: "Cookie Policy",
   description: "Informativa estesa sull'uso dei cookie del portale di Fabio Micale.",
 };
 

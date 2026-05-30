@@ -3,7 +3,7 @@ import BlogContent from "./BlogContent";
 import { getManifestoPosts, getRegularPosts } from "@/lib/posts";
 
 export const metadata = {
-  title: "Blog | Fabio Micale",
+  title: "Blog",
   description:
     "Appunti, strumenti e riflessioni per applicare il Metodo Successo in 3 Passi alla crescita professionale Over 40 nell’era dell’AI.",
   alternates: { canonical: "https://www.fabiomicale.com/blog" },

@@ -3,7 +3,7 @@ import Link from "next/link";
 import NewsletterCTA from "@/components/NewsletterCTA";
 
 export const metadata: Metadata = {
-  title: "Il Metodo Successo in 3 Passi | Fabio Micale",
+  title: "Il Metodo Successo in 3 Passi",
   description: "Ferma il caos, rimetti struttura e mantieni il controllo. Il Metodo Successo in 3 Passi per la rinascita professionale Over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/il-metodo" },
 };

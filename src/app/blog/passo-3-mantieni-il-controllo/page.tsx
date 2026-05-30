@@ -9,7 +9,7 @@ import { methodPillars } from "@/content/method-pillars";
 const pillar = methodPillars.hub.pillars[2];
 
 export const metadata: Metadata = {
-  title: "Passo 3 — Mantieni il Controllo | Blog di Fabio Micale",
+  title: "Passo 3 — Mantieni il Controllo",
   description:
     "Articoli sul Passo 3 del Metodo Successo in 3 Passi: costruire sistemi duraturi, consolidare la direzione professionale e mantenere il controllo nel tempo.",
   alternates: { canonical: "https://www.fabiomicale.com/blog/passo-3-mantieni-il-controllo" },

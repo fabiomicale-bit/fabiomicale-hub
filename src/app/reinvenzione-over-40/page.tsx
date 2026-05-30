@@ -4,7 +4,7 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "Reinvenzione Professionale Over 40 | Guida Strategica — Fabio Micale",
+  title: "Reinvenzione Professionale Over 40 | Guida Strategica",
   description:
     "Guida per reinventarsi professionalmente dopo i 40 anni. Ingegnerizza la tua esperienza e potenziala con l'AI. Il protocollo di Fabio Micale.",
   alternates: { canonical: "https://www.fabiomicale.com/reinvenzione-over-40" },

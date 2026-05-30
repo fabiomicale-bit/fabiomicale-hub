@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Chi sono | Fabio Micale",
+  title: "Chi sono",
   description: "Fabio Micale è scrittore e formatore specializzato in metodi pratici per la crescita e la rinascita professionale Over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/chi-sono" },
 };

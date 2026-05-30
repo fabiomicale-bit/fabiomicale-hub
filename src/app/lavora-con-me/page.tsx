@@ -5,7 +5,7 @@ import Link from "next/link";
 import FaqAccordion from "./FaqAccordion";
 
 export const metadata: Metadata = {
-  title: "Lavora con Me | Percorsi di Crescita — Fabio Micale",
+  title: "Lavora con Me | Percorsi di Crescita",
   description:
     "Libri, corsi, coaching e sistemi operativi per imprenditori e professionisti over 40. Scopri il percorso giusto per te.",
   alternates: { canonical: "https://www.fabiomicale.com/lavora-con-me" },

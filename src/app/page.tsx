@@ -8,7 +8,9 @@ import AuthorBio from "@/components/AuthorBio";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Fabio Micale | Metodo Successo in 3 Passi per Over 40",
+  title: {
+    absolute: "Fabio Micale | Metodo Successo in 3 Passi per Over 40",
+  },
   description:
     "Fabio Micale, scrittore e formatore, aiuta professionisti Over 40 a ripartire con metodo, lucidità e strumenti pratici nell’era dell’intelligenza artificiale.",
   alternates: { canonical: "https://www.fabiomicale.com" },

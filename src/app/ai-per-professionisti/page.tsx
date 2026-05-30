@@ -4,7 +4,7 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "AI per Professionisti Over 40 | Ingegneria Cognitiva — Fabio Micale",
+  title: "AI per Professionisti Over 40 | Ingegneria Cognitiva",
   description:
     "Come integrare l'AI nel tuo workflow professionale senza perdere tempo. Strumenti, sistemi e approccio strategico per l'elite over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/ai-per-professionisti" },

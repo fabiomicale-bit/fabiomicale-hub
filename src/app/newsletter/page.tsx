@@ -5,7 +5,7 @@ import Newsletter from "@/components/Newsletter";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Un Passo Avanti — La Newsletter di Fabio Micale",
+  title: "Un Passo Avanti — La Newsletter",
   description: "Ogni domenica, una riflessione strategica su business, automazione e intelligenza artificiale. Include l'accesso gratuito all'Hub Digitale.",
 };
 

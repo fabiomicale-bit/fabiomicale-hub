@@ -9,7 +9,7 @@ import { methodPillars } from "@/content/method-pillars";
 const pillar = methodPillars.hub.pillars[0];
 
 export const metadata: Metadata = {
-  title: "Passo 1 — Ferma il Caos | Blog di Fabio Micale",
+  title: "Passo 1 — Ferma il Caos",
   description:
     "Tutti gli articoli sul Passo 1 del Metodo Successo in 3 Passi: riconoscere e fermare il caos prima di agire. Reframing, mindset, e il primo passo verso la struttura.",
   alternates: { canonical: "https://www.fabiomicale.com/blog/passo-1-ferma-il-caos" },
