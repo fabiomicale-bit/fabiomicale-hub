@@ -131,6 +131,175 @@ export default function MetodoPage() {
         </div>
       </section>
 
+      {/* ── COME FUNZIONA NELLA PRATICA ─────────────────────── */}
+      <section className="py-32 px-6 border-t border-hub-border/50">
+        <div className="max-w-4xl mx-auto space-y-16">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+            <h2 className="text-2xl font-serif italic text-hub-gold">Come funziona nella pratica</h2>
+            <p className="text-hub-ink-muted text-lg leading-relaxed font-light">
+              Il metodo non parte dall&apos;idea di aggiungere altra teoria. Parte da una domanda più semplice: cosa sta occupando spazio, cosa merita attenzione e quale struttura può reggere anche quando il lavoro si accumula.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border border-hub-border/60 p-8 space-y-4">
+              <p className="text-sm font-bold uppercase tracking-widest text-hub-gold">Svuoti</p>
+              <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                Rendi visibile ciò che hai in testa: attività, urgenze, idee, progetti aperti, decisioni rimandate. Finché tutto resta confuso, tutto sembra importante.
+              </p>
+            </div>
+            <div className="border border-hub-border/60 p-8 space-y-4">
+              <p className="text-sm font-bold uppercase tracking-widest text-hub-gold">Ordini</p>
+              <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                Distingui ciò che conta da ciò che distrae. Non si tratta di fare tutto, ma di decidere cosa viene prima, cosa può aspettare e cosa va eliminato.
+              </p>
+            </div>
+            <div className="border border-hub-border/60 p-8 space-y-4">
+              <p className="text-sm font-bold uppercase tracking-widest text-hub-gold">Rivedi</p>
+              <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                Controlli se il sistema sta reggendo. La revisione serve a non ricadere nel caos appena la settimana torna piena.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── QUANDO IL METODO DIVENTA NECESSARIO ──────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-alt border-t border-hub-border/50">
+        <div className="max-w-4xl mx-auto space-y-16">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+            <h2 className="text-2xl font-serif italic text-hub-gold">Quando serve</h2>
+            <div className="space-y-4">
+              <h3 className="text-3xl font-serif font-medium leading-snug">
+                Quando il metodo diventa necessario
+              </h3>
+              <p className="text-hub-ink-muted text-lg leading-relaxed font-light">
+                Ci sono momenti in cui lavorare di più non basta. Il problema non è l&apos;impegno, ma l&apos;assenza di una struttura che aiuti a scegliere.
+              </p>
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border border-hub-border/60 p-8 space-y-4">
+              <h3 className="font-serif text-lg font-medium">Hai troppe priorità aperte</h3>
+              <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                Tutto sembra urgente, ma alla fine della settimana resta la sensazione di non aver fatto ciò che contava davvero.
+              </p>
+            </div>
+            <div className="border border-hub-border/60 p-8 space-y-4">
+              <h3 className="font-serif text-lg font-medium">Usi molti strumenti, ma senza sistema</h3>
+              <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                App, note, documenti, AI, task list. Gli strumenti aumentano, ma la direzione non diventa più chiara.
+              </p>
+            </div>
+            <div className="border border-hub-border/60 p-8 space-y-4">
+              <h3 className="font-serif text-lg font-medium">Hai esperienza, ma fatichi a trasformarla in metodo</h3>
+              <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                Dopo i 40 anni il valore non è ricominciare da zero, ma organizzare meglio ciò che hai già imparato.
+              </p>
+            </div>
+            <div className="border border-hub-border/60 p-8 space-y-4">
+              <h3 className="font-serif text-lg font-medium">Parti bene, poi perdi continuità</h3>
+              <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                Il problema non è iniziare. Il problema è mantenere controllo e direzione quando tornano urgenze, lavoro e imprevisti.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── COSA CAMBIA QUANDO LO APPLICHI ───────────────────── */}
+      <section className="py-32 px-6 border-t border-hub-border/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+            <h2 className="text-2xl font-serif italic text-hub-gold">Cosa cambia</h2>
+            <div className="space-y-10">
+              <div className="space-y-6">
+                <h3 className="text-3xl font-serif font-medium leading-snug">
+                  Cosa cambia quando il metodo entra nel lavoro
+                </h3>
+                <p className="text-hub-ink-muted text-lg leading-relaxed font-light">
+                  Successo in 3 Passi non promette una vita senza caos. Offre una sequenza per riconoscerlo prima, ridurlo meglio e non lasciare che ogni settimana riparta da zero.
+                </p>
+              </div>
+              <ul className="space-y-5 border-t border-hub-border/40 pt-8">
+                {[
+                  "Le attività diventano più visibili.",
+                  "Le priorità diventano più leggibili.",
+                  "Gli strumenti smettono di accumularsi senza criterio.",
+                  "L'intelligenza artificiale entra in un processo, non in modo casuale.",
+                  "La revisione diventa parte del lavoro, non un'aggiunta.",
+                ].map((punto) => (
+                  <li key={punto} className="flex items-start gap-4 text-hub-ink-muted text-base leading-relaxed font-light">
+                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-hub-gold flex-shrink-0" />
+                    {punto}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── IL RUOLO DELL'AI ─────────────────────────────────── */}
+      <section className="py-32 px-6 bg-hub-bg-alt border-t border-hub-border/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+            <h2 className="text-2xl font-serif italic text-hub-gold">L&apos;intelligenza artificiale</h2>
+            <div className="space-y-10">
+              <div className="space-y-6">
+                <h3 className="text-3xl font-serif font-medium leading-snug">
+                  L&apos;AI funziona meglio quando entra in un metodo
+                </h3>
+                <p className="text-hub-ink-muted text-lg leading-relaxed font-light">
+                  L&apos;intelligenza artificiale può aiutare a scrivere, riordinare, sintetizzare, analizzare e produrre. Ma senza criteri rischia di diventare solo un altro strumento da inseguire. Nel metodo Successo in 3 Passi, l&apos;AI non sostituisce l&apos;esperienza: la aiuta a diventare più ordinata, più utilizzabile e più concreta.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-hub-border/40 pt-10">
+                <div className="space-y-3">
+                  <p className="text-sm font-bold uppercase tracking-widest text-hub-gold">Prima la direzione</p>
+                  <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                    Capire cosa conta prima di chiedere all&apos;AI di produrre.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-sm font-bold uppercase tracking-widest text-hub-gold">Poi la struttura</p>
+                  <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                    Usare l&apos;AI per organizzare, sintetizzare e rendere più leggibile il lavoro.
+                  </p>
+                </div>
+                <div className="space-y-3">
+                  <p className="text-sm font-bold uppercase tracking-widest text-hub-gold">Infine il controllo</p>
+                  <p className="text-hub-ink-muted text-base leading-relaxed font-light">
+                    Usare strumenti e revisioni per mantenere continuità nel tempo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── DA DOVE INIZIARE ─────────────────────────────────── */}
+      <section className="py-32 px-6 border-t border-hub-border/50">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+            <h2 className="text-2xl font-serif italic text-hub-gold">Da dove iniziare</h2>
+            <div className="space-y-8">
+              <p className="text-hub-ink-muted text-lg leading-relaxed font-light">
+                Il primo passo non è cambiare tutto. È fermarsi, vedere con chiarezza cosa sta occupando spazio e iniziare a rimettere ordine. Per questo il metodo è collegato al libro e all&apos;estratto gratuito: non per aggiungere teoria, ma per iniziare da un esercizio concreto.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-8 pt-2">
+                <Link href="/estratto" className="text-hub-ink text-sm font-medium underline underline-offset-4 hover:text-hub-gold transition-colors">
+                  Scarica l&apos;estratto gratuito
+                </Link>
+                <Link href="/successo-in-3-passi" className="text-hub-ink text-sm font-medium underline underline-offset-4 hover:text-hub-gold transition-colors">
+                  Scopri il libro
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── IL LIBRO ────────────────────────────────────────── */}
       <section className="py-32 px-6 bg-hub-bg-warm">
         <div className="max-w-4xl mx-auto text-center">
