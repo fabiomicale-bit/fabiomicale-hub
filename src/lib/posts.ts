@@ -182,6 +182,7 @@ export const posts: Post[] = [
       "mantieni-il-controllo-revisione-settimanale",
       "paura-obsolescenza-professionale-ai",
       "manifesto-reinvenzione-over40",
+      "manifesto-sistemi-autonomi",
     ],
     step: 1,
     formats: ["appunti-di-metodo"],
@@ -604,10 +605,10 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
   },
   {
     slug: "10-task-delegare-ai-lavoro",
-    seoTitle: "10 Task che Puoi Delegare all'AI Oggi (Anche se Non Sei Tecnico)",
-    seoDescription: "Scopri 10 attività concrete che puoi delegare all'intelligenza artificiale anche se non sei tecnico. Recupera fino a 5 ore a settimana. Guida pratica 2026.",
+    seoTitle: "10 task che puoi delegare all'AI oggi, anche se non sei tecnico",
+    seoDescription: "Scopri 10 attività concrete che puoi delegare all'intelligenza artificiale anche se non sei tecnico. Una guida pratica per recuperare tempo nel lavoro.",
     keywords: "delegare all'AI, task AI lavoro, automazione lavoro, AI produttività professionisti, attività ripetitive AI, risparmiare tempo AI",
-    titolo: "10 Task che Puoi Delegare all'AI Oggi (Anche se Non Sei Tecnico)",
+    titolo: "10 task che puoi delegare all'AI oggi, anche se non sei tecnico",
     categoria: "Passo 2 — Rimetti Struttura",
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "6 aprile 2026",
@@ -615,12 +616,12 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
     tempoLettura: "8 min",
     ogImage: "/blog/cover_task_delegati.png",
     coverAlt: "Intelligenza artificiale incandescente che analizza ed organizza task geometrici",
-    excerpt: "Sei un professionista over 40 e pensi che l'AI sia roba da giovani smanettoni? Ecco 10 compiti ripetitivi che puoi delegare oggi stesso. Senza diventare esperto di prompt.",
-    correlati: ["claude-ai-come-usarlo-al-lavoro", "recuperare-tempo-delegare-ai-sistema", "sistemi-che-lavorano-per-te"],
+    excerpt: "Sei un professionista over 40 e non sai da dove iniziare con l'AI? Ecco 10 compiti ripetitivi che puoi delegare oggi stesso, senza diventare esperto di prompt.",
+    correlati: ["claude-ai-come-usarlo-al-lavoro", "recuperare-tempo-delegare-ai-sistema", "sistemi-che-lavorano-per-te", "manifesto-sistemi-autonomi"],
     step: 2,
     formats: ["strumento-pratico"],
     contentHtml: `
-<p>Sei un professionista over 40 e pensi che l'AI sia roba da giovani smanettoni?</p>
+<p>Sei un professionista over 40 e non sai da dove iniziare con l'AI?</p>
 
 <p>Ho una notizia per te: <strong>l'AI non è fatta per chi sa programmare. È fatta per chi ha lavoro da fare.</strong></p>
 
@@ -640,7 +641,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 
 <hr>
 
-<h2>Perché Delegare all'AI (e Non Solo "Usarla")</h2>
+<h2>Perché delegare all'AI e non solo usarla</h2>
 
 <p>C'è una differenza enorme tra <em>usare</em> l'AI e <em>delegare</em> all'AI.</p>
 
@@ -648,9 +649,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 
 <p><strong>Delegare all'AI</strong> significa trattarla come un assistente virtuale a cui affidi compiti ricorrenti. Non è un tool. È un collaboratore.</p>
 
-<p>Secondo una ricerca Slack del 2025, i professionisti che delegano sistematicamente all'AI recuperano in media <strong>6 ore a settimana</strong>. Sei ore. Che diventano 24 ore al mese. 288 ore all'anno.</p>
-
-<p>Cosa faresti con 288 ore in più?</p>
+<p>Il tempo recuperato dipende dal lavoro e dal tipo di attività. Il punto non è inseguire una cifra: è togliere peso alle operazioni ripetitive e misurare il risultato nel proprio contesto.</p>
 
 <p>Il punto è questo: l'AI non ti rende automaticamente più produttivo. Ma un sistema costruito bene, sì. E costruire un sistema significa identificare i task ripetitivi e affidarli a lei.</p>
 
@@ -658,7 +657,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 
 <hr>
 
-<h2>I 10 Task che Puoi Delegare Subito</h2>
+<h2>I 10 task che puoi delegare subito</h2>
 
 <h3>1. Rispondere alle Email Ripetitive</h3>
 
@@ -813,7 +812,7 @@ A presto,
 
 <hr>
 
-<h2>Come Iniziare (Senza Impazzire)</h2>
+<h2>Come iniziare senza complicarti la giornata</h2>
 
 <p>Non devi fare tutti i 10 task da domani. Sarebbe controproducente.</p>
 
@@ -830,41 +829,39 @@ A presto,
 
 <hr>
 
-<h2>Gli Errori da Evitare</h2>
+<h2>Gli errori da evitare</h2>
 
 <p>Delegare all'AI sembra semplice. Ma ci sono errori che ti fanno perdere fiducia. Ecco i principali:</p>
 
-<h3>❌ Delegare senza verificare il risultato</h3>
+<h3>Delegare senza verificare il risultato</h3>
 
 <p>L'AI sbaglia. Sempre. Non cedere alla tentazione di inviare senza controllare. Il controllo umano è obbligatorio, soprattutto all'inizio.</p>
 
-<h3>❌ Aspettarsi perfezione al primo tentativo</h3>
+<h3>Aspettarsi perfezione al primo tentativo</h3>
 
 <p>Il primo prompt non sarà perfetto. Itera. "Rendilo più breve", "Aggiungi un esempio", "Cambia tono". È una conversazione, non un comando.</p>
 
-<h3>❌ Usare l'AI per task che richiedono empatia</h3>
+<h3>Usare l'AI per task che richiedono empatia</h3>
 
 <p>Licenziamenti, crisi con clienti, conversazioni delicate. Quelle le fai tu. L'AI non ha cuore. Tu sì.</p>
 
-<h3>❌ Non documentare i prompt che funzionano</h3>
+<h3>Non documentare i prompt che funzionano</h3>
 
 <p>Quando trovi un prompt che dà risultati buoni, salvalo. Crea una tua libreria. Tra 6 mesi ringrazierai te stesso.</p>
 
 <hr>
 
-<h2>Il Tempo è Tuo. Usalo Bene.</h2>
+<h2>Il tempo è tuo. Usalo bene.</h2>
 
-<p>Questi 10 task possono liberarti <strong>5-10 ore a settimana</strong>.</p>
+<p>Questi 10 task possono liberare tempo. La quantità reale va misurata nel tuo lavoro, senza promesse automatiche.</p>
 
-<p>Non sono minuti. Sono ore. Che diventano giorni. Che diventano vita.</p>
-
-<p>La domanda non è "posso permettermi di usare l'AI". La domanda è "posso permettermi di NON usarla?".</p>
+<p>La domanda utile non è quanto l'AI possa fare in astratto. È quale attività ripetitiva puoi affidarle senza perdere qualità e controllo.</p>
 
 <p>Il tempo che risparmi non è per lavorare di più. È per lavorare meglio. Per stare con la tua famiglia. Per costruire qualcosa di tuo. Per vivere.</p>
 
 <hr>
 
-<h2>🎁 Risorse Gratuite per Iniziare</h2>
+<h2>Risorse gratuite per iniziare</h2>
 
 <p><strong>1. Estratto gratuito: "Successo in 3 Passi"</strong>
 Una guida pratica di 20 pagine per capire il Metodo e muovere i primi passi. <a href="/estratto">Scaricala gratis qui</a></p>
@@ -1379,7 +1376,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     seoDescription:
       "Scopri perché l'AI non è una minaccia per chi ha più di 40 anni ma un'opportunità enorme. Fabio Micale spiega come usarla per reinventarsi professionalmente.",
     keywords: "AI over 40, intelligenza artificiale professionisti, reinvenzione professionale, AI lavoro",
-    titolo: "L'AI ha più di 40 anni? Ecco perché è un vantaggio, non una minaccia",
+    titolo: "Hai più di 40 anni? Ecco perché l'AI può essere un vantaggio, non una minaccia",
     categoria: "Passo 1 — Ferma il Caos",
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "10 marzo 2026",
@@ -1563,7 +1560,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     slug: "claude-ai-come-usarlo-al-lavoro",
     seoTitle: "Claude AI: come usarlo davvero al lavoro (guida per non tecnici)",
     seoDescription:
-      "Non sai da dove iniziare con Claude AI? Ecco come lo uso ogni giorno per risparmiare ore di lavoro. Guida pratica per professionisti over 40, senza bisogno di essere tecnici.",
+      "Come usare Claude AI nel lavoro quotidiano: una guida pratica per professionisti over 40, con esempi concreti e senza tecnicismi.",
     keywords:
       "Claude AI, come usare Claude, AI per professionisti, intelligenza artificiale lavoro, AI over 40, guida Claude AI, assistente AI per non tecnici",
     titolo: "Claude AI: come usarlo davvero al lavoro (guida per non tecnici)",
@@ -1653,7 +1650,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
 <p>Pensa all'ultima email difficile che hai rimandato. Quella che hai in testa da ieri, da tre giorni, forse da una settimana. Aprila. Vai su claude.ai. Scrivi: "Sono [il tuo ruolo]. Ho questa situazione: [descrivi]. Aiutami a scrivere una risposta [tono desiderato], massimo [X] parole."</p>
 
-<p>Poi <a href="/newsletter">iscriviti alla newsletter per altri strumenti pratici ogni settimana</a>.</p>
+<p>Poi <a href="/newsletter">iscriviti alla newsletter per altri strumenti pratici ogni settimana</a>. Se vuoi inserire l'AI dentro un metodo più ampio, <a href="/estratto">inizia dall'estratto gratuito di Successo in 3 Passi</a>.</p>
     `,
   },
   {
@@ -1672,20 +1669,20 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     excerpt: "Sfatare il mito giovanilistico dell'AI. Un'azienda non viene salvata da chi digita veloce su una tastiera, ma da chi ha 20 anni di esperienza per sapere DOVE mettere le mani.",
     contentHtml: `
 <p>C'è un equivoco enorme che sta bloccando migliaia di professionisti formidabili: credere che l'Intelligenza Artificiale sia uno strumento esclusivo per i "nativi digitali".</p>
-<p>La narrazione è tossica. Sembra che se non hai vent'anni, se non sai programmare in Python o se non passi tre ore al giorno sui social, tu sia tagliato fuori da questa rivoluzione.</p>
+<p>Questa narrazione è fuorviante. Sembra che se non hai vent'anni, se non sai programmare in Python o se non passi tre ore al giorno sui social, tu sia tagliato fuori da questo cambiamento.</p>
 <p>Lascia che ti dica la verità: <strong>è l'esatto contrario.</strong></p>
 
-<h3>Il paradosso del nativo digitale</h3>
-<p>Un ragazzo appena uscito dall'università sa usare gli strumenti tecnologici a una velocità fulminea. Conosce i "prompt", conosce i forum, naviga le interfacce a occhi chiusi.</p>
-<p>Ma c'è un problema. Quando l'AI gli chiede cosa deve produrre, il ragazzo si ferma. Perché gli <strong>manca la profondità aziendale</strong>.</p>
-<p>Non sa come rispondere in modo diplomatico a un cliente infuriato per un ritardo di consegna. Non sa quali leve negoziali toccare in un preventivo per non svendersi. Non ha l'intuito per fiutare un contratto pericoloso prima ancora di firmarlo.</p>
+<h2>Il limite della sola velocità tecnica</h2>
+<p>Chi è appena uscito dall'università può usare gli strumenti tecnologici con grande naturalezza. Conosce i prompt, conosce i forum, naviga le interfacce rapidamente.</p>
+<p>Ma la velocità tecnica, da sola, non basta. Quando l'AI chiede cosa deve produrre, può mancare la profondità aziendale che si costruisce con il lavoro.</p>
+<p>Serve esperienza per rispondere in modo diplomatico a un cliente infuriato per un ritardo di consegna, capire quali leve negoziali toccare in un preventivo e riconoscere un contratto rischioso prima di firmarlo.</p>
 
-<h3>L'AI è un amplificatore, non un sostituto</h3>
+<h2>L'AI è un amplificatore, non un sostituto</h2>
 <p>L'Intelligenza Artificiale fornisce la tecnica rapida, ma richiede un <em>pensatore</em> per funzionare davvero.</p>
-<p>Se metti un motore potentissimo su un'utilitaria senza freni, finirai fuori strada. Se dai l'AI a chi non ha esperienza, genererà enormi quantità di "fuffa" velocissima e ben formattata, ma vuota di significato e pericolosa per la reputazione del business.</p>
+<p>Se metti un motore potente su un'utilitaria senza freni, finirai fuori strada. Se usi l'AI senza esperienza e senza controllo, puoi generare grandi quantità di materiale ben formattato ma vuoto di significato e rischioso per la reputazione del business.</p>
 <p>Tu, al contrario, hai decenni di errori, successi, riunioni, notti insonni e calcoli di budget. Tu sai esattamente cosa dev'essere fatto e quale tono usare. Il tuo unico problema era che <em>farlo</em> ti costava ore di lavoro manuale in report e bozze.</p>
 
-<h3>Da Esecutore a Decision Maker</h3>
+<h2>Da esecutore a decision maker</h2>
 <p>Se sei un professionista affermato, l'unica cosa che devi imparare dell'AI <strong>non è l'aspetto tecnico, ma l'aspetto manageriale della delega.</strong></p>
 <p>Smetti di chiederti "Come funziona questo algoritmo?". Inizia a chiederti: <em>"Cosa posso far fare a questo software per sbloccare la mia mente per farle fare vero lavoro dirigenziale?"</em></p>
 <p>Non serve essere nativi digitali. L'AI non rimpiazza il giudizio strategico, lo esegue. Metti a frutto i decenni della tua esperienza e usa questi nuovi alleati digitali per fare ciò in cui sei insostituibile: <strong>prendere decisioni e gestire esseri umani.</strong></p>
@@ -1724,7 +1721,7 @@ export function getManifestoPosts(): Post[] {
 
 export function getRegularPosts(): Post[] {
   return posts
-    .filter((p) => !p.manifesto)
+    .filter((p) => !MANIFESTO_SLUGS.includes(p.slug))
     .sort((a, b) => b.dataISO.localeCompare(a.dataISO));
 }
 

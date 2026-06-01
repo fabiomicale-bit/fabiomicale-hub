@@ -86,9 +86,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "/",
-  },
   icons: {
     icon: [
       { url: '/favicon.ico?v=3', sizes: '48x48', type: 'image/x-icon' },
