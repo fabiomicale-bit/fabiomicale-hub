@@ -31,7 +31,7 @@ const variantCopy: Record<
     eyebrow: "ESTRATTO GRATUITO",
     title: "Scarica l'estratto gratuito.",
     subtitle:
-      "Ricevi i primi capitoli di 'Successo in 3 Passi — Edizione 2026' e iscriviti alla newsletter settimanale per iniziare il tuo percorso di ripartenza con metodo.",
+      "Ricevi i primi capitoli di 'Successo in Tre Passi — Edizione 2026' e iscriviti alla newsletter settimanale per iniziare il tuo percorso di ripartenza con metodo.",
     cta: "Scarica l'estratto ora",
   },
   article: {

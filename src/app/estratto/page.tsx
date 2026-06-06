@@ -3,10 +3,34 @@ import Link from "next/link";
 import NewsletterCTA from "@/components/NewsletterCTA";
 
 export const metadata: Metadata = {
-  title: "Estratto Gratuito — Successo in 3 Passi",
+  title: "Scarica l'estratto gratuito di Successo in Tre Passi",
   description:
-    "Ricevi gratuitamente i primi capitoli di Successo in 3 Passi — Edizione 2026 e il primo passo pratico del Metodo per professionisti Over 40.",
+    "Ricevi gratis i primi capitoli di Successo in Tre Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
+  keywords: [
+    "estratto gratuito",
+    "Successo in Tre Passi",
+    "primi capitoli",
+    "metodo per chi ha superato i quaranta",
+    "fermare il caos",
+    "rimettere struttura",
+    "mantenere il controllo",
+  ],
   alternates: { canonical: "https://www.fabiomicale.com/estratto" },
+  openGraph: {
+    title: "Scarica l'estratto gratuito di Successo in Tre Passi",
+    description:
+      "Ricevi gratis i primi capitoli di Successo in Tre Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
+    url: "https://www.fabiomicale.com/estratto",
+    type: "website",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Scarica l'estratto gratuito di Successo in Tre Passi",
+    description:
+      "Ricevi gratis i primi capitoli di Successo in Tre Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function EstrattoPage() {
@@ -24,7 +48,7 @@ export default function EstrattoPage() {
           <div className="badge-editorial mb-8 mx-auto">Edizione 2026</div>
           <h1 className="text-4xl md:text-6xl font-serif font-medium leading-[1.05] tracking-tight mb-6">
             I primi capitoli di{" "}
-            <Link href="/successo-in-3-passi" className="italic text-hub-gold hover:underline underline-offset-4">Successo in 3 Passi.</Link>{" "}
+            <Link href="/successo-in-3-passi" className="italic text-hub-gold hover:underline underline-offset-4">Successo in Tre Passi.</Link>{" "}
             Gratis.
           </h1>
           <p className="text-xl text-hub-ink-muted leading-relaxed max-w-2xl mx-auto font-light mb-10">
@@ -55,10 +79,10 @@ export default function EstrattoPage() {
             {[
               {
                 title: "Estratto gratuito in PDF",
-                desc: "I primi capitoli di Successo in 3 Passi — Edizione 2026, pronti da leggere sul tuo device.",
+                desc: "I primi capitoli di Successo in Tre Passi — Edizione 2026, pronti da leggere sul tuo device.",
               },
               {
-                title: "Introduzione al Metodo Successo in 3 Passi",
+                title: "Introduzione al Metodo Successo in Tre Passi",
                 desc: "Un ingresso reale nel Metodo: non un riassunto promozionale, ma la struttura operativa di partenza.",
               },
               {
@@ -67,7 +91,7 @@ export default function EstrattoPage() {
               },
               {
                 title: "Newsletter \"Un Passo Avanti\"",
-                desc: "Contenuti pratici settimanali per applicare il Metodo alla tua crescita professionale Over 40.",
+                desc: "Contenuti pratici settimanali per applicare il Metodo alla tua crescita professionale dopo i quaranta.",
               },
             ].map((item, i) => (
               <div
@@ -97,7 +121,7 @@ export default function EstrattoPage() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              "Hai più di 40 o 50 anni e senti che è arrivato il momento di ripensare la tua direzione professionale — non per paura, ma per scelta.",
+              "Hai superato i quaranta o i cinquanta anni e senti che è arrivato il momento di ripensare la tua direzione professionale — non per paura, ma per scelta.",
               "Hai esperienza, competenze, e qualcosa da costruire. Ma il rumore attorno è troppo e il metodo ti manca.",
               "Vuoi usare l'intelligenza artificiale in modo pratico e operativo, non come argomento di conversazione.",
               "Cerchi strumenti concreti e una sequenza chiara — non motivazione vuota, non slogan, non soluzioni magiche.",

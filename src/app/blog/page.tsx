@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import BlogContent from "./BlogContent";
 import { getManifestoPosts, getRegularPosts } from "@/lib/posts";
 
@@ -9,9 +8,19 @@ export const metadata = {
   alternates: { canonical: "https://www.fabiomicale.com/blog" },
 };
 
-export default function BlogPage() {
+type BlogPageProps = {
+  searchParams?: Promise<{
+    step?: string;
+    format?: string;
+  }>;
+};
+
+export default async function BlogPage({ searchParams }: BlogPageProps) {
   const manifestoPosts = getManifestoPosts();
   const regularPosts = getRegularPosts();
+  const params = await searchParams;
+  const activeStep = params?.step ?? "Tutti";
+  const activeFormats = params?.format?.split(",").filter(Boolean) ?? [];
 
   return (
     <main className="min-h-screen bg-hub-bg text-hub-ink">
@@ -37,10 +46,13 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* ── CONTENUTO DINAMICO ────────────────────────────────── */}
-      <Suspense fallback={<div className="py-40 text-center text-hub-ink-light text-sm">Caricamento…</div>}>
-        <BlogContent manifestoPosts={manifestoPosts} regularPosts={regularPosts} />
-      </Suspense>
+      {/* ── CONTENUTO BLOG ────────────────────────────────────── */}
+      <BlogContent
+        manifestoPosts={manifestoPosts}
+        regularPosts={regularPosts}
+        activeStep={activeStep}
+        activeFormats={activeFormats}
+      />
 
       
     </main>

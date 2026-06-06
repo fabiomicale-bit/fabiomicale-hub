@@ -93,6 +93,31 @@ export default async function BlogPostPage({ params }: Props) {
     },
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.fabiomicale.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://www.fabiomicale.com/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.titolo,
+        item: `https://www.fabiomicale.com/blog/${post.slug}`,
+      },
+    ],
+  };
+
   return (
     <>
       <ReadingProgress />
@@ -103,6 +128,10 @@ export default async function BlogPostPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       {/* ── HEADER ARTICOLO ─────────────────────────────────────── */}
