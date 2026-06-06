@@ -316,6 +316,23 @@ export const posts: Post[] = [
 
 <p>Quella voce è il tuo punto di ingresso nel Passo 1. Non serve ancora un sistema. Serve questo gesto, fatto intenzionalmente.</p>
 
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist “Dal Blog al Video”. Qui trovi la versione video dedicata al Passo 1 del metodo Successo in Tre Passi: Ferma il caos.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/l26we6XGF5g"
+      title="Dal Blog al Video — Ferma il caos | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/l26we6XGF5g" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
+
 <h2>Vuoi il metodo completo?</h2>
 
 <p>Se questo articolo ti ha rispecchiato, il percorso completo inizia da qui — ed è gratuito.</p>
@@ -1361,6 +1378,23 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 <p>Il risultato non arriva in una settimana. Ma in 6 mesi puoi costruire qualcosa che funziona in modo significativamente diverso da oggi.</p>
 
 <p>La domanda non è se puoi permetterti di farlo. È se puoi permetterti di non farlo.</p>
+
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist “Dal Blog al Video”. Qui trovi la versione video dedicata al Passo 2 del metodo Successo in Tre Passi: Rimetti Struttura.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/wW4gJhcpTYo"
+      title="Dal Blog al Video — Rimetti Struttura | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/wW4gJhcpTYo" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
 
 <p><a href="/estratto">Se vuoi costruire il tuo sistema, inizia dall'estratto gratuito</a></p>
     `,
