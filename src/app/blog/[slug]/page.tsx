@@ -14,6 +14,7 @@ import { injectHeadingIds } from "./headingUtils";
 import ShareBar from "./ShareBar";
 import CommentoForm from "@/components/CommentoForm";
 import ArticleAuthorBox from "@/components/ArticleAuthorBox";
+import ArticleSignature from "@/components/ArticleSignature";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -206,6 +207,8 @@ export default async function BlogPostPage({ params }: Props) {
                 className="blog-content prose prose-slate max-w-none prose-headings:font-serif prose-headings:italic prose-a:text-hub-gold hover:prose-a:text-hub-gold-dark"
                 dangerouslySetInnerHTML={{ __html: injectHeadingIds(post.contentHtml) }}
               />
+
+              <ArticleSignature />
               
               <div className="mt-20 pt-12 border-t border-hub-border">
                 <div className="xl:hidden mb-12">
