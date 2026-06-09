@@ -487,6 +487,23 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 
 <p>Il metodo completo — con il Passo 1 sul caos, il Passo 2 sulla struttura e il Passo 3 sul controllo — è nel libro. Se stai cercando un sistema completo, concreto e adatto a chi ha già esperienza ma vuole smettere di ricominciare da zero ogni lunedì, è da lì che puoi partire.</p>
 
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video dedicata al Passo 3 del metodo Successo in Tre Passi: Mantieni il Controllo.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/cGGXDRJ-Q94"
+      title="Dal Blog al Video — Mantieni il Controllo | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/cGGXDRJ-Q94" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
+
 <div class="blog-cta">
   <p>Se vuoi iniziare dal metodo completo, scarica gratuitamente i primi capitoli di <strong>Successo in 3 Passi — Edizione 2026</strong> e ricevi la newsletter <strong>Un Passo Avanti</strong>.</p>
   <a href="/estratto">→ Scarica l'estratto gratuito</a>
