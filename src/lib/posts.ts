@@ -157,6 +157,23 @@ export const posts: Post[] = [
 <h3>Come capisco se sto usando l'AI in modo utile?</h3>
 
 <p>Se dopo due settimane hai migliorato un processo, ridotto un tempo o preso una decisione migliore, l'AI ti sta aiutando. Se non è cambiato nulla, la stai solo consumando.</p>
+
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video dedicata a Over 40 e AI: perché la tua esperienza vale più di un algoritmo.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/ZgZf4VnhhHE"
+      title="Dal Blog al Video — Over 40 e AI | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/ZgZf4VnhhHE" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
     `,
   },
   {
