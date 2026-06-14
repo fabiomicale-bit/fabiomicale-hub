@@ -49,14 +49,14 @@ const variantCopy: Record<
     cta: "Iscriviti gratis",
   },
   "book-waitlist": {
-    eyebrow: "IL LIBRO FISICO",
-    title: "Avvisami quando il libro è disponibile.",
+    eyebrow: "Lista prioritaria — Successo in 3 Passi",
+    title: "Il libro per rimettere metodo nel lavoro dopo i 40 anni.",
     subtitle:
-      "La versione fisica di Successo in 3 Passi sarà disponibile a breve. Lascia la tua email e ti avviserò al lancio.",
-    cta: "Avvisami al lancio",
-    successMessage: "Perfetto. Ti avviserò quando il libro sarà disponibile.",
+      "Ricevi aggiornamenti sulla nuova edizione, materiali extra e accesso anticipato ai contenuti pratici del metodo.",
+    cta: "Entra nella lista prioritaria",
+    successMessage: "Sei nella lista prioritaria.",
     privacyPrefix: "Accetto l'",
-    privacySuffix: " e autorizzo l'uso dei dati per ricevere l'avviso sul lancio del libro.",
+    privacySuffix: " e autorizzo l'uso dei dati per ricevere aggiornamenti sul libro e sui materiali collegati.",
     newsletterLabel: "Voglio ricevere anche la newsletter Un Passo Avanti.",
   },
 };
@@ -104,6 +104,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
             form_name: "book-waitlist-form",
           });
           setStatus("success");
+          window.location.href = "/grazie-lista-prioritaria";
         } else {
           trackEvent("newsletter_submit", {
             source_page: window.location.pathname,
@@ -120,10 +121,10 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
   };
 
   if (status === "success") {
-    if (variant === "book-excerpt") return null; // redirect in corso
+    if (variant === "book-excerpt" || variant === "book-waitlist") return null; // redirect in corso
     return (
       <section
-        id={variant === "book-waitlist" ? "avviso-lancio" : "newsletter"}
+        id="newsletter"
         className="py-24 px-6 bg-hub-cream border-t border-hub-border"
       >
         <div className="max-w-2xl mx-auto text-center">
@@ -172,7 +173,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
                 placeholder="Il tuo nome"
-                required
+                required={variant !== "book-waitlist"}
                 className="w-full px-6 py-4 rounded-xl border border-hub-border focus:border-hub-gold outline-none transition-colors text-sm font-light bg-hub-bg/30"
               />
             </div>
@@ -248,7 +249,9 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
         )}
 
         <p className="text-hub-ink-light text-[10px] mt-8 uppercase tracking-widest font-medium">
-          Zero spam. Privacy rispettata. Cancellati quando vuoi.
+          {variant === "book-waitlist"
+            ? "Niente spam. Solo aggiornamenti sul libro, sul metodo e sui materiali pratici collegati."
+            : "Zero spam. Privacy rispettata. Cancellati quando vuoi."}
         </p>
       </div>
     </section>

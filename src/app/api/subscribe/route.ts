@@ -64,25 +64,25 @@ export async function POST(req: NextRequest) {
   const backendSource = isBookExcerpt
     ? "estratto_s3p_2026"
     : isBookWaitlist
-      ? "book_waitlist_s3p_2026"
+      ? "waitlist_s3p_2026"
       : "newsletter_un_passo_avanti";
 
   const backendTag = isBookExcerpt
     ? "lead_magnet_s3p_2026"
     : isBookWaitlist
-      ? "book_launch_waitlist_s3p_2026"
+      ? "waitlist_s3p_2026"
       : "un_passo_avanti";
 
   const beehiivTag = isBookExcerpt
     ? "lead_magnet_s3p_2026"
     : isBookWaitlist
-      ? "book_launch_waitlist_s3p_2026"
+      ? "waitlist_s3p_2026"
       : "un_passo_avanti";
 
   const utmSource = isBookExcerpt
     ? "estratto_s3p_2026"
     : isBookWaitlist
-      ? "book_waitlist_s3p_2026"
+      ? "waitlist_s3p_2026"
       : "newsletter_un_passo_avanti";
 
   // --- 1. Backend Dashboard ---

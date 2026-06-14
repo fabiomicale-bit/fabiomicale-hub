@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import EditorialHero from "@/components/EditorialHero";
-import NewsletterCTA from "@/components/NewsletterCTA";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -336,6 +335,38 @@ export default function SuccessoIn3PassiPage() {
         </div>
       </section>
 
+      {/* ── SEZIONE 7 — LISTA PRIORITARIA ───────────────────────── */}
+      <section className="px-6 py-24 bg-hub-cream border-y border-hub-border">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid gap-10 md:grid-cols-[1.3fr_0.7fr] md:items-center">
+            <div>
+              <p className="text-[11px] font-bold uppercase tracking-[0.35em] text-hub-gold mb-5">
+                Lista prioritaria
+              </p>
+              <h2 className="text-3xl md:text-4xl font-serif font-medium mb-5 leading-tight">
+                Vuoi seguire la nuova edizione del libro?
+              </h2>
+              <p className="text-hub-ink-muted font-light leading-relaxed">
+                Sto preparando aggiornamenti, materiali extra e contenuti pratici collegati a
+                “Successo in 3 Passi”. Puoi entrare nella lista prioritaria e ricevere gli
+                aggiornamenti prima degli altri.
+              </p>
+            </div>
+            <div className="md:text-right">
+              <Link
+                href="/successo-in-3-passi/lista-prioritaria"
+                className="btn-gold inline-block px-8 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-center"
+              >
+                Entra nella lista prioritaria
+              </Link>
+              <p className="mt-4 text-[10px] font-serif italic text-hub-ink-light">
+                Gratuita. Nessuna vendita immediata.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── SEZIONE 7 — CTA FINALE ────────────────────────────── */}
       <section className="py-32 px-6 bg-hub-charcoal text-white text-center">
         <div className="max-w-3xl mx-auto">
@@ -369,27 +400,25 @@ export default function SuccessoIn3PassiPage() {
 
             <div className="flex flex-col items-center text-center">
               <div className="p-10 bg-white/5 rounded-3xl border border-white/10 w-full mb-4">
-                <h3 className="text-xl font-serif mb-4 text-hub-gold">Il libro completo</h3>
+                <h3 className="text-xl font-serif mb-4 text-hub-gold">Lista prioritaria</h3>
                 <p className="text-white/60 text-sm font-light mb-6">
-                  La versione fisica sarà disponibile a breve. Lascia la tua email e ti avviserò al lancio.
+                  Ricevi aggiornamenti sulla nuova edizione, materiali extra e contenuti pratici collegati al metodo.
                 </p>
-                <a
-                  href="#avviso-lancio"
+                <Link
+                  href="/successo-in-3-passi/lista-prioritaria"
                   className="btn-gold w-full py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-center inline-block"
                 >
-                  Avvisami al lancio
-                </a>
+                  Entra nella lista prioritaria
+                </Link>
               </div>
               <p className="text-[10px] font-serif italic text-hub-gold/40 px-4">
-                Solo un avviso quando il libro sarà disponibile.
+                Nessuna falsa urgenza. Solo aggiornamenti utili.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── SEZIONE 8 — LISTA AVVISO LANCIO ─────────────────── */}
-      <NewsletterCTA variant="book-waitlist" />
     </main>
   );
 }
