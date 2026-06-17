@@ -57,7 +57,7 @@ export default function GrazieEstrattoPage() {
         </div>
 
         <p className="text-hub-ink-muted text-sm font-light leading-relaxed max-w-md mx-auto">
-          Da oggi riceverai anche <span className="font-medium text-hub-ink italic">Un Passo Avanti</span>, la newsletter pratica per avanzare con metodo, AI e disciplina.
+          Se hai scelto di iscriverti anche a <span className="font-medium text-hub-ink italic">Un Passo Avanti</span>, riceverai la newsletter nei prossimi aggiornamenti. In ogni caso, l&apos;estratto è in arrivo nella tua email.
         </p>
       </div>
     </main>
