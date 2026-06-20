@@ -93,19 +93,14 @@ Saluta per nome: ${nome}
           subject: `${nome}, ho ricevuto il tuo questionario ✅`,
           text: `Ciao ${nome},
 
-ho ricevuto il tuo questionario. Grazie per aver condiviso la tua situazione con me — ci vuole coraggio a mettere per iscritto i propri blocchi.
+ho ricevuto correttamente il tuo questionario.
 
-Leggo tutto con attenzione e ti rispondo personalmente entro 48 ore con qualche riflessione concreta sulla tua situazione.
+Lo leggerò con attenzione e userò le informazioni che hai condiviso per capire meglio la tua situazione e il punto da cui partire.
 
-Nel frattempo, se vuoi iniziare subito, puoi scaricare l'ebook gratuito:
-https://drive.google.com/file/d/1JS-3VRJWN0KplcxaaHFlq3G-HP4f1JpP/view?usp=sharing
+Se servirà approfondire qualcosa, ti risponderò direttamente a questa email.
 
-A presto,
-Fabio
-
-—
-Fabio Micale | fabiomicale.com
-"Non ti vendo sogni. Ti do strumenti."`,
+Fabio Micale
+fabiomicale.com`,
         }),
       })
     } else {
