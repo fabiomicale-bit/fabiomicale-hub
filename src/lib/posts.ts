@@ -23,6 +23,92 @@ export type Post = {
 export const posts: Post[] = [
   // ── ARTICOLI RECENTI ──────────────────────────────────────────
   {
+    slug: "ricaduta-non-fallimento-tornare-in-carreggiata",
+    seoTitle:
+      "La ricaduta non è un fallimento: come tornare in carreggiata",
+    seoDescription:
+      "Riparti, tieni due settimane, poi molli? Il problema non è la volontà: è la mancanza di un sistema di rientro. Scopri la regola del rientro del Passo 3.",
+    keywords:
+      "ricaduta non è un fallimento, tornare in carreggiata, ricominciare da zero, mantenere il controllo, perché mollo dopo due settimane, costanza dopo i 40, metodo successo in 3 passi, correggere il sistema",
+    titolo:
+      "La ricaduta non è un fallimento: come tornare in carreggiata senza ricominciare da zero",
+    categoria: "Passo 3 — Mantieni il Controllo",
+    categoriaClasses: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
+    data: "26 giugno 2026",
+    dataISO: "2026-06-26",
+    tempoLettura: "8 min",
+    ogImage: "/blog/cover_ricaduta_non_fallimento.png",
+    coverAlt:
+      "Taccuino con una rotta che devia e rientra, accanto a una bussola — la ricaduta come correzione di rotta nel Passo 3 del Metodo Successo in 3 Passi.",
+    excerpt:
+      "Dopo una settimana storta molti buttano via tutto e ripartono da zero. Ma la ricaduta non è un fallimento personale: è un dato che ti dice dove il sistema non ha retto. Ecco come correggere e rientrare.",
+    correlati: [
+      "mantieni-il-controllo-revisione-settimanale",
+      "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni",
+      "manifesto-sistemi-autonomi",
+    ],
+    step: "3B",
+    formats: ["appunti-di-metodo"],
+    contentHtml: `
+<p>Hai ripreso in mano la tua organizzazione. Di nuovo.</p>
+<p>Avevi deciso che stavolta tenevi il punto. Una settimana è andata bene, magari due. Poi è arrivata la settimana storta — quella che arriva sempre — e il sistema si è fermato. Oggi ti accorgi che sono giorni che non lo tocchi.</p>
+<p>E parte il pensiero di sempre: «Ecco, non sono capace di tenere il filo.»</p>
+<p>Fermati un attimo su quel pensiero. Perché è lì il problema. Non nella settimana saltata. Nel modo in cui la stai leggendo.</p>
+<p>La ricaduta non è la prova che non sei capace. È normale. Soprattutto se stai ripartendo dopo i 40, con un lavoro vero, una famiglia, e una giornata che non ti chiede mai il permesso prima di andare storta.</p>
+
+<h2>Il problema non è cadere</h2>
+<p>Quasi tutti, dopo una settimana andata male, fanno la stessa cosa: buttano via tutto.</p>
+<p>Una settimana saltata diventa «ho fallito». «Ho fallito» diventa «riparto lunedì». E lunedì, di solito, è il lunedì che non arriva mai davvero — o arriva, dura tre giorni, e si ricomincia da capo.</p>
+<p>Succede più spesso di quanto si ammetta. E non succede ai pigri. Succede a persone che lavorano tanto, che ci tengono, che hanno già provato sul serio più di una volta.</p>
+<p>Il punto è questo: chi molla non confonde la fatica con l'incapacità. Confonde la <strong>continuità</strong> con la <strong>perfezione</strong>.</p>
+<p>Pensa che il metodo funzioni solo se non sgarri mai. Quindi al primo sgarro pensa che il metodo sia saltato. E allora tanto vale azzerare.</p>
+<p>Ma azzerare ha un costo che nessuno ti dice. Ogni volta che riparti da zero, ti tocca rifare la parte più faticosa: l'avvio. E siccome la vita continua a produrre settimane storte, finisci per spendere tutte le energie in partenze. Non arrivi mai alla parte in cui il sistema regge da solo.</p>
+
+<h2>Nel Passo 3, la ricaduta è un dato</h2>
+<p>Nel Metodo Successo in 3 Passi, il terzo passo è <em>Mantieni il controllo</em>. E controllo non vuol dire non sbagliare mai. Vuol dire <strong>accorgersi quando stai perdendo il filo, e avere un modo per rientrare</strong>.</p>
+<p>Da questo punto di vista, una ricaduta non è un voto sul tuo carattere. È un'informazione.</p>
+<p>Ti sta dicendo qualcosa di preciso: in quel punto, il sistema non ha retto. Non tu. Il sistema.</p>
+<p>E un sistema che non regge non si abbandona. Si guarda, si capisce dove si è rotto, e si corregge. Non serve la colpa. Serve la revisione.</p>
+<p>La differenza tra chi tiene il filo nel tempo e chi ricomincia ogni mese non è la disciplina. È che il primo, quando cade, non si processa. Si chiede solo: «Cos'è successo, e qual è la cosa più piccola che mi rimette dentro?»</p>
+
+<h2>Tre domande per rientrare</h2>
+<p>Quando ti accorgi di essere uscito dal percorso, non ti serve un nuovo piano. Ti servono tre domande. Sono fatte apposta per essere semplici, perché devi poterle usare proprio nei giorni in cui non hai testa per niente di complicato.</p>
+<h3>1. Cos'è successo?</h3>
+<p>Senza giudizio. Solo i fatti. «Ho saltato la revisione per dieci giorni perché ero in trasferta e la sera ero a pezzi.» Punto. Non «sono il solito che molla tutto». Quella è una storia, non un fatto. E le storie sul tuo valore ti tengono fermo.</p>
+<h3>2. Dove si è rotto il sistema?</h3>
+<p>Quasi sempre è una di tre cose. Il sistema era troppo ambizioso, e reggeva solo nelle settimane perfette. Oppure non avevi previsto come rientrare, solo come partire. Oppure non era agganciato a niente di fisso nella tua settimana, e così è bastato un imprevisto per farlo sparire.</p>
+<h3>3. Qual è la correzione minima per ripartire?</h3>
+<p>Minima. Non rifai i dieci giorni persi. Non riscrivi tutto. Correggi <strong>una</strong> cosa, non tutta la tua vita. Riduci il sistema finché regge anche nella settimana brutta, e fai oggi il gesto più piccolo che ti rimette dentro: una riga scritta, mezz'ora bloccata in calendario, una sola domanda della revisione.</p>
+<p>Quando hai lavoro, famiglia, stanchezza e imprevisti, la continuità perfetta non esiste. Il metodo serve proprio lì: non quando tutto fila, ma quando la settimana non è andata come avevi previsto.</p>
+
+<h2>Come funziona davvero, in concreto</h2>
+<p>Facciamo l'esempio di chi mi scrive più spesso.</p>
+<p>Hai 47 anni. Lavori, e il lavoro non è prevedibile. Hai una famiglia, e neanche quella è prevedibile. Avevi messo in piedi una piccola routine settimanale per rimettere ordine: dieci minuti il venerdì, niente di più.</p>
+<p>Per due venerdì funziona. Il terzo salta un figlio con la febbre, una scadenza arrivata addosso, due sere in cui crolli sul divano alle nove. Il venerdì non lo fai. Il venerdì dopo nemmeno, perché ormai «tanto ho già saltato».</p>
+<p>Ecco il bivio. La versione vecchia: «Non fa per me, lascio perdere.» E sparisce tutto.</p>
+<p>La versione del Passo 3: il lunedì apri il foglio per due minuti. Scrivi una riga: «Saltate due settimane, troppo carico. Nelle settimane pesanti la revisione diventa di tre minuti, non dieci.» E venerdì riprendi. Ridotta, ma riprendi.</p>
+<p>Non hai recuperato niente. Non ti sei punito. Hai solo corretto il sistema e sei rientrato. Ed è esattamente questo che, ripetuto, fa la differenza in un anno.</p>
+
+<h2>Dove si incastra nel metodo</h2>
+<p>I tre passi lavorano in fila.</p>
+<p><strong>Passo 1 — Ferma il caos.</strong> Smetti di reagire a tutto, riduci il rumore, fai spazio.</p>
+<p><strong>Passo 2 — Crea struttura.</strong> Costruisci qualcosa che regga: priorità, decisioni, un sistema che non dipenda solo dalla tua forza di volontà.</p>
+<p><strong>Passo 3 — Mantieni il controllo.</strong> Tieni in piedi quella struttura nel tempo. E siccome nel tempo si cade, il Passo 3 è anche il passo in cui impari a rientrare.</p>
+<p>Il controllo non è rigidità. Un navigatore non si ferma perché il vento l'ha spostato dalla rotta. Vede lo scarto, corregge, riparte. Non si chiede se vale come marinaio. Si chiede solo di quanto si è spostato e come rientra.</p>
+<p>Mantenere il controllo è quel gesto, fatto ogni volta che serve.</p>
+
+<h2>Non devi essere perfetto</h2>
+<p>Devi solo avere un modo per rientrare in carreggiata.</p>
+<p>Questa è la frase che vorrei ti restasse. Non «non mollare mai». Non «trasforma ogni caduta in una vittoria». Quelle frasi non aiutano nessuno, e a 40 anni passati si sentono pure un po' false.</p>
+<p>La verità è più sobria, e più utile: cadrai di nuovo. È previsto. La domanda non è se cadi, ma quanto in fretta rientri — e se rientri dal punto in cui eri, invece di ricominciare da zero.</p>
+
+<div class="blog-cta">
+  <p>Se vuoi il metodo completo — fermare il caos, costruire la struttura, e tenerla in piedi quando la vita ci mette del suo — i primi capitoli di <strong>Successo in 3 Passi</strong> sono gratuiti.</p>
+  <a href="/estratto">Leggi l'estratto gratuito</a>
+</div>
+  `,
+  },
+  {
     slug: "over-40-ai-esperienza",
     seoTitle:
       "Over 40 e AI: l'esperienza vale più dell'algoritmo",
