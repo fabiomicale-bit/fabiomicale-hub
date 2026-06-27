@@ -73,25 +73,25 @@ export default function EstrattoPage() {
       <section className="py-32 px-6 bg-hub-bg-alt border-y border-hub-border/50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-medium">Cosa ricevi</h2>
+            <h2 className="text-4xl font-serif font-medium">Cosa trovi nell&apos;estratto gratuito</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 title: "Estratto gratuito in PDF",
-                desc: "I primi capitoli di Successo in Tre Passi — Edizione 2026, pronti da leggere sul tuo device.",
+                desc: "I primi capitoli di Successo in 3 Passi — Edizione 2026, pronti da leggere sul tuo dispositivo.",
               },
               {
-                title: "Introduzione al Metodo Successo in Tre Passi",
-                desc: "Un ingresso reale nel Metodo: non un riassunto promozionale, ma la struttura operativa di partenza.",
+                title: "Una prima mappa del Metodo",
+                desc: "Non un riassunto promozionale, ma un ingresso concreto nel percorso: fermare il caos, scegliere una direzione, mantenere il controllo.",
               },
               {
-                title: "Primo esercizio pratico",
-                desc: "Un esercizio guidato per iniziare subito a rimettere ordine nel tuo flusso di lavoro.",
+                title: "Un esercizio pratico iniziale",
+                desc: "Una traccia semplice per cominciare a rimettere ordine nel tuo lavoro, nelle priorità e nelle decisioni.",
               },
               {
-                title: "Newsletter \"Un Passo Avanti\"",
-                desc: "Contenuti pratici settimanali per applicare il Metodo alla tua crescita professionale dopo i quaranta.",
+                title: "Un invito a continuare il percorso",
+                desc: "Se lo desideri, puoi ricevere anche la newsletter “Un Passo Avanti”, con contenuti pratici per applicare il Metodo dopo i quaranta.",
               },
             ].map((item, i) => (
               <div
