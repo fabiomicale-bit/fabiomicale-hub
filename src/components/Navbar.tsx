@@ -43,9 +43,9 @@ export default function Navbar() {
             <span className="text-[20px] font-black tracking-[0.2em] text-hub-ink uppercase font-serif group-hover:text-hub-gold transition-colors">
               Fabio Micale
             </span>
-            <span className="text-[10px] font-bold tracking-[0.4em] text-hub-gold uppercase mt-1">
-              Scrittore e Formatore
-            </span>
+                <span className="text-[10px] font-bold tracking-[0.4em] text-hub-gold uppercase mt-1">
+                  Autore e Formatore
+                </span>
           </div>
         </Link>
 
