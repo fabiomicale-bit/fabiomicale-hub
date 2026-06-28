@@ -34,14 +34,12 @@ export const metadata: Metadata = {
     template: "%s | Fabio Micale",
   },
   description:
-    "Scrivo libri, creo corsi e costruisco sistemi per chi vuole vincere nella vita. Crescita personale, business online e intelligenza artificiale per professionisti Over 40.",
+    "Fabio Micale, autore e formatore, aiuta professionisti Over 40 a ripartire con metodo, struttura e uso pratico dell'intelligenza artificiale.",
   keywords: [
     "Fabio Micale",
     "Successo in 3 Passi",
     "crescita personale",
-    "business online",
     "intelligenza artificiale",
-    "coaching",
     "formazione",
     "autodisciplina",
     "over 40",
@@ -57,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "Fabio Micale",
     title: "Fabio Micale — Autore, Formatore, Metodologo della Crescita",
     description:
-      "Libri, corsi e sistemi per chi vuole vincere nella vita. Crescita personale, AI e strategie concrete per professionisti Over 40.",
+      "Metodo, formazione e strumenti concreti per professionisti Over 40 che vogliono ripartire con struttura nell'era dell'intelligenza artificiale.",
     images: [
       {
         url: "/og-image.jpg",
@@ -71,7 +69,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fabio Micale — Autore, Formatore, Metodologo della Crescita",
     description:
-      "Libri, corsi e sistemi per chi vuole vincere nella vita.",
+      "Metodo e strumenti pratici per professionisti Over 40.",
     creator: "@fabiomicale",
     images: ["/og-image.jpg"],
   },

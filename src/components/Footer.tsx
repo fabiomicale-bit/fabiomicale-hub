@@ -1,11 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  const pathname = usePathname();
-
   return (
     <footer className="bg-hub-bg-warm text-hub-ink pt-24 pb-12 px-6">
       <div className="max-w-7xl mx-auto">
@@ -18,16 +15,24 @@ export default function Footer() {
                   Fabio Micale
                 </span>
                 <span className="text-[10px] font-bold tracking-[0.4em] text-hub-gold uppercase mt-1">
-                  Scrittore e Formatore
+                  Autore e Formatore
                 </span>
               </div>
             </Link>
             <p className="text-hub-ink/60 text-sm leading-relaxed max-w-sm font-light">
-              Scrittore e formatore per la rinascita professionale Over 40 nell’era dell’AI. <br />
+              Autore e formatore per la rinascita professionale Over 40 nell’era dell’AI. <br />
               Autore del Metodo Successo in 3 Passi.
             </p>
+            <div className="mt-8 flex flex-wrap gap-5 text-[10px] font-bold uppercase tracking-[0.2em]">
+              <a href="https://www.linkedin.com/in/fabiomicale/" target="_blank" rel="noopener noreferrer" className="text-hub-ink/50 hover:text-hub-gold transition-colors underline underline-offset-4">
+                Seguimi anche su LinkedIn
+              </a>
+              <a href="https://www.youtube.com/@FabioMicale" target="_blank" rel="noopener noreferrer" className="text-hub-ink/50 hover:text-hub-gold transition-colors underline underline-offset-4">
+                Guarda il canale YouTube
+              </a>
+            </div>
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-hub-gold mt-6 italic">
-              "Non ti vendo sogni. Ti do strumenti."
+              &ldquo;Non ti vendo sogni. Ti do strumenti.&rdquo;
             </p>
           </div>
  
@@ -61,7 +66,7 @@ export default function Footer() {
             <div className="pt-4 border-t border-hub-border/50">
                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-hub-gold">Iscrizioni Aperte</p>
                <p className="text-hub-ink/60 text-[9px] mt-2 italic font-serif">
-                 Iscriviti per ricevere l'estratto gratuito e gli aggiornamenti del Metodo.
+                 Iscriviti per ricevere l&apos;estratto gratuito e gli aggiornamenti del Metodo.
                </p>
             </div>
           </div>

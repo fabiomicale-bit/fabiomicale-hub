@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/maintenance/"],
+        disallow: ["/api/", "/maintenance/", "/manutenzione"],
       },
     ],
     sitemap: "https://www.fabiomicale.com/sitemap.xml",

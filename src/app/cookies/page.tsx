@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Cookie Policy",
   description: "Informativa estesa sull'uso dei cookie del portale di Fabio Micale.",
+  alternates: { canonical: "https://www.fabiomicale.com/cookies" },
 };
 
 export default function CookiePage() {

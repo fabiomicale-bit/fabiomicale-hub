@@ -3,8 +3,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Fabio Micale",
+  title: "Privacy Policy",
   description: "Informativa completa sul trattamento dei dati personali - Fabio Micale.",
+  alternates: { canonical: "https://www.fabiomicale.com/privacy" },
 };
 
 export default function PrivacyPage() {

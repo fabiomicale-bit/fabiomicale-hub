@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Chi sono",
-  description: "Fabio Micale è scrittore e formatore specializzato in metodi pratici per la crescita e la rinascita professionale Over 40.",
+  description: "Fabio Micale è autore e formatore specializzato in metodi pratici per la crescita e la rinascita professionale Over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/chi-sono" },
 };
 
@@ -37,7 +37,7 @@ export default function ChiSonoPage() {
                 <div className="absolute -inset-6 bg-hub-gold/[0.05] blur-[60px] rounded-full" />
                 <Image
                   src="/foto fabio cravatta no sfondo.png"
-                  alt="Fabio Micale — Scrittore e Formatore"
+                  alt="Fabio Micale — Autore e Formatore"
                   width={550}
                   height={700}
                   className="relative z-10 w-full h-auto drop-shadow-2xl grayscale contrast-[1.1]"
@@ -96,6 +96,19 @@ export default function ChiSonoPage() {
                 <Link href="/il-metodo" className="btn-gold px-12 py-5 text-[11px] font-bold uppercase tracking-[0.2em]">
                   Scopri il Metodo
                 </Link>
+              </div>
+              <div className="border-t border-hub-border/50 pt-8">
+                <p className="text-sm font-light leading-relaxed text-hub-ink-muted">
+                  Continua il percorso anche su LinkedIn e YouTube, dove condivido appunti, video e riflessioni sul metodo.
+                </p>
+                <div className="mt-5 flex flex-wrap gap-6 text-[11px] font-bold uppercase tracking-[0.18em]">
+                  <a href="https://www.linkedin.com/in/fabiomicale/" target="_blank" rel="noopener noreferrer" className="text-hub-ink underline underline-offset-4 hover:text-hub-gold transition-colors">
+                    Seguimi anche su LinkedIn
+                  </a>
+                  <a href="https://www.youtube.com/@FabioMicale" target="_blank" rel="noopener noreferrer" className="text-hub-ink underline underline-offset-4 hover:text-hub-gold transition-colors">
+                    Guarda il canale YouTube
+                  </a>
+                </div>
               </div>
             </div>
           </div>

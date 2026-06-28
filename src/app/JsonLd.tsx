@@ -10,7 +10,7 @@ const personSchema = {
   image: "https://www.fabiomicale.com/og-image.jpg",
   jobTitle: "Autore e Formatore",
   description:
-    "Fabio Micale è scrittore e formatore. Autore di «Successo in 3 Passi», aiuta professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione professionale nell'era dell'intelligenza artificiale.",
+    "Fabio Micale è autore e formatore. Autore di «Successo in 3 Passi», aiuta professionisti Over 40 a fermare il caos, rimettere struttura e costruire una nuova direzione professionale nell'era dell'intelligenza artificiale.",
   knowsAbout: [
     "Crescita personale",
     "Metodo e struttura professionale",

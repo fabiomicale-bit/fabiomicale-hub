@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import EditorialHero from "@/components/EditorialHero";
 import MetodoSection from "@/components/MetodoSection";
-import BookFeature from "@/components/BookFeature";
 import NewsletterCTA from "@/components/NewsletterCTA";
-import AuthorBio from "@/components/AuthorBio";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -12,7 +10,7 @@ export const metadata: Metadata = {
     absolute: "Fabio Micale | Metodo Successo in 3 Passi per Over 40",
   },
   description:
-    "Fabio Micale, scrittore e formatore, aiuta professionisti Over 40 a ripartire con metodo, lucidità e strumenti pratici nell’era dell’intelligenza artificiale.",
+    "Fabio Micale, autore e formatore, aiuta professionisti Over 40 a ripartire con metodo, lucidità e strumenti pratici nell’era dell’intelligenza artificiale.",
   alternates: { canonical: "https://www.fabiomicale.com" },
 };
 
@@ -402,11 +400,21 @@ export default function HomePage() {
               <div>
                 <h2 className="text-4xl md:text-5xl font-serif font-medium mb-8 leading-tight">Chi è Fabio Micale</h2>
                 <p className="text-lg text-hub-ink-muted leading-relaxed mb-10 font-light">
-                  Fabio Micale è scrittore e formatore. Da oltre trent’anni lavora su crescita personale, metodo, impresa e sviluppo professionale. Con Successo in 3 Passi ha trasformato esperienza, errori, ripartenze e strumenti pratici in un sistema pensato per chi vuole ricostruire direzione dopo i 40 anni.
+                  Fabio Micale è autore e formatore. Da oltre trent’anni lavora su crescita personale, metodo, impresa e sviluppo professionale. Con Successo in 3 Passi ha trasformato esperienza, errori, ripartenze e strumenti pratici in un sistema pensato per chi vuole ricostruire direzione dopo i 40 anni.
                 </p>
-                <Link href="/chi-sono" className="btn-gold px-10 py-4 text-[11px] font-bold uppercase tracking-[0.2em]">
-                  Leggi la storia di Fabio
-                </Link>
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+                  <Link href="/chi-sono" className="btn-gold px-10 py-4 text-[11px] font-bold uppercase tracking-[0.2em]">
+                    Leggi la storia di Fabio
+                  </Link>
+                  <div className="flex flex-wrap gap-5 text-[11px] font-bold uppercase tracking-[0.18em]">
+                    <a href="https://www.linkedin.com/in/fabiomicale/" target="_blank" rel="noopener noreferrer" className="text-hub-ink/60 underline underline-offset-4 hover:text-hub-gold transition-colors">
+                      Seguimi anche su LinkedIn
+                    </a>
+                    <a href="https://www.youtube.com/@FabioMicale" target="_blank" rel="noopener noreferrer" className="text-hub-ink/60 underline underline-offset-4 hover:text-hub-gold transition-colors">
+                      Guarda il canale YouTube
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-hub-border shadow-2xl">
                 <Image

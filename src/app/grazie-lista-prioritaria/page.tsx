@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fabiomicale.com/grazie-lista-prioritaria",
   },
+  robots: { index: false, follow: false },
 };
 
 export default function GrazieListaPrioritariaPage() {

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Grazie! L'estratto è in arrivo",
   description:
-    "Controlla la tua email: l'estratto gratuito di Successo in Tre Passi è in arrivo.",
+    "Controlla la tua email: l'estratto gratuito di Successo in 3 Passi è in arrivo.",
   robots: { index: false, follow: false },
 };
 

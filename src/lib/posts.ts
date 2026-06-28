@@ -29,7 +29,7 @@ export const posts: Post[] = [
     seoDescription:
       "Riparti, tieni due settimane, poi molli? Il problema non è la volontà: è la mancanza di un sistema di rientro. Scopri la regola del rientro del Passo 3.",
     keywords:
-      "ricaduta non è un fallimento, tornare in carreggiata, ricominciare da zero, mantenere il controllo, perché mollo dopo due settimane, costanza dopo i 40, metodo successo in 3 passi, correggere il sistema",
+      "ricaduta non è un fallimento, tornare in carreggiata, ricominciare da zero, mantenere il controllo, perché mollo dopo due settimane, costanza dopo i 40, metodo Successo in 3 Passi, correggere il sistema",
     titolo:
       "La ricaduta non è un fallimento: come tornare in carreggiata senza ricominciare da zero",
     categoria: "Passo 3 — Mantieni il Controllo",
@@ -422,7 +422,7 @@ export const posts: Post[] = [
 <section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
   <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
   <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
-  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist “Dal Blog al Video”. Qui trovi la versione video dedicata al Passo 1 del metodo Successo in Tre Passi: Ferma il caos.</p>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist “Dal Blog al Video”. Qui trovi la versione video dedicata al Passo 1 del metodo Successo in 3 Passi: Ferma il caos.</p>
   <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
     <iframe
       class="h-full w-full"
@@ -457,7 +457,7 @@ export const posts: Post[] = [
     seoDescription:
       "Scopri perché motivazione e nuovi strumenti non bastano: per cambiare davvero serve una revisione settimanale semplice, concreta e sostenibile.",
     keywords:
-      "revisione settimanale, crescita professionale over 40, metodo successo in 3 passi, mantieni il controllo, cambiare abitudini, organizzazione personale, AI e lavoro, ripartire dopo i 40",
+      "revisione settimanale, crescita professionale over 40, metodo Successo in 3 Passi, mantieni il controllo, cambiare abitudini, organizzazione personale, AI e lavoro, ripartire dopo i 40",
     titolo:
       "Mantieni il controllo: perché il cambiamento fallisce quando manca una revisione",
     categoria: "Passo 3 — Mantieni il Controllo",
@@ -593,7 +593,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 <section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
   <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
   <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
-  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video dedicata al Passo 3 del metodo Successo in Tre Passi: Mantieni il Controllo.</p>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video dedicata al Passo 3 del metodo Successo in 3 Passi: Mantieni il Controllo.</p>
   <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
     <iframe
       class="h-full w-full"
@@ -1502,7 +1502,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 <section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
   <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
   <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
-  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist “Dal Blog al Video”. Qui trovi la versione video dedicata al Passo 2 del metodo Successo in Tre Passi: Rimetti Struttura.</p>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist “Dal Blog al Video”. Qui trovi la versione video dedicata al Passo 2 del metodo Successo in 3 Passi: Rimetti Struttura.</p>
   <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
     <iframe
       class="h-full w-full"

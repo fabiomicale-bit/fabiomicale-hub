@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Note Legali",
   description: "Informazioni legali e termini d'uso del portale di Fabio Micale.",
+  alternates: { canonical: "https://www.fabiomicale.com/note-legali" },
 };
 
 export default function LegalNotesPage() {

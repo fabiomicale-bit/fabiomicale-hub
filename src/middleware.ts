@@ -37,7 +37,7 @@ export function middleware(request: NextRequest) {
        Sottodominio MEPA: ${isMepa ? "SI" : "NO"}
        Sottodominio IMPRESA: ${isImpresa ? "SI" : "NO"}
        `,
-      { headers: { "Content-Type": "text/plain" } }
+      { headers: { "Content-Type": "text/plain", "X-Robots-Tag": "noindex, nofollow" } }
     );
   }
 

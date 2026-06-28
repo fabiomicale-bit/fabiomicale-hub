@@ -3,12 +3,12 @@ import Link from "next/link";
 import NewsletterCTA from "@/components/NewsletterCTA";
 
 export const metadata: Metadata = {
-  title: "Scarica l'estratto gratuito di Successo in Tre Passi",
+  title: "Scarica l'estratto gratuito di Successo in 3 Passi",
   description:
-    "Ricevi gratis i primi capitoli di Successo in Tre Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
+    "Ricevi gratis i primi capitoli di Successo in 3 Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
   keywords: [
     "estratto gratuito",
-    "Successo in Tre Passi",
+    "Successo in 3 Passi",
     "primi capitoli",
     "metodo per chi ha superato i quaranta",
     "fermare il caos",
@@ -17,18 +17,18 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.fabiomicale.com/estratto" },
   openGraph: {
-    title: "Scarica l'estratto gratuito di Successo in Tre Passi",
+    title: "Scarica l'estratto gratuito di Successo in 3 Passi",
     description:
-      "Ricevi gratis i primi capitoli di Successo in Tre Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
+      "Ricevi gratis i primi capitoli di Successo in 3 Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
     url: "https://www.fabiomicale.com/estratto",
     type: "website",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Scarica l'estratto gratuito di Successo in Tre Passi",
+    title: "Scarica l'estratto gratuito di Successo in 3 Passi",
     description:
-      "Ricevi gratis i primi capitoli di Successo in Tre Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
+      "Ricevi gratis i primi capitoli di Successo in 3 Passi — Edizione 2026 e scopri il metodo per fermare il caos, rimettere struttura e mantenere il controllo.",
     images: ["/og-image.jpg"],
   },
 };
@@ -48,7 +48,7 @@ export default function EstrattoPage() {
           <div className="badge-editorial mb-8 mx-auto">Edizione 2026</div>
           <h1 className="text-4xl md:text-6xl font-serif font-medium leading-[1.05] tracking-tight mb-6">
             I primi capitoli di{" "}
-            <Link href="/successo-in-3-passi" className="italic text-hub-gold hover:underline underline-offset-4">Successo in Tre Passi.</Link>{" "}
+            <Link href="/successo-in-3-passi" className="italic text-hub-gold hover:underline underline-offset-4">Successo in 3 Passi.</Link>{" "}
             Gratis.
           </h1>
           <p className="text-xl text-hub-ink-muted leading-relaxed max-w-2xl mx-auto font-light mb-10">
