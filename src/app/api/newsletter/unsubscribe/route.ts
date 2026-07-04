@@ -71,8 +71,12 @@ export async function GET(req: NextRequest) {
   const email = normalizeEmail(req.nextUrl.searchParams.get("email"));
   const token = req.nextUrl.searchParams.get("token") || "";
 
-  if (!email || !email.includes("@") || !token || !signingSecret()) {
+  if (!email || !email.includes("@") || !token) {
     return htmlPage("Link non valido", "Il link di cancellazione non e' valido. Scrivi a info@fabiomicale.com con oggetto unsubscribe.", 400);
+  }
+
+  if (!signingSecret()) {
+    return htmlPage("Configurazione non completa", "La cancellazione automatica non e' configurata correttamente. Scrivi a info@fabiomicale.com con oggetto unsubscribe.", 500);
   }
 
   if (!safeEqual(token, expectedToken(email))) {
