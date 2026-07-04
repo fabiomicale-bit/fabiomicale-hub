@@ -105,7 +105,7 @@ export async function POST(req: NextRequest) {
           website: sitoweb,
           source: backendSource,
           tag: backendTag,
-          notes: `Lead da Hub Form: ${variant}`,
+          notes: `Lead da Hub Form: ${variant}; newsletter_consent=${newsletterConsent}; email_opt_out=false`,
         }),
       });
     } catch (err) {

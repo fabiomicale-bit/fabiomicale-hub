@@ -12,7 +12,7 @@ export default function Newsletter() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!nome || !email || !privacyAccepted) return;
+    if (!nome || !email || !privacyAccepted || !newsletterAccepted) return;
     setStatus("loading");
 
     try {
@@ -24,7 +24,7 @@ export default function Newsletter() {
           email,
           variant: "newsletter",
           privacy_consent: privacyAccepted,
-          newsletter_consent: newsletterAccepted,
+          newsletter_consent: true,
         }),
       });
 
@@ -109,6 +109,7 @@ export default function Newsletter() {
                   type="checkbox"
                   checked={newsletterAccepted}
                   onChange={(e) => setNewsletterAccepted(e.target.checked)}
+                  required
                   className="mt-1 w-4 h-4 accent-hub-gold"
                 />
                 <span className="text-xs text-hub-ink-light leading-relaxed">
@@ -119,7 +120,7 @@ export default function Newsletter() {
 
             <button
               type="submit"
-              disabled={status === "loading" || !privacyAccepted}
+              disabled={status === "loading" || !privacyAccepted || !newsletterAccepted}
               className="btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] disabled:opacity-50"
             >
               {status === "loading" ? "Inviando..." : "Iscriviti gratis →"}

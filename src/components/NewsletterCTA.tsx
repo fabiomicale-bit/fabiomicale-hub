@@ -69,11 +69,12 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const requiresNewsletterConsent = variant === "default" || variant === "article" || variant === "newsletter";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (honeypot) return; 
-    if (!email || !privacyAccepted) return;
+    if (!email || !privacyAccepted || (requiresNewsletterConsent && !newsletterAccepted)) return;
     setStatus("loading");
 
     try {
@@ -86,7 +87,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           variant, 
           website_url: honeypot,
           privacy_consent: privacyAccepted,
-          newsletter_consent: newsletterAccepted
+          newsletter_consent: requiresNewsletterConsent ? true : newsletterAccepted
         }),
       });
       
@@ -224,6 +225,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
                   type="checkbox"
                   checked={newsletterAccepted}
                   onChange={(e) => setNewsletterAccepted(e.target.checked)}
+                  required={requiresNewsletterConsent}
                   className="mt-1 w-4 h-4 rounded border-hub-border text-hub-gold focus:ring-hub-gold"
                 />
                 <span className="text-[11px] text-hub-ink-muted leading-tight font-light group-hover:text-hub-ink transition-colors">
@@ -236,8 +238,8 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
 
             <button 
               type="submit" 
-              disabled={status === "loading" || !privacyAccepted}
-              className={`btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] transition-all ${status === "loading" || !privacyAccepted ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.02]'}`}
+              disabled={status === "loading" || !privacyAccepted || (requiresNewsletterConsent && !newsletterAccepted)}
+              className={`btn-gold w-full py-5 text-[11px] font-bold uppercase tracking-[0.2em] transition-all ${status === "loading" || !privacyAccepted || (requiresNewsletterConsent && !newsletterAccepted) ? 'opacity-50 cursor-not-allowed' : 'hover:scale-[1.02]'}`}
             >
               {status === "loading" ? "Invio in corso..." : copy.cta}
             </button>
