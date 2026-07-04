@@ -6,7 +6,7 @@ function normalizeEmail(email: string | null): string {
 }
 
 function signingSecret(): string {
-  return process.env.NEWSLETTER_UNSUBSCRIBE_SECRET || process.env.BEEHIIV_API_KEY || "";
+  return process.env.NEWSLETTER_UNSUBSCRIBE_SECRET || process.env.RESEND_API_KEY || process.env.BEEHIIV_API_KEY || "";
 }
 
 function expectedToken(email: string): string {
