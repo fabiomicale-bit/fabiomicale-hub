@@ -1,9 +1,0 @@
-<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-  <rect width="32" height="32" rx="6" fill="#1A1A1A"/>
-  <g transform="translate(6, 8) scale(0.12)">
-    <!-- F Stilizzata -->
-    <path d="M0,0 H90 V25 H30 V55 H80 V80 H30 V115 C30,125 25,135 0,135 V110 C10,110 12,105 12,100 V0 Z" fill="#FFFFFF" />
-    <!-- M Stilizzata -->
-    <path d="M105,0 H135 L165,55 L195,0 H225 V135 H195 V50 L165,110 L135,50 V135 H105 V0 Z" fill="#C8A45A" />
-  </g>
-</svg>

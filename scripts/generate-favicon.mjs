@@ -4,22 +4,23 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const svgPath = path.join(__dirname, '../public/logo-fabio-micale.svg')
+const sourcePath = path.join(__dirname, '../public/fm-shield-icon-512.png')
 const publicDir = path.join(__dirname, '../public')
 
-const svgBuffer = fs.readFileSync(svgPath)
-const bg = { r: 17, g: 17, b: 17 } // #111111
+const sourceBuffer = fs.readFileSync(sourcePath)
 
-// favicon-16x16.png in public/
-await sharp(svgBuffer).flatten({ background: bg }).resize(16, 16).png().toFile(path.join(publicDir, 'favicon-16x16.png'))
+const renderPng = async (name, size) => {
+  await sharp(sourceBuffer).resize(size, size).png().toFile(path.join(publicDir, name))
+}
 
-// favicon-32x32.png in public/
-await sharp(svgBuffer).flatten({ background: bg }).resize(32, 32).png().toFile(path.join(publicDir, 'favicon-32x32.png'))
+await renderPng('favicon-16x16.png', 16)
+await renderPng('favicon-32x32.png', 32)
+await renderPng('favicon-48x48.png', 48)
+await renderPng('favicon-96x96.png', 96)
+await renderPng('favicon-192x192.png', 192)
+await renderPng('apple-touch-icon.png', 180)
+await renderPng('apple-icon.png', 180)
+await renderPng('icon-192.png', 192)
+await renderPng('icon.png', 512)
 
-// apple-icon.png 180x180 in public/
-await sharp(svgBuffer).flatten({ background: bg }).resize(180, 180).png().toFile(path.join(publicDir, 'apple-icon.png'))
-
-// icon-192.png in public/ (PWA / Android)
-await sharp(svgBuffer).flatten({ background: bg }).resize(192, 192).png().toFile(path.join(publicDir, 'icon-192.png'))
-
-console.log('Favicon generati con sfondo #111111')
+console.log('Favicon generati dallo shield FM nero/gold')
