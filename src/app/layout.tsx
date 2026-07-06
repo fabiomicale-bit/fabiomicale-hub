@@ -86,22 +86,22 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=5', sizes: '48x48', type: 'image/x-icon' },
-      { url: '/favicon-48x48.png?v=5', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-96x96.png?v=5', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon-192x192.png?v=5', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-192.png?v=5', sizes: '192x192', type: 'image/png' },
-      { url: '/icon.png?v=5', sizes: '512x512', type: 'image/png' },
-      { url: '/favicon-32x32.png?v=5', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png?v=5', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico?v=6', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/favicon-48x48.png?v=6', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-96x96.png?v=6', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-192x192.png?v=6', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-192.png?v=6', sizes: '192x192', type: 'image/png' },
+      { url: '/icon.png?v=6', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon-32x32.png?v=6', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png?v=6', sizes: '16x16', type: 'image/png' },
     ],
-    shortcut: [{ url: '/favicon.ico?v=5', type: 'image/x-icon' }],
+    shortcut: [{ url: '/favicon.ico?v=6', type: 'image/x-icon' }],
     apple: [
-      { url: '/apple-touch-icon.png?v=5', sizes: '180x180', type: 'image/png' },
-      { url: '/apple-icon.png?v=5', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon.png?v=6', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-icon.png?v=6', sizes: '180x180', type: 'image/png' },
     ],
   },
-  manifest: '/site.webmanifest?v=5',
+  manifest: '/site.webmanifest?v=6',
 };
 
 export default function RootLayout({
