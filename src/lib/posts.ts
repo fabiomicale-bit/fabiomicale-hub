@@ -1643,6 +1643,23 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 <p>Non dove pensi di essere. Non dove vorresti essere. Dove sei.</p>
 
 <p>Da lì si costruisce tutto il resto. <a href="/estratto">Inizia dall'estratto gratuito</a>.</p>
+
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video dedicata a come reinventarsi dopo i 40 con un metodo concreto, senza ricominciare da zero.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/Yl20TDaoXI8"
+      title="Dal Blog al Video — Reinventarsi dopo i 40 | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/Yl20TDaoXI8" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
     `,
     correlati: ["ai-over-40-opportunita-non-minaccia", "sistemi-che-lavorano-per-te"],
     step: 1,
