@@ -23,6 +23,96 @@ export type Post = {
 export const posts: Post[] = [
   // ── ARTICOLI RECENTI ──────────────────────────────────────────
   {
+    slug: "sistema-minimo-giorni-storti-controllo-energia-bassa",
+    seoTitle:
+      "Il sistema minimo per i giorni storti: come mantenere il controllo",
+    seoDescription:
+      "Nei giorni in cui l'energia è bassa non serve forzare. Serve un sistema minimo per non perdere il filo: una domanda, trenta minuti, una cosa che conta.",
+    keywords:
+      "giorni storti, energia bassa, mantieni il controllo, sistema minimo, produttività over 40, metodo Successo in 3 Passi, continuità non intensità, ripartenza professionale",
+    titolo:
+      "Il sistema minimo per i giorni storti: come mantenere il controllo quando l'energia è bassa",
+    categoria: "Passo 3 — Mantieni il Controllo",
+    categoriaClasses: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
+    data: "17 luglio 2026",
+    dataISO: "2026-07-17",
+    tempoLettura: "6 min",
+    excerpt:
+      "Quasi tutti i sistemi di produttività sono pensati per i giorni buoni. Ma i giorni che decidono se un percorso tiene o si sgretola sono quelli storti. Ecco il sistema minimo per non perdere il filo quando l'energia non c'è.",
+    correlati: [
+      "mantieni-il-controllo-revisione-settimanale",
+      "ricaduta-non-fallimento-tornare-in-carreggiata",
+      "manifesto-sistemi-autonomi",
+    ],
+    step: "3A",
+    formats: ["appunti-di-metodo"],
+    contentHtml: `
+<p>C'è una versione di te che funziona bene. Dorme a sufficienza, si siede alla scrivania con la testa lucida, apre la lista delle cose da fare e le fa. Per quella versione di te, qualsiasi metodo funziona.</p>
+<p>Il problema è l'altra versione. Quella che si sveglia già stanca. Quella che guarda la lista e sente solo il peso. Quella che rimanda l'avvio di venti minuti, poi di un'ora, poi al pomeriggio, poi a domani.</p>
+<p>Quasi tutti i sistemi di produttività sono progettati per la prima versione. Ed è per questo che falliscono: perché i giorni che decidono davvero se un percorso tiene o si sgretola non sono i giorni buoni. Sono quelli storti.</p>
+<p>Questo articolo parla di come mantenere il controllo esattamente in quei giorni. Non con più disciplina. Con meno sistema.</p>
+
+<h2>I giorni storti non sono l'eccezione</h2>
+<p>Facciamo un patto di onestà: se hai più di 40 anni e stai costruendo qualcosa — una ripartenza professionale, un progetto tuo, un cambiamento vero — i giorni a energia piena non sono la norma. Sono la minoranza.</p>
+<p>Ci sono la stanchezza fisica, le preoccupazioni che girano in sottofondo, le questioni di salute tue o di chi ti sta vicino, le pratiche che si accumulano, il sonno che non è più quello di vent'anni fa. Non è un difetto da correggere. È il terreno reale su cui stai costruendo.</p>
+<p>Eppure quasi tutti pianifichiamo come se ogni giorno fosse un giorno buono. Riempiamo la settimana al cento per cento della capacità teorica. Poi arriva il martedì storto, saltiamo tutto, e il sistema — quello bello, quello perfetto — si inceppa. E con il sistema si inceppa qualcosa di peggio: la fiducia nel fatto che il sistema serva a qualcosa.</p>
+<p><strong>Non è una questione di carattere. È un errore di progettazione.</strong> Hai costruito un sistema che funziona solo nelle condizioni migliori. Come un'auto che parte solo col sole.</p>
+
+<h2>Il falso rimedio: spingere di più</h2>
+<p>La reazione istintiva al giorno storto è provare a forzare. Un altro caffè, un po' di senso di colpa usato come carburante, la promessa che "oggi recupero".</p>
+<p>Funziona una volta su dieci. Le altre nove produce due danni:</p>
+<ul>
+<li>bruci le poche energie disponibili nel tentativo di lavorare come se ne avessi tante;</li>
+<li>associ il tuo progetto a una sensazione di fatica e fallimento, e il giorno dopo l'inerzia sarà più forte.</li>
+</ul>
+<p>C'è anche il rimedio opposto, altrettanto falso: mollare tutto "finché non sto meglio". Sembra ragionevole, ma i giorni storti tendono ad arrivare a grappoli. Tre giorni di pausa diventano due settimane, e ripartire da fermo costa molto di più che non essersi mai fermati del tutto.</p>
+<p>La via d'uscita non è né spingere né mollare. È <strong>cambiare marcia senza spegnere il motore.</strong></p>
+
+<h2>Il sistema minimo: cosa resta quando togli tutto</h2>
+<p>Il Passo 3 del metodo — Mantieni il Controllo — di solito lo racconto attraverso la revisione settimanale: dieci minuti per guardare cosa ha funzionato, cosa no, e cosa correggere. Quello è il controllo nei giorni normali.</p>
+<p>Il sistema minimo è la versione di emergenza. Ed è fatto di una sola domanda:</p>
+<p><strong>"Qual è l'unica cosa che oggi posso fare in trenta minuti e che domani sarò contento di aver fatto?"</strong></p>
+<p>Una. Non tre. Non "la più importante della lista". Una cosa sola, dimensionata sui trenta minuti, scelta con un criterio semplice: domani deve fare la differenza tra "il progetto è andato avanti" e "il progetto è rimasto fermo".</p>
+<p>Qualche esempio concreto:</p>
+<ul>
+<li>rispondere a quell'email che sblocca una decisione;</li>
+<li>scrivere un paragrafo, non il capitolo;</li>
+<li>sistemare una pagina, non il sito;</li>
+<li>fare una telefonata, non "riorganizzare i contatti";</li>
+<li>rileggere e correggere, se creare oggi è fuori portata.</li>
+</ul>
+<p>Trenta minuti su una cosa che conta valgono più di otto ore immaginarie che non arriveranno.</p>
+
+<h2>Perché funziona: il controllo è continuità, non intensità</h2>
+<p>C'è un equivoco da smontare: crediamo che mantenere il controllo significhi tenere alta l'intensità. In realtà significa <strong>non perdere il filo</strong>.</p>
+<p>Un progetto muore raramente per mancanza di ore. Muore quando si spezza la continuità: quando passano abbastanza giorni vuoti da farti sentire "fuori", e rientrare richiede un'energia di attivazione che nei giorni storti non hai.</p>
+<p>Il sistema minimo protegge esattamente questo: il filo. Trenta minuti oggi non spostano il risultato finale in modo misurabile. Ma tengono aperta la porta. Domani non devi "ricominciare": devi solo continuare. E la differenza psicologica tra le due cose è enorme.</p>
+<p>È lo stesso principio della ricaduta di cui ho scritto qualche settimana fa: non si torna in carreggiata con un gesto eroico, si torna in carreggiata riducendo il costo del rientro. Il sistema minimo riduce quel costo ogni giorno, prima ancora che la ricaduta arrivi.</p>
+
+<h2>Come si usa in pratica</h2>
+<p>La procedura è volutamente povera. Nei giorni storti ogni passaggio in più è un motivo in più per non farla.</p>
+<ol>
+<li><strong>Riconosci il giorno storto, presto.</strong> Non a mezzogiorno dopo tre ore di senso di colpa. Appena ti accorgi che l'energia non c'è, dichiaralo: "oggi è un giorno a marcia ridotta". Detto, fatto, niente processo.</li>
+<li><strong>Fai la domanda.</strong> Qual è l'unica cosa che oggi posso fare in trenta minuti e che domani sarò contento di aver fatto?</li>
+<li><strong>Falla appena puoi.</strong> Prima viene fatta, meno pesa il resto della giornata. Il giorno storto migliora sensibilmente quando la cosa è già fatta.</li>
+<li><strong>Chiudi senza saldo negativo.</strong> Fatta quella, la giornata è valida. Niente "avrei dovuto fare di più". Il sistema minimo funziona solo se rispetti il patto: una cosa, fatta, basta.</li>
+</ol>
+<p>Poi, alla revisione settimanale, i giorni a marcia ridotta si contano insieme agli altri. Se in una settimana ce ne sono stati quattro, quella è un'informazione preziosa — sull'energia, non sulla tua volontà — e va trattata come un dato, non come una colpa.</p>
+
+<h2>L'errore da non fare: trasformarlo nella nuova normalità</h2>
+<p>Un chiarimento necessario. Il sistema minimo è una marcia di emergenza, non il nuovo regime. Se ogni giorno diventa un giorno da trenta minuti, il problema non è più la gestione dell'energia: è che il carico complessivo della tua vita va rivisto, e quella è una decisione da prendere a mente lucida, non un aggiustamento da giorno storto.</p>
+<p>La revisione settimanale serve anche a questo: distinguere il giorno storto occasionale dalla tendenza. Il primo si gestisce con il sistema minimo. La seconda si affronta cambiando qualcosa di strutturale — impegni, aspettative, ritmi. Il controllo, ancora una volta, non è rigidità: è sapere in quale delle due situazioni ti trovi.</p>
+
+<h2>Il metodo completo</h2>
+<p>Il sistema minimo è un pezzo del Passo 3 — Mantieni il Controllo, il terzo passo del metodo che descrivo in <em>Successo in 3 Passi</em>. Gli altri due passi vengono prima: Ferma il Caos (fare spazio) e Rimetti Struttura (costruire sistemi che non dipendono dalla tua presenza — né dalla tua energia).</p>
+
+<div class="blog-cta">
+  <p>Se vuoi partire dal principio, puoi scaricare gratuitamente l'estratto di <strong>Successo in 3 Passi</strong>: trovi il metodo spiegato dall'inizio, senza giri di parole.</p>
+  <a href="/estratto">Leggi l'estratto gratuito</a>
+</div>
+  `,
+  },
+  {
     slug: "ricaduta-non-fallimento-tornare-in-carreggiata",
     seoTitle:
       "La ricaduta non è un fallimento: come tornare in carreggiata",
