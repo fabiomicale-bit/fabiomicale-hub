@@ -37,9 +37,9 @@ export const posts: Post[] = [
     data: "17 luglio 2026",
     dataISO: "2026-07-17",
     tempoLettura: "6 min",
-    ogImage: "/blog/sistema-minimo-giorni-storti-controllo-energia-bassa-v2.png",
+    ogImage: "/blog/sistema-minimo-giorni-storti-controllo-energia-bassa-real-photo.jpg",
     coverAlt:
-      "Scrivania ordinata con una checklist essenziale e una sola attività evidenziata, simbolo del sistema minimo per mantenere il controllo nei giorni a bassa energia",
+      "Notebook aperto con penna e matite su una scrivania in legno, foto reale che rappresenta il lavoro sobrio ed essenziale del sistema minimo",
     excerpt:
       "Quasi tutti i sistemi di produttività sono pensati per i giorni buoni. Ma i giorni che decidono se un percorso tiene o si sgretola sono quelli storti. Ecco il sistema minimo per non perdere il filo quando l'energia non c'è.",
     correlati: [
