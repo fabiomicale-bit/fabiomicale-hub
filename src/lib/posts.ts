@@ -133,6 +133,123 @@ export const posts: Post[] = [
   `,
   },
   {
+    slug: "piano-continuita-minima-energia-bassa",
+    seoTitle:
+      "Il piano di continuità minima: come restare nel progetto anche nelle settimane no",
+    seoDescription:
+      "Un piano scritto in anticipo, non un'idea del momento: come definire soglie, attività essenziali e attività vietate per non fermare un progetto nelle settimane a bassa energia.",
+    keywords:
+      "piano di continuità minima, energia bassa lavoro, costanza senza motivazione, non riesco a essere costante, abitudini minime, ripartire dopo una pausa, continuità nei progetti personali",
+    titolo:
+      "Il piano di continuità minima: come restare nel progetto anche nelle settimane no",
+    categoria: "Passo 2 — Rimetti Struttura",
+    categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
+    data: "20 luglio 2026",
+    dataISO: "2026-07-20",
+    tempoLettura: "7 min",
+    ogImage: "/blog/piano-continuita-minima-energia-bassa.jpg",
+    coverAlt:
+      "Scrivania in legno chiaro con un laptop e un'agenda 2025 dalla copertina verde scuro, luce naturale del mattino, a rappresentare un piano scritto in anticipo per le settimane a bassa energia",
+    excerpt:
+      "Il giorno storto si gestisce quando arriva. Le settimane no si gestiscono con un piano scritto prima: attività essenziali, differibili, vietate, e due soglie che decidono quando dichiarare il regime minimo — e quando rivedere tutto.",
+    correlati: [
+      "sistema-minimo-giorni-storti-controllo-energia-bassa",
+      "mantieni-il-controllo-revisione-settimanale",
+      "manifesto-sistemi-autonomi",
+    ],
+    step: 2,
+    formats: ["appunti-di-metodo"],
+    contentHtml: `
+<p>Il problema più costoso, in un progetto che ti sta a cuore, non è la settimana in cui l'energia manca. È non avere deciso, prima che arrivasse, cosa fare quando arriva. Così, quando arriva — e arriva sempre — la decisione la prendi lì per lì, stanco, con il progetto che si ferma mentre pensi.</p>
+<p>Questo articolo non è sul singolo giorno no. È su come costruire, a mente lucida, un piano che tiene un progetto in vita per settimane, anche mesi, di energia bassa — senza che tu debba reinventare ogni volta cosa fare.</p>
+
+<h2>Perché il giorno per giorno non basta</h2>
+<p>Reagire giorno per giorno funziona finché il calo dura un giorno. Il problema è che l'energia bassa raramente arriva isolata: dormi male per una settimana, un cliente ti assorbe per dieci giorni, l'estate ti spegne per un mese. In quei casi decidere ogni mattina "cosa faccio oggi" è già un piccolo lavoro in più, proprio nel momento in cui hai meno margine per farlo.</p>
+<p>Chi non ha un piano per le settimane no si ritrova in uno di due posti: o forza, esaurendo quel poco che ha, o molla del tutto, aspettando "che le cose si calmino". Le cose non si calmano. Non a 45 anni, con un lavoro, una famiglia e più fronti aperti. Chi aspetta il periodo calmo per essere costante sta aspettando un periodo che non esiste.</p>
+
+<h2>Il vero costo non è la pausa. È la ripartenza</h2>
+<p>Fermarsi per una settimana non è, di per sé, grave. Il danno vero è un altro: ogni interruzione totale obbliga a una ripartenza totale. Devi ricordarti dov'eri arrivato, ricostruire il contesto, rivincere la resistenza iniziale. Chi si ferma del tutto non perde sette giorni: ne perde quindici, perché la ripartenza costa quanto la pausa.</p>
+<p>È lo stesso motivo per cui riprendere ad allenarsi dopo tre mesi fermi è più duro che allenarsi male, ma con continuità, per tre mesi. Il corpo — e il cervello — pagano il riavvio, non il rallentamento.</p>
+<p>Eppure quasi tutti i piani che vedo hanno un solo regime: quello massimo. "Ogni giorno un'ora sul progetto." "Tre articoli a settimana." "Ogni mattina studio." Sono piani scritti nel giorno migliore, per una persona che non esiste: quella che ha sempre l'energia del giorno in cui ha fatto il piano.</p>
+
+<h2>Il piano si scrive prima, non durante</h2>
+<p>Qui sta la differenza con l'improvvisare un minimo sul momento: il piano di continuità minima non si decide quando l'energia è già bassa. Si scrive prima, a mente fredda, esattamente come le aziende serie progettano i loro sistemi critici: non garantiscono che tutto funzioni sempre al massimo, garantiscono che il servizio essenziale non si interrompa mai. Tu sei il sistema critico. Il progetto è il servizio.</p>
+<p>Scritto durante il periodo no, il "minimo" tende a essere negoziato al ribasso finché diventa zero — perché a negoziarlo è la versione stanca di te. Scritto prima, è già una decisione presa, e la versione stanca di te deve solo eseguirla, non inventarla.</p>
+<p>Il piano si costruisce in tre mosse, più una mappa che aggiungo subito dopo.</p>
+<p><strong>Prima mossa: scegli l'attività-cardine.</strong> Per ogni progetto attivo, individua l'unica attività che, se fatta, tiene il progetto vivo. Non le dieci cose del piano completo: una. Per chi scrive, può essere "aprire il documento e scrivere dieci righe". Per chi cerca clienti, "un messaggio di follow-up al giorno". Per chi studia, "una pagina". Il criterio è brutale: se questa settimana facessi solo questo, il progetto sarebbe ancora in piedi venerdì? Se sì, è l'attività giusta.</p>
+<p><strong>Seconda mossa: dimensiona il minimo verso il basso, poi dimezzalo.</strong> Il minimo deve essere fattibile nel tuo giorno peggiore, non nel tuo giorno medio. Dieci minuti, non un'ora. Una telefonata, non cinque. Se ti sembra ridicolo, probabilmente è dimensionato bene. Un minimo che fallisci non è un minimo: è un altro massimo travestito.</p>
+<p><strong>Terza mossa: dichiara il regime, non subirlo.</strong> Quando arriva il periodo no, la differenza tra chi tiene e chi molla è una frase detta a se stessi: "questo periodo sono in regime minimo". Detta così, è una decisione presa in anticipo che si applica. Non detta, diventa un fallimento strisciante: ogni giorno "non ce l'hai fatta", e il progetto muore di senso di colpa prima che di inattività.</p>
+
+<h2>Essenziale, differibile, vietato: la mappa del regime minimo</h2>
+<p>L'attività-cardine dice cosa fare. Non dice altrettanto chiaramente cosa <em>non</em> fare — ed è lì che il regime minimo spesso si rompe: non perché manchi il minimo, ma perché nel mezzo si fanno cose che il minimo non prevedeva e che consumano proprio l'energia che serviva per l'essenziale.</p>
+<p>Per questo, quando scrivi il piano, per ogni progetto attivo vale la pena mappare tre categorie, non una sola:</p>
+<ul>
+<li><strong>Essenziale.</strong> È l'attività-cardine della mossa precedente: l'unica cosa che, fatta, tiene il progetto vivo durante il regime minimo.</li>
+<li><strong>Differibile.</strong> Tutto quello che normalmente fai su quel progetto ma che, sospeso per qualche settimana, non causa danno reale: aggiornare materiali secondari, ottimizzare un processo, esplorare un'idea nuova, rimettere ordine agli archivi. Sono attività legittime, ma non nel regime minimo — vanno segnate, non cancellate, e riprese quando torna l'energia.</li>
+<li><strong>Vietato.</strong> È la categoria che manca quasi sempre nei piani, e che fa più danno del fermo stesso: aprire fronti nuovi, prendere impegni nuovi con clienti, negoziare accordi importanti, promettere scadenze che potrai mantenere solo tornando al regime pieno. Nel regime minimo il cervello, pur di sentirsi produttivo, tende a lanciarsi su cose nuove invece che sull'essenziale noioso: è lì che si accumula il debito che pagherai quando l'energia sarà tornata.</li>
+</ul>
+<p>Scrivere le tre colonne prima che arrivi il periodo no significa che, quando arriva, non devi valutare ogni singola richiesta o tentazione con il poco giudizio che ti resta: la valutazione è già stata fatta.</p>
+
+<h2>Soglie operative: quando dichiari, quando rivedi</h2>
+<p>Un piano senza soglie resta un'intenzione vaga. Servono due soglie scritte, decise a mente lucida, non durante il periodo no:</p>
+<ul>
+<li><strong>Soglia di ingresso.</strong> Definisci in anticipo dopo quanti giorni consecutivi in cui salti l'attività-cardine dichiari formalmente il regime minimo — non "quando te ne accorgi", ma un numero scritto. Per molti funziona bene "due giorni saltati di fila": abbastanza per distinguere un imprevisto isolato da un calo reale, abbastanza presto da non arrivare a una settimana vuota prima di reagire.</li>
+<li><strong>Soglia di revisione strutturale.</strong> Definisci anche dopo quante settimane consecutive di regime minimo il problema smette di essere "energia bassa temporanea" e diventa "il carico complessivo della mia vita va rivisto". Non è più una questione di sistema: è una decisione da prendere a mente lucida — su impegni, aspettative, ritmi — non un aggiustamento che si fa restando dentro il regime minimo stesso.</li>
+</ul>
+<p>Le due soglie insieme fanno la differenza tra un piano di continuità minima e un'abitudine di fare sempre il minimo: il primo protegge nelle settimane no, il secondo, se non revisionato, diventa lui stesso il problema.</p>
+
+<h2>La continuità che il cliente non deve notare</h2>
+<p>C'è un angolo pratico che i piani di energia personale di solito ignorano: quando il progetto ha un cliente, un editore, un committente — qualcuno fuori da te — il regime minimo non deve essere percepibile dall'esterno. Non significa nascondere le difficoltà se servisse onestà; significa che, di norma, chi riceve il tuo lavoro non ha motivo di sapere in che regime sei, perché il piano è stato costruito apposta per non farglielo notare.</p>
+<p>Questo si ottiene costruendo il margine nelle settimane forti, non inventandolo in quelle deboli: consegnare con un piccolo anticipo quando puoi, non promettere mai una scadenza a ridosso del tuo limite reale, comunicare per tempo se un rallentamento è visibile invece di sparire. Il piano di continuità minima, applicato bene, fa sì che l'unica cosa che il cliente vede sia il lavoro consegnato in tempo — non le settimane in cui, dietro le quinte, hai lavorato in regime minimo per farlo succedere.</p>
+
+<h2>Un esempio concreto</h2>
+<p>Prendiamo un caso tipico: un consulente di 48 anni che, accanto al lavoro per i clienti, sta costruendo un suo corso. Il piano originale: due ore ogni sera sul corso. Risultato dopo tre settimane: quattro sere fatte, diciassette saltate, e la convinzione crescente di "non essere portato".</p>
+<p>Il piano di continuità minima cambia i termini. Attività-cardine (la colonna "essenziale"): aprire il file del corso e lavorarci quindici minuti. Colonna "differibile": rifare la grafica delle slide, cercare nuove testimonianze, riorganizzare i moduli — tutte cose vere, tutte rimandabili. Colonna "vietato" per il periodo di regime minimo: accettare un nuovo cliente extra "tanto quindici minuti al giorno li trovo lo stesso", perché è esattamente quel genere di impegno nuovo che, preso nel momento sbagliato, cancella anche i quindici minuti.</p>
+<p>Nei giorni buoni, i quindici minuti diventano spesso un'ora, perché la parte difficile era iniziare. Nei giorni pessimi, restano quindici minuti — e il lunedì successivo lui sa esattamente dov'era rimasto. Il corso avanza piano. Ma avanza da undici settimane consecutive, più di quanto fosse mai successo con il piano "serio".</p>
+<p>La differenza non è la disciplina. È che il piano di continuità minima prevede l'esistenza dei periodi no, con soglie e categorie scritte in anticipo. Il piano "serio" li considerava un'anomalia da correggere con più forza di volontà.</p>
+
+<h2>Mini-esercizio: il tuo piano, scritto ora</h2>
+<p>Venti minuti, adesso, finché sei lucido:</p>
+<ol>
+<li>Scrivi i progetti che consideri davvero importanti (se sono più di tre, questo è già un dato, da affrontare a parte).</li>
+<li>Per ciascuno, scrivi l'attività-cardine (colonna Essenziale): l'unica cosa che lo tiene vivo. Dimensionala per il tuo giorno peggiore, poi dimezzala ancora.</li>
+<li>Aggiungi la colonna Differibile: due o tre cose vere del progetto che puoi sospendere senza danno per qualche settimana.</li>
+<li>Aggiungi la colonna Vietato: uno o due impegni nuovi che, se presi durante un periodo no, farebbero più danno del fermo stesso.</li>
+<li>Scrivi le due soglie: dopo quanti giorni saltati dichiari il regime minimo, e dopo quante settimane di regime minimo ti fermi a rivedere il carico complessivo.</li>
+<li>Metti il foglio dove lo ritroverai — la sua funzione è essere trovato nel momento sbagliato, non riletto ora che stai bene.</li>
+</ol>
+<p>Il punto del foglio non è l'elenco. È che la decisione viene presa oggi, a mente fredda, e non delegata alla versione stanca di te che dovrà applicarla tra qualche settimana.</p>
+
+<h2>Il minimo non è arrendersi</h2>
+<p>So che una parte di te storce il naso: "quindici minuti al giorno, e questo sarebbe lavorare al progetto?". È la stessa parte che finora ha prodotto piani ambiziosi e progetti fermi.</p>
+<p>Il piano di continuità minima non è il traguardo: è il pavimento — e un pavimento con soglie e categorie scritte, non un'idea vaga. Serve a garantire che, quando l'energia torna, tu riparta da dove eri, non da zero, e che chi dipende dal tuo lavoro non se ne accorga nemmeno. Chi mantiene il minimo nei periodi no non sta facendo poco: sta proteggendo tutto quello che ha già costruito.</p>
+<p>Ripartire dopo i 40 non richiede motivazione. Richiede metodo — e un sistema che regge anche quando l'energia manca, non solo quando c'è.</p>
+<p>Questo piano decide cosa fare nelle settimane no. Per il singolo giorno storto, quando il piano non basta e serve una risposta immediata, ho scritto <a href="/blog/sistema-minimo-giorni-storti-controllo-energia-bassa">Il sistema minimo per i giorni storti</a>: i due articoli coprono lo stesso metodo da due angoli complementari, prima il piano (Passo 2), poi la gestione del singolo giorno (Passo 3).</p>
+
+<div class="blog-cta">
+  <p>Costruire sistemi che reggono anche nei giorni storti è il cuore del secondo passo del mio metodo. Se vuoi vedere come si incastra con gli altri due — fare spazio e mantenere il controllo giorno per giorno — puoi scaricare gratuitamente l'estratto di <strong>Successo in 3 Passi</strong>.</p>
+  <a href="/estratto">Leggi l'estratto gratuito</a>
+</div>
+
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video dedicata al piano di continuità minima per le settimane a bassa energia.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/yg4O24YaoVQ?cc_load_policy=1"
+      title="Dal Blog al Video — Il piano di continuità minima | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/yg4O24YaoVQ" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
+  `,
+  },
+  {
     slug: "ricaduta-non-fallimento-tornare-in-carreggiata",
     seoTitle:
       "La ricaduta non è un fallimento: come tornare in carreggiata",
