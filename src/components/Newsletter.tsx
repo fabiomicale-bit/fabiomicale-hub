@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { trackEvent } from "@/lib/ga";
 
 export default function Newsletter() {
@@ -9,10 +9,16 @@ export default function Newsletter() {
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  // Lock sincrono anti-doppio-submit: un useRef non dipende dal timing del
+  // re-render React (a differenza del solo controllo su `status`), quindi
+  // due submit concorrenti non possono mai superare entrambi il controllo.
+  const submittingRef = useRef(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submittingRef.current) return; // controllo immediato, prima di qualunque altro accesso allo stato
     if (!nome || !email || !privacyAccepted || !newsletterAccepted) return;
+    submittingRef.current = true; // lock impostato PRIMA della fetch
     setStatus("loading");
 
     try {
@@ -29,15 +35,19 @@ export default function Newsletter() {
       });
 
       if (res.ok) {
+        // Successo: il lock resta a true (nessun nuovo tentativo sullo stesso
+        // mount è necessario o desiderabile dopo un invio riuscito).
         trackEvent("newsletter_submit", {
           source_page: window.location.pathname,
           form_name: "newsletter-page-form",
         });
         setStatus("success");
       } else {
+        submittingRef.current = false; // rilascio lock: risposta non ok, permette un nuovo tentativo
         setStatus("error");
       }
     } catch {
+      submittingRef.current = false; // rilascio lock: eccezione di rete, permette un nuovo tentativo
       setStatus("error");
     }
   };

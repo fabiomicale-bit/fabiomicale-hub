@@ -43,9 +43,9 @@ export const posts: Post[] = [
     excerpt:
       "Quasi tutti i sistemi di produttività sono pensati per i giorni buoni. Ma i giorni che decidono se un percorso tiene o si sgretola sono quelli storti. Ecco il sistema minimo per non perdere il filo quando l'energia non c'è.",
     correlati: [
+      "piano-continuita-minima-energia-bassa",
       "mantieni-il-controllo-revisione-settimanale",
       "ricaduta-non-fallimento-tornare-in-carreggiata",
-      "manifesto-sistemi-autonomi",
     ],
     step: "3A",
     formats: ["appunti-di-metodo"],

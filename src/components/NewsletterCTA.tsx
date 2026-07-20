@@ -6,7 +6,7 @@
  * Validazione Zod lato server aggiunta in Fase 7.
  */
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/ga";
 
@@ -70,28 +70,37 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const requiresNewsletterConsent = variant === "default" || variant === "article" || variant === "newsletter";
+  // Lock sincrono anti-doppio-submit: un useRef non dipende dal timing del
+  // re-render React (a differenza del solo controllo su `status`), quindi
+  // due submit concorrenti (es. doppio click o doppio invio tastiera prima
+  // del primo re-render) non possono mai superare entrambi il controllo.
+  const submittingRef = useRef(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (honeypot) return; 
+    if (submittingRef.current) return; // controllo immediato, prima di qualunque altro accesso allo stato
+    if (honeypot) return;
     if (!email || !privacyAccepted || (requiresNewsletterConsent && !newsletterAccepted)) return;
+    submittingRef.current = true; // lock impostato PRIMA della fetch
     setStatus("loading");
 
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-          email, 
+        body: JSON.stringify({
+          email,
           nome,
-          variant, 
+          variant,
           website_url: honeypot,
           privacy_consent: privacyAccepted,
           newsletter_consent: requiresNewsletterConsent ? true : newsletterAccepted
         }),
       });
-      
+
       if (res.ok) {
+        // Successo: il lock resta a true (nessun nuovo tentativo sullo stesso
+        // mount è necessario o desiderabile dopo un invio riuscito).
         if (variant === "book-excerpt") {
           trackEvent("lead_estratto_submit", {
             source_page: window.location.pathname,
@@ -114,9 +123,11 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           setStatus("success");
         }
       } else {
+        submittingRef.current = false; // rilascio lock: risposta non ok, permette un nuovo tentativo
         setStatus("error");
       }
     } catch {
+      submittingRef.current = false; // rilascio lock: eccezione di rete, permette un nuovo tentativo
       setStatus("error");
     }
   };
