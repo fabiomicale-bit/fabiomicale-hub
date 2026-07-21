@@ -375,6 +375,7 @@ export const posts: Post[] = [
       "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni",
       "paura-obsolescenza-professionale-ai",
       "ai-esperienza-professionale-vantaggio",
+      "non-serve-essere-nativi-digitali",
     ],
     step: 1,
     formats: ["appunti-di-metodo"],
@@ -427,7 +428,7 @@ export const posts: Post[] = [
 
 <p>L'AI può produrre una strategia in trenta secondi. Ma non sa se quella strategia è adatta al tuo cliente, al tuo settore, al momento che stai attraversando. Non sa cosa hai già provato. Non sa cosa non ha funzionato.</p>
 
-<p>Questo non rende l'AI inutile. La rende potente solo quando la usa qualcuno capace di darle un contesto. Il contesto sei tu.</p>
+<p>Questo non rende l'AI inutile. La rende potente solo quando la usa qualcuno capace di darle un contesto. Il contesto sei tu. È lo stesso motivo per cui ho costruito il mio metodo attorno all'esperienza, non attorno allo strumento — <a href="/chi-sono">qui trovi il mio percorso</a>.</p>
 
 <h2>Senza metodo, l'AI amplifica il rumore</h2>
 
@@ -467,7 +468,7 @@ export const posts: Post[] = [
 
 <h2>Dove si colloca nel Metodo Successo in 3 Passi</h2>
 
-<p>Questo articolo si collega soprattutto al Passo 1 — Ferma il Caos. Prima di integrare l'AI bisogna fermarsi, riconoscere il rumore e scegliere con direzione. Solo dopo il Passo 2 — Rimetti Struttura permette di incanalare l'uso dell'AI dentro un sistema stabile e replicabile.</p>
+<p>Questo articolo si collega soprattutto al Passo 1 — Ferma il Caos. Prima di integrare l'AI bisogna fermarsi, riconoscere il rumore e scegliere con direzione. Solo dopo il <a href="/il-metodo">Passo 2 — Rimetti Struttura</a> permette di incanalare l'uso dell'AI dentro un sistema stabile e replicabile.</p>
 
 <div class="blog-cta">
   <p>Se vuoi partire non da un altro strumento, ma da un metodo, scarica l'estratto gratuito di <strong>Successo in 3 Passi</strong>.</p>
@@ -1271,7 +1272,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     coverAlt: "Siluetta professionale fiduciosa che attraversa una luminosa soglia geometrica futuristica",
     excerpt:
       "Non una lista di consigli motivazionali. Non una promessa che andrà tutto bene. La paura di diventare obsoleto è reale — e ha qualcosa importante da dirti.",
-    correlati: ["manifesto-reinvenzione-over40", "reinventarsi-dopo-i-40-metodo", "non-serve-essere-nativi-digitali"],
+    correlati: ["reinventarsi-dopo-i-40-metodo", "over-40-ai-esperienza", "non-serve-essere-nativi-digitali"],
     step: 1,
     formats: ["appunti-di-metodo"],
     contentHtml: `
@@ -1384,12 +1385,12 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "24 marzo 2026",
     dataISO: "2026-03-24",
-    tempoLettura: "8 min",
+    tempoLettura: "5 min",
     ogImage: "/blog/cover_esperienza_vantaggio.png",
     coverAlt: "Fusione visiva astratta tra rete neurale umana e precisi algoritmi digitali in toni blu profondi",
     excerpt:
       "Tutti parlano di AI come se premiasse solo i giovani e penalizzasse chi ha esperienza. È esattamente il contrario — ma solo se sai come usarla.",
-    correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
+    correlati: ["over-40-ai-esperienza", "manifesto-ai-esperienza-vince", "non-serve-essere-nativi-digitali"],
     step: 1,
     formats: ["appunti-di-metodo"],
     contentHtml: `
@@ -1425,57 +1426,21 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     distinguere il segnale dal rumore, e sa esattamente quali sono le domande giuste.
     Queste cose si traducono in prompt migliori. E prompt migliori producono
     risultati migliori. Non è un vantaggio piccolo. È strutturale.</p>
-    <h2>L'AI è potente. Ma è stupida.</h2>
-    <p>L'intelligenza artificiale, nella sua forma attuale, è uno strumento
-    straordinariamente potente per elaborare informazioni e automatizzare processi.
-    Ma ha un limite fondamentale che spesso viene ignorato: non sa cosa è importante.</p>
-    <p>Non sa distinguere una buona idea da una cattiva. Non sa riconoscere quando
-    un cliente sta per andarsene. Non sa capire la differenza tra un problema tecnico
-    e un problema umano. Non sa leggere una stanza.</p>
-    <p>Questa capacità si chiama giudizio. Il giudizio si costruisce solo
-    con l'esperienza.</p>
-    <h2>Chi decide come usare l'AI?</h2>
-    <p>Quando un medico usa l'AI per diagnosticare, chi decide se accettare o
-    mettere in discussione il risultato? Il medico — con i suoi anni di pratica clinica.</p>
-    <p>Quando un avvocato usa l'AI per analizzare contratti, chi identifica le clausole
-    che contano davvero? L'avvocato — con la sua conoscenza della dinamiche reali
-    della trattativa.</p>
-    <p>Quando un imprenditore usa l'AI per analizzare il mercato, chi sa distinguere
-    un trend reale da un rumore di fondo? L'imprenditore — con la sua cicatrice
-    imprenditoriale.</p>
-    <p>L'AI amplifica le capacità di chi la usa. Chi ha più capacità da amplificare?
-    Chi ha più esperienza.</p>
-    <h2>Il vero vantaggio competitivo oggi</h2>
-    <p><a href="/il-metodo">Nel metodo che ho sviluppato</a>, il punto di partenza
-    non è mai la tecnologia — è sempre la persona.</p>
-    <p>Perché la domanda giusta non è "come faccio a usare l'AI?" ma "cosa so fare
-    che l'AI non può fare, e come uso l'AI per farlo meglio o più velocemente?"</p>
-    <p>Se hai 20 anni, stai ancora scoprendo cosa sai fare.</p>
-    <p>Se hai 40 anni, lo sai già. E puoi iniziare subito a costruire il tuo vantaggio.</p>
+    <h2>Il vantaggio si costruisce, non si eredita</h2>
+    <p>Avere anni di carriera alle spalle non basta da solo. Serve portare quella
+    esperienza dentro ogni prompt, invece di lasciarla fuori e trattare l'AI come
+    un oracolo neutro a cui affidarsi senza contesto.</p>
+    <p><a href="/il-metodo">Nel metodo che ho sviluppato</a> il punto di partenza
+    non è mai lo strumento: è la persona che lo usa. È lo stesso principio alla base
+    di <a href="/blog/over-40-ai-esperienza">come uso l'AI ogni giorno con un criterio</a>
+    invece di inseguire l'ultimo strumento uscito.</p>
     <div class="blog-cta">
       <p>Vuoi approfondire questo tema?</p>
       <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
     </div>
-    <h2>Cosa significa in pratica</h2>
-    <p>Ho lavorato con professionisti over 40 che hanno trasformato anni di competenze
-    settoriali in prodotti digitali scalabili usando l'AI come acceleratore. Ho visto
-    imprenditori automatizzare processi che prima richiedevano team interi. Ho visto
-    manager costruire sistemi decisionali che lavorano mentre dormono.</p>
-    <p>In nessuno di questi casi l'AI ha sostituito l'esperienza. L'ha resa più potente.</p>
-    <p><a href="/chi-sono">Io stesso sono uno di quei casi</a> — e quello che ho
-    imparato è che il passaggio non è mai tecnologico. È mentale. Si tratta di smettere
-    di vedere l'AI come una minaccia o come un giocattolo, e iniziare a vederla per
-    quello che è: uno strumento che lavora tanto meglio quanto più chi lo guida
-    sa cosa vuole.</p>
-    <h2>Il rischio reale non è l'AI. È l'immobilismo.</h2>
-    <p>L'unico scenario in cui l'AI penalizza i professionisti esperti è quello in cui
-    questi scelgono di ignorarla. Di aspettare. Di osservare da lontano sperando
-    che passi.</p>
-    <p>Non passerà. Ma non è una minaccia — è un'opportunità con una finestra temporale.</p>
-    <p>Chi la coglie adesso, mentre la maggior parte ancora osserva, costruisce un
-    vantaggio competitivo difficile da colmare.</p>
-    <p><a href="/estratto">Se vuoi capire come farlo nel tuo caso specifico,
-    inizia dall'estratto gratuito</a>.</p>
+    <p>Se vuoi vedere questo principio applicato in pratica — con esempi concreti su
+    come un medico, un avvocato o un imprenditore lo usano ogni giorno — lo trovi in
+    <a href="/blog/manifesto-ai-esperienza-vince">"Perché nell'Era AI chi ha Esperienza Vince"</a>.</p>
   `,
   },
 
@@ -1558,7 +1523,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
 <p><a href="/estratto">Se vuoi capire come farlo nel tuo caso specifico, inizia dall'estratto gratuito</a></p>
     `,
-    correlati: ["ai-over-40-opportunita-non-minaccia", "manifesto-reinvenzione-over40"],
+    correlati: ["over-40-ai-esperienza", "ai-esperienza-professionale-vantaggio", "ai-over-40-opportunita-non-minaccia"],
     step: 1,
     formats: ["appunti-di-metodo"],
   },
@@ -1770,18 +1735,18 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
   // ── ARTICOLI ──────────────────────────────────────────────────
   {
     slug: "ai-over-40-opportunita-non-minaccia",
-    seoTitle: "AI e Over 40: Perché l'Intelligenza Artificiale è un Vantaggio",
+    seoTitle: "AI e Professionisti Over 40: Perché Non è una Minaccia",
     seoDescription:
-      "Scopri perché l'AI non è una minaccia per chi ha più di 40 anni ma un'opportunità enorme. Fabio Micale spiega come usarla per reinventarsi professionalmente.",
-    keywords: "AI over 40, intelligenza artificiale professionisti, reinvenzione professionale, AI lavoro",
+      "Pensi che l'AI sostituirà chi ha più esperienza? È il racconto sbagliato. Ecco perché, dopo i 40 anni, l'intelligenza artificiale può lavorare a tuo favore.",
+    keywords: "AI non sostituisce over 40, paura AI lavoro, intelligenza artificiale minaccia professionisti, AI over 40",
     titolo: "Hai più di 40 anni? Ecco perché l'AI può essere un vantaggio, non una minaccia",
     categoria: "Passo 1 — Ferma il Caos",
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "10 marzo 2026",
     dataISO: "2026-03-10",
     tempoLettura: "5 min",
-    ogImage: "/blog/cover_esperienza_vantaggio.png",
-    coverAlt: "Una strada luminosa in ascesa che simboleggia l'opportunità professionale ed il superamento degli ostacoli",
+    ogImage: "/blog/cover_opportunita_over40.jpg",
+    coverAlt: "Scrivania da lavoro con laptop aperto e monitor acceso, bottiglia d'acqua e pianta, luce naturale del mattino",
     excerpt:
       "C'è un racconto dominante sull'intelligenza artificiale che mi stanca: quello secondo cui l'AI sostituirà i lavoratori esperti. È un racconto sbagliato — e te lo dico da persona che lo usa ogni giorno.",
     contentHtml: `
@@ -1825,7 +1790,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
 <p>Se vuoi capire come applicare tutto questo alla tua situazione specifica, <a href="/estratto">inizia dall'estratto gratuito</a>.</p>
     `,
-    correlati: ["reinventarsi-dopo-i-40-metodo", "sistemi-che-lavorano-per-te"],
+    correlati: ["over-40-ai-esperienza", "reinventarsi-dopo-i-40-metodo", "paura-obsolescenza-professionale-ai"],
     step: 1,
     formats: ["appunti-di-metodo"],
   },
@@ -2225,7 +2190,7 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
 
 <p>Inizia a costruire il tuo ecosistema: <a href="/estratto">Leggi l'estratto gratuito di Successo in 3 Passi</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
     `,
-    correlati: ["ai-esperienza-professionale-vantaggio", "paura-obsolescenza-professionale-ai"],
+    correlati: ["over-40-ai-esperienza", "ai-esperienza-professionale-vantaggio", "paura-obsolescenza-professionale-ai"],
     step: 1,
     formats: ["appunti-di-metodo"],
   },
