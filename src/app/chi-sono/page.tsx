@@ -54,7 +54,28 @@ export default function ChiSonoPage() {
       {/* ── SEZIONI CONTENUTO ────────────────────────────────── */}
       <section className="py-32 px-6">
         <div className="max-w-4xl mx-auto space-y-32">
-          
+
+          {/* 0. La mia storia */}
+          <div className="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
+            <h2 className="text-2xl font-serif italic text-hub-gold">La mia storia</h2>
+            <div className="space-y-6 text-hub-ink-muted text-lg leading-relaxed font-light">
+              <p>
+                Ho 56 anni e vivo tra l&apos;Italia e la Polonia. Da oltre venticinque anni mi occupo di crescita personale e professionale — non da osservatore, ma da chi ha costruito e gestito aziende nei settori dei servizi, dell&apos;edilizia e dell&apos;impiantistica.
+              </p>
+              <p>
+                Alcune di quelle esperienze sono andate bene. Altre no. I fallimenti, più dei successi, mi hanno insegnato la differenza che conta davvero: tra costruire e accumulare, tra il movimento e il progresso reale, tra fare cose e fare le cose giuste.
+              </p>
+              <blockquote className="border-l-2 border-hub-gold pl-6 py-2">
+                <p className="text-xl font-serif italic text-hub-ink leading-relaxed">
+                  Ripartire dopo i 40 anni non richiede motivazione generica. Richiede metodo, direzione e struttura.
+                </p>
+              </blockquote>
+              <p>
+                Ho pubblicato la prima edizione di Successo in 3 Passi nel 2017. L&apos;edizione 2026 che trovi su questo sito è una riscrittura completa, basata su tutto quello che ho imparato da allora — compreso quello che ho imparato quando le cose non sono andate come previsto.
+              </p>
+            </div>
+          </div>
+
           {/* 1. Da esperienza a metodo */}
           <div className="grid md:grid-cols-[1fr_2fr] gap-16 items-start">
             <h2 className="text-2xl font-serif italic text-hub-gold">Da esperienza a metodo</h2>
