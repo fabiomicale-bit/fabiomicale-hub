@@ -264,9 +264,9 @@ export const posts: Post[] = [
     data: "26 giugno 2026",
     dataISO: "2026-06-26",
     tempoLettura: "8 min",
-    ogImage: "/blog/cover_ricaduta_non_fallimento.png",
+    ogImage: "/blog/ricaduta-non-fallimento-tornare-in-carreggiata-real-photo.jpg",
     coverAlt:
-      "Taccuino con una rotta che devia e rientra, accanto a una bussola — la ricaduta come correzione di rotta nel Passo 3 del Metodo Successo in 3 Passi.",
+      "Uomo maturo in giacca e cravatta, con una cartellina rossa in mano, guarda pensieroso fuori da una grande vetrata prima di tornare al lavoro",
     excerpt:
       "Dopo una settimana storta molti buttano via tutto e ripartono da zero. Ma la ricaduta non è un fallimento personale: è un dato che ti dice dove il sistema non ha retto. Ecco come correggere e rientrare.",
     correlati: [
@@ -710,8 +710,8 @@ export const posts: Post[] = [
     data: "17 maggio 2026",
     dataISO: "2026-05-17",
     tempoLettura: "8 min",
-    ogImage: "/blog/cover_revisione_settimanale.png",
-    coverAlt: "Taccuino di revisione settimanale con bussola e linee digitali, simbolo del Passo 3 del Metodo Successo in 3 Passi: mantenere il controllo con priorità, verifica e correzione.",
+    ogImage: "/blog/mantieni-il-controllo-revisione-settimanale-real-photo.jpg",
+    coverAlt: "Uomo maturo con barba grigia seduto alla scrivania di casa, scrive in un'agenda con penna accanto al laptop, luce naturale e libreria sullo sfondo",
     excerpt:
       "Una ripartenza non fallisce sempre per mancanza di volontà. Spesso fallisce perché manca un sistema di revisione che ti riporti in carreggiata.",
     correlati: [
