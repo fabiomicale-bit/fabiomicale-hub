@@ -1386,8 +1386,8 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     data: "24 marzo 2026",
     dataISO: "2026-03-24",
     tempoLettura: "5 min",
-    ogImage: "/blog/cover_esperienza_vantaggio.png",
-    coverAlt: "Fusione visiva astratta tra rete neurale umana e precisi algoritmi digitali in toni blu profondi",
+    ogImage: "/blog/ai-esperienza-professionale-vantaggio-real-photo.jpg",
+    coverAlt: "Uomo maturo in giacca e cravatta, seduto in poltrona, mentre osserva concentrato lo schermo di un laptop con gli occhiali in mano",
     excerpt:
       "Tutti parlano di AI come se premiasse solo i giovani e penalizzasse chi ha esperienza. È esattamente il contrario — ma solo se sai come usarla.",
     correlati: ["over-40-ai-esperienza", "manifesto-ai-esperienza-vince", "non-serve-essere-nativi-digitali"],
@@ -2165,8 +2165,8 @@ Ogni mercoledì: un task concreto da delegare, uno strumento testato, un caso re
     data: "8 aprile 2026",
     dataISO: "2026-04-08",
     tempoLettura: "5 min",
-    ogImage: "/blog/cover_esperienza_vantaggio.png",
-    coverAlt: "Immagine metaforica sull'esperienza e le decisioni strategiche nel mondo digitale",
+    ogImage: "/blog/non-serve-essere-nativi-digitali-real-photo.jpg",
+    coverAlt: "Uomo maturo con barba grigia, in piedi, che mostra un documento a due collaboratori seduti a un tavolo con un laptop aperto",
     excerpt: "Sfatare il mito giovanilistico dell'AI. Un'azienda non viene salvata da chi digita veloce su una tastiera, ma da chi ha 20 anni di esperienza per sapere DOVE mettere le mani.",
     contentHtml: `
 <p>C'è un equivoco enorme che sta bloccando migliaia di professionisti formidabili: credere che l'Intelligenza Artificiale sia uno strumento esclusivo per i "nativi digitali".</p>
