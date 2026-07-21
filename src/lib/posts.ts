@@ -155,7 +155,7 @@ export const posts: Post[] = [
     correlati: [
       "sistema-minimo-giorni-storti-controllo-energia-bassa",
       "mantieni-il-controllo-revisione-settimanale",
-      "manifesto-sistemi-autonomi",
+      "ricaduta-non-fallimento-tornare-in-carreggiata",
     ],
     step: 2,
     formats: ["appunti-di-metodo"],
@@ -271,8 +271,8 @@ export const posts: Post[] = [
       "Dopo una settimana storta molti buttano via tutto e ripartono da zero. Ma la ricaduta non è un fallimento personale: è un dato che ti dice dove il sistema non ha retto. Ecco come correggere e rientrare.",
     correlati: [
       "mantieni-il-controllo-revisione-settimanale",
-      "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni",
-      "manifesto-sistemi-autonomi",
+      "sistema-minimo-giorni-storti-controllo-energia-bassa",
+      "piano-continuita-minima-energia-bassa",
     ],
     step: "3B",
     formats: ["appunti-di-metodo"],
@@ -714,7 +714,11 @@ export const posts: Post[] = [
     coverAlt: "Taccuino di revisione settimanale con bussola e linee digitali, simbolo del Passo 3 del Metodo Successo in 3 Passi: mantenere il controllo con priorità, verifica e correzione.",
     excerpt:
       "Una ripartenza non fallisce sempre per mancanza di volontà. Spesso fallisce perché manca un sistema di revisione che ti riporti in carreggiata.",
-    correlati: ["manifesto-sistemi-autonomi", "manifesto-reinvenzione-over40", "recuperare-tempo-delegare-ai-sistema"],
+    correlati: [
+      "sistema-minimo-giorni-storti-controllo-energia-bassa",
+      "piano-continuita-minima-energia-bassa",
+      "ricaduta-non-fallimento-tornare-in-carreggiata",
+    ],
     step: "3A",
     formats: ["appunti-di-metodo"],
     contentHtml: `
@@ -834,6 +838,8 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 <p>Tutto quello che hai letto è una versione ridotta di ciò che il Passo 3 del Metodo Successo in 3 Passi sviluppa in modo sistematico: come costruire un ciclo di revisione, cosa misurare, come correggere senza rigidità, come trasformare gli aggiustamenti settimanali in progresso reale nel tempo.</p>
 
 <p>Il metodo completo — con il Passo 1 sul caos, il Passo 2 sulla struttura e il Passo 3 sul controllo — è nel libro. Se stai cercando un sistema completo, concreto e adatto a chi ha già esperienza ma vuole smettere di ricominciare da zero ogni lunedì, è da lì che puoi partire.</p>
+
+<p>La revisione settimanale è la base. Ma ci sono tre situazioni specifiche in cui serve un adattamento: il giorno in cui l'energia è a terra (<a href="/blog/sistema-minimo-giorni-storti-controllo-energia-bassa">il sistema minimo per i giorni storti</a>), le settimane no che puoi vedere arrivare in anticipo (<a href="/blog/piano-continuita-minima-energia-bassa">il piano di continuità minima</a>), e il momento in cui te ne sei già uscito e devi solo capire come rientrare (<a href="/blog/ricaduta-non-fallimento-tornare-in-carreggiata">la ricaduta non è un fallimento</a>).</p>
 
 <section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
   <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
