@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { updateConsent } from '@/lib/ga'
+import { updateConsent, sendPageView } from '@/lib/ga'
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
@@ -13,6 +13,11 @@ export default function CookieBanner() {
   const accept = () => {
     localStorage.setItem('cookie-consent', 'all')
     updateConsent(true)
+    // Il consenso arriva dopo il mount: GAPageTracker non rifà il page_view
+    // della pagina di atterraggio (il suo effect dipende solo da pathname).
+    // Senza questa chiamata, il primo page_view della sessione va perso ogni
+    // volta che l'utente accetta i cookie sulla pagina di ingresso.
+    sendPageView(window.location.pathname)
     setVisible(false)
   }
 

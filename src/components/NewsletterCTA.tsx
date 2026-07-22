@@ -9,6 +9,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { trackEvent } from "@/lib/ga";
+import { getAttribution, getOriginSlug } from "@/lib/attribution";
 
 type NewsletterVariant = "default" | "book-excerpt" | "article" | "newsletter" | "book-waitlist";
 
@@ -84,6 +85,9 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
     submittingRef.current = true; // lock impostato PRIMA della fetch
     setStatus("loading");
 
+    const attribution = getAttribution();
+    const originSlug = getOriginSlug();
+
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
@@ -94,7 +98,8 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           variant,
           website_url: honeypot,
           privacy_consent: privacyAccepted,
-          newsletter_consent: requiresNewsletterConsent ? true : newsletterAccepted
+          newsletter_consent: requiresNewsletterConsent ? true : newsletterAccepted,
+          utm_medium: attribution.utm_medium,
         }),
       });
 
@@ -105,6 +110,8 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           trackEvent("lead_estratto_submit", {
             source_page: window.location.pathname,
             form_name: "book-excerpt-form",
+            origin_slug: originSlug,
+            ...attribution,
           });
           setStatus("success");
           window.location.href = "/grazie-estratto";
@@ -112,6 +119,8 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           trackEvent("lead_book_waitlist_submit", {
             source_page: window.location.pathname,
             form_name: "book-waitlist-form",
+            origin_slug: originSlug,
+            ...attribution,
           });
           setStatus("success");
           window.location.href = "/grazie-lista-prioritaria";
@@ -119,6 +128,8 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           trackEvent("newsletter_submit", {
             source_page: window.location.pathname,
             form_name: `newsletter-cta-${variant}`,
+            origin_slug: originSlug,
+            ...attribution,
           });
           setStatus("success");
         }

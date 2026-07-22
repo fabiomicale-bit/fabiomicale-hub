@@ -11,6 +11,7 @@ import Script from "next/script";
 import GAPageTracker from "@/components/GAPageTracker";
 import CTAClickTracker from "@/components/CTAClickTracker";
 import GAScripts from "@/components/GAScripts";
+import AttributionCapture from "@/components/AttributionCapture";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -141,6 +142,7 @@ export default function RootLayout({
         <CookieBanner />
         <GAScripts />
         <GAPageTracker />
+        <AttributionCapture />
         <CTAClickTracker />
       </body>
     </html>

@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { trackEvent } from "@/lib/ga";
+import { getAttribution, getOriginSlug } from "@/lib/attribution";
 
 export default function Newsletter() {
   const [nome, setNome] = useState("");
@@ -21,6 +22,9 @@ export default function Newsletter() {
     submittingRef.current = true; // lock impostato PRIMA della fetch
     setStatus("loading");
 
+    const attribution = getAttribution();
+    const originSlug = getOriginSlug();
+
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
@@ -31,6 +35,7 @@ export default function Newsletter() {
           variant: "newsletter",
           privacy_consent: privacyAccepted,
           newsletter_consent: true,
+          utm_medium: attribution.utm_medium,
         }),
       });
 
@@ -40,6 +45,8 @@ export default function Newsletter() {
         trackEvent("newsletter_submit", {
           source_page: window.location.pathname,
           form_name: "newsletter-page-form",
+          origin_slug: originSlug,
+          ...attribution,
         });
         setStatus("success");
       } else {
