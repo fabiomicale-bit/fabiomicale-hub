@@ -25,6 +25,7 @@ const jsonLd = {
     "@id": "https://www.fabiomicale.com/#person",
     name: "Fabio Micale",
   },
+  image: "https://www.fabiomicale.com/successo-in-3-passi-cover-current-2026.jpg",
 };
 
 export const metadata: Metadata = {
@@ -40,10 +41,10 @@ export const metadata: Metadata = {
       "Un libro pratico per professionisti over 40 che vogliono rimettere ordine nel lavoro e nella direzione professionale — senza ricominciare da zero.",
     images: [
       {
-        url: "/cover-3d-real.png",
-        width: 600,
-        height: 800,
-        alt: "Successo in 3 Passi — Fabio Micale",
+        url: "/successo-in-3-passi-cover-current-2026.jpg",
+        width: 1000,
+        height: 1600,
+        alt: "Successo in 3 Passi — Il metodo per chi fa tanto e costruisce poco — Fabio Micale",
       },
     ],
   },
@@ -75,8 +76,8 @@ export default function SuccessoIn3PassiPage() {
           href: "/estratto",
         }}
         image={{
-          src: "/cover-3d-real.png",
-          alt: "Cover Successo in 3 Passi — Fabio Micale",
+          src: "/successo-in-3-passi-cover-current-2026.png",
+          alt: "Cover Successo in 3 Passi — Il metodo per chi fa tanto e costruisce poco — Fabio Micale",
           priority: true,
         }}
       />
@@ -187,10 +188,10 @@ export default function SuccessoIn3PassiPage() {
             </div>
             <div className="relative w-full max-w-sm mx-auto">
               <Image
-                src="/cover-3d-real.png"
-                alt="Successo in 3 Passi — Fabio Micale"
+                src="/successo-in-3-passi-cover-current-2026.png"
+                alt="Successo in 3 Passi — Il metodo per chi fa tanto e costruisce poco — Fabio Micale"
                 width={450}
-                height={600}
+                height={720}
                 className="relative z-10 w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute -inset-10 bg-hub-gold/[0.05] blur-[80px] rounded-full pointer-events-none" />
