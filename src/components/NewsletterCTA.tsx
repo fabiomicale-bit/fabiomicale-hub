@@ -8,8 +8,14 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
-import { trackEvent } from "@/lib/ga";
+import {
+  buildFormSubmitParams,
+  trackEvent,
+  trackFormSubmit,
+  trackFormSubmitBeforeNavigation,
+} from "@/lib/ga";
 import { getAttribution, getOriginSlug } from "@/lib/attribution";
+import { submitSubscriptionOnce } from "@/lib/subscriptionForm";
 
 type NewsletterVariant = "default" | "book-excerpt" | "article" | "newsletter" | "book-waitlist";
 
@@ -79,20 +85,21 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (submittingRef.current) return; // controllo immediato, prima di qualunque altro accesso allo stato
-    if (honeypot) return;
-    if (!email || !privacyAccepted || (requiresNewsletterConsent && !newsletterAccepted)) return;
-    submittingRef.current = true; // lock impostato PRIMA della fetch
-    setStatus("loading");
-
     const attribution = getAttribution();
     const originSlug = getOriginSlug();
 
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+    const result = await submitSubscriptionOnce({
+      lock: submittingRef,
+      onStarted: () => setStatus("loading"),
+      input: {
+        email,
+        name: nome,
+        honeypot,
+        privacyConsent: privacyAccepted,
+        newsletterConsent: newsletterAccepted,
+        requiresNewsletterConsent,
+        requiresName: variant !== "book-waitlist",
+        payload: {
           email,
           nome,
           variant,
@@ -100,21 +107,22 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           privacy_consent: privacyAccepted,
           newsletter_consent: requiresNewsletterConsent ? true : newsletterAccepted,
           utm_medium: attribution.utm_medium,
-        }),
-      });
-
-      if (res.ok) {
-        // Successo: il lock resta a true (nessun nuovo tentativo sullo stesso
-        // mount è necessario o desiderabile dopo un invio riuscito).
+        },
+      },
+      onAccepted: () => {
         if (variant === "book-excerpt") {
-          trackEvent("lead_estratto_submit", {
-            source_page: window.location.pathname,
-            form_name: "book-excerpt-form",
-            origin_slug: originSlug,
-            ...attribution,
-          });
           setStatus("success");
-          window.location.href = "/grazie-estratto";
+          trackFormSubmitBeforeNavigation(
+            "lead_estratto_submit",
+            buildFormSubmitParams({
+              form_type: "lead_magnet",
+              form_variant: "book_excerpt",
+              page_path: window.location.pathname,
+              source: attribution.utm_source,
+              newsletter_consent: newsletterAccepted ? "granted" : "not_granted",
+            }),
+            () => { window.location.href = "/grazie-estratto"; }
+          );
         } else if (variant === "book-waitlist") {
           trackEvent("lead_book_waitlist_submit", {
             source_page: window.location.pathname,
@@ -125,22 +133,24 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
           setStatus("success");
           window.location.href = "/grazie-lista-prioritaria";
         } else {
-          trackEvent("newsletter_submit", {
-            source_page: window.location.pathname,
-            form_name: `newsletter-cta-${variant}`,
-            origin_slug: originSlug,
-            ...attribution,
-          });
+          trackFormSubmit("newsletter_submit", buildFormSubmitParams({
+            form_type: "newsletter",
+            form_variant: "newsletter_cta",
+            page_path: window.location.pathname,
+            source: attribution.utm_source,
+            newsletter_consent: "granted",
+          }));
           setStatus("success");
         }
-      } else {
-        submittingRef.current = false; // rilascio lock: risposta non ok, permette un nuovo tentativo
-        setStatus("error");
-      }
-    } catch {
-      submittingRef.current = false; // rilascio lock: eccezione di rete, permette un nuovo tentativo
+      },
+    });
+
+    if (result === "accepted" || result === "duplicate" || result === "honeypot") return;
+    if (result === "rejected") {
       setStatus("error");
+      return;
     }
+    setStatus("idle");
   };
 
   if (status === "success") {
@@ -220,6 +230,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
             {/* Honeypot */}
             <input
               type="text"
+              name="website_url"
               value={honeypot}
               onChange={(e) => setHoneypot(e.target.value)}
               className="hidden"
