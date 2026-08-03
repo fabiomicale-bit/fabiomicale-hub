@@ -48,6 +48,16 @@ Registro di tracciabilità per le fotografie reali usate come cover degli artico
 - **Licenza:** Pexels License — uso libero, incluso commerciale, senza obbligo di attribuzione (verificata sulla pagina sorgente al momento del download). Attribuzione riportata comunque per tracciabilità.
 - **Elaborazione:** ritaglio 1200×630 (1.91:1) con crop manuale ancorato in alto (sharp, `position: "top"`, il crop automatico "attention" tagliava la fronte del soggetto), esportato JPEG qualità 82, ~48 KB.
 
+## recuperare-tempo-delegare-ai-sistema-real-photo.jpg
+
+- **Articolo:** `/blog/recuperare-tempo-delegare-ai-sistema`
+- **Piattaforma:** Pexels
+- **Autore/fotografo:** Tara Winstead ([pexels.com/@tara-winstead](https://www.pexels.com/@tara-winstead/))
+- **Riferimento magazzino interno:** `IMG-STOCK-010` in `asset/visual-stock/00_INDEX/REAL_STOCK_IMAGE_WAREHOUSE_INDEX.md` (vault "Il mio cervello", non in questo repo)
+- **Licenza:** Pexels License — uso libero, incluso commerciale, senza obbligo di attribuzione. Attribuzione riportata comunque per tracciabilità.
+- **Motivo sostituzione:** l'immagine precedente (`cover_tempo_ai.png`) era generata artificialmente (ufficio sci-fi, orologio olografico, statistiche finte in inglese non coerenti col contenuto reale dell'articolo) — violava la Real Stock Image Warehouse Policy e il Blog Publication Mandatory Visual & SEO Gate. Sostituita con foto reale già presente nel magazzino (crop 1200x630 pronto), coerente col tema (scrivania di lavoro, taccuino, laptop, metodo).
+- **Data sostituzione (preparata, non ancora pubblicata):** 2026-08-03.
+
 ---
 
 ## Nota su cover_esperienza_vantaggio.png

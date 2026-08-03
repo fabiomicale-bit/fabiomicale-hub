@@ -879,8 +879,8 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
     tempoLettura: "7 min",
-    ogImage: "/blog/cover_tempo_ai.png",
-    coverAlt: "Orologio digitale etereo su scrivania vuota che rappresenta il recupero del tempo",
+    ogImage: "/blog/recuperare-tempo-delegare-ai-sistema-real-photo.jpg",
+    coverAlt: "Taccuino aperto, penna e tazza di caffè su una scrivania in legno accanto a un laptop, spazio di lavoro ordinato",
     excerpt:
       "C'è una differenza fondamentale tra essere occupati e lavorare bene. L'AI non ti rende automaticamente più produttivo — ma un sistema costruito bene, sì.",
     correlati: ["manifesto-sistemi-autonomi", "sistemi-che-lavorano-per-te", "10-task-delegare-ai-lavoro"],
@@ -989,6 +989,23 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
     che funzionasse davvero, non di una promessa.</p>
     <p><a href="/estratto">Se vuoi costruire il tuo sistema,
     inizia dall'estratto gratuito</a>.</p>
+
+    <section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+      <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+      <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+      <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video su come ho recuperato 3 ore a settimana delegando all'AI quello che non richiede la mia testa.</p>
+      <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+        <iframe
+          class="h-full w-full"
+          src="https://www.youtube-nocookie.com/embed/sdUsFPwEpn0"
+          title="Dal Blog al Video — Recuperare tempo delegando all'AI | Fabio Micale"
+          loading="lazy"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p class="mt-4 text-sm"><a href="https://youtu.be/sdUsFPwEpn0" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+    </section>
   `,
   },
   {
