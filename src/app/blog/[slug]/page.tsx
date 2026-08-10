@@ -15,6 +15,7 @@ import ShareBar from "./ShareBar";
 import CommentoForm from "@/components/CommentoForm";
 import ArticleAuthorBox from "@/components/ArticleAuthorBox";
 import ArticleSignature from "@/components/ArticleSignature";
+import { getVideoMetadata } from "@/lib/videoMetadata";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -119,6 +120,21 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   };
 
+  const video = getVideoMetadata(post.contentHtml);
+  const videoJsonLd = video
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: video.name,
+        description: post.seoDescription,
+        thumbnailUrl: [video.thumbnailUrl],
+        uploadDate: video.uploadDate,
+        duration: video.duration,
+        embedUrl: video.embedUrl,
+        mainEntityOfPage: `https://www.fabiomicale.com/blog/${post.slug}`,
+      }
+    : null;
+
   return (
     <>
       <ReadingProgress />
@@ -134,6 +150,12 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {videoJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
+        />
+      )}
 
       {/* ── HEADER ARTICOLO ─────────────────────────────────────── */}
       <section className="relative pt-44 pb-20 px-6 overflow-hidden">
