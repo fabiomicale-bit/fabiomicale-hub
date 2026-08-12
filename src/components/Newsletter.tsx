@@ -1,12 +1,14 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { trackEvent } from "@/lib/ga";
-import { getAttribution, getOriginSlug } from "@/lib/attribution";
+import { buildFormSubmitParams, trackFormSubmit } from "@/lib/ga";
+import { getAttribution } from "@/lib/attribution";
+import { submitSubscriptionOnce } from "@/lib/subscriptionForm";
 
 export default function Newsletter() {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
+  const [honeypot, setHoneypot] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [newsletterAccepted, setNewsletterAccepted] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -17,46 +19,46 @@ export default function Newsletter() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (submittingRef.current) return; // controllo immediato, prima di qualunque altro accesso allo stato
-    if (!nome || !email || !privacyAccepted || !newsletterAccepted) return;
-    submittingRef.current = true; // lock impostato PRIMA della fetch
-    setStatus("loading");
-
     const attribution = getAttribution();
-    const originSlug = getOriginSlug();
 
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
+    const result = await submitSubscriptionOnce({
+      lock: submittingRef,
+      onStarted: () => setStatus("loading"),
+      input: {
+        email,
+        name: nome,
+        honeypot,
+        privacyConsent: privacyAccepted,
+        newsletterConsent: newsletterAccepted,
+        requiresNewsletterConsent: true,
+        payload: {
           nome,
           email,
           variant: "newsletter",
+          website_url: honeypot,
           privacy_consent: privacyAccepted,
           newsletter_consent: true,
           utm_medium: attribution.utm_medium,
-        }),
-      });
-
-      if (res.ok) {
-        // Successo: il lock resta a true (nessun nuovo tentativo sullo stesso
-        // mount è necessario o desiderabile dopo un invio riuscito).
-        trackEvent("newsletter_submit", {
-          source_page: window.location.pathname,
-          form_name: "newsletter-page-form",
-          origin_slug: originSlug,
-          ...attribution,
-        });
+        },
+      },
+      onAccepted: () => {
+        trackFormSubmit("newsletter_submit", buildFormSubmitParams({
+          form_type: "newsletter",
+          form_variant: "newsletter_page",
+          page_path: window.location.pathname,
+          source: attribution.utm_source,
+          newsletter_consent: "granted",
+        }));
         setStatus("success");
-      } else {
-        submittingRef.current = false; // rilascio lock: risposta non ok, permette un nuovo tentativo
-        setStatus("error");
-      }
-    } catch {
-      submittingRef.current = false; // rilascio lock: eccezione di rete, permette un nuovo tentativo
+      },
+    });
+
+    if (result === "accepted" || result === "duplicate" || result === "honeypot") return;
+    if (result === "rejected") {
       setStatus("error");
+      return;
     }
+    setStatus("idle");
   };
 
   return (
@@ -106,6 +108,15 @@ export default function Newsletter() {
               onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full px-6 py-4 rounded-2xl bg-white border border-hub-border text-hub-ink placeholder:text-hub-ink-light text-sm focus:outline-none focus:border-hub-gold transition-all"
+            />
+            <input
+              type="text"
+              name="website_url"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
             />
 
             <div className="space-y-3">

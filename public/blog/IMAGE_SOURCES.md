@@ -48,6 +48,67 @@ Registro di tracciabilità per le fotografie reali usate come cover degli artico
 - **Licenza:** Pexels License — uso libero, incluso commerciale, senza obbligo di attribuzione (verificata sulla pagina sorgente al momento del download). Attribuzione riportata comunque per tracciabilità.
 - **Elaborazione:** ritaglio 1200×630 (1.91:1) con crop manuale ancorato in alto (sharp, `position: "top"`, il crop automatico "attention" tagliava la fronte del soggetto), esportato JPEG qualità 82, ~48 KB.
 
+## recuperare-tempo-delegare-ai-sistema-real-photo.jpg
+
+- **Articolo:** `/blog/recuperare-tempo-delegare-ai-sistema`
+- **Piattaforma:** Pexels
+- **Autore/fotografo:** Tara Winstead ([pexels.com/@tara-winstead](https://www.pexels.com/@tara-winstead/))
+- **Riferimento magazzino interno:** `IMG-STOCK-010` in `asset/visual-stock/00_INDEX/REAL_STOCK_IMAGE_WAREHOUSE_INDEX.md` (vault "Il mio cervello", non in questo repo)
+- **Licenza:** Pexels License — uso libero, incluso commerciale, senza obbligo di attribuzione. Attribuzione riportata comunque per tracciabilità.
+- **Motivo sostituzione:** l'immagine precedente (`cover_tempo_ai.png`) era generata artificialmente (ufficio sci-fi, orologio olografico, statistiche finte in inglese non coerenti col contenuto reale dell'articolo) — violava la Real Stock Image Warehouse Policy e il Blog Publication Mandatory Visual & SEO Gate. Sostituita con foto reale già presente nel magazzino (crop 1200x630 pronto), coerente col tema (scrivania di lavoro, taccuino, laptop, metodo).
+- **Data sostituzione:** 2026-08-03.
+
+## 10-task-delegare-ai-lavoro-real-photo.jpg
+
+- **Articolo:** `/blog/10-task-delegare-ai-lavoro`
+- **Piattaforma:** Pexels — **Autore/fotografo:** Karolina Grabowska
+- **Riferimento magazzino:** `IMG-STOCK-009`
+- **Licenza:** Pexels License — uso libero, incluso commerciale
+- **Motivo sostituzione:** `cover_task_delegati.png` era un'immagine AI-generata (orbe olografica futuristica, icone luminose fluttuanti, ufficio notturno finto) — audit del 2026-08-03.
+
+## paura-obsolescenza-professionale-ai-real-photo.jpg
+
+- **Articolo:** `/blog/paura-obsolescenza-professionale-ai`
+- **Piattaforma:** Unsplash — **Autore/fotografo:** Vitaly Gariev (@silverkblack)
+- **Riferimento magazzino:** `IMG-STOCK-001`
+- **Licenza:** Unsplash License — uso libero, incluso commerciale
+- **Nota:** volto riconoscibile in primo piano, uso con cautela come da nota del magazzino.
+- **Motivo sostituzione:** `cover_paura_obsolescenza.png` era un'immagine AI-generata (silhouette in portale sci-fi, testo incorporato "FEAR OF OBSOLESCENCE"/"EMBRACING THE FUTURE") — audit del 2026-08-03.
+
+## manifesto-ai-esperienza-vince-real-photo.jpg
+
+- **Articolo:** `/blog/manifesto-ai-esperienza-vince`
+- **Piattaforma:** Pexels — **Autore/fotografo:** Kampus Production
+- **Riferimento magazzino:** `IMG-STOCK-008`
+- **Licenza:** Pexels License — uso libero, incluso commerciale
+- **Motivo sostituzione:** `cover_manifesto_esperienza.png` era un'immagine AI-generata (pedone degli scacchi luminoso con circuiti, testo incorporato "STRATEGY"/"AI ERA WIN") — audit del 2026-08-03.
+
+## manifesto-reinvenzione-over40-real-photo.jpg
+
+- **Articolo:** `/blog/manifesto-reinvenzione-over40`
+- **Piattaforma:** Unsplash — **Autore/fotografo:** Vitaly Gariev (@silverkblack)
+- **Riferimento magazzino:** `IMG-STOCK-007`
+- **Licenza:** Unsplash License — uso libero, incluso commerciale
+- **Nota:** persona riconoscibile, scelta deliberata per il tema over40/ripartenza professionale, come da nota del magazzino.
+- **Motivo sostituzione:** `cover_manifesto_reinvenzione.png` era un'immagine AI-generata (bussola su tavolo a circuiti dorati, già segnalata in M2030-T066) — audit del 2026-08-03.
+
+## manifesto-sistemi-autonomi-real-photo.jpg
+
+- **Articolo:** `/blog/manifesto-sistemi-autonomi`
+- **Piattaforma:** Pexels — **Autore/fotografo:** Breakingpic
+- **Riferimento magazzino:** `IMG-STOCK-006`
+- **Licenza:** CC0/Pexels License — uso libero, incluso commerciale
+- **Motivo sostituzione:** `cover_task_delegati.png` (stesso file usato anche da 10-task-delegare-ai-lavoro) era un'immagine AI-generata — audit del 2026-08-03.
+
+## sistemi-che-lavorano-per-te-real-photo.jpg
+
+- **Articolo:** `/blog/sistemi-che-lavorano-per-te`
+- **Piattaforma:** Pexels — **Autore/fotografo:** Polina Kovaleva
+- **Riferimento magazzino:** `IMG-STOCK-005`
+- **Licenza:** Pexels License — uso libero, incluso commerciale
+- **Nota:** testo inglese generico visibile nella foto (planner "Let's organise"), non riferito al contenuto dell'articolo — accettato come sfondo tematico coerente (organizzazione/sistemi), non come testo informativo.
+- **Motivo sostituzione:** `cover_manifesto_esperienza.png` (stesso file usato anche da manifesto-ai-esperienza-vince) era un'immagine AI-generata — audit del 2026-08-03.
+
 ---
 
 ## Nota su cover_esperienza_vantaggio.png
