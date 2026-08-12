@@ -11,9 +11,40 @@ o OMNIA26.
 
 ## Registro articoli e derivati
 
-| Slug/articolo | Articolo repo | Visual/SEO gate | Video | Newsletter | LinkedIn | Ultima prova | Prossimo passo |
+Popolato in FM2030-P000035 (2026-08-01, inventario completo 18/18
+articoli, 8 video). Riconciliato in FM2030-P000039 → 2026-08-12 audit
+stato reale (report `01_REPORTS_AGENTI\REPORT_CLAUDE_BLOG_VIDEO_REAL_STATE_AND_AGENT_RECOVERY_2026-08-12.md`):
+`origin/main` aveva 5 commit non ancora presenti in locale, tra cui
+l'embed del 9° video (`recuperare-tempo-delegare-ai-sistema`,
+`sdUsFPwEpn0`) e lo schema `VideoObject`. Repo locale riallineato con
+merge `origin/main` → `main` il 2026-08-12 (vedi commit di merge),
+`.claude/agents/*` e questo tracker preservati. Fonti: `src/lib/posts.ts`
+(repo, post-merge), sitemap live, oEmbed YouTube pubblico. Dettaglio
+completo in
+`G:\Il mio Drive\FABIO_MICALE_AI_BRAIN_2030\FM2030_ARTICOLI_VIDEO_INVENTORY_AND_NEXT_SELECTION_REPORT.md`
+(01/08, storico) e nel report del 12/08 sopra citato (corrente).
+Newsletter e LinkedIn restano `DA_VERIFICARE` per tutti i rami.
+
+| Slug/articolo | Articolo repo | Video | Embed nel sito | Newsletter | LinkedIn | Ultima prova | Prossimo passo |
 |---|---|---|---|---|---|---|---|
-| _Compilare o aggiornare durante un incarico reale_ | `DA_VERIFICARE` | `DA_VERIFICARE` | `DA_VERIFICARE` | `DA_VERIFICARE` | `DA_VERIFICARE` | — | Verificare la fonte corrente |
+| `piano-continuita-minima-energia-bassa` | LIVE | SI — https://youtu.be/yg4O24YaoVQ | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `sistema-minimo-giorni-storti-controllo-energia-bassa` | LIVE | SI — https://youtu.be/HWKiXJH6lCM | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `ricaduta-non-fallimento-tornare-in-carreggiata` | LIVE | SI — https://youtu.be/kKWakV8c94Q | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `over-40-ai-esperienza` (manifesto Passo 1) | LIVE | SI — https://youtu.be/ZgZf4VnhhHE | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni` | LIVE | SI — https://youtu.be/l26we6XGF5g | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `mantieni-il-controllo-revisione-settimanale` (manifesto Passo 3) | LIVE | SI — https://youtu.be/cGGXDRJ-Q94 | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `manifesto-sistemi-autonomi` (manifesto Passo 2) | LIVE | SI — https://youtu.be/wW4gJhcpTYo | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `reinventarsi-dopo-i-40-metodo` | LIVE | SI — https://youtu.be/Yl20TDaoXI8 (progetto storico "B09") | SI | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Nessuno (ramo articolo+video chiuso) |
+| `recuperare-tempo-delegare-ai-sistema` | LIVE | **SI — https://youtu.be/sdUsFPwEpn0** | **SI (+ schema VideoObject)** | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-12 | Nessuno (ramo articolo+video chiuso). Pubblicato 2026-08-02, embed 2026-08-03, schema VideoObject 2026-08-10. Pacchetto pre-produzione originale conservato in `docs/agents/work/video-recuperare-tempo-delegare-ai-sistema/` come archivio storico. Gap noto: nessun report trovato per lo sblocco voce/render/upload finale — vedi report 12/08. |
+| `claude-ai-come-usarlo-al-lavoro` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-12 | **PROSSIMO VIDEO** — pre-produzione in corso in questo ciclo (FM2030-AGT-007), vedi `docs/agents/work/video-claude-ai-come-usarlo-al-lavoro/` |
+| `paura-obsolescenza-professionale-ai` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Candidato video (rank 3) |
+| `10-task-delegare-ai-lavoro` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Candidato video (rank 4), sequenziare dopo `recuperare-tempo-delegare-ai-sistema` |
+| `non-serve-essere-nativi-digitali` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | Candidato video (rank 5) |
+| `ai-esperienza-professionale-vantaggio` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | In attesa — overlap medio con `manifesto-ai-esperienza-vince` |
+| `manifesto-ai-esperienza-vince` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | In attesa — overlap medio-alto con pilastro `over-40-ai-esperienza` |
+| `ai-over-40-opportunita-non-minaccia` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | In attesa — overlap alto con pilastro `over-40-ai-esperienza` |
+| `sistemi-che-lavorano-per-te` | LIVE | NO | NO | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | In attesa — overlap alto con pilastro `manifesto-sistemi-autonomi` |
+| `manifesto-reinvenzione-over40` | LIVE | NO | NO — pacchetto storico "B09" esiste ma pubblicato su `reinventarsi-dopo-i-40-metodo` | `DA_VERIFICARE` | `DA_VERIFICARE` | 2026-08-01 | **DECISIONE FABIO RICHIESTA** — overlap molto alto con `reinventarsi-dopo-i-40-metodo` (già video) |
 
 ## Cicli
 
