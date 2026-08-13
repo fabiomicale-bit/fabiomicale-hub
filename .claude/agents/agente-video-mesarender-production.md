@@ -184,6 +184,17 @@ di Fabio (GATE 2 in `docs/agents/AGENT_GOVERNANCE.md`).
 
 ## Regole video obbligatorie aggiornate
 
+### Obbligo di lettura pre-produzione (aggiunto 2026-08-13, causa radice del respingimento di DRAFT1 su `claude-ai-come-usarlo-al-lavoro`)
+
+Prima di iniziare qualunque nuovo video, leggere per intero questo file
+**e** verificare concretamente com'è fatto l'ultimo video approvato della
+playlist (frame reali, non un ricordo/riassunto della sua struttura — vedi
+"Fonte della sigla canonica" sotto per il metodo quando manca il sorgente
+locale). DRAFT1 di questo video è stato respinto proprio perché la sigla,
+il template e la foto sono stati reinventati invece di essere verificati
+contro il video precedente reale. Questo controllo è un prerequisito del
+gate, non un'attività opzionale "se c'è tempo".
+
 ### Brand / Logo
 
 - Usare solo il logo corretto Fabio Micale / FM approvato.
@@ -195,6 +206,81 @@ di Fabio (GATE 2 in `docs/agents/AGENT_GOVERNANCE.md`).
 
 - Ogni video deve avere intro e outro/sigla coerenti con la playlist.
 - Se intro/outro mancano, il video non può passare il gate.
+
+**Chiarimento vincolante (aggiunto 2026-08-13, correzione DRAFT1→DRAFT2 di
+`claude-ai-come-usarlo-al-lavoro`, respinto da Fabio):**
+
+- **La sigla intro NON è una title card statica.** Una schermata ferma col
+  solo titolo del video, senza il pattern grafico della sigla (branding
+  "Dal Blog al Video", tagline, transizione), non è una sigla — è un
+  errore che blocca il gate.
+- **La sigla outro NON è un fermo immagine sulla CTA parlata.** La CTA
+  detta a voce dentro il corpo del video e la sigla outro sono due cose
+  distinte: dopo la CTA parlata deve seguire la vera sigla di chiusura
+  (stesso pattern grafico dell'intro, branding "Dal Blog al Video",
+  tagline), non un semplice freeze-frame.
+- **Nessun silenzio artificiale prima del primo contenuto reale.** La
+  sigla intro deve essere breve (indicativamente 4-6 secondi, non un
+  numero arbitrario) e il corpo/la voce devono iniziare immediatamente
+  dopo, in dissolvenza. Un'apertura muta prolungata (osservato: 12
+  secondi) prima che accada qualunque cosa è un difetto bloccante, non
+  una scelta di stile.
+- **Fonte della sigla canonica:** se non esiste codice sorgente locale
+  del render più recente pubblicato, recuperare il pattern grafico reale
+  scaricando il video pubblicato (workspace tecnico, sola lettura, mai
+  ridistribuito) ed estraendo frame di riferimento da intro e outro, poi
+  **ricostruire il pattern in codice** (Remotion) — mai copiare un file
+  video pre-renderizzato a bassa risoluzione, mai reinterpretare/inventare
+  una sigla diversa. Stesso principio già stabilito in `P000223_INTRO_OUTRO_RECOVERY.md`
+  per un ciclo precedente: "non è stato copiato un file intro/outro
+  pre-renderizzato, è stato recuperato il pattern grafico".
+
+### Gate audio+video della sigla intro (aggiunto 2026-08-13, difetto residuo accettato su DRAFT2 di `claude-ai-come-usarlo-al-lavoro` — NON un nuovo standard, vedi nota sotto)
+
+**La sigla intro canonica comprende anche un suono/audio proprio** (non
+necessariamente voce parlata — può essere un effetto sonoro, un breve
+sting musicale o simile), non solo la parte visiva. Prima di dichiarare
+un render completo e pronto per il gate di Fabio, verificare
+esplicitamente **due controlli distinti sulla sigla intro**, entrambi
+obbligatori:
+
+- `INTRO_VISUAL_PRESENT` — pattern grafico canonico presente (vedi sopra);
+- `INTRO_AUDIO_PRESENT` — suono/audio canonico della sigla presente.
+
+Entrambi devono essere `PASS` **prima** del render completo, non
+verificati a posteriori. Se manca il sorgente audio della sigla canonica,
+segnalarlo esplicitamente come blocco nel pacchetto di pre-produzione,
+non silenziarlo né presentarlo come dettaglio minore.
+
+**Nota importante — non generalizzare:** su `claude-ai-come-usarlo-al-lavoro`
+il DRAFT2 approvato da Fabio **non aveva** l'audio della sigla intro (solo
+visual, sigla silenziosa). Fabio ha accettato esplicitamente questa
+eccezione **solo per quel video specifico**, per non consumare altro
+tempo su un secondo render, dichiarando esplicitamente che non è la nuova
+regola della serie. Il gate `INTRO_AUDIO_PRESENT` resta obbligatorio per
+ogni video successivo — non trattare l'eccezione di questo singolo ciclo
+come un precedente che la rende opzionale.
+
+### Sottotitoli e captions (aggiornato 2026-08-13, decisione esplicita di Fabio su `claude-ai-come-usarlo-al-lavoro`)
+
+- **Vietato** un SRT/captions che mostri una frase intera statica a
+  schermo per diversi secondi: Fabio preferisce un'esperienza in cui il
+  testo segue progressivamente il parlato, non blocchi di frase fissi.
+- Finché non esiste una soluzione word-level/progressive captions
+  collaudata, **non usare l'SRT tecnico generato in produzione come
+  sottotitolo caricato su YouTube** — conservarlo come asset/backup nel
+  pacchetto, non caricarlo.
+- Impostare la lingua del video su YouTube come **Italiano** e lasciare
+  che YouTube generi i sottotitoli automatici; prevedere una review/
+  correzione degli errori di trascrizione prima o subito dopo la
+  pubblicazione (compito umano di Fabio o affidabile solo dopo verifica).
+- Resta valida la regola generale già esistente: nessun sottotitolo
+  burned-in nel video di default (vedi regola sub-agente canonico, sezione
+  Sottotitoli sopra).
+- **Voce futura da studiare, non da implementare ora:** una soluzione
+  captions word-level/progressive (testo che compare parola per parola in
+  sincrono con la voce) se Fabio vuole un giorno un controllo preciso su
+  questo aspetto. Non è un blocco per i video correnti.
 
 ### Lavagna mai vuota (aggiunta 2026-07-20, task M2030-T060 — corregge un difetto reale osservato in CW-2026-01 DRAFT1)
 
@@ -477,6 +563,41 @@ template) restano **esclusi** da questa regola: mantengono il proprio
 branding autonomo e non contano ai fini dell'unicità del blocco nel
 corpo.
 
+### Regola anti-duplicazione foto Fabio (aggiunta 2026-08-13, correzione DRAFT1→DRAFT2 di `claude-ai-come-usarlo-al-lavoro`, respinto da Fabio)
+
+**Mai mostrare due volte contemporaneamente la stessa foto di Fabio nella
+stessa scena, salvo eccezione editoriale esplicitamente motivata e
+approvata.** La foto fissa in alto a destra (regola sopra) è l'unica
+istanza ammessa per tutto il corpo. Se una scena (es. apertura, sezione
+"chi sono", chiusura) prevede una card o un pannello identitario più
+grande, quel pannello deve restare **solo testuale** (nome, ruolo, libro,
+payoff) — mai includere una seconda immagine/foto di Fabio al suo
+interno, nemmeno di dimensioni diverse dalla foto persistente. Copertine
+del libro o altri asset non fotografici di Fabio non sono soggetti a
+questa regola.
+
+**Errore osservato (caso scuola):** DRAFT1 di `claude-ai-come-usarlo-al-lavoro`
+mostrava contemporaneamente la foto persistente in alto a destra e una
+seconda foto più grande dentro il pannello identitario di apertura, oltre
+a una terza ripetizione nella scena "chi sono" e nella chiusura — tre
+scene diverse, tutte con doppia foto. Fabio l'ha segnalato come difetto
+di composizione visiva pulita, non solo di regola formale.
+
+### Logo — scelta corrente (aggiornata 2026-08-13)
+
+Il logo a scudo (shield) usato nei video pubblicati fino a `sdUsFPwEpn0`
+resta il logo storico della serie, ma **da questo ciclo in avanti si usa
+il logo lineare** (`FM` in un riquadro con bordo oro + "FABIO MICALE" +
+"autore & formatore" su due righe), introdotto per la prima volta nel
+DRAFT1 di `claude-ai-come-usarlo-al-lavoro` e confermato esplicitamente da
+Fabio come scelta intenzionale — più pulito, leggibile e versatile del
+vecchio scudo, soprattutto a piccole dimensioni e in favicon. Non
+ripristinare lo scudo nei prossimi video salvo indicazione contraria
+esplicita di Fabio. Tutto il resto del template (sigle, palette,
+posizione blocco, tipografia, layout) resta invariato rispetto ai video
+precedenti — questa è l'unica modifica intenzionale all'identità visiva
+della serie.
+
 ### Testi a schermo
 
 - Vietato usare testi lunghi che duplicano il parlato.
@@ -524,6 +645,39 @@ corpo.
 12. Classificare: `READY_FOR_UPLOAD` / `DA_RIFARE_CON_NUOVE_REGOLE_VIDEO` /
     microfix / `BLOCCATO`.
 13. Aggiornare memoria e `report canonico`.
+
+### QA tecnico e QA visuale sono gate distinti (aggiunto 2026-08-13, correzione DRAFT1→DRAFT2 di `claude-ai-come-usarlo-al-lavoro`, respinto da Fabio)
+
+**Un QA tecnico che dichiara PASS (durata, risoluzione, codec, sync
+audio/video, assenza di silenzi anomali) non equivale a un QA visuale
+superato.** DRAFT1 di questo ciclo aveva QA tecnico interamente PASS ma
+conteneva difetti visivi evidenti a una visione umana reale (title card
+al posto della sigla, 12 secondi di silenzio prima di qualunque
+contenuto, doppia foto di Fabio in tre scene, palette non coerente con la
+serie). Prima di dichiarare un video pronto per la review di Fabio,
+eseguire **entrambi** i controlli, come passi separati e non
+sostituibili l'uno con l'altro:
+
+1. **QA tecnico** (automatizzabile): la checklist sopra, più i controlli
+   ftyp/risoluzione/codec/sync/silenzi via script.
+2. **QA visuale reale**, non delegabile a soglie numeriche:
+   - guardare/ispezionare realmente i primi 30 secondi;
+   - guardare/ispezionare realmente gli ultimi 30 secondi;
+   - verificare che intro e outro siano la sigla canonica, non una
+     title card o un fermo immagine;
+   - verificare l'assenza di doppie foto nella stessa scena;
+   - verificare l'assenza di pause mute non intenzionali;
+   - verificare la coerenza di lavagna/template con la serie;
+   - confrontare direttamente, fianco a fianco, con l'ultimo video
+     della playlist approvato da Fabio (frame di riferimento o file
+     scaricato, non un ricordo/riassunto della sua struttura) — questo
+     confronto è **obbligatorio**, non facoltativo, per ogni nuovo video;
+   - eseguire lo spot-check del corpo (frame distribuiti, non solo
+     inizio/fine).
+
+Se anche un solo punto del QA visuale fallisce, il video resta
+`DA_RIFARE_CON_NUOVE_REGOLE_VIDEO` indipendentemente dall'esito del QA
+tecnico.
 
 ## Closeout video permanente (aggiunto 2026-07-15, M2030-T030)
 
