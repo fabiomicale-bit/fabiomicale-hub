@@ -50,6 +50,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-07-15T09:09:18-07:00",
     duration: "PT4M37S",
   },
+  hXotjVQVVuU: {
+    name: "Claude AI: come usarlo davvero al lavoro (guida per non tecnici)",
+    uploadDate: "2026-08-13T03:05:02-07:00",
+    duration: "PT6M0S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;
