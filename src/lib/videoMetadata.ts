@@ -55,6 +55,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-08-13T03:05:02-07:00",
     duration: "PT6M0S",
   },
+  "88gr8j15BBk": {
+    name: "Paura di essere tagliato fuori dall'AI? Hai ragione ad averla. Ecco cosa fare.",
+    uploadDate: "2026-08-16T01:03:59-07:00",
+    duration: "PT5M43S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;

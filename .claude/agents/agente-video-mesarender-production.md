@@ -368,6 +368,30 @@ Gate obbligatorio su:
 Ogni parola sensibile va verificata nello script, nei testi on-screen, nel
 TTS e nei sottotitoli.
 
+### Regola QA pronuncia — video Fabio Micale (aggiunta 2026-08-16, appunto non bloccante di Fabio su `paura-obsolescenza-professionale-ai`, DRAFT1 approvato)
+
+Fabio ha approvato il video ma ha segnalato una pronuncia innaturale
+della frase "ce la farò" nel voiceover TTS (percepita come "ce la faro",
+senza il corretto accento/intonazione). Errore piccolo, non bloccante per
+quel video, ma da prevenire nei prossimi cicli.
+
+Nei prossimi video, **prima della consegna a Fabio**, verificare in modo
+specifico:
+
+- accenti italiani corretti;
+- parole come "farò", "perché", "può", "è", "già", "più";
+- apostrofi e forme naturali come "ce la farò", "ce l'ho", "l'ho fatto";
+- inglesismi e nomi di tool pronunciati correttamente, non letti in modo
+  letterale italiano;
+- frasi che una voce sintetica potrebbe appiattire o rendere innaturali;
+- eventuali punti in cui conviene riscrivere leggermente la frase per
+  aiutare la pronuncia.
+
+Se un errore di pronuncia è evidente e correggibile prima del DRAFT
+finale, va corretto prima della consegna a Fabio (riscrittura del testo
+TTS-input o rigenerazione del chunk audio interessato), non lasciato per
+una review a posteriori.
+
 ### Immagini / Timing visuale
 
 - Ogni immagine deve comparire solo quando viene citata o serve davvero.
