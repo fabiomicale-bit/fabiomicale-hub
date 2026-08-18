@@ -4,6 +4,16 @@ Registro di tracciabilità per le fotografie reali usate come cover degli artico
 
 ---
 
+## motivazione-o-struttura-real-photo.jpg
+
+- **Articolo:** `/blog/motivazione-o-struttura`
+- **Piattaforma:** Unsplash
+- **Autore/fotografo:** Jessy Smith ([unsplash.com/@jessysmith](https://unsplash.com/@jessysmith))
+- **URL pagina originale:** https://unsplash.com/photos/close-view-of-scaffolding-attach-to-the-building-McPfYQCpYfw
+- **Data di acquisizione:** 17 agosto 2026
+- **Licenza:** Unsplash License — uso libero, incluso commerciale, senza obbligo di attribuzione (verificata sulla pagina sorgente al momento del download). Attribuzione riportata comunque per tracciabilità.
+- **Elaborazione:** ritaglio 1200×630 (1.91:1) via .NET System.Drawing (crop verticale minimo centrato, ~7% dell'altezza — il master è già ~16:9), esportato JPEG qualità 85, ~146 KB.
+
 ## ai-esperienza-professionale-vantaggio-real-photo.jpg
 
 - **Articolo:** `/blog/ai-esperienza-professionale-vantaggio`
