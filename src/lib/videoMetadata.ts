@@ -65,6 +65,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-08-20T01:30:05-07:00",
     duration: "PT2M59S",
   },
+  "1X9r1BGJkWs": {
+    name: "10 task da delegare all'AI per liberare tempo ogni settimana",
+    uploadDate: "2026-08-20T14:52:47-07:00",
+    duration: "PT5M6S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;
