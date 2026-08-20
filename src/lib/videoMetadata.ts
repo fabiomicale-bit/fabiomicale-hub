@@ -60,6 +60,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-08-16T01:03:59-07:00",
     duration: "PT5M43S",
   },
+  HCHi7zXCO9Y: {
+    name: "Il problema non è la motivazione. È la struttura",
+    uploadDate: "2026-08-20T01:30:05-07:00",
+    duration: "PT2M59S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;
