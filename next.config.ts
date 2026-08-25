@@ -115,6 +115,16 @@ const nextConfig: NextConfig = {
         destination: '/successo-in-3-passi',
         permanent: true,
       },
+      {
+        source: '/libro',
+        destination: '/successo-in-3-passi',
+        permanent: true,
+      },
+      {
+        source: '/libro/:path*',
+        destination: '/successo-in-3-passi',
+        permanent: true,
+      },
       // Redirect altri vecchi verticali
       {
         source: '/accademia',
