@@ -118,7 +118,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
               form_type: "lead_magnet",
               form_variant: "book_excerpt",
               page_path: window.location.pathname,
-              source: attribution.utm_source,
+              traffic_origin: attribution.utm_source,
               newsletter_consent: newsletterAccepted ? "granted" : "not_granted",
             }),
             () => { window.location.href = "/grazie-estratto"; }
@@ -137,7 +137,7 @@ export default function NewsletterCTA({ variant = "default" }: NewsletterCTAProp
             form_type: "newsletter",
             form_variant: "newsletter_cta",
             page_path: window.location.pathname,
-            source: attribution.utm_source,
+            traffic_origin: attribution.utm_source,
             newsletter_consent: "granted",
           }));
           setStatus("success");

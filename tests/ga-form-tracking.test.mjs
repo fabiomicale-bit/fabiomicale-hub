@@ -5,18 +5,31 @@ import {
   buildFormSubmitParams,
   trackFormSubmit,
   trackFormSubmitBeforeNavigation,
+  sendPageView,
+  ensureGtag,
+  updateConsent,
 } from "../src/lib/ga.ts";
 import { submitSubscriptionOnce } from "../src/lib/subscriptionForm.ts";
 
-function installWindow(consent, gtag) {
+function installWindow(consent, gtag, options = {}) {
   const fakeWindow = {
-    location: { hostname: "www.fabiomicale.com" },
+    location: {
+      hostname: "www.fabiomicale.com",
+      href: options.href || "https://www.fabiomicale.com/estratto",
+      pathname: options.pathname || "/estratto",
+    },
     localStorage: { getItem: () => consent ? "all" : "necessary" },
+    document: {
+      title: options.title || "Pagina di Test | Fabio Micale",
+      referrer: options.referrer !== undefined ? options.referrer : "https://www.google.it/",
+    },
     gtag,
+    dataLayer: options.dataLayer || undefined,
     setTimeout,
     clearTimeout,
   };
   Object.defineProperty(globalThis, "window", { value: fakeWindow, configurable: true });
+  Object.defineProperty(globalThis, "document", { value: fakeWindow.document, configurable: true });
 }
 
 function response(ok, success) {
@@ -169,16 +182,80 @@ test("newsletter fallita non emette conversioni", async () => {
   assert.equal(events, 0);
 });
 
-test("parametri conversione sono categorici, senza query o PII", () => {
+test("parametri conversione usano traffic_origin, non source riservato, senza PII", () => {
   const params = buildFormSubmitParams({
     form_type: "lead_magnet", form_variant: "book_excerpt",
     page_path: "/estratto?email=qa@example.invalid&token=segreto",
-    source: "qa@example.invalid", newsletter_consent: "granted",
+    traffic_origin: "qa@example.invalid", newsletter_consent: "granted",
   });
   assert.deepEqual(Object.keys(params).sort(), [
-    "form_type", "form_variant", "newsletter_consent", "page_path", "source", "success_status",
+    "form_type", "form_variant", "newsletter_consent", "page_path", "success_status", "traffic_origin",
   ]);
   assert.equal(params.page_path, "/estratto");
-  assert.equal(params.source, "other");
+  assert.equal(params.traffic_origin, "other");
+  assert.equal("source" in params, false);
   assert.doesNotMatch(JSON.stringify(params), /qa@example\.invalid|segreto|email|token/i);
+});
+
+test("sendPageView emette page_view con page_location, page_title e page_referrer sul first load", () => {
+  const calls = [];
+  installWindow(true, (...args) => { calls.push(args); }, {
+    href: "https://www.fabiomicale.com/blog/10-task-delegare-ai-lavoro?utm_source=linkedin",
+    pathname: "/blog/10-task-delegare-ai-lavoro",
+    title: "10 Task | Fabio Micale",
+    referrer: "https://www.google.it/",
+  });
+
+  sendPageView("/blog/10-task-delegare-ai-lavoro", { isInitial: true });
+
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0][0], "event");
+  assert.equal(calls[0][1], "page_view");
+  assert.equal(calls[0][2].page_path, "/blog/10-task-delegare-ai-lavoro");
+  assert.equal(calls[0][2].page_location, "https://www.fabiomicale.com/blog/10-task-delegare-ai-lavoro?utm_source=linkedin");
+  assert.equal(calls[0][2].page_title, "10 Task | Fabio Micale");
+  assert.equal(calls[0][2].page_referrer, "https://www.google.it/");
+});
+
+test("sendPageView su navigazione SPA successiva non ripete page_referrer della landing", () => {
+  const calls = [];
+  installWindow(true, (...args) => { calls.push(args); }, {
+    href: "https://www.fabiomicale.com/chi-sono",
+    pathname: "/chi-sono",
+    title: "Chi Sono | Fabio Micale",
+    referrer: "https://www.google.it/",
+  });
+
+  sendPageView("/chi-sono", { isInitial: false });
+
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0][0], "event");
+  assert.equal(calls[0][1], "page_view");
+  assert.equal(calls[0][2].page_path, "/chi-sono");
+  assert.equal(calls[0][2].page_referrer, undefined);
+});
+
+test("sendPageView con consenso negato non invia nessun evento", () => {
+  const calls = [];
+  installWindow(false, (...args) => { calls.push(args); });
+
+  sendPageView("/blog", { isInitial: true });
+
+  assert.equal(calls.length, 0);
+});
+
+test("ensureGtag inizializza window.gtag se assente accodando comandi in dataLayer senza errori", () => {
+  installWindow(true, undefined, {});
+  delete window.gtag;
+  delete window.dataLayer;
+
+  const gtag = ensureGtag();
+  assert.equal(typeof gtag, "function");
+  assert.equal(typeof window.gtag, "function");
+  assert.ok(Array.isArray(window.dataLayer));
+
+  sendPageView("/successo-in-3-passi", { isInitial: true });
+  assert.equal(window.dataLayer.length, 1);
+  assert.equal(window.dataLayer[0][0], "event");
+  assert.equal(window.dataLayer[0][1], "page_view");
 });

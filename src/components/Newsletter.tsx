@@ -46,7 +46,7 @@ export default function Newsletter() {
           form_type: "newsletter",
           form_variant: "newsletter_page",
           page_path: window.location.pathname,
-          source: attribution.utm_source,
+          traffic_origin: attribution.utm_source,
           newsletter_consent: "granted",
         }));
         setStatus("success");

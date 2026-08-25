@@ -6,7 +6,7 @@ export type FormSubmitEventParams = {
   form_type: "lead_magnet" | "newsletter";
   form_variant: "book_excerpt" | "newsletter_page" | "newsletter_cta";
   page_path: string;
-  source: "linkedin" | "beehiiv" | "youtube" | "organic" | "direct" | "other";
+  traffic_origin: "linkedin" | "beehiiv" | "youtube" | "organic" | "direct" | "other";
   newsletter_consent: "granted" | "not_granted";
   success_status: "accepted";
 };
@@ -36,6 +36,18 @@ function isTrackableHost(): boolean {
     (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
 }
 
+export function ensureGtag(): GTagFunction | null {
+  if (typeof window === "undefined") return null;
+  if (typeof window.gtag === "function") return window.gtag;
+  if (!isTrackableHost()) return null;
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  return window.gtag;
+}
+
 function safePagePath(value: string): string {
   try {
     return new URL(value, "https://www.fabiomicale.com").pathname;
@@ -44,7 +56,7 @@ function safePagePath(value: string): string {
   }
 }
 
-export function toAnalyticsSource(value?: string): FormSubmitEventParams["source"] {
+export function toAnalyticsTrafficOrigin(value?: string): FormSubmitEventParams["traffic_origin"] {
   const normalized = value?.trim().toLowerCase();
   if (normalized === "linkedin" || normalized === "beehiiv" || normalized === "youtube") {
     return normalized;
@@ -54,9 +66,13 @@ export function toAnalyticsSource(value?: string): FormSubmitEventParams["source
   return "other";
 }
 
+// Alias per retrocompatibilità
+export const toAnalyticsSource = toAnalyticsTrafficOrigin;
+
 export function buildFormSubmitParams(
-  params: Omit<FormSubmitEventParams, "page_path" | "source" | "success_status"> & {
+  params: Omit<FormSubmitEventParams, "page_path" | "traffic_origin" | "success_status"> & {
     page_path: string;
+    traffic_origin?: string;
     source?: string;
   }
 ): FormSubmitEventParams {
@@ -64,16 +80,19 @@ export function buildFormSubmitParams(
     form_type: params.form_type,
     form_variant: params.form_variant,
     page_path: safePagePath(params.page_path),
-    source: toAnalyticsSource(params.source),
+    traffic_origin: toAnalyticsTrafficOrigin(params.traffic_origin ?? params.source),
     newsletter_consent: params.newsletter_consent,
     success_status: "accepted",
   };
 }
 
 export function updateConsent(granted: boolean) {
-  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+  if (typeof window === "undefined") return;
+  const gtag = ensureGtag();
+  if (!gtag) return;
+
   const state = granted ? "granted" : "denied";
-  window.gtag("consent", "update", {
+  gtag("consent", "update", {
     analytics_storage: state,
     ad_storage: state,
     ad_user_data: state,
@@ -87,15 +106,15 @@ export function trackEvent(
 ) {
   if (typeof window === "undefined") return;
   if (!isTrackableHost()) return;
-  if (typeof window.gtag !== "function") return;
   if (!hasAnalyticsConsent()) return;
+
+  const gtag = ensureGtag();
+  if (!gtag) return;
+
   if (process.env.NODE_ENV === "development") {
     console.log(`[GA debug] ${eventName}`, params);
   }
-  // transport_type: "beacon" — usa navigator.sendBeacon quando disponibile,
-  // così l'evento non va perso se il click porta a una navigazione immediata
-  // (link CTA verso /estratto, redirect post-submit).
-  window.gtag("event", eventName, { ...params, transport_type: "beacon" });
+  gtag("event", eventName, { ...params, transport_type: "beacon" });
 }
 
 export function trackFormSubmit(
@@ -103,10 +122,13 @@ export function trackFormSubmit(
   params: FormSubmitEventParams
 ): boolean {
   if (typeof window === "undefined" || !isTrackableHost()) return false;
-  if (!hasAnalyticsConsent() || typeof window.gtag !== "function") return false;
+  if (!hasAnalyticsConsent()) return false;
+
+  const gtag = ensureGtag();
+  if (!gtag) return false;
 
   try {
-    window.gtag("event", eventName, { ...params, transport_type: "beacon" });
+    gtag("event", eventName, { ...params, transport_type: "beacon" });
     return true;
   } catch {
     return false;
@@ -150,12 +172,22 @@ export function trackFormSubmitBeforeNavigation(
   }
 }
 
-export function sendPageView(pathname: string) {
+export function sendPageView(pathname: string, options?: { isInitial?: boolean }) {
   if (typeof window === "undefined") return;
+  if (!isTrackableHost()) return;
   if (!hasAnalyticsConsent()) return;
-  if (typeof window.gtag !== "function") return;
-  window.gtag("config", GA_ID, {
+
+  const gtag = ensureGtag();
+  if (!gtag) return;
+
+  const pageLocation = window.location.href;
+  const pageTitle = document.title;
+  const pageReferrer = document.referrer;
+
+  gtag("event", "page_view", {
     page_path: pathname,
-    page_title: document.title,
+    page_location: pageLocation,
+    page_title: pageTitle,
+    ...(options?.isInitial && pageReferrer ? { page_referrer: pageReferrer } : {}),
   });
 }

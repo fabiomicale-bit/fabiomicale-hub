@@ -13,11 +13,9 @@ export default function CookieBanner() {
   const accept = () => {
     localStorage.setItem('cookie-consent', 'all')
     updateConsent(true)
-    // Il consenso arriva dopo il mount: GAPageTracker non rifà il page_view
-    // della pagina di atterraggio (il suo effect dipende solo da pathname).
-    // Senza questa chiamata, il primo page_view della sessione va perso ogni
-    // volta che l'utente accetta i cookie sulla pagina di ingresso.
-    sendPageView(window.location.pathname)
+    // Il consenso arriva dopo il mount: se l'utente accetta ora,
+    // invia il first page_view con il referrer e la location della landing page.
+    sendPageView(window.location.pathname, { isInitial: true })
     setVisible(false)
   }
 
