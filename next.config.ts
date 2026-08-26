@@ -22,6 +22,12 @@ const nextConfig: NextConfig = {
         destination: "https://www.fabiomicale.com/:path*",
         permanent: true,
       },
+      // Link Corti /go
+      {
+        source: "/go/motivazione",
+        destination: "/blog/motivazione-o-struttura?utm_source=linkedin&utm_medium=social&utm_campaign=motivazione-o-struttura&utm_content=post-1-link-articolo",
+        permanent: false,
+      },
       // Redirect vecchie URL
       {
         source: '/quando-un-progetto-e-operativo-ma-non-e-sotto-controllo',
