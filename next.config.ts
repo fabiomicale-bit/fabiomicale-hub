@@ -153,6 +153,22 @@ const nextConfig: NextConfig = {
         destination: '/blog/reinventarsi-dopo-i-40-metodo',
         permanent: true,
       },
+      // Redirect Consolidamento Cluster AI + Esperienza Over 40
+      {
+        source: '/blog/ai-esperienza-professionale-vantaggio',
+        destination: '/blog/over-40-ai-esperienza',
+        permanent: true,
+      },
+      {
+        source: '/blog/manifesto-ai-esperienza-vince',
+        destination: '/blog/over-40-ai-esperienza',
+        permanent: true,
+      },
+      {
+        source: '/blog/ai-over-40-opportunita-non-minaccia',
+        destination: '/blog/over-40-ai-esperienza',
+        permanent: true,
+      },
       {
         source: '/lavora-con-me',
         destination: '/chi-sono',

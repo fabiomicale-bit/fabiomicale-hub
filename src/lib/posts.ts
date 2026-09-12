@@ -656,7 +656,7 @@ export const posts: Post[] = [
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "22 maggio 2026",
     dataISO: "2026-05-22",
-    tempoLettura: "7 min",
+    tempoLettura: "10 min",
     ogImage: "/blog/cover_over_40_ai.png",
     coverAlt: "Over 40 e AI: perché la tua esperienza vale più di un algoritmo — Fabio Micale",
     excerpt:
@@ -664,7 +664,7 @@ export const posts: Post[] = [
     correlati: [
       "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni",
       "paura-obsolescenza-professionale-ai",
-      "ai-esperienza-professionale-vantaggio",
+      "10-task-delegare-ai-lavoro",
       "non-serve-essere-nativi-digitali",
     ],
     step: 1,
@@ -710,21 +710,51 @@ export const posts: Post[] = [
 
 <p>L'ultimo punto è quello che conta di più. Quel tipo di esperienza non si impara in un corso: si accumula in vent'anni di lavoro.</p>
 
-<h2>Il vero vantaggio dei professionisti over 40</h2>
+<h2>Il vero vantaggio dei professionisti over 40: perché l'esperienza è il miglior prompt</h2>
 
 <p>Attenzione: non sto dicendo che avere più anni sia automaticamente un vantaggio. Essere over 40 non ti rende migliore di un trentacinquenne. Il vantaggio non è anagrafico.</p>
 
 <p>Il vantaggio è un altro: hai accumulato abbastanza errori da riconoscerli prima che si ripetano. Hai preso decisioni con dati parziali, e alcune erano giuste. Hai gestito situazioni in cui l'esperienza ha fatto la differenza tra una soluzione e un disastro. Questo capitale non è scritto da nessuna parte, e l'AI non lo possiede.</p>
 
-<p>L'AI può produrre una strategia in trenta secondi. Ma non sa se quella strategia è adatta al tuo cliente, al tuo settore, al momento che stai attraversando. Non sa cosa hai già provato. Non sa cosa non ha funzionato.</p>
+<p>Quando usi l'AI senza contesto, ottieni risposte generiche. È matematico: il modello non sa niente di te, del tuo settore, dei tuoi clienti, delle dinamiche reali del tuo mercato. Quindi ti restituisce la media, e la media non serve a nessuno.</p>
 
-<p>Questo non rende l'AI inutile. La rende potente solo quando la usa qualcuno capace di darle un contesto. Il contesto sei tu. È lo stesso motivo per cui ho costruito il mio metodo attorno all'esperienza, non attorno allo strumento — <a href="/chi-sono">qui trovi il mio percorso</a>.</p>
+<p>Ma quando porti dentro il contesto (la tua esperienza, il tuo punto di vista, i vincoli reali del problema che stai risolvendo) l'output cambia completamente. Chi ha vent'anni di carriera ha un vocabolario professionale più ricco, sa distinguere il segnale dal rumore e conosce le domande giuste. Queste competenze si traducono in prompt migliori e risultati calibrati su di te. È lo stesso motivo per cui ho costruito il mio metodo attorno all'esperienza, non attorno allo strumento (<a href="/chi-sono">qui trovi il mio percorso</a>).</p>
+
+<h2>Cinque usi concreti per un professionista over 40</h2>
+
+<p>Per trasformare l'esperienza in un vantaggio operativo, ecco cinque ambiti pratici in cui l'AI può affiancarti senza mai sostituirsi alla tua responsabilità:</p>
+
+<h3>1. Preparare una prima bozza</h3>
+<p>Email complesse, proposte commerciali, verbali e procedure possono partire da una bozza generata dall'AI. Fornisci obiettivo, destinatario, informazioni obbligatorie e tono desiderato, per poi revisionare e affinare la forma finale.</p>
+
+<h3>2. Sintetizzare materiale di studio e analisi</h3>
+<p>Puoi richiedere la sintesi di documenti complessi o report lunghi. L'importante è non sostituire mai con un riassunto automatico la lettura approfondita necessaria per decisioni strategiche, legali o finanziarie.</p>
+
+<h3>3. Organizzare informazioni e attività</h3>
+<p>Note sparse, appunti di riunione e liste di compiti possono essere organizzati in tabelle con priorità e scadenze. Il controllo umano resta indispensabile per verificare le reali urgenze e le dipendenze operative.</p>
+
+<h3>4. Confrontare scenari e opzioni</h3>
+<p>Puoi usare l'AI per rendere espliciti vantaggi, rischi e informazioni mancanti tra due o tre alternative. Non chiederle di scegliere al posto tuo, ma usala per mettere a fuoco le ipotesi sottostanti.</p>
+
+<h3>5. Trasformare un processo ricorrente in una checklist</h3>
+<p>Descrivi come svolgi oggi un'attività e chiedi una sequenza riutilizzabile. Il valore non è la lista in sé, ma il processo strutturato che continua a funzionare nel tempo.</p>
+
+<h2>I quattro rischi da controllare</h2>
+
+<p>Nell'usare l'AI quotidiana occorre mantenere una supervisione attiva ed evitare quattro trappole comuni:</p>
+
+<ul>
+<li><strong>Errori e fonti inventate:</strong> Verificare sempre fatti, numeri e dati chiave quando l'output influisce su decisioni strategiche.</li>
+<li><strong>Dati personali e riservatezza:</strong> Non inserire informazioni sensibili di clienti o progetti protetti da riservatezza.</li>
+<li><strong>Automazione delle decisioni delicate:</strong> Se un compito riguarda valutazioni di persone, finanze o relazioni complesse, l'AI assiste la preparazione ma non deve mai prendere la decisione.</li>
+<li><strong>Perdita del proprio giudizio:</strong> Non accettare passivamente ogni risposta solo perché ben scritta; mantieni sempre il filtro della tua esperienza professionale.</li>
+</ul>
 
 <h2>Senza metodo, l'AI amplifica il rumore</h2>
 
 <p>Se hai un metodo, l'AI accelera quello che già sai fare. Se non ce l'hai, accelera la confusione.</p>
 
-<p>Provare uno strumento dopo l'altro senza un criterio. Salvare prompt da LinkedIn senza sapere quando usarli. Cambiare flusso di lavoro ogni settimana perché è uscita una novità. Tutto questo non è aggiornamento professionale: è rumore mascherato da produttività.</p>
+<p>Provare uno strumento dopo l'altro senza un criterio, salvare prompt da LinkedIn senza sapere quando usarli o cambiare flusso di lavoro ogni settimana non è aggiornamento professionale: è rumore mascherato da produttività.</p>
 
 <p>Il metodo non è una lista di strumenti. È un modo di decidere. E si riduce a tre domande precise: una sull'obiettivo, una sul punto del lavoro da migliorare, una sul modo di verificare i risultati. Senza risposte a queste domande, qualsiasi strumento diventa un'altra fonte di distrazione. L'AI va integrata dentro un sistema, non lasciata fuori.</p>
 
@@ -744,17 +774,17 @@ export const posts: Post[] = [
 
 <p>Se dopo due settimane non hai migliorato un processo, ridotto un tempo o preso una decisione migliore, non stai usando l'AI. La stai solo consumando.</p>
 
-<h2>Da dove iniziare questa settimana</h2>
+<h2>Un primo test pratico di 7 giorni</h2>
 
-<p>Non cominciare da un corso. Non cominciare da un elenco di strumenti. Comincia da una sola attività reale della tua settimana.</p>
+<p>Non cominciare da un corso. Non cominciare da un elenco infinito di strumenti. Comincia da una sola attività reale della tua settimana con un test guidato:</p>
 
-<p>Scegline una. Scrivi su un foglio cosa vuoi ottenere. Poi individua il passaggio più ripetitivo, più lento o a minor valore di quell'attività: è lì che l'AI può entrare.</p>
-
-<p>Usala solo per quel passaggio. Una volta.</p>
-
-<p>A fine settimana, fai un bilancio: questa attività è diventata più chiara? Hai più controllo? Hai ridotto il tempo o aumentato la qualità?</p>
-
-<p>Se la risposta è sì, hai trovato un punto d'ingresso. Se è no, non ti serve un altro strumento: ti serve struttura. Ed è esattamente lì che il Metodo diventa necessario.</p>
+<ol>
+<li>Scegli un solo task ripetitivo e a basso rischio (ad esempio la prima bozza di un report settimanale o la sintesi di un verbale).</li>
+<li>Misura quanto tempo richiede oggi svolgerlo manualmente.</li>
+<li>Definisci chiare istruzioni di input e usa l'AI solo per quel singolo passaggio.</li>
+<li>Ripeti la prova per 7 giorni consecutivi registrando tempi e correzioni apportate.</li>
+<li>A fine settimana valuta i risultati: se l'attività è più chiara e veloce conservala, altrimenti rimodula il processo. Se cerchi spunti su quali task testare per primi, puoi consultarli nella lista dei <a href="/blog/10-task-delegare-ai-lavoro">10 task da delegare all'AI nel lavoro</a>.</li>
+</ol>
 
 <h2>Dove si colloca nel Metodo Successo in 3 Passi</h2>
 
@@ -1312,7 +1342,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
     ogImage: "/blog/10-task-delegare-ai-lavoro-real-photo.jpg",
     coverAlt: "Laptop aperto su una scrivania lucida con vasi decorativi e una tazza di caffè, angolo ufficio elegante",
     excerpt: "Dieci compiti ripetitivi da provare con l'AI, con indicazioni su input, risultato atteso, controllo umano e misurazione del tempo realmente recuperato.",
-    correlati: ["manifesto-ai-esperienza-vince", "recuperare-tempo-delegare-ai-sistema", "reinventarsi-dopo-i-40-metodo", "sistemi-che-lavorano-per-te"],
+    correlati: ["over-40-ai-esperienza", "recuperare-tempo-delegare-ai-sistema", "reinventarsi-dopo-i-40-metodo", "sistemi-che-lavorano-per-te"],
     step: 2,
     formats: ["strumento-pratico"],
     contentHtml: `
@@ -1554,7 +1584,7 @@ A presto,
 
 <p>Per sette giorni registra il tempo impiegato prima, il tempo speso con l'AI inclusa la revisione, gli errori trovati e la qualità finale. Conserva il flusso solo se riduce il lavoro senza abbassare lo standard. Il numero di prompt usati non conta: conta il risultato verificato.</p>
 
-<p>Se vuoi capire perché il giudizio costruito con l'esperienza resta centrale, leggi <a href="/blog/manifesto-ai-esperienza-vince">come usare l'intelligenza artificiale da professionista over 40</a>.</p>
+<p>Se vuoi capire perché il giudizio costruito con l'esperienza resta centrale, leggi <a href="/blog/over-40-ai-esperienza">come usare l'intelligenza artificiale da professionista over 40</a>.</p>
 
 <hr>
 
@@ -1732,177 +1762,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     </section>
     `,
   },
-  {
-    slug: "ai-esperienza-professionale-vantaggio",
-    seoTitle: "Se hai 20 anni di esperienza, l'AI ti rende più forte",
-    seoDescription:
-      "Tutti dicono che l'AI favorisce i giovani. È falso. Chi ha esperienza ha un vantaggio enorme — ma solo se sa usarlo. Ecco come funziona davvero.",
-    keywords:
-      "ai esperienza professionale, intelligenza artificiale over 40, usare l'ai nel lavoro, ai vantaggio competitivo, professionisti e intelligenza artificiale",
-    titolo: "Se hai 20 anni di esperienza, l'AI ti rende più forte. Ecco perché.",
-    categoria: "Passo 1 — Ferma il Caos",
-    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
-    data: "24 marzo 2026",
-    dataISO: "2026-03-24",
-    tempoLettura: "5 min",
-    ogImage: "/blog/ai-esperienza-professionale-vantaggio-real-photo.jpg",
-    coverAlt: "Uomo maturo in giacca e cravatta, seduto in poltrona, mentre osserva concentrato lo schermo di un laptop con gli occhiali in mano",
-    excerpt:
-      "Tutti parlano di AI come se premiasse solo i giovani e penalizzasse chi ha esperienza. È esattamente il contrario — ma solo se sai come usarla.",
-    correlati: ["over-40-ai-esperienza", "manifesto-ai-esperienza-vince", "non-serve-essere-nativi-digitali"],
-    step: 1,
-    formats: ["appunti-di-metodo"],
-    contentHtml: `
-    <p>C'è un racconto che mi stanca ogni volta che lo sento.
-    Quello secondo cui l'intelligenza artificiale premia i giovani — i nativi digitali,
-    quelli che imparano tutto in fretta, quelli che non hanno ancora abitudini da disimparare.</p>
-    <p>Capisco da dove viene questa storia. Ma è sbagliata. E non di poco.</p>
-    <p>Chi ha vent'anni di esperienza — professionale, settoriale, umana — ha in mano
-    qualcosa che nessun modello AI può comprare o simulare. Il problema non è
-    l'esperienza. Il problema è non sapere come usarla in questo contesto nuovo.
-    E questo si può imparare.</p>
-    <h2>Il mito del giovane digitale nativo (e perché non regge)</h2>
-    <p>Proviamo a smontare il racconto dall'interno.</p>
-    <p>Sì, un ventenne impara un nuovo strumento in fretta. Apre l'app, sperimenta,
-    sbaglia, riprova — senza il peso del confronto con com'era prima. Questo è reale.</p>
-    <p>Ma cosa fa, concretamente, con quello strumento? Chiede all'AI di scrivere
-    una email generica. Di riassumere un articolo. Di generare un'idea per un post.</p>
-    <p>Niente di sbagliato. Ma niente di differenziante, neanche.</p>
-    <p>Adesso pensa a cosa ci fai tu, con la stessa AI, dopo vent'anni passati in un
-    settore specifico. Hai vissuto crisi e rilanci. Hai visto strategie fallire per
-    ragioni che non erano nei libri. Hai costruito — e a volte bruciato — relazioni
-    professionali. Sai cosa funziona davvero e cosa funziona solo sulla carta.</p>
-    <p>Quella conoscenza non si insegna a un modello con un prompt.
-    Ma si usa, eccome, per costruire i prompt giusti.</p>
-    <h2>Perché l'esperienza è il miglior prompt che esiste</h2>
-    <p>Quando usi l'AI senza contesto, ottieni risposte generiche. È matematico:
-    il modello non sa niente di te, del tuo settore, dei tuoi clienti, delle dinamiche
-    reali del tuo mercato. Quindi ti restituisce la media. E la media non serve a nessuno.</p>
-    <p>Ma quando porti dentro il contesto — la tua esperienza, il tuo punto di vista,
-    i vincoli reali del problema che stai risolvendo — l'output cambia completamente.
-    L'AI smette di essere generica e diventa uno strumento calibrato su di te.</p>
-    <p>Chi ha vent'anni di esperienza ha un vocabolario più ricco, una capacità di
-    distinguere il segnale dal rumore, e sa esattamente quali sono le domande giuste.
-    Queste cose si traducono in prompt migliori. E prompt migliori producono
-    risultati migliori. Non è un vantaggio piccolo. È strutturale.</p>
-    <h2>Il vantaggio si costruisce, non si eredita</h2>
-    <p>Avere anni di carriera alle spalle non basta da solo. Serve portare quella
-    esperienza dentro ogni prompt, invece di lasciarla fuori e trattare l'AI come
-    un oracolo neutro a cui affidarsi senza contesto.</p>
-    <p><a href="/il-metodo">Nel metodo che ho sviluppato</a> il punto di partenza
-    non è mai lo strumento: è la persona che lo usa. È lo stesso principio alla base
-    di <a href="/blog/over-40-ai-esperienza">come uso l'AI ogni giorno con un criterio</a>
-    invece di inseguire l'ultimo strumento uscito.</p>
-    <div class="blog-cta">
-      <p>Vuoi approfondire questo tema?</p>
-      <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
-    </div>
-    <p>Se vuoi vedere questo principio applicato in pratica — con esempi concreti su
-    come un medico, un avvocato o un imprenditore lo usano ogni giorno — lo trovi in
-    <a href="/blog/manifesto-ai-esperienza-vince">"Perché nell'Era AI chi ha Esperienza Vince"</a>.</p>
-  `,
-  },
-
   // ── MANIFESTO ─────────────────────────────────────────────────
-  {
-    slug: "manifesto-ai-esperienza-vince",
-    seoTitle: "Intelligenza Artificiale per Over 40: Esperienza + AI",
-    seoDescription:
-      "Come può un professionista over 40 usare l'intelligenza artificiale nel lavoro senza ripartire da zero: vantaggi, rischi, casi d'uso e primo test pratico.",
-    keywords:
-      "AI esperienza professionale, intelligenza artificiale over 40, AI lavoro futuro, vantaggio competitivo AI",
-    titolo: "Intelligenza artificiale per professionisti over 40: l'esperienza è il vantaggio",
-    categoria: "Passo 1 — Ferma il Caos",
-    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
-    data: "15 marzo 2026",
-    dataISO: "2026-03-15",
-    tempoLettura: "7 min",
-    ogImage: "/blog/manifesto-ai-esperienza-vince-real-photo.jpg",
-    coverAlt: "Uomo maturo in giacca e cravatta pensieroso davanti al laptop in un ufficio luminoso, mano al mento",
-    excerpt:
-      "L'AI non azzera l'esperienza professionale: può renderla più utile, se sai quali compiti delegare, cosa controllare e da quale prova concreta iniziare.",
-    manifesto: true,
-    featured: true,
-    contentHtml: `
-<p>Se hai più di 40 anni, il problema non è diventare tecnico né competere con chi usa ogni nuovo strumento dal giorno in cui esce.</p>
-
-<p>Il problema è capire dove l'intelligenza artificiale può amplificare ciò che sai già fare, dove può farti sbagliare più velocemente e quale attività reale conviene provare per prima.</p>
-
-<p>L'esperienza non garantisce automaticamente un vantaggio. Diventa un vantaggio quando la usi per dare contesto, giudicare il risultato e assumerti la decisione finale.</p>
-
-<h2>Cosa sa fare bene l'AI — e cosa non sa decidere per te</h2>
-
-<p>L'AI può elaborare grandi quantità di testo, creare prime bozze, organizzare informazioni, confrontare opzioni e rendere più veloce un compito ripetitivo. Sono capacità utili, ma non equivalgono al giudizio.</p>
-
-<p>Uno strumento non conosce davvero il cliente, la storia di un progetto, le conseguenze di una promessa sbagliata o le regole non scritte del tuo settore. Può produrre una risposta plausibile anche quando mancano dati importanti. Per questo la domanda utile non è “cosa può fare l'AI?”, ma “quale parte del lavoro posso affidarle senza delegare responsabilità e decisione?”.</p>
-
-<h2>Perché l'esperienza professionale conta ancora</h2>
-
-<p>Dopo vent'anni di lavoro hai accumulato qualcosa che non entra in un semplice prompt: riconosci eccezioni, segnali deboli, interessi in conflitto e conseguenze pratiche. Sai quali domande fare e quando una risposta formalmente corretta non funziona nella realtà.</p>
-
-<p>Questo capitale diventa utile con l'AI in tre momenti: quando definisci bene il problema, quando valuti la qualità dell'output e quando decidi cosa fare. L'AI può accelerare l'esecuzione; l'esperienza dà direzione e controllo.</p>
-
-<p>Se stai usando l'AI per esplorare una nuova fase professionale, il punto di partenza resta la direzione. Nella guida su <a href="/blog/reinventarsi-dopo-i-40-metodo">come reinventarsi dopo i 40 con un metodo</a> trovi il percorso completo prima di scegliere strumenti o corsi.</p>
-
-<h2>Cinque usi concreti per un professionista over 40</h2>
-
-<h3>1. Preparare una prima bozza</h3>
-<p>Email, proposte, verbali e procedure possono partire da una bozza generata dall'AI. Fornisci obiettivo, destinatario, informazioni obbligatorie e tono. Poi controlla fatti, cifre, impegni e linguaggio prima di usare il testo.</p>
-
-<h3>2. Sintetizzare materiale che sei autorizzato a usare</h3>
-<p>Puoi chiedere una sintesi di documenti lunghi con riferimenti ai passaggi originali. Non caricare informazioni riservate senza autorizzazione e non sostituire con un riassunto la lettura necessaria per decisioni legali, fiscali, mediche o finanziarie.</p>
-
-<h3>3. Organizzare informazioni e attività</h3>
-<p>Note sparse, appunti di una riunione e liste di attività possono diventare una tabella con priorità, responsabili e scadenze. Il controllo umano serve a correggere ciò che lo strumento non conosce: dipendenze, urgenze reali e responsabilità.</p>
-
-<h3>4. Confrontare scenari</h3>
-<p>Puoi usare l'AI per rendere espliciti criteri, vantaggi, rischi e informazioni mancanti di due o tre opzioni. Non chiederle di scegliere al posto tuo: chiedile quali ipotesi stai facendo e come potresti verificarle.</p>
-
-<h3>5. Trasformare un processo ricorrente in una checklist</h3>
-<p>Descrivi come svolgi oggi un'attività e chiedi una sequenza riutilizzabile. Poi eseguila su un caso reale, annota i passaggi mancanti e correggila. Il valore non è la checklist generata: è il processo che continua a funzionare dopo la verifica.</p>
-
-<h2>I quattro rischi da controllare</h2>
-
-<h3>Errori e fonti inventate</h3>
-<p>Un output convincente può essere sbagliato. Verifica sempre fatti, numeri e fonti originali quando il risultato influenza altre persone o una decisione importante.</p>
-
-<h3>Dati personali e informazioni riservate</h3>
-<p>Non inserire automaticamente dati di clienti, dipendenti, contratti o progetti interni. Prima verifica autorizzazioni, condizioni dello strumento e regole della tua organizzazione.</p>
-
-<h3>Automazione di decisioni delicate</h3>
-<p>Se un compito riguarda assunzioni, valutazioni, salute, denaro, diritti o relazioni difficili, l'AI può assistere la preparazione ma non deve assumere la decisione o la responsabilità.</p>
-
-<h3>Perdita del proprio giudizio</h3>
-<p>Se accetti ogni risposta perché è scritta bene, l'AI non sta amplificando l'esperienza: la sta sostituendo. Conserva il passaggio in cui spieghi perché un risultato è valido nel tuo contesto.</p>
-
-<h2>Un primo test di sette giorni</h2>
-
-<ol>
-  <li>Scegli un solo task ripetitivo, frequente e a basso rischio.</li>
-  <li>Misura quanto tempo richiede oggi e quale qualità deve mantenere.</li>
-  <li>Definisci input, output e controllo umano prima di usare l'AI.</li>
-  <li>Ripeti la prova per sette giorni, registrando tempo, errori e correzioni.</li>
-  <li>Conserva il flusso solo se il beneficio resta anche dopo la revisione.</li>
-</ol>
-
-<p>Se vuoi scegliere il primo esperimento, parti dai <a href="/blog/10-task-delegare-ai-lavoro">10 task da delegare all'AI nel lavoro</a>: ogni esempio indica anche cosa controllare e misurare.</p>
-
-<h2>Da dove iniziare oggi</h2>
-
-<p>Non serve imparare tutto sull'intelligenza artificiale. Serve scegliere un problema piccolo, reale e verificabile. Il primo obiettivo non è automatizzare il lavoro: è capire se uno strumento ti aiuta a fare meglio un compito senza perdere qualità, riservatezza e controllo.</p>
-
-<div class="blog-cta">
-  <p>Vuoi inserire questo esperimento in un percorso più ampio di ripartenza professionale?</p>
-  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
-</div>
-    `,
-    correlati: ["over-40-ai-esperienza", "ai-esperienza-professionale-vantaggio", "ai-over-40-opportunita-non-minaccia"],
-    step: 1,
-    formats: ["appunti-di-metodo"],
-  },
-
-
-
   {
     slug: "manifesto-sistemi-autonomi",
     seoTitle: "Come Costruire un Business che Funziona Senza di Te",
@@ -2014,68 +1874,6 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
   // ── ARTICOLI ──────────────────────────────────────────────────
   {
-    slug: "ai-over-40-opportunita-non-minaccia",
-    seoTitle: "AI e Professionisti Over 40: Perché Non è una Minaccia",
-    seoDescription:
-      "Pensi che l'AI sostituirà chi ha più esperienza? È il racconto sbagliato. Ecco perché, dopo i 40 anni, l'intelligenza artificiale può lavorare a tuo favore.",
-    keywords: "AI non sostituisce over 40, paura AI lavoro, intelligenza artificiale minaccia professionisti, AI over 40",
-    titolo: "Hai più di 40 anni? Ecco perché l'AI può essere un vantaggio, non una minaccia",
-    categoria: "Passo 1 — Ferma il Caos",
-    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
-    data: "10 marzo 2026",
-    dataISO: "2026-03-10",
-    tempoLettura: "5 min",
-    ogImage: "/blog/cover_opportunita_over40.jpg",
-    coverAlt: "Scrivania da lavoro con laptop aperto e monitor acceso, bottiglia d'acqua e pianta, luce naturale del mattino",
-    excerpt:
-      "C'è un racconto dominante sull'intelligenza artificiale che mi stanca: quello secondo cui l'AI sostituirà i lavoratori esperti. È un racconto sbagliato — e te lo dico da persona che lo usa ogni giorno.",
-    contentHtml: `
-<p>C'è un racconto dominante sull'intelligenza artificiale che mi stanca: quello secondo cui l'AI sostituirà i lavoratori esperti, renderà obsolete le competenze costruite in anni di lavoro e premierà solo i giovani nativi digitali.</p>
-
-<p>È un racconto sbagliato. E te lo dico da persona che ha più di 40 anni, ha attraversato più rivoluzioni tecnologiche e sta usando l'AI ogni giorno per costruire qualcosa di nuovo. <a href="/chi-sono">Scopri la mia storia</a></p>
-
-<h2>Il vero vantaggio dell'esperienza nell'era AI</h2>
-
-<p>L'AI è uno strumento potente. Ma come tutti gli strumenti, il suo valore dipende da chi lo usa e come lo usa.</p>
-
-<p>Un martello in mano a qualcuno che non sa costruire produce danni. Lo stesso martello in mano a un artigiano esperto produce opere.</p>
-
-<p>L'AI funziona allo stesso modo. Chi ha esperienza sa:</p>
-
-<ul>
-  <li>Quali domande fare</li>
-  <li>Come valutare le risposte</li>
-  <li>Quando fidarsi e quando dubitare</li>
-  <li>Come applicare i risultati al contesto reale</li>
-</ul>
-
-<p>Queste competenze non si imparano in un corso online. Si costruiscono in anni di pratica sul campo.</p>
-
-<h2>Il metodo fa la differenza</h2>
-
-<p>Saper usare l'AI non basta — serve un metodo per integrare questi strumenti nel tuo lavoro quotidiano. <a href="/il-metodo">Ho sviluppato un approccio specifico per questo</a></p>
-
-<div class="blog-cta">
-  <p>Vuoi approfondire questo tema?</p>
-  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
-</div>
-
-<h2>Cosa fare adesso</h2>
-
-<p>Non aspettare. Non osservare da lontano. Inizia a usare l'AI oggi, anche in modo imperfetto.</p>
-
-<p>Il primo passo non è capire tutto — è iniziare. Con curiosità, con metodo e senza paura di sbagliare.</p>
-
-<p>L'AI non è qui per sostituirti. È qui per amplificarti.</p>
-
-<p>Se vuoi capire come applicare tutto questo alla tua situazione specifica, <a href="/estratto">inizia dall'estratto gratuito</a>.</p>
-    `,
-    correlati: ["over-40-ai-esperienza", "reinventarsi-dopo-i-40-metodo", "paura-obsolescenza-professionale-ai"],
-    step: 1,
-    formats: ["appunti-di-metodo"],
-  },
-
-  {
     slug: "reinventarsi-dopo-i-40-metodo",
     seoTitle: "Reinventarsi Dopo i 40: Come Cambiare Lavoro con Metodo",
     seoDescription:
@@ -2180,7 +1978,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
 <p>L'intelligenza artificiale può aiutarti a fare ordine, non a scegliere la tua vita al posto tuo. Puoi usarla per trasformare vent'anni di esperienza in una mappa di competenze trasferibili, confrontare due o tre direzioni possibili e preparare domande migliori da fare a chi lavora già nei settori che stai valutando.</p>
 
-<p>Il risultato non è una decisione automatica: è una serie di ipotesi più chiare da verificare nel mondo reale. La direzione resta tua; l'AI riduce il tempo necessario per esplorarla. Se vuoi capire dove è utile e quali rischi controllare, leggi la guida sull'<a href="/blog/manifesto-ai-esperienza-vince">intelligenza artificiale per professionisti over 40</a>.</p>
+<p>Il risultato non è una decisione automatica: è una serie di ipotesi più chiare da verificare nel mondo reale. La direzione resta tua; l'AI riduce il tempo necessario per esplorarla. Se vuoi capire dove è utile e quali rischi controllare, leggi la guida sull'<a href="/blog/over-40-ai-esperienza">intelligenza artificiale per professionisti over 40</a>.</p>
 
 <h3>Passo 3 — Crea continuità: sistemi e revisione</h3>
 
@@ -2277,7 +2075,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
   <p class="mt-4 text-sm"><a href="https://youtu.be/Yl20TDaoXI8" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
 </section>
     `,
-    correlati: ["manifesto-ai-esperienza-vince", "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni", "sistemi-che-lavorano-per-te"],
+    correlati: ["over-40-ai-esperienza", "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni", "sistemi-che-lavorano-per-te"],
     step: 1,
     formats: ["appunti-di-metodo", "diario-di-costruzione"],
   },
@@ -2339,7 +2137,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
 <p>Hai bisogno di aiuto per iniziare? <a href="/estratto">Inizia dall'estratto gratuito</a>.</p>
     `,
-    correlati: ["ai-over-40-opportunita-non-minaccia", "reinventarsi-dopo-i-40-metodo"],
+    correlati: ["over-40-ai-esperienza", "reinventarsi-dopo-i-40-metodo"],
     step: 2,
     formats: ["strumento-pratico"],
   },
@@ -2493,7 +2291,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
 <p>Inizia a costruire il tuo ecosistema: <a href="/estratto">Leggi l'estratto gratuito di Successo in 3 Passi</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
     `,
-    correlati: ["over-40-ai-esperienza", "ai-esperienza-professionale-vantaggio", "paura-obsolescenza-professionale-ai"],
+    correlati: ["over-40-ai-esperienza", "10-task-delegare-ai-lavoro", "paura-obsolescenza-professionale-ai"],
     step: 1,
     formats: ["appunti-di-metodo"],
   },
