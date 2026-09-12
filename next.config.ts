@@ -147,6 +147,12 @@ const nextConfig: NextConfig = {
         destination: '/il-metodo',
         permanent: true,
       },
+      // Redirect Consolidamento Cluster Reinvenzione Over 40
+      {
+        source: '/blog/manifesto-reinvenzione-over40',
+        destination: '/blog/reinventarsi-dopo-i-40-metodo',
+        permanent: true,
+      },
       {
         source: '/lavora-con-me',
         destination: '/chi-sono',

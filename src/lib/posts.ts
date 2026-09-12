@@ -1711,100 +1711,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     formats: ["appunti-di-metodo"],
   },
 
-  {
-    slug: "manifesto-reinvenzione-over40",
-    seoTitle: "La Reinvenzione Professionale Over 40: La Guida Definitiva",
-    seoDescription:
-      "Reinventarsi professionalmente dopo i 40 anni non è una sconfitta — è una scelta strategica. Scopri il framework completo per farlo con metodo e risultati concreti.",
-    keywords:
-      "reinvenzione professionale over 40, cambiamento carriera dopo 40, mindset crescita, ripartire a 40 anni",
-    titolo: "Reinventarsi dopo i 40: la guida che avrei voluto avere quando ne avevo bisogno.",
-    categoria: "Passo 1 — Ferma il Caos",
-    categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
-    data: "14 marzo 2026",
-    dataISO: "2026-03-14",
-    tempoLettura: "8 min",
-    ogImage: "/blog/manifesto-reinvenzione-over40-real-photo.jpg",
-    coverAlt: "Uomo anziano con occhiali lavora al laptop davanti a una parete geometrica colorata, luce naturale da una finestra",
-    excerpt:
-      "Non una lista di consigli motivazionali. Non una promessa di trasformazione rapida. Una guida reale, basata sull'esperienza diretta, su come reinventarsi professionalmente dopo i 40 anni.",
-    manifesto: true,
-    featured: true,
-    contentHtml: `
-<p>Avevo tutto sotto controllo.</p>
 
-<p>Poi la vita ha deciso diversamente.</p>
-
-<p>Non voglio raccontarti i dettagli — <a href="/chi-sono">li trovi qui</a> — ma voglio dirti una cosa che ho imparato in modo diretto, doloroso e definitivo:</p>
-
-<p>La reinvenzione professionale non è un evento. È un processo. E come tutti i processi che funzionano, ha una struttura.</p>
-
-<p>Questa è quella struttura.</p>
-
-<h2>Prima di tutto: smetti di chiamarla "reinvenzione"</h2>
-
-<p>Il termine "reinvenzione" porta con sé un'idea sbagliata: che tu debba buttare tutto e ricominciare da zero. Come se gli anni precedenti fossero stati uno sbaglio da correggere.</p>
-
-<p>Non è così.</p>
-
-<p>Quello che stai facendo — o che stai considerando di fare — è più simile a una ristrutturazione che a una demolizione. Togli quello che non funziona più. Rafforzi le fondamenta. Costruisci nuovi piani su basi solide.</p>
-
-<p>Le basi sei tu. Con tutto quello che hai vissuto, imparato e costruito.</p>
-
-<h2>Il framework in 4 fasi</h2>
-
-<p><a href="/il-metodo">Quello che descrivo nel mio metodo</a> nasce direttamente da questo processo. Ma lasciami spiegarti le fondamenta.</p>
-
-<p><strong>Fase 1: Fermarsi davvero</strong></p>
-<p>Non per qualche ora. Non per un weekend. Fermarsi davvero significa creare lo spazio mentale per vedere la situazione con chiarezza, senza il rumore delle urgenze quotidiane.</p>
-<p>La maggior parte delle persone salta questa fase. Poi si chiede perché continua a ritrovarsi negli stessi problemi con forme diverse.</p>
-<p>La domanda da fare in questa fase non è "cosa voglio fare?" ma "chi sono davvero?" Cosa ti dà energia. Cosa ti prosciuga. Cosa sai fare meglio di quasi chiunque altro. Cosa hai sempre rimandato.</p>
-
-<p><strong>Fase 2: Separare il rumore dal segnale</strong></p>
-<p>Quando sei in mezzo a un cambiamento, ricevi consigli da tutti. La famiglia. Gli amici. I colleghi. Internet.</p>
-<p>La maggior parte di questi consigli riflette le paure e i desideri di chi li dà, non la tua realtà.</p>
-<p>Il tuo compito in questa fase è imparare a distinguere il feedback utile dal rumore. E a fidarti del tuo giudizio — quello stesso giudizio che hai affinato in anni di esperienza professionale.</p>
-
-<p><strong>Fase 3: Costruire la direzione</strong></p>
-<p>Non il piano definitivo. La direzione.</p>
-<p>C'è una differenza fondamentale. Un piano presuppone di sapere esattamente dove stai andando e come ci arrivi. In una fase di cambiamento, questa certezza è spesso illusoria.</p>
-<p>Una direzione invece ti dice solo: da questa parte, non da quella. È sufficiente per iniziare a muoversi. E il movimento produce informazioni che nessuna pianificazione a tavolino può darti.</p>
-
-<p><strong>Fase 4: Eseguire e correggere</strong></p>
-<p>Questa è la fase dove la maggior parte fallisce. Non perché l'esecuzione sia difficile — ma perché ci si aspetta che sia lineare.</p>
-<p>Non lo è mai.</p>
-<p>Ogni passo produce feedback. Ogni feedback richiede un aggiustamento. Il processo non è una linea retta — è una spirale ascendente.</p>
-<p>Il successo non appartiene a chi fa il piano perfetto. Appartiene a chi sa correggere la rotta più velocemente degli altri.</p>
-
-<div class="blog-cta">
-  <p>Vuoi approfondire questo tema?</p>
-  <a href="/estratto">→ Leggi l'estratto gratuito di Successo in 3 Passi</a>
-</div>
-
-<h2>Cosa c'entra l'AI con tutto questo</h2>
-
-<p>Entra in gioco nella fase 3 e nella fase 4.</p>
-
-<p>L'AI non ti dice chi sei. Non ti trova la direzione. Non fa il lavoro emotivo e psicologico delle prime due fasi.</p>
-
-<p>Ma quando hai la direzione, l'AI diventa un acceleratore straordinario. Riduce i tempi di apprendimento. Automatizza i compiti ripetitivi. Amplifica le tue capacità. Ti permette di fare in mesi quello che prima richiedeva anni.</p>
-
-<p>Per un professionista over 40 in fase di reinvenzione, questo è un vantaggio competitivo enorme rispetto a chi ha affrontato lo stesso processo 10 anni fa.</p>
-
-<h2>Una cosa finale</h2>
-
-<p>Se stai leggendo questo articolo, probabilmente stai attraversando — o stai considerando — una fase di cambiamento professionale.</p>
-
-<p>Voglio dirti una cosa diretta: è dura. Non te lo farò sembrare facile.</p>
-
-<p>Ma è anche possibile. E chi lo fa con metodo, con onestà verso se stesso e con gli strumenti giusti, quasi sempre arriva dall'altra parte con qualcosa di più solido di quello che aveva prima.</p>
-
-<p><a href="/estratto">Se vuoi farlo con metodo, inizia dall'estratto gratuito</a></p>
-    `,
-    correlati: ["manifesto-ai-esperienza-vince", "manifesto-sistemi-autonomi", "non-serve-essere-nativi-digitali"],
-    step: 1,
-    formats: ["appunti-di-metodo", "diario-di-costruzione"],
-  },
 
   {
     slug: "manifesto-sistemi-autonomi",
@@ -1910,7 +1817,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
 <p><a href="/estratto">Se vuoi costruire il tuo sistema, inizia dall'estratto gratuito</a></p>
     `,
-    correlati: ["manifesto-reinvenzione-over40", "sistemi-che-lavorano-per-te", "10-task-delegare-ai-lavoro"],
+    correlati: ["reinventarsi-dopo-i-40-metodo", "sistemi-che-lavorano-per-te", "10-task-delegare-ai-lavoro"],
     step: 2,
     formats: ["appunti-di-metodo"],
   },
@@ -1980,11 +1887,11 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
   {
     slug: "reinventarsi-dopo-i-40-metodo",
-    seoTitle: "Reinventarsi Dopo i 40 Anni: Non un Salto, un Metodo",
+    seoTitle: "Reinventarsi Dopo i 40: Come Cambiare Lavoro con Metodo",
     seoDescription:
-      "Reinventarsi dopo i 40 non è un salto nel vuoto ma un metodo in 3 passi. Segnali, errori da evitare, piano dei primi 30 giorni e differenze tra 40 e 50 anni.",
+      "Reinventarsi dopo i 40 e cambiare lavoro senza ripartire da zero: segnali, errori da evitare e un metodo pratico in 3 passi.",
     keywords:
-      "reinventarsi dopo i 40 anni, cambiare lavoro a 40 anni, reinventarsi dopo i 50 anni, ricominciare professionalmente, valorizzare l'esperienza professionale, nuova direzione lavorativa, metodo Successo in 3 Passi, transizione di carriera over 40",
+      "reinventarsi dopo i 40 anni, cambiare lavoro dopo i 40, cambiare lavoro a 40 anni, cambiare carriera a 40 anni, reinventarsi professionalmente, ripartire professionalmente dopo i 40, valorizzare l'esperienza professionale, metodo Successo in 3 Passi, transizione di carriera over 40",
     titolo: "Reinventarsi dopo i 40 anni: non è un salto nel vuoto, è un metodo",
     categoria: "Passo 1 — Ferma il Caos",
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
@@ -1994,7 +1901,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     ogImage: "/blog/cover_metodo_reinvenzione.jpg",
     coverAlt: "Vista notturna della Terra dallo spazio, con le luci delle città collegate da reti luminose: la prospettiva dall'alto necessaria prima di scegliere una nuova direzione professionale dopo i 40 anni",
     excerpt:
-      "Reinventarsi dopo i 40 non è un salto nel vuoto: è un metodo. Segnali per riconoscere quando cambiare direzione, errori da evitare, il metodo Successo in 3 Passi applicato alla reinvenzione e un piano concreto per i primi 30 giorni.",
+      "Reinventarsi o cambiare lavoro dopo i 40 non è un salto nel vuoto: è un metodo in 3 passi. Segnali per riconoscere quando cambiare direzione, errori da evitare, il metodo Successo in 3 Passi applicato alla reinvenzione e un piano concreto per i primi 30 giorni.",
     contentHtml: `
 <p>Avevo tutto sotto controllo. Poi la vita ha deciso diversamente.</p>
 
