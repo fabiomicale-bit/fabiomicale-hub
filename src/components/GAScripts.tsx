@@ -3,14 +3,15 @@ import { useState, useEffect } from "react";
 import Script from "next/script";
 import { GA_ID } from "@/lib/ga";
 
-const PROD_HOSTNAME = "www.fabiomicale.com";
+const isProductionHost = (hostname: string) =>
+  hostname === "www.fabiomicale.com" || hostname === "fabiomicale.com";
 
 export default function GAScripts() {
   const [mode, setMode] = useState<"disabled" | "local-test" | "production">("disabled");
 
   useEffect(() => {
-    if (window.location.hostname === PROD_HOSTNAME) {
-      // Hostname disponibile solo dopo il mount: abilita gli script sul solo host live.
+    if (isProductionHost(window.location.hostname)) {
+      // Hostname disponibile solo dopo il mount: abilita gli script su host live.
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setMode("production");
       return;

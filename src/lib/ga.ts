@@ -31,9 +31,12 @@ export function hasAnalyticsConsent(): boolean {
 
 function isTrackableHost(): boolean {
   if (typeof window === "undefined") return false;
-  if (window.location.hostname === "www.fabiomicale.com") return true;
-  return process.env.NODE_ENV === "development" &&
-    (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1");
+  const hostname = window.location.hostname;
+  if (hostname === "www.fabiomicale.com" || hostname === "fabiomicale.com") return true;
+  return (
+    process.env.NODE_ENV === "development" &&
+    (hostname === "localhost" || hostname === "127.0.0.1")
+  );
 }
 
 export function ensureGtag(): GTagFunction | null {
@@ -106,7 +109,6 @@ export function trackEvent(
 ) {
   if (typeof window === "undefined") return;
   if (!isTrackableHost()) return;
-  if (!hasAnalyticsConsent()) return;
 
   const gtag = ensureGtag();
   if (!gtag) return;
@@ -122,7 +124,6 @@ export function trackFormSubmit(
   params: FormSubmitEventParams
 ): boolean {
   if (typeof window === "undefined" || !isTrackableHost()) return false;
-  if (!hasAnalyticsConsent()) return false;
 
   const gtag = ensureGtag();
   if (!gtag) return false;
@@ -144,7 +145,6 @@ export function trackFormSubmitBeforeNavigation(
   if (
     typeof window === "undefined" ||
     !isTrackableHost() ||
-    !hasAnalyticsConsent() ||
     typeof window.gtag !== "function"
   ) {
     navigate();
@@ -175,7 +175,6 @@ export function trackFormSubmitBeforeNavigation(
 export function sendPageView(pathname: string, options?: { isInitial?: boolean }) {
   if (typeof window === "undefined") return;
   if (!isTrackableHost()) return;
-  if (!hasAnalyticsConsent()) return;
 
   const gtag = ensureGtag();
   if (!gtag) return;

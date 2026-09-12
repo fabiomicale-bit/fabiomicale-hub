@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
-import { updateConsent, sendPageView } from '@/lib/ga'
+import { updateConsent } from '@/lib/ga'
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false)
@@ -13,9 +13,6 @@ export default function CookieBanner() {
   const accept = () => {
     localStorage.setItem('cookie-consent', 'all')
     updateConsent(true)
-    // Il consenso arriva dopo il mount: se l'utente accetta ora,
-    // invia il first page_view con il referrer e la location della landing page.
-    sendPageView(window.location.pathname, { isInitial: true })
     setVisible(false)
   }
 

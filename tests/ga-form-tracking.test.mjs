@@ -130,13 +130,17 @@ test("doppio invio concorrente produce al massimo una conversione", async () => 
   assert.equal(events, 1);
 });
 
-test("consenso Analytics negato non emette e non genera errori", () => {
-  installWindow(false, () => { throw new Error("non deve essere chiamato"); });
+test("consenso Analytics negato emette comunque evento via Consent Mode v2", () => {
+  const calls = [];
+  installWindow(false, (...args) => { calls.push(args); });
   const emitted = trackFormSubmit("newsletter_submit", buildFormSubmitParams({
     form_type: "newsletter", form_variant: "newsletter_page", page_path: "/newsletter",
     newsletter_consent: "granted",
   }));
-  assert.equal(emitted, false);
+  assert.equal(emitted, true);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0][0], "event");
+  assert.equal(calls[0][1], "newsletter_submit");
 });
 
 test("gtag assente non blocca la navigazione estratto", () => {
@@ -235,13 +239,15 @@ test("sendPageView su navigazione SPA successiva non ripete page_referrer della 
   assert.equal(calls[0][2].page_referrer, undefined);
 });
 
-test("sendPageView con consenso negato non invia nessun evento", () => {
+test("sendPageView con consenso negato invia evento page_view cookieless via Consent Mode v2", () => {
   const calls = [];
   installWindow(false, (...args) => { calls.push(args); });
 
   sendPageView("/blog", { isInitial: true });
 
-  assert.equal(calls.length, 0);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0][0], "event");
+  assert.equal(calls[0][1], "page_view");
 });
 
 test("ensureGtag inizializza window.gtag se assente accodando comandi in dataLayer senza errori", () => {
