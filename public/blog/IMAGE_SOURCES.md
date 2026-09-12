@@ -117,7 +117,15 @@ Registro di tracciabilità per le fotografie reali usate come cover degli artico
 - **Riferimento magazzino:** `IMG-STOCK-005`
 - **Licenza:** Pexels License — uso libero, incluso commerciale
 - **Nota:** testo inglese generico visibile nella foto (planner "Let's organise"), non riferito al contenuto dell'articolo — accettato come sfondo tematico coerente (organizzazione/sistemi), non come testo informativo.
-- **Motivo sostituzione:** `cover_manifesto_esperienza.png` (stesso file usato anche da manifesto-ai-esperienza-vince) era un'immagine AI-generata — audit del 2026-08-03.
+## cambiare-lavoro-40-anni-guida-pratica-real-photo.jpg
+
+- **Articolo:** `/blog/cambiare-lavoro-40-anni-guida-pratica`
+- **Piattaforma:** Unsplash
+- **Autore/fotografo:** Scott Graham ([unsplash.com/@homesteadcraftsolutions](https://unsplash.com/@homesteadcraftsolutions))
+- **URL pagina originale:** https://unsplash.com/photos/5FmZ90725N8
+- **Data di acquisizione:** 12 settembre 2026
+- **Licenza:** Unsplash License — uso libero, incluso commerciale, senza obbligo di attribuzione (verificata sulla pagina sorgente al momento del download). Attribuzione riportata comunque per tracciabilità.
+- **Elaborazione:** ritaglio 1200×630 (1.91:1) via System.Drawing (crop automatico centrato 1200x630), esportato JPEG qualità 85, ~108 KB.
 
 ---
 
