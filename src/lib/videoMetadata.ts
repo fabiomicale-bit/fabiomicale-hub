@@ -70,6 +70,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-08-20T14:52:47-07:00",
     duration: "PT5M6S",
   },
+  xZ9zaDIbwaM: {
+    name: "Cambiare lavoro a 40 anni senza ricominciare da zero",
+    uploadDate: "2026-09-19T03:32:48-07:00",
+    duration: "PT6M30S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;
