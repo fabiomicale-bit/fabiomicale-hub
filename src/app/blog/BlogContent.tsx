@@ -14,7 +14,20 @@ const StarIcon = () => (
   </svg>
 );
 
-export default function BlogContent({ manifestoPosts, regularPosts, activeStep, activeFormats }: Props) {
+export default function BlogContent({ manifestoPosts, regularPosts, activeStep: requestedStep, activeFormats: requestedFormats }: Props) {
+  const allPosts = [...manifestoPosts, ...regularPosts];
+
+  // Solo filtri con almeno un articolo: quelli vuoti non vengono mostrati
+  // e un valore arrivato da URL non valido/vuoto ricade su "Tutti".
+  const availableFormats = Array.from(new Set(allPosts.flatMap((p) => p.formats)));
+  const availableSteps = ["1", "2", "3"].filter((s) =>
+    allPosts.some((p) => (s === "3" ? p.step === "3A" || p.step === "3B" : String(p.step) === s))
+  );
+  const activeStep = availableSteps.includes(requestedStep) ? requestedStep : "Tutti";
+  const activeFormats = requestedFormats.filter((f) =>
+    availableFormats.includes(f as Post["formats"][number])
+  );
+
   const matchesStep = (p: Post) => {
     if (activeStep === "Tutti") return true;
     if (activeStep === "3") return p.step === "3A" || p.step === "3B";
@@ -33,7 +46,12 @@ export default function BlogContent({ manifestoPosts, regularPosts, activeStep, 
     <div className="py-20 px-6 pb-40 bg-hub-bg">
       <div className="max-w-6xl mx-auto">
 
-        <BlogFilters activeStep={activeStep} activeFormats={activeFormats} />
+        <BlogFilters
+          activeStep={activeStep}
+          activeFormats={activeFormats}
+          availableSteps={availableSteps}
+          availableFormats={availableFormats}
+        />
 
         {/* ── Letture Fondamentali (Manifesto) ─────────────────── */}
         {filteredManifesto.length > 0 && (

@@ -6,6 +6,8 @@ import type { Post } from "@/lib/posts";
 type Props = {
   activeStep: string;
   activeFormats: string[];
+  availableSteps: string[];
+  availableFormats: string[];
 };
 
 const stepLabels: Record<string, string> = {
@@ -23,9 +25,10 @@ const formatLabels: Record<string, string> = {
 };
 
 const ALL_FORMATS = Object.keys(formatLabels) as Post["formats"][number][];
-const ALL_STEPS = ["Tutti", "1", "2", "3"];
 
-export default function BlogFilters({ activeStep, activeFormats }: Props) {
+export default function BlogFilters({ activeStep, activeFormats, availableSteps, availableFormats }: Props) {
+  const visibleSteps = ["Tutti", ...availableSteps];
+  const visibleFormats = ALL_FORMATS.filter((f) => availableFormats.includes(f));
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -58,7 +61,7 @@ export default function BlogFilters({ activeStep, activeFormats }: Props) {
   return (
     <>
       <div className="flex flex-wrap gap-3 mb-8 justify-center">
-        {ALL_STEPS.map((step) => (
+        {visibleSteps.map((step) => (
           <button
             key={step}
             onClick={() => handleStepChange(step)}
@@ -74,7 +77,7 @@ export default function BlogFilters({ activeStep, activeFormats }: Props) {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-24 justify-center">
-        {ALL_FORMATS.map((fmt) => {
+        {visibleFormats.map((fmt) => {
           const isActive = activeFormats.includes(fmt);
           return (
             <button
