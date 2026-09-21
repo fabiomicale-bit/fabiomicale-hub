@@ -75,6 +75,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-09-19T03:32:48-07:00",
     duration: "PT6M30S",
   },
+  "kInS-3P0dUM": {
+    name: "Non serve essere nativi digitali per usare bene l'intelligenza artificiale",
+    uploadDate: "2026-09-21T04:10:11-07:00",
+    duration: "PT4M37S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;

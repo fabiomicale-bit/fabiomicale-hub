@@ -2307,6 +2307,23 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 <p>Non serve essere nativi digitali. L'AI non rimpiazza il giudizio strategico, lo esegue. Metti a frutto i decenni della tua esperienza e usa questi nuovi alleati digitali per fare ciò in cui sei insostituibile: <strong>prendere decisioni e gestire esseri umani.</strong></p>
 
 <p>Inizia a costruire il tuo ecosistema: <a href="/estratto">Leggi l'estratto gratuito di Successo in 3 Passi</a> per smettere di subire il cambiamento e iniziare a guidarlo.</p>
+
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video su perché non serve essere nativi digitali per usare bene l'intelligenza artificiale.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/kInS-3P0dUM"
+      title="Dal Blog al Video — Non serve essere nativi digitali per usare bene l'intelligenza artificiale | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/kInS-3P0dUM" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
     `,
     correlati: ["over-40-ai-esperienza", "10-task-delegare-ai-lavoro", "paura-obsolescenza-professionale-ai"],
     step: 1,
