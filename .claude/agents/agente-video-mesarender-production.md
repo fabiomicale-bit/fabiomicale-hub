@@ -425,12 +425,24 @@ questi controlli:
   disponibilità CC post-upload/mobile, M2030-T060);
 - spelling/pronunciation gate;
 - visual timing gate;
+- **finale del master gate** (aggiunto 2026-09-21: ascolto degli ultimi 10
+  secondi + confronto parola per parola dell'ultima frase, vedi "Gate
+  finale del master" sotto);
 - **apertura identità/posizionamento/libro gate** (aggiunto M2030-T060,
   vedi "Apertura — identità, posizionamento e libro" sotto);
 - article-source gate;
 - video-lesson template gate (vedi sezione dedicata sotto);
 - upload packet gate;
 - Fabio final review gate.
+
+### Gate finale del master (aggiunto 2026-09-21, nato dall'errore rilevato nel ciclo `cambiare-lavoro-40-anni-guida-pratica`)
+
+Prima di dichiarare il Pre-Upload Gate superato sono obbligatori due controlli sul **master finale** (`VIDEO_MASTER.mp4`), non sui segmenti né sulla voce grezza:
+
+1. **Ascolto degli ultimi 10 secondi del master.** Estrarre e ascoltare realmente gli ultimi 10 secondi (audio del master, non un'ipotesi dal file di script). Se l'ambiente non consente l'ascolto diretto, usare una trascrizione ASR indipendente degli ultimi 10 secondi **e** dichiararlo esplicitamente nel report come sostituto, mai come ascolto umano.
+2. **Confronto parola per parola** tra l'ultima frase audio realmente presente nel master (trascrizione) e l'ultima frase approvata dello script. Qualsiasi parola residua, duplicata, aggiunta o mancante, incluso un residuo TTS dopo la frase finale, è **difetto bloccante**: il video non supera il gate e va corretto e rigenerato.
+
+L'esito di entrambi i controlli (testo trascritto, testo approvato, esito PASS/FAIL) va registrato nel QA finale e nel report del ciclo. Non sono derogabili con eccezione retroattiva.
 
 ## Regole template video-lezione
 

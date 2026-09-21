@@ -117,7 +117,7 @@ Il video-agent può analizzare e preparare pacchetti; render finale,
 modifica sito, upload, commit, push e deploy richiedono ciascuno il
 relativo incarico/gate. Per “Dal Blog al Video” verificare sempre
 articolo madre, brand, intro/outro, audio, timing, sottotitoli separati,
-QA visiva e pacchetto pre-upload. L'upload YouTube resta manuale.
+QA visiva e pacchetto pre-upload. Dal 2026-09-21 il pre-upload richiede anche l'ascolto degli ultimi 10 secondi del master e il confronto parola per parola con l'ultima frase approvata (dettaglio in `.claude/agents/agente-video-mesarender-production.md`, sezione "Gate finale del master"). L'upload YouTube resta manuale.
 
 ## 8. Newsletter e LinkedIn
 
