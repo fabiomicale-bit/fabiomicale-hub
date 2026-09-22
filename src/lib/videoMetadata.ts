@@ -80,6 +80,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-09-21T04:10:11-07:00",
     duration: "PT4M37S",
   },
+  "3sf1i_xIvfg": {
+    name: "Costruisci sistemi che lavorano per te, non il contrario",
+    uploadDate: "2026-09-22T02:51:12-07:00",
+    duration: "PT4M48S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;

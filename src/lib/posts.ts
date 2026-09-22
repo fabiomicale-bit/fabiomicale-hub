@@ -2153,6 +2153,23 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 <p>Nel tempo, quei sistemi lavorano per te. Tu lavori su cose che contano davvero.</p>
 
 <p>Hai bisogno di aiuto per iniziare? <a href="/estratto">Inizia dall'estratto gratuito</a>.</p>
+
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video su come costruire sistemi che lavorano per te, anche quando non sei presente.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/3sf1i_xIvfg"
+      title="Dal Blog al Video — Costruisci sistemi che lavorano per te, non il contrario | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/3sf1i_xIvfg" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
     `,
     correlati: ["over-40-ai-esperienza", "reinventarsi-dopo-i-40-metodo"],
     step: 2,
