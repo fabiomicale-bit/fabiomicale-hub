@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/newsletter`,                         changeFrequency: "weekly",  priority: 0.9 },
     { url: `${BASE}/successo-in-3-passi`,                changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/il-metodo`,                          changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/riparti-con-metodo`,             changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/chi-sono`,                           changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/blog`,                               changeFrequency: "weekly",  priority: 0.7 },
     { url: `${BASE}/blog/passo-1-ferma-il-caos`,        changeFrequency: "weekly",  priority: 0.6 },
