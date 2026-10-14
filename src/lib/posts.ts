@@ -8,6 +8,10 @@ export type Post = {
   categoriaClasses: string;
   data: string;
   dataISO: string;
+  // Data dell'ultima modifica sostanziale del contenuto (testo, video, link nel corpo).
+  // Ricavata dalla cronologia git: alimenta <lastmod> della sitemap e dateModified.
+  // Lasciare vuoto se l'articolo non è cambiato dopo la pubblicazione.
+  dataAggiornamentoISO?: string;
   tempoLettura: string;
   excerpt: string;
   contentHtml: string;
@@ -36,6 +40,7 @@ export const posts: Post[] = [
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "12 settembre 2026",
     dataISO: "2026-09-12",
+    dataAggiornamentoISO: "2026-09-19",
     tempoLettura: "12 min",
     ogImage: "/blog/cambiare-lavoro-40-anni-guida-pratica-real-photo.jpg",
     coverAlt:
@@ -243,6 +248,7 @@ export const posts: Post[] = [
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "18 agosto 2026",
     dataISO: "2026-08-18",
+    dataAggiornamentoISO: "2026-08-20",
     tempoLettura: "5 min",
     ogImage: "/blog/motivazione-o-struttura-real-photo.jpg",
     coverAlt:
@@ -570,6 +576,7 @@ export const posts: Post[] = [
     categoriaClasses: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
     data: "26 giugno 2026",
     dataISO: "2026-06-26",
+    dataAggiornamentoISO: "2026-07-16",
     tempoLettura: "8 min",
     ogImage: "/blog/ricaduta-non-fallimento-tornare-in-carreggiata-real-photo.jpg",
     coverAlt:
@@ -673,6 +680,7 @@ export const posts: Post[] = [
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "22 maggio 2026",
     dataISO: "2026-05-22",
+    dataAggiornamentoISO: "2026-09-12",
     tempoLettura: "10 min",
     ogImage: "/blog/cover_over_40_ai.png",
     coverAlt: "Over 40 e AI: perché la tua esperienza vale più di un algoritmo — Fabio Micale",
@@ -681,7 +689,7 @@ export const posts: Post[] = [
     correlati: [
       "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni",
       "paura-obsolescenza-professionale-ai",
-      "10-task-delegare-ai-lavoro",
+      "cambiare-lavoro-40-anni-guida-pratica",
       "non-serve-essere-nativi-digitali",
     ],
     step: 1,
@@ -858,6 +866,7 @@ export const posts: Post[] = [
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "21 maggio 2026",
     dataISO: "2026-05-21",
+    dataAggiornamentoISO: "2026-06-06",
     tempoLettura: "8 min",
     ogImage: "/blog/cover_ferma_il_caos.png",
     coverAlt: "Ferma il caos: il primo passo per ripartire dopo i 40 anni",
@@ -1046,6 +1055,7 @@ export const posts: Post[] = [
     categoriaClasses: "bg-emerald-500/15 text-emerald-400 border-emerald-500/25",
     data: "17 maggio 2026",
     dataISO: "2026-05-17",
+    dataAggiornamentoISO: "2026-07-21",
     tempoLettura: "8 min",
     ogImage: "/blog/mantieni-il-controllo-revisione-settimanale-real-photo.jpg",
     coverAlt: "Uomo maturo con barba grigia seduto alla scrivania di casa, scrive in un'agenda con penna accanto al laptop, luce naturale e libreria sullo sfondo",
@@ -1215,12 +1225,13 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
+    dataAggiornamentoISO: "2026-08-03",
     tempoLettura: "7 min",
     ogImage: "/blog/recuperare-tempo-delegare-ai-sistema-real-photo.jpg",
     coverAlt: "Taccuino aperto, penna e tazza di caffè su una scrivania in legno accanto a un laptop, spazio di lavoro ordinato",
     excerpt:
       "C'è una differenza fondamentale tra essere occupati e lavorare bene. L'AI non ti rende automaticamente più produttivo — ma un sistema costruito bene, sì.",
-    correlati: ["manifesto-sistemi-autonomi", "sistemi-che-lavorano-per-te", "10-task-delegare-ai-lavoro"],
+    correlati: ["manifesto-sistemi-autonomi", "sistemi-che-lavorano-per-te", "10-task-delegare-ai-lavoro", "claude-ai-come-usarlo-al-lavoro"],
     step: 2,
     formats: ["strumento-pratico"],
     contentHtml: `
@@ -1355,6 +1366,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "6 aprile 2026",
     dataISO: "2026-04-06",
+    dataAggiornamentoISO: "2026-10-14",
     tempoLettura: "8 min",
     ogImage: "/blog/10-task-delegare-ai-lavoro-real-photo.jpg",
     coverAlt: "Laptop aperto su una scrivania lucida con vasi decorativi e una tazza di caffè, angolo ufficio elegante",
@@ -1411,7 +1423,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 
 <p><strong>Scenario:</strong> Ricevi le stesse email ogni giorno. Richieste di informazioni, preventivi base, appuntamenti. Rispondi sempre più o meno le stesse cose.</p>
 
-<p><strong>Come delegarlo:</strong> Crea 3-4 template con Claude o ChatGPT. Quando arriva l'email, incolli il testo e chiedi: "Scrivi una risposta professionale che dice X, Y, Z".</p>
+<p><strong>Come delegarlo:</strong> Crea 3-4 template con <a href="/blog/claude-ai-come-usarlo-al-lavoro">Claude</a> o ChatGPT. Quando arriva l'email, incolli il testo e chiedi: "Scrivi una risposta professionale che dice X, Y, Z".</p>
 
 <p><strong>Controllo umano:</strong> Verifica destinatario, dati, tono e impegni presi prima di inviare.</p>
 
@@ -1656,6 +1668,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "31 marzo 2026",
     dataISO: "2026-03-31",
+    dataAggiornamentoISO: "2026-08-16",
     tempoLettura: "7 min",
     ogImage: "/blog/paura-obsolescenza-professionale-ai-real-photo.jpg",
     coverAlt: "Professionista con occhiali si massaggia le tempie davanti al laptop in un ufficio luminoso, segno di stanchezza e pressione lavorativa",
@@ -1792,6 +1805,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "13 marzo 2026",
     dataISO: "2026-03-13",
+    dataAggiornamentoISO: "2026-06-06",
     tempoLettura: "7 min",
     ogImage: "/blog/manifesto-sistemi-autonomi-real-photo.jpg",
     coverAlt: "Foglio con lista di cose da fare scritta a mano accanto a un calendario e una penna, primo piano",
@@ -1902,6 +1916,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "5 marzo 2026",
     dataISO: "2026-03-05",
+    dataAggiornamentoISO: "2026-10-14",
     tempoLettura: "14 min",
     ogImage: "/blog/cover_metodo_reinvenzione.jpg",
     coverAlt: "Vista notturna della Terra dallo spazio, con le luci delle città collegate da reti luminose: la prospettiva dall'alto necessaria prima di scegliere una nuova direzione professionale dopo i 40 anni",
@@ -1936,7 +1951,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
 <p>A vent'anni impari bruciando tempo ed errori che a quarant'anni riconosci in anticipo. Hai già visto come vanno a finire certe situazioni. Hai un giudizio allenato da anni di decisioni reali, non da teoria. Hai relazioni, reputazione, e la capacità — spesso sottovalutata — di reggere una fase difficile senza sgretolarti, perché ne hai già attraversate altre.</p>
 
-<p>Questo diventa un vantaggio competitivo reale a una condizione sola: che tu smetta di guardare la tua esperienza come un pacchetto chiuso legato a un solo ruolo, un solo settore, un solo titolo — e inizi a vederla come un insieme di capacità trasferibili che puoi applicare altrove.</p>
+<p>Questo diventa un vantaggio competitivo reale a una condizione sola: che tu smetta di guardare la tua esperienza come un pacchetto chiuso legato a un solo ruolo, un solo settore, un solo titolo — e inizi a vederla come un insieme di <a href="/blog/cambiare-lavoro-40-anni-guida-pratica">capacità trasferibili</a> che puoi applicare altrove.</p>
 
 <p>Non è un esercizio astratto. È il primo lavoro concreto da fare, prima di qualsiasi decisione su "cosa fare dopo".</p>
 
@@ -2092,7 +2107,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
   <p class="mt-4 text-sm"><a href="https://youtu.be/Yl20TDaoXI8" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
 </section>
     `,
-    correlati: ["over-40-ai-esperienza", "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni", "sistemi-che-lavorano-per-te"],
+    correlati: ["cambiare-lavoro-40-anni-guida-pratica", "over-40-ai-esperienza", "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni", "sistemi-che-lavorano-per-te"],
     step: 1,
     formats: ["appunti-di-metodo", "diario-di-costruzione"],
   },
@@ -2109,6 +2124,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "28 febbraio 2026",
     dataISO: "2026-02-28",
+    dataAggiornamentoISO: "2026-09-22",
     tempoLettura: "4 min",
     ogImage: "/blog/sistemi-che-lavorano-per-te-real-photo.jpg",
     coverAlt: "Agenda planner aperta con to-do list scritta a mano e una penna, vista dall'alto",
@@ -2187,12 +2203,13 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     categoriaClasses: "bg-cyan-500/15 text-cyan-400 border-cyan-500/25",
     data: "7 aprile 2026",
     dataISO: "2026-04-07",
+    dataAggiornamentoISO: "2026-08-13",
     tempoLettura: "7 min",
     ogImage: "/blog/cover_claude_ai.jpg",
     coverAlt: "Dettaglio di uno schermo con intelligenza artificiale astratta",
     excerpt:
       "Non sai da dove iniziare con Claude AI? Ecco come lo uso ogni giorno per risparmiare ore di lavoro. Guida pratica per professionisti over 40, senza bisogno di essere tecnici.",
-    correlati: ["recuperare-tempo-delegare-ai-sistema", "paura-obsolescenza-professionale-ai"],
+    correlati: ["recuperare-tempo-delegare-ai-sistema", "paura-obsolescenza-professionale-ai", "non-serve-essere-nativi-digitali"],
     step: 2,
     formats: ["strumento-pratico"],
     contentHtml: `
@@ -2299,6 +2316,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
     categoriaClasses: "bg-violet-500/15 text-violet-400 border-violet-500/25",
     data: "8 aprile 2026",
     dataISO: "2026-04-08",
+    dataAggiornamentoISO: "2026-09-21",
     tempoLettura: "5 min",
     ogImage: "/blog/non-serve-essere-nativi-digitali-real-photo.jpg",
     coverAlt: "Uomo maturo con barba grigia, in piedi, che mostra un documento a due collaboratori seduti a un tavolo con un laptop aperto",
@@ -2342,7 +2360,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
   <p class="mt-4 text-sm"><a href="https://youtu.be/kInS-3P0dUM" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
 </section>
     `,
-    correlati: ["over-40-ai-esperienza", "10-task-delegare-ai-lavoro", "paura-obsolescenza-professionale-ai"],
+    correlati: ["over-40-ai-esperienza", "10-task-delegare-ai-lavoro", "paura-obsolescenza-professionale-ai", "claude-ai-come-usarlo-al-lavoro"],
     step: 1,
     formats: ["appunti-di-metodo"],
   },
@@ -2362,7 +2380,7 @@ export function getPostsBySlug(slugs: string[]): Post[] {
 // Modificare questi slug quando si vuole promuovere un articolo diverso per ogni Passo.
 const MANIFESTO_SLUGS = [
   "over-40-ai-esperienza",                       // Passo 1 — Ferma il Caos
-  "manifesto-sistemi-autonomi",                  // Passo 2 — Rimetti Struttura
+  "cambiare-lavoro-40-anni-guida-pratica",       // Passo 2 — Rimetti Struttura
   "mantieni-il-controllo-revisione-settimanale", // Passo 3 — Mantieni il Controllo
 ];
 

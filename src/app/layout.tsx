@@ -134,9 +134,10 @@ export default function RootLayout({
       <body className={`${inter.variable} ${playfair.variable} antialiased flex flex-col min-h-screen`}>
         <JsonLd />
         <Navbar />
-        <main className="flex-grow">
+        {/* Contenitore neutro: ogni pagina dichiara il proprio <main> (uno solo per pagina). */}
+        <div className="flex-grow">
           {children}
-        </main>
+        </div>
         <Footer />
         <BackToTop />
         <CookieBanner />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { stepHubs } from "@/content/step-hubs";
 
 const passi = [
   {
@@ -6,7 +7,7 @@ const passi = [
     titolo: "Ferma il Caos",
     descrizione: "Prima di aggiungere nuove cose, devi smettere di reagire a tutto. Questo passo serve a riconoscere il rumore, bloccare la dispersione e ritrovare lucidità.",
     collegamento: "→ Ritrova lucidità",
-    href: "/il-metodo",
+    href: stepHubs["1"].href,
     accent: "hub-gold",
   },
   {
@@ -14,7 +15,7 @@ const passi = [
     titolo: "Rimetti Struttura",
     descrizione: "Una volta fermato il caos, serve una nuova architettura. Routine, priorità, strumenti, decisioni, competenze e AI devono lavorare dentro un sistema.",
     collegamento: "→ Costruisci il sistema",
-    href: "/il-metodo",
+    href: stepHubs["2"].href,
     accent: "hub-ink",
   },
   {
@@ -22,7 +23,7 @@ const passi = [
     titolo: "Mantieni il Controllo",
     descrizione: "Il cambiamento non serve se dura tre giorni. Il terzo passo serve a costruire continuità, disciplina, revisione e capacità di adattamento nel tempo.",
     collegamento: "→ Mantieni la rotta",
-    href: "/il-metodo",
+    href: stepHubs["3"].href,
     accent: "hub-charcoal",
   },
 ];

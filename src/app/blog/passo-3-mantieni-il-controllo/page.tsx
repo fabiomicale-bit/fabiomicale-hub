@@ -3,6 +3,7 @@ import Link from "next/link";
 
 
 import NewsletterCTA from "@/components/NewsletterCTA";
+import StepHubNav from "@/components/StepHubNav";
 import { getPostsByStep } from "@/lib/posts";
 import { methodPillars } from "@/content/method-pillars";
 
@@ -133,6 +134,7 @@ export default function Passo3Page() {
         </div>
       </section>
 
+      <StepHubNav current="3" />
       <NewsletterCTA />
       
     </main>

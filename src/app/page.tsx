@@ -3,6 +3,7 @@ import Link from "next/link";
 import EditorialHero from "@/components/EditorialHero";
 import MetodoSection from "@/components/MetodoSection";
 import NewsletterCTA from "@/components/NewsletterCTA";
+import ArticleLinks from "@/components/ArticleLinks";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -119,6 +120,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── ARTICOLI DA CUI PARTIRE ──────────────────────────── */}
+      <ArticleLinks
+        eyebrow="Dal blog"
+        title="Articoli da cui partire"
+        intro="Le guide più complete del blog: cambiare lavoro dopo i 40 anni, ripartire con metodo, costruire struttura e usare l'AI con la tua esperienza."
+        slugs={[
+          "cambiare-lavoro-40-anni-guida-pratica",
+          "reinventarsi-dopo-i-40-metodo",
+          "motivazione-o-struttura",
+          "over-40-ai-esperienza",
+        ]}
+      />
 
       {/* ── UN SISTEMA, NON UNA RACCOLTA ─────────────────────── */}
       <section className="py-32 px-6 bg-hub-bg-alt border-t border-hub-border/50">

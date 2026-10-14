@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import EditorialHero from "@/components/EditorialHero";
+import { stepHubs } from "@/content/step-hubs";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -127,16 +128,19 @@ export default function SuccessoIn3PassiPage() {
               {
                 step: "01",
                 title: "Ferma il caos",
+                hub: stepHubs["1"],
                 desc: "Prima di organizzare, devi smettere di subire. Il primo Passo lavora sulla dispersione: tutte le attività aperte, i pensieri in attesa, le cose da fare prima o poi. Li porta fuori dalla testa, li rende visibili e li separa da ciò che conta davvero. Non è uno svuotamento: è un inventario. Serve a vedere con chiarezza cosa hai in mano e da dove cominciare.",
               },
               {
                 step: "02",
                 title: "Rimetti struttura",
+                hub: stepHubs["2"],
                 desc: "Con il quadro chiaro, puoi costruire un sistema che regge. Il secondo Passo introduce criteri di priorità, strumenti di pianificazione e un modo di organizzare il lavoro che non dipende dall'umore della giornata. Non è rigidità: è la differenza tra reagire alle cose e guidarle. Questo è il Passo in cui il metodo diventa concreto.",
               },
               {
                 step: "03",
                 title: "Mantieni il controllo nel tempo",
+                hub: stepHubs["3"],
                 desc: "Un sistema che funziona una settimana non è un sistema. Il terzo Passo affronta la continuità: come proteggere il metodo quando arrivano le urgenze, come recuperare quando si inceppa qualcosa, come usare strumenti come l'intelligenza artificiale senza che diventino un altro rumore da gestire. L'obiettivo non è la perfezione: è la tenuta.",
               },
             ].map((p, i) => (
@@ -148,7 +152,13 @@ export default function SuccessoIn3PassiPage() {
                 <h3 className="text-xl font-bold text-hub-ink mb-4 uppercase tracking-wider">
                   {p.title}
                 </h3>
-                <p className="text-hub-ink-muted text-sm leading-relaxed font-light">{p.desc}</p>
+                <p className="text-hub-ink-muted text-sm leading-relaxed font-light mb-8">{p.desc}</p>
+                <Link
+                  href={p.hub.href}
+                  className="mt-auto text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold hover:text-hub-gold-dark transition-colors"
+                >
+                  Articoli del {p.hub.label.split(" — ")[0]} →
+                </Link>
               </div>
             ))}
           </div>

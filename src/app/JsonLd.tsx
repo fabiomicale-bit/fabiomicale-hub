@@ -38,11 +38,6 @@ const websiteSchema = {
   inLanguage: "it-IT",
   author: { "@id": "https://www.fabiomicale.com/#person" },
   publisher: { "@id": "https://www.fabiomicale.com/#person" },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.fabiomicale.com/blog?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
 };
 
 export default function JsonLd() {

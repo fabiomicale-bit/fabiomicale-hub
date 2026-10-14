@@ -1,12 +1,27 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import NewsletterCTA from "@/components/NewsletterCTA";
+import { getPost } from "@/lib/posts";
+import { stepHubs } from "@/content/step-hubs";
 
 export const metadata: Metadata = {
   title: "Il Metodo Successo in 3 Passi",
   description: "Ferma il caos, rimetti struttura e mantieni il controllo. Il Metodo Successo in 3 Passi per la rinascita professionale Over 40.",
   alternates: { canonical: "https://www.fabiomicale.com/il-metodo" },
 };
+
+const linkClass =
+  "text-hub-gold text-sm font-medium underline underline-offset-4 hover:opacity-70 transition-opacity";
+
+function ArticleLink({ slug }: { slug: string }) {
+  const post = getPost(slug);
+  if (!post) return null;
+  return (
+    <Link href={`/blog/${post.slug}`} className={`${linkClass} block pt-2`}>
+      {post.titolo}
+    </Link>
+  );
+}
 
 export default function MetodoPage() {
   return (
@@ -48,6 +63,9 @@ export default function MetodoPage() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold">Obiettivo:</span>
                 <span className="text-hub-ink font-medium">Ritrovare lucidità.</span>
               </div>
+              <Link href={stepHubs["1"].href} className={`${linkClass} inline-block mt-8`}>
+                Leggi gli articoli del Passo 1
+              </Link>
             </div>
             <div className="card-editorial p-12 bg-hub-cream/30 border-dashed border-2 border-hub-gold/20 rounded-3xl flex items-center justify-center aspect-square">
               <div className="text-center">
@@ -92,6 +110,9 @@ export default function MetodoPage() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold">Obiettivo:</span>
                 <span className="text-hub-ink font-medium">Costruire una struttura che ti sostiene.</span>
               </div>
+              <Link href={stepHubs["2"].href} className={`${linkClass} inline-block mt-8`}>
+                Leggi gli articoli del Passo 2
+              </Link>
             </div>
           </div>
         </div>
@@ -116,6 +137,9 @@ export default function MetodoPage() {
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-hub-gold">Obiettivo:</span>
                 <span className="text-hub-ink font-medium">Rendere il cambiamento sostenibile.</span>
               </div>
+              <Link href={stepHubs["3"].href} className={`${linkClass} inline-block mt-8`}>
+                Leggi gli articoli del Passo 3
+              </Link>
             </div>
             <div className="card-editorial p-12 bg-hub-white border border-hub-border rounded-3xl flex items-center justify-center aspect-square shadow-xl">
               <div className="text-center">
@@ -183,24 +207,28 @@ export default function MetodoPage() {
               <p className="text-hub-ink-muted text-base leading-relaxed font-light">
                 Tutto sembra urgente, ma alla fine della settimana resta la sensazione di non aver fatto ciò che contava davvero.
               </p>
+              <ArticleLink slug="ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni" />
             </div>
             <div className="border border-hub-border/60 p-8 space-y-4">
               <h3 className="font-serif text-lg font-medium">Usi molti strumenti, ma senza sistema</h3>
               <p className="text-hub-ink-muted text-base leading-relaxed font-light">
                 App, note, documenti, AI, task list. Gli strumenti aumentano, ma la direzione non diventa più chiara.
               </p>
+              <ArticleLink slug="motivazione-o-struttura" />
             </div>
             <div className="border border-hub-border/60 p-8 space-y-4">
               <h3 className="font-serif text-lg font-medium">Hai esperienza, ma fatichi a trasformarla in metodo</h3>
               <p className="text-hub-ink-muted text-base leading-relaxed font-light">
                 Dopo i 40 anni il valore non è ricominciare da zero, ma organizzare meglio ciò che hai già imparato.
               </p>
+              <ArticleLink slug="cambiare-lavoro-40-anni-guida-pratica" />
             </div>
             <div className="border border-hub-border/60 p-8 space-y-4">
               <h3 className="font-serif text-lg font-medium">Parti bene, poi perdi continuità</h3>
               <p className="text-hub-ink-muted text-base leading-relaxed font-light">
                 Il problema non è iniziare. Il problema è mantenere controllo e direzione quando tornano urgenze, lavoro e imprevisti.
               </p>
+              <ArticleLink slug="mantieni-il-controllo-revisione-settimanale" />
             </div>
           </div>
         </div>
@@ -252,6 +280,10 @@ export default function MetodoPage() {
                 <p className="text-hub-ink-muted text-lg leading-relaxed font-light">
                   L&apos;intelligenza artificiale può aiutare a scrivere, riordinare, sintetizzare, analizzare e produrre. Ma senza criteri rischia di diventare solo un altro strumento da inseguire. Nel metodo Successo in 3 Passi, l&apos;AI non sostituisce l&apos;esperienza: la aiuta a diventare più ordinata, più utilizzabile e più concreta.
                 </p>
+                <div className="space-y-1">
+                  <ArticleLink slug="over-40-ai-esperienza" />
+                  <ArticleLink slug="10-task-delegare-ai-lavoro" />
+                </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-hub-border/40 pt-10">
                 <div className="space-y-3">

@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Nota (verifica 2026-10-14): in produzione fabiomicale.com → www risponde 307 dal livello
+      // dominio di Vercel, prima del deploy, quindi questa regola 308 non viene raggiunta.
+      // Va impostato 308 in Vercel → Settings → Domains (o assegnato l'apex al progetto senza redirect).
       {
         source: "/:path*",
         has: [{ type: "host", value: "fabiomicale.com" }],
@@ -174,6 +177,22 @@ const nextConfig: NextConfig = {
         destination: '/chi-sono',
         permanent: true,
       },
+      // Vecchi URL con un equivalente diretto (pagine 2026 rimosse e WordPress 2013–2014,
+      // rilevati via Wayback Machine e oggi in 404). Gli URL senza equivalente restano 404.
+      { source: '/risorse', destination: '/estratto', permanent: true },
+      { source: '/cookie', destination: '/cookies', permanent: true },
+      { source: '/politica-dei-cookies', destination: '/cookies', permanent: true },
+      { source: '/politica-del-sito-sui-cookies', destination: '/cookies', permanent: true },
+      { source: '/informativa-privacy', destination: '/privacy', permanent: true },
+      { source: '/informativa-sulla-privacy', destination: '/privacy', permanent: true },
+      { source: '/contatto', destination: '/contatti', permanent: true },
+      { source: '/contattami', destination: '/contatti', permanent: true },
+      { source: '/chi-siamo', destination: '/chi-sono', permanent: true },
+      { source: '/su-di-me', destination: '/chi-sono', permanent: true },
+      { source: '/iscriviti', destination: '/newsletter', permanent: true },
+      { source: '/disclaimer', destination: '/note-legali', permanent: true },
+      { source: '/termini-condizioni', destination: '/note-legali', permanent: true },
+      { source: '/blog-2', destination: '/blog', permanent: true },
     ];
   },
 };

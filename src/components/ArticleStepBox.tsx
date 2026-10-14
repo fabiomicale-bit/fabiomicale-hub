@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getStepHub } from "@/content/step-hubs";
 
 type Step = 1 | 2 | "3A" | "3B";
 
@@ -39,6 +40,7 @@ const stepMeta: Record<
 export default function ArticleStepBox({ step }: ArticleStepBoxProps) {
   const meta = stepMeta[String(step)];
   if (!meta) return null;
+  const hub = getStepHub(step);
 
   return (
     <aside className="my-10 border-l-2 border-hub-gold pl-6 py-4 bg-hub-cream rounded-r-2xl">
@@ -51,12 +53,20 @@ export default function ArticleStepBox({ step }: ArticleStepBoxProps) {
       <p className="text-hub-ink-muted text-sm font-light leading-relaxed mb-3">
         {meta.description}
       </p>
-      <Link
-        href={meta.href}
-        className="text-[11px] font-bold uppercase tracking-[0.2em] text-hub-gold hover:text-hub-gold-dark transition-colors inline-flex items-center gap-1"
-      >
-        {meta.label} <span aria-hidden>→</span>
-      </Link>
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-8">
+        <Link
+          href={meta.href}
+          className="text-[11px] font-bold uppercase tracking-[0.2em] text-hub-gold hover:text-hub-gold-dark transition-colors inline-flex items-center gap-1"
+        >
+          {meta.label} <span aria-hidden>→</span>
+        </Link>
+        <Link
+          href={hub.href}
+          className="text-[11px] font-bold uppercase tracking-[0.2em] text-hub-ink-muted hover:text-hub-gold-dark transition-colors inline-flex items-center gap-1"
+        >
+          Tutti gli articoli del {hub.label.split(" — ")[0]} <span aria-hidden>→</span>
+        </Link>
+      </div>
     </aside>
   );
 }

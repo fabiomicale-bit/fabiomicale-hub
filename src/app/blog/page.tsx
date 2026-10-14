@@ -1,8 +1,10 @@
+import Link from "next/link";
 import BlogContent from "./BlogContent";
 import { getManifestoPosts, getRegularPosts } from "@/lib/posts";
+import { stepHubs, type StepHubKey } from "@/content/step-hubs";
 
 export const metadata = {
-  title: "Blog",
+  title: "Blog su metodo, lavoro e AI dopo i 40 anni",
   description:
     "Appunti, strumenti e riflessioni per applicare il Metodo Successo in 3 Passi alla crescita professionale Over 40 nell’era dell’AI.",
   alternates: { canonical: "https://www.fabiomicale.com/blog" },
@@ -43,6 +45,17 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           <p className="text-xl text-hub-ink-muted leading-relaxed max-w-2xl mx-auto font-light mb-10">
             Appunti, strumenti e riflessioni per applicare il Metodo Successo in 3 Passi alla crescita professionale Over 40 nell’era dell’AI.
           </p>
+          <nav aria-label="Archivi per Passo" className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-8">
+            {(Object.keys(stepHubs) as StepHubKey[]).map((key) => (
+              <Link
+                key={key}
+                href={stepHubs[key].href}
+                className="text-hub-ink text-sm font-medium underline underline-offset-4 hover:text-hub-gold transition-colors"
+              >
+                {stepHubs[key].label}
+              </Link>
+            ))}
+          </nav>
         </div>
       </section>
 

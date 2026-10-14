@@ -75,7 +75,7 @@ export default async function BlogPostPage({ params }: Props) {
     keywords: post.keywords,
     image: `https://www.fabiomicale.com${post.ogImage || "/fabio-hero.jpg"}`,
     datePublished: post.dataISO,
-    dateModified: post.dataISO,
+    dateModified: post.dataAggiornamentoISO ?? post.dataISO,
     articleSection: stepSectionLabels[String(post.step)] ?? "Metodo Successo in 3 Passi",
     author: {
       "@type": "Person",

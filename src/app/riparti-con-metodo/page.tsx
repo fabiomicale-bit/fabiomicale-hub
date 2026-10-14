@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ArticleLinks from "@/components/ArticleLinks";
 
 const URL = "https://www.fabiomicale.com/riparti-con-metodo";
 const TITLE = "Riparti con Metodo | Fabio Micale";
@@ -249,6 +250,18 @@ export default function RipartiConMetodoPage() {
           </p>
         </div>
       </section>
+
+      {/* ── LETTURE COLLEGATE ── */}
+      <ArticleLinks
+        eyebrow="Dal blog"
+        title="Letture collegate al percorso"
+        intro="Se vuoi farti un'idea del metodo prima di scrivermi, parti da qui."
+        slugs={[
+          "cambiare-lavoro-40-anni-guida-pratica",
+          "reinventarsi-dopo-i-40-metodo",
+          "ferma-il-caos-primo-passo-ripartire-dopo-i-40-anni",
+        ]}
+      />
     </main>
   );
 }

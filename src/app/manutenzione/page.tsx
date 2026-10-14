@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 // Modalità manutenzione temporanea — rimuovere quando form/Beehiiv/Resend sono riallineati.
 export default function MaintenancePage() {
     return (
-        <div className="min-h-screen bg-dark-bg text-white flex flex-col items-center justify-center p-8 font-sans">
+        <main className="min-h-screen bg-dark-bg text-white flex flex-col items-center justify-center p-8 font-sans">
             <div className="max-w-md w-full text-center space-y-8">
 
                 {/* Brand */}
@@ -49,6 +49,6 @@ export default function MaintenancePage() {
                 </div>
 
             </div>
-        </div>
+        </main>
     );
 }
