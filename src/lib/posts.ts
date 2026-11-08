@@ -252,7 +252,7 @@ export const posts: Post[] = [
 <p>Individua tre direzioni professionali realistiche dove le tue competenze trasferibili avrebbero valore. Non tre sogni, ma tre opzioni concrete, con domanda di mercato verificabile. Per ciascuna, trova una persona che già lavora in quel campo e chiedi una conversazione di 20 minuti: non per chiedere un lavoro, ma per capire come funziona davvero quel mondo.</p>
 
 <h3>Settimana 3: Test</h3>
-<p>Scegli una delle tre direzioni e fai qualcosa di concreto: scrivi una proposta, offri una micro-consulenza gratuita, costruisci un prototipo, pubblica un contenuto tecnico. L'obiettivo non è il risultato, è il feedback. Se il feedback è positivo, hai una direzione. Se è negativo, hai risparmiato mesi di studio inutile.</p>
+<p>Scegli una delle tre direzioni e fai qualcosa di concreto: scrivi una proposta, offri una micro-consulenza gratuita, costruisci un prototipo, pubblica un contenuto tecnico. Se l'idea di proporti ti mette a disagio, leggi prima come <a href="/blog/vendere-senza-sentirsi-venditore">vendere senza sentirsi venditore</a>. L'obiettivo non è il risultato, è il feedback. Se il feedback è positivo, hai una direzione. Se è negativo, hai risparmiato mesi di studio inutile.</p>
 
 <h3>Settimana 4: Valutazione</h3>
 <p>Con i dati delle tre settimane precedenti, rispondi a quattro domande:</p>
@@ -529,7 +529,7 @@ export const posts: Post[] = [
 <li><strong>Falla appena puoi.</strong> Prima viene fatta, meno pesa il resto della giornata. Il giorno storto migliora sensibilmente quando la cosa è già fatta.</li>
 <li><strong>Chiudi senza saldo negativo.</strong> Fatta quella, la giornata è valida. Niente "avrei dovuto fare di più". Il sistema minimo funziona solo se rispetti il patto: una cosa, fatta, basta.</li>
 </ol>
-<p>Poi, alla revisione settimanale, i giorni a marcia ridotta si contano insieme agli altri. Se in una settimana ce ne sono stati quattro, quella è un'informazione preziosa — sull'energia, non sulla tua volontà — e va trattata come un dato, non come una colpa.</p>
+<p>Poi, alla revisione settimanale, i giorni a marcia ridotta si contano insieme agli altri. Se in una settimana ce ne sono stati quattro, quella è un'informazione preziosa — sull'energia, non sulla tua volontà — e va trattata come un dato, non come una colpa. Quando i giorni storti diventano settimane, il sistema minimo non basta: serve un <a href="/blog/piano-continuita-minima-energia-bassa">piano di continuità minima</a>, scritto prima che arrivino.</p>
 
 <h2>L'errore da non fare: trasformarlo nella nuova normalità</h2>
 <p>Un chiarimento necessario. Il sistema minimo è una marcia di emergenza, non il nuovo regime. Se ogni giorno diventa un giorno da trenta minuti, il problema non è più la gestione dell'energia: è che il carico complessivo della tua vita va rivisto, e quella è una decisione da prendere a mente lucida, non un aggiustamento da giorno storto.</p>
@@ -815,7 +815,7 @@ export const posts: Post[] = [
 
 <p>E tu, con quindici o vent'anni di carriera alle spalle, a un certo punto ti sei fermato e ti sei chiesto: «Sono già fuori?»</p>
 
-<p>Se riconosci questa scena, non sei in ritardo. Sei nel punto esatto in cui molti scambiano una fase di transizione per obsolescenza. Ma il problema non è l'età.</p>
+<p>Se riconosci questa scena, non sei in ritardo. Sei nel punto esatto in cui molti scambiano una fase di transizione per obsolescenza. La <a href="/blog/paura-obsolescenza-professionale-ai">paura di essere tagliato fuori dall'AI</a> è reale, e va presa sul serio. Ma il problema non è l'età.</p>
 
 <h2>Il problema non è l'AI, è la mancanza di direzione</h2>
 
@@ -1495,7 +1495,7 @@ Dove è andata l'attenzione che non doveva andarci? Riunioni inutili, conversazi
 
 <p>Ho una notizia per te: <strong>l'AI non è fatta per chi sa programmare. È fatta per chi ha lavoro da fare.</strong></p>
 
-<p>Ci sono attività ripetitive che puoi provare ad affidare all'AI senza diventare un esperto di prompt. La parola importante è <em>provare</em>: la delega funziona solo se definisci il risultato, controlli l'output e misuri cosa è realmente migliorato.</p>
+<p>Ci sono attività ripetitive che puoi provare ad affidare all'AI senza diventare un esperto di prompt. La parola importante è <em>provare</em>: la delega funziona solo se definisci il risultato, controlli l'output e misuri cosa è realmente migliorato. Se vuoi prima il quadro d'insieme, ti racconto <a href="/blog/recuperare-tempo-delegare-ai-sistema">come delego all'AI quello che non richiede la mia testa</a>.</p>
 
 <p>In questo articolo ti mostro esattamente:</p>
 
@@ -2087,7 +2087,7 @@ Approfondimenti pratici su metodo, AI e lavoro. <a href="/newsletter">Iscriviti 
 
 <h2>Gli errori da evitare quando decidi di reinventarti</h2>
 
-<p>Chi fallisce nella reinvenzione professionale, nella maggior parte dei casi, commette una combinazione degli stessi errori. Riconoscerli in anticipo vale più di qualsiasi consiglio motivazionale.</p>
+<p>Chi fallisce nella reinvenzione professionale, nella maggior parte dei casi, commette una combinazione degli stessi errori. Riconoscerli in anticipo vale più di qualsiasi consiglio motivazionale, perché <a href="/blog/motivazione-o-struttura">il problema non è la motivazione: è la struttura</a>.</p>
 
 <p><strong>Lasciare tutto impulsivamente.</strong> Dare le dimissioni, chiudere un'attività o interrompere un percorso di anni nel momento di massima frustrazione, senza un piano economico e senza una direzione verificata, è il modo più veloce per trasformare un cambiamento possibile in una crisi vera. La reinvenzione ha bisogno di margine — economico, di tempo, psicologico — per funzionare. Bruciarlo nel primo mese toglie esattamente la risorsa che serve di più.</p>
 
