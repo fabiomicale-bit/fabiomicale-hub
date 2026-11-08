@@ -47,10 +47,9 @@ export default function TableOfContents({ contentHtml }: { contentHtml: string }
     <nav className="mb-10">
       {/* ── Desktop ── */}
       <div
-        className="hidden md:block border-l pl-4"
-        style={{ borderColor: "rgba(255,255,255,0.08)" }}
+        className="hidden md:block border-l border-hub-border pl-4"
       >
-        <p className="text-xs uppercase tracking-widest text-slate-500 mb-3">
+        <p className="text-xs uppercase tracking-widest text-hub-ink-muted mb-3">
           In questo articolo
         </p>
         <ul className="flex flex-col gap-2">
@@ -59,7 +58,9 @@ export default function TableOfContents({ contentHtml }: { contentHtml: string }
               <a
                 href={`#${id}`}
                 className={`text-sm transition-colors duration-200 ${
-                  activeId === id ? "text-white" : "text-slate-400 hover:text-white"
+                  activeId === id
+                    ? "text-hub-ink underline decoration-hub-gold underline-offset-4"
+                    : "text-hub-ink-muted hover:text-hub-ink"
                 }`}
               >
                 {text}
@@ -71,25 +72,26 @@ export default function TableOfContents({ contentHtml }: { contentHtml: string }
 
       {/* ── Mobile collassabile ── */}
       <div
-        className="md:hidden rounded-lg p-4"
-        style={{ background: "rgba(255,255,255,0.03)" }}
+        className="md:hidden rounded-lg p-4 bg-hub-bg-alt"
       >
         <button
           onClick={() => setOpen((v) => !v)}
-          className="w-full flex items-center justify-between text-sm text-slate-400"
+          className="w-full flex items-center justify-between text-sm text-hub-ink-muted"
         >
           <span>In questo articolo</span>
           <span>{open ? "▴" : "▾"}</span>
         </button>
         {open && (
-          <ul className="flex flex-col gap-2 mt-3 pt-3 border-t border-white/8">
+          <ul className="flex flex-col gap-2 mt-3 pt-3 border-t border-hub-border">
             {headings.map(({ id, text }) => (
               <li key={id}>
                 <a
                   href={`#${id}`}
                   onClick={() => setOpen(false)}
                   className={`text-sm transition-colors duration-200 ${
-                    activeId === id ? "text-white" : "text-slate-400 hover:text-white"
+                    activeId === id
+                      ? "text-hub-ink underline decoration-hub-gold underline-offset-4"
+                      : "text-hub-ink-muted hover:text-hub-ink"
                   }`}
                 >
                   {text}
