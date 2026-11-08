@@ -127,6 +127,18 @@ Registro di tracciabilità per le fotografie reali usate come cover degli artico
 - **Licenza:** Unsplash License — uso libero, incluso commerciale, senza obbligo di attribuzione (verificata sulla pagina sorgente al momento del download). Attribuzione riportata comunque per tracciabilità.
 - **Elaborazione:** ritaglio 1200×630 (1.91:1) via System.Drawing (crop automatico centrato 1200x630), esportato JPEG qualità 85, ~108 KB.
 
+## vendere-senza-sentirsi-venditore-real-photo.jpg
+
+- **Articolo:** `/blog/vendere-senza-sentirsi-venditore` (preparato il 7 novembre 2026, in attesa di approvazione: non pubblicato)
+- **Piattaforma:** Pexels
+- **Autore/fotografo:** Vitaly Gariev ([pexels.com/@silverkblack](https://www.pexels.com/@silverkblack/))
+- **URL pagina originale:** https://www.pexels.com/photo/two-people-sitting-at-a-table-talking-to-each-other-23496898/
+- **URL file scaricato:** https://images.pexels.com/photos/23496898/pexels-photo-23496898.jpeg (originale 3840×2160, SHA-256 `e08dd2bc7701538027cfe67fb37cea015c3ed31ecb631118b33da18d3b305196`)
+- **Data di acquisizione:** 7 novembre 2026
+- **Licenza:** Pexels License — uso libero, incluso commerciale, senza obbligo di attribuzione; modifiche consentite (pagina della foto marcata "Free", licenza letta su https://www.pexels.com/license/ il 7 novembre 2026). Vincoli rilevanti: le persone riconoscibili non vanno mostrate in luce negativa o offensiva e non va suggerito che approvino un prodotto. Attribuzione riportata comunque per tracciabilità.
+- **Nota:** persone riconoscibili; foto usata solo come illustrazione del tema (incontro di lavoro), senza didascalia né collegamento all'esempio della consulente nel testo. Stesso fotografo di altre due cover del blog, modelli diversi.
+- **Elaborazione:** ritaglio 1200×630 (1.91:1) centrato (sharp, `fit: cover`, `position: centre`), esportato JPEG qualità 82 (mozjpeg), ~66 KB. Nessun'altra modifica all'immagine.
+
 ---
 
 ## Nota su cover_esperienza_vantaggio.png
