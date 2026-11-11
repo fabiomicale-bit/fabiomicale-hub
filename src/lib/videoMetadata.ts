@@ -85,6 +85,11 @@ const VIDEO_METADATA: Record<string, VideoMetadata> = {
     uploadDate: "2026-09-22T02:51:12-07:00",
     duration: "PT4M48S",
   },
+  "A-zvLWDPb6o": {
+    name: "Vendere senza sentirsi venditore: 4 strumenti pratici",
+    uploadDate: "2026-11-10T23:03:21-08:00",
+    duration: "PT5M37S",
+  },
 };
 
 const YOUTUBE_EMBED_PATTERN = /youtube-nocookie\.com\/embed\/([A-Za-z0-9_-]{11})/;

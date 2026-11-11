@@ -140,6 +140,23 @@ export const posts: Post[] = [
   <p>Scarica l'estratto gratuito e inizia dal primo passo concreto.</p>
   <a href="/estratto">Scarica l'estratto gratuito di Successo in 3 Passi (Edizione 2026)</a>
 </div>
+
+<section class="not-prose my-12 rounded-2xl border border-hub-border bg-hub-white p-6 shadow-sm">
+  <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.25em] text-hub-gold">Dal Blog al Video</p>
+  <h2 class="mb-3 font-serif text-3xl font-medium italic text-hub-ink">Guarda la versione video</h2>
+  <p class="mb-6 text-sm leading-relaxed text-hub-ink-muted">Questo articolo fa parte della playlist "Dal Blog al Video". Qui trovi la versione video su come vendere con struttura invece che con carisma: la frase di posizionamento, il follow-up, il prezzo e il modo di leggere i no.</p>
+  <div class="aspect-video overflow-hidden rounded-xl border border-hub-border bg-black">
+    <iframe
+      class="h-full w-full"
+      src="https://www.youtube-nocookie.com/embed/A-zvLWDPb6o"
+      title="Dal Blog al Video — Vendere senza sentirsi venditore: 4 strumenti pratici | Fabio Micale"
+      loading="lazy"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p class="mt-4 text-sm"><a href="https://youtu.be/A-zvLWDPb6o" target="_blank" rel="noopener noreferrer">Guarda il video su YouTube</a></p>
+</section>
 `,
   },
   {
